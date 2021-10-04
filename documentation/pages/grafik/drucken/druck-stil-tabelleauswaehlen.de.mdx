@@ -1,0 +1,52 @@
+---
+title: "Erweiterte Optionen"
+page: true
+---
+## Erweiterte Druck-Optionen festlegen
+
+
+- Verwenden einer Plotstil-Tabelle f&#252;r den Ausdruck
+
+
+
+Wenn bestimmte Farben oder Linienst&#228;rken am Ausdruck anders erscheinen sollen, kann dies &#252;ber eine Plotstil-Tabelle gesteuert werden.
+Pro Farbe (Farbindex) kann eine alternative Farbe und/oder eine alternative Linienst&#228;rke angegeben werden.
+
+
+- Transparenz drucken
+
+
+
+&#220;ber das Styling in  <Placeholder>fullproduct</Placeholder> l&#228;sst sich f&#252;r verschiedene Objektklassen der Grad der Transparenz festlegen. Soll die Transparenz gedruckt werden, ist die Option zu w&#228;hlen.
+<Warning>
+Nicht alle Drucker (vorallem Postscipt-Drucker) k&#246;nnen Transparenz drucken, bzw. dauert der Druckvorgang unter umst&#228;nden sehr lange!
+</Warning>
+
+
+
+- Nur notwendige Daten drucken
+
+
+
+Von den Objekten, die in den Druckbereich hineinragen, wird nur der Teil innerhalb an den Drucker gesendet.
+Wenn Sie diesen Schalter anhaken (empfohlen), werden die Daten am Rand des Druckbereichs abgeschnitten und erst dann an den Drucker gesendet. Es gibt aber in Extremf&#228;llen Konstellationen, bei denen dieses Abschneiden zu einem Ausnahmefehler f&#252;hrt, da die Berechnung numerisch nicht mehr durchgef&#252;hrt werden kann. In diesem Fall k&#246;nnen Sie den Haken bei diesem Schalter entfernen.
+
+Wenn der Schalter nicht angehakt ist, k&#246;nnen folgende Situationen passieren:
+
+-  Ausdruck in eine PDF-Datei: Wenn sehr lange Linien, z.B: bei Stra&#223;enz&#252;gen, in eine PDF-Datei gedruckt werden, sieht das Ergebnis tadellos aus. Beim Ausdruck der PDF-Datei kann die Linie aber nicht mehr ordnungsgem&#228;&#223; vom PDF-Viewer behandelt werden, da der Viewer mit den Koordinatenbereich nicht zurechtkommt. Es kann passieren, dass die Linie ein zweites Mal an einer anderen Stelle am Papier erscheint.
+
+-  Fl&#228;chenschraffuren: Wenn eine Fl&#228;che mit Muster nur zu einem kleinen Teil in den Druckbereich ragt, wird dennoch die gesamte Fl&#228;che an den Drucker gesendet. Das kostet unn&#246;tig Speicherplatz.
+
+
+
+
+
+
+
+- &#220;bersicht - Verkleinerungsfaktor
+
+
+
+Wenn ein Drucklayout gew&#228;hlt wurde, welches eine &#220;bersicht enth&#228;lt, kann f&#252;r diese &#220;bersicht der Verkleinerungsfaktor angegeben werden. Der gedruckte Bereich wird dann in der &#220;bersicht um diesen Faktor verkleinert dargestellt.<Image>\img\grafik\drucken\ErweiterteOptionen.png$ErweiterteOptionen</Image>
+
+

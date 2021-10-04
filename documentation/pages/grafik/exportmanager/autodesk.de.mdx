@@ -1,0 +1,112 @@
+---
+title: "Daten als Autodesk DWG Datei exportieren"
+page: true
+---
+## Setzen Sie Autodesk DWG Export spezifische Einstellungen. 
+ <Menu> Menu: [Datei/ Exportmanager] </Menu> 
+
+Auf den weiteren Einstellungsseiten k&#246;nnen Autodesk DWG Export spezifische Einstellungen gesetzt werden.
+
+### Einstellungen
+
+- <Bold> Format: </Bold> 
+- <Bold> Dateiversion: </Bold>  W&#228;hlen Sie die Dateiversion f&#252;r die exportierte Datei.
+
+- <Bold> Dezimaltrennzeichen: </Bold>  Bei Gleitkommazahlen in Blockattributen wird wahlweise ein Punkt oder ein Komma als Dezimaltrennzeichen verwendet.
+
+- <Bold> Vorlagendatei exportieren: </Bold>  W&#228;hlen Sie ob alle Blockdefinitionen und Layer der Prototypzeichnung exportiert werden sollen oder nur die verwendeten.
+
+
+
+- <Bold> B&#246;gen: </Bold> 
+- <Bold> N&#228;herung von B&#246;gen: </Bold>  Wahlweise werden die B&#246;gen segmentiert oder als Bogen exportiert. 
+
+
+<Warning>
+Wenn der Export in 3D erfolgt, dann werden die B&#246;gen immer segmentiert, weil in AutoCAD eine 3D-Polylinie keine B&#246;gen haben kann.
+
+</Warning>
+- <Bold> Maximale Pfeilh&#246;he bei Bogeninterpolation </Bold>  gibt die <Italic> Pfeilh&#246;he </Italic>  in Metern an, mit der B&#246;gen segmentiert werden.
+
+
+
+- <Bold> 3D </Bold> 
+- <Bold> Objekte 3D exportieren: </Bold>  Mit dieser Option legen Sie fest ob Objekte, die in GeoMapper eine H&#246;he besitzen, als echte 3D Objekte in die DWG Datei geschrieben werden. Folgende Objekte erhalten eine H&#246;he.
+
+- Punkte
+
+- Linienz&#252;ge ( B&#246;gen werden durch durch Liniensegmente angen&#228;hert und die H&#246;he der Zwischenpunkte linear interpoliert)
+
+- 2-Punktsymbole (die H&#246;he f&#252;r das Punktsymbol wird vom ersten Punkt &#252;bernommen)
+
+- 3-Punktsymbole (die H&#246;he f&#252;r das Punktsymbol wird vom ersten Punkt &#252;bernommen)
+
+
+
+- <Bold> H&#246;henlinien exportieren: </Bold>  Sofern Ihre Datei Gel&#228;ndemodelle beinhaltet, werden dessen H&#246;henlinien wahlweise als <Italic> AutoCAD 3D-Polylinie </Italic>  mit <U> H&#246;heninformation in jedem St&#252;tzpunkt </U>  oder als <Italic> 2D-Polylinie </Italic>  mit <U> <Italic> Erhebung </Italic> </U>  (einheitliche H&#246;he pro Polylinie) exportiert.
+
+
+<Warning>
+Die H&#246;henlinien besitzen in jedem Fall eine H&#246;heninformation.
+
+Diese Option steuert lediglich das Format der Ausgabe.
+
+</Warning>
+
+
+- <Bold> CAD-Elemente: </Bold> 
+- <Bold> CAD-Elemente exportieren: </Bold>  Wenn sich CAD-Elemente in Ihrer Datei befinden, k&#246;nnen diese wahlweise mit exportiert werden. 
+
+- <Bold> Layouts exportieren: </Bold>  W&#228;hlen Sie ob die Layouts von importierten DWG-Dateien mitexportiert werden sollen.
+
+
+
+- <Bold> Sonstiges: </Bold> 
+- <Bold> Unsichtbare Beschriftungen exportieren: </Bold>  In der Datei als <Italic> unsichtbar </Italic>  konfigurierte Beschriftungen - z. B. Symbolbeschriftungen - werden grunds&#228;tzlich nicht exportiert. Mit dieser Option k&#246;nnen Sie solche Beschriftungen dennoch exportieren, was in verschiedenen CAD-Austauschformaten notwendig ist. In der Zieldatei entstehen dann entsprechende Blockattribute.
+
+- <Bold> Leere Attribute exportieren: </Bold>  Wenn das Attribut nicht gef&#252;llt wird, dann wird dennoch das Blockattribut angelegt.
+
+- <Bold> Linienz&#252;ge ausgespart exportieren </Bold> : Diese Option steht nur f&#252;r einen 2D Export zur Verf&#252;gung. Ausgespart werden Bereiche von Linien, auf denen Punkte liegen.
+
+- <Bold> Koordinaten KatasterAT-gerundet exportieren </Bold> : Gibt an, ob die Koordinaten (Einsetzpunkte von Punkten, St&#252;tzpunkte von Linienz&#252;gen) dem &#246;sterreichischen Kataster entsprechend gerundet und exportiert werden.
+
+- <Bold> Ung&#252;ltige H&#246;hen als Leerzeichen exportieren: </Bold>  Abh&#228;ngig von der Norm kann gefordert sein, bei ung&#252;ltigen H&#246;hen ein Leerzeichen zu exportieren.
+
+- <Bold> Verdr&#228;ngte Linienz&#252;ge exportieren </Bold> : Gibt an, ob verdr&#228;ngte Linienz&#252;ge exportiert werden.
+
+
+
+
+
+
+Dr&#252;cken Sie  <Border>Fertigstellen</Border> , um den Export abzuschlie&#223;en. Es wird ein Dialog ge&#246;ffnet, der den Status des Exportes anzeigt.
+<GeoMapper>
+<Success>
+Um nur den Inhalt eines Planbereichs zu exportieren, wechseln Sie den Planbereich und rufen dort den Export auf.
+</Success>
+
+<Success>
+Um auch hinterlegte Vektordaten (DWG, DXF, GeoDB) zu exportieren, nutzen Sie den Export im Planbereich.
+</Success>
+
+
+</GeoMapper>
+
+
+### Fachschale &#8222Teilungsplan &#214;sterreich&#8220
+Bei aktiver Fachschale &#8222Teilungsplan &#214;sterreich&#8220 steht f&#252;r die Objektselektion zus&#228;tzlich die Option &#8222VDE-Export&#8220 zur Verf&#252;gung:
+
+1.  Auswahl der Option &#8222VDE-Export&#8220
+
+2.  Auswahl der Version, die f&#252;r den Vergleich herangezogen wird
+
+3.  Auf Basis der berechneten Grundst&#252;cke werden alle Objekte selektiert, die sich zwischen der aktuellen Version und der gew&#228;hlten Version ge&#228;ndert haben.
+
+4.  Die Selektion kann beliebig erweitert oder reduziert (Strg-Taste) werden.
+
+
+
+
+<Info>
+Beispiel: Sie befinden sich in der Darstellung &#8222DKM&#8220, Ansicht &#8222Neuer Stand&#8220 und somit in der Version &#8222neu&#8220. F&#252;r den DXF-Export w&#228;hlen Sie die Option &#8222Selektion in der Grafik&#8220 und dann &#8222VDE-Export&#8220. Dort w&#228;hlen Sie die Option &#8222Berichtigt&#8220. Somit werden alle Objekte selektiert, die sich zwischen dem berichtigten und dem neuen Stand ge&#228;ndert haben.
+</Info>

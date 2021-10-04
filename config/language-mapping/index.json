@@ -1,0 +1,22 @@
+{
+  "languageMapping": [
+    {
+      "en": "/about",
+	  "de": "/about",
+      "it": "/about",
+      "fr": "/about"
+    },
+    {
+      "en": "/products",
+      "de": "/products",
+      "it": "/products",
+      "fr": "/products"
+    },
+    {
+      "en": "/contact",
+      "de": "/contact",
+      "it": "/contact",
+      "fr": "/contact"
+    }
+  ]
+} 

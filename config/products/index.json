@@ -1,0 +1,9 @@
+{
+  "productItems": [
+    { "name": "GeoMapperSE", "link": "/products" },
+	{ "name": "GeoDesigner", "link": "/products" },
+    { "name": "GeoDesktop", "link": "/products" },
+	{ "name": "Scripting", "link": "/products" },
+    { "name": "InventoryManager", "link": "/inventory" }
+  ]
+}

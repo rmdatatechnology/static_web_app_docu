@@ -1,0 +1,104 @@
+---
+title: "Attribute lesen und schreiben"
+page: true
+---
+## Lesen und schreiben von Typattributen, globalen Attributen und Klassenattributen. 
+### Definierte Attribute und deren Eigenschaften von Objekttypen lesen
+Mittels der Eigenschaft &quot;Attributes&quot; ist es m&#246;glich, die definierten Attribute eines Objekttyps auszulesen. Zus&#228;tzlich k&#246;nnen zu jedem Attribut alle Eigenschaften gelesen werden.
+
+```
+
+attribs = Application.Project.Configuration.GetObjectType(&#39;Linestring&#39;,&#39;Grundst&#252;cksgrenze&#39;).Attributes
+for x in attribs.keys() : 
+    attr = attribs[x]
+    print &#39;Name:&#39; + attr.Name + ( <Italic>  + attr.AliasName + &#39;)&#39; </Italic> 
+    print &#39;    Valuelist:&#39;
+    
+    for k, v in attr.Valuelist.items() : 
+        print &#39;        &#39; + k + &quot;-&quot; + v
+    print &#39;    Type:&#39; + attr.AttributeType 
+    print &#39;    FirstValueAsDefault: &#39; + str(attr.FirstValueAsDefault)
+    print &#39;    MinValue: &#39; + str(attr.MinValue)
+    print &#39;    MaxValue: &#39; + str(attr.MaxValue)
+    print &#39;    IsRequired: &#39; + str(attr.IsRequired)
+    print &#39;    ValuelistExclusive: &#39; + str(attr.ValuelistExclusive)
+    print &#39;    IntegerPartLength: &#39; + str(attr.IntegerPartLength)
+    print &#39;    DecimalPartLength: &#39; + str(attr.DecimalPartLength)
+    print &#39;    DateFormat: &#39; + attr.DateFormat
+    print &#39;    RememberRecentlyUsedAttrValue: &#39; + str(attr.RememberRecentlyUsedAttrValue)
+    print &#39;    Formula: &#39; + attr.Formula
+    print &#39;    UseCounter: &#39; + str(attr.UseCounter)
+    print &#39;    IsReadOnly: &#39; + str(attr.IsReadOnly)
+    print &#39;    GroupName: &#39; + attr.GroupName
+
+```
+
+
+ 
+### Vorgegebene Objekttyp-Klassenattribute lesen
+Mittels der Eigenschaft &quot;TypeAttributes&quot; k&#246;nnen explizit jene Attribute eines Objekttyps ausgelesen werden, die durch die Zugeh&#246;rigkeit des Typs zu einer bestimmten Objektklasse vorgegeben sind, wie am Beispiel von Punkten:
+
+- IsPointLabelRequired ..definiert ob der Objekttyp eine Punktnummer erfordert
+
+- MeasureCodes ..ein String mit der Aufz&#228;hlung der per Konfiguration zugewiesenen Messcodes
+
+- PointRelevanceFor3D .. Relevanz des Punkttyps f&#252;r Gel&#228;ndemodelle (0.. nicht relevant; 1.. relvant)
+
+
+
+Dies sind streng genommen keine Attribute, die Definitionen werden aber im selben Format wie die &quot;Attributes&quot; aufgelistet.
+
+
+```
+#Mit der nachfolgenden Zeile, kann die Eigenschaft &quot;IsPointLabelRequired&quot; von einem Objekttyp ausgelesen werden
+Application.Project.Configuration.GetObjectType(&#39;Point&#39;, &#39;Grenzpunkt&#39;).TypeAttributes[&#39;IsPointLabelRequired&#39;].DefaultValue
+```
+
+
+### Attributgruppen und deren Sichtbarkeitsbedingung lesen
+Mittels der Eigenschaft &quot;AttributeGroups&quot; ist es m&#246;glich, die definierten Attributgruppen eines Objekttyps auszulesen. Zus&#228;tzlich kann zu jeder Gruppe die Sichtbarkeitsbedingung ausgelesen werden.
+
+```
+
+attrgroups = Application.Project.Configuration.GetObjectType(&#39;Linestring&#39;,&#39;Grundst&#252;cksgrenze&#39;).AttributeGroups
+for attg in attrgroups:
+    print attg.Name + &#39;-&#39; + attg.Condition    
+
+```
+
+
+### Attributnamen in der konfigurierten Reihenfolge lesen.
+Mit der Eigenschaft &quot;AttributeNames&quot; ist es m&#246;glich, Attribute in jener Reihenfolge auszulesen, in der sie konfiguriert wurden. Zus&#228;tzlich werden f&#252;r Punkte und Fl&#228;chen Region, Name und SubName ausgegeben.
+
+```
+
+attribs = Application.Project.Configuration.GetObjectType(&#39;LineString&#39;, &#39;Grundst&#252;cksgrenze&#39;).AttributeNames
+print attribs
+for attrib in attribs:
+    print attrib
+
+```
+
+Die Namen der vorgegebenen Objekttyp-Klassenattribute werden &#228;hnlich aufgelistet. Deren Reihenfolge ist immer alphabetisch aufsteigend.
+
+```
+for typeAtt in Application.Project.Configuration.GetObjectType(&#39;Point&#39;, &#39;Metallmarke&#39;).TypeAttributeNames:
+    print typeAtt
+```
+
+
+
+### Globale Attribute lesen und den aktuellen Wert setzen
+Mit der Eigenschaft &quot;GlobalAttributes&quot; ist es m&#246;glich, globale Attribute auszulesen bzw. den aktuellen Wert zu setzen.
+
+```
+
+for k,v in Application.Project.Configuration.GlobalAttributes.GetAllGlobalAttributes().items():
+    print &#39;AttributName: &#39; + k
+    print &#39;DefaultValue: &#39; + v.DefaultValue
+    # F&#252;r alle anderen Attributwerte siehe Kapitel: Definierte Attribute und deren Eigenschaften von Objekttypen lesen
+    
+Application.Project.Configuration.GlobalAttributes.SetOverrideValue(&#39;Testattribut&#39;,&#39;Testwert1&#39;)
+print Application.Project.Configuration.GlobalAttributes.GetOverrideValue(&#39;Testattribut&#39;)
+
+```

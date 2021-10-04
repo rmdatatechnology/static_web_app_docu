@@ -1,0 +1,65 @@
+---
+title: "Convertir des éléments CAD en objets &productsuffix&"
+page: true
+---
+## D&#233;finition des param&#232;tres sp&#233;cifiques pour la conversion CAD.
+<GeoDesigner> <Menu> Menu: [Fichier / Convertir] </Menu> 
+
+Dans les pages suivantes on peut d&#233;finir des param&#232;tres sp&#233;cifiques pour la conversion.
+
+
+### Mappage
+A l&#39;aide de la table de conversion, l&#39;attribution des colonnes, des &#233;l&#233;ments CAD, aux attributs/champs, dans  <Placeholder>product</Placeholder> est ex&#233;cut&#233;. 
+
+
+<Image>\img\grafik\datei\CADConvertMapping.png$CADConvertMapping</Image>
+
+
+1. S&#233;lectionnez un fichier de mappage:
+
+
+-  Depuis le dossier pr&#233;d&#233;fini  
+
+
+<Image>\img\grafik\datei\PfeilAuswahl.png$PfeilAuswahl</Image> Ici vous trouvez les fichiers de mappage, install&#233;s avec <Placeholder>product</Placeholder> ou un de ses modules resp. les fichiers de mappage, qui ont &#233;t&#233; enregistr&#233;s dans un 
+
+[Dossier du bureau](../datei/programm-einstellungen6)
+ centralis&#233;.
+
+
+-  Depuis un dossier quelconque avec le bouton <Border>...</Border> : Si vous avez cr&#233;&#233; votre propre fichier de mappage, il se trouve normalement dans le dossier de projet.
+
+
+
+
+
+
+Alternative
+ En cliquant sur  <Border>Assistant ...</Border>  vous cr&#233;ez une nouvelle table de conversion. 
+Pour plus d&#39;informations, reportez-vous [ici ...](../datei/cadkonvertieren2)
+
+
+<Warning>
+Si plusieurs fichiers de conversion CAD on &#233;t&#233; choisis, ils doivent poss&#233;der la m&#234;me structure interne!
+</Warning>
+
+
+### Param&#232;tres
+Ici vous pouvez d&#233;finir d&#39;autres param&#232;tres d&#39;importation, ces param&#232;tres sont optionnels.
+
+- <Bold> Supprimer &#233;l&#233;ments CAD apr&#232;s la conversion: </Bold>  Il d&#233;finit si, apr&#232;s une convertion r&#233;ussite, les &#233;l&#233;ments CAD doivent &#234;tre supprim&#233;s. La modification de ce param&#232;tre a effet aussi dans les suivants appels de la commande 
+[Convertir &#233;l&#233;ment CAD](../../darstellungsmanager/konvertieren/cad-elementekonvertieren)
+.
+
+- <Bold> Accrochage au point: </Bold>  Si lors de l&#39;importation de polylignes, dans le rayon donn&#233;, un point avec altitude est trouv&#233;, cette altitude est trouv&#233;e. Dans le mappage le choix &quot;Accrochage au point&quot; pour l&#39;altitude doit &#234;tre activ&#233;, ce faisant l&#39;option fonctionne.
+
+- <Bold> Protocole: </Bold>  Il d&#233;finit si le protocole d&#233;taill&#233; des objets import&#233;s, doit &#234;tre g&#233;n&#233;r&#233;, ou juste un r&#233;capitulatif.
+
+- <Bold> Importer Region: </Bold>  Il d&#233;finit si pour les points, le champ <Italic> Region </Italic>  doit &#234;tre import&#233; ou ignor&#233;.
+
+
+
+
+Appuyez sur  <Border>Terminer</Border> , pour terminer l&#39;importation. Un dialogue qui affiche l&#39;&#233;tat de l&#39;importation, s&#39;ouvre.
+</GeoDesigner>
+

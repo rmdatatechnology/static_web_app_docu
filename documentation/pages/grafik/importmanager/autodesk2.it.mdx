@@ -1,0 +1,146 @@
+---
+title: "Importazione di dati da file Autodesk DXF"
+page: true
+---
+## Impostazioni specifiche per l&#39;importazione dei file DXF Autodesk.
+<GeoMapper> <Menu> Menu: [File / Import-Manager] </Menu> 
+
+Su ulteriori schede &#232; possibile eseguire delle impostazioni specifiche per l&#39;importazione Autodesk DXF.
+
+<Success>
+Se i dati esterni DWG/DXF contengono dei riempimenti di superfici che non vengono correttamente visualizzati, questi possono essere completati tramite un proprio file di riempimenti di superfici.
+</Success>
+
+
+### Mappatura
+Con l&#39;aiuto di una tabella di conversione, gli oggetti CAD possono essere assegnati a dei tipi di oggetti  <Placeholder>product</Placeholder><Image>\img\grafik\importmanager\GeoMapper.DatenImportieren.png$GeoMapper.DatenImportieren</Image>
+
+
+1. Selezionare un file di mappatura:
+
+- Da un percorso predefinito<Image>\img\grafik\importmanager\PfeilAuswahl.png$PfeilAuswahl</Image>: Qui si trovano i file di mappatura che vengono installati con GeoMapper o con una delle sue applicazioni, risp. i file di mappatura che sono salvati in una 
+[cartella aziendale](../datei/programm-einstellungen6)
+ centralizzata.
+
+- Da un percorso qualunque, tramite il bottone <Border>...</Border> : Quando viene creata una propria mappatura, questa si trova normalmente nella cartella di progetto.
+
+
+
+
+
+Alternativa
+ Cliccando sul bottone  <Border>Assistente...</Border>  &#232; possibile creare una nuova tabella di conversione. 
+Per ulteriori informazioni, vedere [qui ...](../importmanager/autodesk3)
+
+
+### Impostazioni
+Qui &#232; possibile definire ulteriori impostazioni opzionali.
+
+- <Bold> Altri: </Bold>  
+
+- Interpreta le altezze 0 come altezze non valide:
+
+- S&#236;: La coordinata altimetrica non viene ripresa
+
+- No: Lo 0 viene ripreso come coordinata altimetrica
+
+
+
+- Inserisci nella grafica gli oggetti AutoCAD non convertiti
+
+- S&#236;: Gli oggetti AutoCAD, che non siano stati convertiti in tipi di oggetti <Placeholder>product</Placeholder>  sono comunque inseriti nel progetto. 
+
+
+
+
+
+
+
+<Warning>
+Gli oggetti AutoCAD durante l&#39;import non sono convertiti.
+</Warning>
+
+
+- No: Gli oggetti AutoCAD, che non siano stati convertiti in tipi di oggetti <Placeholder>product</Placeholder>  non sono importati.
+
+- Raggio di snap al punto: Se durante l&#39;importazione delle polilinee, entro questo raggio, viene trovato un punto avente altezza valida, questa altezza viene usata. A questo scopo, nella mappatura per l&#39;altezza deve essere scelta l&#39;opzione &quot;Snap al punto&quot;.
+
+- Scala del file sorgente: Definire la scala dei dati in uscita. Se si usa la stessa scala usata in <Placeholder>product</Placeholder>  le posizioni e le altezze dei dati in uscita corrispondono. Per la scala 1:1000 non avviene alcuna modifica. 
+
+
+
+
+
+
+
+
+
+<Success>
+Questa &#232; considerata solo se nella mappatura dei dati sono riprese la posizione e l&#39;altezza delle etichette. Altrimenti le etichette sono visualizzate come da configurazione.
+</Success>
+
+
+- <Bold> Risoluzione dei conflitti: </Bold>  I nomi di punti e superfici devono essere univoci. In caso di nomi uguali sono disponibili le seguenti opzioni:
+
+- <Italic> Rinomina </Italic> : I punti e le superfici importati sono rinominati tramite un prefisso risp. un suffisso. Gli oggetti esistenti restano inalterati.
+
+- <Italic> Priorit&#224; al punto esistente </Italic> : Il punto presente nel file rimane inalterato, l&#39;oggetto della sorgente viene ignorato. Il comportamento &#232; analogo a <Italic> Rinomina </Italic>  senza l&#39;aggiunta di un prefisso risp. suffisso.
+
+- <Italic> Priorit&#224; al nuovo punto </Italic> : Il nuovo punto importato sostituisce quello esistente.
+
+- <Italic> Risolvere interattivamente </Italic> : Si apre un dialogo nel quale per ogni punto &#232; possibile decidere se usare il punto di GeoMapper o quello della sorgente. 
+
+
+
+
+
+<Warning>
+Per l&#39;importazione di superfici col medesimo nome si esegue l&#39;aggiunta di un prefisso risp. un suffisso. Se questi valori sono entrambi vuoti, le superfici non sono importate. Le superfici esistenti restano inalterate.
+</Warning>
+
+
+- <Bold> Protocollo: </Bold>  Definisce se per gli oggetti importati debba essere generato un protocollo dettagliato o solo un riepilogo.
+
+- <Bold> Importa Region: </Bold>  Definisce se per i punti debba essere importato o meno, il campo <Italic> Region </Italic> .
+
+
+
+
+Cliccare su  <Border>Fine</Border> , per terminare l&#39;importazione ed aprire un dialogo che mostra lo stato dell&#39;importazione.
+
+### Importazione di grafiche di rete da rmGEO	
+Per l&#39;importazione di compensazioni di rete, stazioni libere e poligonali da rmGEO sono gi&#224; pronte delle tabelle di mappatura. Procedere nel seguente modo:
+
+1. Eseguire il calcolo in rmGEO 
+
+2. Esportare la costellazione da rmGEO in un file DXF. Definire le seguenti impostazioni:
+
+- Scala della grafica di rete e del disegno a 1:1000 
+
+- Esportare i simboli di punti come blocchi
+
+
+
+3. Avviare &quot;Autodesk DXF Import&quot;
+
+4. Selezionare la grafica di rete
+
+5. Selezionare una delle tabelle di mappatura installate:
+
+- <Bold> rmGEO_Netzbild_Mit-Punkte.xml: </Bold>  Se si importa la grafica di rete in un file nuovo e non si &#232; connessi con il progetto rmGEO.
+
+- <Bold> rmGEO_Netzbild_Ohne-Punkte.xml: </Bold>  Se si importa la grafica di rete in un file esistente, nel quale i punti sono gi&#224; presenti.
+
+
+
+6. Definire su &quot;No&quot; l&#39;impostazione &quot;Inserisci nella grafica gli oggetti AutoCAD non convertiti&quot;
+
+7. Cliccare su <Border>Fine</Border> , per terminare.
+
+
+
+
+
+
+</GeoMapper>
+

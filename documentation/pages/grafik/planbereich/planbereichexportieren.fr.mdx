@@ -1,0 +1,49 @@
+---
+title: "Exporter une zone layout"
+page: true
+---
+## Exportation de zones layout dans un fichier DWG ou DXF
+<GeoMapper> <Menu> Menu: [Fichier / Exporter zone layout] </Menu> 
+
+
+1. S&#233;lectionnez avec le bouton <Border>...</Border>  le nom et le format du fichier. Un fichier avec le nom de la zone layout et le dernier format utilis&#233;, est propos&#233;.
+
+
+2. S&#233;lectionnez une des options d&#39;exportation:
+
+
+- <Bold> Exporter le plan avec coordonn&#233;es originales: </Bold>  Dans le fichier DWG/DXF le plan se trouve dans la m&#234;me position des points du fichier. 
+
+
+- <Bold> Exporter le plan avec coordonn&#233;es locales: </Bold>  Dans le fichier DWG/DXF le coin en bas &#224; gauche du plan se trouve &#224; l&#39;origine. 
+
+
+- <Bold> Exporter le plan avec coordonn&#233;es locales sans r&#233;duction de projection: </Bold>  Dans le fichier DWG/DXF le coin en bas &#224; gauche du plan se trouve &#224; l&#39;origine. Le plan est corrig&#233; avec le facteur de r&#233;duction selon les param&#232;tres de fichier. Ici le facteur de r&#233;duction est appliqu&#233; &#224; toutes les parties du plan.
+
+
+
+
+3. Si vous avez sur le plan plusieurs zones d&#39;impression, s&#233;lectionnez la zone d&#39;impression pour le g&#233;or&#233;f&#233;rencement. Selon l&#39;option choisie on a les r&#233;sultats suivants:
+
+
+- <Bold> Exporter le plan avec coordonn&#233;es originales: </Bold>  Les points de la zone d&#39;impression s&#233;lectionn&#233;e ont les coordonn&#233;es originales. Les autres zones d&#39;impression sont conformement orient&#233;es.
+
+
+- <Bold> Exporter le plan avec coordonn&#233;es locales: </Bold>  L&#39;&#233;chelle de la zone d&#39;impression s&#233;lectionn&#233;e est utilis&#233;e. Si vous mesurez des distances dans cette zone d&#39;impression vous obtenez donc les valeurs du plan. Les donn&#233;es des autres zones d&#39;impression, pour une image du plan adapt&#233;e, sont conformement orient&#233;e. Ici les valeurs du plan ne sont pas mesurables.
+
+
+- <Bold> Exporter le plan avec coordonn&#233;es locales sans r&#233;duction de projection: </Bold>  L&#39;&#233;chelle de la zone d&#39;impression s&#233;lectionn&#233;e est utilis&#233;e et le plan complet est corrig&#233;. Si vous mesurez des distances dans la zone d&#39;impression s&#233;lectionn&#233;e, vous obtenez les valeurs r&#233;elles en nature. Les donn&#233;es des autres zones d&#39;impression, pour une image du plan adapt&#233;e, sont conformement orient&#233;e. Ici les valeurs r&#233;elles ne sont pas mesurables. 
+
+
+
+
+4. D&#39;autres param&#232;tres peuvent &#234;tre d&#233;finis dans la page du dialogue &quot;Param&#232;tres&quot;.
+
+
+
+
+
+
+<Image>\img\grafik\planbereich\Planbereich_exportieren.png$Planbereich_exportieren</Image>
+
+</GeoMapper>

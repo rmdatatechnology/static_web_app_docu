@@ -1,0 +1,67 @@
+---
+title: "Points"
+page: true
+---
+## Inserimento di un punto
+
+<Warning>
+Il prerequisito per un punto &#232; che le le coordinate di riferimento ed il nome del punto siano presenti nel file XML!
+</Warning>
+
+
+###  Struttura della sezione Punti
+
+- <Bold> &lt;Points&gt; </Bold>  Sezione di tutti i punti. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>      &lt;Point  Id=&quot;100&quot;&gt; </Bold>  Punto con un ID univoco.
+
+- <Bold>      &lt;VertexId&gt;99&lt;/VertexId&gt; </Bold>  Riferimento alle coordinate. Questa sezione pu&#242; esistere 1 sola volta.
+
+- <Bold>         &lt;PointLabelId&gt;98&lt;/PointLabelId&gt; </Bold>  Riferimento al nome del punto. Questa sezione pu&#242; esistere 1 sola volta. Qualora il punto non abbia il nome, allora viene dato il valore 0.
+
+- <Bold> &lt;Attributes&gt; </Bold>  Lista degli attributi dell&#39;oggetto.
+
+- <Bold>           &lt;Attribute Name=&quot;Tipo d&#39;albero&quot; Type=&quot;System.String&quot; Value=&quot;Frassino&quot; /&gt; </Bold>  Nome dell&#39;attributo, tipo e valore. Questa sezione pu&#242; essere ripetuta pi&#249; volte.
+
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Fine sezione
+
+- <Bold>   &lt;DisplayInformation /&gt; </Bold>  (Opzionale) Dato su una modifica della rappresentazione grafica (vedere pi&#249; in basso).
+
+- <Bold> &lt;ObjectType&gt;Latifoglia&lt;/ObjectType&gt; </Bold>  Dato sul tipo d&#39;oggetto.
+
+
+
+- <Bold>       &lt;/Point&gt; </Bold> 
+
+
+- <Bold>    &lt;/Points&gt; </Bold> 
+
+
+
+<Success>
+Nel caso in cui nel file XML ci siano degli attributi che non siano stati configurati, questi sono comunque aggiunti all&#39;oggetto.
+</Success>
+
+<Success>
+Nel caso in cui nel file XML ci sia un oggetto il cui tipo non sia stato configurato, l&#39;oggetto &#232; comunque importato. Secondo l&#39;impostazione, gli oggetti di tipo sconosciuto, sono rappresentati in magenta oppure nascosti. (Vedere menu File - Parametri di file)
+</Success>
+
+
+<Info>
+    &lt;Points&gt;
+      &lt;Point Id=&quot;100&quot;&gt;
+        &lt;VertexId&gt;99&lt;/VertexId&gt;
+        &lt;PointLabelId&gt;98&lt;/PointLabelId&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Diametro corona&quot; Type=&quot;System.String&quot; Value=&quot;10.700&quot; /&gt;
+          &lt;Attribute Name=&quot;Diametro tronco&quot; Type=&quot;System.String&quot; Value=&quot;0.800&quot; /&gt;
+          &lt;Attribute Name=&quot;Tipo d&#39;albero&quot; Type=&quot;System.String&quot; Value=&quot;Frassino&quot; /&gt;
+          &lt;Attribute Name=&quot;Altezza&quot; Type=&quot;System.String&quot; Value=&quot;&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;ObjectType&gt;Latifoglia&lt;/ObjectType&gt;
+      &lt;/Point&gt;
+    &lt;/Points&gt;
+</Info>
+

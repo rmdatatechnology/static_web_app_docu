@@ -1,0 +1,46 @@
+---
+title: "Dialoge zum Öffnen und Speichern von Dateien"
+page: true
+---
+## Befehle f&#252;r den Dateizugriff
+### Datei &#246;ffnen
+
+```
+
+filter = &#39;Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*&#39;
+initialDirectory = &#39;C:\Temp&#39;
+title = &#39;meine Textdatei ausw&#228;hlen&#39;
+myfilepath = Application.IO.GetFileNameForOpen(filter,initialDirectory,title).Value
+print myfilepath
+
+```
+
+
+### Datei speichern
+
+```
+
+filter = &#39;Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*&#39;
+initialDirectory = &#39;C:\Temp&#39;
+title = &#39;meine Textdatei ausw&#228;hlen&#39;
+myfilepath = Application.IO.GetFileNameForSave(filter,initialDirectory,title).Value
+print myfilepath
+
+```
+
+
+### Ordner ausw&#228;hlen
+
+```
+
+filter = &#39;Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*&#39;
+initialDirectory = &#39;C:\Temp&#39;
+title = &#39;meine Textdatei ausw&#228;hlen&#39;
+myfolderpath = Application.IO.GetFolderPath(initialDirectory,title).Value
+print myfolderpath
+
+```
+
+
+
+

@@ -1,0 +1,37 @@
+---
+title: "Puffer erzeugen"
+page: true
+---
+## Einen Puffer auf Basis bestehender Objekte erzeugen
+
+Der Befehl wird &#252;ber das  <Menu> Menu: [Analyse - Puffer erzeugen] </Menu>  aufgerufen.
+Danach werden vom Anwender Objekte im Grafikfenster selektiert, um welche ein Puffer gebildet werden soll.
+G&#252;ltige Objekte sind:
+
+- Punkte
+
+- Linienz&#252;ge
+
+- Fl&#228;chen
+
+
+
+Sind vor dem Befehlsaufruf bereits g&#252;ltige Objekte in der Grafik selektiert, wird der Puffer um diese Objekte gebildet. 
+Danach wird die Pufferbreite eingegeben. Die Pufferbreite muss &gt; 0 sein. Nur wenn ausschlie&#223;lich Fl&#228;chen selektiert wurden, kann die Pufferbreite auch = 0 sein.
+Nach Angabe der Pufferbreite werden ein oder mehrere Pufferfl&#228;chen erzeugt. &#220;berlappende Pufferfl&#228;chen werden zu einer Pufferfl&#228;che zusammengefasst (UNION).
+
+## Viewing-Modus
+Im Viewing-Modus ist das Ergebnis der Pufferberechnung ein oder mehrere Markierungs-Polygone.
+
+## Editiermodus
+Im Editiermodus ist das Ergebnis der Pufferberechnung ein oder mehrere Fl&#228;chen des aktuellen Fl&#228;chentyps. 
+Die Auswahl des aktuellen Fl&#228;chentyps (der aktuelle Fl&#228;chentyp muss eine &quot;freie Fl&#228;che&quot; sein) erfolgt vor Befehlsaufruf in der [Statusleiste](../fachschaleeditieren/statusleiste)
+.
+Wurde kein aktueller Fl&#228;chentyp eingestellt, so wird eine Fl&#228;che ohne Typ erzeugt. Diese kann sp&#228;ter &#252;ber das Kontextmen&#252; des Objektmanagers mit dem Befehl  <Menu>Typ wechseln</Menu>  in einen anderen Fl&#228;chentyp umgewandelt werden.
+
+<Success>
+Die Pufferbildung kann nicht mit allen Geometriekonstellationen durchgef&#252;hrt werden. Kommt es bei der Pufferbildung zu Fehlern, werden jene Objekte in der Tabellenansicht ausgegeben, welche die Pufferbildung verhindern.
+</Success>
+
+
+Alle neu erzeugten Objekte werden selektiert und k&#246;nnen bei Bedarf sofort in der Tabellenansicht oder in den Objektinformationen angezeigt werden.

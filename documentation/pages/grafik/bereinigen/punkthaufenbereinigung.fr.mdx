@@ -1,0 +1,99 @@
+---
+title: "Nettoyage de grappe de points"
+page: true
+---
+## Correction des points ou des sommets qui poss&#232;dent les m&#234;mes coordonn&#233;es au moins d&#39;une tol&#233;rance d&#233;finie.
+
+ <Menu> Menu: [Nettoyer / Nettoyage grappe de points] </Menu> 
+ <Menu> Cmd: [PointClusterStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+
+1. S&#233;lectionnez les donn&#233;es
+
+- <Bold> Tous les objets charg&#233;s: </Bold>  Tous les objets d&#39;une zone - si vous avez charg&#233; uniquement une zone - sont nettoy&#233;s.
+
+- <Bold> S&#233;lection d&#39;objets: </Bold>  En cliquant sur la s&#233;lection d&#39;objets, vous passez sur le graphique pour choisir les objets &#224; nettoyer.
+
+
+
+2. Cliquez sur <Border>Terminer</Border> .
+
+3. Les erreurs sur les donn&#233;es sont affich&#233;es dans un 
+[Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; chaque erreur peut &#234;tre trait&#233;e.
+
+
+
+
+Alternative
+ 
+En d&#233;finissant les  <Bold> Param&#232;tres de correction </Bold>  beaucoup de corrections peuvent &#234;tre ex&#233;cut&#233;es automatiquement (voir ci-dessous).
+
+<Warning>
+Seulement les erreurs correspondantes aux crit&#232;res du filtre d&#233;fini dans le fichier peuvent &#234;tre trait&#233;es.
+</Warning>
+
+<Warning>
+Si les erreurs de donn&#233;es ne peuvent pas &#234;tre corrig&#233;es automatiquement, ils sont list&#233;es dans le [Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; ils peuvent &#234;tre trait&#233;es.
+</Warning>
+
+
+### D&#233;tails - Param&#232;tres de correction
+Ici vous trouvez d&#39;autres param&#232;tres pour le nettoyage:
+
+- <Bold> R&#233;solution de grappes de points: </Bold>  Cette option d&#233;finit quel point d&#39;une grappe doit &#234;tre gard&#233;. 
+
+
+<Success>
+Il s&#39;agit du point m&#234;me, et non pas de ses coordonn&#233;es; pour les coordonn&#233;es, une option d&#233;di&#233;e est pr&#233;vue.
+
+</Success>
+
+<Success>
+Si par importation vous importez un doublon de point, choisissez &quot;Supprimer le point avec le num&#233;ro le plus haut&quot;. Si par exemple, apr&#232;s l&#39;importation, vous avez les points 101 et A101, avec cette option, le point supprim&#233; est le A101.
+
+</Success>
+- <Bold> Supprimer le point avec le num&#233;ro le plus haut: </Bold>  Le point avec le num&#233;ro le plus bas est gard&#233;, les autres sont supprim&#233;s.
+
+- <Bold> Supprimer le point avec le num&#233;ro le plus bas: </Bold>  Le point avec le num&#233;ro le plus haut est gard&#233;, les autres sont supprim&#233;s.
+
+- <Bold> Interaction utilisateur: </Bold>  Les erreurs de donn&#233;es sont affich&#233;es dans un 
+[Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; chaque erreur peut &#234;tre trait&#233;e.
+
+
+
+- <Bold> Options pour la moyenne des coordonn&#233;es des points: </Bold>  Elle d&#233;finit les coordonn&#233;es qui doivent &#234;tre appliqu&#233;es au point de la grappe qui est gard&#233;.
+
+- <Bold> Aucune moyenne des coordonn&#233;es: </Bold>  Le point est gard&#233; avec ses m&#234;mes coordonn&#233;es.
+
+- <Bold> Moyenne de toutes les coordonn&#233;es: </Bold>  Les nouvelles coordonn&#233;es sont calcul&#233;es comme moyenne de tous les points et sommets de la grappe de points.
+
+- <Bold> Moyenne des coordonn&#233;es des points: </Bold>  Les nouvelles coordonn&#233;es sont calcul&#233;es comme moyenne de tous les points (avec num&#233;ro), SANS consid&#233;rer les sommets. 
+
+
+
+- <Bold> Configuration de la priorit&#233;: </Bold>  Il d&#233;finit, la priorit&#233; appliqu&#233;e pour la correction, aux sommets et aux points sans num&#233;ro.
+
+
+
+
+
+<Success>
+En cas de points sans num&#233;ro et avec num&#233;ro, se trouvant sur la m&#234;me position, s&#233;lectionnez pour le nettoyage les deux options.
+</Success>
+
+<Success>
+Un d&#233;passement de la tol&#233;rance doit en tous cas &#234;tre trait&#233; par l&#39;utilisateur.
+</Success><Image>\img\grafik\bereinigen\PurgePointHeap2.png$PurgePointHeap2</Image>
+
+
+### D&#233;tails - Tol&#233;rances de correction
+Ici vous pouvez d&#233;finir les tol&#233;rances altim&#233;triques et planim&#233;triques. En cliquant sur le bouton  <Border>Terminer</Border>  la correction est d&#233;marr&#233;e.<Image>\img\grafik\bereinigen\PurgePointHeap.png$PurgePointHeap</Image>
+
+
+
+
+

@@ -1,0 +1,152 @@
+---
+title: "Mapping-Assistent Autodesk Import"
+page: true
+---
+## Assistent f&#252;r das Erstellen einer Konvertierungstabelle f&#252;r den Import von Autodesk DWG oder DXF Dateien
+
+F&#252;r den Import von Autodesk DWG/DXF Dateien in eine rmDATA Geodatabase steht ein Mapping-Assistent zur Verf&#252;gung, sodass die Objekte der Autodesk-Dateien in Objekte der Geodatabase &#252;bernommen werden k&#246;nnen.<Image>\img\grafik\daten\mappingdwg1.png$mappingdwg1</Image>
+
+Im ersten Schritt wird der Inhalt der Import-Dateien analysiert.
+Danach werden die zuordenbaren Objektklassen in Registern angezeigt.
+F&#252;r jede Geodatabase-Objektklasse werden alle Layer einer AutoCAD-Gruppe (Insert, Point, Text, ...) aufgelistet, und es kann jedem Layer ein Objekttyp der Geodatabase zugeordnet werden.
+Liegen Bl&#246;cke auf unterschiedlichen Layern, wird f&#252;r jeden Block eine Zeile mit einer Bedingung angelegt. Als Bedingungen k&#246;nnen auch Eigenschaften wie Farbe, Textstil, Texth&#246;he oder Linientyp definiert werden.
+Im Dialog k&#246;nnen einzelne Zeilen dupliziert und danach ge&#228;ndert werden:  <Border>+</Border> ,  <Border>x</Border> 
+In der Spalte &quot;Objekttyp der GeoDB&quot; wird vom Anwender der gew&#252;nschte Objekttyp der Geodatabase eingestellt. 
+Weiters k&#246;nnen dem Objekttyp Attribute (entweder aus dem AutoCAD-Objekt, oder fixe Attributwerte) zugewiesen werden.
+Jedes AutoCAD-Objekt kann nur einmal &#252;bernommen werden. Bei Doppeldefinitionen gilt die Reihenfolge der Register und die Reihenfolge der Zeilen.
+
+<Success>
+Nach  <Border>Fertigstellen</Border>  kann das erstellte Mapping in einer Datei gespeichert werden.
+</Success>
+
+
+In der folgenden Tabelle ist eine &#220;bersicht &#252;ber die M&#246;glichkeiten des Mappings enthalten:
+<table>
+<tr><th>Objektklasse Geodatabase</th>
+<th>M&#246;gliche AutoCAD Elemente (Gruppe)</th>
+<th>Bedingungen</th>
+<th>Attribut-Zuweisung</th>
+</tr>
+<tr><td>Punkt</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>Fl&#228;che</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Hatch</td>
+<td>Farbe</td>
+<td></td>
+</tr>
+<tr><td></td>
+<td>Polygon</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness), Erhebung der Linie (Elevation)</td>
+</tr>
+<tr><td>Linienzug</td>
+<td>Arc</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness)</td>
+</tr>
+<tr><td></td>
+<td>Line</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness)</td>
+</tr>
+<tr><td></td>
+<td>Polyline</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness), Erhebung der Linie (Elevation)</td>
+</tr>
+<tr><td>Text</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>Linienzugsymbol</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>2-Punkt Symbol</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>3-Punkt Symbol</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>Sperrbema&#223;ung</td>
+<td>AlignedDimension</td>
+<td>DimensionStyle</td>
+<td></td>
+</tr>
+</table>
+
+

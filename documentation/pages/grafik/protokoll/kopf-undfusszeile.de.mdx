@@ -1,0 +1,60 @@
+---
+title: "Kopf- und Fußzeilen"
+page: true
+---
+## Anpassung der Kopf- und Fu&#223;zeilen des Ausdrucks
+
+Bei Ausdrucken des Protokolls werden standardm&#228;&#223;ig die mit  <Placeholder>product</Placeholder> ausgelieferten Kopf- und Fu&#223;zeilen eingef&#252;gt.
+
+Die Inhalte sind in den Dateien  <Italic> Standard.header </Italic>  bzw.  <Italic> Standard.footer </Italic>  festgelegt.  (Siehe [&#220;bersicht der Dateien](../anhang/dateien)
+). Diese enthalten ein Beispiel-Layout und k&#246;nnen mit jedem beliebigen HTML-Editor .an Ihre jeweiligen Bed&#252;rfnisse angepasst werden.
+
+Hierbei k&#246;nnen auch  <Italic> $Variablen$  </Italic> verwendet werden, f&#252;r die beim Ausdruck dann die tats&#228;chlichen Werte eingesetzt werden:
+
+<table>
+<tr><th>Variablenname</th>
+<th>Bedeutung</th>
+</tr>
+<tr><td>$CurrentDate$</td>
+<td>Aktuelles Datum</td>
+</tr>
+<tr><td>$CurrentPage$</td>
+<td>Aktuelle Seitennummer</td>
+</tr>
+<tr><td>$CurrentUser$</td>
+<td>Aktueller Benutzer</td>
+</tr>
+<tr><td>$ <i> Projekteinstellung </i> $</td>
+<td>Beliebige Projekteinstellung</td>
+</tr>
+</table>
+
+
+<Info>
+F&#252;gen Sie die folgende Zeilen in den Protokollkopf  <Italic> Standard.header </Italic>  ein
+
+ <Italic> Seite: $CurrentPage$&lt;br&gt;
+GZ: $ProjectName$ </Italic> 
+
+und Sie erhalten folgende Darstellung:
+
+
+<Image>\img\grafik\protokoll\HeaderProjectName.png$HeaderProjectName</Image>
+</Info>
+
+
+<Success>
+Die Einstellungen f&#252;r die Kopf- und Fu&#223;zeile m&#252;ssen nur einmal gemacht werden und werden automatisch in jedem Protokollausdruck verwendet.
+</Success>
+
+<GeoDesigner>
+<Success>
+Sie k&#246;nnen in der Kopfzeile im Protokoll auch ein (Firmen-)Logo verwenden. Wenn die Grafikdatei im Verzeichnis  <Italic> C:\ProgramData\rmDATA\GeoDesigner\Templates\Protocol </Italic>  abgelegt ist, gen&#252;gt die Angabe des Dateinamens, andernfalls muss der Pfad zur Grafikdatei als absoluter Pfad angegeben werden.
+</Success>
+
+</GeoDesigner>
+<GeoMapper>
+<Success>
+Sie k&#246;nnen in der Kopfzeile im Protokoll auch ein (Firmen-)Logo verwenden. Wenn die Grafikdatei im Verzeichnis  <Italic> C:\ProgramData\rmDATA\GeoMapperSE\Templates\Protocol </Italic>  abgelegt ist, gen&#252;gt die Angabe des Dateinamens, andernfalls muss der Pfad zur Grafikdatei als absoluter Pfad angegeben werden.
+</Success>
+</GeoMapper>

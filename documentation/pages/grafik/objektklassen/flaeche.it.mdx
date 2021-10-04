@@ -1,0 +1,38 @@
+---
+title: "Superficie"
+page: true
+---
+## Descrizione della classe di oggetti  <Bold> Superficie </Bold> 
+
+ <Placeholder>geodgm</Placeholder> 
+## Superficie
+Una superficie &#232; costituita da uno o pi&#249; punti d&#39;inserimento. Una superficie pu&#242; avere un nome di superficie che deve essere univoco all&#39;interno dello stesso progetto. Nel caso esistano pi&#249; punti d&#39;inserimento, questi possiedono lo stesso nome di superficie (i diversi punti d&#39;inserimento appartengono ad un solo oggetto superficie).
+
+## Propriet&#224; della superficie
+ <Bold> Nome di superficie: </Bold>  Il nome di superficie &#232; composto da 3 parti: la Region, il Name ed il Subname. Una superficie pu&#242; avere un nome ma non &#232; obbligatorio. Se viene dato un nome, questo deve essere univoco all&#39;interno del progetto.
+
+ <Bold> Informazioni geometriche: </Bold>  Una superficie, nel caso in cui abbia un contorno valido, ha diverse informazioni come il perimetro e l&#39;area.
+
+### Tipi di superfici
+Esistono 2 diversi tipi di superfici:
+
+- <Bold> Superfici libere: </Bold>  Per inserire una superficie libera si disegna la linea del contorno. Secondo la configurazione la superficie pu&#242; essere riempita con un tratteggio. Se si inserisce una superficie libera tramite punto d&#39;inserimento, allora come contorno vengono considerate le polilinee adiacenti (indipendentemente dal gruppo d&#39;oggetti).
+
+
+
+
+
+- <Bold> Superfici referenziate: </Bold>  Le superfici referenziate si inseriscono solo tramite il punto d&#39;inserimento. Per il calcolo della superficie il programma cerca le polilinee di contorno, le quali devono stare in un determinato gruppo d&#39;oggetti. Cio&#232; le polilinee di altri gruppi d&#39;oggetti non vengono considerate per il calcolo.
+
+
+<Info>
+La superficie &quot;Numero fondo&quot; cerca le polilinee del gruppo d&#39;oggetti &quot;Limite di fondo&quot;. Se nel fondo si trova un edificio, allora la superficie dell&#39;edificio non viene risparmiata.
+
+</Info>
+
+<Success>
+Se un punto intermedio di una superficie referenziata calcolata, viene modificato, la superficie diventa non valida. In tal caso la superficie non &#232; pi&#249; selezionabile cliccando nella superficie, ma occorre cliccare sul suo nome.
+
+</Success>
+
+

@@ -1,0 +1,71 @@
+---
+title: "Importazione dati da rmDATA XML"
+page: true
+---
+## Definizioni specifiche per l&#39;importazione rmDATA XML.
+<GeoMapper> <Menu> Menu: [File / Import-Manager] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [File / Importazione] </Menu> </GeoDesigner>
+
+In altre pagine possono essere definite impostazioni specifiche per l&#39;importazione rmDATA XML.
+
+### Mappatura
+<GeoMapper>
+<Image>\img\grafik\importmanager\GeoMapper.DatenImportieren.png$GeoMapper.DatenImportieren</Image>
+</GeoMapper>
+<GeoDesigner>
+<Image>\img\grafik\importmanager\GeoDesigner.DatenImportieren.png$GeoDesigner.DatenImportieren</Image>
+</GeoDesigner>
+
+
+
+1.  Selezionare un file di mappatura:
+
+-  Da una cartella predefinita<Image>\img\grafik\importmanager\PfeilAuswahl.png$PfeilAuswahl</Image>: Qui si trovano i file di mappatura, installati con <Placeholder>product</Placeholder> o con i suoi moduli risp. i file di mappatura, che sono stati salvati nella 
+[cartella aziendale centralizzata](../datei/programm-einstellungen6)
+.
+
+-  Da una cartella qualunque, tramite il bottone <Border>...</Border> : Se si &#232; creato un proprio file di mappatura, questo normalmente si trova nella cartella di progetto.
+
+
+
+
+
+Alternativa
+ Cliccando su  <Border>Assistente ...</Border>  si pu&#242; creare una nuova tabella di conversione. 
+
+### Impostazioni
+Qui possono essere eseguite ulteriori impostazioni d&#39;importazione che sono opzionali.
+
+- <Bold> Altri: </Bold> 
+- <Bold> Riprendi impostazioni di progetto: </Bold>  Definisce se le impostazioni di progetto debbano essere importate dal file oppure no.
+
+- <Bold> Riprendere il versionamento da file: </Bold>  Definisce se le informazioni di progetto debbano essere importate dalla sorgente dei dati.
+
+
+
+- <Bold> Risoluzione dei conflitti: </Bold>  I nomi dei punti e delle superfici devono essere univoci. In caso di omonimia sono disponibili le seguenti opzioni:
+
+- <Italic> Rinomina </Italic> : I punti e le superfici importate sono rinominati tramite un prefisso risp. suffisso. Gli oggetti esistenti restano inalterati.
+
+- <Italic> Priorit&#224; al punto esistente </Italic> : Il punto esistente nel file resta inalterato, l&#39;oggetto dalla sorgente viene ignorato. Il comportamento &#232; lo stesso che nel caso di <Italic> Rinomina </Italic>  senza inserire un prefisso risp. suffisso.
+
+- <Italic> Priorit&#224; al nuovo punto </Italic> : Il nuovo punto importato sostituisce il punto esistente.
+
+- <Italic> Risolvere interattivamente </Italic> : Si apre un dialogo di collisione, nel quale &#232; possibile decidere per ogni punto, se usare il punto da <Placeholder>product</Placeholder> o dalla sorgente. 
+
+
+
+
+
+<Warning>
+Per le superfici con lo stesso nome, viene fatta la ridenominazione tramite prefisso risp. suffisso. Se entrambi i valori sono vuoti, la superficie non &#232; importata. Resta la vecchia superficie.
+</Warning>
+
+
+- <Bold> Protocollo: </Bold>  Definisce se debba essere generato un protocollo dettagliato degli oggetti importati, oppure un semplice riepilogo.
+
+- <Bold> Importa Region: </Bold>  Definisce se per i punti debba essere importato o ignorato il campo <Italic> Region </Italic> .
+
+
+
+
+Cliccare su  <Border>Fine</Border> , per terminare l&#39;importazione. Si apre un dialogo che mostra lo stato dell&#39;importazione.

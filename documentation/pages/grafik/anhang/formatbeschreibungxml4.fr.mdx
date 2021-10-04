@@ -1,0 +1,48 @@
+---
+title: "Noms des points"
+page: true
+---
+## Insertion des noms des points
+
+###  Structure
+
+- <Bold> &lt;PointLabels&gt; </Bold>  Section de tous le labels de points. La section peut exister une seul fois dans le fichier XML.
+
+- <Bold>  &lt;PointLabel Id=&quot;98&quot;&gt; </Bold>  Nom d&#39;un point avec ID univoque
+
+- <Bold> &lt;Name&gt; </Bold>  Nom du point
+
+- <Bold> &lt;Region&gt; </Bold>  R&#233;gion / KG / Num&#233;rotation
+
+- <Bold> &lt;SubName&gt; </Bold>  Subname 
+
+
+
+- <Bold> &lt;/PointLabel&gt; </Bold>  Fin de la section.
+
+
+
+- <Bold> &lt;/PointLabels&gt; </Bold>  Fin de la section.
+
+
+
+
+<Success>
+Le nom du point doit &#234;tre univoque dans la combination de Name, Region et Subname. Selon la configuration, le nom peut &#234;tre n&#233;cessaire pour le point. E.g. un point de station a surement un nom, un arbre feuillu normalement non.
+</Success>
+
+<Success>
+Nous vous conseillont de toujours fractionner les noms de point en Region, Nom et Subname. Ainsi serait possible d&#39;afficher ou de masquer la r&#233;gion s&#233;parement du num&#233;ro de point.
+</Success>
+
+
+<Info>
+    &lt;PointLabels&gt;
+      &lt;PointLabel Id=&quot;98&quot;&gt;
+        &lt;Name&gt;1108&lt;/Name&gt;
+        &lt;Region&gt;07580&lt;/Region&gt;
+        &lt;SubName&gt;
+        &lt;/SubName&gt;
+      &lt;/PointLabel&gt;
+    &lt;/PointLabels&gt;
+</Info>

@@ -1,0 +1,88 @@
+---
+title: "Kommandozeile - Importbefehl"
+page: true
+---
+## Geben Sie direkt beim Starten des Programms eine Datei an, die importiert werden soll.
+
+- Starten Sie <Placeholder>fullproduct</Placeholder> per Kommandozeilen-Aufruf
+
+- Geben Sie dabei per Befehls-Schalter ( <Bold> /c: </Bold>  od. <Bold> /command: </Bold> ) das Kommando <Bold> CLImport </Bold>  an.
+
+
+
+
+<Info>
+ <Bold> GeoMapper.exe </Bold>  &quot;C:\TestData\Projekt1.geodb3&quot;  <Bold> /t: </Bold> Vorlage1  <Bold> /c: </Bold>  <Italic> CLImport </Italic> ( <Italic> Xml </Italic> ,&quot;C:\TestData\Grundlage.xml&quot;)
+
+Dieses Beispiel legt eine neue Datei ( <Italic> Projekt1.geodb3 </Italic> ) auf Basis der Vorlage &quot;Vorlage1&quot; an und importiert die Datei  <Italic> Grundlage.xml </Italic>  vom Typ  <Italic> Xml </Italic> .
+</Info>
+
+
+<Success>
+Mit  <Italic> CLImport </Italic>  k&#246;nnen folgende Daten importiert werden:
+
+-  XML-Datei
+
+
+- <Bold> /c: </Bold> CLImport( <Bold> Xml,Param1 </Bold> , <Italic> [Param2],
+[Param3],
+[Param4],
+[Param5],
+[Param6] </Italic> )
+
+
+- <Bold> Param1 </Bold> : absoluter Pfad der .xml-Datei (Pflichtparameter)
+
+
+- <Italic> Param2 </Italic> : absoluter Pfad einer .mapping-Datei (optionaler Parameter)
+
+
+- <Italic> Param3 </Italic> : Kollisionsbehandlung (optionaler Parameter)
+
+
+- <Bold> IgnoreNewPoint </Bold> : Vorrang bestehender Punkt
+
+
+- <Bold> RenameNewPoint </Bold> :  Umbenennen
+
+
+- <Bold> PointCollision </Bold> : Interaktiv l&#246;sen
+
+
+- <Bold> UpdateGeometry </Bold> : Vorrang neuer Punkt
+
+
+
+
+- <Italic> Param4 </Italic> : Name-Pr&#228;fix (optionaler Parameter)
+
+
+- <Italic> Param5 </Italic> : Name-Suffix (optionaler Parameter)
+
+
+- <Italic> Param6 </Italic> : Subname-Suffix (optionaler Parameter)
+
+
+
+
+
+
+
+
+</Success>
+
+
+<Warning>
+Gro&#223;- bzw. Kleinschreibung muss bei der Eingabe beachtet werden! (case sensitive, s. o. :  <Bold> Xml </Bold> )
+</Warning>
+
+<Warning>
+Bei einem Import &#252;ber Kommandozeile werden Punkte und Fl&#228;chen mit gleichem Namen ersetzt und nicht mit Pr&#228;fix/Suffix ein zweites Mal eingef&#252;gt!
+</Warning>
+
+<Info>
+
+<Image>\img\grafik\programmstart\ErrorMessageBox3.png$ErrorMessageBox3</Image>
+
+Tritt auf, wenn die Importdatei nicht existiert, oder der Dateipfad zu dieser nicht richtig angegeben wurde.
+</Info>

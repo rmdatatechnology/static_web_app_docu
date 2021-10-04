@@ -1,0 +1,112 @@
+---
+title: "Proprietà per gli oggetti lineari"
+page: true
+---
+## Definizione delle propriet&#224; grafiche per la stilizzazione degli oggetti lineari
+
+Per gli oggetti lineari possono essere definite una o pi&#249; linee, uno o pi&#249; simboli (blocchi) ed una etichetta.<Image>\img\grafik\darstellungsmanager\stylingeditor\linielinie.png$linielinie</Image>
+
+## Trasparenza
+Se in un blocco &#232; utilizzato un riempimento solido oppure la linea &#232; rappresentata con uno spessore, per questo elemento pu&#242; essere definita una trasparenza in %. 
+
+## Linee
+
+- Stile di linea: Tutti gli stili del file 
+\ProgramData\rmDATA\Geospatial\Configurations\gisdefaulttemplate.dwg sono mostrati nella lista. 
+
+- Spessore linea
+
+- Colore: Gamma colori 0-255 oppure RGB
+
+- Fattore: Scala dello stile di linea in direzione della linea
+
+- in unit&#224; dispositivo: La scala dello stile di linea &#232; eseguita in pixel grafici oppure riferita alle unit&#224; del sistema di coordinate
+
+
+
+- Distanza parallela: Distanza normale della linea
+
+- Fine: Forma del fine linea in caso sia dato lo spessore linea
+
+- Piatto
+
+- Quadrato
+
+- Rotondo
+
+- Romboidale
+
+
+
+- Connessione: Forma dei vertici in caso sia dato lo spessore linea
+
+- Angolare
+
+- Arrotondato
+
+- Rotondo
+
+- Romboidale
+
+
+
+
+
+Ulteriori linee possono essere aggiunte con il bottone  <Border>+</Border>  risp. eliminate con  <Border>X</Border> , l&#39;ordine di rappresentazione pu&#242; essere modificato con i bottoni a freccia.
+
+## Etichetta<Image>\img\grafik\darstellungsmanager\stylingeditor\liniebeschriftung.png$liniebeschriftung</Image>
+
+Per definire un&#39;etichetta, occorre attivare l&#39;opzione &quot;Crea etichetta&quot;.
+Per una etichetta si possono definire i seguenti parametri:
+
+- Stile del carattere
+
+- Altezza del carattere: Valore fisso oppure valore ripreso da un attributo della classe di oggetti. I valori attributivi possono anche essere calcolati, ad es. <Border>valueof(Altezza*2)</Border> 
+- Pixel: Valore in unit&#224; grafiche
+
+- mm: Valore in mm in stampa su carta
+
+- Unit&#224; globale: Valore in unit&#224; del sistema di coordinate
+
+
+
+- Propriet&#224; testo: Grassetto, Corsivo, Sottolineato, Colore testo, Colore sfondo
+
+- Valore del testo: Valore fisso o valore ripreso da uno o pi&#249; attributi della classe di oggetti, ad es. <Border>Designazione - Larghezza nominale</Border> 
+- Allineamento: sono disponibili 9 allineamenti, da Basso-Sinistra a Alto-Destra, passando per il Mezzo-Centro
+
+- Rotazione: Valore fisso in Gradi o valore ripreso da un attributo della classe di oggetti
+
+- Allinea etichetta ad oggetto di base: Definisce l&#39;oggetto di base rispetto al quale si riferisce la rotazione
+
+- Ascissa, Ordinata: Definisce la traslazione dell&#39;etichetta (Valore fisso o valore ripreso da un attributo della classe di oggetti, oppure valore interno: ad es. Inserire testo a met&#224; della linea: Ascissa: <Border>valueof(internal~length2d/2)</Border> ), allineare dal punto d&#39;inizio
+
+- Configurazione della traslazione: Definisce a cosa &#232; riferita la traslazione (inserimento di ordinata e ascissa):
+
+- Oggetto di base: La traslazione &#232; riferita alla rotazione del primo blocco. Questa impostazione ha effetto solo a partire dal secondo blocco.
+
+- Sistema di coordinate: La traslazione avviene in direzione del sistema di coordinate.
+
+- Margine del foglio: La traslazione avviene in direzione del margine del foglio.
+
+
+
+- Allineare secondo: Opzione attiva quando l&#39;etichetta &#232; allineata ad un oggetto di base. Definisce il punto d&#39;inserimento dell&#39;etichetta.
+
+- Primo segmento
+
+- Ultimo segmento
+
+- Segmento medio
+
+- Segmento pi&#249; lungo
+
+- Segmento pi&#249; corto
+
+- Punto iniziale: Punto iniziale del segmento interessato
+
+
+
+
+
+

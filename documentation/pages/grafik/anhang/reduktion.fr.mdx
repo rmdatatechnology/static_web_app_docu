@@ -1,0 +1,56 @@
+---
+title: "Facteur de réduction"
+page: true
+---
+## R&#233;duction des donn&#233;es de distance resp. cotes
+<GeoMapper>
+<Success>
+Dans  <Placeholder>fullproduct</Placeholder> toutes les donn&#233;es de distance sont reprises depuis les mesures sur champ. Aussi les sorties dans le protocole ou dans le graphique (par ex. les cotes) sont donn&#233;es comme valeurs r&#233;elles. 
+</Success>
+
+
+<Success>
+Dans les param&#232;tres graphiques de la configuration, les donn&#233;es de longueur ne sont pas r&#233;duites.
+</Success>
+
+
+La r&#233;duction de distances est activ&#233;e dans les [Param&#232;tres de fichier](../datei/datei-einstellungen)
+, quand le facteur de r&#233;duction n&#39;est pas &#233;gal &#224; 1. Si il est activ&#233;, le facteur de r&#233;duction est affect&#233; aux valeurs r&#233;elles ou &#224; l&#39;inverse aux valeurs du plan.
+
+### D&#233;termination du facteur de r&#233;duction
+Avec la saisie du centre de gravit&#233;, de l&#39;altitude moyenne et du rayon terrestre, le facteur de r&#233;duction est d&#233;termin&#233; de la mani&#232;re suivante:
+
+1. Une distance de 100 m &#224; partir du centre de gravit&#233; donn&#233; dans les param&#232;tres est r&#233;duite avec les formules qui suivent. Dans ce cadre le syst&#232;me de coordonn&#233;es, l&#39;altitude moyenne et le rayon terrestre moyen sont consid&#233;r&#233;s dans le calcul.
+
+2. La comparaison des distances originales et des distances r&#233;duites, permet de d&#233;terminer le facteur de r&#233;duction.
+
+
+
+
+<Success>
+Vous pouvez aussi &#233;craser manuellement le facteur d&#39;&#233;chelle dans les [Param&#232;tres de fichier](../datei/datei-einstellungen)
+.
+</Success>
+
+
+### R&#233;duction d&#39;une distance 2D
+ <Bold> R&#233;duction sur l&#39;altitude de r&#233;f&#233;rence: </Bold> 
+R&#233;duction de la distance horizontale DHm sur l&#39;altitude de la surface de r&#233;f&#233;rence HBez par le facteur:<Image>\img\grafik\anhang\Strecke_Höhe.png$Strecke_Höhe.png</Image>
+
+ <Bold> R&#233;duction selon la projection: </Bold> 
+La distance dans la nature (dh) est r&#233;duite dans la distance sur le plan (dKoordEbene ) avec:<Image>\img\grafik\anhang\Strecke.png$Strecke</Image>
+o&#249;:
+
+- La r&#233;duction de la distance horizontale pour la projection Gau&#223;/Kr&#252;ger s&#39;effectue avec: (avant tout les coordonn&#233;es Y sont r&#233;duites de la constante additionelle au m&#233;ridian origine)<Image>\img\grafik\anhang\Strecke_GK.png$Strecke_GK</Image>
+- La r&#233;duction de la distance horizontale pour la projection UTM s&#39;effectue avec:<Image>\img\grafik\anhang\Strecke_UTM.png$Strecke_UTM</Image> 
+
+- La r&#233;duction de la distance horizontale pour la projection Gau&#223;-Boaga (S&#252;dtirol) s&#39;effectue avec:<Image>\img\grafik\anhang\Strecke_GB.png$Strecke_GB</Image>
+
+
+
+### R&#233;duction d&#39;une distance 3D
+Lors du calcul d&#39;une distance 3D, avant tout la distance 2D est d&#233;termin&#233;e. A cette distance le facteur de r&#233;duction est appliqu&#233;. Enfin &#224; partir de la distance et de l&#39;altitude r&#233;duites la distance 3D est calcul&#233;e.
+
+</GeoMapper>
+
+ 

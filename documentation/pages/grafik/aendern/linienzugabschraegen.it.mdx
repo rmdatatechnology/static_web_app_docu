@@ -1,0 +1,44 @@
+---
+title: "Smussare una polilinea"
+page: true
+---
+## Unisce 2 polilinee con un segmento di retta.
+ <Menu> Menu: [Modifica / Smussa polilinea] </Menu> 
+ <Menu> Cmd: [LinestringChamfer] </Menu> 
+
+
+1. Avviare il comando.
+
+2. Selezionare la prima polilinea da unire.
+
+3. Selezionare la seconda polilinea da unire.
+
+4. Per la determinazione del segmento ci sono diverse alternative:
+
+- <Bold> Automatico: </Bold>  Sono determinate le distanze tra i punti di fine delle linee con il punto d&#39;intersezione immaginario. Il segmento di smusso inizia dalla linea che si trova alla distanza inferiore, l&#39;altra linea viene prolungata di conseguenza. Se una linea supera il punto d&#39;intersezione, il segmento inizia dal punto di fine dell&#39;altra linea.
+
+- <Bold> Distanza: </Bold>  Inserire la distanza desiderata dal punto d&#39;intersezione fino ai punti di inizio e fine del segmento. Entrambe le linee vengono prolungate o accorciate di conseguenza.
+
+
+
+5. Entrambe le polilinee sono unite tramite un segmento. Se invece di due singole polilinee, sono selezionati due segmenti di una polilinea, il segmento di retta viene inserito tra i due segmenti selezionati.
+
+
+
+
+<Success>
+Le polilinee di tipo diverso sono anch&#39;esse unite e riprendono entrambe il tipo della prima polilinea selezionata.
+</Success>
+
+<Success>
+Gli elementi delle polilinee, che sono stati selezionati col mouse, sono sempre mantenuti.
+</Success>
+
+<Success>
+Gli elementi delle polilinee deve essere segmenti di retta (nessun arco).
+</Success>
+
+<Success>
+I punti finali delle linee da unire restano come vertici, quando le linee originali vengono prolungate. Quando le linee vengono accorciate, viene mantenuto un possibile punto di misurazione, se questo era gi&#224; esistente. 
+</Success>
+

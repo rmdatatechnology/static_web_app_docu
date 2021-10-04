@@ -1,0 +1,65 @@
+---
+title: "Flächenreduktion"
+page: true
+---
+## Reduktion von Fl&#228;chenwerten in die Natur.
+<GeoMapper>
+Die Fl&#228;chenreduktion wird im  <Placeholder>fullproduct</Placeholder> abh&#228;ngig vom verwendeten Koordinatensystem folgenderma&#223;en verwendet:
+
+<Warning>
+Die Fl&#228;chenreduktion muss in den [Datei-Einstellungen](../datei/datei-einstellungen)
+ aktiviert werden. 
+</Warning>
+
+
+### UTM-Reduktion<Image>\img\grafik\anhang\UTM_Area_Reduktion.png$UTM_Area_Reduktion</Image>
+
+<table>
+<tr><th>Bezeichnung</th>
+<th>Beschreibung</th>
+</tr>
+<tr><td>FH </td>
+<td>Fl&#228;che im Messgebietshorizont</td>
+</tr>
+<tr><td>FUTM </td>
+<td>Fl&#228;che aus UTM-Koordinaten berechnet</td>
+</tr>
+<tr><td>Hell </td>
+<td>mittlere H&#246;he von FH &#252;ber GRS80 (ersatzweise: H&#246;he NHN + 45 m)</td>
+</tr>
+<tr><td>y </td>
+<td>Abstand vom Mittelmeridian 9&#176; [km]y = ( (E &#8211 32 500 000)/1000) / m0 (Abbildungsmassstab des Mittelmeridians m0 = 0,9996)</td>
+</tr>
+<tr><td>R </td>
+<td>mittlerer Erdradius = 6383 km bzw. 6,383*10+6 m</td>
+</tr>
+</table>
+
+
+### Gau&#223;-Kr&#252;ger-Reduktion
+
+FH = F_GK + F_GK * Y&#178; / R&#178;
+
+<table>
+<tr><th>Bezeichnung</th>
+<th>Beschreibung</th>
+</tr>
+<tr><td>FH </td>
+<td>Fl&#228;che im Messgebietshorizont</td>
+</tr>
+<tr><td>F_GK </td>
+<td>Fl&#228;che aus GK-Koordinaten berechnet</td>
+</tr>
+<tr><td>Y  </td>
+<td>Abstand vom Mittelmeridian</td>
+</tr>
+<tr><td>R </td>
+<td>mittlerer Erdradius = 6383 km bzw. 6,383*10+6 m</td>
+</tr>
+</table>
+
+
+<Success>
+Die H&#246;he geht bei der Gau&#223;-Kr&#252;ger-Reduktion nicht ein.
+</Success>
+</GeoMapper>

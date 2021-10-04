@@ -1,0 +1,67 @@
+---
+title: "Points"
+page: true
+---
+## Insertion d&#39;un point
+
+<Warning>
+Les pr&#233;requis pour un point sont que les coordonn&#233;es r&#233;f&#233;renc&#233;es et le nom du point soient pr&#233;sent dans le fichier XML!
+</Warning>
+
+
+###  Structure de la section Points
+
+- <Bold> &lt;Points&gt; </Bold>  Section de tous les points. La section peut exister une seule fois dans le fichier XML.
+
+- <Bold>      &lt;Point  Id=&quot;100&quot;&gt; </Bold>  Point avec ID univoque.
+
+- <Bold>      &lt;VertexId&gt;99&lt;/VertexId&gt; </Bold>  R&#233;f&#233;rence aux coordonn&#233;es. La section peut exister une seule fois.
+
+- <Bold>         &lt;PointLabelId&gt;98&lt;/PointLabelId&gt; </Bold>  R&#233;f&#233;rence au nom de point. La section peut exister une seule fois. Si le point n&#39;a aucun nom, la valeur 0 est donn&#233;e.
+
+- <Bold> &lt;Attributes&gt; </Bold>  Liste des attributs de l&#39;objet.
+
+- <Bold>           &lt;Attribute Name=&quot;Type d&#39;arbre&quot; Type=&quot;System.String&quot; Value=&quot;Fr&#234;ne&quot; /&gt; </Bold>  Nom de l&#39;attribut, type et valeur. La section peut &#234;tre r&#233;p&#233;t&#233;e plusieurs fois.
+
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Fin de la section.
+
+- <Bold>   &lt;DisplayInformation /&gt; </Bold>  (Optionel) Donn&#233;e d&#39;une modification de l&#39;affichage graphique (voire ci-dessous).
+
+- <Bold> &lt;ObjectType&gt;Feuillu&lt;/ObjectType&gt; </Bold>  Donn&#233;e sur le type d&#39;objet.
+
+
+
+- <Bold>       &lt;/Point&gt; </Bold> 
+
+
+- <Bold>    &lt;/Points&gt; </Bold> 
+
+
+
+<Success>
+Au cas o&#249;, dans le fichier XML, il y a des attributs qui n&#39;ont pas &#233;t&#233;s configur&#233;s, ils sont pourtant ajout&#233;s &#224; l&#39;objet.
+</Success>
+
+<Success>
+Au cas o&#249;, dans le fichier XML, il y aurait un objet dont le type n&#39;ait pas &#233;t&#233; configur&#233;, l&#39;objet est pourtant import&#233;. Selon les param&#232;tres, les objet sans type, sont affich&#233;s en magenta ou masqu&#233;s. (Voir menu Fichier - Param&#232;tres de fichiers)
+</Success>
+
+
+<Info>
+    &lt;Points&gt;
+      &lt;Point Id=&quot;100&quot;&gt;
+        &lt;VertexId&gt;99&lt;/VertexId&gt;
+        &lt;PointLabelId&gt;98&lt;/PointLabelId&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Diam&#232;tre cime&quot; Type=&quot;System.String&quot; Value=&quot;10.700&quot; /&gt;
+          &lt;Attribute Name=&quot;Diam&#232;tre tronc&quot; Type=&quot;System.String&quot; Value=&quot;0.800&quot; /&gt;
+          &lt;Attribute Name=&quot;Type d&#39;arbre&quot; Type=&quot;System.String&quot; Value=&quot;Fr&#234;ne&quot; /&gt;
+          &lt;Attribute Name=&quot;Hauteur&quot; Type=&quot;System.String&quot; Value=&quot;&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;ObjectType&gt;Feuillu&lt;/ObjectType&gt;
+      &lt;/Point&gt;
+    &lt;/Points&gt;
+</Info>
+

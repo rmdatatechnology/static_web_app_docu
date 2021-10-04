@@ -1,0 +1,143 @@
+---
+title: "Général"
+page: true
+---
+## D&#233;finition des param&#232;tres g&#233;n&#233;raux
+
+<GeoDesigner>
+<Image>\img\grafik\datei\Projekteinstellung_allgemein_2.png$Projekteinstellung_allgemein_2</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\datei\GeoMapper.Projekteinstellung_allgemein_2.png$GeoMapper.Projekteinstellung_allgemein_2</Image>
+</GeoMapper>
+
+
+### Gabarit courant
+Dans le gabarit on peut pr&#233;d&#233;finir tous les param&#232;tres. Lors de la cr&#233;ation d&#39;un fichier, s&#233;lectionnez un gabarit. 
+Avec le bouton Enregistrer, tous les param&#232;tres courants peuvent &#234;tre enregistr&#233;s dans un nouveau fichier gabarit. Des nouveaux gabarits peuvent &#234;tre aussi cr&#233;&#233;s dans un dossier du bureau - voir [Dossiers](../datei/programm-einstellungen6)
+. 
+
+<Success>
+Lors de la cr&#233;ation d&#39;un nouveau fichier,  <Placeholder>product</Placeholder> s&#233;lectionne automatiquement le dernier gabarit de projet choisi, de mani&#232;re que vous ayez le minimum de saisie manuelle, &#224; condition que le gabarit soit complet!
+</Success>
+
+<Warning>
+Si dans un fichier existant, le gabarit de projet est remplac&#233;, tous les param&#232;tres sont &#233;cras&#233;s par les param&#232;tres du nouveau gabarit de projet.
+</Warning>
+
+
+### Param&#232;tres
+Ici vous pouvez donner tous les attributs g&#233;n&#233;raux du fichier. Ces attributs ne sont pas utilis&#233;s par le programme et ils servent uniquement comme information.
+
+<GeoMapper>
+
+### Param&#232;tres du syst&#232;me de coordonn&#233;es
+
+- <Bold> Syst&#232;me de coordonn&#233;es: </Bold>  S&#233;lection du syst&#232;me de coordonn&#233;es pour le fichier courant. Tapez simplement une partie du syst&#232;me d&#233;sir&#233; dans le champ de saisie. Une liste de tous les syst&#232;mes compatible avec la saisie se d&#233;roule.
+
+
+- Avec 
+
+
+<Image>\img\grafik\datei\GeoMapper.HaufigVerwendeteSysteme.png$GeoMapper.HaufigVerwendeteSysteme</Image>la liste des syst&#232;mes les plus utilis&#233;s se d&#233;roule.
+
+
+- Avec 
+
+
+<Image>\img\grafik\datei\GeoMapper.Koordinatensysteme.png$GeoMapper.Koordinatensysteme</Image>vous avez le choix complet de tous les syst&#232;mes de coordonn&#233;es possibles.
+
+
+- Avec 
+
+
+<Image>\img\grafik\datei\GeoMapper.KoordinatensystemDetails.png$GeoMapper.KoordinatensystemDetails</Image>vous pouvez appeler les d&#233;tails du syst&#232;me de coordonn&#233;es choisi:
+
+
+- 
+<Image>\img\grafik\datei\GeoMapper.GridDetailForm.png$GeoMapper.GridDetailForm</Image>
+
+
+- <Bold> Facteur de r&#233;duction: </Bold>  Si le plan n&#39;est pas cr&#233;&#233; dans un syst&#232;me local, il est conseill&#233; de d&#233;finir un facteur de r&#233;duction. Ainsi lors des calculs et des constructions vous pouvez entrer les valeurs r&#233;elles (nature) pour tous les distances. Les cotes r&#233;elles sont automatiquement converties en cotes du plan par <Placeholder>fullproduct</Placeholder>  Aussi les distances sur le graphique sont toujours affich&#233;es en valeurs r&#233;elles. Le facteur de r&#233;duction est calcul&#233; automatiquement depuis le syst&#232;me de coordonn&#233;es et les valeurs suivantes:
+
+
+- <Bold> Centre de gravit&#233;: </Bold> Cliquez sur le bouton et s&#233;lectionnez directement sur le graphique le centre de gravit&#233; des vos donn&#233;es. Alternativement entrez directement les coordonn&#233;es.
+
+
+- <Bold> Altitude: </Bold> Altitude moyenne (ellipso&#239;dique)
+
+
+- <Bold> Ondulation du g&#233;o&#239;de.: </Bold> Moyenne ondulation
+
+
+- <Bold> Rayon terrestre moyen: </Bold> Le rayon terrestre moyen est automatiquement rempli apr&#232;s le choix du syst&#232;me de coordonn&#233;ess avec la valeur relative. Vous pouvez apr&#232;s encore modifier manuellement cette valeur. Si apr&#232;s vous modifiez le syst&#232;me de coordonn&#233;es, cette valeur sera &#233;cras&#233;e avec la valeur pr&#233;vue pour ce dernier syst&#232;me de coordonn&#233;es.
+
+
+- <Bold> Cote du g&#233;o&#239;de: </Bold> Si on veut consid&#233;rer la cote du g&#233;o&#239;de, ici on peut entrer la valeur. La cote du g&#233;o&#239;de est consid&#233;r&#233;e lors du calcul de l&#39;&#233;chelle. Si aucune valeur n&#39;est saisie, le calcul pr&#233;c&#233;dent est gard&#233;.
+
+
+
+
+
+
+
+<Warning>
+   Le facteur de r&#233;duction n&#39;a aucun effet sur le calcul des surfaces. Pour ce calcul il y a des param&#232;tres sp&#233;cifiques &#224; la page [Calculs](../datei/datei-einstellungen5)
+. 
+</Warning>
+ 
+<Warning>
+ Le facteur de r&#233;duction est appliqu&#233; seulement aux distances 2D. Les altitudes ne sont pas reduites.
+</Warning>
+
+ 
+<Success>
+   Le facteur de r&#233;duction est automatiquement calcul&#233; depuis les autres param&#232;tres du syst&#232;me de coordonn&#233;es. Les formules se trouvent [ici ....](../anhang/reduktion)
+
+Le facteur de r&#233;duction donn&#233; dans le dialogue (Repr&#233;sentation --&gt; Nature) est multipli&#233; par la valeur sur le plan pour d&#233;terminer la distance r&#233;elle.
+Vous pouvez encore modifier cette valeur manuellement. Lorsque vous modifiez un des param&#232;tres essentiels (syst&#232;me de coordonn&#233;es, centre de gravit&#233;, altitude, rayon terrestre moyen), le facteur de r&#233;duction est calcul&#233; &#224; nouveau.  
+</Success>
+
+<Warning>
+Certains syst&#232;mes de coordonn&#233;es exigent la pr&#233;sence d&#39;un fichier Grid (grille), contenant les param&#232;tres de transformation. Si pour le syst&#232;me de coordonn&#233;es le fichier Grid relatif manque, alors  <Placeholder>product</Placeholder> affiche un avertissement. Sans ce fichier, on ne pourra pas ex&#233;cuter une transformation, par contre toutes les autres op&#233;rations sont possibles.
+
+
+<Image>\img\grafik\datei\GeoMapper.GridDatei.png$GeoMapper.GridDatei</Image>
+
+Une fois que vous avez r&#233;cup&#233;r&#233; le fichier Grid, copiez le fichier dans le dossier |C:\ProgramData\rmDATA\GeoMapper\Settings\CRS
+Le fichier Grid doit &#234;tre enregistr&#233; en format binaire ntv2.
+</Warning>
+
+
+</GeoMapper>
+
+### Configurations<Image>\img\grafik\datei\Konfiguration_Hinzufügen.png$Konfiguration_Hinzufügen</Image> Ajouter une configuration<Image>\img\grafik\datei\Konfiguration_Entfernen.png$Konfiguration_Entfernen</Image> Enlever une configuration de la liste<Image>\img\grafik\datei\Konfiguration_Aktualisieren.png$Konfiguration_Aktualisieren</Image> Actualiser les configurations. Si la configuration originale, entretemps est chang&#233;e, vous pouvez la mettre &#224; jour.<Image>\img\grafik\datei\Konfiguration_Speichern.png$Konfiguration_Speichern</Image>Quand la configuration du fichier a &#233;t&#233; modifi&#233;e, enregistrez-la avec ce bouton. (Voir [ Modifier les types d&#180;objet dans le gestionnaire d&#180;affichage](../darstellungsmanager/objekttypen_bearbeiten)
+).<Image>\img\grafik\datei\Konfiguration_Zeichenreihenfolge.png$Konfiguration_Zeichenreihenfolge</Image>Modifier l&#39;ordre de dessin d&#39;une configuration. Ici, en ajoutant une valeur constante, vous pouvez modifier l&#39;ordre de dessin de tous les objets d&#39;une configuration, &#231;a dans le but de coordonner plusieurs configurations ou de d&#233;placer tous les objets d&#39;une configuration en arri&#232;re-plan.<Image>\img\grafik\datei\Konfiguration_Export.png$Konfiguration_Export</Image> Exporter la configuration s&#233;lectionn&#233;e dans un nouveau fichier.
+
+<Success>
+Les configurations sont charg&#233;es dans la liste selon la s&#233;quence. Si un type d&#39;objet existe dans plusieurs configurations, la premi&#232;re d&#233;finition gagne. 
+Si n&#233;cessaire modifiez l&#39;ordre dans la liste en glissant les &#233;l&#233;ments avec la souris ou avec les fl&#232;ches &#224; droite de la liste. 
+</Success>
+<GeoDesigner>
+<Warning>
+Aussi des d&#233;termin&#233;s param&#232;tres DWG, lors du chargement de la configuration(s) depuis le dessin gabarit, sont charg&#233;s &#224; la premi&#232;re place de la configuration (voir [DWG-Param&#232;tres](../datei/datei-einstellungen17)
+).
+</Warning>
+</GeoDesigner>
+<Success>
+La configuration est enregistr&#233;e dans le fichier. De mani&#232;re que, quand vous livrez un ficher  <Placeholder>product</Placeholder>  vous n&#39;ayez pas besoin de livrer d&#39;autres fichiers.
+</Success>
+
+<Success>
+Cliquez avec le bouton droit de la souris sur la liste des configurations. Ainsi vous obtenez une liste de toutes les configurations dans les dossiers standards.
+
+<Image>\img\grafik\datei\Konfiguration_Auswahl.png$Konfiguration_Auswahl</Image>
+
+D&#39;autres informations sur la m&#233;morisation des configurations install&#233;es et personnalis&#233;es, se trouvent [ici ...](../anhang/dateien)
+ 
+</Success>
+
+<Warning>
+Charger, d&#233;charger et trier des configurations peut avoir des cons&#233;quences sur le versionnement.
+</Warning>
+

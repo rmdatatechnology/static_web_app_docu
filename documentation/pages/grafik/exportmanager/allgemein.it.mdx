@@ -1,0 +1,212 @@
+---
+title: "Generale"
+page: true
+---
+## Con l&#39;Export-Manager &#232; possibile esportare i propri dati in diversi formati.
+<GeoMapper> <Menu> Menu: [File / Export-Manager] </Menu> </GeoMapper>
+<GeoDesigner> <Menu> Menu: [File / Esportazione] </Menu> 
+ <Menu> Cmd: [ExportManagerOpen] </Menu> </GeoDesigner>
+### Selezione del tipo (formati di esportazione): 
+Scegliere il formato in cui si desidera esportare.
+
+### Selezione del file
+<GeoMapper>
+
+- <Bold> Selezione del file per l&#39;esportazione: </Bold>  Secondo il formato occorre inserire un nome di file o una cartella.
+
+
+- <Bold> Selezione degli oggetti da esportare: </Bold>  
+
+
+- <Bold> Tutti gli oggetti presenti nella banca dati: </Bold>  Prima di esportare occorre salvare tutte le modifiche. Quindi viene esportato l&#39;intero contenuto del file. In questo caso sono esportati anche gli oggetti correntemente non caricati (vedere 
+
+[Carica zona](../datei/bereichladen)
+)
+
+
+- <Bold> Tutti gli oggetti caricati: </Bold>  Tutti gli oggetti nella grafica
+
+
+- <Bold> Selezione nella grafica: </Bold>  Qui si passa direttamente sulla grafica dove 
+
+[selezionare gli oggetti](../grafik/selektionvondaten)
+ da esportare.
+
+
+
+
+
+
+<Warning>
+Questa opzione &#232; disponibile solo se gli oggetti da esportare sono caricati. Se necessario occorre dapprima caricare una zona (vedere [Carica zona](../datei/bereichladen)
+).
+</Warning>
+
+
+- <Bold> Esporta solo oggetti visibili: </Bold>  Vistare questa opzione se si desidera esportare i dati visibili sulla grafica. In alternativa sono esportati anche tutti gli oggetti il cui tipo &#232; nascosto o non visibili a causa di un filtro.
+
+- <Bold> Dominio numerazione punti: </Bold>  Con questa opzione &#232; possibile inoltre definire un dominio di numerazione punti che viene combinato per la selezione generale degli oggetti.
+
+
+
+
+
+
+
+<Warning>
+Opzione disponibile solo per l&#39;esportazione dei  <Italic> Punti ASCII </Italic>  ed  <Italic> rmGEO </Italic> .
+</Warning>
+
+
+- <Bold> Trasformazione in un diverso sistema di coordinate (opzionale): </Bold>  Nel caso in cui l&#39;esportazione avvenga in un sistema di coordinate diverso da quello definito nelle impostazioni del file, qui &#232; possibile impostare un sistema di coordinate di destinazione. Altrimenti non occorre scegliere alcun sistema. 
+
+
+
+<Warning>
+ <Bold> Esporta in un Geodatabase: </Bold>  Se nelle impostazioni del file &#232; definito un fattore di riduzione, questo viene ricalcolato nel nuovo sistema - a condizione che siano noti il baricentro, l&#39;altezza media ed il raggio terrestre. Altrimenti il fattore di riduzione viene ripreso. In caso di trasformazione in un sistema locale, il fattore di riduzione viene naturalmente definito a 1.
+</Warning>
+
+
+- <Bold> Sistema locale: </Bold>  I dati vengono corretti con una trasformazione Helmert-2D. Come parametro di traslazione viene considerato il baricentro dato nelle impostazioni del file, il quale viene diventa il punto origine. La rotazione &#232; zero e la scala corrisponde al fattore di riduzione.
+
+
+
+
+
+
+</GeoMapper>
+<GeoDesigner>
+
+- <Bold> Selezione del file per l&#39;esportazione: </Bold>  Secondo il formato occorre inserire un nome di file o una cartella.
+
+
+- <Bold> Selezione degli oggetti da esportare: </Bold>  
+
+
+- <Bold> Tutti gli oggetti: </Bold>  Tutti gli oggetti nella grafica
+
+
+- <Bold> Selezione nella grafica: </Bold>  Qui si passa direttamente sulla grafica dove 
+
+[selezionare gli oggetti](../grafik/selektionvondaten)
+ da esportare.
+
+
+
+
+
+
+<Warning>
+Questa opzione &#232; disponibile solo se gli oggetti da esportare sono presenti.
+</Warning>
+
+
+- <Bold> Esporta solo oggetti visibili: </Bold>  Vistare questa opzione se si desidera esportare i dati visibili sulla grafica. In alternativa sono esportati anche tutti gli oggetti il cui tipo &#232; nascosto o non visibili a causa di un filtro.
+
+- <Bold> Dominio numerazione punti: </Bold>  Con questa opzione &#232; possibile inoltre definire un dominio di numerazione punti che viene combinato per la selezione generale degli oggetti.
+
+
+
+
+
+
+
+<Warning>
+Opzione disponibile solo per l&#39;esportazione dei  <Italic> Punti ASCII </Italic>  ed  <Italic> rmGEO </Italic> .
+</Warning>
+
+</GeoDesigner>
+
+
+### Ulteriori impostazioni
+Tutte le ulteriori impostazioni dipendono dal formato. Vedere 
+<GeoMapper>
+
+- [Esportare punti come dati ASCII](../exportmanager/ascii)
+
+- [Esportare dati come file DWG Autodesk](../exportmanager/autodesk)
+
+- [Esportare dati come file DXF Autodesk](../exportmanager/autodesk2)
+
+- [Esportare dati come file Shape ESRI](../exportmanager/shape)
+
+- [Esportare dati come file XML rmDATA](../exportmanager/xml)
+
+- [Esportare punti in rmGEO](../exportmanager/rmgeo)
+
+- [Esportare dati come file Geodatabase rmDATA](../exportmanager/geodatenbank)
+
+
+
+
+</GeoMapper>
+
+<GeoDesigner>
+
+- [Esportare punti come dati ASCII](../exportmanager/ascii)
+
+- [Esportare dati come file Geodatabase rmDATA](../exportmanager/geodatenbank)
+
+- [Esportare dati come file XML rmDATA](../exportmanager/xml)
+
+- [Esportare punti in rmGEO](../exportmanager/rmgeo)
+
+- [Esportare dati come file DWG Autodesk](../exportmanager/dtmdwg)
+
+
+
+
+</GeoDesigner>
+
+Le esportazioni seguenti sono disponibili solo se &#232; attiva l&#39;applicazione  <Italic> Modello del terreno </Italic> 
+
+- [Esportare il modello come file REB](../exportmanager/reb)
+
+
+
+Le esportazioni seguenti sono disponibili solo se &#232; attiva l&#39;applicazione  <Italic> Profili </Italic> 
+
+- [Esportare i profili del terreno come dati ASCII](../exportmanager/ascii3)
+
+- [Esportare i profili del terreno come dati ASCII-BWV](../exportmanager/ascii4)
+
+
+
+Le esportazioni seguenti sono disponibili solo se nella configurazione &#232; attiva l&#39;applicazione &quot;Piano di frazionamento Austria&quot;:
+
+- [Esportare dati in rmKATOffice](../exportmanager/rmkatoffice)
+
+- [Esportare le superfici come dati ASCII](../exportmanager/ascii2)
+
+
+
+
+<GeoMapper>
+Le esportazioni seguenti sono disponibili solo se nella configurazione &#232; attiva l&#39;applicazione &quot;Piano di frazionamento Lussemburgo&quot;:
+
+- [Esportare dati per l&#39;ufficio del catasto del Lussemburgo](../exportmanager/luxemburgkataster)
+
+- [Esportare le superfici per la legenda ed il bilanciamento](../exportmanager/luxemburgkataster2)
+
+
+
+Le esportazioni seguenti sono disponibili solo se nella configurazione &#232; attiva l&#39;applicazione &quot;Scambio dati Geo8&quot;:
+
+- [Esportare dati in Geo8](../exportmanager/geo8)
+
+
+
+Le esportazioni seguenti sono disponibili solo se nella configurazione &#232; attiva l&#39;applicazione &quot;Scambio dati KAVDI&quot;:
+
+- [Esportare dati in KAVDI](../exportmanager/kavdi)
+
+
+
+
+</GeoMapper>
+
+
+<Success>
+Per le indicazioni generali sull&#39;assistente vedere [Dialogo](../benutzeroberflaeche/dialoge)
+.
+</Success>

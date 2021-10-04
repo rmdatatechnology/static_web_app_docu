@@ -1,0 +1,48 @@
+---
+title: "Nomi dei punti"
+page: true
+---
+## Inserimento dei nomi dei punti
+
+###  Struttura
+
+- <Bold> &lt;PointLabels&gt; </Bold>  Sezione di tutte le label dei punti. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>  &lt;PointLabel Id=&quot;98&quot;&gt; </Bold>  Nome di un punto con ID univoco
+
+- <Bold> &lt;Name&gt; </Bold>  Nome del punto
+
+- <Bold> &lt;Region&gt; </Bold>  Region / KG / Numerazione
+
+- <Bold> &lt;SubName&gt; </Bold>  Subname 
+
+
+
+- <Bold> &lt;/PointLabel&gt; </Bold>  Fine sezione
+
+
+
+- <Bold> &lt;/PointLabels&gt; </Bold>  Fine sezione
+
+
+
+
+<Success>
+Il nome del punto deve essere univoco nella combinazione di Name, Region e Subname. Secondo la configurazione, il nome pu&#242; essere necessario per il punto. Ad es. un punto di stazione ha sicuramente un nome, un albero spesso, no.
+</Success>
+
+<Success>
+Noi consigliamo sempre di suddividere il nome in Region, Name e Subname. In tal modo la Region pu&#242; essere visualizzata o nascosta separatamente dal numero del punto.
+</Success>
+
+
+<Info>
+    &lt;PointLabels&gt;
+      &lt;PointLabel Id=&quot;98&quot;&gt;
+        &lt;Name&gt;1108&lt;/Name&gt;
+        &lt;Region&gt;07580&lt;/Region&gt;
+        &lt;SubName&gt;
+        &lt;/SubName&gt;
+      &lt;/PointLabel&gt;
+    &lt;/PointLabels&gt;
+</Info>

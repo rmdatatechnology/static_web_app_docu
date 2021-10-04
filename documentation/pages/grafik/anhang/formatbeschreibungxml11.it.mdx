@@ -1,0 +1,190 @@
+---
+title: "Quote"
+page: true
+---
+## Inserimento delle quote
+
+<Warning>
+Il prerequisito per una quota &#232; che le coordinate referenziate ed i segmenti, siano presenti nel file XML!
+</Warning>
+
+
+###  Struttura delle misure di distanza/controllo
+
+- <Bold> &lt;AlignedDimensions&gt; </Bold>  Sezione di tutte le misure di distanza/controllo. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>       &lt;AlignedDimension Id=&quot;800&quot;&gt; </Bold>  Quota con ID univoco.
+
+- <Bold>         &lt;StartVertexId&gt;578&lt;/StartVertexId&gt; </Bold>  Punto iniziale. Questa sezione pu&#242; esistere una sola volta.
+
+- <Bold>         &lt;EndVertexId&gt;579&lt;/EndVertexId&gt; </Bold>  Punto finale. Questa sezione pu&#242; esistere una sola volta.
+
+- <Bold> &lt;ObjectType&gt;Misura di distanza 2D&lt;/ObjectType&gt; </Bold>  Dato sul tipo d&#39;oggetto.
+
+
+
+- <Bold>     &lt;/AlignedDimension&gt; </Bold> 
+
+
+- <Bold>     &lt;/AlignedDimensions&gt; </Bold> 
+
+
+
+<Success>
+Nel caso in cui nel file XML ci siano degli attributi che non siano stati configurati, questi sono comunque aggiunti all&#39;oggetto.
+</Success>
+
+<Success>
+Nel caso in cui nel file XML ci sia un un oggetto il cui tipo non sia stato configurato, l&#39;oggetto &#232; comunque importato. Secondo la impostazione, gli oggetti di tipo sconosciuto, sono rappresentati in magenta oppure nascosti. (Vedere menu File - Parametri di file).
+</Success>
+
+
+<Info>
+
+    &lt;AlignedDimensions&gt;
+      &lt;AlignedDimension Id=&quot;802&quot;&gt;
+        &lt;StartVertexId&gt;578&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;579&lt;/EndVertexId&gt;
+        &lt;ObjectType&gt;Misura di distanza 2D&lt;/ObjectType&gt;
+      &lt;/AlignedDimension&gt;
+    &lt;/AlignedDimensions&gt;
+</Info>
+
+
+###  Struttura delle quote d&#39;angolo
+
+- <Bold> &lt;AngularDimensions&gt; </Bold>  Sezione di tutte le quote d&#39;angolo. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>       &lt;AngularDimension Id=&quot;800&quot;&gt; </Bold>  Quota con ID univoco.
+
+- <Bold>         &lt;BaseVertexId&gt;579&lt;/BaseVertexId&gt; </Bold>  Punto d&#39;origine. Questa sezione pu&#242; esistere una sola volta.
+
+- <Bold>         &lt;StartVertexId&gt;578&lt;/StartVertexId&gt; </Bold>  Punto iniziale. Questa sezione pu&#242; esistere una sola volta.
+
+- <Bold>         &lt;EndVertexId&gt;579&lt;/EndVertexId&gt; </Bold>  Punto finale. Questa sezione pu&#242; esistere una sola volta.
+
+- <Bold> &lt;ObjectType&gt;quota d&#39;angolo&lt;/ObjectType&gt; </Bold>  Dato sul tipo d&#39;oggetto.
+
+
+
+- <Bold>     &lt;/AngularDimension&gt; </Bold> 
+
+
+- <Bold>     &lt;/AngularDimensions&gt; </Bold> 
+
+
+
+<Info>
+
+    &lt;AngularDimensions&gt;
+      &lt;AngularDimension Id=&quot;811&quot;&gt;
+        &lt;BaseVertexId&gt;579&lt;/BaseVertexId&gt;
+        &lt;StartVertexId&gt;578&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;851&lt;/EndVertexId&gt;
+        &lt;ObjectType&gt;quota d&#39;angolo&lt;/ObjectType&gt;
+      &lt;/AngularDimension&gt;
+    &lt;/AngularDimensions&gt;
+</Info>
+
+
+###  Struttura delle quote d&#39;arco
+
+- <Bold> &lt;ArcDimensions&gt; </Bold>  Sezione di tutte le quote d&#39;arco. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>       &lt;ArcDimension Id=&quot;800&quot;&gt; </Bold>  Quota con ID univoco.
+
+- <Bold> &lt;SegmentId&gt;809&lt;/SegmentId&gt; </Bold>  Riferimento ad un segmento. Questa sezione pu&#242; esistere una sola volta.
+
+- <Bold> &lt;ObjectType&gt;Quota arco su 1 riga&lt;/ObjectType&gt; </Bold>  Dato sul tipo d&#39;oggetto.
+
+
+
+- <Bold>     &lt;/ArcDimension&gt; </Bold> 
+
+
+- <Bold>     &lt;/ArcDimensions&gt; </Bold> 
+
+
+
+<Info>
+
+    &lt;ArcDimensions&gt;
+      &lt;ArcDimension Id=&quot;810&quot;&gt;
+        &lt;SegmentId&gt;809&lt;/SegmentId&gt;
+        &lt;ObjectType&gt;Quota arco su 1 riga&lt;/ObjectType&gt;
+      &lt;/ArcDimension&gt;
+    &lt;/ArcDimensions&gt;
+</Info>
+
+
+###  Struttura delle quote di linee di base
+
+- <Bold> &lt;BaselinePoints&gt; </Bold>  Sezione di tutti i punti intermedi delle quote di linee di base. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>       &lt;BaselinePoint Id=&quot;800&quot;&gt; </Bold>  Punto intermedio con ID univoco.
+
+- <Bold>     &lt;VertexId&gt;883&lt;/VertexId&gt; </Bold>  Riferimento alle coordinate. Questa sezione pu&#242; esistere una sola volta.
+
+- <Bold> &lt;ObjectType&gt;Quota-Punto iniziale&lt;/ObjectType&gt; </Bold>  Dato sul tipo d&#39;oggetto. I punti iniziali, finali ed intermedi di una quota di linea di base sono differenziati tramite il tipo d&#39;oggetto. Per i tipi d&#39;oggetto utilizzati, consultare la propria configurazione.
+
+
+
+- <Bold>     &lt;/BaselinePoint&gt; </Bold> 
+
+
+- <Bold>       &lt;/BaselinePoints&gt; </Bold> 
+
+
+
+
+- <Bold>     &lt;BaselineDimensions&gt; </Bold>  Sezione di tutte le quote di linee di base. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>       &lt;BaselineDimension Id=&quot;887&quot;&gt; </Bold>  Quota di linea con ID univoco.
+
+- <Bold>         &lt;BaselinePointList&gt; </Bold>  Sezione di tutti i punti intermedi (incl. punti iniziali e finali)
+
+- <Bold>           &lt;BaselinePointId&gt;884&lt;/BaselinePointId&gt; </Bold>  Riferimento al numero di punto. Questa sezione pu&#242; essere ripetuta pi&#249; volte.
+
+
+
+- <Bold>         &lt;/BaselinePointList&gt; </Bold>  
+
+- <Bold>         &lt;ObjectType&gt;Quota&lt;/ObjectType&gt; </Bold>  Dato sul tipo d&#39;oggetto.
+
+
+
+- <Bold>       &lt;/BaselineDimension&gt; </Bold> 
+
+
+- <Bold>     &lt;/BaselineDimensions&gt; </Bold> 
+
+
+
+
+<Info>
+
+    &lt;BaselinePoints&gt;
+      &lt;BaselinePoint Id=&quot;884&quot;&gt;
+        &lt;VertexId&gt;883&lt;/VertexId&gt;
+        &lt;ObjectType&gt;Quota-Punto iniziale&lt;/ObjectType&gt;
+      &lt;/BaselinePoint&gt;
+      &lt;BaselinePoint Id=&quot;889&quot;&gt;
+        &lt;VertexId&gt;888&lt;/VertexId&gt;
+        &lt;ObjectType&gt;Quota-Punti intermedi&lt;/ObjectType&gt;
+      &lt;/BaselinePoint&gt;
+      &lt;BaselinePoint Id=&quot;886&quot;&gt;
+        &lt;VertexId&gt;885&lt;/VertexId&gt;
+        &lt;ObjectType&gt;Quota-Punto finale&lt;/ObjectType&gt;
+      &lt;/BaselinePoint&gt;
+    &lt;/BaselinePoints&gt;
+    &lt;BaselineDimensions&gt;
+      &lt;BaselineDimension Id=&quot;887&quot;&gt;
+        &lt;BaselinePointList&gt;
+          &lt;BaselinePointId&gt;884&lt;/BaselinePointId&gt;
+          &lt;BaselinePointId&gt;889&lt;/BaselinePointId&gt;
+          &lt;BaselinePointId&gt;886&lt;/BaselinePointId&gt;
+        &lt;/BaselinePointList&gt;
+        &lt;ObjectType&gt;Quota&lt;/ObjectType&gt;
+      &lt;/BaselineDimension&gt;
+    &lt;/BaselineDimensions&gt;
+</Info>

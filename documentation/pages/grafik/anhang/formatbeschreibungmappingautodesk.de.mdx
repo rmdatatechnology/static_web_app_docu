@@ -1,0 +1,64 @@
+---
+title: "Mappingtabelle - Konvertierung von DWG-, DXF-Daten"
+page: true
+---
+## Erstellen Sie eine Mappingtabelle f&#252;r die Konvertierung von Geodatenbank-Objekten aus CAD-Elementen.
+Verwenden Sie hierzu denMapping-Assistenten oder nutzen Sie die erweiterten M&#246;glichkeiten der Mappingdatei, indem Sie ein Mapping manuell herstellen.
+<Success>
+Die Mappingtabelle liegt in Form einer XML-Datei vor, welche einem bestimmten Schema entsprechen muss.Die folgenden Kapitel enthalten eine detaillierte Beschreibung dieses XML-Formats. 
+</Success>
+
+<Warning>
+Durch den Kontext  <Italic> XML </Italic>  versteht sich auch, dass alle folgenden Schreibweisen samt Gro&#223;-/Kleinschreibung und Multiplizit&#228;t exakt der Beschreibung entsprechen m&#252;ssen. Andernfalls entspricht die Datei nicht einer Mappingtabelle.
+</Warning>
+
+
+### MappingDefinition-Element
+Innerhalb des &#252;bergeordneten XML-Elementes  <Italic> &lt;MappingDefinition&gt; </Italic>  sind  folgende Elemente  <Italic> in dieser Reihenfolge </Italic>  enthalten:
+
+1. <Italic> [&lt;GlobalSettings&gt;](../anhang/formatbeschreibungmappingautodesk2) </Italic> 
+- Enth&#228;lt &#252;bergeordnete Einstellungen, welche die gesamte Konvertierung betreffen.
+
+
+
+2. <Italic> [&lt;VersioningSettings&gt;&gt;](../anhang/formatbeschreibungmappingautodesk12) </Italic> 
+-  Diese Sonderfunktion steuert die Erzeugung mehrerer Versionen eines Objekts.
+
+-  Es setzt das Vorhandensein einer versionierten Geodatenbank (z. B. <Italic> Teilungsplan </Italic> ) voraus.
+
+
+
+3. <Italic> [&lt;AssignmentTable&gt;](../anhang/formatbeschreibungmappingautodesk3) </Italic> 
+-  Enth&#228;lt <U> nach Geodatenbank-Objektklassen gegliedert </U>  die Objekttyp-Zuordnung und Attributzuweisungen.
+
+-  Kann wiederum &quot;spezielle GlobalSettings&quot; enthalten, die nur f&#252;r die von der Gliederung betroffenen Elemente gilt.
+
+
+
+
+
+ <Bold> Beispiel: </Bold> 
+
+```
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;
+ <Bold> &lt;MappingDefinition&gt; </Bold> 
+    &lt;GlobalSettings&gt;
+         <Italic> &lt;!-- Globale Einstellungen --&gt; </Italic> 
+    &lt;/GlobalSettings&gt;
+    &lt;VersioningSettings&gt;
+         <Italic> &lt;!-- Versionierungs-Einstellungen --&gt; </Italic> 
+    &lt;/VersioningSettings&gt;
+    &lt;AssignmentTable&gt;
+         <Italic> &lt;!--- Klassenweise Zuordnungen --&gt; </Italic> 
+    &lt;/AssignmentTable&gt;
+ <Bold> &lt;/MappingDefinition&gt; </Bold> 
+
+```
+
+
+<Warning>
+Im Regelfall entsteht aus 1 gemappten CAD-Element genau 1 Geodatenbank-Objekt.
+In Sonderf&#228;llen kann es n&#246;tig sein, mehrere CAD-Elemente zu 1 Objekt zusammenzufassen.
+Mehr zu dieser Sonderfunktionalit&#228;t finden Sie [hier](../anhang/formatbeschreibungmappingautodesk12)
+.
+</Warning>

@@ -1,0 +1,152 @@
+---
+title: "Umbenennen mit Tabelle"
+page: true
+---
+## Benennen Sie Punkte anhand tabellarisch beschriebener Muster um.
+
+1.  Rufen Sie den Befehl <Italic> [Punkte umbenennen](../daten/punkte_umnummerieren) </Italic>  auf.
+
+2.  W&#228;hlen Sie die Option <Menu>Tabelle</Menu> .
+
+3.  W&#228;hlen Sie eine g&#252;ltige <Italic> Punktnamentabelle </Italic>  (Dateierweiterung <Italic> .pointnaming </Italic> )) mittels Dateiauswahl <Border>...</Border>  aus.
+
+
+<Success>
+ <Placeholder>product</Placeholder> f&#252;hrt Sie beim Klick auf den Button direkt in das entsprechende Vorlagenverzeichnis.
+
+</Success>
+4.  Selektieren Sie den Punktnummernbereich in der Grafik oder durch Eingabe im Dialog.
+
+5.  Best&#228;tigen Sie den Dialog mit <Border>  OK  </Border> .
+
+6. Die Punkte zwischen Start- und Endpunkt werden umbenannt und die Berechnung wird protokolliert.
+
+
+
+
+<Success>
+Standardm&#228;&#223;ig wird eine Vorlagendatei mit  <Placeholder>product</Placeholder> installiert, welche die m&#246;glichen Umbenennungsmuster veranschaulicht.
+Diese Datei finden Sie im Verzeichnis
+<GeoDesigner> <Menu>C:\ProgramData\rmDATA\GeoDesigner\Templates\Tables</Menu> 
+</GeoDesigner>
+<GeoMapper> <Menu>C:\ProgramData\rmDATA\GeoMapper\Templates\Tables</Menu>  bzw.  <Menu>C:\ProgramData\rmDATA\GeoMapperSE\Templates\Tables</Menu> </GeoMapper>
+</Success>
+
+
+### Dateiaufbau
+
+-  Zeilen die mit einfachen Hochkomma ( &#39; ) beginnen, werden als Kommentarzeilen interpretiert und nicht ausgewertet.
+
+-  Alle &#252;brigen Zeilen werden eingelesen und als <Italic> Quelle- </Italic>  - <Italic> Ziel </Italic>  Paar interpretiert.
+
+-  Jedes Muster kann eine Reihe von Platzhalterzeichen ( <Italic> Wildcards </Italic> ) sowie fixe Bestandteile ( <Italic> Literale </Italic> ) umfassen.
+
+
+
+<table>
+<tr><th>Zeichen</th>
+<th>Bedeutung</th>
+</tr>
+<tr><td>&amp; ( <i> Ampersand </i> )</td>
+<td>Steht f&#252;r ein Leerzeichen.</td>
+</tr>
+<tr><td>% ( <i> Prozent </i> )</td>
+<td>Eine beliebige Ziffer (numerisch)</td>
+</tr>
+<tr><td>? ( <i> Fragezeichen </i> )</td>
+<td>Ein beliebiges Zeichen (alphanumerisch)</td>
+</tr>
+<tr><td>* ( <i> Asterisk </i> )</td>
+<td>Beliebiger Text von beliebigem Inhalt (alphanumerisch)</td>
+</tr>
+<tr></tr>
+</table>
+
+<Warning>
+Pro Umbenennung wird das jeweils erste zutreffende Muster angewendet, d. h. spezielle Muster m&#252;ssen oberhalb generellerer Muster definiert werden.
+</Warning>
+
+
+### Beispiele  
+<table>
+<tr><td>3030</td>
+<td>TP30-182T1</td>
+</tr>
+<tr></tr>
+</table>
+
+Punkt 3030 wird zu TP30-182T1. Alle anderen Punkte werden nicht umbenannt.
+
+<table>
+<tr><td>*</td>
+<td>PP*</td>
+</tr>
+<tr></tr>
+</table>
+
+Alle Punkte bekommen den Text &quot;PP&quot; als Pr&#228;fix vorangestellt (zB 123 wird zu PP123, 5a wird zu PP5a, ...)
+
+<table>
+<tr><td>5%%%</td>
+<td>PP&amp;%%%</td>
+</tr>
+<tr></tr>
+</table>
+
+Alle &quot;5000er&quot; werden zu &quot;PP&#39;s&quot; (zB 5023 wird zu &quot;PP 023&quot;, 5120 wird zu &quot;PP 120&quot;, ...)
+
+<table>
+<tr><td>10000%%%</td>
+<td>TP%-%%</td>
+</tr>
+<tr><td>1000%%%%</td>
+<td>TP%%-%%</td>
+</tr>
+<tr><td>100%%%%%</td>
+<td>TP%%%-%%</td>
+</tr>
+<tr></tr>
+</table>
+
+Alle &quot;10Mio&quot; werden zu &quot;TP&#39;s&quot; (&#39;zB 10000345 wird zu TP3-45, 10002345 wird zu TP23-45, ...).
+ <Italic> Anmerkung: </Italic>  Hier sieht man auch, wie generelle/spezielle Muster gereiht werden m&#252;ssen.[/Example]
+
+### 
+# Beispiele  f&#252;r &#196;nderung der KG-Nummer bzw. Gemarkung
+
+
+<table>
+<tr><td>*</td>
+<td>56387#*</td>
+</tr>
+<tr></tr>
+</table>
+
+Die KG-Nummer bzw. Gemarkung  56387 wird bei allen Punkten eingetragen, die noch keine KG bzw. Gemarkung haben
+
+<table>
+<tr><td>33017#*</td>
+<td>*</td>
+</tr>
+<tr></tr>
+</table>
+
+Die KG-Nummer (Gemarkung) 33017 wird von allen Punkten entfernt (alle anderen KG&#39;s bzw. Gemarkungen bleiben unver&#228;ndert)
+
+<table>
+<tr><td>33012#*</td>
+<td>33013#*</td>
+</tr>
+<tr></tr>
+</table>
+
+&#196;ndert alle Punkte mit KG-Nummer (Gemarkung) 33012 auf KG-Nummer (33013).
+
+<table>
+<tr><td>????#*</td>
+<td>0????#*</td>
+</tr>
+<tr></tr>
+</table>
+
+Erg&#228;nzt die f&#252;hrende Null bei vierstelligen KG-Nummern bzw. Gemarkungen.

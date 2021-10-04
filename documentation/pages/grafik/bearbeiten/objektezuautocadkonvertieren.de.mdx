@@ -1,0 +1,42 @@
+---
+title: "Objekte zu AutoCAD konvertieren"
+page: true
+---
+## Konvertieren von Objekten
+<GeoDesigner> <Menu> Menu: [Bearbeiten und Ändern / Allgemein / Objekte zu AutoCAD konvertieren] </Menu> 
+ <Menu> Cmd: [ConvertObjectsToCad] </Menu> 
+
+
+1. W&#228;hlen Sie die zu konvertierenden Objekte direkt durch Klick in der Grafik aus. Sie k&#246;nnen mittels <Border>Strg + Klick</Border>  mehrere Elemente w&#228;hlen. (Siehe 
+
+[Selektion von Daten](../grafik/selektionvondaten)
+)
+
+
+2. Best&#228;tigen Sie die Auswahl mit der Option &quot;Fertig&quot;.
+
+
+
+
+<Success>
+ AutoCAD-Objekte werden vom Befehl ignoriert.
+</Success>
+
+<Success>
+ Objekte k&#246;nnen nach dem Konvertieren nicht mehr &#252;ber den [Eigenschaften-Manager](../eigenschaftsmanager/uebersicht)
+ bearbeitet werden.
+</Success>
+
+<Success>
+ Bei Linienz&#252;gen, die auf Vermessungspunkte gezeichnet wurden, bleibt der Linienzug erhalten, wenn der Punkt konvertiert wird.
+</Success>
+
+<Warning>
+Beim Konvertieren von Objekten werden unter Umst&#228;nden darauf referenzierende Objekte mit konvertiert. Das betrifft alle Objekte, die ohne die Referenz nicht mehr existieren k&#246;nnen, z. B. Linienzug-Symbole.
+</Warning>
+
+<Warning>
+ Bei aktivierter rmGEO-Verbindung werden konvertierte Punkte in rmGEO gel&#246;scht.
+</Warning>
+
+</GeoDesigner>

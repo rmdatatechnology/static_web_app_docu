@@ -1,0 +1,61 @@
+---
+title: "Convertire degli elementi CAD "
+page: true
+---
+## Conversione di un elemento CAD importato da un file DWG/DXF o da un file di riferimento esterno in un oggetto  <Placeholder>product</Placeholder> 
+ <Menu> Menu: [Gestore rappresentazione / Menu contestuale (bottone destro del mouse) / Convertire elemento CAD] </Menu> 
+ <Menu> Cmd: [PointConvertCadElements] </Menu> 
+
+Il comando pu&#242; essere usato per gli  <Bold> elementi CAD </Bold> .
+
+- Se durante l&#39;importazione di un DWG o DXF Autodesk, non tutti i dati sono stati mappati con gli oggetti <Placeholder>fullproduct</Placeholder>  allora rimangono degli elementi CAD non convertiti.
+
+
+<GeoMapper>
+
+- <Bold> Elementi da file esterni </Bold> 
+
+</GeoMapper>
+
+
+
+
+1. Selezionare nel gestore di rappresentazione il tipo di oggetto adatto.
+
+2. Richiamare il comando dal menu contestuale (clic destro del mouse sul tipo di oggetto).
+
+3. Selezionare sulla grafica l&#39;elemento da convertire. 
+
+4. Quando un elemento CAD &#232; convertito, l&#39;oggetto originale &#232; eliminato.
+
+
+<GeoMapper> Per gli elementi di file esterni, l&#39;oggetto di origine non viene modificato.
+
+</GeoMapper>
+
+
+
+<GeoDesigner>
+<Success>
+Sulla barra multifunzionale &#232; possibile scegliere se eliminare o no gli oggetti dopo la conversione (&quot;Convertire ed eliminare&quot; oppure &quot;Convertire senza eliminare&quot;). L&#39;opzione attiva vale anche per il comando [Convertire elementi CAD](../datei/cadkonvertieren)
+.
+</Success>
+</GeoDesigner>
+<Success>
+Gli attributi originali sono anch&#39;essi mappati, vale a dire, il 1&#176; attributo &#232; assegnato al 1&#176; attributo obbligatorio dell&#39;oggetto  <Placeholder>product</Placeholder> e cos&#236; via. 
+</Success>
+
+<Success>
+Quando si seleziona l&#39;elemento originale bisogna fare attenzione a selezionare solo quest&#39;ultimo. Se un oggetto  <Placeholder>product</Placeholder> si trova sopra di esso l&#39;elemento non pu&#242; essere selezionato. Se da un punto parte una linea CAD, allora il punto pu&#242; essere mappato solo se sono catturate parti del punto. Altrimenti il programma cerca sempre di convertire la linea. 
+</Success>
+
+<Success>
+Se una conversione fosse impossibile, appare un messaggio d&#39;errore. Ad es. per convertire un punto non pu&#242; essere selezionata una polilinea.
+</Success>
+
+<GeoMapper>
+<Warning>
+Se il comando viene richiamato per elementi da un geodb di riferimento esterno, sono ripresi solo i dati grafici che si vedono. In questo caso le linee possono anche essere interrotte, come nel caso che una polilinea sia risparmiata sui punti. Inoltre non sono ripresi tutti gli attributi. Per la ripresa di pi&#249; oggetti, consigliamo il trasferimento tramite XML-Transfer.
+</Warning>
+</GeoMapper>
+

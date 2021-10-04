@@ -1,0 +1,48 @@
+---
+title: "Allgemein"
+page: true
+---
+## Schnittstelle zum Produkt &quot;DV-Fact&quot; der Firma DATAVIEW
+
+&#220;ber die Fachschale werden Daten mit dem Produkt &quot;DV-Fact&quot; der Firma DATAVIEW wechselseitig ausgetauscht. Es k&#246;nnen beliebige Objekte wie Grundst&#252;cke, Adressen oder beliebige andere Objekte &#252;ber eine ID im GIS gesucht und angezeigt werden. Weiters k&#246;nnen diese Objekte mit einer ID an DV-Fact &#252;bergeben werden. 
+Die &#220;bergabe der Daten erfolgt &#252;ber ASCII-Dateien, die &#220;bernahme der Dateien muss im jeweiligen Produkt vom Anwender angesto&#223;en werden.
+
+## Fachschale aktivieren
+Das Aktivieren der Fachschale erfolgt in den [Dokumenteigenschaften](../einstellungen/dokumenteneinstellungen)
+
+
+## Einstellungen zur Fachschale
+Damit der Datenaustausch zwischen DV-Fact und  <Placeholder>product</Placeholder> funktioniert, muss in beiden Produkten ein gemeinsamer Ordner definiert werden. In diesem werden die Dateien f&#252;r den Datenaustausch gelesen und geschrieben.
+Der Orndername wird in den Einstellungen &#252;ber das  <Menu> Menu: [DV-Fact - Einstellungen] </Menu>  angegeben:<Image>\img\grafik\fachschaledv-fact\dvfactEinstellungen.png$dvfactEinstellungen</Image>
+
+In dem angegebenen Ordner werden von den Produkten zwei Dateien angelegt:
+
+- Fact-GIS-ID.csv: Die Datei wird von DV-Fact geschrieben und von <Placeholder>fullproduct</Placeholder> gelesen.
+
+- GIS-Fact-ID-Sachdaten.csv: Die Datei wird von <Placeholder>fullproduct</Placeholder> geschrieben und von DV-Fact gelesen.
+
+
+
+
+## Auftrag &#252;bergeben
+Mit dem Befehl  <Menu>Auftrag übergeben</Menu>  im  <Menu> Menu: [DV-Fact] </Menu>  werden im GIS Objekte selektiert und nach DV-Fact &#252;bergeben. 
+Bei Klick auf ein Objekt wird dieses sofort nach DV-Fact &#252;bergeben.
+Sollen mehrere Objekte &#252;bergeben werden, kann vom Anwender ein Fenster aufgezogen werden. Danach k&#246;nnen weitere Objekte wahlweise mit  <Border>Strg</Border>  selektiert oder deselektiert werden. Nach  <Border>Enter</Border>  werden alle selektierten Objekte nach DV-Fact &#252;bergeben.
+Alternativ k&#246;nnen bereits vor Befehlsaufruf Objekte in der Grafik selektiert werden. Ruft der Anwender dann den Befehl auf, werden die bereits selektierten Objekte nach DV-Fact &#252;bergeben.
+Wurden Objekte &#252;bergeben, wird die Anzahl der &#252;bergebenen Objekte angezeigt:<Image>\img\grafik\fachschaledv-fact\dvfactanzahlobjekte.png$dvfactanzahlobjekte</Image>
+
+## Auftrag &#252;bernehmen
+Mit dem Befehl  <Menu>Auftrag übernehmen</Menu>  im  <Menu> Menu: [DV-Fact] </Menu>  wird die von DV-Fact erzeugte Datei gelesen. Im GIS wird nach Objekten mit der angegebenen ID gesucht und es werden die gefundenen Objekte selektiert.
+
+## Mapping
+Die Objekttypen, welche von der Schnittstelle ber&#252;cksichtigt werden sollen, m&#252;ssen in einer Mapping-Datei angegeben werden.
+Die Mapping-Datei befindet sich f&#252;r alle User unter  <Border>%ProgramData%\rmDATA\GeoDesktop\TransferSettings\DvFact.mapping</Border> .
+Zus&#228;tzliche benutzerspezifische Einstellungen kann der Anwender angeben in der Datei  <Border>%AppData%\Roaming\rmDATA\GeoDesktop\TransferSettings\DVFact.mapping</Border> 
+
+Pro Objekt werden folgende Informationen in der Mapping-Datei angegeben:
+
+- Objektklasse: <Menu>ObjectClassArea/ObjectClass</Menu> 
+- Objektname: <Menu>ObjectTypeNameGrundstück/ObjectTypeName</Menu> 
+- Aufbau des Schl&#252;ssels f&#252;r die ID: <Menu>KeyStructure{Internal~Region}#{Internal~Name}/KeyStructure</Menu> 
+
+

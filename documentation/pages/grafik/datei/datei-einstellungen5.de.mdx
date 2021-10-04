@@ -1,0 +1,95 @@
+---
+title: "Berechnung und Entwurf"
+page: true
+---
+## Festlegen der Einstellungen f&#252;r Berechnungen und Konstruktionen.
+
+<GeoDesigner> <Placeholder>geodgm</Placeholder> 
+
+<Image>\img\grafik\datei\Projekteinstellung_berechnung.png$Projekteinstellung_berechnung</Image>
+
+
+### Fl&#228;chenberechnungen
+
+- <Bold> Detailliertes Fl&#228;chenprotokoll: </Bold>  Zus&#228;tzliche Ausgabe der St&#252;tzpunkte der Fl&#228;che
+
+
+
+
+
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\datei\GeoMapper.Projekteinstellungen_berechnung.png$GeoMapper.Projekteinstellungen_berechnung</Image>
+
+
+### Fl&#228;chenberechnung
+
+- <Bold> Detailliertes Fl&#228;chenprotokoll: </Bold>  Zus&#228;tzliche Ausgabe der St&#252;tzpunkte der Fl&#228;che
+
+
+- <Bold> Fl&#228;chenwerte auf Naturma&#223; reduzieren: </Bold>  Reduktion des berechneten Fl&#228;chenwerts auf Ma&#223;e in der Natur (siehe 
+
+[Formeln](../anhang/reduktion)
+)
+
+
+- <Bold> Mittlere H&#246;he bei Fl&#228;chenreduktion ber&#252;cksichtigen: </Bold>  Die mittlere H&#246;he geht wahlweise in die Formel f&#252;r die Reduktion ein. 
+
+
+
+<Warning>
+Wirkt nur bei einer Formel mit H&#246;heninformation wie bei UTM 
+
+</Warning>
+
+
+
+</GeoMapper>
+
+### Einstellung f&#252;r die Koordinaten-Rundung
+W&#228;hlen Sie zwischen
+
+-  Keine: Es wird nicht gerundet
+
+-  Kataster-AT-Rundung: (Nur f&#252;r &#214;sterreich) Dabei werden gem&#228;&#223; den Vorgaben des BEV die Koordinaten von Grenzpunkten auf Zentimeter gerundet, die Koordinaten von St&#252;tzpunkten ohne Vermessungspunkt werden auf Millimeter gerundet. 
+
+-  mm-Rundung: Die Koordinaten werden auf mm gerundet.
+
+
+
+Die Einstellung wirkt bei der Berechnung von:
+
+- Bema&#223;ungen (Sperr/Spann-, Bogen-, Winkel- und Basislinienbema&#223;ungen)
+
+- Inhalt und Umfahrung von Fl&#228;chen. Dabei werden auch St&#252;tz- und Konstruktionspunkte der Linienz&#252;ge f&#252;r die Berechnung gerundet.
+
+
+
+<Success>
+Es werden mit der Rundung aber keine Punkte oder St&#252;tzpunkte ver&#228;ndert, sondern nur die gerundeten Werte f&#252;r die Berechnung herangezogen.
+</Success>
+
+<Success>
+Die Einstellung wirkt nicht auf die L&#228;nge von Linienz&#252;gen, auf Konstruktionsmethoden oder Berechnungsfunktionen.
+</Success>
+
+###  Entwurf
+
+-  St&#252;tzpunkte automatisch einf&#252;gen
+
+- Option aktiv: Beim Einf&#252;gen eines neuen Objekts auf einer bestehenden Linie wird in die bestehende Linie ein St&#252;tzpunkt eingef&#252;gt.
+
+- Option nicht aktiv: Beim Einf&#252;gen eines neuen Objekts auf einer bestehenden Linie wird in die bestehende Linie kein zus&#228;tzlicher St&#252;tzpunkt eingef&#252;gt.
+
+
+
+-  H&#246;he von neuen St&#252;tzpunkten auf bestehenden Segmenten interpolieren: Bei aktiver Option werden die H&#246;hen von St&#252;tzpunkten, welche auf ein Segment eines Linienzuges eingef&#252;gt werden, aus den Anfangs- und Endh&#246;hen des Segmentes interpoliert.
+
+
+
+
+
+### Defaultwerte f&#252;r Attribute
+Defaultwerte bei Pflichtattributen w&#228;hrend eines Imports oder Konfigurationswechsels nicht setzen: 
+Ist die Option aktiv, werden bei Importen oder Konfigurations&#228;nderungen in der Datenbank keine &#196;nderungen an Attributen vorgenommen. Es werden keine Pflichtattribute bef&#252;llt und es werden auch keine zuletzt verwendeten Werte in die Attribute geschrieben. 
+Pflichtattribute, insbesonders Attribute, die f&#252;r die Darstellung relevant sind (je nach Konfiguration unterschiedlich), m&#252;ssen bei aktivierter Option immer beim Import durch entsprechendes Mapping gesetzt werden!

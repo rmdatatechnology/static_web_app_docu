@@ -1,0 +1,55 @@
+---
+title: "Gruppen"
+page: true
+---
+## Einf&#252;gen einer Gruppe
+
+###  Aufbau der Sektion Gruppe
+
+- <Bold> &lt;AggregationObjects&gt; </Bold>  Sektion aller Gruppen. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>      &lt;PointAggregationObject  Id=&quot;100&quot;&gt; </Bold>  Gruppe mit einer eindeutiger ID
+
+- <Bold>      &lt;VertexId&gt;99&lt;/VertexId&gt; </Bold> Referenz auf Einsetzpunkt der Gruppe. Die Sektion darf nur 1 mal vorkommen.
+
+- <Bold>         &lt;Name&gt;98&lt;/Name&gt; </Bold> Bezeichnung der Gruppe
+
+- <Bold> &lt;PartList&gt; </Bold>  Liste der Gruppenelemente
+
+- <Bold> &lt;PartId&gt; </Bold>  ID des Gruppenelements. Die Sektion kann &#246;fters wiederholt werden.
+
+
+
+- <Bold> &lt;/PartList&gt; </Bold>  Ende der Sektion
+
+- <Bold> &lt;ObjectType&gt;Geb&#228;ude (Gruppe)&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps
+
+
+
+- <Bold>      &lt;/AggregationObject&gt; </Bold> 
+
+
+- <Bold>    &lt;/AggregationObjects&gt; </Bold> 
+
+
+
+<Success>
+Falls in der XML-Datei ein Objekttyp vorhanden ist, der nicht konfiguration wurde, dann das Objekt dennoch importiert. Je nach Einstellung werden Objekte mit unbekannten Typ in Magenta dargestellt oder ausgeblendet. (Siehe Men&#252; Datei - Datei-Einstellungen)
+</Success>
+
+
+<Info>
+  &lt;AggregationObjects&gt;
+      &lt;AggregationObject Id=&quot;18&quot;&gt;
+        &lt;VertexId&gt;17&lt;/VertexId&gt;
+        &lt;Name&gt;
+        &lt;/Name&gt;
+        &lt;PartList&gt;
+          &lt;PartId&gt;4&lt;/PartId&gt;
+          &lt;PartId&gt;13&lt;/PartId&gt;
+        &lt;/PartList&gt;
+        &lt;ObjectType&gt;Geb&#228;ude (Gruppe)&lt;/ObjectType&gt;
+      &lt;/AggregationObject&gt;
+    &lt;/AggregationObjects&gt;
+</Info>
+

@@ -1,0 +1,218 @@
+---
+title: "Tabella di conversione - Impostazioni globali"
+page: true
+---
+## Queste sono le impostazioni relative all&#39;intera conversione. Esse definiscono se le concrete propriet&#224; di un elemento CAD, debbano essere convertite nelle rispettive propriet&#224; di un Geodatabase.
+### Elemento GlobalSettings
+Questo elemento pu&#242; esistere in diversi contesti:
+
+-  All&#39;interno di una <Bold> [&lt;MappingDefinition&gt;](../anhang/formatbeschreibungmappingautodesk) </Bold>  descrive la conversione generale di propriet&#224; CAD.
+
+-  Nidificato all&#39;interno di una <Bold> [&lt;AssignmentTable&gt;](../anhang/formatbeschreibungmappingautodesk3) </Bold>  descrive la conversione <Italic> speciale </Italic>  per un ben determinato tipo di elemento CAD (ad es. un blocco con un nome speciale, ecc.) e qui si chiama <Bold> &lt;GraphicAttributeSettings&gt; </Bold> 
+
+
+Le propriet&#224; (ad es.  <Italic> Colore </Italic> ,  <Italic> Layer </Italic> , ecc.), che  <Italic> generalmente </Italic>  non sono convertite, dopo la conversione sono rese tramite un tipo di oggetto assegnato.
+
+1. <Italic> &lt;AttributeSettings&gt; </Italic>  (opzionale)
+
+- Sono rilevanti solo per gli attributi di blocco e descrivono quali propriet&#224; degli attributi debbano essere riprese.
+
+
+
+2. <Italic> &lt;ObjectSettings&gt; </Italic>  (opzionale)
+
+- Descrivono quali propriet&#224; di un elemento CAD debbano essere riprese. Questa impostazione &#232; valida globalmente per tutti i tipi di elementi CAD risp. tipi di oggetti.
+
+
+
+
+
+<Success>
+
+-  Tutte la propriet&#224; sono opzionali, cio&#232; nessuna deve essere data obbligatoriamente.
+
+
+-  Per l&#39;esecuzione in quanto attributi XML la sequenza dell&#39;elenco &#232; irrelevante.
+
+
+-  Gli attributi non elencati <Bold> non </Bold>  vengono mappati (cio&#233; <Italic> default=false </Italic> ).
+
+
+
+
+</Success>
+
+### 
+# Impostazioni degli attributi 
+
+Un valore XML di tipo  <Italic> Booleano </Italic>  definisce di volta in volta se la propriet&#224; corrispondente debba essere ripresa dall&#39;oggetto di base ( <Italic> true </Italic> ) o non ripresa ( <Italic> false </Italic> ).
+<table>
+<tr><th>Attributo</th>
+<th>Tipo</th>
+<th>Significato</th>
+</tr>
+<tr><td>Alignment</td>
+<td>Booleano</td>
+<td>Allineamento testo</td>
+</tr>
+<tr><td>Color</td>
+<td>Booleano</td>
+<td>Colore</td>
+</tr>
+<tr><td>Height</td>
+<td>Booleano</td>
+<td>Altezza</td>
+</tr>
+<tr><td>Inclination</td>
+<td>Booleano</td>
+<td>Inclinazione testo</td>
+</tr>
+<tr><td>Layer</td>
+<td>Booleano</td>
+<td>Layer</td>
+</tr>
+<tr><td>Position</td>
+<td>Booleano</td>
+<td>Punto d&#39;inserimento</td>
+</tr>
+<tr><td>Rotate</td>
+<td>RotationEnumType</td>
+<td>Base per rotazioneCoordinateSystem.. Sistema di coordinatePageside.. Margine del foglioUserinput.. Angolo assolutoBaseObject.. Oggetto di baseAutomatic.. Automatico</td>
+</tr>
+<tr><td>Rotation</td>
+<td>Booleano</td>
+<td>Angolo rotazione relativo</td>
+</tr>
+<tr><td>ScaleEast</td>
+<td>Booleano</td>
+<td>Scala in larghezza</td>
+</tr>
+<tr><td>ScaleNorth</td>
+<td>Booleano</td>
+<td>Scala in altezza</td>
+</tr>
+<tr><td>Style</td>
+<td>Booleano</td>
+<td>Stile di testo</td>
+</tr>
+<tr><td>Visible</td>
+<td>Booleano</td>
+<td>Visibilit&#224;</td>
+</tr>
+</table>
+
+
+ <Bold> Esempio Att1: </Bold> 
+Mappatura che riprende genericamente degli attributi di blocco: Posizione, Layer e Stile di testo.
+
+```
+
+&lt; <Italic> AttributeSettings </Italic>   <Bold> Position=&quot;true&quot; </Bold>   <Bold> Layer=&quot;true&quot; </Bold>   <Bold> Style=&quot;true&quot; </Bold> /&gt;
+
+```
+
+ <Bold> Esempio Att2: </Bold> 
+Mappatura che riprende genericamente degli attributi di blocco: Layer e Colore.
+
+```
+
+&lt; <Italic> AttributeSettings </Italic>   <Bold> Color=&quot;true&quot; </Bold>   <Bold> Layer=&quot;true&quot; </Bold> /&gt;
+
+```
+
+### 
+# Impostazioni degli oggetti 
+
+<table>
+<tr><th>Attributo</th>
+<th>Tipo</th>
+<th>Significato</th>
+</tr>
+<tr><td>Alignment</td>
+<td>Booleano</td>
+<td>Allineamento testo</td>
+</tr>
+<tr><td>Blockname</td>
+<td>Booleano</td>
+<td>Nome del simbolo dal disegno prototipo</td>
+</tr>
+<tr><td>Color</td>
+<td>Booleano</td>
+<td>Colore</td>
+</tr>
+<tr><td>Height</td>
+<td>Booleano</td>
+<td>Altezza</td>
+</tr>
+<tr><td>Inclination</td>
+<td>Booleano</td>
+<td>Inclinazione testo</td>
+</tr>
+<tr><td>Layer</td>
+<td>Booleano</td>
+<td>Layer</td>
+</tr>
+<tr><td>Linetype</td>
+<td>Booleano</td>
+<td>Tipo linea</td>
+</tr>
+<tr><td>LinetypeScale</td>
+<td>Booleano</td>
+<td>Scala del tipo di linea</td>
+</tr>
+<tr><td>Lineweigth</td>
+<td>Booleano</td>
+<td>Spessore linea</td>
+</tr>
+<tr><td>Rotate</td>
+<td>RotationEnumType</td>
+<td>Base per rotazioneCoordinateSystem.. Sistema di coordinatePageside.. Margine del foglioUserinput.. Angolo assolutoBaseObject.. Oggetto di baseAutomatic.. Automatico</td>
+</tr>
+<tr><td>Rotation</td>
+<td>Booleano</td>
+<td>Angolo rotazione relativo</td>
+</tr>
+<tr><td>ScaleEast</td>
+<td>Booleano</td>
+<td>Scala in larghezza</td>
+</tr>
+<tr><td>ScaleNorth</td>
+<td>Booleano</td>
+<td>Scala in altezza</td>
+</tr>
+<tr><td>Style</td>
+<td>Booleano</td>
+<td>Stile di testo</td>
+</tr>
+<tr><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr><td>AddRotation</td>
+<td>Double</td>
+<td>Costante addizionale per Angolo di rotazione</td>
+</tr>
+<tr><td>AddScaleEast</td>
+<td>Double</td>
+<td>Costante addizionale per  <i> Scala in larghezza </i> </td>
+</tr>
+<tr><td>AddScaleNorth</td>
+<td>Double</td>
+<td>Costante addizionale per  <i> Scala in altezza </i> </td>
+</tr>
+</table>
+
+
+ <Bold> Esempio Obj1: </Bold> 
+Mappatura che agli elementi CAD applica genericamente una rotazione di  <Italic> +50g </Italic> :
+
+```
+&lt; <Italic> ObjectSettings </Italic>   <Bold> AddRotation=&quot;50&quot; </Bold> /&gt;
+```
+
+ <Bold> Esempio Obj2: </Bold> 
+Mappatura che riprende genericamente il Nome blocco ed il Layer:
+
+```
+&lt; <Italic> ObjectSettings </Italic>   <Bold> Blockname=&quot;true&quot; </Bold>   <Bold> Layer=&quot;true&quot; </Bold> /&gt;
+```

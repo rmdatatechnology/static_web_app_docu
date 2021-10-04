@@ -1,0 +1,65 @@
+---
+title: "Réduction de surfaces"
+page: true
+---
+## R&#233;duction de valeurs de surfaces dans la nature.
+<GeoMapper>
+La r&#233;duction de surfaces dans  <Placeholder>fullproduct</Placeholder> selon le syst&#232;me de coordonn&#233;es utilis&#233; est calcul&#233;e de la mani&#232;re suivante:
+
+<Warning>
+La r&#233;duction de surfaces doit &#234;tre activ&#233;e dans les [Param&#232;tres de fichier](../datei/datei-einstellungen)
+. 
+</Warning>
+
+
+### R&#233;duction UTM<Image>\img\grafik\anhang\UTM_Area_Reduktion.png$UTM_Area_Reduktion</Image>
+
+<table>
+<tr><th>D&#233;signation</th>
+<th>D&#233;scription</th>
+</tr>
+<tr><td>FH </td>
+<td>Surface dans l&#39;horizon de la zone de mesure</td>
+</tr>
+<tr><td>FUTM </td>
+<td>Surface calcul&#233;e sur la base des coordonn&#233;es UTM</td>
+</tr>
+<tr><td>Hell </td>
+<td>Altitude moyenne de FH par GRS80 (sinon: Altitude NHN + 45 m)</td>
+</tr>
+<tr><td>y </td>
+<td>Distance au m&#233;ridien moyen 9&#176; [km]y = ( (E &#8211 32 500 000)/1000) / m0 (Echelle de projection du m&#233;ridien moyen m0 = 0,9996)</td>
+</tr>
+<tr><td>R </td>
+<td>Rayon terrestre moyen = 6383 km resp. 6,383*10+6 m</td>
+</tr>
+</table>
+
+
+### R&#233;duction Gau&#223;-Kr&#252;ger
+
+FH = F_GK + F_GK * Y&#178; / R&#178;
+
+<table>
+<tr><th>D&#233;signation</th>
+<th>D&#233;scription</th>
+</tr>
+<tr><td>FH </td>
+<td>Surface dans l&#39;horizon de la zone de mesure</td>
+</tr>
+<tr><td>F_GK </td>
+<td>Surface calcul&#233;e sur la base des coordonn&#233;es GK</td>
+</tr>
+<tr><td>Y  </td>
+<td>Distance au m&#233;ridien moyen</td>
+</tr>
+<tr><td>R </td>
+<td>Rayon terrestre moyen = 6383 km resp. 6,383*10+6 m</td>
+</tr>
+</table>
+
+
+<Success>
+Pour la r&#233;duction Gau&#223;-Kr&#252;ger, l&#39;altitude n&#39;est pas prise en compte.
+</Success>
+</GeoMapper>

@@ -1,0 +1,27 @@
+---
+title: "Polyligne"
+page: true
+---
+## Description de la classe d&#39;objets  <Bold> Polyligne </Bold> 
+
+## Polylignes
+Les polylignes sont des objets lineaires compos&#233;es &#233;ventuellement par des lignes parall&#232;les. Elles sont compos&#233;es par des segments. Les segments d&#39;une polyligne sont affich&#233;s soit comme lignes/arcs ou comme une polyligne unique.
+Ainsi il est possible de repr&#233;senter une polygonale comme s&#233;rie de lignes, alors qu&#39;un seul objet est &#224; g&#233;rer.
+
+## Propri&#233;t&#233;s d&#39;une polyligne
+ <Bold> Segments: </Bold>  Une polygonale est compos&#233;e d&#39;un ou plusieurs segments. Un segment passe toujours entre 2 couples de coordonn&#233;es et peut &#234;tre soit une droite soit un arc. 
+
+ <Bold> Affichage: </Bold>  La polyligne peut &#234;tre affich&#233;e de deux mani&#232;res. Soit comme lignes et arcs, ou comme une polyligne avec des arcs. 
+Avantages de l&#39;affichage d&#39;une polyligne comme lignes et arcs:
+
+- Epargner les lignes et le polylignes aux symboles est possible seulement &#224; chaque points d&#39;arriv&#233;. Epargner les lignes et le polylignes en correspondance des sommets interm&#233;diaires n&#39;est pas possible.
+
+- Si la polygonale est cr&#233;&#233;e comme s&#233;rie de lignes jointes, on peut l&#39;&#233;pargner dans tous les vertex.
+
+
+
+
+ <Bold> Direction: </Bold>  Une polyligne a toujours une direction. La direction est con&#231;ue pour la gestion des conduites et pour la repr&#233;sentation graphique (vers quel c&#244;t&#233; par ex. les murs ou les cl&#244;tures tombent?).
+
+ <Bold> Signe conventionnel: </Bold>  Une polyligonale peut &#234;tre affich&#233;e non seulment comme polyligne ou s&#233;rie de lignes, mais aussi avec un affichage complexe compos&#233; de lignes parall&#232;les et symboles. Exemple: murs, barri&#232;res, conduites &#233;l&#233;ctriques, etc.
+

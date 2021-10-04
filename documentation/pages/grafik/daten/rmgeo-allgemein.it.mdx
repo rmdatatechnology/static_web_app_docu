@@ -1,0 +1,41 @@
+---
+title: "Collegamento con rmGEO"
+page: true
+---
+## Una sorgente dei dati rmGEO pu&#242; essere collegata in 2 modi.
+
+ <Placeholder>geodgm</Placeholder> 
+### Comparazione automatica
+Il collegamento di rmGEO con  <Placeholder>product</Placeholder> si realizza come un collegamento di banca dati con una relazione 1:1. Ci&#242; significa che ad un progetto pu&#242; essere collegata solo una banca dati rmGEO, e che tutti i dati (Punti) devono essere contemporaneamente presenti sia in rmGEO che in  <Placeholder>product</Placeholder>  
+
+I punti da e per altre sorgenti di dati rmGEO sono trasferiti in  <Placeholder>product</Placeholder> tramite una interfaccia Import-Export specifica.
+
+Il salvataggio di un file  <Placeholder>product</Placeholder> collegato con rmGEO &#232; eseguito esclusivamente dall&#39;utente: tutte le modifiche sono memorizzate in rmGEO ed in  <Placeholder>product</Placeholder> solo dopo il salvataggio. Ciononostante rmGEO e  <Placeholder>product</Placeholder> hanno sempre lo stesso contenuto di dati, poich&#232; ogni processo di editazione &#232; ripreso immediatamente in una copia di lavoro temporanea della sorgente originale dei dati rmGEO. Dopo il salvataggio, la sorgente originale dei dati rmGEO &#232; sovrascritta dalla copia di lavoro.
+
+Tutti i dati sono modificabili sia in  <Placeholder>product</Placeholder> che in rmGEO: tramite una passaggio verso rmGEO, il file  <Placeholder>product</Placeholder> &#232; bloccato in scrittura, ed rmGEO &#232; aperto come copia di lavoro. Ritornando in  <Placeholder>product</Placeholder>  rmGEO viene chiuso e tutte le modifiche sono aggiornate immediatamente.
+
+Anche se i dati di un progetto chiuso sono modificati in rmGEO, quest&#39;ultimo, alla prossima apertura verr&#224; aggiornato tramite la verifica di consistenza. 
+
+Avviando un collegamento ed aprendo un progetto collegato con rmGEO, la consistenza viene verificata da entrambi i lati e viene creata - la priorit&#224; in caso di collisione pu&#242; essere data per ogni punto per rmGEO o per rmMAP. Una priorit&#224; DEVE essere sempre definita, non &#232; quindi possibile non comparare dei singoli punti. La comparazione avviene sempre per il punto completo e per i relativi attributi, diverse definizioni di priorit&#224; per diversi attributi dello stesso punto non sono ammesse.
+
+La consistenza &#232; comunque automaticamente verificata, quando delle impostazioni sono modificate nel gestore connessioni, o quando dei dati vengono ricaricati dal progetto.
+
+I seguenti attributi sono sempre comparati:  Coordinate planimetriche, Altezza, Tipo di punto, Codice PF, Codice misura.
+
+La comparazione di ulteriori attributi pu&#242; essere gestita dall&#39;utente: qualunque attributo di rmGEO, che non sia definito in  <Placeholder>product</Placeholder> come attributo di classe, se desiderato dall&#39;utente pu&#242; essere trasferito in  <Placeholder>product</Placeholder>  Quindi gli attributi in  <Placeholder>product</Placeholder> sono trasferiti (su richiesta) in rmGEO, se questi sono creati anche in rmGEO.
+
+Se in  <Placeholder>product</Placeholder> &#232; attivato il versionamento, i punti sono comparati nel seguente modo:
+I nuovi punti sono sempre trasferiti da rmGEO in  <Placeholder>product</Placeholder> nella versione correntemente definita secondo il gestore connessioni.
+I punti versionati sono trasferiti da  <Placeholder>product</Placeholder> in rmGEO nella versione pi&#249; alta. Questa versione pi&#249; alta pu&#242; anche essere declassata nel gestore connessioni, in tal modo anche punti con una versione pi&#249; bassa siano trasferibili in rmGEO.
+
+### Comparazione manuale
+In questo caso, tramite il [Gestore connessioni](../daten/rmgeo-verbindungsmanager)
+ viene creata una assegnazione ad una sorgente di dati rmGEO.
+Qui la comparazione non avviene salvando o aprendo automaticamente un progetto ma bens&#236; tramite 3 comandi manuali.
+
+[Comparazione con sorgente dati rmGEO](../daten/abgleich-rmgeo4)
+
+[Export verso sorgente dei dati rmGEO](../daten/export-rmgeo4)
+
+[Import da sorgente dei dati rmGEO](../daten/import-rmgeo4)
+

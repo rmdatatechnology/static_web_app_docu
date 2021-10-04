@@ -1,0 +1,112 @@
+---
+title: "Description du format rmDATA-XML"
+page: true
+---
+## Format pour les fichiers rmDATA-XML support&#233;s lors de l&#39;importation resp. exportation de donn&#233;es rmDATA-XML.
+
+## Structure
+
+
+- <Bold> &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; </Bold>  en-t&#234;te
+
+- <Bold> &lt;Project Name=&quot;Demo&quot; Version=&quot;1&quot; DV=&quot;-837503012&quot; xmlns=&quot;rmData/XML&quot;&gt; </Bold>  o&#249; &quot;Demo&quot; est le nom du projet, le reste des valeurs peut rester tel quel
+
+- <Bold>  &lt;ProjectSettings /&gt; </Bold>  Liste des param&#232;tres de projet (optionelle)
+
+- <Bold> &lt;Representations /&gt; </Bold>  Liste des affichages utilis&#233;es (n&#233;cessaire uniquement si l&#39;affichage graphique est chang&#233;!)
+
+- <Bold> &lt;Objects&gt; </Bold>  Liste des objets dans le fichier XML
+
+- <Bold> &lt;Vertices /&gt; </Bold>  Coordonn&#233;es des points resp. des sommets des lignes et des surfaces. (optionelle)
+
+- <Bold> &lt;PointLabels /&gt; </Bold>  Noms des points (optionelle)
+
+- <Bold> &lt;Points /&gt; </Bold>  Section de tous les points (optionelle)
+
+- <Bold>  &lt;Segments /&gt; </Bold>  Liste des segments de polyligne (optionelle)
+
+- <Bold> &lt;LineStrings /&gt; </Bold>  Liste des polylignes (optionelle)
+
+- <Bold> &lt;Polygons /&gt; </Bold>  Liste de tous les polygones (optionelle)
+
+- <Bold> &lt;Areas /&gt; </Bold>  Liste de toutes les surfaces (optionelle)
+
+- <Bold> &lt;Texts /&gt; </Bold>  Liste de toutes les textes (optionelle)
+
+- <Bold> &lt;AlignedDimensions /&gt; </Bold>  Liste de toutes les cotes align&#233;s (optionelle)
+
+- <Bold> &lt;AngularDimensions /&gt; </Bold>  Liste de toutes les cotes d&#39;angle (optionelle)
+
+- <Bold> &lt;ArcDimensions /&gt; </Bold>  Liste de toutes les cotes d&#39;arc (optionelle)
+
+- <Bold> &lt;BaselinePoints /&gt; </Bold>  Liste de tous les points interm&#233;diaires d&#39;une cote de ligne de base (optionelle)
+
+- <Bold>     &lt;BaselineDimensions /&gt; </Bold>  Liste de toutes les cotes de ligne de base (optionelle)
+
+- <Bold> &lt;AxObjects&gt; </Bold>  Liste de tous les objets ALKIS non visibles (donn&#233;es des propri&#233;taires) (optionelle)
+
+
+
+- <Bold>   &lt;/Objects&gt; </Bold> 
+
+
+- <Bold> &lt;/Project&gt; </Bold> 
+
+
+
+<Success>
+Les diff&#233;rentes sections sur un niveau ne doivent pas &#234;tre dans l&#39;ordre montr&#233;. Mais chaque section ne peut exister qu&#39;une seul fois.
+</Success>
+
+<Warning>
+L&#39;ID doit &#234;tre univoque pour tous les objets - non seulement pour une section
+</Warning>
+
+<Warning>
+Si vous recevez un message d&#39;erreur comme suit: 
+ <Bold> &quot;Donn&#233;es non valable dans le niveau racine. Ligne 1, Position 1.&quot; </Bold>  
+Alors la codification du fichier n&#39;est pas correcte. Ouvrir le fichier avec un &#233;diteur et d&#233;finissez le code comme UTF-8.
+</Warning>
+
+
+
+<Info>
+ 
+&#65279&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Project Name=&quot;Demo_Suisse_Plan_de_situation&quot; Version=&quot;1&quot; DV=&quot;-837503012&quot; xmlns=&quot;rmData/XML&quot;&gt;
+  &lt;Objects&gt;
+    &lt;Vertices&gt;
+      &lt;Vertex Id=&quot;820&quot;&gt;
+        &lt;East&gt;4349061.50866406&lt;/East&gt;
+        &lt;North&gt;5499064.50960396&lt;/North&gt;
+        &lt;Elevation&gt;NaN&lt;/Elevation&gt;
+      &lt;/Vertex&gt;
+      &lt;Vertex Id=&quot;824&quot;&gt;
+        &lt;East&gt;4349066.89248663&lt;/East&gt;
+        &lt;North&gt;5499066.0739191&lt;/North&gt;
+        &lt;Elevation&gt;333.583052951707&lt;/Elevation&gt;
+      &lt;/Vertex&gt;
+    &lt;/Vertices&gt;
+    &lt;Segments&gt;
+      &lt;Segment Id=&quot;828&quot;&gt;
+        &lt;StartVertexId&gt;820&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;824&lt;/EndVertexId&gt;
+        &lt;Bulge&gt;-0.306691173853807&lt;/Bulge&gt;
+      &lt;/Segment&gt;
+    &lt;/Segments&gt;
+    &lt;LineStrings&gt;
+      &lt;LineString Id=&quot;821&quot;&gt;
+        &lt;SegmentList&gt;
+          &lt;SegmentId&gt;828&lt;/SegmentId&gt;
+        &lt;/SegmentList&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Breite&quot; Type=&quot;System.Double&quot; Value=&quot;0.3&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;ObjectType&gt;Zaun&lt;/ObjectType&gt;
+      &lt;/LineString&gt;
+    &lt;/LineStrings&gt;
+  &lt;/Objects&gt;
+&lt;/Project&gt;
+</Info>
+
+

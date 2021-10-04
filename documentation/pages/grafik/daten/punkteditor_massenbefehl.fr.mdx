@@ -1,0 +1,112 @@
+---
+title: "Commande globale"
+page: true
+---
+## La fonction  <Menu>Commande globale</Menu>  permet de modifier plusieurs attributs en une seule op&#233;ration.
+
+Proc&#233;dez de la mani&#232;re suivante:
+
+1. S&#233;lectionnez l&#39;attribut &#224; modifier depuis la premi&#232;re liste de s&#233;lection.
+
+2. S&#233;lectionnez une constante avec la relative m&#233;thode de modification (dependant du type, e.g. Additionner, D&#233;finir &#233;gal).
+
+3. En appuyant sur le bouton<Image>\img\grafik\daten\Geo.MassenbefehlAdd.png$Geo.MassenbefehlAdd</Image> on peut ajouter une condition qui doit &#234;tre satisfaisante, de sorte que l&#39;attribut &#224; modifier, re&#231;oive la valeur calcul&#233;e depuis la constante et la m&#233;thode de modification. Au cas o&#249;, aucune condition n&#39;est d&#233;finie, tous les objets re&#231;oivent la nouvelle valeur calcul&#233;e.
+
+4. En appuyant plusieurs fois sur le bouton<Image>\img\grafik\daten\Geo.MassenbefehlAdd.png$Geo.MassenbefehlAdd</Image> plusieurs conditions peuvent &#234;tre ajout&#233;es. Ces conditions sont lues du haut vers le bas, jusqu&#39;&#224; ce qu&#39;une condition soit rempli. Si aucune condition n&#39;est satisfaisante, l&#39;attribut de l&#39;objet reste inchang&#233;.
+
+5. En appuyant sur le bouton<Image>\img\grafik\daten\Geo.MassenbefehlRemove.png$Geo.MassenbefehlRemove</Image> les conditions ins&#233;r&#233;es peuvent &#234;tre supprim&#233;es.
+
+
+
+
+### Condition
+
+1. S&#233;lectionnez l&#39;attribut.
+
+2. S&#233;lectionnez l&#39;op&#233;rateur. En d&#233;pendance du type d&#39;attribut, les op&#233;rateurs suivants sont propos&#233;s:
+
+- <Bold>  = </Bold> : Exactement &#233;gal &#224; la valeur comparative
+
+- <Bold>  != </Bold> : Non &#233;gal &#224; la valeur comparative
+
+- <Bold> &lt; </Bold> : Inf&#233;rieur
+
+- <Bold> &lt; </Bold> =: &#201;gal ou inf&#233;rieur
+
+- <Bold> &gt; </Bold> : Sup&#233;rieur
+
+- <Bold> &gt; </Bold> =: &#201;gal ou sup&#233;rieur
+
+- <Bold> Regex </Bold> : Expression r&#233;guli&#232;re (voir ci-apr&#232;s)
+
+- <Bold> comme: </Bold>  Il contient la valeur comparative
+
+- <Bold> non comme: </Bold>  Il ne contient pas la valeur comparative
+
+
+
+3. Saisissez la valeur comparative.
+
+
+
+
+ <Bold> Expressions r&#233;guli&#232;res </Bold> 
+Avec les expressions r&#233;guli&#232;res vous pouvez d&#233;finir avec un mod&#232;le, auquel la valeur d&#39;attribut doit correspondre. On peut utiliser:
+
+- <Bold> a </Bold>  Exactement la lettre a (les majuscules et minuscules sont consid&#233;r&#233;es)
+
+- <Bold> 7 </Bold>  Exactement le num&#233;ro 7
+
+- <Bold> [abc] </Bold>      Exactement un caract&#232;re entre les caract&#232;res ins&#233;r&#233;s dans les crochets. Dans ce cas a, b, ou c
+
+- <Bold> [a-z] </Bold>       Exactement un caract&#232;re de a &#224; z
+
+- <Bold> </Bold>              D&#233;but de la ligne
+
+- <Bold> $ </Bold>              Fin de la ligne
+
+- <Bold> . </Bold>               Exactement un caract&#232;re
+
+- <Bold> \d </Bold>            Exactement une chiffre
+
+
+
+
+<Info>
+
+ <Bold> P </Bold> : Valeur qui commence avec P
+ <Bold> P </Bold> : Valeur qui commence avec P
+ <Bold> P$ </Bold> : Valeur qui fini avec P           
+</Info>
+
+
+<Info>
+Avec les enregistrements illustr&#233;s dans l&#39;image en bas, les points sont modifi&#233;s de la mani&#232;re suivante:
+
+-  Points avec altitude sup&#233;rieure &#224; 1000 m re&#231;oivent la couleur 4
+
+
+-  Points avec altitude entre 800 m et 1000 m re&#231;oivent la couleur 5
+
+
+-  Points avec altitude entre 600 m et 800 m re&#231;oivent la couleur 6
+
+
+-  Points avec altitude entre 0 m et 600 m re&#231;oivent la couleur 8
+
+
+
+
+
+<Image>\img\grafik\daten\Massenbefehl.png$Massenbefehl</Image>
+</Info>
+
+
+<Success>
+Au cas o&#249; dans la commande, des valeurs non valables soient saisies (e.g. lettres pour une g&#233;om&#233;trie), la commande ne pourra pas &#234;tre termin&#233;e avec  <Border>   OK   </Border> .
+</Success>
+
+
+<Success>
+Vous pouvez s&#233;lectionner seulement les attributs visibles dans l&#39;&#233;diteur.
+</Success>

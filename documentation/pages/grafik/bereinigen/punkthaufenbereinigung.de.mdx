@@ -1,0 +1,122 @@
+---
+title: "Punkthaufenbereinigung"
+page: true
+---
+## Bereinigung von Datenfehlern, bei denen Punkte und Vertices innerhalb einer bestimmten Toleranz dieselben Lagekoordinaten haben.
+
+ <Menu> Menu: [Bereinigen / Punkthaufenbereinigung] </Menu> 
+<GeoDesigner> <Menu> Cmd: [PointClusterStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+
+1. W&#228;hlen Sie Daten aus
+
+- <Bold> Alle geladenen Objekte: </Bold>  Alle Objekte in der Grafik
+
+
+<GeoMapper> - wenn Sie nur einen Bereich geladen haben, dann wird nur dieser Bereich bereinigt
+
+</GeoMapper>
+.
+
+- <Bold> Objektwahl: </Bold>  Durck Klick auf Objektwahl wechseln Sie direkt in die Grafik und w&#228;hlen die zu bereinigenden Objekte.
+
+
+
+2. Klicken Sie auf <Border>Fertigstellen</Border> 
+3. Datenfehler werden in einem 
+[Bereinigungsassistenten](../bereinigen/assistent)
+ angezeigt und k&#246;nnen Fehler f&#252;r Fehler abgearbeitet werden.
+
+
+
+
+Alternative
+ 
+Durch Setzen der  <Bold> Bereinigungseinstellungen </Bold>  k&#246;nnen viele Bereinigungen automatisch durchgef&#252;hrt werden (siehe weiter unten).
+
+<Warning>
+Es k&#246;nnen nur all jene Objekte bereinigt werden die den Filterkriterien, des in der Datei gesetzten Filters, entsprechen.
+</Warning>
+
+<Warning>
+K&#246;nnen Datenfehler nicht automatisch bereinigt werden, so werden sie im [Bereinigungsassistenten](../bereinigen/assistent)
+ aufgelistet und k&#246;nnen dort abgearbeitet werden.
+</Warning>
+
+
+### Details - Bereinigungseinstellungen
+Hier finden Sie weitere Einstellungen f&#252;r die Bereinigung:
+
+- <Bold> Aufl&#246;sung von Punkthaufen: </Bold>  Die hier gew&#228;hlte Option legt fest, welcher Punkt eines Haufens erhalten werden soll. 
+
+
+<Success>
+Betrifft den Punkt selbst, nicht seine Koordinaten, f&#252;r diese wird eine eigene Option gesetzt.
+
+</Success>
+
+<Success>
+Wenn Sie durch einen Import einen Punkt doppelt importiert haben, dann w&#228;hlen Sie &quot;Punkt mit h&#246;herer Punktnummer l&#246;schen&quot;. Haben Sie beispielsweise den Punkt 101 und A101 durch den Import in Ihrer Datei, wird mit dieser Einstellung der Punkt A101 entfernt.
+
+</Success>
+- <Bold> Punkt mit h&#246;herer Punktnummer l&#246;schen: </Bold>  Der Punkt mit der niedrigsten Punktnummer bleibt erhalten, die anderen werden gel&#246;scht.
+
+- <Bold> Punkt mit niedrigerer Punktnummer l&#246;schen: </Bold>  der Punkt mit der h&#246;chsten Punktnummer bleibt erhalten, alle anderen werden gel&#246;scht.
+
+- <Bold> Benutzerinteraktion </Bold> : Datenfehler werden in einem 
+[Bereinigungsassistenten](../bereinigen/assistent)
+ angezeigt und k&#246;nnen Fehler f&#252;r Fehler abgearbeitet werden.
+
+
+
+- <Bold> Optionen f&#252;r die Mittelung von Punktkoordinaten: </Bold>  Legt fest, welche Koordinaten der Punkt, welcher vom Haufen &#252;brig bleibt, bekommen soll.
+
+- <Bold> Keine Mittelung von Koordinaten: </Bold>  Der Punkt, der erhalten wird, beh&#228;lt auch seine Koordinaten
+
+- <Bold> Mittelung von allen Koordinaten: </Bold>  Neue Koordinaten werden als Mittelwert aller Punkte und Vertices im Punkthaufen berechnet
+
+- <Bold> Mittelung der Punktkoordinaten: </Bold>  Neue Koordinaten werden als Mittelwert aller Punkte (mit Punktnummern) und NICHT von Vertices berechnet. 
+
+
+
+- <Bold> Priorit&#228;teneinstellung: </Bold>  Legt fest, welche Priorit&#228;t Vertexpunkte und Punkte ohne Punktnummer bei der Bereinigung einnehmen.
+
+
+<Success>
+Wenn Sie Punkte ohne Punktnummer und Punkte mit Punktnummer &#252;bereinander liegen haben, dann w&#228;hlen Sie f&#252;r die Bereinigung beide Optionen aus.
+
+</Success>
+
+<Success>
+Eine &#220;berschreitung der H&#246;hentoleranz muss trotzdem durch den Benutzer aufgel&#246;st werden.
+
+</Success>
+
+
+
+
+<GeoDesigner>
+<Image>\img\grafik\bereinigen\PurgePointHeap2.png$PurgePointHeap2</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\bereinigen\GeoMapper.PurgePointHeap2.png$GeoMapper.PurgePointHeap2</Image>
+</GeoMapper>
+
+
+
+### Details - Bereinigungstoleranzen
+Auf dieser Einstellungsseite k&#246;nnen Sie die Toleranzen f&#252;r die H&#246;he und die Lage einstellen. Nach Klick auf den Button  <Border>Fertigstellen</Border>  wird die Bereinigung gestartet.
+
+<GeoDesigner>
+<Image>\img\grafik\bereinigen\PurgePointHeap.png$PurgePointHeap</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\bereinigen\GeoMapper.PurgePointHeap.png$GeoMapper.PurgePointHeap</Image>
+</GeoMapper>
+
+
+
+
+
+

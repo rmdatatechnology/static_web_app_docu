@@ -1,0 +1,125 @@
+---
+title: "Segmenti"
+page: true
+---
+## Segmenti di una polilinea incl. gli archi
+
+<Warning>
+Il prerequisito per un segmento &#232; che i vertici referenziati siano presenti nel file XML!
+</Warning>
+
+
+<Success>
+Quando pi&#249; polilinee o poligoni corrono lungo un medesimo segmento, quest&#39;ultimo &#232; necessario una sola volta nel file XML. La direzione del segmento non deve essere fornita espressamente in quanto &#232; determinata dalla sequenza dei segmenti nella polilinea risp. nel poligono.
+</Success>
+
+
+###  Struttura di un segmento di retta
+
+- <Bold> &lt;Segments&gt; </Bold>  Sezione di tutti i segmenti. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold> &lt;Segment Id=&quot;1&quot;&gt; </Bold>  Segmento con un ID univoco.
+
+- <Bold> &lt;StartVertexId&gt; </Bold>  Punto iniziale
+
+- <Bold> &lt;EndVertexId&gt; </Bold>  Punto finale
+
+
+
+- <Bold> &lt;/Segment&gt; </Bold>  Fine sezione
+
+
+
+- <Bold>  &lt;/Segments&gt; </Bold>  Fine sezione
+
+
+
+
+<Info>
+
+    &lt;Segments&gt;
+       &lt;Segment Id=&quot;805&quot;&gt;
+        &lt;StartVertexId&gt;802&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;804&lt;/EndVertexId&gt;
+      &lt;/Segment&gt;
+    &lt;/Segments&gt;
+</Info>
+
+
+###  Struttura di un arco con 3 punti
+
+- <Bold> &lt;Segments&gt; </Bold>  Sezione di tutti i segmenti. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold> &lt;Segment Id=&quot;1&quot;&gt; </Bold>  Segmento con un ID univoco.
+
+- <Bold> &lt;StartVertexId&gt; </Bold>  Punto iniziale
+
+- <Bold> &lt;EndVertexId&gt; </Bold>  Punto finale
+
+- <Bold> &lt;AdditionalVertexId&gt; </Bold>  3&#176; punto sul cerchio
+
+
+
+- <Bold> &lt;/Segment&gt; </Bold>  Fine sezione
+
+
+
+- <Bold>  &lt;/Segments&gt; </Bold>  Fine sezione
+
+
+
+
+<Info>
+
+    &lt;Segments&gt;
+      &lt;Segment Id=&quot;803&quot;&gt;
+        &lt;StartVertexId&gt;799&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;802&lt;/EndVertexId&gt;
+        &lt;AdditionalVertexId&gt;801&lt;/AdditionalVertexId&gt;
+      &lt;/Segment&gt;
+</Info>
+ 
+
+###  Struttura di un arco con il raggio
+
+- <Bold> &lt;Segments&gt; </Bold>  Sezione di tutti i segmenti. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold> &lt;Segment Id=&quot;1&quot;&gt; </Bold>  Segmento con un ID univoco.
+
+- <Bold> &lt;StartVertexId&gt; </Bold>  Punto iniziale
+
+- <Bold> &lt;EndVertexId&gt; </Bold>  Punto finale
+
+- <Bold> &lt;Bulge&gt; </Bold>  Bulge
+
+
+
+- <Bold> &lt;/Segment&gt; </Bold>  Fine sezione
+
+
+
+- <Bold>  &lt;/Segments&gt; </Bold>  Fine sezione
+
+
+
+
+<Success>
+Bulge = Freccia /  Semi-corda
+I valori negativi comportano un arco dal lato opposto.
+
+Bulge = 1: Corrisponde ad un semi-cerchio.
+
+<Image>\img\grafik\anhang\Bulge.png$Bulge</Image>
+</Success>
+
+
+<Info>
+    &lt;Segments&gt;
+      &lt;Segment Id=&quot;828&quot;&gt;
+        &lt;StartVertexId&gt;820&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;824&lt;/EndVertexId&gt;
+        &lt;Bulge&gt;-0.306691173853807&lt;/Bulge&gt;
+      &lt;/Segment&gt;
+    &lt;/Segments&gt;
+</Info>
+

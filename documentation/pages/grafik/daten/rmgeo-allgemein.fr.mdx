@@ -1,0 +1,41 @@
+---
+title: "Connexion rmGEO"
+page: true
+---
+## Une source de donn&#233;es rmGEO peut &#234;tre connect&#233;e de deux mani&#232;res.
+
+ <Placeholder>geodgm</Placeholder> 
+### Comparaison automatique
+La connexion de rmGEO avec  <Placeholder>product</Placeholder> est une connexion de base de donn&#233;es avec une relation 1:1. Cela signifit qu&#39;&#224; un projet, peut &#234;tre connect&#233;e juste une base de donn&#233;es rmGEO, et toutes les donn&#233;es (Points) sont pr&#233;sentes en m&#234;me temps dans rmGEO et aussi dans  <Placeholder>product</Placeholder>  
+
+Les points d&#39;autres sources de donn&#233;es rmGEO sont transf&#233;r&#233;s dans  <Placeholder>product</Placeholder> avec une propre interface d&#39;Import-Export.
+
+L&#39;enregistrement d&#39;un fichier  <Placeholder>product</Placeholder> connect&#233; avec rmGEO est exclusivement ex&#233;cut&#233; par l&#39;utilisateur: toutes les modifications sont m&#233;moris&#233;s autant dans rmGEO que dans  <Placeholder>product</Placeholder> seulement apr&#232;s l&#39;enregistrement. N&#233;anmoins rmGEO et  <Placeholder>product</Placeholder> ont toujours le m&#234;me contenu, car chaque op&#233;ration d&#39;&#233;dition est tout de suite tranf&#233;r&#233;e temporairement dans une copie de travail de la source originale de donn&#233;es rmGEO. Apr&#232;s l&#39;enregistrement, la source originale de donn&#233;es est &#233;cras&#233;e par la copie de travail.
+
+Toutes les donn&#233;es sont modifiables autant dans  <Placeholder>product</Placeholder> que dans rmGEO: lors d&#39;un passage &#224; rmGEO le fichier  <Placeholder>product</Placeholder> est verrouill&#233; en &#233;criture, et rmGEO est ouvert comme copie de travail. Si on revient &#224;  <Placeholder>product</Placeholder> , rmGEO est ferm&#233;e et toutes les modifications sont imm&#233;diatement enregistr&#233;es.
+
+Aussi quand les donn&#233;es d&#39;un projet ferm&#233; sont modifi&#233;es dans rmGEO, &#224; la prochaine ouverture du projet elles sont mises &#224; jour par la fonction de v&#233;rification de consistance. 
+
+Lors du d&#233;marrage d&#39;une connexion ou de l&#39;ouverture d&#39;un projet connect&#233; avec rmGEO la consistance est v&#233;rifi&#233;e et cr&#233;&#233;e des deux cot&#233;s - La priorit&#233; en cas de collision de points, peut &#234;tre attribu&#233;e pour chaque points autant &#224; rmGEO que &#224;  <Placeholder>product</Placeholder>  Il FAUT toujours donner une priorit&#233;, il n&#39;est donc pas possible de comparer des simples points. La comparaison se fait toujours pour le point complet et ses attributs, diff&#233;rentes priorit&#233;s pour diff&#233;rents attributs du m&#234;me point ne sont pas permises.
+
+La consistance est quand-m&#234;me v&#233;rifi&#233;e automatiquement, quand des param&#232;tres sont modifi&#233;s dans le Gestionnaire de connexions, ou quand des donn&#233;es sont recharg&#233;es depuis le projet.
+
+Les attributs suivants sont compar&#233;s dans tous les cas:  Coordonn&#233;es planim&#233;triques, Altitudes, Type de point, Code point fixe, Code mesure.
+
+La comparaison pour d&#39;autres attributs peut &#234;tre configur&#233;e par l&#39;utilisateur: tous les attributs de rmGEO, qui dans  <Placeholder>product</Placeholder> ne sont pas d&#233;finis comme Attributs de classe, ne sont pas transf&#233;r&#233;s dans  <Placeholder>product</Placeholder> que si l&#39;utilisateur le d&#233;finit. Les attributs de  <Placeholder>product</Placeholder>  sont donc transf&#233;r&#233;s (sur demande) vers rmGEO, si ils sont aussi cr&#233;&#233;s dans rmGEO.
+
+Si dans  <Placeholder>product</Placeholder> le versionnement est activ&#233;, les points sont compar&#233;s de la mani&#232;re suivante:
+Les nouveaux points depuis rmGEO, selon le Gestionnaire de connexions, sont toujours transf&#233;r&#233;s dans  <Placeholder>product</Placeholder> dans la version d&#233;finie courante.
+Les points versionn&#233;s depuis  <Placeholder>product</Placeholder> sont transf&#233;r&#233;s dans rmGEO dans la version la plus haute. La version la plus haute peut &#234;tre d&#233;class&#233;e dans le Gestionnaire de connexions, de mani&#232;re qu&#39;aussi les points ayant une version plus basse, soient trans&#233;r&#233;s dans rmGEO.
+
+### Comparaison manuelle
+Ici par le [Gestionnaire de connexions](../daten/rmgeo-verbindungsmanager)
+ une attribution &#224; une source de donn&#233;es rmGEO est cr&#233;&#233;e.
+Ici la comparaison ne se d&#233;clenche pas automatiquement lors d&#39;une sauvegarde ou d&#39;une ouverture d&#39;un projet, mais elle est d&#233;marr&#233;e par 3 commandes manuelles.
+
+[Comparaison avec source de donn&#233;es rmGEO](../daten/abgleich-rmgeo4)
+
+[Exportation vers une source de donn&#233;es rmGEO](../daten/export-rmgeo4)
+
+[Importation depuis une source de donn&#233;es rmGEO](../daten/import-rmgeo4)
+

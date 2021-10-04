@@ -1,0 +1,57 @@
+---
+title: "Objekte über Verschneidung selektieren"
+page: true
+---
+## Objekte &#252;ber Verschnittfunktionen selektieren
+
+Der Befehl wird &#252;ber das  <Menu> Menu: [Analyse - Objekte über Verschneidung selektieren] </Menu>  aufgerufen. Es werden die vom Anwender gew&#228;hlten &quot;Ausgangsobjekte&quot; (Objekte im Grafikfenster: Punkte, Texte, Linienz&#252;ge, Fl&#228;chen) mit einer oder mehreren Featureklassen (&quot;Verschnittebene&quot;) verschnitten.
+
+Als Ergebnis des Verschnittes werden jene Objekte der Verschnittebene selektiert, welche vom Verschnitt mit den Ausgangsobjekten betroffen sind.
+
+Sind vor dem Befehlsaufruf bereist g&#252;ltige Ausgangsobjekte in der Grafik selektiert, wird der Verschnitt mit diesen Objekten durchgef&#252;hrt. Es werden dann sofort die gew&#252;nschten Featureklassen der Verschnittebene selektiert.
+
+
+<table>
+<tr><th>Ausgangsobjekte</th>
+<th>Verschnittebene</th>
+<th>Ergebnis</th>
+</tr>
+<tr><td>Punkte, Texte</td>
+<td>Punkte, Texte</td>
+<td>Es werden alle Punkte oder Texte der Verschnittebene selektiert, auf deren Einsetzpunkten gew&#228;hlte Punkte oder Texte der Ausgangsobjekte liegen.</td>
+</tr>
+<tr><td></td>
+<td>Linienz&#252;ge</td>
+<td>Es werden alle Linienz&#252;ge der Verschnittebene selektiert, auf denen die Einsetzpunkte von Punkten oder Texten der Ausgangsobjekte liegen.</td>
+</tr>
+<tr><td></td>
+<td>Fl&#228;chen</td>
+<td>Es werden alle Fl&#228;chen der Verschnittebene selektiert, in oder auf deren Umgrenzung die Einsetzpunkte von Punkten oder Texten der Ausgangsobjekte liegen.</td>
+</tr>
+<tr><td>Linienz&#252;ge</td>
+<td>Punkte, Texte</td>
+<td>Es werden alle Punkte oder Texte der Verschnittebene selektiert, deren Einsetzpunkte auf einer Linie der Ausgangsobjekte liegen.</td>
+</tr>
+<tr><td></td>
+<td>Linienz&#252;ge</td>
+<td>Es werden alle Linienz&#252;ge der Verschnittebene selektiert, die von Linienz&#252;gen der Ausgagnsobjekte geschnitten oder ber&#252;hrt werden.</td>
+</tr>
+<tr><td></td>
+<td>Fl&#228;chen</td>
+<td>Es werden alle Fl&#228;chen der Verschnittebene selektiert, die von ein oder mehreren Linienz&#252;gen der Ausgangsobjekte geschnitten oder ber&#252;hrt werden, oder in welchen eine oder mehrere Linienz&#252;ge der Ausgangsobjekte liegen. </td>
+</tr>
+<tr><td>Fl&#228;chen</td>
+<td>Punkte, Texte</td>
+<td>Es werden alle Punkte oder Texte der Verschnittebene selektiert, deren Einsetzpunkte innerhalb oder auf der Umgrenzung einer Fl&#228;che der Ausgangsobjekte liegen.</td>
+</tr>
+<tr><td></td>
+<td>Linienz&#252;ge</td>
+<td>Es werden alle Linienz&#252;ge der Verschnittebene selektiert, die von ein oder mehreren Fl&#228;chen der Ausgangsobjekte geschnitten oder ber&#252;hrt werden, oder die innerhalb einer Fl&#228;che der Ausgangsobjekte liegen.</td>
+</tr>
+<tr><td></td>
+<td>Fl&#228;chen</td>
+<td>Es werden alle Fl&#228;chen der Verschnittebene selektiert, die von Fl&#228;chen der Ausgangsobjekte geschnitten oder ber&#252;hrt werden, oder in welchen eine oder mehrere Fl&#228;chen der Ausgangsobjekte liegen, oder die in einer Fl&#228;che der Ausgangsobjekte liegen. </td>
+</tr>
+</table>
+
+

@@ -1,0 +1,38 @@
+---
+title: "Falllinienermittlung"
+page: true
+---
+## Ermitteln Sie ausgehend von einem Punkt die Linie mit dem gr&#246;&#223;ten Gef&#228;lle
+<GeoMapper> <Menu> Menu: [Geländemodell / Falllinie] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Geländemodell / Falllinie] </Menu> 
+ <Menu> Cmd: [slopelinenew] </Menu> </GeoDesigner>
+
+
+1. Rufen Sie den Befehl auf.
+
+
+<Warning>
+Stellen Sie sicher, dass in der Datei ein 
+ <Italic> [aktueller Linienzugtyp](../benutzeroberflaeche/statusleiste4)
+ </Italic>  eingestellt ist.
+
+Diesen ben&#246;tigt 
+ <Placeholder>product</Placeholder>  um die entsprechenden Ergebnislinien zu generieren.
+
+</Warning>
+2. Zeigen Sie den gew&#252;nschten Startpunkt der Fallllinie per Mausklick in der Grafik.
+
+3. <Placeholder>product</Placeholder> berechnet die Geometrie der Fallinie im aktiven Gel&#228;ndemodell und f&#252;gt einen Linienzug des aktuellen Linientyps ein.
+
+4. Wiederholen Sie das Zeigen beliebig oder w&#228;hlen Sie die Option <Menu>Abbrechen</Menu> ..
+
+
+
+
+<Warning>
+Die Berechnung erfolgt jeweils auf Basis des eingestellten [aktiven Gel&#228;ndemodell](../benutzeroberflaeche/multifunktionsleiste)
+s. Dieses ist nicht unbedingt jenes, das in der Grafik gerade sichtbar ist. Achten Sie deshalb auf diese Einstellung wenn Sie den Befehl verwenden.
+</Warning>
+
+<Success>
+Sie k&#246;nnen nacheinander beliebig viele Startpunkte f&#252;r die Berechnung w&#228;hlen.  <Placeholder>product</Placeholder> selektiert das jeweils letzte Ergebnis, sodass Sie den entstandenen Linienzug umgehend weiter bearbeiten k&#246;nnen.
+</Success>

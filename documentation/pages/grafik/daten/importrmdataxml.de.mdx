@@ -1,0 +1,53 @@
+---
+title: "Import rmDATA XML"
+page: true
+---
+## Daten aus rmDATA XML Dateien importieren
+
+Daten aus rmDATA XML Dateien werden &#252;ber den Befehl  <Menu>Daten importieren</Menu>  in der Werkzeugleiste von  <Placeholder>fullproduct</Placeholder> oder &#252;ber das  <Menu> Menu: [Daten - Daten importieren] </Menu>  in eine neue oder bestehende rmDATA Geodatabase eingef&#252;gt.
+Im Editiermodus wird der Import &#252;ber das  <Menu> Menu: [Datenbank - Daten importieren] </Menu>  aufgerufen und es wird in die zum Bearbeiten ge&#246;ffnete Geodatabase imortiert.
+
+Nach Befehlsaufruf wird im Register  <Border>Typauswahl</Border>  die Option 
+ <Border>Daten aus rmDATA XML Dateien importieren</Border> 
+gew&#228;hlt.<Image>\img\grafik\daten\ImportrmDATAXMLTypauswahl.png$ImportrmDATAXMLTypauswahl</Image>
+
+Danach werden im Register  <Border>Dateiauswahl</Border>  die zu importierenden Dateien gew&#228;hlt.
+Weiters kann das Koordinatensystem f&#252;r die Koordinaten der Quelldateien angegeben werden. Je nach Koordinatensystem der Geodatabase werden die Koordinaten beim Import transformiert.<Image>\img\grafik\daten\ImportrmDATAXMLdateiauswahl.png$ImportrmDATAXMLdateiauswahl</Image>
+
+Im Register  <Border>Geodatabase-Auswahl</Border>  wird festgelegt, in welche Geodatabase die Dateien importiert werden sollen. Die Dateien k&#246;nnen in eine neue oder bestehende Geodatabase importiert werden:
+
+- [in neue Geodatabase importieren](../datenquellenmanager/neuegeodbanlegen)
+
+- in bestehende Geodatabase importieren: Eine der im aktuellen Geodokument eingebundenen Geodatabase-Dateien k&#246;nnen in der Drop-down-Liste ausgew&#228;hlt werden oder es kann eine existierende Geodatabase &#252;ber den Datei-&#214;ffnen-Dialog ausgew&#228;hlt werden.
+
+
+
+<Success>
+Im Editiermodus entf&#228;llt das Register, da immer in die zum Bearbeiten ge&#246;ffnete Geodatabase importiert wird.
+</Success><Image>\img\grafik\daten\ImportrmDATAXMLgeodatabaseauswahl.png$ImportrmDATAXMLgeodatabaseauswahl</Image>
+
+Im Register  <Border>Mapping</Border>  kann eine bestehende Konvertierungstabelle f&#252;r den Import ausgew&#228;hlt werden oder es kann eine neue Konvertierungstabelle &#252;ber den [Assistent ... ](../daten/importrmdataxml2)
+ f&#252;r den Import definiert werden.
+<Success>
+Wird keine Mapping-Datei angegeben oder kein Mapping definiert, werden die Objekte der rmDATA XML Datei mit ihrer ursp&#252;nglichen Definition in die Geodatabase importiert.
+</Success><Image>\img\grafik\daten\ImportrmDATAXMLMapping.png$ImportrmDATAXMLMapping</Image>
+
+In den  <Border>Einstellungen</Border>  werden weitere Optionen f&#252;r den Import festgelegt:
+
+- Versionierung aus Datei &#252;bernehmen: Gibt an, ob Versionierungsinformationen aus den Quelldateien &#252;bernommen werden sollen.
+
+- Konfliktaufl&#246;sung: Punkt- und Fl&#228;chenbezeichnungen m&#252;ssen eindeutig sein. F&#252;r die Konfliktaufl&#246;sung stehen folgende Optionen zur Verf&#252;gung:
+
+- Vorrang bestehender Punkt: Gleichnamige Punkte werden nicht erneut importiert.
+
+- Umbenennen: Gleichnamige Punkte aus der Import-Datei werden gem&#228;&#223; den Pr&#228;fix/Suffix-Einstellungen umbenannt und importiert.
+
+- Interaktiv l&#246;sen: Es wird der Punkt-Kollisions-Dialog angezeigt, der Anwender entscheidet, ab der neue Punkt &#252;bernommen werden soll.
+
+- Vorrang vorhandener Punkt: Gleichnamige Punkte werden importiert, die entsprechenden bestehenden Punkte werden gel&#246;scht.<Image>\img\grafik\daten\ImportrmDATAXMLEinstellungen.png$ImportrmDATAXMLEinstellungen</Image>
+
+Nach  <Border>Fertigstellen</Border>  werden die Daten importiert, ein Transferstatus wird angezeigt.
+
+<Success>
+Hinweis zur Konvertierung von Attributtypen: Grunds&#228;tzlich ist in der importierten XML-Datei immer auch der Attributtyp (String, Integer, Double,...) angegeben. Wird kein Mapping verwendet, werden Attribute immer mit dem in der XML-Datei angegebenen Datentyp in die GeoDB importiert, unabh&#228;ngig davon, welcher Datentyp in der Konfiguration der GeoDB definiert wurde. Soll ein Attribut zu jenem in der Konfiguration angegebenen Datentyp konvertiert werden (z. B.: soll eine als String vorliegende Zahl nach Double konvertiert werden), muss beim Import ein Mapping verwendet werden und der Objekttyp, dessen Attributtypen konvertiert werden sollen, muss in der Mapping-Datei angegeben werden. 
+</Success>

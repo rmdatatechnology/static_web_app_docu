@@ -1,0 +1,170 @@
+---
+title: "Filtern"
+page: true
+---
+## Nutzen Sie verschiedene Varianten um die  passenden Objekte zu bearbeiten.
+
+### Filter nach Objekttypen
+ <Bold>  <Italic> .WhereObjectType(filter) </Italic>  </Bold> 
+
+```
+objekteNachAuswahl = list(Application.IO.GetObjects(&#39;Objekte w&#228;hlen&#39;).Value.WhereObjectType(&#39;Messpunkt&#39;))
+print len(objekteNachAuswahl)
+
+objekteNachAuswahl = list(Application.IO.GetObjects(&#39;Objekte w&#228;hlen&#39;).Value.WhereObjectType([&#39;Messpunkt&#39;, &#39;Grundst&#252;cksgrenze&#39;]))
+print len(objekteNachAuswahl)
+
+```
+
+
+### Filter nach Id
+ <Bold>  <Italic> .WhereId(filter) </Italic>  </Bold> 
+
+```
+filterIds =[579, 1706, 2435, 2503]
+for i in Application.Project.GetObjects().WhereId(filterIds):
+    print i.ObjectType  
+```
+
+
+### Filter nach Version
+ <Bold>  <Italic> .WhereVersion(versionName) </Italic>  </Bold> 
+
+```
+
+for i in Application.Project.GetObjects().WhereVersion(&quot;Alter Stand&quot;):
+    print i.ObjectType  
+```
+
+
+<Success>
+Der Name der Version muss exakt &#252;bereinstimmen, d.h. auch die Gro&#223;- und Kleinschreibung wird ber&#252;cksichtigt.
+</Success>
+
+
+### Filter nach Kartenfenster
+Erm&#246;glicht die Filterung einer Objektmenge &#252;ber die Angabe eines Kartenbereiches.
+
+ <Bold>  <Italic> .InWindow(filter) </Italic>  </Bold> 
+
+ <Bold>  <Italic> filter </Italic>  </Bold>  ... rechteckiger Filter-Bereich, angegeben durch 2 Punkte
+
+```
+filterWindow = [(20720, 285850), (20870, 285770)]
+for i in Application.Project.GetObjects().InWindow(filterWindow):
+    print i.ObjectType 
+```
+
+
+### Filter nach Polygon
+Erm&#246;glicht die Filterung einer Objektmenge &#252;ber die Angabe eines Polygon-Filters.
+
+ <Bold>  <Italic> .InPolygon(filter) </Italic>  </Bold> 
+
+ <Bold>  <Italic> filter </Italic>  </Bold>  ... polygonaler Filter-Breich, angegeben durch eine Fl&#228;chen-Geometrie (siehe Auch Beispiele beim Befehl unter  <Italic> Commands.AreaNew </Italic> )
+
+```
+filterArea = [(20726.8157500282, 285791.52045008738 ), (20732.120071317262, 285820.25218531687 ), (20754.221389676637, 285840.14338252146 ), (20776.32273855359, 285853.84620997508 ), (20816.105148221559, 285863.57080409129 ), (20853.235366727418, 285867.54904505808 ), (20884.619277860231, 285857.38243434031 ), (20924.843704129762, 285835.28109309275 ), (20916.445205594606, 285814.50583979685 ), (20892.575759793825, 285782.23788783152 ), (20859.865768338746, 285757.48439356883 ), (20804.612441922731, 285771.6292452534 ), (20787.373397733278, 285748.64386317332 ), (20744.496810819215, 285755.27425715525 ), (20726.8157500282, 285791.52045008738 )]
+for i in Application.Project.GetObjects().InPolygon(filterArea):
+    print i.ObjectType 
+```
+
+
+```
+filterAreaExterior = ([(20726.8157500282, 285791.52045008738 ), (20732.120071317262, 285820.25218531687 ), (20754.221389676637, 285840.14338252146 ), (20776.32273855359, 285853.84620997508 ), (20816.105148221559, 285863.57080409129 ), (20853.235366727418, 285867.54904505808 ), (20884.619277860231, 285857.38243434031 ), (20924.843704129762, 285835.28109309275 ), (20916.445205594606, 285814.50583979685 ), (20892.575759793825, 285782.23788783152 ), (20859.865768338746, 285757.48439356883 ), (20804.612441922731, 285771.6292452534 ), (20787.373397733278, 285748.64386317332 ), (20744.496810819215, 285755.27425715525 ), (20726.8157500282, 285791.52045008738 )], None)
+for i in Application.Project.GetObjects().InPolygon(filterAreaExterior):
+    print i.ObjectType
+```
+
+
+### Kombination von Filtern
+Filter-Aufrufe auf einem Iterations-Objekt liefern wieder ein Iterations-Objekt zur&#252;ck, sodass eine beliebiege Verschachtelung von Filter-Abfragen angegeben werden kann:
+
+```
+filterIds = [579, 1706, 2435, 2503]
+for i in Application.Project.GetObjects().WhereId(filterIds).WhereObjectClass([&#39;Point&#39;]):
+    print i.ObjectType  
+```
+
+
+```
+filterWindow = [(20720, 285850), (20870, 285770)]
+for i in Application.Project.GetObjects().InWindow(filterWindow).WhereObjectType(&#39;Messpunkt&#39;):
+    print i.Id
+```
+
+
+
+### Filter nach Attributwerten
+
+```
+
+#Syntax: WhereAttributeValue(attributename, operatorName, compareValue)
+#
+# Filtert alle Objekte die ein Attribut mit den Namen AttributeName haben und dessen Wert exakt 10 ist
+for i in Application.Project.GetObjects().WhereAttributeValue(&#39;AttributeName&#39;,&#39;Equal&#39;,10)   :
+    print i.ObjectType  
+
+```
+
+
+<Success>
+Es stehen folgende Operatoren zur Verf&#252;gung:
+
+-  Equal - Gleich
+
+
+-  NotEqual - Ungleich
+
+
+-  LessThan - Kleiner als
+
+
+-  GreaterThan - Gr&#246;&#223;er als
+
+
+-  LessThanOrEqual - Kleiner gleich
+
+
+-  GreaterThanOrEqual - Gr&#246;&#223;er gleich
+
+
+-  Like - Wie/Enth&#228;lt
+
+
+-  Null - Attribut ist nicht vorhanden bzw. leer
+
+
+-  NotNull - Attribut ist vorhanden und nicht leer
+
+
+-  NotLike - Nicht wie / Enth&#228;lt nicht
+
+
+
+
+</Success>
+
+
+### Kombinieren von Filtern
+Durch Aneinanderreihen von WhereAttributeValue lassen sich UND Verkn&#252;pfungen realisieren. F&#252;r ODER Verkn&#252;pfungen kann die Operation Union verwendet werden.
+
+```
+
+#Syntax: Union(filterIterator2) - ODER Verkn&#252;pfung
+#
+# Filtert alle Objekte deren Attribut TestAtt = 18 ist und kombiniert das Ergebnis mit allen Objekten deren Attribut TestStringAtt = Testwert ist.
+enum1 = Application.Project.GetObjects().WhereAttributeValue(&#39;TestAtt&#39;,&#39;Equal&#39;,18)            
+enum2 = enum1.Union(Application.Project.GetObjects().WhereAttributeValue(&#39;TestStringAtt&#39;,&#39;Equal&#39;,&#39;Testwert&#39;))
+ergebnisliste = list(enum2)
+
+#Syntax: Union(filterIterator2) - UND Verkn&#252;pfung
+#
+# Filtert alle Objekte deren Attribut TestAtt = 18 ist und deren Attribut TestStringAtt = Testwert ist.
+enum1 = Application.Project.GetObjects().WhereAttributeValue(&#39;TestAtt&#39;,&#39;Equal&#39;,18).WhereAttributeValue(&#39;TestStringAtt&#39;,&#39;Equal&#39;,&#39;Testwert&#39;)
+ergebnisliste = list(enum1)
+
+
+```
+
+

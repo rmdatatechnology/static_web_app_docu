@@ -1,0 +1,62 @@
+---
+title: "Import DKM-DXF"
+page: true
+---
+## Katastralmappe aus DKM-DXF Daten importieren
+
+<Success>
+Der Befehl ist nur in der Fachschale &quot;Grundst&#252;ckskataster und Adressen (AT)&quot; aktiv.
+</Success>
+
+DKM-DXF-Daten werden &#252;ber den Befehl  <Menu>Daten importieren</Menu>  in der Werkzeugleiste von  <Placeholder>fullproduct</Placeholder> oder &#252;ber das  <Menu> Menu: [Daten - Daten importieren] </Menu>  eingef&#252;gt.
+
+Die DXF-Dateien werden in eine rmDATA Geodatabase importiert, diese wird danach in das aktuelle Geodokument eingebunden.
+
+Nach Befehlsaufruf wird im Register  <Border>Typauswahl</Border>  die Option  <Border>Katastralmappe aus DKM-DXF (VermV2010) Daten importieren</Border>  bzw. bei alten DKM-Daten die Option  <Border>Katastralmappe aus DKM-DXF (VermV1994) Daten importieren</Border>  gew&#228;hlt.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFtypauswahl.png$ImportDKMDXFtypauswahl</Image>
+
+Danach werden im Register  <Border>Dateiauswahl</Border>  die zu importierenden DXF-Dateien gew&#228;hlt<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFdateiauswahl.png$ImportDKMDXFdateiauswahl</Image>
+
+Im Register  <Border>Geodatabase-Auswahl</Border>  wird festgelegt, in welche Geodatabase die Dateien importiert werden sollen.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFGeoDBAuswahl.png$ImportDKMDXFGeoDBAuswahl</Image>
+
+In den  <Border>Einstellungen</Border>  wird festgelegt
+
+- ob Nutzungsfl&#228;chen berechnet werden sollen
+
+- ob bestehende DKM-Daten aus der Datenbank gel&#246;scht werden sollen. Diese Option wirkt sich nur aus, wenn in einen bestehende Datenbank importiert wird.
+
+
+
+
+<Warning>
+Werden Daten in eine bestehende Datenbank importiert, und wurde das Datenformat ge&#228;ndert (alte Daten sind im Format VermV 1994, neue Daten sind im Format VermV 2010), m&#252;ssen alte Daten aus der Datenbank immer gel&#246;scht werden!
+</Warning><Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFeinstellungen.png$ImportDKMDXFeinstellungen</Image>
+
+Nach  <Border>Fertigstellen</Border>  werden die Daten importiert, ein Transferstatus wird angezeigt.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFtransferstatus1.png$ImportDKMDXFtransferstatus1</Image><Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFtransferstatus2.png$ImportDKMDXFtransferstatus2</Image>
+
+In den  <Border>Einstellungen</Border>  werden nocheinnmal die importierten Objektklassen angezeigt:<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFeinstellungen2.png$ImportDKMDXFeinstellungen2</Image>
+
+In den  <Border>erweiterten Einstellungen</Border>  kann die Darstellung und der Defaultma&#223;stab festgelegt werden:<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportDKMDXFeinstellungenerweitert.png$ImportDKMDXFeinstellungenerweitert</Image>
+
+Der Importvorgang ist nun beendet und die Geodatabase wird ins Projekt eingebunden.
+
+<Success>
+Wenn die Punktnummern der Grenzpunkte der DKM in der Grafik dargestellt werden sollen, kann f&#252;r den Import eine eigene Konfiguration verwendet werden. &#214;ffnen Sie im Windows-Explorer den Ordner  <Menu>C:\ProgramData\rmDATA\GeoDesktop\Configurations\</Menu> . Benennen Sie folgende Dateien um:
+
+- F&#252;r DKM-Daten nach VermV2010:
+
+
+- <Menu>DKM_VermV2010.config</Menu>  nach <Menu>DKM_VermV2010_ohne-Punktnummern.config</Menu> 
+- <Menu>DKM_VermV2010_mit-Punktnummern.config</Menu>  nach <Menu>DKM_VermV2010.config</Menu> 
+
+
+- F&#252;r &#228;ltere DKM-Daten: 
+
+
+- <Menu>DKM.config</Menu>  nach <Menu>DKM_ohne-Punktnummern.config</Menu> 
+- <Menu>DKM_mit-Punktnummern.config</Menu>  nach <Menu>DKM.config</Menu> 
+
+
+
+
+Starten Sie danach den DKM-Import neu.
+</Success>

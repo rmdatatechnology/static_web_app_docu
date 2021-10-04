@@ -1,0 +1,35 @@
+---
+title: "Objekt direkt über ID lesen"
+page: true
+---
+## Einzeln identifiziertes Geodatenbank-Objekt oder Geometriedatensatz auslesen.
+
+Mit dem Aufruf  <Bold>  <Italic> Application.Project.WhereId(objectId) </Italic>  </Bold>  k&#246;nnen Sie direkt auf ein Objekt oder dessen Topologie lesend zugreifen.
+Hierf&#252;r muss im Skript die eindeutige, numerische Objekt-ID bekannt sein.
+
+Das folgende Beispiel gibt die Geometrien der einzelnen Segmente der neu erzeugten Mauer aus:
+
+```
+segmente=Application.Project.LinestringNew(&#39;Mauer&#39;, [(0,0),(10,10),(20,10)]).Object.Topology.SegmentTopology
+for item in segmente.split(&#39;,&#39;):
+    print item,&#39;:&#39;,Application.Project.WhereId(int(item[1:])) #Use just numeric part of &#39;S[num]&#39;
+
+```
+
+Ergibt die Ausgabe
+<Success>
+ -- Starte Skript 15.06.2020 15:34:41 --
+ S3 : [(0.0, 0.0, None, None), (10.0, 10.0, None, None)]
+ S5 : [(10.0, 10.0, None, None), (20.0, 10.0, None, None)]
+ -- Skript beendet 15.06.2020 15:34:45 --
+</Success>
+
+
+<Warning>
+Die Funktion  <Bold> Application.Project.WhereId(..) </Bold>  unterscheidet sich grundlegend von der gleichnamigen [Filtermethode](../schnittstellen/tipps7)
+, indem sie nur ein Einzelobjekt oder  <Italic> None </Italic>  anstelle des beim Filter &#252;blichen Iterators zur&#252;ckliefern kann. Hingegen ist es hiermit m&#246;glich, auch Geometriedatens&#228;tze direkt auszulesen, was beim Filter nicht m&#246;glich ist. 
+</Warning>
+
+<Success>
+Handelt es sich bei den untersuchten Geometrien um einen Segment oder einen St&#252;tzpunkt (Vertex), dann kann die  <Italic> ID </Italic>  auch mit f&#252;hrendem  <Bold> S </Bold>  bzw.  <Bold> V </Bold>  angegeben werden, z. B.  <Bold> V1 </Bold> ,  <Bold> S3 </Bold>  usw. Dies stellt lediglich eine Vereinfachung f&#252;r den Fall dar, dass der Identizierer direkt aus den Funktionen der  <Italic> Topology </Italic> -Schnittstelle stammt und ist nicht zwingend erforderlich.
+</Success>

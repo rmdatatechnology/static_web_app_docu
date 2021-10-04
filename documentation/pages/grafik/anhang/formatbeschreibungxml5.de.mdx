@@ -1,0 +1,67 @@
+---
+title: "Punkte"
+page: true
+---
+## Einf&#252;gen eines Punkts
+
+<Warning>
+Voraussetzung f&#252;r einen Punkt ist, dass die referenzierten Koordinaten und Punktnamen in der XML-Datei vorhanden sind!
+</Warning>
+
+
+###  Aufbau der Sektion Punkte
+
+- <Bold> &lt;Points&gt; </Bold>  Sektion aller Punkte. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>      &lt;Point  Id=&quot;100&quot;&gt; </Bold>  Punkt mit einer eindeutiger ID
+
+- <Bold>      &lt;VertexId&gt;99&lt;/VertexId&gt; </Bold> Referenz auf Koordinaten. Die Sektion darf nur 1 mal vorkommen.
+
+- <Bold>         &lt;PointLabelId&gt;98&lt;/PointLabelId&gt; </Bold> Referenz auf Punktnamen. Die Sektion darf nur 1 mal vorkommen. Wenn der Punkt keinen Punktnamen hat, dann wird der Wert 0 angegeben.
+
+- <Bold> &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+- <Bold>           &lt;Attribute Name=&quot;Baumart&quot; Type=&quot;System.String&quot; Value=&quot;Esche&quot; /&gt; </Bold>  Name des Attributs, Typangabe und Wert. Die Sektion kann &#246;fters wiederholt werden.
+
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Ende der Sektion
+
+- <Bold>   &lt;DisplayInformation /&gt; </Bold>  (Optional) Angabe einer &#196;nderung der grafischen Darstellung (siehe weiter unten)
+
+- <Bold> &lt;ObjectType&gt;Laubbaum&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps
+
+
+
+- <Bold>       &lt;/Point&gt; </Bold> 
+
+
+- <Bold>    &lt;/Points&gt; </Bold> 
+
+
+
+<Success>
+Falls in der XML-Datei Attribute angegeben sind, die nicht konfiguriert wurden, werden diese dennoch dem Objekt angef&#252;gt.
+</Success>
+
+<Success>
+Falls in der XML-Datei ein Objekttyp vorhanden ist, der nicht konfiguration wurde, dann das Objekt dennoch importiert. Je nach Einstellung werden Objekte mit unbekannten Typ in Magenta dargestellt oder ausgeblendet. (Siehe Men&#252; Datei - Datei-Einstellungen)
+</Success>
+
+
+<Info>
+    &lt;Points&gt;
+      &lt;Point Id=&quot;100&quot;&gt;
+        &lt;VertexId&gt;99&lt;/VertexId&gt;
+        &lt;PointLabelId&gt;98&lt;/PointLabelId&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Kronendurchmesser&quot; Type=&quot;System.String&quot; Value=&quot;10.700&quot; /&gt;
+          &lt;Attribute Name=&quot;Stammdurchmesser&quot; Type=&quot;System.String&quot; Value=&quot;0.800&quot; /&gt;
+          &lt;Attribute Name=&quot;Baumart&quot; Type=&quot;System.String&quot; Value=&quot;Esche&quot; /&gt;
+          &lt;Attribute Name=&quot;Baumh&#246;he&quot; Type=&quot;System.String&quot; Value=&quot;&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;ObjectType&gt;Laubbaum&lt;/ObjectType&gt;
+      &lt;/Point&gt;
+    &lt;/Points&gt;
+</Info>
+

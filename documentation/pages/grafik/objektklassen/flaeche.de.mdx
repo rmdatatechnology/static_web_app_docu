@@ -1,0 +1,38 @@
+---
+title: "Fläche"
+page: true
+---
+## Beschreibung der Objektklasse  <Bold> Fl&#228;che </Bold> 
+<GeoDesigner>
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+## Fl&#228;che
+Eine Fl&#228;che besteht aus einem oder mehreren Einsetzpunkten. Eine Fl&#228;che kann einen Fl&#228;chennamen besitzen, der innerhalb des Projektes eindeutig sein muss. Falls es mehrere Einsetzpunkte gibt, so besitzen diese den selben Fl&#228;chennamen (die verschiendenen Einsetzpunkte geh&#246;ren zu genau einem Fl&#228;chenobjekt).
+
+## Eigenschaften einer Fl&#228;che
+ <Bold> Fl&#228;chenname: </Bold>  Der Fl&#228;chenname besteht aus 3 Teilen: Die Region, der Name und der Subname. Eine Fl&#228;che kann, muss aber keinen Namen haben. Wenn ein Name eingegeben wird dann muss dieser Name im Projekt eindeutig sein.
+
+ <Bold> Geometrische Informationen: </Bold>  Eine Fl&#228;che besitzt, sofern sie eine g&#252;ltige Begrenzung hat verschiedene zus&#228;tzliche Information wie Umfang und Fl&#228;chenwert.
+
+### Arten von Fl&#228;chen
+Es gibt 2 verschiedene Arten von Fl&#228;chen:
+
+- <Bold> Freie Fl&#228;chen: </Bold>  Beim Einf&#252;gen einer Freien Fl&#228;che zeichnet man in der Grafik die Umfahrungslinie. Je nach Konfiguration wird die Fl&#228;che dann mit einer Schraffur ausgef&#252;llt. F&#252;gt man eine Freie Fl&#228;che mittels Einsetzpunkt ein, dann werden die umgrenzenden Linienz&#252;ge als Umfahrung herangezogen (unabh&#228;ngig von einer Objektgruppe).
+
+
+
+
+
+- <Bold> Referenzierende Fl&#228;chen: </Bold>  Referenzierende Fl&#228;chen werden nur mittels Einf&#252;gepunkt in der Grafik eingesetzt. Bei der Berechnung der Fl&#228;che werden die umgrenzenden Linienz&#252;ge gesucht, die in einer entsprechenden Objektgruppe liegen. Damit werden Linienz&#252;ge anderer Objektgruppen bei der Berechnung nicht ber&#252;cksichtigt.
+
+
+<Info>
+Fl&#228;che &quot;Grundst&#252;cksnummer&quot; sucht nach Linienz&#252;gen der Objektgruppe &quot;Grundst&#252;cksgrenze&quot;. Wenn im Grundst&#252;ck ein Haus steht, dann wird die Grundfl&#228;che des Hauses nicht ausgespart.
+
+</Info>
+
+<Success>
+Wenn ein Zwischenpunkt einer berechnete, Referenzierenden Fl&#228;che ver&#228;ndert wird, dann wird die Fl&#228;che ung&#252;ltig. Sie ist dann auch mit Klick in die Fl&#228;che nicht mehr ausw&#228;hlbar, daf&#252;r muss man auf die Fl&#228;chenbezeichnung klicken.
+
+</Success>
+
+

@@ -1,0 +1,56 @@
+---
+title: "Modello del terreno"
+page: true
+---
+## Impostazioni per il modulo  <Italic> Modello del terreno </Italic> .
+
+<GeoDesigner>
+<Image>\img\grafik\datei\projektEinstellungen_DGM.png$projektEinstellungen_DGM</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\datei\GeoMapper.projektEinstellungen_DGM.png$GeoMapper.projektEinstellungen_DGM</Image>
+</GeoMapper>
+
+
+
+- Interpolazione
+
+- Freccia massima per interpolazione d&#39;arco: Gli archi di circonferenza possono essere approssimati tramite dei segmenti di retta. La freccia massima &#232; un valore determinante per il numero di vertici, con i quali l&#39;arco viene approssimato. Pi&#249; la freccia &#232; piccola, meglio &#232; approssimato l&#39;arco.
+
+
+
+- Tolleranza di correzione per il MDT
+
+- In caso di dati inconsistenti, spesso dei punti si trovano molto vicini o sovrapposti sulla perpendicolare. Per la creazione di un MDT, ci&#242; non &#232; ammesso. Definire con la <Italic> Tolleranza di correzione planimetrica </Italic>  e la <Italic> Tolleranza di correzione altimetrica </Italic>  la distanza entro la quale i cluster di punti sono automaticamente riuniti (media).
+
+
+
+- Generale
+
+- Percorso per Header-CSV dei volumi: Qui si trova il percorso di un file CSV, il cui contenuto &#232; inserito all&#39;inizio dei file CVS creati nel quadro del calcolo dei volumi. Il file corrispondente deve esistere anch&#39;esso, altrimenti il dialogo non pu&#242; essere confermato.
+
+
+
+- Tipi di oggetto standard
+
+- Contorno di modello: Nome del tipo di oggetti, usato con la creazione automatica del contorno del modello.
+
+- Linea di rottura: Nome del tipo di oggetti, usato con la creazione di una linea di rottura scambiando le aste di un triangolo.
+
+- Limite del volume: Nome del tipo di oggetti, usato per la creazione di un calcolo di volumi di una regione delimitata.
+
+
+
+
+
+
+<Success>
+Per la riga intestazione di un file CSV del calcolo di volume, possono essere definiti dei propri prototipi. Con la fornitura, viene gi&#224; fornito un file  <Italic> DefaultHeading.csv </Italic>  nella cartella dei prototipi.
+</Success>
+
+<Success>
+Nel file prototipo per la riga intestazione possono essere usate anche delle variabili rudimentali:
+ <Bold> &lt;ProductVersion&gt; </Bold> : Versione di  <Placeholder>product</Placeholder> 
+ <Bold> &lt;Date&gt; </Bold> : Data in formato dd.mm.yyyy
+ <Bold> &lt;Time&gt; </Bold> : Tempo in formato hh:mm
+</Success>

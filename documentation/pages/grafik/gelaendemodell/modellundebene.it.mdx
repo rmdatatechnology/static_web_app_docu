@@ -1,0 +1,47 @@
+---
+title: "Volume tra un modello ed un piano"
+page: true
+---
+## Calcolo del volume tra un modello del terreno ed un piano ad altezza costante.
+ <Menu> Menu: [ ^^dtmRibbonTitle^^ / Volumi / Volume tra modello e piano] </Menu> 
+
+
+1. Richiamere il comando.
+
+2. Scegliere il modello.
+
+3. Inserire <Bold> opzionalmente </Bold>  lo spessore di scoticamento di terra vegetale, da considerare per il calcolo. Se non si desidera calcolare lo scoticamento, disattivare la relativa opzione sul dialogo.
+
+4. Immettere l&#39;altezza del piano.
+
+5. Cliccare su <Border>Calcola</Border> .<Image>\img\grafik\geländemodell\VolumeModelPlane.png$VolumeModelPlane</Image>
+
+ <U>  <Bold> Ulteriori impostazioni sul dialogo: </Bold>  </U> 
+
+- <Bold> Disegna prismi: </Bold>  Nella grafica vengono mostrati i singoli prismi ed i relativi volumi sono annotati.
+
+- <Bold> Disegna linea d&#39;intersezione: </Bold>  Se il terreno interseca il piano, viene disegnata la linea di intersezione.
+
+- <Bold> Crea file REB: </Bold>  I volumi sono scritti in un file ASCII in formato REB.
+
+- <Bold> Crea file CSV: </Bold>  I volumi sono scritti in un file ASCII. I contenuti sono separati con un carattere separatore. Il file pu&#242; essere aperto in <Italic> MS Excel </Italic> .
+
+
+
+<Success>
+Il volume dello strato di terra vegetale viene ricavato dallo spessore dato e dalla superficie del modello calcolato. Per il calcolo del volume del modello, lo strato di terra vegetale viene sottratto da ogni punto del modello. Lo scoticamento impostato, che corrisponde ad un abbassamento del modello, viene protocollato separatamente.
+</Success>
+
+<Success>
+Nel protocollo sono creati i collegamenti ai file creati (REB e/o CSV). Per poter aprire questi file direttamente dal protocollo, &#232; necessario che esista un programma adeguato con la relativa associazione al file. Ulteriori informazioni si possono trovare nella documentazione del sistema operativo ( <Italic> &quot;Associare un file a un programma&quot; </Italic> ).
+</Success>
+
+<Warning>
+Nel caso che la linea d&#39;intersezione non possa essere calcolata con la precisione sufficiente, ci&#242; viene documentato con un commento nel protocollo, il calcolo viene interrotto e non viene stampato alcun risultato. In tal caso sono disponibili due possibilit&#224;:
+1.	Le superfici del modello del terreno devono essere modellate meglio (inserendo ulteriori punti) oppure
+2.	la tolleranza di correzione altimetrica deve essere ridotta (default : 5 cm).
+</Warning>
+
+<Success>
+Il volume pu&#242; essere calcolato anche su una superficie limitata, creando un limite del volume usando il comando  <Menu>Crea</Menu>  o tramite l&#39;opzione  <Menu>Calcola tutto</Menu>  considerando i contorni del modello. La scelta di questa opzione &#232; possibile direttamente tramite la barra delle opzioni. Vedere anche [Disegnare i contorni di modello](../gelaendemodell/volumengrenzezeichnen)
+</Success>

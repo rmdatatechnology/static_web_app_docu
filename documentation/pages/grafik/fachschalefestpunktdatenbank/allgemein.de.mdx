@@ -1,0 +1,153 @@
+---
+title: "Festpunktübersicht"
+page: true
+---
+## Import von Festpunkten zum Erstellen einer Festpunkt&#252;bersicht
+
+Zum Erstellen einer Festpunkt&#252;bersicht kann die Konfiguration &quot;Festpunktdatenbank&quot; verwendet werden.
+Mit der Konfiguration wird eine neue Geodatabase angelegt. In diese werden die Festpunkte entweder aus einer ASCII-Datei, aus rmGEO oder aus einer BEV-Festpunktdatei importiert.
+Beim Import von BEV-Dateien k&#246;nnen auch ETRS-Punkte importiert werden, sodass in der Grafik ersichtlich ist, wo ETRS-Koordinaten zur Verf&#252;gung stehen.
+
+## Anlegen einer neuen Festpunktdatenbank
+Das Anlegen einer neuen Festpunktdatenbank erfolgt im Datenquellenmanager:
+ <Menu>Datenquellenmanager - rmDATA Private Geodatabase hinzufügen - Neue Datenquelle anlegen</Menu> 
+Es kann die Vorlage  <Border>Festpunktdatenbank</Border>  verwendet werden.
+<Success>
+Beim Anlegen der Datenbank muss auch das richtige Koordinatensystem (Landeskoordinaten M28/31/34) angegeben werden.
+</Success>
+
+Die Geodatenbank wird mit der richtigen Konfiguration angelegt und als Datenquelle im Geodokument eingebunden.
+
+## Import von Festpunkten aus einer beliebigen ASCII-Datei
+
+- <Menu> Menu: [Daten - Daten importieren - Punkte aus ASCII-Daten importieren] </Menu>  aufrufen
+
+- Die ASCII-Datei w&#228;hlen
+
+- Die zuvor angelegte Festpunktdatenbank (Geodatenbank) ausw&#228;hlen, in welche die Punkte importiert werden sollen
+
+- Im Register <Border>Mapping</Border>  auf den Button <Border>Assistent ...</Border>  klicken
+
+- Die Einstellungen f&#252;r Format-Typ vornehmen:<Image>\img\grafik\fachschalefestpunktdatenbank\Formattyp.png$Formattyp</Image>
+
+- Die Einstellungen f&#252;r Format-Konfiguration vornehmen, dabei die allgmeinen Attribute den Felder der ASCII-Datei &#252;ber Rechstklick auf den Spaltenkopf zuordnen<Image>\img\grafik\fachschalefestpunktdatenbank\formatkonfiguration.png$formatkonfiguration</Image>
+
+- Den Punkttyp w&#228;hlen, welcher erzeugt werden soll<Image>\img\grafik\fachschalefestpunktdatenbank\punkt.png$punkt</Image>
+
+- Auf den Link unter <Border>Attributzuweisung</Border>  klicken und den Punkttyp bzw. weitere Attribute zu zuordnen<Image>\img\grafik\fachschalefestpunktdatenbank\Attributzuweisung.png$Attributzuweisung</Image>
+
+- Den Import durchf&#252;hren
+
+
+
+
+## Import von Festpunkten aus einem rmGEO-Projekt
+Festpunkte aus einem rmGEO-Projekt werden &#252;ber die ASCII-Schnittstelle von rmGEO exportiert und danach in die Geodatenbank importiert.
+
+### Export aus rmGEO
+
+- Die Datei <Border>C:\ProgramData\rmDATA\GeoDesktop\TransferSettings\AT - Festpunktdatenbank Export-GeoDesktop.FMT</Border>  in das Verzeichnis <Border>C:\Users\Public\Documents\rmDATA\rmGEO4\Formats</Border>  kopieren
+
+- rmGEO &#246;ffnen und den ASCII-Export starten. Als Formatdatei &quot;AT - Festpunktdatenbank Export-GeoDesktop&quot; w&#228;hlen.
+
+
+
+
+### Import der rmGEO-Punktdatei in  <Placeholder>product</Placeholder> 
+
+- <Menu> Menu: [Daten - Daten importieren - Punkte aus ASCII-Daten importieren] </Menu>  aufrufen
+
+- Die Punktdatei w&#228;hlen
+
+- Die zuvor angelegte Festpunktdatenbank (Geodatenbank) ausw&#228;hlen, in welche die Punkte importiert werden sollen
+
+- Mapping-Datei angeben: <Border>AT - Festpunktdatenbank rmGEO.Ascii-Mapping</Border> 
+- Den Import durchf&#252;hren
+
+
+
+
+## Import von Festpunkten aus Festpunktdateien des BEV
+Festpunkte k&#246;nnen auch &#252;ber die vom BEV angebotenen Festpunktdateien (Einschaltpunkte, Triangulierungspunkte in den Systemen MGI oder ETRS) importiert werden.
+
+Damit die Daten vollst&#228;ndig &#252;bernommen werden k&#246;nnen, muss die ASCII-Datei vor dem Import adaptiert werden:
+
+
+- <Bold> Entfernen von ; in Textfeldern: </Bold> 
+- &#214;ffnen der CSV-Datei mit EXCEL
+
+- Suchen / Ersetzen (Strg+H) aufrufen und <Border>;</Border>  durch <Border>,</Border>  ersetzen
+
+- Datei speichern
+
+- Excel wieder schlie&#223;en, da die Datei nicht in <Placeholder>product</Placeholder> importiert werden kann, wenn sie anderweitig ge&#246;ffnet ist.
+
+
+
+
+
+
+
+- <Bold> Dateikodierung richtigstellen: </Bold> 
+- &#214;ffnen der CSV-Datei mit Notepad++
+
+- Men&#252; &#8222Kodierung &#8211 Konvertiere zu UTF-8&#8220
+
+- Datei speichern
+
+
+
+
+
+
+### Import von Triangulierungs- und Einschaltpunkten MGI
+
+- <Menu> Menu: [Daten - Daten importieren - Punkte aus ASCII-Daten importieren] </Menu>  aufrufen
+
+- Die CSV-Datei w&#228;hlen
+
+- Die zuvor angelegte Festpunktdatenbank (Geodatenbank) ausw&#228;hlen, in welche die Punkte importiert werden sollen
+
+- Mapping-Datei angeben: 
+
+- Triangulierungspunkte: <Border>AT - Festpunktdatenbank BEV-TP-MGI.Ascii-Mapping</Border> 
+- Einschaltpunkte: <Border>AT - Festpunktdatenbank BEV-EP-MGI.Ascii-Mapping</Border> 
+
+
+- Den Import durchf&#252;hren
+
+
+
+
+### Import von Triangulierungs- und Einschaltpunkten ETRS
+Festpunkte werden vom BEV auch im ETRS-System angeboten. Diese Informationen werden zus&#228;tzlich zu den MGI-Punkten in die Geodatenbank importiert, sodass auch die ETRS-Informationen zur Verf&#252;gung stehen.
+<Success>
+Der Import der ETRS-Punkte sollte NACH dem Import der MGI-Punkte erfolgen!
+</Success>
+
+
+- <Menu> Menu: [Daten - Daten importieren - Punkte aus ASCII-Daten importieren] </Menu>  aufrufen
+
+- Die CSV-Datei w&#228;hlen
+
+- Als Koordinatensystem der Quelldatei entweder 25832 oder 25833 angeben (Hinweis: das Koordinatensystem ist in der ASCII-Datei bei jedem Punkt in der letzten Spalte angegeben)
+
+- Die zuvor angelegte Festpunktdatenbank (Geodatenbank) ausw&#228;hlen, in welche die Punkte importiert werden sollen
+
+- Mapping-Datei angeben: 
+
+- Triangulierungspunkte: <Border>AT - Festpunktdatenbank BEV-TP-ETRS.Ascii-Mapping</Border> 
+- Einschaltpunkte: <Border>AT - Festpunktdatenbank BEV-EP-ETRS.Ascii-Mapping</Border> 
+- In den Import-Einstellungen Name-Pr&#228;fix und Name-Suffix leer lassen, bei Subname-Suffix &quot;-ETRS&quot; eintragen und die Kollisionsbehandlung auf &quot;Umbenennen&quot; stellen
+
+
+
+- Den Import durchf&#252;hren
+
+
+
+
+In der Festpunkt&#252;bersicht ist erkennbar, wo Festpunkte auch im ETRS-System angeboten werden.<Image>\img\grafik\fachschalefestpunktdatenbank\festpunktübersicht.png$festpunktübersicht</Image>
+
+
+

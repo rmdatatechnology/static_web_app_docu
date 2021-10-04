@@ -1,0 +1,438 @@
+---
+title: "ALKIS-Dati dei proprietari"
+page: true
+---
+## ALKIS &#232; un formato esclusivo per la Germania!
+  ALKIS-Eigent&#252;merdaten sind nicht grafische Daten welche &#252;ber einen Schl&#252;ssel (Flurst&#252;cksnummer) einer grafischen Fl&#228;che (dem Flurst&#252;ck) zugeordnet sind. 
+
+
+<GeoDesigner>
+
+###  Aufbau
+
+- <Bold> &lt;AxObjects&gt; </Bold>  Sektion aller nicht grafischen ALKIS-Daten.
+
+
+- <Bold>  &lt;AxObject Id=&quot;98&quot;&gt; </Bold>  Ein ALKIS-Objekt mit der ID 98
+
+
+- <Bold> &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>           &lt;Attribute Name=&quot;Gemarkungsnummer&quot; Value=&quot;348&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Z&#228;hler&quot; Value=&quot;18&quot; Type=&quot;System.Int32&quot; /&gt; </Bold>  
+
+
+- <Bold>           &lt;Attribute Name=&quot;Nenner&quot; Value=&quot;18&quot; Type=&quot;System.Int32&quot; /&gt; </Bold>  
+
+
+- <Bold>           &lt;Attribute Name=&quot;Buchungsstelle_ID&quot; Value=&quot;99&quot; Type=&quot;System.Int32&quot; /&gt; </Bold>  
+
+
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Ende der Sektion
+
+
+- <Bold> &lt;ObjectType&gt;Ax.Flurst&#252;ck&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps (das Flurst&#252;ck)
+
+
+
+
+- <Bold> &lt;/AxObject&gt; </Bold>  Ende der Sektion
+
+
+
+
+
+
+
+
+- <Bold>  &lt;AxObject Id=&quot;99&quot;&gt; </Bold>  Ein ALKIS-Objekt mit der ID 99
+
+
+- <Bold> &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>           &lt;Attribute Name=&quot;Buchungsart&quot; Value=&quot;1100&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Laufende Nummer&quot; Value=&quot;0001&quot; Type=&quot;System.String&quot; /&gt; </Bold>  
+
+
+- <Bold>           &lt;Attribute Name=&quot;Buchungstext&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold>  
+
+
+- <Bold>           &lt;Attribute Name=&quot;Buchungsblatt_ID&quot; Value=&quot;100&quot; Type=&quot;System.String&quot; /&gt; </Bold>  
+
+
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Ende der Sektion
+
+
+- <Bold> &lt;ObjectType&gt;Ax.Buchungsstelle&lt;&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps (die Buchungsstelle in der das Flurst&#252;ck gebucht ist)
+
+
+
+
+
+
+- <Bold> &lt;/AxObject&gt; </Bold>  Ende der Sektion
+
+
+
+
+
+
+
+
+
+
+- <Bold>  &lt;AxObject Id=&quot;100&quot;&gt; </Bold>  Ein ALKIS-Objekt mit der ID 100
+
+
+- <Bold> &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>           &lt;Attribute Name=&quot;Buchungsblattkennzeichen&quot; Value=&quot;0103480010602&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Buchungsblattnummer mit Buchstabenerweiterung&quot; Value=&quot;0010602&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Blattart&quot; Value=&quot;1000&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Land&quot; Value=&quot;1&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Bezirk&quot; Value=&quot;348&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Ende der Sektion
+
+
+- <Bold> &lt;ObjectType&gt;Ax.Buchungsblatt&lt;&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps (das Buchungsblatt in der die Buchungsstelle enthalten ist)
+
+
+
+
+
+
+- <Bold> &lt;/AxObject&gt; </Bold>  Ende der Sektion
+
+
+
+
+
+
+
+
+
+
+- <Bold>  &lt;AxObject Id=&quot;101&quot;&gt; </Bold>  Ein ALKIS-Objekt mit der ID 101
+
+
+- <Bold> &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>           &lt;Attribute Name=&quot;Name&quot; Value=&quot;Schlotterbeck&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Anrede&quot; Value=&quot;Herr&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Vorname&quot; Value=&quot;Adrian&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Geburtsname&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Geburtsdatum&quot; Value=&quot;01.01.2000&quot; Type=&quot;System.DateTime&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Namensbestandteil&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Akademischer Grad&quot; Value=&quot;Ingenieur&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Z&#228;hler&quot; Value=&quot;1.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Nenner&quot; Value=&quot;2.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Eigent&#252;merart&quot; Value=&quot;&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>           &lt;Attribute Name=&quot;Buchungsblatt_ID&quot; Value=&quot;100&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Ende der Sektion
+
+
+- <Bold> &lt;ObjectType&gt;Ax.Eigent&#252;mer&lt;&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps (der Eigent&#252;mer)
+
+
+
+
+
+
+- <Bold> &lt;/AxObject&gt; </Bold>  Ende der Sektion
+
+
+
+
+
+
+
+
+
+
+
+- <Bold> &lt;/AxObjects&gt; </Bold>  Ende der Sektion
+
+
+
+
+
+<Success>
+Alle nicht grafischen ALKIS-Objekte sind vom Typ  <Bold> &lt;AxObject/&gt; </Bold> .
+</Success>
+
+<Success>
+Ein Flurst&#252;ck ist in einer Buchunggstelle eines Buchungsblattes gebucht.
+Alle Eigent&#252;mer sind wiederum dem Buchungsblatt zugeordnet.
+</Success>
+
+</GeoDesigner>
+<GeoMapper>
+
+### Aufbau
+
+- <Bold> &lt;AxObjects&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;3000&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; Liste der Attribute zum Objekt </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Gml_Id&quot; Value=&quot;DESHLFS300001gAI&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblattkennzeichen&quot; Value=&quot;0103480010602&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblattnummer mit Buchstabenerweiterung&quot; Value=&quot;0010602&quot; Type=&quot;System.String&quot; /&gt; </Bold>  
+
+
+- <Bold>              &lt;Attribute Name=&quot;Blattart&quot; Value=&quot;1000&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblattbezirksschl&#252;ssel&quot; Value=&quot;22222&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblattbezirksbezeichnung&quot; Value=&quot;Bezirk&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Dienststellenschl&#252;ssel&quot; Value=&quot;11111&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Dienststellenbezeichnung&quot; Value=&quot;Grundbuchamt Rendsburg&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Buchungsblatt&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um ein Buchungsblatt handelt 
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;2000&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Gml_Id&quot; Value=&quot;DESHLFS300001j33&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsart&quot; Value=&quot;1100&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Laufende Nummer&quot; Value=&quot;0002&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Z&#228;hler&quot; Value=&quot;1.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Nenner&quot; Value=&quot;1.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungstext&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Nummer im Aufteilungsplan&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Beschreibung des Sondereigentums&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblatt_Gml_Id&quot; Value=&quot;DESHLFS300001gAI&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;ParentAn_Gml_Id&quot; Value=&quot;&quot; Type=&quot;System.String &quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;ParentZu_Gml_Id&quot; Value=&quot;&quot; Type=&quot;System.String &quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Buchungsstelle&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um eine Buchungsstelle handelt - referenziert auf das Buchungsblatt
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;1000&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Gml_Id&quot; Value=&quot;DESHLFS300000DhU&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Gemarkung&quot; Value=&quot;348&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Flurnummer&quot; Value=&quot;2&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Z&#228;hler&quot; Value=&quot;18&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Nenner&quot; Value=&quot;19&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Flurst&#252;ckskennzeichen&quot; Value=&quot;010348002000180019&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Amtliche Fl&#228;che&quot; Value=&quot;999.00&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Regierungsbezirksschl&#252;ssel&quot; Value=&quot;111&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Regierungsbezirksbezeichnung&quot; Value=&quot;Darmstadt&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;KreisRegionsschl&#252;ssel&quot; Value=&quot;01111&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;KreisRegionsbezeichnung&quot; Value=&quot;Musterkreis&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Gemeindeschl&#252;ssel&quot; Value=&quot;01111111&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Gemeindebezeichnung&quot; Value=&quot;Mustergemeinde&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Klassifizierung&quot; Value=&quot;Gew&#228;sser II. Ordnung&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Lagebezeichnung&quot; Value=&quot;Musterstra&#223;e 14&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Hinweise&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsstelle_Gml_Id&quot; Value=&quot;DESHLFS300001j33&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Flurst&#252;ck&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um Angaben zu einem Flurst&#252;ck handelt- referenziert auf die Buchungsstelle
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;4000&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold> Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Gml_Id&quot; Value=&quot;DESHLFS3000017AW&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Name&quot; Value=&quot;Meier&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Anrede&quot; Value=&quot;Herr&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Vorname&quot; Value=&quot;Max&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Geburtsname&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Geburtsdatum&quot; Value=&quot;01.03.2000&quot; Type=&quot;System.DateTime&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Namensbestandteil&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Akademischer Grad&quot; Value=&quot;Ingenieur&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Z&#228;hler&quot; Value=&quot;1.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Nenner&quot; Value=&quot;2.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Laufende Nummer&quot; Value=&quot;1&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Eigent&#252;merart&quot; Value=&quot;0&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblatt_Gml_Id&quot; Value=&quot;DESHLFS300001gAI&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Parent_Gml_Id&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Eigent&#252;mer&lt;/ObjectType&gt; </Bold> Fixer Text - Gibt an, dass es sich um einen Eigent&#252;mer handelt - referenziert auf das Buchungsblatt
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;4001&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Gml_Id&quot; Value=&quot;DESHLFS300001cB9&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Name&quot; Value=&quot;Erbengemeinschaft&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Anrede&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Vorname&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Geburtsname&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Geburtsdatum&quot; Value=&quot;&quot; Type=&quot;System.DateTime&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Namensbestandteil&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Akademischer Grad&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Z&#228;hler&quot; Value=&quot;1.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Nenner&quot; Value=&quot;2.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Eigent&#252;merart&quot; Value=&quot;0&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Laufende Nummer&quot; Value=&quot;2&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblatt_Gml_Id&quot; Value=&quot;DESHLFS300001gAI&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Parent_Gml_Id&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Eigent&#252;mer&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um einen Eigent&#252;mer handelt - referenziert auf das Buchungsblatt
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;4002&quot;&gt; </Bold>  
+
+
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Gml_Id&quot; Value=&quot;DESHLFS3000017AY&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Name&quot; Value=&quot;Musterfrau&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Anrede&quot; Value=&quot;Frau&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Vorname&quot; Value=&quot;Maria&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Geburtsname&quot; Value=&quot;Berszuck&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Geburtsdatum&quot; Value=&quot;01.01.2000&quot; Type=&quot;System.DateTime&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Namensbestandteil&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Akademischer Grad&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Z&#228;hler&quot; Value=&quot;1.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Nenner&quot; Value=&quot;2.0&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Laufende Nummer&quot; Value=&quot;2.1&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Eigent&#252;merart&quot; Value=&quot;0&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Buchungsblatt_Gml_Id&quot; Value=&quot;DESHLFS300001gAI&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Parent_Gml_Id&quot; Value=&quot;DESHLFS300001cB9&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Eigent&#252;mer&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um einen Eigent&#252;mer handelt - referenziert auf das Buchungsblatt
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;7000&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Land&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Postleitzahl&quot; Value=&quot;29789&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Ort&quot; Value=&quot;Musterort&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Stra&#223;e&quot; Value=&quot;Hauptstra&#223;e&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Hausnummer&quot; Value=&quot;3&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;E-Mail&quot; Value=&quot;mustermann@muster.de&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Eigent&#252;mer_Gml_Id&quot; Value=&quot;DESHLFS3000017AW&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Adresse&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um eine Adresse handelt - referenziert auf den Eigent&#252;mer
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;7001&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Land&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Postleitzahl&quot; Value=&quot;&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Ort&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Stra&#223;e&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Hausnummer&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;E-Mail&quot; Value=&quot;&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Eigent&#252;mer_Gml_Id&quot; Value=&quot;DESHLFS3000017AY&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Adresse&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um eine Adresse handelt - referenziert auf den Eigent&#252;mer
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;5000&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Name&quot; Value=&quot;Landratsamt&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Lagebezeichnung&quot; Value=&quot;Musterstra&#223;e 14&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Geb&#228;udefunktion&quot; Value=&quot;3010&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Flurst&#252;ck_Gml_Id&quot; Value=&quot;DESHLFS300000DhU&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold>  
+
+
+- <Bold>          &lt;ObjectType&gt;Ax.Geb&#228;ude&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um ein Geb&#228;ude handelt - referenziert auf das Flurst&#252;ck
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+- <Bold>     &lt;AxObject Id=&quot;6000&quot;&gt; </Bold> 
+- <Bold>          &lt;Attributes&gt; </Bold>  Liste der Attribute zum Objekt
+
+
+- <Bold>              &lt;Attribute Name=&quot;Name&quot; Value=&quot;Karlsplatz (Stachus)&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Nutzung&quot; Value=&quot;42006&quot; Type=&quot;System.Int32&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Fl&#228;che&quot; Value=&quot;585.00&quot; Type=&quot;System.Double&quot; /&gt; </Bold> 
+- <Bold>              &lt;Attribute Name=&quot;Flurst&#252;ck_Gml_Id&quot; Value=&quot;DESHLFS300000DhU&quot; Type=&quot;System.String&quot; /&gt; </Bold> 
+
+
+- <Bold>          &lt;/Attributes&gt; </Bold> 
+- <Bold>          &lt;ObjectType&gt;Ax.Nutzung&lt;/ObjectType&gt; </Bold>  Fixer Text - Gibt an, dass es sich um eine Nutzung handelt - referenziert auf das Flurst&#252;ck
+
+
+
+
+- <Bold>     &lt;/AxObject&gt; </Bold> 
+
+
+- <Bold> &lt;/AxObjects&gt; </Bold> 
+
+
+
+
+<Success>
+Alle nicht grafischen ALKIS-Objekte sind vom Typ &lt;AxObject/&gt;. 
+</Success>
+
+
+<Success>
+Es wird hier f&#252;r die Anzeige der Daten auf die Flurst&#252;cksattribute &quot;Kennzeichen&quot;, &quot;Gemarkung&quot;, &quot;Z&#228;hler&quot; und &quot;Nenner&quot; zugegriffen. Wenn der Nenner leer ist, muss man &quot;0&quot; eintragen. Der Fl&#228;chenname selbst spielt dabei keine Rolle. 
+</Success>
+
+
+</GeoMapper>
+

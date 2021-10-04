@@ -1,0 +1,93 @@
+---
+title: "Inserire dei profili trasversali"
+page: true
+---
+## Inserimento di profili trasversali lungo un asse longitudinale.
+ <Menu> Menu: [ ^^dtmRibbonTitle^^ / Profili / Inserisci profili trasversali] </Menu> 
+ <Menu> Cmd: [CrossProfileConstruct] </Menu> 
+
+
+1. Richiamare il comando.
+
+2. Selezionare un profilo sul quale si desidera creare i profili trasversali.
+
+3. Nel dialogo definire i seguenti parametri:
+
+
+
+ <U> Generale </U> 
+
+- <Bold> Lunghezza profilo </Bold> : Definire la lunghezza del profilo trasversale a destra e sinistra rispetto al profilo scelto.
+
+
+
+
+
+ <U> Stazionamento profilo trasversale </U> 
+
+- <Bold> Distanza costante </Bold>  tra i profili trasversali: I profili trasversali vengono inseriti con intervallo costante lungo il profilo longitudinale.
+
+- <Bold> Distanza costante, dal - al </Bold> : Con questa opzione definire in quale dominio (Stazionamento) del profilo longitudinale debbono essere inseriti i profili trasversali.
+
+- <Bold> Indica sulla grafica </Bold> : in questo caso, alla chiusura del dialogo il programma richiede di 
+[definire sulla grafica](../profile/querprofilspureneinfuegen2)
+ i punti d&#39;inserimento dei profili trasversali direttamente sul profilo longitudinale.
+
+
+
+
+
+ <U> Stazionamento sul profilo trasversale </U> 
+
+- Qui per tutti i profili trasversali inseriti, viene prefissato lo stazionamento zero che si riferisce al punto d&#39;intersezione col profilo longitudinale. Di default lo stazionamento zero dei profili trasversali &#232; 0.
+
+- Scegliendo l&#39;opzione <Bold> Stazionamento decrescente </Bold>  tutti i profili trasversali sono creati con stazionamento decrescente.<Image>\img\grafik\profile\Querprofilspur.png$Querprofilspur</Image>
+
+<Success>
+I profili trasversali vengono sempre inseriti cominciando dal punto iniziale del profilo longitudinale, a meno che la loro posizione non sia definita manualmente.
+</Success>
+
+<Success>
+Lo stazionamento zero di un profilo longitudinale o trasversale pu&#242; anche essere modificato successivamente tramite il gestore propriet&#224; nella rappresentazione profili.
+</Success>
+
+
+Alternativa
+  <Bold> Indicare i punti d&#39;inserimento dei profili trasversali direttamente sulla grafica. </Bold> 
+
+1. Richiamare il comando.
+
+2. Selezionare una polilinea esistente sulla grafica.
+
+
+<Success>
+Se questa polilinea non disponesse ancora delle informazioni sul profilo, in questo momento il programma richiede di immettere le relative propriet&#224; (Stazionamento zero, ecc.).
+
+</Success>
+3. Sul dialogo successivo scegliere l&#39;opzione <Menu>Indica sulla grafica</Menu>  e confermare la scelta con <Border>Avanti</Border> .<Image>\img\grafik\profile\QuerProfilZeigen.png$QuerProfilZeigen</Image>
+4. <Placeholder>product</Placeholder> mentre si procede col mouse lungo il profilo longitudinale, mostra il punto d&#39;inserimento del profilo trasversale.
+
+5. Selezionare lo stazionamento:
+
+- <Bold> Selezione sulla grafica: </Bold>  Cliccare sulla posizione desiderata per inserire il profilo trasversale.
+
+- <Bold> Immissione dello stazionamento: </Bold> 
+- Mentre ci si trova in modo <Menu>Indicare</Menu>  selezionare l&#39;opzione <Menu>Immissione stazionamento</Menu> .
+
+- <Placeholder>product</Placeholder> richiede di immettere un valore di stazionamento:<Image>\img\grafik\profile\QuerProfilStationsEingabe.png$QuerProfilStationsEingabe</Image>
+
+<Success>
+Durante la 
+ <Menu>Immissione stazionamento</Menu>  &#232; proposto il dominio di valori possibili che viene ricavato dallo stazionamento iniziale e dalla lunghezza del profilo. Nel caso in cui l&#39;utente inserisca un valore troppo piccolo o troppo grande, 
+ <Placeholder>product</Placeholder> mostra il seguente messaggio di errore:
+
+
+
+<Image>\img\grafik\profile\QuerProfilEingabeFehler.png$QuerProfilEingabeFehler</Image>
+</Success>
+
+
+
+
+
+

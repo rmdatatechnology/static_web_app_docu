@@ -1,0 +1,82 @@
+---
+title: "Polilinee"
+page: true
+---
+## Composizione dei segmenti di una polilinea
+
+<Warning>
+Il prerequisito per una polilinea &#232; che i segmenti referenziati siano presenti nel file XML!
+</Warning>
+
+
+###  Struttura della sezione delle polilinee
+
+- <Bold> &lt;LineStrings&gt; </Bold>  Sezione di tutte le polilinee. Questa sezione pu&#242; esistere una sola volta nel file XML.
+
+- <Bold>      &lt;LineString Id=&quot;821&quot;&gt; </Bold>  Polilinea con un ID univoco.
+
+- <Bold> &lt;SegmentList&gt; </Bold>  Lista di tutti i segmenti che appartengono ad una polilinea (nell&#39;ordine corretto)
+
+- <Bold> &lt;SegmentId&gt;828&lt;/SegmentId&gt; </Bold>  Riferimento al segmento. Questa sezione pu&#242; essere ripetuta. 
+
+
+
+- <Bold> &lt;/SegmentList&gt; </Bold>  Fine sezione
+
+- <Bold> &lt;Attributes&gt; </Bold>  Lista degli attributi dell&#39;oggetto.
+
+- <Bold>           &lt;Attribute Name=&quot;Larghezza&quot; Type=&quot;System.Double&quot; Value=&quot;0.3&quot; /&gt; </Bold>  Nome dell&#39;attributo, tipo e valore. Questa sezione pu&#242; essere ripetuta.
+
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Fine sezione
+
+- <Bold> &lt;ObjectType&gt;Recinto&lt;/ObjectType&gt; </Bold>  Dato sul tipo d&#39;oggetto.
+
+
+
+- <Bold>       &lt;/LineString&gt; </Bold> 
+
+
+- <Bold>    &lt;/LineStrings&gt; </Bold> 
+
+
+
+ 
+<Info>
+   &lt;LineStrings&gt;
+      &lt;LineString Id=&quot;821&quot;&gt;
+        &lt;SegmentList&gt;
+          &lt;SegmentId&gt;828&lt;/SegmentId&gt;
+        &lt;/SegmentList&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Larghezza&quot; Type=&quot;System.Double&quot; Value=&quot;0.3&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;ObjectType&gt;Recinto&lt;/ObjectType&gt;
+      &lt;/LineString&gt;
+    &lt;/LineStrings&gt;
+</Info>
+
+
+<Success>
+La direzione della polilinea &#232; definita dalla sequenza dei segmenti. Nel caso in cui la polilinea sia composta da un solo segmento, tramite il Tag &quot;Reversed&quot;, &#232; possibile definire se il segmento debba essere invertito.  
+<Info>
+ &lt;LineString Id=&quot;12&quot;&gt;
+        &lt;SegmentList&gt;
+         &lt;SegmentId Reversed=&quot;True&quot;&gt;22&lt;/SegmentId&gt;
+        &lt;/SegmentList&gt;
+&lt;ObjectType&gt;Condotta&lt;/ObjectType&gt;
+&lt;/LineString&gt;
+</Info>
+ 
+</Success>
+
+<Success>
+Nel caso in cui nel file XML ci siano degli attributi che non siano stati configurati, questi sono comunque aggiunti all&#39;oggetto.
+</Success>
+
+<Success>
+Nel caso in cui nel file XML ci sia un oggetto il cui tipo non sia stato configurato, l&#39;oggetto &#232; comunque importato. Secondo l&#39;impostazione, gli oggetti di tipo sconosciuto, sono rappresentati in magenta oppure nascosti. (Vedere menu File - Parametri di file)
+</Success>
+
+

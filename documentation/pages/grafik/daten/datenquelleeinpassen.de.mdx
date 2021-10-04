@@ -1,0 +1,48 @@
+---
+title: "Datenquelle einpassen"
+page: true
+---
+## Einpassen von anderen Datenquellen oder nicht georeferenzierten Raster-Dateien
+
+&#220;ber den Befehl  <Menu>Datenquelle einpassen</Menu>  werden andere Datenquellen (AutoCAD DWG/DXF-Dateien, Rasterbilder, GeoDB3-Dateien, Shape-Daten, usw.) in die Karte des aktuellen  <Placeholder>product</Placeholder> Dokumentes eingepasst.
+Auf die jeweilige Datenquelle wird durch Angabe von Passpunktpaaren eine Helmert-2D-Transformation angewendet.
+
+<Success>
+Rasterbilder, auch wenn sie keine Georeferenzierung haben, k&#246;nnen in  <Placeholder>fullproduct</Placeholder> &#252;ber den Datenquellenmanager oder &#252;ber Drag&amp;Drop eingebunden werden.
+Das eingebundene Bild wird in einem ersten Schritt in den aktuellen Ausschnitt des Grafikfensters positioniert. Danach kann das Bild &#252;ber den Befehl  <Menu>Datenquelle einpassen</Menu>  transformiert werden.
+</Success>
+
+
+Befehlsaufruf:
+im Viewingmodus:  <Menu> Menu: [Daten - Datenquelle einpassen] </Menu> 
+im Editiermodus:  <Menu> Menu: [Bearbeiten - Datenquelle einpassen] </Menu> 
+
+Befehlsablauf:
+
+- Befehl aufrufen oder ein Element der einzupassenden Datenquelle in der Karte anklicken
+
+- Wurde vor Befehlsaufruf keine g&#252;ltige Datenquelle gew&#228;hlt, werden in einem Dialog alle einpassbaren Datenquellen angezeigt und es muss eine Datenquelle ausgew&#228;hlt werden.<Image>\img\grafik\daten\dialogdatenquellen.png$dialogdatenquellen</Image>
+
+- erstes Punktpaar:
+
+- Punkt Alt: Passpunkt angeben
+
+- Punkt Neu: Passpunkt angeben
+
+
+
+- zweites Punktpaar:
+
+- Punkt Alt: Passpunkt angeben
+
+- Punkt Neu: Passpunkt angeben
+
+
+
+
+
+Die Datenquelle wird anhand der errechneten Helmert-2D-Transformationsparameter ausgerichtet.
+Die Transformationsparameter k&#246;nnen im Datenquellenmanager bei der jeweiligen Datenquelle ge&#228;ndert oder neu bestimmt werden.
+
+
+

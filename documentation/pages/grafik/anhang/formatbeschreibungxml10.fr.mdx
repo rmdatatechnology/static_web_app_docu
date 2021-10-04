@@ -1,0 +1,62 @@
+---
+title: "Textes"
+page: true
+---
+## Insertion de textes
+
+<Warning>
+Les pr&#233;requis pour un texte est que les coordonn&#233;es r&#233;f&#233;renc&#233;es, soient pr&#233;sentes dans le fichier XML!
+</Warning>
+
+
+###  Structure
+
+- <Bold> &lt;Texts&gt; </Bold>  Section de tous les textes. Cette section ne peut exister qu&#39;une seule fois dans le fichier XML.
+
+- <Bold>       &lt;Text Id=&quot;800&quot;&gt; </Bold>  Texte avec ID univoque.
+
+- <Bold>      &lt;VertexId&gt;799&lt;/VertexId&gt; </Bold>  R&#233;f&#233;rence aux coordonn&#233;es. La section peut exister une seule fois.
+
+- <Bold> &lt;Attributes&gt; </Bold>  Liste des attributs de l&#39;objet.
+
+- <Bold>           &lt;Attribute Name=&quot;Internal~TextValue&quot; Type=&quot;System.String&quot; Value=&quot;Route cantonale&quot; /&gt; </Bold>  Nom de l&#39;attribut, type et valeur. Cette section peut &#234;tre r&#233;p&#233;t&#233;e.
+
+
+
+- <Bold>   &lt;/Attributes&gt; </Bold>   Fin de la section.
+
+- <Bold>   &lt;DisplayInformation /&gt; </Bold>  (Optionel) Donn&#233;e d&#39;une modification de l&#39;affichage graphique (voire ci-dessous).
+
+- <Bold> &lt;ObjectType&gt;Autre &#233;tiquette 2.5mm&lt;/ObjectType&gt; </Bold>  Donn&#233;e sur le type d&#39;objet.
+
+
+
+- <Bold>       &lt;/Text&gt; </Bold> 
+
+
+- <Bold>     &lt;/Texts&gt; </Bold> 
+
+
+
+<Success>
+Au cas o&#249;, dans le fichier XML, il y aient des attributs qui n&#39;aient pas &#233;t&#233;s configur&#233;s, ils sont pourtant ajout&#233;s &#224; l&#39;objet.
+</Success>
+
+<Success>
+Au cas o&#249;, dans le fichier XML, il y aurait un objet dont le type n&#39;ait pas &#233;t&#233; configur&#233;, l&#39;objet est pourtant import&#233;. Selon les param&#232;tres, les objets sans type, sont affich&#233;s en magenta ou masqu&#233;s. (Voir menu Fichier - Param&#232;tres de fichiers).
+</Success>
+
+
+<Info>
+
+    &lt;Texts&gt;
+      &lt;Text Id=&quot;800&quot;&gt;
+        &lt;VertexId&gt;799&lt;/VertexId&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Internal~TextValue&quot; Type=&quot;System.String&quot; Value=&quot;Route cantonale&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;ObjectType&gt;Autre &#233;tiquette 2.5mm&lt;/ObjectType&gt;
+      &lt;/Text&gt;
+    &lt;/Texts&gt;
+
+</Info>

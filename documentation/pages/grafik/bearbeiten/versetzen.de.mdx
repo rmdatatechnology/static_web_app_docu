@@ -1,0 +1,83 @@
+---
+title: "Versetzen"
+page: true
+---
+## Versetzen von Linienz&#252;gen.
+<GeoMapper> <Menu> Menu: [Bearbeiten / Versetzen] </Menu> </GeoMapper>
+<GeoDesigner> <Menu> Menu: [Bearbeiten und Ändern / Linien I / Versetzen] </Menu> 
+ <Menu> Cmd: [LinestringRelocate] </Menu> </GeoDesigner>
+
+
+1. Rufen Sie den Befehl auf.
+
+2. W&#228;hlen Sie die Objekte direkt durch Klick in der Grafik aus. Sie k&#246;nnen mittels <Border>Strg + Klick</Border>  mehrere Elemente w&#228;hlen. (Siehe 
+[Selektion von Daten](../grafik/selektionvondaten)
+). Alternativ w&#228;hlen Sie alle Objekte mit der Option &quot;Alle&quot;.
+
+3. Geben Sie die Richtung an, in die die Linienz&#252;ge versetzt werden sollen.
+
+4. Geben Sie den Abstand ein.
+
+
+
+
+Alternative
+
+
+1. W&#228;hlen Sie die zu versetzenden Linienz&#252;ge aus.
+
+2. W&#228;hlen Sie die Option &quot;Punktangabe&quot; aus dem Kontextmen&#252;.
+
+3. W&#228;hlen Sie einen Punkt, durch den der neue Linienzug verlaufen soll. 
+
+
+
+
+Alternative
+
+
+1. W&#228;hlen Sie die zu versetzenden Linienz&#252;ge aus.
+
+2. W&#228;hlen Sie die Option &quot;Mit H&#246;henversatz&quot; aus dem Kontextmen&#252;.
+
+3. Geben Sie die Richtung an, in die die Linienz&#252;ge versetzt werden sollen.
+
+4. Geben Sie den Abstand ein.
+
+5. Geben Sie den H&#246;henversatz an, um den die St&#252;tzpunkth&#246;hen ver&#228;ndert werden sollen. Auf ung&#252;ltige H&#246;hen wird der H&#246;henversatz nicht angebracht.
+
+
+
+
+<Success>
+
+- Der Befehl versucht immer, die H&#246;hen der St&#252;tzpunkte (Z-Koordinate) in den neuen Linienzug zu &#252;bertragen. Wenn der alte und der neue Linienzug aus gleich vielen St&#252;tzpunkten bestehen, werden g&#252;ltige H&#246;hen automatisch &#252;bernommen.
+
+
+- Ist die Anzahl der St&#252;tzpunkte verschieden, ist keine sinnvolle &#220;bernahme der H&#246;hen m&#246;glich. Dasselbe gilt f&#252;r den Fall, wenn durch das Versetzen eines Linienzuges mehr als ein neuer Linienzug entsteht (siehe Abbildung unten, rote Linienz&#252;ge wurden durch &quot;Versetzen&quot; erzeugt). Die H&#246;he aller St&#252;tzpunkte ist dann ung&#252;ltig. Weiters wird kein H&#246;henversatz angebracht.
+
+
+
+
+
+<Image>\img\grafik\bearbeiten\Bearbeiten.Versetzen.Stuetzpunktanzahl.png$Bearbeiten.Versetzen.Stuetzpunktanzahl</Image>
+</Success>
+
+
+<Success>
+Wird der neue Linienzug durch die Auswahl eines Punktes mit g&#252;ltiger H&#246;he versetzt, wird automatisch ein H&#246;henversatz durchgef&#252;hrt, wenn der gew&#228;hlte Punkt orthogonal auf den alten Linienzug projiziert werden kann und der alte Linienzug am Lotfusspunkt ebenfalls eine g&#252;ltige H&#246;he besitzt. 
+
+<Image>\img\grafik\bearbeiten\Bearbeiten.Versetzen.Punktangabe.png$Bearbeiten.Versetzen.Punktangabe</Image>
+</Success>
+
+
+<Success>
+Sie k&#246;nnen im jeweiligen Arbeitsmodus ( <Italic> Abstand </Italic>  oder  <Italic> Punktangabe </Italic> ) immer weitere Versatzobjekte erzeugen, solange Sie den Befehl nicht abbrechen.
+</Success>
+
+
+<Success>
+Punkte, &#252;ber die der Basislinienzug gezeichnet wurde, werden nicht mitversetzt. 
+Der originale Linienzug bleibt erhalten.
+</Success>
+ 

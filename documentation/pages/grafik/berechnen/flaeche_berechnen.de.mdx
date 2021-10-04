@@ -1,0 +1,61 @@
+---
+title: "Fläche berechnen"
+page: true
+---
+## Erm&#246;glicht das Berechnen des Fl&#228;cheninhaltes einer referenzierenden Fl&#228;che.
+ <Menu> Menu: [Berechnen / Fläche berechnen] </Menu> 
+<GeoDesigner> <Menu> Cmd: [AreaCalc] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+<Success>
+[Freie Fl&#228;chen](../objektklassen/flaeche)
+ sind immer berechnet und brauchen daher nicht mit diesem Befehl berechnet werden.
+</Success>
+
+
+1. Rufen Sie den Befehl auf
+
+2. W&#228;hlen Sie eine oder mehrere Fl&#228;chen in der Grafik oder die Option &quot;Alle&quot;
+
+3. Der Fl&#228;cheninhalt der ausgew&#228;hlten Fl&#228;chen wird berechnet.
+
+4. W&#228;hlen Sie weitere Fl&#228;chen aus oder beenden Sie den Befehl mit <Border>Enter</Border> 
+
+
+Alternative
+
+
+1. W&#228;hlen Sie eine oder mehrere Fl&#228;chen in der Grafik.
+
+2. Rufen Sie den Befehl &#252;ber das Rechtsklick-Kontextmen&#252; oder die Multifunktionsleiste auf.
+
+3. Der Fl&#228;cheninhalt der ausgew&#228;hlten Fl&#228;chen wird berechnet.
+
+4. Der Befehl wird beendet.
+
+
+
+<Success>
+Nicht sichtbare Fl&#228;chen werden ignoriert.
+</Success>
+
+<GeoMapper>
+<Success>
+Je nach Einstellung  <Italic> [Fl&#228;chenwerte auf Naturma&#223; reduzieren](../datei/datei-einstellungen5)
+ </Italic>  wird der Fl&#228;chenwert mit [Reduktion](../anhang/reduktion2)
+ berechnet 
+</Success>
+
+</GeoMapper>
+
+<Success>
+Wenn in den Einstellungen die [Rundung](../datei/datei-einstellungen5)
+ aktiviert ist, dann werden vor der Berechnung die Koordinaten auf cm oder mm gerundet. Der berechnete Wert ohne Rundung wird im Eigenschaften-Manager als &quot;exakter Wert&quot; angezeigt.
+</Success>
+
+
+<Warning>
+Einen Sonderfall stellt die Berechnung von Trennst&#252;cken in einem (versionierten) Teilungsplan dar.
+Hierbei werden Fl&#228;chenumrandungen nicht aufgebrochen und gestrichene Grenzen mit einbezogen.
+Dies erfolgt automatisch sowohl bei  <Italic> Fl&#228;che berechnen </Italic>  als auch beim manuellen Einsetzen von Trennst&#252;cken. Hierf&#252;r wird die  <Italic> Teilungsplan </Italic>  Fachschale f&#252;r  <Placeholder>product</Placeholder> ben&#246;tigt. 
+</Warning>

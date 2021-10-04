@@ -1,0 +1,203 @@
+---
+title: "Mappatura attributi - Superfici"
+page: true
+---
+## Gestione della conversione di elementi CAD in superfici nel Geodatabase.
+Le superfici possono essere create da elementi puntiformi, lineari o superficiali.
+
+```
+La creazione delle superfici &#232; definita tramite l&#39;elemento  <Bold> &lt;Areas&gt; </Bold> .
+Si tratta di una raccolta di elementi  <Bold> &lt;Area&gt; </Bold>  che gestiscono la conversione:
+ <Bold> &lt;Areas&gt; </Bold> 
+   &lt;Area Name=&quot;Esempio1&quot;&gt;
+       <Italic> &lt;!-- Definizione --&gt; </Italic> 
+   &lt;/Area&gt;
+    <Italic> &lt;!-- Ulteriori elementi &lt;Area&gt; --&gt; </Italic> 
+ <Bold> &lt;/Areas&gt; </Bold> 
+```
+
+### &lt;Area&gt;
+### 
+# Attributi
+
+
+- <Bold> Name </Bold>  (obbligatorio)
+
+-  Definisce il nome del tipo di superficie destinazione nel geodatabase. Tutti gli elementi CAD considerati dal filtro sono convertiti in questo tipo di superficie.
+
+
+
+
+
+### 
+# Elementi
+
+Con i seguenti elementi si possono definire gli oggetti da cui sono create le superfici.
+
+1. <Bold> &lt;GraphicAttributeSettings&gt; </Bold>  (da 0 a 1)
+
+- Descrive la ripresa di propriet&#224; grafiche dagli elementi CAD. Vedere 
+[Elemento GlobalSettings](../anhang/formatbeschreibungmappingautodesk2)
+.
+
+
+
+2. <Bold> &lt;Insert&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione dei blocchi CAD. Vedere 
+[Creare punti da blocchi CAD](../anhang/formatbeschreibungmappingautodesk4)
+.
+
+
+
+3. <Bold> &lt;Text&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione di testi. Vedere 
+[Creare punti da testi ](../anhang/formatbeschreibungmappingautodesk7)
+.
+
+
+
+4. <Bold> &lt;Point&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione di punti CAD ( <Italic> POINT </Italic> ). Vedere 
+[Creare punti da elementi punto ](../anhang/formatbeschreibungmappingautodesk4)
+.
+
+
+
+5. <Bold> &lt;Hatch&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione di tratteggi.
+
+
+
+6. <Bold> &lt;Polyline&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione di polilinee.
+
+
+
+
+
+<Success>
+Se descritto, al posto di un nome completo, possono anche essere usate delle espressioni regolari ( <Italic> RegEx </Italic> ). Per immettere una espressione regolare, usare il prefisso  <Bold> re: </Bold>  
+</Success>
+
+
+### 
+#  Creare superfici da blocchi CAD (&lt;Insert&gt;)
+
+
+<Info>
+Il seguente esempio deve essere letto nel seguente modo:
+
+- Si devono creare delle superfici del tipo <Bold> Geb&#228;ude </Bold> .
+
+
+- Questi punti devono essere ricavati da blocchi con il nome <Bold> FIG041 </Bold>  che si trovano sui layer <Bold> N-NS </Bold>  risp. <Bold> NS </Bold> .
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\BlockToAreaExample.png$BlockToAreaExample</Image>
+
+
+</Info>
+
+
+### 
+#  Creare superfici da tratteggi (&lt;Hatch&gt;)
+
+
+
+```
+Struttura di una mappatura Tratteggio-a-Superficie
+
+ <Bold> &lt;Hatch&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Descrive come devono essere filtrati i tratteggi. --&gt;
+          Tutti gli elementi seguenti sono facoltativi; 
+          gli elementi presenti sono collegati tra loro con AND,
+          quindi tutti devono essere soddisfatti --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Numero intero, colore indice --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Nome risp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Hatch&gt; </Bold> 
+
+```
+
+<Info>
+Esempio:
+
+- Si devono creare delle superfici del tipo <Bold> Fl&#228;chenschraffur </Bold> .
+
+
+- Come colore della superficie deve essere usato il colore del tratteggio.
+
+
+- La geometria viene implicitamente generata dal contorno del tratteggio.
+
+
+- Queste superfici devono essere create dai tratteggi che si trovano sui layer che cominciano con <Bold> Schraffur </Bold> _.
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\HatchToAreaExample.png$HatchToAreaExample</Image>
+
+
+</Info>
+
+
+### 
+#  Creare superfici da polilinee (&lt;Polyline&gt;)
+
+
+
+```
+Struttura di una mappatura Polilinea-a-Superficie
+
+ <Bold> &lt;Polyline&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Descrive come devono essere filtrate le polilinee. --&gt;
+          Tutti gli elementi seguenti sono facoltativi; 
+          gli elementi presenti sono collegati tra loro con AND,
+          quindi tutti devono essere soddisfatti --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Numero intero, cio&#232; colore indice --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Nome risp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Polyline&gt; </Bold> 
+
+```
+
+<Info>
+Esempio:
+
+- Si devono creare delle superfici del tipo <Bold> Randschraffur </Bold> .
+
+
+- Come colore della superficie deve essere usato il colore della polilinea.
+
+
+- La geometria viene implicitamente creata dalle geometrie delle linee.
+
+
+- Queste superfici devono essere create dalle polilinee che si trovano sui layer <Bold> N-FLU </Bold>  risp. <Bold> FLU </Bold> .
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\PlineToAreaExample.png$PlineToAreaExample</Image>
+
+
+</Info>

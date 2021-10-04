@@ -1,0 +1,3574 @@
+[
+  {
+    "title": "Programmstart",
+    "url": "programmstart",
+    "de": "Programmstart",
+    "it": "Programmstart",
+    "fr": "Programmstart",
+    "items": [
+      {
+        "title": "Start der Anwendung",
+        "url": "grafik/programmstart/anwendungstarten",
+        "de": "Start der Anwendung",
+        "it": "Start der Anwendung",
+        "fr": "Start der Anwendung",
+        "items": null
+      },
+      {
+        "title": "Startdialog",
+        "url": "grafik/programmstart/startdialog",
+        "de": "Startdialog",
+        "it": "Startdialog",
+        "fr": "Startdialog",
+        "items": null
+      },
+      {
+        "title": "Auswahl der Arbeitsweise",
+        "url": "grafik/programmstart/auswahlderarbeitsweise",
+        "de": "Auswahl der Arbeitsweise",
+        "it": "Auswahl der Arbeitsweise",
+        "fr": "Auswahl der Arbeitsweise",
+        "items": null
+      },
+      {
+        "title": "Beenden der Anwendung",
+        "url": "grafik/programmstart/anwendungbeenden",
+        "de": "Beenden der Anwendung",
+        "it": "Beenden der Anwendung",
+        "fr": "Beenden der Anwendung",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Dokumente",
+    "url": "dokumente",
+    "de": "Dokumente",
+    "it": "Dokumente",
+    "fr": "Dokumente",
+    "items": [
+      {
+        "title": "Dokumente",
+        "url": "grafik/dokumente/allgemein",
+        "de": "Dokumente",
+        "it": "Dokumente",
+        "fr": "Dokumente",
+        "items": null
+      },
+      {
+        "title": "Dokument neu",
+        "url": "grafik/dokumente/neu",
+        "de": "Dokument neu",
+        "it": "Dokument neu",
+        "fr": "Dokument neu",
+        "items": null
+      },
+      {
+        "title": "Dokument neu mit Assistent",
+        "url": "grafik/dokumente/neumitassistent",
+        "de": "Dokument neu mit Assistent",
+        "it": "Dokument neu mit Assistent",
+        "fr": "Dokument neu mit Assistent",
+        "items": null
+      },
+      {
+        "title": "Dokument öffnen",
+        "url": "grafik/dokumente/oeffnen",
+        "de": "Dokument öffnen",
+        "it": "Dokument öffnen",
+        "fr": "Dokument öffnen",
+        "items": null
+      },
+      {
+        "title": "Zuletzt verwendete Dokumente öffnen",
+        "url": "grafik/dokumente/zuletztverwendet",
+        "de": "Zuletzt verwendete Dokumente öffnen",
+        "it": "Zuletzt verwendete Dokumente öffnen",
+        "fr": "Zuletzt verwendete Dokumente öffnen",
+        "items": null
+      },
+      {
+        "title": "Dokument schließen",
+        "url": "grafik/dokumente/schliessen",
+        "de": "Dokument schließen",
+        "it": "Dokument schließen",
+        "fr": "Dokument schließen",
+        "items": null
+      },
+      {
+        "title": "Dokument speichern",
+        "url": "grafik/dokumente/speichern",
+        "de": "Dokument speichern",
+        "it": "Dokument speichern",
+        "fr": "Dokument speichern",
+        "items": null
+      },
+      {
+        "title": "Dokument speichern unter",
+        "url": "grafik/dokumente/speichernunter",
+        "de": "Dokument speichern unter",
+        "it": "Dokument speichern unter",
+        "fr": "Dokument speichern unter",
+        "items": null
+      },
+      {
+        "title": "Druckassistent starten",
+        "url": "grafik/dokumente/druckassistentstarten",
+        "de": "Druckassistent starten",
+        "it": "Druckassistent starten",
+        "fr": "Druckassistent starten",
+        "items": null
+      },
+      {
+        "title": "Dokument senden",
+        "url": "grafik/dokumente/archivieren",
+        "de": "Dokument senden",
+        "it": "Dokument senden",
+        "fr": "Dokument senden",
+        "items": null
+      },
+      {
+        "title": "Dokumenteigenschaften",
+        "url": "grafik/dokumente/dokumenteigenschaften",
+        "de": "Dokumenteigenschaften",
+        "it": "Dokumenteigenschaften",
+        "fr": "Dokumenteigenschaften",
+        "items": null
+      },
+      {
+        "title": "Programmeinstellungen",
+        "url": "grafik/dokumente/programmeinstellungen",
+        "de": "Programmeinstellungen",
+        "it": "Programmeinstellungen",
+        "fr": "Programmeinstellungen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Analyse",
+    "url": "analyse",
+    "de": "Analyse",
+    "it": "Analyse",
+    "fr": "Analyse",
+    "items": [
+      {
+        "title": "Analysefunktionen",
+        "url": "grafik/analyse/allgemein",
+        "de": "Analysefunktionen",
+        "it": "Analysefunktionen",
+        "fr": "Analysefunktionen",
+        "items": null
+      },
+      {
+        "title": "Fläche aus Teilfläche erzeugen",
+        "url": "grafik/analyse/flaecheausteilflaecheerzeugen",
+        "de": "Fläche aus Teilfläche erzeugen",
+        "it": "Fläche aus Teilfläche erzeugen",
+        "fr": "Fläche aus Teilfläche erzeugen",
+        "items": null
+      },
+      {
+        "title": "Flächen aus Fläche ausschneiden",
+        "url": "grafik/analyse/flaechenausflaecheausschneiden",
+        "de": "Flächen aus Fläche ausschneiden",
+        "it": "Flächen aus Fläche ausschneiden",
+        "fr": "Flächen aus Fläche ausschneiden",
+        "items": null
+      },
+      {
+        "title": "Flächen aus Punkten erzeugen",
+        "url": "grafik/analyse/flaechenauspunktenerstellen",
+        "de": "Flächen aus Punkten erzeugen",
+        "it": "Flächen aus Punkten erzeugen",
+        "fr": "Flächen aus Punkten erzeugen",
+        "items": null
+      },
+      {
+        "title": "Flächen zu Fläche hinzufügen",
+        "url": "grafik/analyse/flaechenzuflaechehinzufuegen",
+        "de": "Flächen zu Fläche hinzufügen",
+        "it": "Flächen zu Fläche hinzufügen",
+        "fr": "Flächen zu Fläche hinzufügen",
+        "items": null
+      },
+      {
+        "title": "Linienzüge aus Flächenumgrenzungen erzeugen",
+        "url": "grafik/analyse/linienzuegeausflaechenumgrenzungerzeugen",
+        "de": "Linienzüge aus Flächenumgrenzungen erzeugen",
+        "it": "Linienzüge aus Flächenumgrenzungen erzeugen",
+        "fr": "Linienzüge aus Flächenumgrenzungen erzeugen",
+        "items": null
+      },
+      {
+        "title": "Objekte zusammenfassen",
+        "url": "grafik/analyse/objektezusammenfassen",
+        "de": "Objekte zusammenfassen",
+        "it": "Objekte zusammenfassen",
+        "fr": "Objekte zusammenfassen",
+        "items": null
+      },
+      {
+        "title": "Objekte über Verschneidung erzeugen",
+        "url": "grafik/analyse/objekteueberverschneidungerzeugen",
+        "de": "Objekte über Verschneidung erzeugen",
+        "it": "Objekte über Verschneidung erzeugen",
+        "fr": "Objekte über Verschneidung erzeugen",
+        "items": null
+      },
+      {
+        "title": "Objekte über Verschneidung selektieren",
+        "url": "grafik/analyse/objekteueberverschneidungselektieren",
+        "de": "Objekte über Verschneidung selektieren",
+        "it": "Objekte über Verschneidung selektieren",
+        "fr": "Objekte über Verschneidung selektieren",
+        "items": null
+      },
+      {
+        "title": "Puffer erzeugen",
+        "url": "grafik/analyse/puffererzeugen",
+        "de": "Puffer erzeugen",
+        "it": "Puffer erzeugen",
+        "fr": "Puffer erzeugen",
+        "items": null
+      },
+      {
+        "title": "Sachdaten übernehmen",
+        "url": "grafik/analyse/sachdatenuebernehmen",
+        "de": "Sachdaten übernehmen",
+        "it": "Sachdaten übernehmen",
+        "fr": "Sachdaten übernehmen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Ansicht",
+    "url": "ansicht",
+    "de": "Ansicht",
+    "it": "Ansicht",
+    "fr": "Ansicht",
+    "items": [
+      {
+        "title": "Aktivitätenfenster ein/ausblenden",
+        "url": "grafik/ansicht/aktivitaetenfenstereinausblenden",
+        "de": "Aktivitätenfenster ein/ausblenden",
+        "it": "Aktivitätenfenster ein/ausblenden",
+        "fr": "Aktivitätenfenster ein/ausblenden",
+        "items": null
+      },
+      {
+        "title": "Als Lesezeichen hinzufügen",
+        "url": "grafik/ansicht/alslesezeichenhinzufuegen",
+        "de": "Als Lesezeichen hinzufügen",
+        "it": "Als Lesezeichen hinzufügen",
+        "fr": "Als Lesezeichen hinzufügen",
+        "items": null
+      },
+      {
+        "title": "Darstellungsmanager ein/ausblenden",
+        "url": "grafik/ansicht/darstellungsmanagereinausblenden",
+        "de": "Darstellungsmanager ein/ausblenden",
+        "it": "Darstellungsmanager ein/ausblenden",
+        "fr": "Darstellungsmanager ein/ausblenden",
+        "items": null
+      },
+      {
+        "title": "Gesamte Karte anzeigen",
+        "url": "grafik/ansicht/gesamtekarteanzeigen",
+        "de": "Gesamte Karte anzeigen",
+        "it": "Gesamte Karte anzeigen",
+        "fr": "Gesamte Karte anzeigen",
+        "items": null
+      },
+      {
+        "title": "Kartenausschnitt vergrößern",
+        "url": "grafik/ansicht/kartenausschnittvergroessern",
+        "de": "Kartenausschnitt vergrößern",
+        "it": "Kartenausschnitt vergrößern",
+        "fr": "Kartenausschnitt vergrößern",
+        "items": null
+      },
+      {
+        "title": "Kartenausschnitt vergrößern/verkleinern",
+        "url": "grafik/ansicht/kartenausschnittvergroessernverkleinern",
+        "de": "Kartenausschnitt vergrößern/verkleinern",
+        "it": "Kartenausschnitt vergrößern/verkleinern",
+        "fr": "Kartenausschnitt vergrößern/verkleinern",
+        "items": null
+      },
+      {
+        "title": "Kartenausschnitt verschieben",
+        "url": "grafik/ansicht/kartenausschnittverschieben",
+        "de": "Kartenausschnitt verschieben",
+        "it": "Kartenausschnitt verschieben",
+        "fr": "Kartenausschnitt verschieben",
+        "items": null
+      },
+      {
+        "title": "Lesezeichenmanager öffnen",
+        "url": "grafik/ansicht/lesezeichenmanageroeffnen",
+        "de": "Lesezeichenmanager öffnen",
+        "it": "Lesezeichenmanager öffnen",
+        "fr": "Lesezeichenmanager öffnen",
+        "items": null
+      },
+      {
+        "title": "Messmanager ein/ausblenden",
+        "url": "grafik/ansicht/messmanagereinausblenden",
+        "de": "Messmanager ein/ausblenden",
+        "it": "Messmanager ein/ausblenden",
+        "fr": "Messmanager ein/ausblenden",
+        "items": null
+      },
+      {
+        "title": "Objektinformationen ein/ausblenden",
+        "url": "grafik/ansicht/objektinformationeneinausblenden",
+        "de": "Objektinformationen ein/ausblenden",
+        "it": "Objektinformationen ein/ausblenden",
+        "fr": "Objektinformationen ein/ausblenden",
+        "items": null
+      },
+      {
+        "title": "Startansicht festlegen",
+        "url": "grafik/ansicht/startuebersichtfestlegen",
+        "de": "Startansicht festlegen",
+        "it": "Startansicht festlegen",
+        "fr": "Startansicht festlegen",
+        "items": null
+      },
+      {
+        "title": "Startansicht löschen",
+        "url": "grafik/ansicht/startuebersichtloeschen",
+        "de": "Startansicht löschen",
+        "it": "Startansicht löschen",
+        "fr": "Startansicht löschen",
+        "items": null
+      },
+      {
+        "title": "Tabellenansicht ein/ausblenden",
+        "url": "grafik/ansicht/tabellenansichteinausblenden",
+        "de": "Tabellenansicht ein/ausblenden",
+        "it": "Tabellenansicht ein/ausblenden",
+        "fr": "Tabellenansicht ein/ausblenden",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Bearbeitungsmodus",
+    "url": "bearbeitungsmodus",
+    "de": "Bearbeitungsmodus",
+    "it": "Bearbeitungsmodus",
+    "fr": "Bearbeitungsmodus",
+    "items": [
+    ]
+  },
+  {
+    "title": "Bemassen",
+    "url": "bemassen",
+    "de": "Bemassen",
+    "it": "Bemassen",
+    "fr": "Bemassen",
+    "items": [
+    ]
+  },
+  {
+    "title": "Darstellungsmanager",
+    "url": "darstellungsmanager",
+    "de": "Darstellungsmanager",
+    "it": "Darstellungsmanager",
+    "fr": "Darstellungsmanager",
+    "items": [
+      {
+        "title": "Darstellungsmanager",
+        "url": "grafik/darstellungsmanager/allgemein",
+        "de": "Darstellungsmanager",
+        "it": "Darstellungsmanager",
+        "fr": "Darstellungsmanager",
+        "items": null
+      },
+      {
+        "title": "Anzeigereihenfolge festlegen",
+        "url": "grafik/darstellungsmanager/anzeigereihenfolge",
+        "de": "Anzeigereihenfolge festlegen",
+        "it": "Anzeigereihenfolge festlegen",
+        "fr": "Anzeigereihenfolge festlegen",
+        "items": null
+      },
+      {
+        "title": "Anzeigestatus",
+        "url": "grafik/darstellungsmanager/anzeigestatus",
+        "de": "Anzeigestatus",
+        "it": "Anzeigestatus",
+        "fr": "Anzeigestatus",
+        "items": null
+      },
+      {
+        "title": "Filtern von Objektklassen",
+        "url": "grafik/darstellungsmanager/filterungvonfeatureklassen",
+        "de": "Filtern von Objektklassen",
+        "it": "Filtern von Objektklassen",
+        "fr": "Filtern von Objektklassen",
+        "items": null
+      },
+      {
+        "title": "Sichtbarkeit schalten",
+        "url": "grafik/darstellungsmanager/sichtbarkeitschalten",
+        "de": "Sichtbarkeit schalten",
+        "it": "Sichtbarkeit schalten",
+        "fr": "Sichtbarkeit schalten",
+        "items": null
+      },
+      {
+        "title": "Styling-Definition in Datei speichern",
+        "url": "grafik/darstellungsmanager/stylingexportieren",
+        "de": "Styling-Definition in Datei speichern",
+        "it": "Styling-Definition in Datei speichern",
+        "fr": "Styling-Definition in Datei speichern",
+        "items": null
+      },
+      {
+        "title": "Styling Flächenwidmungsplan Burgenland",
+        "url": "grafik/darstellungsmanager/stylingflaewiburgenland",
+        "de": "Styling Flächenwidmungsplan Burgenland",
+        "it": "Styling Flächenwidmungsplan Burgenland",
+        "fr": "Styling Flächenwidmungsplan Burgenland",
+        "items": null
+      },
+      {
+        "title": "Styling Flächenwidmungsplan Kärnten",
+        "url": "grafik/darstellungsmanager/stylingflaewikaernten",
+        "de": "Styling Flächenwidmungsplan Kärnten",
+        "it": "Styling Flächenwidmungsplan Kärnten",
+        "fr": "Styling Flächenwidmungsplan Kärnten",
+        "items": null
+      },
+      {
+        "title": "Styling Flächenwidmungsplan Oberösterreich",
+        "url": "grafik/darstellungsmanager/stylingflaewioberoesterreich",
+        "de": "Styling Flächenwidmungsplan Oberösterreich",
+        "it": "Styling Flächenwidmungsplan Oberösterreich",
+        "fr": "Styling Flächenwidmungsplan Oberösterreich",
+        "items": null
+      },
+      {
+        "title": "Styling Flächenwidmungsplan Steiermark",
+        "url": "grafik/darstellungsmanager/stylingflaewisteiermark",
+        "de": "Styling Flächenwidmungsplan Steiermark",
+        "it": "Styling Flächenwidmungsplan Steiermark",
+        "fr": "Styling Flächenwidmungsplan Steiermark",
+        "items": null
+      },
+      {
+        "title": "Styling-Definition aus Datei laden",
+        "url": "grafik/darstellungsmanager/stylingimportieren",
+        "de": "Styling-Definition aus Datei laden",
+        "it": "Styling-Definition aus Datei laden",
+        "fr": "Styling-Definition aus Datei laden",
+        "items": null
+      },
+      {
+        "title": "Styling OpenStreetMap Daten",
+        "url": "grafik/darstellungsmanager/stylingopenstreetmap",
+        "de": "Styling OpenStreetMap Daten",
+        "it": "Styling OpenStreetMap Daten",
+        "fr": "Styling OpenStreetMap Daten",
+        "items": null
+      },
+      {
+        "title": "Zoom auf Objektklasse",
+        "url": "grafik/darstellungsmanager/zoomauffeatureklasse",
+        "de": "Zoom auf Objektklasse",
+        "it": "Zoom auf Objektklasse",
+        "fr": "Zoom auf Objektklasse",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Daten",
+    "url": "daten",
+    "de": "Daten",
+    "it": "Daten",
+    "fr": "Daten",
+    "items": [
+      {
+        "title": "Basiskarte hinzufügen",
+        "url": "grafik/daten/basiskartehinzufuegen",
+        "de": "Basiskarte hinzufügen",
+        "it": "Basiskarte hinzufügen",
+        "fr": "Basiskarte hinzufügen",
+        "items": null
+      },
+      {
+        "title": "Datei hinzufügen",
+        "url": "grafik/daten/dateihinzufuegen",
+        "de": "Datei hinzufügen",
+        "it": "Datei hinzufügen",
+        "fr": "Datei hinzufügen",
+        "items": null
+      },
+      {
+        "title": "Daten exportieren",
+        "url": "grafik/daten/datenexportieren",
+        "de": "Daten exportieren",
+        "it": "Daten exportieren",
+        "fr": "Daten exportieren",
+        "items": null
+      },
+      {
+        "title": "Daten importieren",
+        "url": "grafik/daten/datenimportieren",
+        "de": "Daten importieren",
+        "it": "Daten importieren",
+        "fr": "Daten importieren",
+        "items": null
+      },
+      {
+        "title": "Datenquelle einpassen",
+        "url": "grafik/daten/datenquelleeinpassen",
+        "de": "Datenquelle einpassen",
+        "it": "Datenquelle einpassen",
+        "fr": "Datenquelle einpassen",
+        "items": null
+      },
+      {
+        "title": "Datenquellenmanager öffnen",
+        "url": "grafik/daten/datenquellenmanageroeffnen",
+        "de": "Datenquellenmanager öffnen",
+        "it": "Datenquellenmanager öffnen",
+        "fr": "Datenquellenmanager öffnen",
+        "items": null
+      },
+      {
+        "title": "Grafik in die Zwischenablage kopieren",
+        "url": "grafik/daten/grafikindiezwischenablagekopieren",
+        "de": "Grafik in die Zwischenablage kopieren",
+        "it": "Grafik in die Zwischenablage kopieren",
+        "fr": "Grafik in die Zwischenablage kopieren",
+        "items": null
+      },
+      {
+        "title": "Import ASCII",
+        "url": "grafik/daten",
+        "de": "Import ASCII",
+        "it": "Import ASCII",
+        "fr": "Import ASCII",
+        "items": [
+          {
+            "title": "Import ASCII",
+            "url": "grafik/daten/importascii",
+            "de": "Import ASCII",
+            "it": "Import ASCII",
+            "fr": "Import ASCII",
+            "items": null
+          },
+          {
+            "title": "Mapping-Assistent ASCII Import",
+            "url": "grafik/daten/importascii2",
+            "de": "Mapping-Assistent ASCII Import",
+            "it": "Mapping-Assistent ASCII Import",
+            "fr": "Mapping-Assistent ASCII Import",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Import Autodesk DWG",
+        "url": "grafik/daten",
+        "de": "Import Autodesk DWG",
+        "it": "Import Autodesk DWG",
+        "fr": "Import Autodesk DWG",
+        "items": [
+          {
+            "title": "Import Autodesk DWG/DXF",
+            "url": "grafik/daten/importautodeskdwg",
+            "de": "Import Autodesk DWG/DXF",
+            "it": "Import Autodesk DWG/DXF",
+            "fr": "Import Autodesk DWG/DXF",
+            "items": null
+          },
+          {
+            "title": "Mapping-Assistent Autodesk Import",
+            "url": "grafik/daten/importautodeskdwg2",
+            "de": "Mapping-Assistent Autodesk Import",
+            "it": "Mapping-Assistent Autodesk Import",
+            "fr": "Mapping-Assistent Autodesk Import",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Import Esri Shape",
+        "url": "grafik/daten",
+        "de": "Import Esri Shape",
+        "it": "Import Esri Shape",
+        "fr": "Import Esri Shape",
+        "items": [
+          {
+            "title": "Import Esri Shape",
+            "url": "grafik/daten/importesrishape",
+            "de": "Import Esri Shape",
+            "it": "Import Esri Shape",
+            "fr": "Import Esri Shape",
+            "items": null
+          },
+          {
+            "title": "Mapping-Assistent Esri Shape Import",
+            "url": "grafik/daten/importesrishape2",
+            "de": "Mapping-Assistent Esri Shape Import",
+            "it": "Mapping-Assistent Esri Shape Import",
+            "fr": "Mapping-Assistent Esri Shape Import",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Schnittstelle IGLIS",
+        "url": "grafik/daten/importiglis",
+        "de": "Schnittstelle IGLIS",
+        "it": "Schnittstelle IGLIS",
+        "fr": "Schnittstelle IGLIS",
+        "items": null
+      },
+      {
+        "title": "Import Post-Anhang-A DXF",
+        "url": "grafik/daten/importpostanhangadxf",
+        "de": "Import Post-Anhang-A DXF",
+        "it": "Import Post-Anhang-A DXF",
+        "fr": "Import Post-Anhang-A DXF",
+        "items": null
+      },
+      {
+        "title": "Import rmDATA XML",
+        "url": "grafik/daten",
+        "de": "Import rmDATA XML",
+        "it": "Import rmDATA XML",
+        "fr": "Import rmDATA XML",
+        "items": [
+          {
+            "title": "Import rmDATA XML",
+            "url": "grafik/daten/importrmdataxml",
+            "de": "Import rmDATA XML",
+            "it": "Import rmDATA XML",
+            "fr": "Import rmDATA XML",
+            "items": null
+          },
+          {
+            "title": "Mapping-Assistent rmDATA XML Import",
+            "url": "grafik/daten/importrmdataxml2",
+            "de": "Mapping-Assistent rmDATA XML Import",
+            "it": "Mapping-Assistent rmDATA XML Import",
+            "fr": "Mapping-Assistent rmDATA XML Import",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Import rmGEO/Codegrafik",
+        "url": "grafik/daten/importrmgeocodegrafik",
+        "de": "Import rmGEO/Codegrafik",
+        "it": "Import rmGEO/Codegrafik",
+        "fr": "Import rmGEO/Codegrafik",
+        "items": null
+      },
+      {
+        "title": "Import rmGEO Punkte",
+        "url": "grafik/daten/importrmgeopunkte",
+        "de": "Import rmGEO Punkte",
+        "it": "Import rmGEO Punkte",
+        "fr": "Import rmGEO Punkte",
+        "items": null
+      },
+      {
+        "title": "Import Sachdaten",
+        "url": "grafik/daten",
+        "de": "Import Sachdaten",
+        "it": "Import Sachdaten",
+        "fr": "Import Sachdaten",
+        "items": [
+          {
+            "title": "Sachdaten aus ASCII Daten importieren",
+            "url": "grafik/daten/importsachdaten",
+            "de": "Sachdaten aus ASCII Daten importieren",
+            "it": "Sachdaten aus ASCII Daten importieren",
+            "fr": "Sachdaten aus ASCII Daten importieren",
+            "items": null
+          },
+          {
+            "title": "Mapping-Assistent Sachdaten aus ASCII Daten importieren",
+            "url": "grafik/daten/importsachdaten2",
+            "de": "Mapping-Assistent Sachdaten aus ASCII Daten importieren",
+            "it": "Mapping-Assistent Sachdaten aus ASCII Daten importieren",
+            "fr": "Mapping-Assistent Sachdaten aus ASCII Daten importieren",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Koordinaten suchen",
+        "url": "grafik/daten/koordinatensuchen",
+        "de": "Koordinaten suchen",
+        "it": "Koordinaten suchen",
+        "fr": "Koordinaten suchen",
+        "items": null
+      },
+      {
+        "title": "Objekte über Polygon selektieren",
+        "url": "grafik/daten/objekteueberpolygonselektieren",
+        "de": "Objekte über Polygon selektieren",
+        "it": "Objekte über Polygon selektieren",
+        "fr": "Objekte über Polygon selektieren",
+        "items": null
+      },
+      {
+        "title": "Schnellsuche starten",
+        "url": "grafik/daten/schnellsuchestarten",
+        "de": "Schnellsuche starten",
+        "it": "Schnellsuche starten",
+        "fr": "Schnellsuche starten",
+        "items": null
+      },
+      {
+        "title": "Selektion in Tabellenansicht anzeigen",
+        "url": "grafik/daten/selektionintabellenansichtanzeigen",
+        "de": "Selektion in Tabellenansicht anzeigen",
+        "it": "Selektion in Tabellenansicht anzeigen",
+        "fr": "Selektion in Tabellenansicht anzeigen",
+        "items": null
+      },
+      {
+        "title": "Styling exportieren",
+        "url": "grafik/daten/stylingexportieren",
+        "de": "Styling exportieren",
+        "it": "Styling exportieren",
+        "fr": "Styling exportieren",
+        "items": null
+      },
+      {
+        "title": "Suchmanager öffnen",
+        "url": "grafik/daten/suchmanageroeffnen",
+        "de": "Suchmanager öffnen",
+        "it": "Suchmanager öffnen",
+        "fr": "Suchmanager öffnen",
+        "items": null
+      },
+      {
+        "title": "Thematische Karte bearbeiten",
+        "url": "grafik/daten/thematischekartebearbeiten",
+        "de": "Thematische Karte bearbeiten",
+        "it": "Thematische Karte bearbeiten",
+        "fr": "Thematische Karte bearbeiten",
+        "items": null
+      },
+      {
+        "title": "Thematische Karte hinzufügen",
+        "url": "grafik/daten/thematischekartehinzufuegen",
+        "de": "Thematische Karte hinzufügen",
+        "it": "Thematische Karte hinzufügen",
+        "fr": "Thematische Karte hinzufügen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Daten importieren",
+    "url": "daten importieren",
+    "de": "Daten importieren",
+    "it": "Daten importieren",
+    "fr": "Daten importieren",
+    "items": [
+    ]
+  },
+  {
+    "title": "Datenquellenmanager",
+    "url": "datenquellenmanager",
+    "de": "Datenquellenmanager",
+    "it": "Datenquellenmanager",
+    "fr": "Datenquellenmanager",
+    "items": [
+      {
+        "title": "Datenquellenmanager",
+        "url": "grafik/datenquellenmanager/allgemein",
+        "de": "Datenquellenmanager",
+        "it": "Datenquellenmanager",
+        "fr": "Datenquellenmanager",
+        "items": null
+      },
+      {
+        "title": "Datei hinzufügen",
+        "url": "grafik/datenquellenmanager/featureklasse_hinzufuegen",
+        "de": "Datei hinzufügen",
+        "it": "Datei hinzufügen",
+        "fr": "Datei hinzufügen",
+        "items": null
+      },
+      {
+        "title": "Neue Geodatabase anlegen",
+        "url": "grafik/datenquellenmanager/neuegeodbanlegen",
+        "de": "Neue Geodatabase anlegen",
+        "it": "Neue Geodatabase anlegen",
+        "fr": "Neue Geodatabase anlegen",
+        "items": null
+      },
+      {
+        "title": "Verbindungseinstellungen",
+        "url": "grafik/datenquellenmanager",
+        "de": "Verbindungseinstellungen",
+        "it": "Verbindungseinstellungen",
+        "fr": "Verbindungseinstellungen",
+        "items": [
+          {
+            "title": "Verbindungseinstellungen",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen",
+            "de": "Verbindungseinstellungen",
+            "it": "Verbindungseinstellungen",
+            "fr": "Verbindungseinstellungen",
+            "items": null
+          },
+          {
+            "title": "rmDATA Private Geodatabase",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen2",
+            "de": "rmDATA Private Geodatabase",
+            "it": "rmDATA Private Geodatabase",
+            "fr": "rmDATA Private Geodatabase",
+            "items": null
+          },
+          {
+            "title": "Esri Shape",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen3",
+            "de": "Esri Shape",
+            "it": "Esri Shape",
+            "fr": "Esri Shape",
+            "items": null
+          },
+          {
+            "title": "Autodesk DXF",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen4",
+            "de": "Autodesk DXF",
+            "it": "Autodesk DXF",
+            "fr": "Autodesk DXF",
+            "items": null
+          },
+          {
+            "title": "Autodesk DWG",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen5",
+            "de": "Autodesk DWG",
+            "it": "Autodesk DWG",
+            "fr": "Autodesk DWG",
+            "items": null
+          },
+          {
+            "title": "Raster",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen6",
+            "de": "Raster",
+            "it": "Raster",
+            "fr": "Raster",
+            "items": null
+          },
+          {
+            "title": "Web Map Service",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen7",
+            "de": "Web Map Service",
+            "it": "Web Map Service",
+            "fr": "Web Map Service",
+            "items": null
+          },
+          {
+            "title": "Web Map Tile Service",
+            "url": "grafik/datenquellenmanager/verbindungseinstellungen8",
+            "de": "Web Map Tile Service",
+            "it": "Web Map Tile Service",
+            "fr": "Web Map Tile Service",
+            "items": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "DKM-Import",
+    "url": "dkm-import",
+    "de": "DKM-Import",
+    "it": "DKM-Import",
+    "fr": "DKM-Import",
+    "items": [
+    ]
+  },
+  {
+    "title": "Drucken",
+    "url": "drucken",
+    "de": "Drucken",
+    "it": "Drucken",
+    "fr": "Drucken",
+    "items": [
+      {
+        "title": "Drucken",
+        "url": "grafik/drucken/allgemein",
+        "de": "Drucken",
+        "it": "Drucken",
+        "fr": "Drucken",
+        "items": null
+      },
+      {
+        "title": "Erweiterte Optionen",
+        "url": "grafik/drucken/druck-stil-tabelleauswaehlen",
+        "de": "Erweiterte Optionen",
+        "it": "Erweiterte Optionen",
+        "fr": "Erweiterte Optionen",
+        "items": null
+      },
+      {
+        "title": "Druckassistent starten",
+        "url": "grafik/drucken/druckassistent",
+        "de": "Druckassistent starten",
+        "it": "Druckassistent starten",
+        "fr": "Druckassistent starten",
+        "items": null
+      },
+      {
+        "title": "Druckbereich ändern",
+        "url": "grafik/drucken/druckbereichaendern",
+        "de": "Druckbereich ändern",
+        "it": "Druckbereich ändern",
+        "fr": "Druckbereich ändern",
+        "items": null
+      },
+      {
+        "title": "Druckbereich - Position",
+        "url": "grafik/drucken/druckbereich-position",
+        "de": "Druckbereich - Position",
+        "it": "Druckbereich - Position",
+        "fr": "Druckbereich - Position",
+        "items": null
+      },
+      {
+        "title": "Druckeinstellungen",
+        "url": "grafik/drucken/druckeinstellungen",
+        "de": "Druckeinstellungen",
+        "it": "Druckeinstellungen",
+        "fr": "Druckeinstellungen",
+        "items": null
+      },
+      {
+        "title": "Druckvorschau",
+        "url": "grafik/drucken/druckvorschau",
+        "de": "Druckvorschau",
+        "it": "Druckvorschau",
+        "fr": "Druckvorschau",
+        "items": null
+      },
+      {
+        "title": "Zusatzinformationen",
+        "url": "grafik/drucken/zusatzinformationen",
+        "de": "Zusatzinformationen",
+        "it": "Zusatzinformationen",
+        "fr": "Zusatzinformationen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Drucklayout - Editor",
+    "url": "drucklayout - editor",
+    "de": "Drucklayout - Editor",
+    "it": "Drucklayout - Editor",
+    "fr": "Drucklayout - Editor",
+    "items": [
+    ]
+  },
+  {
+    "title": "Druckstil-Tabellen - Editor",
+    "url": "druckstil-tabellen - editor",
+    "de": "Druckstil-Tabellen - Editor",
+    "it": "Druckstil-Tabellen - Editor",
+    "fr": "Druckstil-Tabellen - Editor",
+    "items": [
+    ]
+  },
+  {
+    "title": "DWG-Export",
+    "url": "dwg-export",
+    "de": "DWG-Export",
+    "it": "DWG-Export",
+    "fr": "DWG-Export",
+    "items": [
+      {
+        "title": "Daten als Autodesk DWG Datei exportieren",
+        "url": "grafik/dwg-export/allgemein",
+        "de": "Daten als Autodesk DWG Datei exportieren",
+        "it": "Daten als Autodesk DWG Datei exportieren",
+        "fr": "Daten als Autodesk DWG Datei exportieren",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "DXF-Export",
+    "url": "dxf-export",
+    "de": "DXF-Export",
+    "it": "DXF-Export",
+    "fr": "DXF-Export",
+    "items": [
+      {
+        "title": "Bildschirmausschnitt als DXF exportieren",
+        "url": "grafik/dxf-export/allgemein",
+        "de": "Bildschirmausschnitt als DXF exportieren",
+        "it": "Bildschirmausschnitt als DXF exportieren",
+        "fr": "Bildschirmausschnitt als DXF exportieren",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Einstellungen",
+    "url": "einstellungen",
+    "de": "Einstellungen",
+    "it": "Einstellungen",
+    "fr": "Einstellungen",
+    "items": [
+      {
+        "title": "Programmeinstellungen",
+        "url": "grafik/einstellungen/benutzereinstellungen",
+        "de": "Programmeinstellungen",
+        "it": "Programmeinstellungen",
+        "fr": "Programmeinstellungen",
+        "items": null
+      },
+      {
+        "title": "Dokumenteigenschaften",
+        "url": "grafik/einstellungen/dokumenteneinstellungen",
+        "de": "Dokumenteigenschaften",
+        "it": "Dokumenteigenschaften",
+        "fr": "Dokumenteigenschaften",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale A1 Lageplan",
+    "url": "fachschale a1 lageplan",
+    "de": "Fachschale A1 Lageplan",
+    "it": "Fachschale A1 Lageplan",
+    "fr": "Fachschale A1 Lageplan",
+    "items": [
+      {
+        "title": "Auswurfeditor",
+        "url": "grafik/fachschalea1lageplan/auswurfeditor",
+        "de": "Auswurfeditor",
+        "it": "Auswurfeditor",
+        "fr": "Auswurfeditor",
+        "items": null
+      },
+      {
+        "title": "Konstruktionsmethode Straßenmaß",
+        "url": "grafik/fachschalea1lageplan/konstruktionsmethodestrassenmass",
+        "de": "Konstruktionsmethode Straßenmaß",
+        "it": "Konstruktionsmethode Straßenmaß",
+        "fr": "Konstruktionsmethode Straßenmaß",
+        "items": null
+      },
+      {
+        "title": "Objekte nach TA-Rasterdesign übertragen",
+        "url": "grafik/fachschalea1lageplan/objektenachta-rasterdesignuebertragen",
+        "de": "Objekte nach TA-Rasterdesign übertragen",
+        "it": "Objekte nach TA-Rasterdesign übertragen",
+        "fr": "Objekte nach TA-Rasterdesign übertragen",
+        "items": null
+      },
+      {
+        "title": "Rasterbild einfügen",
+        "url": "grafik/fachschalea1lageplan/rasterbildeinfuegen",
+        "de": "Rasterbild einfügen",
+        "it": "Rasterbild einfügen",
+        "fr": "Rasterbild einfügen",
+        "items": null
+      },
+      {
+        "title": "Rasterbild einpassen",
+        "url": "grafik/fachschalea1lageplan/rasterbildeinpassen",
+        "de": "Rasterbild einpassen",
+        "it": "Rasterbild einpassen",
+        "fr": "Rasterbild einpassen",
+        "items": null
+      },
+      {
+        "title": "Rasterbild mit TA-Rasterdesign erweitern",
+        "url": "grafik/fachschalea1lageplan/rasterbildmitta-rasterdesignerweitern",
+        "de": "Rasterbild mit TA-Rasterdesign erweitern",
+        "it": "Rasterbild mit TA-Rasterdesign erweitern",
+        "fr": "Rasterbild mit TA-Rasterdesign erweitern",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale ASFINAG Pladok",
+    "url": "fachschale asfinag pladok",
+    "de": "Fachschale ASFINAG Pladok",
+    "it": "Fachschale ASFINAG Pladok",
+    "fr": "Fachschale ASFINAG Pladok",
+    "items": [
+      {
+        "title": "Allgemein",
+        "url": "grafik/fachschaleasfinagpladok/allgemein",
+        "de": "Allgemein",
+        "it": "Allgemein",
+        "fr": "Allgemein",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Aufgaben und Dokumente",
+    "url": "fachschale aufgaben und dokumente",
+    "de": "Fachschale Aufgaben und Dokumente",
+    "it": "Fachschale Aufgaben und Dokumente",
+    "fr": "Fachschale Aufgaben und Dokumente",
+    "items": [
+      {
+        "title": "Allgemeines",
+        "url": "grafik/fachschaleaufgabenunddokumente/allgemein",
+        "de": "Allgemeines",
+        "it": "Allgemeines",
+        "fr": "Allgemeines",
+        "items": null
+      },
+      {
+        "title": "Serienaufgaben",
+        "url": "grafik/fachschaleaufgabenunddokumente/aufgabealsserie",
+        "de": "Serienaufgaben",
+        "it": "Serienaufgaben",
+        "fr": "Serienaufgaben",
+        "items": null
+      },
+      {
+        "title": "Aufgaben bearbeiten",
+        "url": "grafik/fachschaleaufgabenunddokumente/aufgabebearbeiten",
+        "de": "Aufgaben bearbeiten",
+        "it": "Aufgaben bearbeiten",
+        "fr": "Aufgaben bearbeiten",
+        "items": null
+      },
+      {
+        "title": "Aufgabe erfassen",
+        "url": "grafik/fachschaleaufgabenunddokumente/aufgabeerfassen",
+        "de": "Aufgabe erfassen",
+        "it": "Aufgabe erfassen",
+        "fr": "Aufgabe erfassen",
+        "items": null
+      },
+      {
+        "title": "Aufgaben synchronisieren",
+        "url": "grafik/fachschaleaufgabenunddokumente/aufgabensynchronisieren",
+        "de": "Aufgaben synchronisieren",
+        "it": "Aufgaben synchronisieren",
+        "fr": "Aufgaben synchronisieren",
+        "items": null
+      },
+      {
+        "title": "Aufgabenassistent",
+        "url": "grafik/fachschaleaufgabenunddokumente/aufgabenassistent",
+        "de": "Aufgabenassistent",
+        "it": "Aufgabenassistent",
+        "fr": "Aufgabenassistent",
+        "items": null
+      },
+      {
+        "title": "Aufgabenmanager",
+        "url": "grafik/fachschaleaufgabenunddokumente/aufgabenmanager",
+        "de": "Aufgabenmanager",
+        "it": "Aufgabenmanager",
+        "fr": "Aufgabenmanager",
+        "items": null
+      },
+      {
+        "title": "Aufgabenübersicht",
+        "url": "grafik/fachschaleaufgabenunddokumente/aufgabenuebersicht",
+        "de": "Aufgabenübersicht",
+        "it": "Aufgabenübersicht",
+        "fr": "Aufgabenübersicht",
+        "items": null
+      },
+      {
+        "title": "Dokumente bearbeiten",
+        "url": "grafik/fachschaleaufgabenunddokumente/dokumentbearbeiten",
+        "de": "Dokumente bearbeiten",
+        "it": "Dokumente bearbeiten",
+        "fr": "Dokumente bearbeiten",
+        "items": null
+      },
+      {
+        "title": "Dokument erfassen",
+        "url": "grafik/fachschaleaufgabenunddokumente/dokumenterfassen",
+        "de": "Dokument erfassen",
+        "it": "Dokument erfassen",
+        "fr": "Dokument erfassen",
+        "items": null
+      },
+      {
+        "title": "Dokumentassistent",
+        "url": "grafik/fachschaleaufgabenunddokumente/dokumentassistent",
+        "de": "Dokumentassistent",
+        "it": "Dokumentassistent",
+        "fr": "Dokumentassistent",
+        "items": null
+      },
+      {
+        "title": "Fachschale aktivieren",
+        "url": "grafik/fachschaleaufgabenunddokumente/fachschaleaktivieren",
+        "de": "Fachschale aktivieren",
+        "it": "Fachschale aktivieren",
+        "fr": "Fachschale aktivieren",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Comm-Unity GeOrg",
+    "url": "fachschale comm-unity georg",
+    "de": "Fachschale Comm-Unity GeOrg",
+    "it": "Fachschale Comm-Unity GeOrg",
+    "fr": "Fachschale Comm-Unity GeOrg",
+    "items": [
+      {
+        "title": "Allgemein",
+        "url": "grafik/fachschalecomm-unitygeorg/allgemein",
+        "de": "Allgemein",
+        "it": "Allgemein",
+        "fr": "Allgemein",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale DBE",
+    "url": "fachschale DBE",
+    "de": "Fachschale DBE",
+    "it": "Fachschale DBE",
+    "fr": "Fachschale DBE",
+    "items": [
+      {
+        "title": "Allgemein",
+        "url": "grafik/fachschaledbe/allgemein",
+        "de": "Allgemein",
+        "it": "Allgemein",
+        "fr": "Allgemein",
+        "items": null
+      },
+      {
+        "title": "Dokument speichern als Vorlage",
+        "url": "grafik/dokumente/speichernalsvorlage",
+        "de": "Dokument speichern als Vorlage",
+        "it": "Dokument speichern als Vorlage",
+        "fr": "Dokument speichern als Vorlage",
+        "items": null
+      },
+      {
+        "title": "Dokument neu von Vorlage",
+        "url": "grafik/dokumente/neuvonvorlage",
+        "de": "Dokument neu von Vorlage",
+        "it": "Dokument neu von Vorlage",
+        "fr": "Dokument neu von Vorlage",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale DV-Fact",
+    "url": "fachschale dv-fact",
+    "de": "Fachschale DV-Fact",
+    "it": "Fachschale DV-Fact",
+    "fr": "Fachschale DV-Fact",
+    "items": [
+      {
+        "title": "Allgemein",
+        "url": "grafik/fachschaledv-fact/allgemein",
+        "de": "Allgemein",
+        "it": "Allgemein",
+        "fr": "Allgemein",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Editieren",
+    "url": "fachschale editieren",
+    "de": "Fachschale Editieren",
+    "it": "Fachschale Editieren",
+    "fr": "Fachschale Editieren",
+    "items": [
+      {
+        "title": "Allgemeines",
+        "url": "grafik/fachschaleeditieren/allgemein",
+        "de": "Allgemeines",
+        "it": "Allgemeines",
+        "fr": "Allgemeines",
+        "items": null
+      },
+      {
+        "title": "Ansicht",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Ansicht",
+        "it": "Ansicht",
+        "fr": "Ansicht",
+        "items": [
+          {
+            "title": "Ansicht",
+            "url": "grafik/fachschaleeditieren/ansicht",
+            "de": "Ansicht",
+            "it": "Ansicht",
+            "fr": "Ansicht",
+            "items": null
+          },
+          {
+            "title": "Temporäre Darstellung einblenden",
+            "url": "grafik/fachschaleeditieren/ansicht2",
+            "de": "Temporäre Darstellung einblenden",
+            "it": "Temporäre Darstellung einblenden",
+            "fr": "Temporäre Darstellung einblenden",
+            "items": null
+          },
+          {
+            "title": "Temporäre Darstellung ausblenden",
+            "url": "grafik/fachschaleeditieren/ansicht3",
+            "de": "Temporäre Darstellung ausblenden",
+            "it": "Temporäre Darstellung ausblenden",
+            "fr": "Temporäre Darstellung ausblenden",
+            "items": null
+          },
+          {
+            "title": "Objektsichtbarkeiten schalten",
+            "url": "grafik/fachschaleeditieren/ansicht4",
+            "de": "Objektsichtbarkeiten schalten",
+            "it": "Objektsichtbarkeiten schalten",
+            "fr": "Objektsichtbarkeiten schalten",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Attributformeln aktivieren",
+        "url": "grafik/fachschaleeditieren/attributformelnaktivieren",
+        "de": "Attributformeln aktivieren",
+        "it": "Attributformeln aktivieren",
+        "fr": "Attributformeln aktivieren",
+        "items": null
+      },
+      {
+        "title": "Regenerieren",
+        "url": "grafik/fachschaleeditieren/bearbeiten",
+        "de": "Regenerieren",
+        "it": "Regenerieren",
+        "fr": "Regenerieren",
+        "items": null
+      },
+      {
+        "title": "Berechnen",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Berechnen",
+        "it": "Berechnen",
+        "fr": "Berechnen",
+        "items": [
+          {
+            "title": "Berechnen",
+            "url": "grafik/fachschaleeditieren/berechnen",
+            "de": "Berechnen",
+            "it": "Berechnen",
+            "fr": "Berechnen",
+            "items": null
+          },
+          {
+            "title": "Bogenschnitt",
+            "url": "grafik/fachschaleeditieren/berechnen2",
+            "de": "Bogenschnitt",
+            "it": "Bogenschnitt",
+            "fr": "Bogenschnitt",
+            "items": null
+          },
+          {
+            "title": "Geradenschnitt",
+            "url": "grafik/fachschaleeditieren/berechnen3",
+            "de": "Geradenschnitt",
+            "it": "Geradenschnitt",
+            "fr": "Geradenschnitt",
+            "items": null
+          },
+          {
+            "title": "Schnitt Kreis Gerade",
+            "url": "grafik/fachschaleeditieren/berechnen4",
+            "de": "Schnitt Kreis Gerade",
+            "it": "Schnitt Kreis Gerade",
+            "fr": "Schnitt Kreis Gerade",
+            "items": null
+          },
+          {
+            "title": "Kleinpunkte",
+            "url": "grafik/fachschaleeditieren/berechnen5",
+            "de": "Kleinpunkte",
+            "it": "Kleinpunkte",
+            "fr": "Kleinpunkte",
+            "items": null
+          },
+          {
+            "title": "Lotfußpunkt",
+            "url": "grafik/fachschaleeditieren/berechnen6",
+            "de": "Lotfußpunkt",
+            "it": "Lotfußpunkt",
+            "fr": "Lotfußpunkt",
+            "items": null
+          },
+          {
+            "title": "Polarpunkt",
+            "url": "grafik/fachschaleeditieren/berechnen7",
+            "de": "Polarpunkt",
+            "it": "Polarpunkt",
+            "fr": "Polarpunkt",
+            "items": null
+          },
+          {
+            "title": "Höhenableitung",
+            "url": "grafik/fachschaleeditieren/berechnen8",
+            "de": "Höhenableitung",
+            "it": "Höhenableitung",
+            "fr": "Höhenableitung",
+            "items": null
+          },
+          {
+            "title": "Interpolation",
+            "url": "grafik/fachschaleeditieren/berechnen9",
+            "de": "Interpolation",
+            "it": "Interpolation",
+            "fr": "Interpolation",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Bereinigen",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Bereinigen",
+        "it": "Bereinigen",
+        "fr": "Bereinigen",
+        "items": [
+          {
+            "title": "Bereinigungsfunktionen",
+            "url": "grafik/fachschaleeditieren/bereinigen",
+            "de": "Bereinigungsfunktionen",
+            "it": "Bereinigungsfunktionen",
+            "fr": "Bereinigungsfunktionen",
+            "items": null
+          },
+          {
+            "title": "Punkthaufenbereinigung",
+            "url": "grafik/fachschaleeditieren/bereinigen2",
+            "de": "Punkthaufenbereinigung",
+            "it": "Punkthaufenbereinigung",
+            "fr": "Punkthaufenbereinigung",
+            "items": null
+          },
+          {
+            "title": "Punkt auf Segment",
+            "url": "grafik/fachschaleeditieren/bereinigen3",
+            "de": "Punkt auf Segment",
+            "it": "Punkt auf Segment",
+            "fr": "Punkt auf Segment",
+            "items": null
+          },
+          {
+            "title": "Kreuzende Segmente aufbrechen",
+            "url": "grafik/fachschaleeditieren/bereinigen4",
+            "de": "Kreuzende Segmente aufbrechen",
+            "it": "Kreuzende Segmente aufbrechen",
+            "fr": "Kreuzende Segmente aufbrechen",
+            "items": null
+          },
+          {
+            "title": "Knoten-Kanten Topologie",
+            "url": "grafik/fachschaleeditieren/bereinigen5",
+            "de": "Knoten-Kanten Topologie",
+            "it": "Knoten-Kanten Topologie",
+            "fr": "Knoten-Kanten Topologie",
+            "items": null
+          },
+          {
+            "title": "Schnitt entfernen",
+            "url": "grafik/fachschaleeditieren/bereinigen6",
+            "de": "Schnitt entfernen",
+            "it": "Schnitt entfernen",
+            "fr": "Schnitt entfernen",
+            "items": null
+          },
+          {
+            "title": "Idente Objekte",
+            "url": "grafik/fachschaleeditieren/bereinigen7",
+            "de": "Idente Objekte",
+            "it": "Idente Objekte",
+            "fr": "Idente Objekte",
+            "items": null
+          },
+          {
+            "title": "Stützpunkte ausdünnen",
+            "url": "grafik/fachschaleeditieren/bereinigen8",
+            "de": "Stützpunkte ausdünnen",
+            "it": "Stützpunkte ausdünnen",
+            "fr": "Stützpunkte ausdünnen",
+            "items": null
+          },
+          {
+            "title": "Geometrische Bereinigung",
+            "url": "grafik/fachschaleeditieren/bereinigen9",
+            "de": "Geometrische Bereinigung",
+            "it": "Geometrische Bereinigung",
+            "fr": "Geometrische Bereinigung",
+            "items": null
+          },
+          {
+            "title": "Bereinigungsassistent",
+            "url": "grafik/fachschaleeditieren/bereinigen10",
+            "de": "Bereinigungsassistent",
+            "it": "Bereinigungsassistent",
+            "fr": "Bereinigungsassistent",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Beschriften",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Beschriften",
+        "it": "Beschriften",
+        "fr": "Beschriften",
+        "items": [
+          {
+            "title": "Beschriftungen",
+            "url": "grafik/fachschaleeditieren/beschriften",
+            "de": "Beschriftungen",
+            "it": "Beschriftungen",
+            "fr": "Beschriftungen",
+            "items": null
+          },
+          {
+            "title": "Beschriftung einfügen",
+            "url": "grafik/fachschaleeditieren/beschriften2",
+            "de": "Beschriftung einfügen",
+            "it": "Beschriftung einfügen",
+            "fr": "Beschriftung einfügen",
+            "items": null
+          },
+          {
+            "title": "Beschriftung verschieben",
+            "url": "grafik/fachschaleeditieren/beschriften3",
+            "de": "Beschriftung verschieben",
+            "it": "Beschriftung verschieben",
+            "fr": "Beschriftung verschieben",
+            "items": null
+          },
+          {
+            "title": "Beschriftung kopieren",
+            "url": "grafik/fachschaleeditieren/beschriften4",
+            "de": "Beschriftung kopieren",
+            "it": "Beschriftung kopieren",
+            "fr": "Beschriftung kopieren",
+            "items": null
+          },
+          {
+            "title": "Beschriftung verdrehen",
+            "url": "grafik/fachschaleeditieren/beschriften5",
+            "de": "Beschriftung verdrehen",
+            "it": "Beschriftung verdrehen",
+            "fr": "Beschriftung verdrehen",
+            "items": null
+          },
+          {
+            "title": "Beschriftung löschen",
+            "url": "grafik/fachschaleeditieren/beschriften6",
+            "de": "Beschriftung löschen",
+            "it": "Beschriftung löschen",
+            "fr": "Beschriftung löschen",
+            "items": null
+          },
+          {
+            "title": "Beschriftung einblenden",
+            "url": "grafik/fachschaleeditieren/beschriften7",
+            "de": "Beschriftung einblenden",
+            "it": "Beschriftung einblenden",
+            "fr": "Beschriftung einblenden",
+            "items": null
+          },
+          {
+            "title": "Beschriftung ausblenden",
+            "url": "grafik/fachschaleeditieren/beschriften8",
+            "de": "Beschriftung ausblenden",
+            "it": "Beschriftung ausblenden",
+            "fr": "Beschriftung ausblenden",
+            "items": null
+          },
+          {
+            "title": "Hinweislinie aktivieren",
+            "url": "grafik/fachschaleeditieren/beschriften9",
+            "de": "Hinweislinie aktivieren",
+            "it": "Hinweislinie aktivieren",
+            "fr": "Hinweislinie aktivieren",
+            "items": null
+          },
+          {
+            "title": "Hinweislinie deaktivieren",
+            "url": "grafik/fachschaleeditieren/beschriften10",
+            "de": "Hinweislinie deaktivieren",
+            "it": "Hinweislinie deaktivieren",
+            "fr": "Hinweislinie deaktivieren",
+            "items": null
+          },
+          {
+            "title": "Hinweislinie zurücksetzen",
+            "url": "grafik/fachschaleeditieren/beschriften11",
+            "de": "Hinweislinie zurücksetzen",
+            "it": "Hinweislinie zurücksetzen",
+            "fr": "Hinweislinie zurücksetzen",
+            "items": null
+          },
+          {
+            "title": "Hinweislinie Verlauf festlegen",
+            "url": "grafik/fachschaleeditieren/beschriften12",
+            "de": "Hinweislinie Verlauf festlegen",
+            "it": "Hinweislinie Verlauf festlegen",
+            "fr": "Hinweislinie Verlauf festlegen",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Bereich laden",
+        "url": "grafik/fachschaleeditieren/datennachladen",
+        "de": "Bereich laden",
+        "it": "Bereich laden",
+        "fr": "Bereich laden",
+        "items": null
+      },
+      {
+        "title": "Datenbank exportieren",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Datenbank exportieren",
+        "it": "Datenbank exportieren",
+        "fr": "Datenbank exportieren",
+        "items": [
+          {
+            "title": "Datenbank exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren",
+            "de": "Datenbank exportieren",
+            "it": "Datenbank exportieren",
+            "fr": "Datenbank exportieren",
+            "items": null
+          },
+          {
+            "title": "Punkte als ASCII Daten exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren2",
+            "de": "Punkte als ASCII Daten exportieren",
+            "it": "Punkte als ASCII Daten exportieren",
+            "fr": "Punkte als ASCII Daten exportieren",
+            "items": null
+          },
+          {
+            "title": "Daten als Autodesk DWG Datei exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren3",
+            "de": "Daten als Autodesk DWG Datei exportieren",
+            "it": "Daten als Autodesk DWG Datei exportieren",
+            "fr": "Daten als Autodesk DWG Datei exportieren",
+            "items": null
+          },
+          {
+            "title": "Daten als Autodesk DXF Datei exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren4",
+            "de": "Daten als Autodesk DXF Datei exportieren",
+            "it": "Daten als Autodesk DXF Datei exportieren",
+            "fr": "Daten als Autodesk DXF Datei exportieren",
+            "items": null
+          },
+          {
+            "title": "Daten als Esri Shape Dateien exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren5",
+            "de": "Daten als Esri Shape Dateien exportieren",
+            "it": "Daten als Esri Shape Dateien exportieren",
+            "fr": "Daten als Esri Shape Dateien exportieren",
+            "items": null
+          },
+          {
+            "title": "Daten als rmDATA XML Datei exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren6",
+            "de": "Daten als rmDATA XML Datei exportieren",
+            "it": "Daten als rmDATA XML Datei exportieren",
+            "fr": "Daten als rmDATA XML Datei exportieren",
+            "items": null
+          },
+          {
+            "title": "Punkte nach rmGEO exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren7",
+            "de": "Punkte nach rmGEO exportieren",
+            "it": "Punkte nach rmGEO exportieren",
+            "fr": "Punkte nach rmGEO exportieren",
+            "items": null
+          },
+          {
+            "title": "Daten als rmDATA Geodatenbank Datei exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren8",
+            "de": "Daten als rmDATA Geodatenbank Datei exportieren",
+            "it": "Daten als rmDATA Geodatenbank Datei exportieren",
+            "fr": "Daten als rmDATA Geodatenbank Datei exportieren",
+            "items": null
+          },
+          {
+            "title": "Daten als IGLIS Datei exportieren",
+            "url": "grafik/fachschaleeditieren/datenbankexportieren9",
+            "de": "Daten als IGLIS Datei exportieren",
+            "it": "Daten als IGLIS Datei exportieren",
+            "fr": "Daten als IGLIS Datei exportieren",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Extras",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Extras",
+        "it": "Extras",
+        "fr": "Extras",
+        "items": [
+          {
+            "title": "Extras",
+            "url": "grafik/fachschaleeditieren/extras",
+            "de": "Extras",
+            "it": "Extras",
+            "fr": "Extras",
+            "items": null
+          },
+          {
+            "title": "Freie Punktnummern",
+            "url": "grafik/fachschaleeditieren/extras2",
+            "de": "Freie Punktnummern",
+            "it": "Freie Punktnummern",
+            "fr": "Freie Punktnummern",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Fachschale aktivieren",
+        "url": "grafik/fachschaleeditieren/fachschaleaktivieren",
+        "de": "Fachschale aktivieren",
+        "it": "Fachschale aktivieren",
+        "fr": "Fachschale aktivieren",
+        "items": null
+      },
+      {
+        "title": "Filter",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Filter",
+        "it": "Filter",
+        "fr": "Filter",
+        "items": [
+          {
+            "title": "Filter verwalten",
+            "url": "grafik/fachschaleeditieren/filter",
+            "de": "Filter verwalten",
+            "it": "Filter verwalten",
+            "fr": "Filter verwalten",
+            "items": null
+          },
+          {
+            "title": "Filter",
+            "url": "grafik/fachschaleeditieren/filter2",
+            "de": "Filter",
+            "it": "Filter",
+            "fr": "Filter",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Gruppenobjekt einfügen",
+        "url": "grafik/fachschaleeditieren/gruppen",
+        "de": "Gruppenobjekt einfügen",
+        "it": "Gruppenobjekt einfügen",
+        "fr": "Gruppenobjekt einfügen",
+        "items": null
+      },
+      {
+        "title": "Konstruktion",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Konstruktion",
+        "it": "Konstruktion",
+        "fr": "Konstruktion",
+        "items": [
+          {
+            "title": "Konstruktionsmethoden",
+            "url": "grafik/fachschaleeditieren/konstruktion",
+            "de": "Konstruktionsmethoden",
+            "it": "Konstruktionsmethoden",
+            "fr": "Konstruktionsmethoden",
+            "items": null
+          },
+          {
+            "title": "Bogenschnitt",
+            "url": "grafik/fachschaleeditieren/konstruktion2",
+            "de": "Bogenschnitt",
+            "it": "Bogenschnitt",
+            "fr": "Bogenschnitt",
+            "items": null
+          },
+          {
+            "title": "Kleinpunkt",
+            "url": "grafik/fachschaleeditieren/konstruktion3",
+            "de": "Kleinpunkt",
+            "it": "Kleinpunkt",
+            "fr": "Kleinpunkt",
+            "items": null
+          },
+          {
+            "title": "Lotfußpunkt",
+            "url": "grafik/fachschaleeditieren/konstruktion4",
+            "de": "Lotfußpunkt",
+            "it": "Lotfußpunkt",
+            "fr": "Lotfußpunkt",
+            "items": null
+          },
+          {
+            "title": "Polarpunkt absolut",
+            "url": "grafik/fachschaleeditieren/konstruktion5",
+            "de": "Polarpunkt absolut",
+            "it": "Polarpunkt absolut",
+            "fr": "Polarpunkt absolut",
+            "items": null
+          },
+          {
+            "title": "Polarpunkt relativ",
+            "url": "grafik/fachschaleeditieren/konstruktion6",
+            "de": "Polarpunkt relativ",
+            "it": "Polarpunkt relativ",
+            "fr": "Polarpunkt relativ",
+            "items": null
+          },
+          {
+            "title": "Geradenschnitt",
+            "url": "grafik/fachschaleeditieren/konstruktion7",
+            "de": "Geradenschnitt",
+            "it": "Geradenschnitt",
+            "fr": "Geradenschnitt",
+            "items": null
+          },
+          {
+            "title": "Schnitt Kreis - Segment",
+            "url": "grafik/fachschaleeditieren/konstruktion8",
+            "de": "Schnitt Kreis - Segment",
+            "it": "Schnitt Kreis - Segment",
+            "fr": "Schnitt Kreis - Segment",
+            "items": null
+          },
+          {
+            "title": "Orthogonal ",
+            "url": "grafik/fachschaleeditieren/konstruktion9",
+            "de": "Orthogonal ",
+            "it": "Orthogonal ",
+            "fr": "Orthogonal ",
+            "items": null
+          },
+          {
+            "title": "Kleinpunkt Relativ",
+            "url": "grafik/fachschaleeditieren/konstruktion10",
+            "de": "Kleinpunkt Relativ",
+            "it": "Kleinpunkt Relativ",
+            "fr": "Kleinpunkt Relativ",
+            "items": null
+          },
+          {
+            "title": "Stationierung",
+            "url": "grafik/fachschaleeditieren/konstruktion11",
+            "de": "Stationierung",
+            "it": "Stationierung",
+            "fr": "Stationierung",
+            "items": null
+          },
+          {
+            "title": "Halbierungspunkt",
+            "url": "grafik/fachschaleeditieren/konstruktion12",
+            "de": "Halbierungspunkt",
+            "it": "Halbierungspunkt",
+            "fr": "Halbierungspunkt",
+            "items": null
+          },
+          {
+            "title": "Kreismittelpunkt",
+            "url": "grafik/fachschaleeditieren/konstruktion13",
+            "de": "Kreismittelpunkt",
+            "it": "Kreismittelpunkt",
+            "fr": "Kreismittelpunkt",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Kontexttoolbar",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Kontexttoolbar",
+        "it": "Kontexttoolbar",
+        "fr": "Kontexttoolbar",
+        "items": [
+          {
+            "title": "Kontexttoolbar",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar",
+            "de": "Kontexttoolbar",
+            "it": "Kontexttoolbar",
+            "fr": "Kontexttoolbar",
+            "items": null
+          },
+          {
+            "title": " Rückgängig",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar2",
+            "de": " Rückgängig",
+            "it": " Rückgängig",
+            "fr": " Rückgängig",
+            "items": null
+          },
+          {
+            "title": "Kopieren",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar3",
+            "de": "Kopieren",
+            "it": "Kopieren",
+            "fr": "Kopieren",
+            "items": null
+          },
+          {
+            "title": "Verschieben",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar4",
+            "de": "Verschieben",
+            "it": "Verschieben",
+            "fr": "Verschieben",
+            "items": null
+          },
+          {
+            "title": "Löschen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar5",
+            "de": "Löschen",
+            "it": "Löschen",
+            "fr": "Löschen",
+            "items": null
+          },
+          {
+            "title": "Punkte verschieben",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar6",
+            "de": "Punkte verschieben",
+            "it": "Punkte verschieben",
+            "fr": "Punkte verschieben",
+            "items": null
+          },
+          {
+            "title": "Punkt verdrehen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar7",
+            "de": "Punkt verdrehen",
+            "it": "Punkt verdrehen",
+            "fr": "Punkt verdrehen",
+            "items": null
+          },
+          {
+            "title": "Linienzug aufbrechen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar8",
+            "de": "Linienzug aufbrechen",
+            "it": "Linienzug aufbrechen",
+            "fr": "Linienzug aufbrechen",
+            "items": null
+          },
+          {
+            "title": "Zwischenpunkt einfügen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar9",
+            "de": "Zwischenpunkt einfügen",
+            "it": "Zwischenpunkt einfügen",
+            "fr": "Zwischenpunkt einfügen",
+            "items": null
+          },
+          {
+            "title": "Zwischenpunkt umhängen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar10",
+            "de": "Zwischenpunkt umhängen",
+            "it": "Zwischenpunkt umhängen",
+            "fr": "Zwischenpunkt umhängen",
+            "items": null
+          },
+          {
+            "title": "Zwischenpunkt verschieben",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar11",
+            "de": "Zwischenpunkt verschieben",
+            "it": "Zwischenpunkt verschieben",
+            "fr": "Zwischenpunkt verschieben",
+            "items": null
+          },
+          {
+            "title": "Zwischenpunkt löschen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar12",
+            "de": "Zwischenpunkt löschen",
+            "it": "Zwischenpunkt löschen",
+            "fr": "Zwischenpunkt löschen",
+            "items": null
+          },
+          {
+            "title": "Linienzug zusammenfügen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar13",
+            "de": "Linienzug zusammenfügen",
+            "it": "Linienzug zusammenfügen",
+            "fr": "Linienzug zusammenfügen",
+            "items": null
+          },
+          {
+            "title": "Linienzug fortsetzen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar14",
+            "de": "Linienzug fortsetzen",
+            "it": "Linienzug fortsetzen",
+            "fr": "Linienzug fortsetzen",
+            "items": null
+          },
+          {
+            "title": "Linienzug Begrenzungsobjekt hinzufügen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar15",
+            "de": "Linienzug Begrenzungsobjekt hinzufügen",
+            "it": "Linienzug Begrenzungsobjekt hinzufügen",
+            "fr": "Linienzug Begrenzungsobjekt hinzufügen",
+            "items": null
+          },
+          {
+            "title": "Linienzug Begrenzungsobjekt entfernen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar16",
+            "de": "Linienzug Begrenzungsobjekt entfernen",
+            "it": "Linienzug Begrenzungsobjekt entfernen",
+            "fr": "Linienzug Begrenzungsobjekt entfernen",
+            "items": null
+          },
+          {
+            "title": "Linienzug dehnen/stutzen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar17",
+            "de": "Linienzug dehnen/stutzen",
+            "it": "Linienzug dehnen/stutzen",
+            "fr": "Linienzug dehnen/stutzen",
+            "items": null
+          },
+          {
+            "title": "Linienzug stutzen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar18",
+            "de": "Linienzug stutzen",
+            "it": "Linienzug stutzen",
+            "fr": "Linienzug stutzen",
+            "items": null
+          },
+          {
+            "title": "Versetzen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar19",
+            "de": "Versetzen",
+            "it": "Versetzen",
+            "fr": "Versetzen",
+            "items": null
+          },
+          {
+            "title": "Linienzug Richtung umdrehen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar20",
+            "de": "Linienzug Richtung umdrehen",
+            "it": "Linienzug Richtung umdrehen",
+            "fr": "Linienzug Richtung umdrehen",
+            "items": null
+          },
+          {
+            "title": "Radius ändern",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar21",
+            "de": "Radius ändern",
+            "it": "Radius ändern",
+            "fr": "Radius ändern",
+            "items": null
+          },
+          {
+            "title": "Bogen aus 2 Segmenten",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar22",
+            "de": "Bogen aus 2 Segmenten",
+            "it": "Bogen aus 2 Segmenten",
+            "fr": "Bogen aus 2 Segmenten",
+            "items": null
+          },
+          {
+            "title": "Segmente begradigen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar23",
+            "de": "Segmente begradigen",
+            "it": "Segmente begradigen",
+            "fr": "Segmente begradigen",
+            "items": null
+          },
+          {
+            "title": "Segmente zu Tangentenbögen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar24",
+            "de": "Segmente zu Tangentenbögen",
+            "it": "Segmente zu Tangentenbögen",
+            "fr": "Segmente zu Tangentenbögen",
+            "items": null
+          },
+          {
+            "title": "Linienzug ausgleichen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar25",
+            "de": "Linienzug ausgleichen",
+            "it": "Linienzug ausgleichen",
+            "fr": "Linienzug ausgleichen",
+            "items": null
+          },
+          {
+            "title": "Fläche Einsetzpunkt einfügen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar26",
+            "de": "Fläche Einsetzpunkt einfügen",
+            "it": "Fläche Einsetzpunkt einfügen",
+            "fr": "Fläche Einsetzpunkt einfügen",
+            "items": null
+          },
+          {
+            "title": "Fläche Einsetzpunkt verschieben",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar27",
+            "de": "Fläche Einsetzpunkt verschieben",
+            "it": "Fläche Einsetzpunkt verschieben",
+            "fr": "Fläche Einsetzpunkt verschieben",
+            "items": null
+          },
+          {
+            "title": "Fläche Einsetzpunkt löschen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar28",
+            "de": "Fläche Einsetzpunkt löschen",
+            "it": "Fläche Einsetzpunkt löschen",
+            "fr": "Fläche Einsetzpunkt löschen",
+            "items": null
+          },
+          {
+            "title": "Fläche berechnen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar29",
+            "de": "Fläche berechnen",
+            "it": "Fläche berechnen",
+            "fr": "Fläche berechnen",
+            "items": null
+          },
+          {
+            "title": "Fläche ungültig setzen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar30",
+            "de": "Fläche ungültig setzen",
+            "it": "Fläche ungültig setzen",
+            "fr": "Fläche ungültig setzen",
+            "items": null
+          },
+          {
+            "title": "Flächenschraffur ein-/ausblenden",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar31",
+            "de": "Flächenschraffur ein-/ausblenden",
+            "it": "Flächenschraffur ein-/ausblenden",
+            "fr": "Flächenschraffur ein-/ausblenden",
+            "items": null
+          },
+          {
+            "title": "Flächenumgrenzung ein-/ausblenden",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar32",
+            "de": "Flächenumgrenzung ein-/ausblenden",
+            "it": "Flächenumgrenzung ein-/ausblenden",
+            "fr": "Flächenumgrenzung ein-/ausblenden",
+            "items": null
+          },
+          {
+            "title": "Bemaßungslinien (de-)aktivieren",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar33",
+            "de": "Bemaßungslinien (de-)aktivieren",
+            "it": "Bemaßungslinien (de-)aktivieren",
+            "fr": "Bemaßungslinien (de-)aktivieren",
+            "items": null
+          },
+          {
+            "title": "Bemaßungslinie verschieben",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar34",
+            "de": "Bemaßungslinie verschieben",
+            "it": "Bemaßungslinie verschieben",
+            "fr": "Bemaßungslinie verschieben",
+            "items": null
+          },
+          {
+            "title": "Bemaßung - Zwischenpunkt einfügen/löschen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar35",
+            "de": "Bemaßung - Zwischenpunkt einfügen/löschen",
+            "it": "Bemaßung - Zwischenpunkt einfügen/löschen",
+            "fr": "Bemaßung - Zwischenpunkt einfügen/löschen",
+            "items": null
+          },
+          {
+            "title": "Text bearbeiten",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar36",
+            "de": "Text bearbeiten",
+            "it": "Text bearbeiten",
+            "fr": "Text bearbeiten",
+            "items": null
+          },
+          {
+            "title": "Text Beschriftung verdrehen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar37",
+            "de": "Text Beschriftung verdrehen",
+            "it": "Text Beschriftung verdrehen",
+            "fr": "Text Beschriftung verdrehen",
+            "items": null
+          },
+          {
+            "title": "Selektion von Daten",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar38",
+            "de": "Selektion von Daten",
+            "it": "Selektion von Daten",
+            "fr": "Selektion von Daten",
+            "items": null
+          },
+          {
+            "title": "Verdrehen",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar39",
+            "de": "Verdrehen",
+            "it": "Verdrehen",
+            "fr": "Verdrehen",
+            "items": null
+          },
+          {
+            "title": "Spiegeln",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar40",
+            "de": "Spiegeln",
+            "it": "Spiegeln",
+            "fr": "Spiegeln",
+            "items": null
+          },
+          {
+            "title": "Punkte einfluchten",
+            "url": "grafik/fachschaleeditieren/kontexttoolbar41",
+            "de": "Punkte einfluchten",
+            "it": "Punkte einfluchten",
+            "fr": "Punkte einfluchten",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Darstellungsmanager",
+        "url": "grafik/fachschaleeditieren/objektmanager",
+        "de": "Darstellungsmanager",
+        "it": "Darstellungsmanager",
+        "fr": "Darstellungsmanager",
+        "items": null
+      },
+      {
+        "title": "Projekteinstellungen",
+        "url": "grafik/fachschaleeditieren",
+        "de": "Projekteinstellungen",
+        "it": "Projekteinstellungen",
+        "fr": "Projekteinstellungen",
+        "items": [
+          {
+            "title": "Allgemein",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen",
+            "de": "Allgemein",
+            "it": "Allgemein",
+            "fr": "Allgemein",
+            "items": null
+          },
+          {
+            "title": "Projekteinstellungen Allgemein",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen2",
+            "de": "Projekteinstellungen Allgemein",
+            "it": "Projekteinstellungen Allgemein",
+            "fr": "Projekteinstellungen Allgemein",
+            "items": null
+          },
+          {
+            "title": "Koordinatensystem",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen3",
+            "de": "Koordinatensystem",
+            "it": "Koordinatensystem",
+            "fr": "Koordinatensystem",
+            "items": null
+          },
+          {
+            "title": "Punkte",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen4",
+            "de": "Punkte",
+            "it": "Punkte",
+            "fr": "Punkte",
+            "items": null
+          },
+          {
+            "title": "Einheiten",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen5",
+            "de": "Einheiten",
+            "it": "Einheiten",
+            "fr": "Einheiten",
+            "items": null
+          },
+          {
+            "title": "Berechnungen",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen6",
+            "de": "Berechnungen",
+            "it": "Berechnungen",
+            "fr": "Berechnungen",
+            "items": null
+          },
+          {
+            "title": "Klassenattribute",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen7",
+            "de": "Klassenattribute",
+            "it": "Klassenattribute",
+            "fr": "Klassenattribute",
+            "items": null
+          },
+          {
+            "title": "Punktbereinigung",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen8",
+            "de": "Punktbereinigung",
+            "it": "Punktbereinigung",
+            "fr": "Punktbereinigung",
+            "items": null
+          },
+          {
+            "title": "Darstellung",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen9",
+            "de": "Darstellung",
+            "it": "Darstellung",
+            "fr": "Darstellung",
+            "items": null
+          },
+          {
+            "title": "Darstellung regenerieren",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen10",
+            "de": "Darstellung regenerieren",
+            "it": "Darstellung regenerieren",
+            "fr": "Darstellung regenerieren",
+            "items": null
+          },
+          {
+            "title": "Grafische Darstellung",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen11",
+            "de": "Grafische Darstellung",
+            "it": "Grafische Darstellung",
+            "fr": "Grafische Darstellung",
+            "items": null
+          },
+          {
+            "title": "Speicherstatus",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen12",
+            "de": "Speicherstatus",
+            "it": "Speicherstatus",
+            "fr": "Speicherstatus",
+            "items": null
+          },
+          {
+            "title": "Projektvorlage",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen13",
+            "de": "Projektvorlage",
+            "it": "Projektvorlage",
+            "fr": "Projektvorlage",
+            "items": null
+          },
+          {
+            "title": "Aufbau einer Projektvorlage",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen14",
+            "de": "Aufbau einer Projektvorlage",
+            "it": "Aufbau einer Projektvorlage",
+            "fr": "Aufbau einer Projektvorlage",
+            "items": null
+          },
+          {
+            "title": "Schlüssel zur Projektvorlage",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen15",
+            "de": "Schlüssel zur Projektvorlage",
+            "it": "Schlüssel zur Projektvorlage",
+            "fr": "Schlüssel zur Projektvorlage",
+            "items": null
+          },
+          {
+            "title": "Enterprise Geodatenbank",
+            "url": "grafik/fachschaleeditieren/projekteinstellungen16",
+            "de": "Enterprise Geodatenbank",
+            "it": "Enterprise Geodatenbank",
+            "fr": "Enterprise Geodatenbank",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Sachdaten editieren",
+        "url": "grafik/fachschaleeditieren/sachdateneditieren",
+        "de": "Sachdaten editieren",
+        "it": "Sachdaten editieren",
+        "fr": "Sachdaten editieren",
+        "items": null
+      },
+      {
+        "title": "Statuszeile",
+        "url": "grafik/fachschaleeditieren/statusleiste",
+        "de": "Statuszeile",
+        "it": "Statuszeile",
+        "fr": "Statuszeile",
+        "items": null
+      },
+      {
+        "title": "Wechsel in den Editiermodus",
+        "url": "grafik/fachschaleeditieren/wechselineditiermodus",
+        "de": "Wechsel in den Editiermodus",
+        "it": "Wechsel in den Editiermodus",
+        "fr": "Wechsel in den Editiermodus",
+        "items": null
+      },
+      {
+        "title": "Wechsel in den Viewing-Modus",
+        "url": "grafik/fachschaleeditieren/wechselinviewing-modus",
+        "de": "Wechsel in den Viewing-Modus",
+        "it": "Wechsel in den Viewing-Modus",
+        "fr": "Wechsel in den Viewing-Modus",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Enterprise Geodatabase",
+    "url": "fachschale enterprise geodatabase",
+    "de": "Fachschale Enterprise Geodatabase",
+    "it": "Fachschale Enterprise Geodatabase",
+    "fr": "Fachschale Enterprise Geodatabase",
+    "items": [
+      {
+        "title": "Allgemein",
+        "url": "grafik/fachschaleenterprisegeodatabase",
+        "de": "Allgemein",
+        "it": "Allgemein",
+        "fr": "Allgemein",
+        "items": [
+          {
+            "title": "Allgemeines",
+            "url": "grafik/fachschaleenterprisegeodatabase/allgemein",
+            "de": "Allgemeines",
+            "it": "Allgemeines",
+            "fr": "Allgemeines",
+            "items": null
+          },
+          {
+            "title": "Datenbankschema anlegen",
+            "url": "grafik/fachschaleenterprisegeodatabase/allgemein2",
+            "de": "Datenbankschema anlegen",
+            "it": "Datenbankschema anlegen",
+            "fr": "Datenbankschema anlegen",
+            "items": null
+          },
+          {
+            "title": "Datenbankschema updaten",
+            "url": "grafik/fachschaleenterprisegeodatabase/allgemein3",
+            "de": "Datenbankschema updaten",
+            "it": "Datenbankschema updaten",
+            "fr": "Datenbankschema updaten",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Einstellungen einer Enterprise Geodatabase",
+        "url": "grafik/fachschaleenterprisegeodatabase/datenbankeinstellungen",
+        "de": "Einstellungen einer Enterprise Geodatabase",
+        "it": "Einstellungen einer Enterprise Geodatabase",
+        "fr": "Einstellungen einer Enterprise Geodatabase",
+        "items": null
+      },
+      {
+        "title": "Filter",
+        "url": "grafik/fachschaleenterprisegeodatabase/filter",
+        "de": "Filter",
+        "it": "Filter",
+        "fr": "Filter",
+        "items": null
+      },
+      {
+        "title": "Objekthistorie anzeigen",
+        "url": "grafik/fachschaleenterprisegeodatabase/objekthistorie",
+        "de": "Objekthistorie anzeigen",
+        "it": "Objekthistorie anzeigen",
+        "fr": "Objekthistorie anzeigen",
+        "items": null
+      },
+      {
+        "title": "Objektstatistik anzeigen",
+        "url": "grafik/fachschaleenterprisegeodatabase",
+        "de": "Objektstatistik anzeigen",
+        "it": "Objektstatistik anzeigen",
+        "fr": "Objektstatistik anzeigen",
+        "items": [
+          {
+            "title": "Statistik für übernommene Objekte",
+            "url": "grafik/fachschaleenterprisegeodatabase/objektstatistikanzeigen",
+            "de": "Statistik für übernommene Objekte",
+            "it": "Statistik für übernommene Objekte",
+            "fr": "Statistik für übernommene Objekte",
+            "items": null
+          },
+          {
+            "title": "Statistik für aktuelles Projektgebiet",
+            "url": "grafik/fachschaleenterprisegeodatabase/objektstatistikanzeigen2",
+            "de": "Statistik für aktuelles Projektgebiet",
+            "it": "Statistik für aktuelles Projektgebiet",
+            "fr": "Statistik für aktuelles Projektgebiet",
+            "items": null
+          }
+        ]
+      },
+      {
+        "title": "Oracle Sachdaten Datenquelle",
+        "url": "grafik/fachschaleenterprisegeodatabase/oraclesachdatenverbinden",
+        "de": "Oracle Sachdaten Datenquelle",
+        "it": "Oracle Sachdaten Datenquelle",
+        "fr": "Oracle Sachdaten Datenquelle",
+        "items": null
+      },
+      {
+        "title": "Oracle Spatial Datenquelle",
+        "url": "grafik/fachschaleenterprisegeodatabase/oraclesdodatenquelle",
+        "de": "Oracle Spatial Datenquelle",
+        "it": "Oracle Spatial Datenquelle",
+        "fr": "Oracle Spatial Datenquelle",
+        "items": null
+      },
+      {
+        "title": "Projektgebiet-Import aus rmDATA Geodatenbank Datei",
+        "url": "grafik/fachschaleenterprisegeodatabase/projektgebiet-importausrmdatageodatenbankdatei",
+        "de": "Projektgebiet-Import aus rmDATA Geodatenbank Datei",
+        "it": "Projektgebiet-Import aus rmDATA Geodatenbank Datei",
+        "fr": "Projektgebiet-Import aus rmDATA Geodatenbank Datei",
+        "items": null
+      },
+      {
+        "title": "Projektgebiete",
+        "url": "grafik/fachschaleenterprisegeodatabase/projektgebiete",
+        "de": "Projektgebiete",
+        "it": "Projektgebiete",
+        "fr": "Projektgebiete",
+        "items": null
+      },
+      {
+        "title": "Editieren, Sperrbereiche",
+        "url": "grafik/fachschaleenterprisegeodatabase/sperrgebieteanzeigen",
+        "de": "Editieren, Sperrbereiche",
+        "it": "Editieren, Sperrbereiche",
+        "fr": "Editieren, Sperrbereiche",
+        "items": null
+      },
+      {
+        "title": "SQL-Funktionen",
+        "url": "grafik/fachschaleenterprisegeodatabase/sql-funktionen",
+        "de": "SQL-Funktionen",
+        "it": "SQL-Funktionen",
+        "fr": "SQL-Funktionen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Festpunktdatenbank",
+    "url": "fachschale festpunktdatenbank",
+    "de": "Fachschale Festpunktdatenbank",
+    "it": "Fachschale Festpunktdatenbank",
+    "fr": "Fachschale Festpunktdatenbank",
+    "items": [
+      {
+        "title": "Festpunktübersicht",
+        "url": "grafik/fachschalefestpunktdatenbank/allgemein",
+        "de": "Festpunktübersicht",
+        "it": "Festpunktübersicht",
+        "fr": "Festpunktübersicht",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Grundstueckskataster und Adressen AT",
+    "url": "fachschale grundstueckskataster und adressen at",
+    "de": "Fachschale Grundstueckskataster und Adressen AT",
+    "it": "Fachschale Grundstueckskataster und Adressen AT",
+    "fr": "Fachschale Grundstueckskataster und Adressen AT",
+    "items": [
+      {
+        "title": "Adresse suchen",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/adressensuchen",
+        "de": "Adresse suchen",
+        "it": "Adresse suchen",
+        "fr": "Adresse suchen",
+        "items": null
+      },
+      {
+        "title": "Daten importieren",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/datenimportieren",
+        "de": "Daten importieren",
+        "it": "Daten importieren",
+        "fr": "Daten importieren",
+        "items": null
+      },
+      {
+        "title": "Eigentümer anzeigen",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/eigentuemeranzeigen",
+        "de": "Eigentümer anzeigen",
+        "it": "Eigentümer anzeigen",
+        "fr": "Eigentümer anzeigen",
+        "items": null
+      },
+      {
+        "title": "Grundstück über Eigentümer suchen",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/eigentuemersuchen",
+        "de": "Grundstück über Eigentümer suchen",
+        "it": "Grundstück über Eigentümer suchen",
+        "fr": "Grundstück über Eigentümer suchen",
+        "items": null
+      },
+      {
+        "title": "Fachschale aktivieren",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/fachschaleaktivieren",
+        "de": "Fachschale aktivieren",
+        "it": "Fachschale aktivieren",
+        "fr": "Fachschale aktivieren",
+        "items": null
+      },
+      {
+        "title": "Festpunktdatenbank aufbauen",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/festpunktdatenbank",
+        "de": "Festpunktdatenbank aufbauen",
+        "it": "Festpunktdatenbank aufbauen",
+        "fr": "Festpunktdatenbank aufbauen",
+        "items": null
+      },
+      {
+        "title": "Grundstück suchen",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/grundstuecksuchen",
+        "de": "Grundstück suchen",
+        "it": "Grundstück suchen",
+        "fr": "Grundstück suchen",
+        "items": null
+      },
+      {
+        "title": "Objekte mit Eigentümer-Informationen beschriften",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/grundstueckemiteigentuemerdatenbeschriften",
+        "de": "Objekte mit Eigentümer-Informationen beschriften",
+        "it": "Objekte mit Eigentümer-Informationen beschriften",
+        "fr": "Objekte mit Eigentümer-Informationen beschriften",
+        "items": null
+      },
+      {
+        "title": "Grundstücks- und Eigentümerdaten verknüpfen",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/grundstuecks-undeigentuemerdatenverknuepfen",
+        "de": "Grundstücks- und Eigentümerdaten verknüpfen",
+        "it": "Grundstücks- und Eigentümerdaten verknüpfen",
+        "fr": "Grundstücks- und Eigentümerdaten verknüpfen",
+        "items": null
+      },
+      {
+        "title": "Grundstücksverzeichnis anzeigen",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/grundstuecksverzeichnis",
+        "de": "Grundstücksverzeichnis anzeigen",
+        "it": "Grundstücksverzeichnis anzeigen",
+        "fr": "Grundstücksverzeichnis anzeigen",
+        "items": null
+      },
+      {
+        "title": "Import Adressen BEV",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/importadressenbev",
+        "de": "Import Adressen BEV",
+        "it": "Import Adressen BEV",
+        "fr": "Import Adressen BEV",
+        "items": null
+      },
+      {
+        "title": "Import Adressen GWR",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/importadressengwr",
+        "de": "Import Adressen GWR",
+        "it": "Import Adressen GWR",
+        "fr": "Import Adressen GWR",
+        "items": null
+      },
+      {
+        "title": "Import DKM-DXF",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/importdkm-dxf",
+        "de": "Import DKM-DXF",
+        "it": "Import DKM-DXF",
+        "fr": "Import DKM-DXF",
+        "items": null
+      },
+      {
+        "title": "Import DKM-Shape",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/importdkm-shape",
+        "de": "Import DKM-Shape",
+        "it": "Import DKM-Shape",
+        "fr": "Import DKM-Shape",
+        "items": null
+      },
+      {
+        "title": "Import Eigentümer",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/importeigentuemer",
+        "de": "Import Eigentümer",
+        "it": "Import Eigentümer",
+        "fr": "Import Eigentümer",
+        "items": null
+      },
+      {
+        "title": "Anrainergrundstücke ermitteln",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/nachbargrundstueckeermitteln",
+        "de": "Anrainergrundstücke ermitteln",
+        "it": "Anrainergrundstücke ermitteln",
+        "fr": "Anrainergrundstücke ermitteln",
+        "items": null
+      },
+      {
+        "title": "Punktnummern der DKM einschalten",
+        "url": "grafik/fachschalegrundstueckskatasterundadressenat/punktnummernderdkmeinschalten",
+        "de": "Punktnummern der DKM einschalten",
+        "it": "Punktnummern der DKM einschalten",
+        "fr": "Punktnummern der DKM einschalten",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Inventory Manager Connector",
+    "url": "fachschale inventory manager connector",
+    "de": "Fachschale Inventory Manager Connector",
+    "it": "Fachschale Inventory Manager Connector",
+    "fr": "Fachschale Inventory Manager Connector",
+    "items": [
+      {
+        "title": "Allgemein",
+        "url": "grafik/fachschaleinventorymanagerconnector/allgemein",
+        "de": "Allgemein",
+        "it": "Allgemein",
+        "fr": "Allgemein",
+        "items": null
+      },
+      {
+        "title": "Bearbeiten einer Asset-DB",
+        "url": "grafik/fachschaleinventorymanagerconnector/bearbeiten",
+        "de": "Bearbeiten einer Asset-DB",
+        "it": "Bearbeiten einer Asset-DB",
+        "fr": "Bearbeiten einer Asset-DB",
+        "items": null
+      },
+      {
+        "title": "Objekt Details",
+        "url": "grafik/fachschaleinventorymanagerconnector/objektdetails",
+        "de": "Objekt Details",
+        "it": "Objekt Details",
+        "fr": "Objekt Details",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Liegenschaftskataster DE",
+    "url": "fachschale liegenschaftskataster de",
+    "de": "Fachschale Liegenschaftskataster DE",
+    "it": "Fachschale Liegenschaftskataster DE",
+    "fr": "Fachschale Liegenschaftskataster DE",
+    "items": [
+      {
+        "title": "Allgemein",
+        "url": "grafik/fachschaleliegenschaftskatasterde/allgemein",
+        "de": "Allgemein",
+        "it": "Allgemein",
+        "fr": "Allgemein",
+        "items": null
+      },
+      {
+        "title": "Daten aus NAS-Dateien importieren",
+        "url": "grafik/fachschaleliegenschaftskatasterde/datenimportieren",
+        "de": "Daten aus NAS-Dateien importieren",
+        "it": "Daten aus NAS-Dateien importieren",
+        "fr": "Daten aus NAS-Dateien importieren",
+        "items": null
+      },
+      {
+        "title": "Eigentümer anzeigen",
+        "url": "grafik/fachschaleliegenschaftskatasterde/eigentuemeranzeigen",
+        "de": "Eigentümer anzeigen",
+        "it": "Eigentümer anzeigen",
+        "fr": "Eigentümer anzeigen",
+        "items": null
+      },
+      {
+        "title": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "url": "grafik/fachschaleliegenschaftskatasterde/exportalsprivategeodatabase",
+        "de": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "it": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "fr": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "items": null
+      },
+      {
+        "title": "Flurstück suchen",
+        "url": "grafik/fachschaleliegenschaftskatasterde/flurstuecksuchen",
+        "de": "Flurstück suchen",
+        "it": "Flurstück suchen",
+        "fr": "Flurstück suchen",
+        "items": null
+      },
+      {
+        "title": "Flurstück über Eigentümer suchen",
+        "url": "grafik/fachschaleliegenschaftskatasterde/flurstueckuebereigentuemersuchen",
+        "de": "Flurstück über Eigentümer suchen",
+        "it": "Flurstück über Eigentümer suchen",
+        "fr": "Flurstück über Eigentümer suchen",
+        "items": null
+      },
+      {
+        "title": "Flurstück über Lagebezeichnung suchen",
+        "url": "grafik/fachschaleliegenschaftskatasterde/flurstueckueberlagebezeichnungsuchen",
+        "de": "Flurstück über Lagebezeichnung suchen",
+        "it": "Flurstück über Lagebezeichnung suchen",
+        "fr": "Flurstück über Lagebezeichnung suchen",
+        "items": null
+      },
+      {
+        "title": "Flurstücks- und Eigentümerdaten verknüpfen",
+        "url": "grafik/fachschaleliegenschaftskatasterde/flurstuecks-undeigentuemerdatenverknuepfen",
+        "de": "Flurstücks- und Eigentümerdaten verknüpfen",
+        "it": "Flurstücks- und Eigentümerdaten verknüpfen",
+        "fr": "Flurstücks- und Eigentümerdaten verknüpfen",
+        "items": null
+      },
+      {
+        "title": "Flurstücksverzeichnis anzeigen",
+        "url": "grafik/fachschaleliegenschaftskatasterde/flurstuecksverzeichnisanzeigen",
+        "de": "Flurstücksverzeichnis anzeigen",
+        "it": "Flurstücksverzeichnis anzeigen",
+        "fr": "Flurstücksverzeichnis anzeigen",
+        "items": null
+      },
+      {
+        "title": "Flurstücksverzeichnis in Tabellenform anzeigen",
+        "url": "grafik/fachschaleliegenschaftskatasterde/flurstuecksverzeichnisintabellenformanzeigen",
+        "de": "Flurstücksverzeichnis in Tabellenform anzeigen",
+        "it": "Flurstücksverzeichnis in Tabellenform anzeigen",
+        "fr": "Flurstücksverzeichnis in Tabellenform anzeigen",
+        "items": null
+      },
+      {
+        "title": "Objekte mit Eigentümer-Informationen beschriften",
+        "url": "grafik/fachschaleliegenschaftskatasterde/objektemiteigentuemer-informationenbeschriften",
+        "de": "Objekte mit Eigentümer-Informationen beschriften",
+        "it": "Objekte mit Eigentümer-Informationen beschriften",
+        "fr": "Objekte mit Eigentümer-Informationen beschriften",
+        "items": null
+      },
+      {
+        "title": "Punktsymbole ein/-ausblenden",
+        "url": "grafik/fachschaleliegenschaftskatasterde/punktsymboleeinausblenden",
+        "de": "Punktsymbole ein/-ausblenden",
+        "it": "Punktsymbole ein/-ausblenden",
+        "fr": "Punktsymbole ein/-ausblenden",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Magistrat Salzburg",
+    "url": "fachschale magistrat salzburg",
+    "de": "Fachschale Magistrat Salzburg",
+    "it": "Fachschale Magistrat Salzburg",
+    "fr": "Fachschale Magistrat Salzburg",
+    "items": [
+      {
+        "title": "BEV-Geometrieabgleich",
+        "url": "grafik/fachschalemagistratsalzburg/bev-geometrieabgleich",
+        "de": "BEV-Geometrieabgleich",
+        "it": "BEV-Geometrieabgleich",
+        "fr": "BEV-Geometrieabgleich",
+        "items": null
+      },
+      {
+        "title": "Einstellungen für die Fachschale MAG Salzburg",
+        "url": "grafik/fachschalemagistratsalzburg/einstellungen",
+        "de": "Einstellungen für die Fachschale MAG Salzburg",
+        "it": "Einstellungen für die Fachschale MAG Salzburg",
+        "fr": "Einstellungen für die Fachschale MAG Salzburg",
+        "items": null
+      },
+      {
+        "title": "Fachschale aktivieren",
+        "url": "grafik/fachschalemagistratsalzburg/fachschaleaktivieren",
+        "de": "Fachschale aktivieren",
+        "it": "Fachschale aktivieren",
+        "fr": "Fachschale aktivieren",
+        "items": null
+      },
+      {
+        "title": "Hausnummer setzen",
+        "url": "grafik/fachschalemagistratsalzburg/hausnummersetzen",
+        "de": "Hausnummer setzen",
+        "it": "Hausnummer setzen",
+        "fr": "Hausnummer setzen",
+        "items": null
+      },
+      {
+        "title": "KDB-Abgleich",
+        "url": "grafik/fachschalemagistratsalzburg/kdb-abgleich",
+        "de": "KDB-Abgleich",
+        "it": "KDB-Abgleich",
+        "fr": "KDB-Abgleich",
+        "items": null
+      },
+      {
+        "title": "Planabzug erstellen",
+        "url": "grafik/fachschalemagistratsalzburg/planabzugerstellen",
+        "de": "Planabzug erstellen",
+        "it": "Planabzug erstellen",
+        "fr": "Planabzug erstellen",
+        "items": null
+      },
+      {
+        "title": "Straßennamen setzen",
+        "url": "grafik/fachschalemagistratsalzburg/strassennamensetzen",
+        "de": "Straßennamen setzen",
+        "it": "Straßennamen setzen",
+        "fr": "Straßennamen setzen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale rmDATA GeoDiscoverer",
+    "url": "fachschale rmdata geodiscoverer",
+    "de": "Fachschale rmDATA GeoDiscoverer",
+    "it": "Fachschale rmDATA GeoDiscoverer",
+    "fr": "Fachschale rmDATA GeoDiscoverer",
+    "items": [
+      {
+        "title": "Bestellinformationen für GeoDiscoverer übergeben",
+        "url": "grafik/fachschalermdatageodiscoverer/produktebestellen",
+        "de": "Bestellinformationen für GeoDiscoverer übergeben",
+        "it": "Bestellinformationen für GeoDiscoverer übergeben",
+        "fr": "Bestellinformationen für GeoDiscoverer übergeben",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale rmINFOConnector",
+    "url": "fachschale rminfoconnector",
+    "de": "Fachschale rmINFOConnector",
+    "it": "Fachschale rmINFOConnector",
+    "fr": "Fachschale rmINFOConnector",
+    "items": [
+      {
+        "title": "Grundstücke übergeben",
+        "url": "grafik/fachschalerminfoconnector/grundstueckeuebergeben",
+        "de": "Grundstücke übergeben",
+        "it": "Grundstücke übergeben",
+        "fr": "Grundstücke übergeben",
+        "items": null
+      },
+      {
+        "title": "Grundstücke übernehmen",
+        "url": "grafik/fachschalerminfoconnector/grundstueckeuebernehmen",
+        "de": "Grundstücke übernehmen",
+        "it": "Grundstücke übernehmen",
+        "fr": "Grundstücke übernehmen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Strassenbeleuchtung",
+    "url": "fachschale strassenbeleuchtung",
+    "de": "Fachschale Strassenbeleuchtung",
+    "it": "Fachschale Strassenbeleuchtung",
+    "fr": "Fachschale Strassenbeleuchtung",
+    "items": [
+      {
+        "title": "Fachschale Straßenbeleuchtung",
+        "url": "grafik/fachschalestrassenbeleuchtung/allgemein",
+        "de": "Fachschale Straßenbeleuchtung",
+        "it": "Fachschale Straßenbeleuchtung",
+        "fr": "Fachschale Straßenbeleuchtung",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschale Verkehrszeichen",
+    "url": "fachschale verkehrszeichen",
+    "de": "Fachschale Verkehrszeichen",
+    "it": "Fachschale Verkehrszeichen",
+    "fr": "Fachschale Verkehrszeichen",
+    "items": [
+      {
+        "title": "Fachschale Verkehrszeichen",
+        "url": "grafik/fachschaleverkehrszeichen/allgemein",
+        "de": "Fachschale Verkehrszeichen",
+        "it": "Fachschale Verkehrszeichen",
+        "fr": "Fachschale Verkehrszeichen",
+        "items": null
+      },
+      {
+        "title": "Darstellen eines bestehenden Verkehrszeichenkatasters",
+        "url": "grafik/fachschaleverkehrszeichen/darstelleneinesbestehendenverkehrszeichenkatasters",
+        "de": "Darstellen eines bestehenden Verkehrszeichenkatasters",
+        "it": "Darstellen eines bestehenden Verkehrszeichenkatasters",
+        "fr": "Darstellen eines bestehenden Verkehrszeichenkatasters",
+        "items": null
+      },
+      {
+        "title": "Erstellen eines neuen Verkehrszeichenkatasters",
+        "url": "grafik/fachschaleverkehrszeichen/erstelleneinesneuenverkehrszeichenkatasters",
+        "de": "Erstellen eines neuen Verkehrszeichenkatasters",
+        "it": "Erstellen eines neuen Verkehrszeichenkatasters",
+        "fr": "Erstellen eines neuen Verkehrszeichenkatasters",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Fachschalen",
+    "url": "fachschalen",
+    "de": "Fachschalen",
+    "it": "Fachschalen",
+    "fr": "Fachschalen",
+    "items": [
+    ]
+  },
+  {
+    "title": "GDB-Import",
+    "url": "gdb-import",
+    "de": "GDB-Import",
+    "it": "GDB-Import",
+    "fr": "GDB-Import",
+    "items": [
+    ]
+  },
+  {
+    "title": "GeoDB3-Export",
+    "url": "geodb3-export",
+    "de": "GeoDB3-Export",
+    "it": "GeoDB3-Export",
+    "fr": "GeoDB3-Export",
+    "items": [
+      {
+        "title": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "url": "grafik/geodb3-export/allgemein",
+        "de": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "it": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "fr": "Daten als rmDATA Geodatenbank Datei exportieren",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "GeoMapper",
+    "url": "geomapper",
+    "de": "GeoMapper",
+    "it": "GeoMapper",
+    "fr": "GeoMapper",
+    "items": [
+    ]
+  },
+  {
+    "title": "Grafikfenster",
+    "url": "grafikfenster",
+    "de": "Grafikfenster",
+    "it": "Grafikfenster",
+    "fr": "Grafikfenster",
+    "items": [
+      {
+        "title": "Grafikfenster",
+        "url": "grafik/grafikfenster/allgemein",
+        "de": "Grafikfenster",
+        "it": "Grafikfenster",
+        "fr": "Grafikfenster",
+        "items": null
+      },
+      {
+        "title": "Kontextmenü",
+        "url": "grafik/grafikfenster/kontextmenue",
+        "de": "Kontextmenü",
+        "it": "Kontextmenü",
+        "fr": "Kontextmenü",
+        "items": null
+      },
+      {
+        "title": "Navigieren im Grafikfenster",
+        "url": "grafik/grafikfenster/zoomimgrafikfenster",
+        "de": "Navigieren im Grafikfenster",
+        "it": "Navigieren im Grafikfenster",
+        "fr": "Navigieren im Grafikfenster",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "KML-Export",
+    "url": "kml-export",
+    "de": "KML-Export",
+    "it": "KML-Export",
+    "fr": "KML-Export",
+    "items": [
+      {
+        "title": "Markierungen als KML exportieren",
+        "url": "grafik/kml-export/allgemein",
+        "de": "Markierungen als KML exportieren",
+        "it": "Markierungen als KML exportieren",
+        "fr": "Markierungen als KML exportieren",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Konfiguration",
+    "url": "konfiguration",
+    "de": "Konfiguration",
+    "it": "Konfiguration",
+    "fr": "Konfiguration",
+    "items": [
+    ]
+  },
+  {
+    "title": "Konfigurationsversionen",
+    "url": "konfigurationsversionen",
+    "de": "Konfigurationsversionen",
+    "it": "Konfigurationsversionen",
+    "fr": "Konfigurationsversionen",
+    "items": [
+    ]
+  },
+  {
+    "title": "Koordinatensysteme",
+    "url": "koordinatensysteme",
+    "de": "Koordinatensysteme",
+    "it": "Koordinatensysteme",
+    "fr": "Koordinatensysteme",
+    "items": [
+    ]
+  },
+  {
+    "title": "Lesezeichenmanager",
+    "url": "lesezeichenmanager",
+    "de": "Lesezeichenmanager",
+    "it": "Lesezeichenmanager",
+    "fr": "Lesezeichenmanager",
+    "items": [
+      {
+        "title": "Lesezeichenmanager",
+        "url": "grafik/lesezeichenmanager/allgemein",
+        "de": "Lesezeichenmanager",
+        "it": "Lesezeichenmanager",
+        "fr": "Lesezeichenmanager",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Markieren",
+    "url": "markieren",
+    "de": "Markieren",
+    "it": "Markieren",
+    "fr": "Markieren",
+    "items": [
+      {
+        "title": "Bemaßungen",
+        "url": "grafik/markieren/bemassungen",
+        "de": "Bemaßungen",
+        "it": "Bemaßungen",
+        "fr": "Bemaßungen",
+        "items": null
+      },
+      {
+        "title": "Bemaßungstext verschieben",
+        "url": "grafik/markieren/bemassungstextverschieben",
+        "de": "Bemaßungstext verschieben",
+        "it": "Bemaßungstext verschieben",
+        "fr": "Bemaßungstext verschieben",
+        "items": null
+      },
+      {
+        "title": "Markierungen löschen",
+        "url": "grafik/markieren/markierungloeschen",
+        "de": "Markierungen löschen",
+        "it": "Markierungen löschen",
+        "fr": "Markierungen löschen",
+        "items": null
+      },
+      {
+        "title": "Markierung verschieben",
+        "url": "grafik/markieren/markierungverschieben",
+        "de": "Markierung verschieben",
+        "it": "Markierung verschieben",
+        "fr": "Markierung verschieben",
+        "items": null
+      },
+      {
+        "title": "Markierungen",
+        "url": "grafik/markieren/markierungen",
+        "de": "Markierungen",
+        "it": "Markierungen",
+        "fr": "Markierungen",
+        "items": null
+      },
+      {
+        "title": "Redlining",
+        "url": "grafik/markieren/redlining",
+        "de": "Redlining",
+        "it": "Redlining",
+        "fr": "Redlining",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Messen",
+    "url": "messen",
+    "de": "Messen",
+    "it": "Messen",
+    "fr": "Messen",
+    "items": [
+      {
+        "title": "Messmanager",
+        "url": "grafik/messen/allgemein",
+        "de": "Messmanager",
+        "it": "Messmanager",
+        "fr": "Messmanager",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Nichtfunktionale Anforderungen",
+    "url": "nichtfunktionale anforderungen",
+    "de": "Nichtfunktionale Anforderungen",
+    "it": "Nichtfunktionale Anforderungen",
+    "fr": "Nichtfunktionale Anforderungen",
+    "items": [
+    ]
+  },
+  {
+    "title": "Objektinformationen",
+    "url": "objektinformationen",
+    "de": "Objektinformationen",
+    "it": "Objektinformationen",
+    "fr": "Objektinformationen",
+    "items": [
+      {
+        "title": "Objektinformationen",
+        "url": "grafik/objektinformationen/allgemein",
+        "de": "Objektinformationen",
+        "it": "Objektinformationen",
+        "fr": "Objektinformationen",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "rmGEO4",
+    "url": "rmgeo4",
+    "de": "rmGEO4",
+    "it": "rmGEO4",
+    "fr": "rmGEO4",
+    "items": [
+      {
+        "title": "Abgleich zur rmGEO-Datenquelle",
+        "url": "grafik/rmgeo4/abgleich-rmgeo4",
+        "de": "Abgleich zur rmGEO-Datenquelle",
+        "it": "Abgleich zur rmGEO-Datenquelle",
+        "fr": "Abgleich zur rmGEO-Datenquelle",
+        "items": null
+      },
+      {
+        "title": "Export zur rmGEO-Datenquelle",
+        "url": "grafik/rmgeo4/export-rmgeo4",
+        "de": "Export zur rmGEO-Datenquelle",
+        "it": "Export zur rmGEO-Datenquelle",
+        "fr": "Export zur rmGEO-Datenquelle",
+        "items": null
+      },
+      {
+        "title": "Import aus rmGEO-Datenquelle",
+        "url": "grafik/rmgeo4/import-rmgeo4",
+        "de": "Import aus rmGEO-Datenquelle",
+        "it": "Import aus rmGEO-Datenquelle",
+        "fr": "Import aus rmGEO-Datenquelle",
+        "items": null
+      },
+      {
+        "title": "Anbindung rmGEO",
+        "url": "grafik/rmgeo4/rmgeo-allgemein",
+        "de": "Anbindung rmGEO",
+        "it": "Anbindung rmGEO",
+        "fr": "Anbindung rmGEO",
+        "items": null
+      },
+      {
+        "title": "rmGEO Verbindungsmanager",
+        "url": "grafik/rmgeo4/rmgeo-verbindungsmanager",
+        "de": "rmGEO Verbindungsmanager",
+        "it": "rmGEO Verbindungsmanager",
+        "fr": "rmGEO Verbindungsmanager",
+        "items": null
+      },
+      {
+        "title": "Wechsel zu rmGEO",
+        "url": "grafik/rmgeo4/rmgeo-wechsel",
+        "de": "Wechsel zu rmGEO",
+        "it": "Wechsel zu rmGEO",
+        "fr": "Wechsel zu rmGEO",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Schutz",
+    "url": "schutz",
+    "de": "Schutz",
+    "it": "Schutz",
+    "fr": "Schutz",
+    "items": [
+    ]
+  },
+  {
+    "title": "Setup",
+    "url": "setup",
+    "de": "Setup",
+    "it": "Setup",
+    "fr": "Setup",
+    "items": [
+    ]
+  },
+  {
+    "title": "Shape-Export",
+    "url": "shape-export",
+    "de": "Shape-Export",
+    "it": "Shape-Export",
+    "fr": "Shape-Export",
+    "items": [
+      {
+        "title": "Shape-Daten als private Geodatabase exportieren",
+        "url": "grafik/shape-export/allgemein",
+        "de": "Shape-Daten als private Geodatabase exportieren",
+        "it": "Shape-Daten als private Geodatabase exportieren",
+        "fr": "Shape-Daten als private Geodatabase exportieren",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Statuszeile",
+    "url": "statuszeile",
+    "de": "Statuszeile",
+    "it": "Statuszeile",
+    "fr": "Statuszeile",
+    "items": [
+      {
+        "title": "Statuszeile",
+        "url": "grafik/statuszeile/allgemein",
+        "de": "Statuszeile",
+        "it": "Statuszeile",
+        "fr": "Statuszeile",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Stylingeditor",
+    "url": "stylingeditor",
+    "de": "Stylingeditor",
+    "it": "Stylingeditor",
+    "fr": "Stylingeditor",
+    "items": [
+      {
+        "title": "Stylingeditor",
+        "url": "grafik/stylingeditor/allgemein",
+        "de": "Stylingeditor",
+        "it": "Stylingeditor",
+        "fr": "Stylingeditor",
+        "items": null
+      },
+      {
+        "title": "Bedingungen",
+        "url": "grafik/stylingeditor/bedingungbearbeiten",
+        "de": "Bedingungen",
+        "it": "Bedingungen",
+        "fr": "Bedingungen",
+        "items": null
+      },
+      {
+        "title": "Eigenschaften für Flächenobjekte",
+        "url": "grafik/stylingeditor/eigenschaftenfuerflaechenobjekte",
+        "de": "Eigenschaften für Flächenobjekte",
+        "it": "Eigenschaften für Flächenobjekte",
+        "fr": "Eigenschaften für Flächenobjekte",
+        "items": null
+      },
+      {
+        "title": "Eigenschaften für Linienobjekte",
+        "url": "grafik/stylingeditor/eigenschaftenfuerlinienobjekte",
+        "de": "Eigenschaften für Linienobjekte",
+        "it": "Eigenschaften für Linienobjekte",
+        "fr": "Eigenschaften für Linienobjekte",
+        "items": null
+      },
+      {
+        "title": "Eigenschaften für Punktobjekte",
+        "url": "grafik/stylingeditor/eigenschaftenfuerpunktobjekte",
+        "de": "Eigenschaften für Punktobjekte",
+        "it": "Eigenschaften für Punktobjekte",
+        "fr": "Eigenschaften für Punktobjekte",
+        "items": null
+      },
+      {
+        "title": "Interne Attribute",
+        "url": "grafik/stylingeditor/interneattribute",
+        "de": "Interne Attribute",
+        "it": "Interne Attribute",
+        "fr": "Interne Attribute",
+        "items": null
+      },
+      {
+        "title": "Beschriftungen",
+        "url": "grafik/stylingeditor/labeltextzusammenstellen",
+        "de": "Beschriftungen",
+        "it": "Beschriftungen",
+        "fr": "Beschriftungen",
+        "items": null
+      },
+      {
+        "title": "Maßstabsbereiche",
+        "url": "grafik/stylingeditor/massstabsbereichbearbeiten",
+        "de": "Maßstabsbereiche",
+        "it": "Maßstabsbereiche",
+        "fr": "Maßstabsbereiche",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Suche",
+    "url": "suche",
+    "de": "Suche",
+    "it": "Suche",
+    "fr": "Suche",
+    "items": [
+      {
+        "title": "Schnellsuche",
+        "url": "grafik/suche/ad-hoc-suche",
+        "de": "Schnellsuche",
+        "it": "Schnellsuche",
+        "fr": "Schnellsuche",
+        "items": null
+      },
+      {
+        "title": "Suche exportieren",
+        "url": "grafik/suche/exportieren",
+        "de": "Suche exportieren",
+        "it": "Suche exportieren",
+        "fr": "Suche exportieren",
+        "items": null
+      },
+      {
+        "title": "Suche importieren",
+        "url": "grafik/suche/importieren",
+        "de": "Suche importieren",
+        "it": "Suche importieren",
+        "fr": "Suche importieren",
+        "items": null
+      },
+      {
+        "title": "Koordinaten suchen",
+        "url": "grafik/suche/koordinatensuchen",
+        "de": "Koordinaten suchen",
+        "it": "Koordinaten suchen",
+        "fr": "Koordinaten suchen",
+        "items": null
+      },
+      {
+        "title": "Suchmanager ",
+        "url": "grafik/suche/suchmanager",
+        "de": "Suchmanager ",
+        "it": "Suchmanager ",
+        "fr": "Suchmanager ",
+        "items": null
+      },
+      {
+        "title": "vorkonfigurierte Suche",
+        "url": "grafik/suche/vorkonfiguriertesuche",
+        "de": "vorkonfigurierte Suche",
+        "it": "vorkonfigurierte Suche",
+        "fr": "vorkonfigurierte Suche",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Tabellenansicht",
+    "url": "tabellenansicht",
+    "de": "Tabellenansicht",
+    "it": "Tabellenansicht",
+    "fr": "Tabellenansicht",
+    "items": [
+      {
+        "title": "Tabellenansicht",
+        "url": "grafik/tabellenansicht/allgemein",
+        "de": "Tabellenansicht",
+        "it": "Tabellenansicht",
+        "fr": "Tabellenansicht",
+        "items": null
+      },
+      {
+        "title": "Linienzüge nach Verlauf sortieren",
+        "url": "grafik/tabellenansicht/linienzuegesortieren",
+        "de": "Linienzüge nach Verlauf sortieren",
+        "it": "Linienzüge nach Verlauf sortieren",
+        "fr": "Linienzüge nach Verlauf sortieren",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Thematische Karten",
+    "url": "thematische karten",
+    "de": "Thematische Karten",
+    "it": "Thematische Karten",
+    "fr": "Thematische Karten",
+    "items": [
+      {
+        "title": "Thematische Karten",
+        "url": "grafik/thematischekarten/allgemein",
+        "de": "Thematische Karten",
+        "it": "Thematische Karten",
+        "fr": "Thematische Karten",
+        "items": null
+      }
+    ]
+  },
+  {
+    "title": "Tools",
+    "url": "tools",
+    "de": "Tools",
+    "it": "Tools",
+    "fr": "Tools",
+    "items": [
+      {
+        "title": "Batchtool",
+        "url": "grafik/tools/batchtool",
+        "de": "Batchtool",
+        "it": "Batchtool",
+        "fr": "Batchtool",
+        "items": null
+      },
+      {
+        "title": "rmDATA GeoDB Provider für FME Desktop",
+        "url": "grafik/tools/geodbproviderfuerfmedesktop",
+        "de": "rmDATA GeoDB Provider für FME Desktop",
+        "it": "rmDATA GeoDB Provider für FME Desktop",
+        "fr": "rmDATA GeoDB Provider für FME Desktop",
+        "items": null
+      },
+      {
+        "title": "Grafik-Export nach ESRI Shape",
+        "url": "grafik/tools/grafik-exportnachesrishape",
+        "de": "Grafik-Export nach ESRI Shape",
+        "it": "Grafik-Export nach ESRI Shape",
+        "fr": "Grafik-Export nach ESRI Shape",
+        "items": null
+      }
+    ]
+  }
+]

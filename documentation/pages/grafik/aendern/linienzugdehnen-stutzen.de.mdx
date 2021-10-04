@@ -1,0 +1,104 @@
+---
+title: "Linienzug dehnen/stutzen"
+page: true
+---
+## Dehnt einen oder mehrere Linienz&#252;ge bis zum n&#228;chsten begrenzenden Linienzug / Punkt oder stutzt diese an der Begrenzung.
+<GeoMapper> <Menu> Menu: [Ändern / Linienzug dehnen/stutzen] </Menu> </GeoMapper>
+<GeoDesigner> <Menu> Menu: [Bearbeiten und Ändern / Linien I / Dehnen/stutzen] </Menu> 
+ <Menu> Cmd: [LinestringExtendCut] </Menu> </GeoDesigner>
+
+
+1. Rufen Sie den Befehl auf.
+
+2. Selektieren Sie die Linienz&#252;ge, die Sie dehnen oder stutzen m&#246;chten. Beim Stutzen bestimmen Sie mit der Selektionsposition, welcher Teil der Linie erhalten bleibt. 
+
+
+<Success>
+Wenn Sie ein Fenster &#252;ber diese Linien aufziehen, bestimmen Sie mit dem Endpunkt des Fensters, welcher Teil der Linien erhalten bleiben soll. 
+
+</Success>
+3. Es stehen zwei Optionen zur Auswahl:
+
+1. <Bold> Neuer St&#252;tzpunkt: </Bold>  Beim ersten Aufruf des Befehls ist diese Option standardm&#228;&#223;ig aktiv. Hier wird ein zus&#228;tzlicher St&#252;tzpunkt erzeugt. Liegt ein Vermessungspunkt auf dem Ende der zu dehnenden Linie, so wird dieser nicht zum neuem St&#252;tzpunkt verschoben.
+
+2. <Bold> St&#252;tzpunkt verschieben: </Bold>  Diese Option verschiebt den Endpunkt der Linie und alle Vermessungspunkte die auf ihm liegen. Es wird kein neuer St&#252;tzpunkt erzeugt.
+
+
+
+
+
+4. Selektieren Sie den Punkt oder die Begrenzungslinie, bis zu welcher die zuvor gew&#228;hlten Linienz&#252;ge gedehnt bzw. an dem/der sie gestutzt werden sollen, und best&#228;tigen Sie mit <Border>Enter</Border> .
+
+5. Die Linienz&#252;ge werden bis zur Begrenzung gedehnt bzw. daran gestutzt.
+
+
+
+
+Alternative
+
+
+1. Selektieren Sie einen oder mehrere Linienz&#252;ge in der Grafik. 
+
+
+<Success>
+Wenn Sie ein Fenster &#252;ber diese Linien aufziehen, bestimmen Sie mit dem Endpunkt des Fensters, welcher Teil der Linien erhalten bleiben soll. 
+
+</Success>
+2. Rufen Sie den Befehl in der Multifunktionsleiste oder im Kontextmen&#252; auf. (F&#252;r das Kontextmen&#252; klicken Sie mit der rechten Maustaste in die Grafik)
+
+
+
+
+<Success>
+Als Begrenzungsobjekt k&#246;nnen Sie Punkte, Linienz&#252;ge oder linienhafte Objekte aus <GeoMapper>[Externen Daten](../../darstellungsmanager/datenquellen/uebersichtderdatenquellen)
+ oder
+</GeoMapper>
+ CAD-Elementen w&#228;hlen.
+</Success>
+
+<Success>
+Begrenzung mit einer Linie:
+
+-  Schneidet die Linie das selektierte Begrenzungssegment, dann wird die Linie nur bis dorthin gedehnt / gestutzt. Sonst werden beide Enden der Linie gedehnt / gestutzt. 
+
+
+
+
+</Success>
+<Success>
+Begrenzung mit einem Punkt:
+
+-  Beim Begrenzen mit einem Punkt wird nur die Seite ver&#228;ndert, die n&#228;her beim Selektionspunkt der Linie liegt. 
+
+
+
+<GeoMapper>(au&#223;er der Linienzug besteht aus genau 1 Bogen)
+
+</GeoMapper>
+-  Der Punkt wird lotrecht auf das Anfangs- bzw. Endsegment (abh&#228;ngig davon. auf welcher Seite die Linie selektiert wurde) projiziert und bis dahin wird die Linie gedehnt / gestutzt. 
+
+-  B&#246;gen werden bis zu der Linie, die zw. Bogenmittelpunkt und Begrenzungspunkt liegt, gedehnt/gestutzt. 
+
+
+
+</Success>
+
+<Success>
+Die H&#246;he der neuen Endpunkte der Linien wird wie folgt ermittelt:
+
+-  Wenn St&#252;tzpunkte eingef&#252;gt werden (siehe 
+
+[Berechnung und Entwurf](../datei/datei-einstellungen5)
+), wird die H&#246;he aus dem begrenzenden Linienzug interpoliert
+
+
+-  Wenn keine St&#252;tzpunkte eingef&#252;gt werden, wird die H&#246;he aus dem ge&#228;nderten Linienzug interpoliert bzw. extrapoliert
+
+
+-  H&#246;hen werden nun dann ermittelt, wenn beide benachbarte St&#252;tzpunkte des betroffenen Linienzugs eine g&#252;ltige H&#246;he haben. Andernfalls erh&#228;lt der neue Endpunkt <Italic> keine </Italic>  H&#246;he.
+
+
+
+
+</Success>
+

@@ -1,0 +1,118 @@
+---
+title: "Querprofilspuren einfügen"
+page: true
+---
+## F&#252;gt Querprofile entlang einer L&#228;ngsachse ein.
+<GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Profile / Querprofilspuren einfügen] </Menu> </GeoDesigner><GeoMapper> <Menu> Menu: [ Profile / Querprofilspuren einfügen] </Menu> </GeoMapper>
+<GeoDesigner> <Menu> Cmd: [CrossProfileConstruct] </Menu> 
+</GeoDesigner>
+
+1. Rufen Sie den Befehl auf
+
+2. W&#228;hlen Sie eine Profilspur, auf welcher Sie Querprofile erzeugen wollen
+
+3. In einem Dialog  legen Sie folgende Parameter fest:
+
+
+
+ <U> Allgemein </U> 
+
+- <Bold> Profill&#228;nge </Bold> : Geben Sie die L&#228;ngen der Querprofilspuren links und rechts der gew&#228;hlten Profilspur an.
+
+
+
+
+
+ <U> Querprofilstationierung </U> 
+
+- <Bold> Konstanter Abstand </Bold>  zwischen Querprofilen: Die Querprofile werden in der angegebenen Distanz auf die L&#228;ngsprofilspur eingesetzt.
+
+- <Bold> Konstanter Abstand, von - bis </Bold> : Mit dieser Option geben Sie an, in welchem Bereich (Stationierung) des L&#228;ngsprofils Querprofilspuren eingesetzt werden sollen.
+
+- <Bold> Zeigen in der Grafik </Bold> : Hiermit fordert Sie das Programm im Anschluss an den Dialog auf, die Einsetzpunkte der Querprofile auf dem L&#228;ngsprofil direkt 
+[in der Grafik  zu bestimmen](../profile/querprofilspureneinfuegen)
+.
+
+
+
+
+
+ <U> Stationierung am Querprofil </U> 
+
+- Hier wird f&#252;r alle im Anschluss eingef&#252;gten Querprofile die Nullstationierung, die sich auf den Schnittpunkt mit dem L&#228;ngsprofil bezieht, vorgegeben.  Standardm&#228;&#223;ig wird die Nullstationierung der Querprofile mit 0 angenommen.
+
+- Mittels der Option <Bold> Stationierung absteigend </Bold>  werden s&#228;mtliche  Querprofile mit absteigender Stationierung erzeugt.
+
+
+<GeoDesigner>
+<Image>\img\grafikuerprofilspur.png$Querprofilspur</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafikeoMapper.Querprofilspur.png$GeoMapper.Querprofilspur</Image>
+</GeoMapper>
+
+
+
+
+
+<Success>
+Die Querprofile werden immer beginnend beim Anfangspunkt der L&#228;ngsprofilspur eingesetzt, sofern deren Positionen nicht manuell bestimmt werden.
+</Success>
+
+<Success>
+Die Nullstationierung sowohl eines L&#228;ngs- als auch eines Querprofils kann nachtr&#228;glich &#252;ber den Eigenschaften-Manager bei der Profildarstellung ge&#228;ndert werden.
+</Success>
+
+
+Alternative
+  <Bold> Zeigen von Einsetzpunkten f&#252;r Querprofile direkt in der Grafik. </Bold> 
+
+1. Starten Sie den Befehl.
+
+2. W&#228;hlen Sie einen bestehenden Linienzug in der Grafik aus.
+
+
+<Success>
+Sollte der Linienzug noch keine Profilinformation besitzen, dann fordert Sie das Programm zu diesem Zeitpunkt auf, die entsprechenen Eigenschaften (Nullstationierung, etc.) anzugeben.
+
+</Success>
+3. W&#228;hlen Sie im darauf folgenden Dialog  die Option <Menu>Zeigen in der Grafik</Menu>  aus und best&#228;tigen Sie den Dialog mit <Border>Weiter</Border> .<Image>\img\grafikuerProfilZeigen.png$QuerProfilZeigen</Image>
+4. <Placeholder>product</Placeholder> zeigt Ihnen nun, w&#228;hrend Sie das L&#228;ngsprofil entlangfahren, den Einsetzpunkt des Querprofils am L&#228;ngsprofil an.
+
+5. Auswahl der Stationierung:
+
+- <Bold> Auswahl in der Grafik: </Bold>  Klicken Sie an der gew&#252;nschten Stelle und das Querprofil wird eingef&#252;gt.
+
+- <Bold> Eingabe der Stationierung: </Bold> 
+- W&#228;hlen Sie im <Menu>Zeigen-</Menu>  Modus die Option <Menu>Stationseingabe</Menu> .
+
+- <Placeholder>product</Placeholder> fordert Sie zur Eingabe eines Stationswertes auf: 
+
+
+<GeoDesigner>
+<Image>\img\grafikuerProfilStationsEingabe.png$QuerProfilStationsEingabe</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafikeoMapper.QuerProfilStationsEingabe.png$GeoMapper.QuerProfilStationsEingabe</Image>
+</GeoMapper>
+ 
+<Success>
+Bei der 
+ <Menu>Stationseingabe</Menu>  wird bereits der g&#252;ltige Wertebereich, ermittelt aus Anfangsstationierung und Profill&#228;nge, ber&#252;cksichtigt. Falls Sie einen zu kleinen oder zu gro&#223;en Wert eingeben, weist Sie 
+ <Placeholder>product</Placeholder> auf die Fehleingabe hin:
+
+
+<GeoDesigner>
+<Image>\img\grafikuerProfilEingabeFehler.png$QuerProfilEingabeFehler</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafikeoMapper.QuerProfilEingabeFehler.png$GeoMapper.QuerProfilEingabeFehler</Image>
+</GeoMapper>
+
+</Success>
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+---
+title: "Segments vers arcs tangents"
+page: true
+---
+## Modification du rayon de segments, pour les transformer en arcs tangents.
+<GeoMapper> <Menu> Menu: [Editer / Segments vers arcs tangents] </Menu> </GeoMapper>
+<GeoDesigner> <Menu> Menu: [Editer et modifier / Segments vers arcs tangents] </Menu> 
+ <Menu> Cmd: [LinestringSegmentsToArcTangents] </Menu> </GeoDesigner>
+
+Utilisez cette commande pour modifier des polylignes existantes.
+
+1. S&#233;lectionnez la polyligne &#224; modifier (polyligne de base)
+
+2. S&#233;lectionnez la direction de d&#233;part:
+
+1. S&#233;lectionnez un segment de polyligne pour d&#233;finir la direction. Celui-ci d&#233;finit aussi le point de d&#233;part (la direction est d&#233;finit sur la base du point d&#39;arriv&#233;e).
+
+2. S&#233;lectionnez 2 points (quelconque dans le dessin) et un point de d&#233;part sur la polyligne
+
+
+
+3. S&#233;lectionnez un point d&#39;arriv&#233;e sur la polyligne
+
+
+
+ <Placeholder>product</Placeholder> transforme tous les segments entre le segment/point de d&#233;part et le point d&#39;arriv&#233;e en arcs tangents (avec la m&#234;me g&#233;om&#233;trie comme si ils &#233;taient dessin&#233;s &#224; nouveau)
+
+<Success>
+Si vous pour d&#233;finir la direction de d&#233;part s&#233;lectionnez un segment, ce m&#234;me segment n&#39;est pas modifi&#233;, mais uniquement les segments suivants. 
+</Success>
+
+<Success>
+Dans le cas o&#249; un segment poss&#232;de d&#233;j&#224; un rayon, ce rayon est &#233;cras&#233;
+</Success>
+
+<Success>
+Cette commande ne cr&#233;e aucun nouveau sommet, mais modifie seulement les rayons des segments existants
+</Success>
+
+<Success>
+Si dans la polyligne d&#39;origine existe un arc par 3 points, le sommet au centre est gard&#233; (&#224; cet endroit deux segments au lieu d&#39;un sont cr&#233;&#233;s)
+</Success>
+
+<Success>
+Toutes les surfaces ref&#233;renc&#233;es &#224; cette polyligne sont conform&#233;ment calcul&#233;es &#224; nouveau.
+</Success>
+

@@ -1,0 +1,59 @@
+---
+title: "Afficher les profils"
+page: true
+---
+## Repr&#233;sentation des profils en long et en travers
+ <Menu> Menu: [ ^^dtmRibbonTitle^^ / Profils / Afficher le profil] </Menu> 
+ <Menu> Cmd: [ProfileShow] </Menu> 
+
+
+1. D&#233;finissez si les sommets de la ligne du profil et les points attribu&#233;s au profil doivent &#234;tre repr&#233;sent&#233;s, ou si le profil doit &#234;tre intersect&#233; avec un ou plusieurs mod&#232;les.
+
+
+
+<Warning>
+L&#39;option Intersection n&#39;est disponible que si l&#39;application  <Italic> Mod&#232;le de terrain </Italic>  est activ&#233;e.
+</Warning>
+
+
+1. Si des profils en travers ont &#233;t&#233; cr&#233;&#233;s sur le profil en long, exploitez-les avec l&#39;option correspondante.
+
+2. Chaque profil est repr&#233;sent&#233; dans un propre layout ou tous les profils dans le m&#234;me layout. L&#39;option correspondante se trouve dans les 
+[Param&#232;tres de fichier](../datei/datei-einstellungen17)
+.
+
+
+
+
+<Success>
+Quand la polyligne n&#39;a pas encore &#233;t&#233; repr&#233;sent&#233;e comme profil, le dialogue [](/saisiedelastation)
+ s&#39;ouvre.
+</Success><Image>\img\grafik\profile\ProfilNeuAufbauen.png$ProfilNeuAufbauen</Image>
+
+ <U>  <Bold> D&#39;autres options dans le dialogue: </Bold>  </U>  
+	  
+
+- <Bold> Intersecter le profil avec le mod&#232;le: </Bold> 
+- <Bold> S&#233;lection de mod&#232;les: </Bold>  Si dans votre dessin vous avez des mod&#232;les de terrain, vous pouvez d&#233;terminer les altitudes du profil depuis le mod&#232;le. Les point attribu&#233;s hors du profil ne sont donc pas affich&#233;s.
+
+- <Bold> Aucune s&#233;lection de mod&#232;les: </Bold>  Le profil est repr&#233;sent&#233; depuis les points attribu&#233;s.
+
+
+
+- <Bold> Restituer les relatifs profils en travers: </Bold>  Si des profils en travers ont &#233;t&#233; cr&#233;&#233;s &#224; partir d&#39;un profil en long, alors avec cette option, aussi les profils en travers sont cr&#233;&#233;s (voir 
+[Ins&#233;rer profils en travers](../profile/querprofilspureneinfuegen)
+).
+
+- <Bold> Filtrer les altitudes Null: </Bold>  Les sommets avec Altitude(Z)=0 ne sont pas affich&#233;s.
+
+
+
+
+<Success>
+Un profil n&#39;est affich&#233; que si au moins un point pr&#233;sente une altitude valable. Les points avec des altitudes non valables sont exclus de l&#39;affichage. Pour le calcul de stationnement, tous les points sont consid&#233;r&#233;s, m&#234;me s&#39;ils n&#39;ont pas une altitude valable. Pour calculer la Distance 2D, la Distance 3D et la Pente les valeurs sont lues depuis les points restants.
+Une mention de ceci est affich&#233;e sur le dialogue &quot;Afficher le profil&quot;.
+</Success>
+
+<Success>
+Pour un affichage correcte de la Station 3D, tous les points doivent pr&#233;senter une altitude valable. 
+</Success>

@@ -1,0 +1,56 @@
+---
+title: "Geometrische Bereinigung"
+page: true
+---
+## Bereinigung von Fehlern, die sich innerhalb  einer Toleranz von 1e-5 befinden. Es werden Punkthaufen, Punkte auf Linien und Linienschnittpunkte bereinigt.
+ <Menu> Menu: [Bereinigen / Geometrische Bereinigung ] </Menu> 
+
+<GeoDesigner> <Placeholder>geodgm</Placeholder> </GeoDesigner>
+###  Geometrische Bereinigung
+Die Geometrische Bereinigung hat keine weiteren Einstellungsseiten. Nach Klick auf den Button  <Border>Fertigstellen</Border>  starten Sie den Bereinigungsvorgang.
+
+ <Bold>  <U> Folgende Punkte sind dabei zu beachten: </U>  </Bold> 
+
+
+- <Bold> Punkthaufenbereinigung </Bold> 
+- Vermessungspunkte: Ist mehr als ein Vermessungspunkt im Haufen, so muss der Benutzer den Haufen im 
+[Bereinigungsassistenten](../bereinigen/assistent)
+ bearbeiten. 
+
+
+<Success>
+Vermessungspunkte werden nicht automatisch ver&#228;ndert.
+
+</Success>
+- Vertices: Liegt ein Vermessungspunkt im Haufen, so werden alle Vertices auf diesen hingezogen. Gibt es keinen Vermessungspunkt, so werden die Vertices gemittelt.
+
+
+
+
+
+
+
+
+
+- <Bold> Punkt auf Segment: </Bold>  Wird im Zuge dieser Bereinigung ein neuer St&#252;tzpunkt f&#252;r einen Linienzug eingef&#252;gt, so wird beim Einf&#252;gen folgenderma&#223;en vorgegangen:
+
+- Trifft ein Punkt (Punkt mit/ohne Punktnummer, Punkt ohne Typ) auf eine Linie, wird die Linie &#252;ber den Vermessungspunkt gezeichnet.
+
+- Trifft ein Vertexpunkt auf eine Linie, wird der Vertexpunkt normal auf die Linie verschoben und in diese als neuer Vertex eingef&#252;gt.
+
+
+
+
+
+
+
+
+
+
+
+- <Bold> Kreuzende Liniensegmente: </Bold>  Die Linienz&#252;ge erhalten an dieser Stelle einen St&#252;tzpunkt
+
+
+
+
+

@@ -1,0 +1,65 @@
+---
+title: "Importare i punti da file ASCII"
+page: true
+---
+## Definizioni specifiche per l&#39;importazione in formato ASCII.
+ <Menu> Menu: [File / Import-Manager] </Menu> 
+
+Su altre pagine &#232; possibile eseguire ulteriori impostazioni per il formato ASCII.
+
+### Mappatura
+La mappatura delle colonne del file ASCII con gli attributi/campi in  <Placeholder>product</Placeholder> si esegue con l&#39;aiuto d&#39;una tabella di conversione.<Image>\img\grafik\importmanager\DatenImportieren.png$DatenImportieren</Image>
+
+
+1. Selezionare un file di mappatura:
+
+- Da una cartella predefinita<Image>\img\grafik\importmanager\PfeilAuswahl.png$PfeilAuswahl</Image>: qui si trovano i file di mappatura, installati con <Placeholder>product</Placeholder> o con un modulo risp. file di mappatura, che siano stati salvati in una 
+[cartella di societ&#224;](../datei/programm-einstellungen6)
+ centralizzata.
+
+- Da una cartella qualunque tramite il bottone <Border>...</Border> : Quando siano stati creati i propri file di mappatura, questi si trovano direttamente nella cartella di progetto.
+
+
+
+
+
+Alternativa
+ Cliccando sul bottone  <Border>Assistente...</Border>  si pu&#242; creare una nuova tabella di conversione. 
+Per maggiori informazioni, leggere [qui...](../datei/importmanager3)
+
+
+<Warning>
+Se sono scelti pi&#249; file ASCII, questi devono avere la medesima struttura!
+</Warning>
+
+
+### Impostazioni
+Qui possono essere definite ulteriori impostazioni d&#39;importazione, queste impostazioni sono opzionali.
+
+- <Bold> Risoluzione dei conflitti: </Bold> I nomi dei punti e delle superfici devono essere univoci. In caso di omonimia sono disponibili le seguenti opzioni:
+
+- <Italic> Rinomina </Italic> : I punti e le superfici importate sono rinominati con un prefisso risp. suffisso. Gli oggetti esistenti rimangono inalterati.
+
+- <Italic> Priorit&#224; al punto esistente </Italic> : Il punto gi&#224; esistente nel file rimane inalterato, l&#39;oggetto dalla sorgente &#232; ignorato. Il comportamento &#232; lo stesso come per <Italic> Rinomina </Italic>  senza aggiunta di un prefisso risp. suffisso.
+
+- <Italic> Priorit&#224; al nuovo punto </Italic> : Il punto importato sostituisce il punto esistente.
+
+- <Italic> Risolvere interattivamente </Italic> : Si apre un dialogo di collisione, nel quale &#232; possibile decidere, per ogni punto, se debba essere usato il punto in <Placeholder>fullproduct</Placeholder> o quello dalla sorgente. 
+
+
+
+
+
+<Warning>
+In caso di superfici col medesimo nome, le superfici importate sono rinominate con un prefisso risp. suffisso. Se entrambi i valori fossero vuoti, la superficie non viene importata. Rimane la superficie esistente.
+</Warning>
+
+
+- <Bold> Protocollo: </Bold>  Definisce se per gli oggetti importati venga creato un protocollo dettagliato o un riepilogo.
+
+- <Bold> Importa Region: </Bold>  Definisce se per i punti, il campo del nome <Italic> Region </Italic>  debba essere importato o ignorato.
+
+
+
+
+Cliccare su  <Border>Fine</Border> , per terminare l&#39;importazione ed aprire un dialogo che mostra lo stato dell&#39;importazione.

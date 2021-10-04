@@ -1,0 +1,58 @@
+---
+title: "Umbenennen"
+page: true
+---
+## Mit dem Massenbefehl  <Menu>Punkte umbenennen</Menu>  wird eine gr&#246;&#223;ere Anzahl an Punkten &#252;ber verschiedene Einstellungen umbenannt.
+<GeoMapper> <Menu> Menu: [Daten / Punkte umbenennen] </Menu> 
+
+
+<Image>\img\grafik\daten\GeoMapper.geo.PunkteUmnummerierenForm.png$GeoMapper.geo.PunkteUmnummerierenForm</Image>
+</GeoMapper>
+<GeoDesigner> <Menu> Menu: [Daten / Punkte / Umnummerierung] </Menu> 
+ <Menu> Cmd: [PointsRenumber] </Menu> 
+
+
+<Image>\img\grafik\daten\Geo.PunkteUmnummerierenForm.png$Geo.PunkteUmnummerierenForm</Image>
+</GeoDesigner>
+
+
+Gehen Sie wie folgt vor:
+
+1. Rufen Sie den Befehl auf.
+
+2. W&#228;hlen Sie die Umbenennungs-Eigenschaften. Folgende Umbennenungsarten sind m&#246;glich:
+
+- <Menu>Additionskonstante</Menu> : Das System erh&#246;ht den numerischen Teil der Punktbezeichnungen aller gew&#228;hlten Punkte um die Additionskonstante. (z.B.: Additionskonstante = 5, Punkt = A1, Ergebnis = A6)
+
+- <Menu>Inkrementieren ab</Menu> : Die gew&#228;hlten Punkte werden beginnend mit der gew&#228;hlten Startpunktnummer umbenannt.
+
+- <Menu>Tabelle</Menu> : Das System benennt die gew&#228;hlten Punkte entsprechend einer in einer Textdatei definierten Tabelle um. Geben Sie daher den Pfad der Textdatei an. Details dazu siehe 
+[Umbenennen mit Tabelle](../daten/punkte_umnummerieren2)
+.
+
+
+
+3. W&#228;hlen Sie den Startpunkt ab dem umbenannt werden soll. 
+
+4. W&#228;hlen Sie den Endpunkt bis zu dem umbenannt werden soll. 
+
+5. Klicken Sie auf <Border>   Ok   </Border> .
+
+6. Die Punkte zwischen Start- und Endpunkt werden umbenannt und die Berechnung wird protokolliert.
+
+
+
+
+<Warning>
+Ob ein Punkt umbenannt wird, wenn der Zielname bereits besteht, h&#228;ngt von der Umbenennungsmethode ab:
+
+-  Mittels <Menu>Additionskonstante</Menu>  und <Menu>Tabelle</Menu>  erfolgt dann <Bold> keine Umbenennung </Bold> .
+
+
+-  Mittels <Menu>Inkrementieren ab</Menu>  werden bestehende Namen ausgelassen und es erfolgt eine <Bold> Umbenennung auf die n&#228;chste freie Nummer </Bold> .
+
+
+
+
+</Warning>
+

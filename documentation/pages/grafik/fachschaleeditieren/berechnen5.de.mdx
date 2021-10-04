@@ -1,0 +1,42 @@
+---
+title: "Kleinpunkte"
+page: true
+---
+## Mit der Methode  <Menu>Kleinpunkte</Menu>  konstruieren Sie einen Punkt, indem Sie von einer Basislinie aus Abszissen- und Ordinatenabstand angeben.
+ <Menu> Menu: [Berechnen / Kleinpunkte] </Menu><Image>\img\grafik\fachschaleeditieren\Geo.KleinpunkteForm.png$Geo.KleinpunkteForm</Image>
+
+Gehen Sie wie folgt vor:
+
+1. Rufen Sie den Befehl auf.
+
+2. W&#228;hlen Sie den Startpunkt der Basislinie.
+
+3. W&#228;hlen Sie den Endpunkt der Basislinie.
+
+4. Optional kann der Abstand zwischen Start- und Endpunkt durch Anhaken der Option <Menu>Distanz überschreiben</Menu>  und Eingabe eines neuen Abstands &quot;&#252;berschrieben&quot; werden. Der neue Abstand wird dann als Basis f&#252;r die Abszisse verwendet.
+
+5. Geben Sie die L&#228;nge der Abszisse an.
+
+6. Geben Sie die L&#228;nge der Ordinate an.
+
+7. Durch Anhaken der Option <Menu>Maßstabsfaktor berücksichtigen</Menu>  ber&#252;cksichtigt das System auch f&#252;r die Ordinate den Faktor der sich auf Grund der unterschiedlichen Abszissenl&#228;ngen (gemessen und gerechnet) ergibt.
+
+8. Durch Anhaken der Option <Menu>Teilungsverhältnis</Menu>  wird der eingegebene Abszissenwert nicht als absoluter Wert, sondern als Verh&#228;ltniszahl zur Basislinie gesehen. Wenn diese Option aktiv ist, gilt der Faktor der sich auf Grund der unterschiedlichen Abszissenl&#228;ngen (gemessen und gerechnet) ergibt f&#252;r die Abszisse nicht.
+
+9. W&#228;hlen Sie das aus den Eingaben resultierende Ergebnis und best&#228;tigen Sie mit <Border>   Ok   </Border> .
+
+10. Ausgehend vom ersten Punkt der Basislinie wird nun der Abszissenabstand in Richtung der Basislinie aufgetragen und normal dazu der Ordinatenabstand. Der ausgew&#228;hlte Punkt wird dargestellt und die Berechnung wird protokolliert.
+
+
+
+
+Falls Daten fehlen, nicht korrekt eingegeben wurden oder es keine Ergebnisse gibt, erscheint im oberen Bereich des Fensters ein Fehlerbereich und der Dialog l&#228;sst sich nicht &#252;ber  <Border>   Ok   </Border>  schlie&#223;en (nur &#252;ber   <Border>Abbrechen</Border> ).
+
+Die Methode &quot;Kleinpunkte&quot; unterst&#252;tzt auch einen fortlaufenden Modus. Dieser wird durch Anhaken der Option  <Menu>mit Ordinate als neue Basislinie fortsetzen</Menu>  oder  <Menu>mit aktueller Basislinie fortsetzen</Menu>  aktiviert. Dabei wird am Ende der Berechnung entweder der Startpunkt der aktuellen Basislinie oder der Lotfu&#223;punkt des zuletzt konstruierten Punktes als Basis f&#252;r den n&#228;chsten Punkte gew&#228;hlt und der Dialog bleibt ge&#246;ffnet. 
+
+Haben Start- und Endpunkt der Basislinie eine H&#246;he, so kann die Option  <Menu>Höhe der/des Neupunkte(s) ableiten</Menu>  aktiviert werden. Wenn die Option verwendet wird, wird eine H&#246;he auf Basis der Basislinie abgeleitet.
+
+<Success>
+Negative Abszissenwerte laufen gegen die Richtung der Basislinie.
+Der Ordinatenwert wird rechts der Basislinie aufgetragen, negative Ordinatenwerte entsprechend links der Basislinie.
+</Success>

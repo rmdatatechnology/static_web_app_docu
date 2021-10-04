@@ -1,0 +1,90 @@
+---
+title: "Daten für das Luxemburger Katasteramt exportieren"
+page: true
+---
+## Exportieren Sie erstellte Daten in eine GML-Datei f&#252;r das Katasteramt
+<GeoMapper> <Menu> Menu: [Datei/ Exportmanager] </Menu> 
+
+<Warning>
+Diesen Export gibt es nur in der Fachschale &quot;Teilungsplan Luxemburg&quot;. 
+</Warning>
+
+
+<Success>
+Vor dem Export m&#252;ssen Sie folgende Dinge vorbereiten:
+
+-  Berechnen Sie alle Fl&#228;chen
+
+
+-  Tragen Sie die allgemeinen Daten in <Menu>Datei / Datei-Einstellungen / Dateiattribute</Menu>  ein.
+
+
+- Wechseln Sie in die Darstellung &quot;plan &#225; l&#39;acte&quot; und in die Ansicht &quot;Neuer Stand&quot; 
+
+
+
+
+
+
+</Success>
+
+
+### Einstellungen
+
+- <U> N&#228;herung von B&#246;gen </U>  gibt die <Italic> Pfeilh&#246;he </Italic>  in Metern an, mit der B&#246;gen segmentiert werden.
+
+
+
+
+Dr&#252;cken Sie  <Border>Fertigstellen</Border> , um den Export abzuschlie&#223;en. Es wird ein Dialog ge&#246;ffnet, der den Status des Exportes anzeigt.
+
+<Success>
+F&#252;r den Export an das Katasteramt werden einige Sachinformationen ben&#246;tigt. Damit Sie kaum doppelte Eintr&#228;ge durchf&#252;hren m&#252;ssen, haben wir folgende Vereinfachungen f&#252;r Sie eingebaut:
+
+-  Die Dateiattribute <Bold> &quot;commune code&quot; und &quot;section code&quot; </Bold> gelten f&#252;r alle Parcellen. Sollte eine Fl&#228;che davon abweichende Werte haben, tragen Sie diese im Eigenschaftenmanager bei dieser Fl&#228;che ein.
+
+
+-  Wenn Sie mit <Placeholder>geoproject-fullproduct</Placeholder> arbeiten, dann <Bold> &quot;commune code&quot; und &quot;section code&quot; </Bold> aus den Projektattributen gelesen.
+
+
+-  Wenn bei einer Parcelle das Attribut <Bold> lieudit </Bold> nicht eingetragen ist, solll wird das Dateiattribut <Bold> lieu </Bold> ausgegeben
+
+
+-  Wenn bei einer Parcelle das Attribut <Bold> localite </Bold> nicht gesetzt ist, dann wird das Dateiattribut <Bold> section </Bold> ausgegeben 
+
+
+
+
+</Success>
+
+<Success>
+Um die Attribute bei mehreren Parcellen auf einmal zu setzen, gehen Sie folgenderma&#223;en vor:
+
+-  Selektieren Sie alle betroffenen Parcellen. (Halten Sie die Taste <Border>Strg</Border>  gedr&#252;ckt, dann k&#246;nnen Sie die Parcellen einfach der Reihe nach anklicken.)
+
+
+-  Tragen Sie im Eigenschaftsmanager das Attribut ein, z.b: <Bold> rue </Bold> 
+-  Das Attribut wird bei allen selektierten Parcellen gespeichert.
+
+
+
+
+</Success>
+
+<Success>
+Beim Export an das Katasteramt werden auch verschiedene Positionen der Parcellen exportiert:
+
+-  Einsetzpunkte der Fl&#228;che
+
+
+-  Position der Fl&#228;chennummer
+
+
+-  Position der Hausnummer: Diese Position wird f&#252;r die Position der Adresse verwendet
+
+
+
+
+</Success>
+
+</GeoMapper>

@@ -1,0 +1,83 @@
+---
+title: "Importation de points depuis fichier Leica HeXML"
+page: true
+---
+##  <Placeholder>fullproduct</Placeholder> offre, &#224; cot&#233; de l&#39;importation de nuages de points  <Italic> ALS </Italic>  en format ASCII, aussi la possibilit&#233;, d&#39;importer des nuages de points terrestres depuis l&#39;appareil  <Italic> Leica Multistation </Italic> .
+
+L&#39;importation est effectu&#233;e en mode  <Italic> offline </Italic> , sans connexion de l&#39;appareil. Les donn&#233;es sont disponibles comme fichier XML, qui peut &#234;tre export&#233; avec la base de donn&#233;es du Scan de l&#39;appareil.
+
+Le fichier  <Italic>  <Bold> He </Bold> xagon Land <Bold> XML </Bold>  </Italic>  export&#233; depuis l&#39;appareil est nomm&#233;  <Italic> HeXML </Italic> .
+ <Menu> Menu: [Fichier / Manager d'importation] </Menu> 
+
+Sur d&#39;autres pages de configuration, vous pouvez d&#233;finir des configurations sp&#233;cifiques pour les donn&#233;es HeXML.
+
+
+1. En cliquant sur <Border>Suivant</Border>  les stations cont&#233;nues dans l&#39;enregistrement, sont list&#233;es comme sur l&#39;appareil. Ici vous pouvez limiter la s&#233;lection par station.<Image>\img\grafikager\HeXMLStationList.png$HeXMLStationList</Image>
+
+<Success>
+Au d&#233;but par d&#233;faut, toutes les stations sont s&#233;lectionn&#233;es pour l&#39;importation.
+
+</Success>
+2. Apr&#232;s avoir cliqu&#233; sur <Border>Suivant</Border>  les donn&#233;es originales sont analys&#233;es. Il est affich&#233; une vue d&#39;ensemble des donn&#233;es de scan sous forme d&#39;ombrage pour repr&#233;senter les altitudes.
+
+3. La repr&#233;sentation avec ombrage est calcul&#233;e avec des valeurs par d&#233;faut. Selon les caract&#233;ristiques du terrain (direction et angle de la pente) avec ces valeurs standards, le degr&#233; de d&#233;tail de l&#39;image peut &#234;tre un peu compromis.
+
+
+<Success>
+Avec l&#39;aide du r&#233;gulateur de rotation on peut varier l&#39;angle d&#39;incidence de la repr&#233;sentation avec ombrage, pour obtenir une meilleure image. Cliquez sur l&#39;&#233;l&#233;ment de r&#233;glage et tirez avec le pointeur de la souris, jusqu&#39;&#224; d&#233;finir l&#39;angle d&#233;sir&#233;. Sinon vous pouvez &#233;diter l&#39;angle dans le champ et le confirmer avec 
+ <Border>Enter</Border> . Apr&#232;s le changement de l&#39;angle d&#39;incidence, l&#39;image est calcul&#233;e &#224; nouveau.
+
+</Success><Image>\img\grafikager\HeXML-Analysis1.png$HeXML-Analysis1</Image>
+
+4. En cliquant sur <Border>Suivant</Border>  l&#39;assitant d&#39;importation d&#233;marre avec l&#39;all&#233;gement du nuage de points.
+
+
+<Success>
+Du fait que les donn&#233;es du Laserscanning sont tr&#232;s volumineuses, il est conseill&#233; d&#39;importer seulement la zone &#224; traiter. A ce but la zone d&#39;importation peut &#234;tre limit&#233;e.
+
+</Success>
+5. Termin&#233; l&#39;all&#233;gement, il est affich&#233;e une statistique du r&#233;sultat et, selon le degr&#233;e d&#39;analyse de donn&#233;es, un graphique du mod&#232;le par diff&#233;rence. Apr&#232;s avoir appuy&#233; sur le bouton <Border>Terminer</Border>  les donn&#233;es all&#233;g&#233;es sont reprises dans le projet de <Placeholder>product</Placeholder>  Avant la reprise finale des donn&#233;es, vous pouvez appliquer un point 3D de d&#233;calage globale pour les donn&#233;es d&#39;importation.<Image>\img\grafikager\HeXML-Importstatistik.png$HeXML-Importstatistik</Image>
+
+
+Alternative
+
+Pour limiter la zone d&#39;importation, appuyez sur le bouton<Image>\img\grafikager\ALS-Area.png$ALS-Area</Image> apr&#232;s quoi  <Placeholder>product</Placeholder> passe &#224; la fen&#234;tre graphique et vous demande de d&#233;finir un polygone. Dans ce temps,  <Placeholder>product</Placeholder> affiche en arri&#232;re-plan une vue d&#39;ensemble pour s&#39;orienter dans le graphique.
+
+
+- S&#233;lectionnez soit une polyligne de <Placeholder>product</Placeholder> &#233;xistante ou 
+
+- dessinez une nouvelle polyligne, en choisissant l&#39;option <Menu>Créer</Menu> .
+
+- Ensuite d&#233;finissez si la polyligne doit &#234;tre une <Menu>Limite-extérieure</Menu>  ou une zone &#224; &#232;pargner <Menu>Îlot</Menu> . Les points &#224; l&#39;int&#233;rieur d&#39;un &#238;lot ne sont pas import&#233;s. 
+
+- Vous pouvez d&#233;finir une limite ext&#233;rieure et plusieurs &#238;lots. Avec l&#39;option <Menu>Finir</Menu>  vous terminez la s&#233;lection des zones. 
+
+
+
+<Success>
+Pour supprimer &#224; nouveau une zone d&#39;importation existante, cliquez &#224; nouveau sur le bouton de s&#233;lection de zone et interrompez la requ&#234;te de s&#233;lection en appuyant sur  <Border>Esc</Border> .
+</Success>
+
+
+Alternative
+
+
+L&#39;ex&#233;cution de l&#39;analyse des r&#233;sultats peut &#234;tre activ&#233;e ou d&#233;sactiv&#233;e avec l&#39;option  <Menu>Analyse des résultats</Menu> .
+
+- D&#233;sactiv&#233;e...il est seulement d&#233;termin&#233; le nombre de points restants
+
+- Activ&#233;e.......l&#39;anaylse donne en plus le rapport d&#39;all&#233;gement, les valeurs extr&#234;mes pour la diff&#233;rence d&#39;altitude et les d&#233;passements de tol&#233;rance. En outre il est cr&#233;&#233; et affich&#233; un graphique du mod&#233;le par diff&#233;rence par rapport au donn&#233;es originales.
+
+
+
+<Success>
+L&#39;ex&#233;cution de l&#39;analyse des r&#233;sultats, selon le volume de donn&#233;es, peut exiger un certain temps d&#39;&#233;laboration. Les r&#233;sultats sont aussi repris dans le protocole d&#39;importation.
+</Success>
+<Success>
+Le mod&#233;le par diff&#233;rence ne montre &#233;videmment que la zone de donn&#233;es import&#233;e.
+</Success>
+<Success>
+Dans le cas o&#249; aucun all&#233;gement de points n&#39;est d&#233;sir&#233;, saisissez dans le champ  <Menu>Tolérance altimétrique maximale</Menu>  la valeur 0 (&quot;Null&quot;).
+Alors  <Placeholder>product</Placeholder> ex&#233;cute un filtre selon le polygone donn&#233; (si existant) resp. il essaye d&#39;importer tout l&#39;ensemble des donn&#233;es.
+</Success>
+

@@ -1,0 +1,38 @@
+---
+title: "Déterminer la ligne de plus grande pente"
+page: true
+---
+## D&#233;terminer &#224; partir d&#39;un point, la ligne de plus grande pente.
+<GeoMapper> <Menu> Menu: [Modèle de terrain / Ligne de plus grande pente] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Modèle de terrain / Ligne de plus grande pente] </Menu> 
+ <Menu> Cmd: [slopelinenew] </Menu> </GeoDesigner>
+
+
+1. Appelez la commande. 
+
+
+<Warning>
+Assurez-vous que dans le fichier un 
+ <Italic> [type de polyligne courant](../benutzeroberflaeche/statusleiste4)
+ </Italic>  soit d&#233;fini.
+
+Ceci est n&#233;cessaire &#224; 
+ <Placeholder>product</Placeholder>  pour g&#233;n&#233;rer la ligne correspondante.
+
+</Warning>
+2. Indiquez avec la souris le point de d&#233;part de la ligne dans le graphique.
+
+3. <Placeholder>product</Placeholder> calcul la g&#233;om&#233;trie de la ligne de plus grande pente dans le mod&#232;le de terrain actif et ins&#232;re une polyligne du type de ligne courant.
+
+4. R&#233;p&#233;tez l&#39;op&#233;ration le nombre de fois d&#233;sir&#233;, sinon s&#233;lectionnez l&#39;option <Menu>Annuler</Menu> ..
+
+
+
+
+<Warning>
+Le calcul se fait sur la base du [mod&#232;le de terrain actif](../benutzeroberflaeche/multifunktionsleiste)
+. Ce dernier ne doit pas forcement &#234;tre visible dans la fen&#234;tre graphique. Soyez donc attentif &#224; cette d&#233;finition lorsque vous utilisez cette commande.
+</Warning>
+
+<Success>
+Vous pouvez s&#233;lectionner un nombre quelconque de points de d&#233;part en s&#233;quence pour le calcul.  <Placeholder>product</Placeholder> s&#233;lectionne toujours le dernier r&#233;sultat, ainsi vous pouvez travailler ult&#233;rieurement la polyligne correspondante.
+</Success>

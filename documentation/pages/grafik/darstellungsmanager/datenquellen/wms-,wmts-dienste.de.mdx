@@ -1,0 +1,77 @@
+---
+title: "WMS- und WMTS-Dienste"
+page: true
+---
+## Richten Sie eine Verbindung zu einem  <Italic> Web Map Service (WMS) </Italic>  oder  <Italic> Web Map Tile Service (WMTS) </Italic>  ein und beziehen Sie Rasterdaten von diesen Diensten.
+
+###  Neue Verbindung angeben
+
+1. <Bold> Verbindungsname: </Bold>  Dieser Name wird im Darstellungsmanager angezeigt
+
+2. <Bold> Service URL: </Bold>  Geben Sie den Namen des WMS-Dienstes an
+
+3. <Bold> Zugangsdaten: </Bold>  Sofern der Dienst gesch&#252;tzt ist, geben Sie hier Benutzer und Passwort ein. 
+
+
+<Success>
+Klicken Sie auf 
+
+<Image>\img\grafik\darstellungsmanager\datenquellen\Speichern.png$Speichern</Image> um den Dienst f&#252;r die sp&#228;tere Verwendung abzulegen. Der Dienst wird unter dem angegebenen Verbindungsnamen abgelegt.
+
+</Success>
+4. Klicken Sie auf <Border>Fertigstellen</Border> . Wenn Sie weitere Einstellungen treffen m&#246;chten, dann klicken Sie auf <Border>Weiter</Border> 
+
+
+
+###  Gespeicherte Services verwenden
+Bei der Installation von  <Placeholder>fullproduct</Placeholder> werden bereits einige Dienste bereit gestellt. Zus&#228;tzlich k&#246;nnen sie eigene Dienste speichern und wieder ausw&#228;hlen (siehe oben).
+
+1. Klicken Sie auf<Image>\img\grafik\darstellungsmanager\datenquellen\Auswahl.png$Auswahl</Image>
+2. W&#228;hlen Sie einen Dienst
+
+3. Klicken Sie auf <Border>Fertigstellen</Border> 
+
+
+
+### Einstellungen
+
+- <Bold> Objektklassen w&#228;hlen: </Bold>  Alle verf&#252;gbaren Objektklassen des WMS-Dienstes werden angezeigt. W&#228;hlen Sie die gew&#252;nschten Objektklassen f&#252;r die Anzeige aus.
+
+- <Bold> Koordinatensystemauswahl: </Bold>  (Nur bei WMS-Diensten)
+
+- <Bold> Serverkoordinatensystem: </Bold>  Die vom Server angebotenen Koordinatensysteme werden angezeigt.
+
+- <Bold> Verwendetes Koordinatensystem: </Bold> <Placeholder>product</Placeholder> w&#228;hlt automatisch das zum Serverkoordinatensystem passende <Italic> Verwendete Koordinatensystem </Italic> . Die Daten werden jeweils aus diesem System transformiert. Wenn die Bezeichnung des Serverkoordinatensystems nicht automatisch erkannt wird, kann das Koordinatensytem manuell gesetzt werden. 
+
+
+
+
+
+
+<Warning>
+Ist im bearbeiteten Projekt kein Koordinatensystem eingestellt, dann erfolgt  <Bold> keine Koordinatentransformation </Bold> .
+Sie k&#246;nnen das Projekt-Koordinatensystem in den [Dateieinstellungen](../datei/datei-einstellungen2)
+ &#228;ndern.
+</Warning>
+
+
+### Weitere Einstellungen
+Aktuell werden alle WMTS-Dienste bis zur Zoom-Stufe 19 angezeigt.
+Die angezeigte Zoom-Stufe kann vom Anwender in der Datei  <Italic> %appdata%\rmDATA\ <Placeholder>product</Placeholder> rmdata_konfiguration.xml </Italic>  mit dem Schl&#252;ssel  <Bold> &quot;MaxLevel&quot; </Bold>  konfiguriert werden:
+<Info>
+
+&lt;section name=&quot;GeoDesktop-WMTS Server&quot;&gt;
+    &lt;entry name=&quot;Basemap.at_ServiceUrl&quot;&gt;http://www.basemap.at/wmts/1.0.0/WMTSCapabilities.xml&lt;/entry&gt;
+    &lt;entry name=&quot;Magistrat Wien_ServiceUrl&quot;&gt;http://maps.wien.gv.at/wmts/1.0.0/WMTSCapabilities.xml&lt;/entry&gt;
+    &lt;entry name=&quot;OpenGeoServer_ServiceUrl&quot;&gt;http://services.opengeoserver.org/wmts/1.0.0/WMTSCapabilities.xml&lt;/entry&gt;
+    &lt;entry name=&quot;MaxLevel&quot;&gt;23&lt;/entry&gt;
+ &lt;/section&gt;
+</Info>
+
+
+###  Anzeige
+
+- <Bold> Transparenz: </Bold>  Geben Sie einen Wert f&#252;r die Transparenz an. 0 ist voll sichtbar und 255 ist durchsichtig. 
+
+
+

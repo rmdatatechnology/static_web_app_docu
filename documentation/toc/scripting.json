@@ -1,0 +1,269 @@
+[
+    {
+      "title": "IO",
+      "url": "products/scripting/schnittstellen",
+      "de": "IO",
+      "it": "IO",
+      "fr": "IO",
+      "items": [
+        {
+          "title": "IO",
+          "url": "products/scripting/schnittstellen/io",
+          "de": "IO",
+          "it": "IO",
+          "fr": "IO",
+          "items": null
+        },
+        {
+          "title": "Skriptausgabe",
+          "url": "products/scripting/schnittstellen/io2",
+          "de": "Skriptausgabe",
+          "it": "Skriptausgabe",
+          "fr": "Skriptausgabe",
+          "items": null
+        },
+        {
+          "title": "Eingabeaufforderung",
+          "url": "products/scripting/schnittstellen/io3",
+          "de": "Eingabeaufforderung",
+          "it": "Eingabeaufforderung",
+          "fr": "Eingabeaufforderung",
+          "items": null
+        },
+        {
+          "title": "Selektion von Punkten, Objekten, Bereichen",
+          "url": "products/scripting/schnittstellen/io4",
+          "de": "Selektion von Punkten, Objekten, Bereichen",
+          "it": "Selektion von Punkten, Objekten, Bereichen",
+          "fr": "Selektion von Punkten, Objekten, Bereichen",
+          "items": null
+        },
+        {
+          "title": "Zoom",
+          "url": "products/scripting/schnittstellen/io5",
+          "de": "Zoom",
+          "it": "Zoom",
+          "fr": "Zoom",
+          "items": null
+        },
+        {
+          "title": "Dialoge zum Öffnen und Speichern von Dateien",
+          "url": "products/scripting/schnittstellen/io6",
+          "de": "Dialoge zum Öffnen und Speichern von Dateien",
+          "it": "Dialoge zum Öffnen und Speichern von Dateien",
+          "fr": "Dialoge zum Öffnen und Speichern von Dateien",
+          "items": null
+        },
+        {
+          "title": "Position der aktuellen Anzeige",
+          "url": "products/scripting/schnittstellen/io7",
+          "de": "Position der aktuellen Anzeige",
+          "it": "Posizione della vista corrente",
+          "fr": "Position de la vue courante",
+          "items": null
+        }
+      ]
+    },
+    {
+      "title": "Project",
+      "url": "products/scripting/schnittstellen",
+      "de": "Project",
+      "it": "Project",
+      "fr": "Project",
+      "items": [
+        {
+          "title": "Project",
+          "url": "products/scripting/schnittstellen/project",
+          "de": "Project",
+          "it": "Project",
+          "fr": "Project",
+          "items": null
+        },
+        {
+          "title": "Geladene Objekte ermitteln",
+          "url": "products/scripting/schnittstellen/project2",
+          "de": "Geladene Objekte ermitteln",
+          "it": "Geladene Objekte ermitteln",
+          "fr": "Geladene Objekte ermitteln",
+          "items": null
+        },
+        {
+          "title": "Objekt direkt über ID lesen",
+          "url": "products/scripting/schnittstellen/project3",
+          "de": "Objekt direkt über ID lesen",
+          "it": "Objekt direkt über ID lesen",
+          "fr": "Objekt direkt über ID lesen",
+          "items": null
+        },
+        {
+          "title": "Objekte automatisiert erzeugen",
+          "url": "products/scripting/schnittstellen/project4",
+          "de": "Objekte automatisiert erzeugen",
+          "it": "Objekte automatisiert erzeugen",
+          "fr": "Objekte automatisiert erzeugen",
+          "items": null
+        },
+        {
+          "title": "Objekteigenschaften ändern",
+          "url": "products/scripting/schnittstellen/project5",
+          "de": "Objekteigenschaften ändern",
+          "it": "Objekteigenschaften ändern",
+          "fr": "Objekteigenschaften ändern",
+          "items": null
+        },
+        {
+          "title": "Objekt löschen",
+          "url": "products/scripting/schnittstellen/project6",
+          "de": "Objekt löschen",
+          "it": "Objekt löschen",
+          "fr": "Objekt löschen",
+          "items": null
+        },
+        {
+          "title": "Verfügbare Objekttypen, Darstellungen, Ansichten",
+          "url": "products/scripting/schnittstellen/project7",
+          "de": "Verfügbare Objekttypen, Darstellungen, Ansichten",
+          "it": "Verfügbare Objekttypen, Darstellungen, Ansichten",
+          "fr": "Verfügbare Objekttypen, Darstellungen, Ansichten",
+          "items": null
+        },
+        {
+          "title": "Attribute lesen und schreiben",
+          "url": "products/scripting/schnittstellen/project8",
+          "de": "Attribute lesen und schreiben",
+          "it": "Attribute lesen und schreiben",
+          "fr": "Attribute lesen und schreiben",
+          "items": null
+        },
+        {
+          "title": "Aktuelle Darstellung, Ansicht, Maßstab",
+          "url": "products/scripting/schnittstellen/project9",
+          "de": "Aktuelle Darstellung, Ansicht, Maßstab",
+          "it": "Aktuelle Darstellung, Ansicht, Maßstab",
+          "fr": "Aktuelle Darstellung, Ansicht, Maßstab",
+          "items": null
+        },
+        {
+          "title": "Export",
+          "url": "products/scripting/schnittstellen/project10",
+          "de": "Export",
+          "it": "Export",
+          "fr": "Export",
+          "items": null
+        },
+        {
+          "title": "Projekteinstellungen lesen",
+          "url": "products/scripting/schnittstellen/project11",
+          "de": "Projekteinstellungen lesen",
+          "it": "Projekteinstellungen lesen",
+          "fr": "Projekteinstellungen lesen",
+          "items": null
+        },
+        {
+          "title": "Dateien vergleichen",
+          "url": "products/scripting/schnittstellen/project12",
+          "de": "Dateien vergleichen",
+          "it": "Dateien vergleichen",
+          "fr": "Dateien vergleichen",
+          "items": null
+        },
+        {
+          "title": "Asset Daten",
+          "url": "products/scripting/schnittstellen/project13",
+          "de": "Asset Daten",
+          "it": "Dati di asset",
+          "fr": "Données d'un asset",
+          "items": null
+        }
+      ]
+    },
+    {
+      "title": "Print",
+      "url": "products/scripting/schnittstellen/print",
+      "de": "Print",
+      "it": "Stampa",
+      "fr": "Impression",
+      "items": null
+    },
+    {
+      "title": "Tipps",
+      "url": "products/scripting/schnittstellen",
+      "de": "Tipps",
+      "it": "Tipps",
+      "fr": "Tipps",
+      "items": [
+        {
+          "title": "Tipps",
+          "url": "products/scripting/schnittstellen/tipps",
+          "de": "Tipps",
+          "it": "Tipps",
+          "fr": "Tipps",
+          "items": null
+        },
+        {
+          "title": "Objektinhalte anzeigen und auswerten",
+          "url": "products/scripting/schnittstellen/tipps2",
+          "de": "Objektinhalte anzeigen und auswerten",
+          "it": "Objektinhalte anzeigen und auswerten",
+          "fr": "Objektinhalte anzeigen und auswerten",
+          "items": null
+        },
+        {
+          "title": "Attributwerte auslesen und überschreiben",
+          "url": "products/scripting/schnittstellen/tipps3",
+          "de": "Attributwerte auslesen und überschreiben",
+          "it": "Attributwerte auslesen und überschreiben",
+          "fr": "Attributwerte auslesen und überschreiben",
+          "items": null
+        },
+        {
+          "title": "Grafische Eigenschaften",
+          "url": "products/scripting/schnittstellen/tipps4",
+          "de": "Grafische Eigenschaften",
+          "it": "Grafische Eigenschaften",
+          "fr": "Grafische Eigenschaften",
+          "items": null
+        },
+        {
+          "title": "Geometrie von bestehenden Objekten ändern",
+          "url": "products/scripting/schnittstellen/tipps5",
+          "de": "Geometrie von bestehenden Objekten ändern",
+          "it": "Geometrie von bestehenden Objekten ändern",
+          "fr": "Geometrie von bestehenden Objekten ändern",
+          "items": null
+        },
+        {
+          "title": "Topologie auslesen",
+          "url": "products/scripting/schnittstellen/tipps6",
+          "de": "Topologie auslesen",
+          "it": "Topologie auslesen",
+          "fr": "Topologie auslesen",
+          "items": null
+        },
+        {
+          "title": "Iterations-Objekte und Filter",
+          "url": "products/scripting/schnittstellen/tipps7",
+          "de": "Iterations-Objekte und Filter",
+          "it": "Iterations-Objekte und Filter",
+          "fr": "Iterations-Objekte und Filter",
+          "items": null
+        },
+        {
+          "title": "Filtern",
+          "url": "products/scripting/schnittstellen/tipps8",
+          "de": "Filtern",
+          "it": "Filtern",
+          "fr": "Filtern",
+          "items": null
+        },
+        {
+          "title": "Flächeneinsetzpunkte von bestehenden Flächen lesen und ändern",
+          "url": "products/scripting/schnittstellen/tipps9",
+          "de": "Flächeneinsetzpunkte von bestehenden Flächen lesen und ändern",
+          "it": "Leggere e modificare i punti di inserimento di superfici esistenti",
+          "fr": "Lire et modifier les points d'insertion de surfaces existantes",
+          "items": null
+        }
+      ]
+    }
+]

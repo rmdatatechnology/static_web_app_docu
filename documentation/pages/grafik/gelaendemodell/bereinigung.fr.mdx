@@ -1,0 +1,47 @@
+---
+title: "Correction des données avant de calculer le modèle"
+page: true
+---
+## Le nettoyage du mod&#232;le d&#233;tecte les inconsistances dans la base de donn&#233;es et les corrige, autrement il vous informe de leur pr&#233;sence
+Avant de cr&#233;er le mod&#232;le,  <Placeholder>fullproduct</Placeholder> v&#233;rifie si les donn&#233;es du mod&#232;le sont consistantes. Cela signifie que chaque point du mod&#232;le, doit avoir une altitude univoque.
+
+Les violations de cette condition v&#233;rifi&#233;es sont les suivantes:
+
+1. <Bold> Grappe de points: </Bold>  Il s&#39;agit des points qui se trouvent, dans une tol&#233;rance donn&#233;e, sur les m&#234;mes coordonn&#233;es, le programme essaye de les r&#233;unir.
+
+1. <Bold> <Italic> Nettoyage automatique: </Italic> </Bold>  Quand la diff&#233;rence d&#39;altitude des points dans une grappe est inf&#233;rieure &#224; la tol&#233;rance de nettoyage altim&#233;trique, le nettoyage (la moyenne) est ex&#233;cut&#233; automatiquement et protocol&#233;e.
+
+2. <Bold> <Italic> Nettoyage manuel: </Italic> </Bold>  Quand la diff&#233;rence d&#39;altitude est sup&#233;rieure &#224; la tol&#233;rance de nettoyage altim&#233;trique, un message est affich&#233; et le nettoyage doit &#234;tre ex&#233;cut&#233; manuellement.
+
+
+
+2. <Bold> Point sur ligne: </Bold>  Quand un point, dans une tol&#233;rance donn&#233;e, se trouve sur une ligne (ligne de rupture ou contour du mod&#232;le), le programme essaye d&#39;ins&#233;rer dans la ligne, un sommet suppl&#233;mentaire.
+
+1. Le <Bold> <Italic> Nettoyage </Italic> </Bold>  se fait <Italic> <Bold> automatiquement </Bold> </Italic> , quand la diff&#233;rence d&#39;altitude entre le point et le segment de ligne est inf&#233;rieure &#224; la tol&#233;rance de nettoyage altim&#233;trique.
+
+2. Le <Bold> <Italic> Nettoyage </Italic> </Bold>  doit se faire <Bold> <Italic> manuellement </Italic> </Bold> , quand la diff&#233;rence d&#39;altitude entre le point et le segment de ligne est sup&#233;rieure a la tol&#233;rance de nettoyage altim&#233;trique.
+
+
+
+3. <Bold> Point d&#39;intersection: </Bold>  Quand deux lignes se intersectent, le programme essaye d&#39;ins&#233;rer un sommet ult&#233;rieur dans les deux lignes.
+
+1. Le <Bold> <Italic> Nettoyage </Italic> </Bold>  se fait <Italic> <Bold> automatiquement </Bold> </Italic> , quand la diff&#233;rence d&#39;altitude entre les deux lignes au point d&#39;intersection est inf&#233;rieure &#224; la tol&#233;rance de nettoyage altim&#233;trique.
+
+2. Le <Bold> <Italic> Nettoyage </Italic> </Bold>  doit se fair <Bold> <Italic> manuellement </Italic> </Bold> , quand la diff&#233;rence d&#39;altitude entre les deux lignes au point d&#39;intersection est sup&#233;rieure &#224; la tol&#233;rance de nettoyage altim&#233;trique.
+
+
+
+
+
+<Success>
+Le mod&#232;le est calcul&#233; seulement quand tous les probl&#232;mes de nettoyage ont &#233;t&#233; r&#233;solus.
+Les &#233;tapes 1), 2) et 3) sont trait&#233;es de mani&#232;re s&#233;quentielle. C&#39;est-&#224;-dire la v&#233;rification des points qui se trouvent sur des lignes, se fait seulement apr&#232;s que tous les grappes de points (automatiquement ou manuellement) aient &#233;t&#233; nettoy&#233;es.
+</Success>
+
+<Success>
+Le  <Bold> Nettoyage automatique </Bold>  est donc ex&#233;cut&#233; uniquement si la tol&#233;rance altim&#233;trique n&#39;est pas d&#233;pass&#233;e. Voir dtmModelComputeSettingsLink
+</Success>
+
+<Success>
+Les probl&#232;mes de nettoyage sont sorties sur le protocole, o&#249; une liaison am&#232;ne directement &#224; la position concern&#233;e sur le plan! Ces probl&#232;mes doivent &#234;tre  <Bold> nettoy&#233;s manuellement </Bold> .
+</Success>

@@ -1,0 +1,56 @@
+---
+title: "Importer les points depuis rmGEO"
+page: true
+---
+## D&#233;finitions sp&#233;cifiques pour l&#39;importation de points depuis  <Italic> rmGEO </Italic> .
+<GeoMapper> <Menu> Menu: [Fichier / Import-Manager] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [Fichier / Importation] </Menu> </GeoDesigner>
+
+### Param&#232;tres
+Ici vous pouvez d&#233;finir d&#39;autres param&#232;tres d&#39;importation, ces param&#232;tres sont optionnels.
+
+- <Bold> R&#233;solution de conflits: </Bold>  Les noms des points et des surfaces, doivent &#234;tre univoques. En cas de noms &#233;gaux, les options suivantes sont disponibles:
+
+- <Italic> Renommer </Italic> : Les points et les surfaces import&#233;s sont renomm&#233;s avec un pr&#233;fixe resp. un suffixe. Les objets existants restent inchang&#233;s.
+
+- <Italic> Priorit&#233; au point existant </Italic> : Le point d&#233;j&#224; existant dans le fichier reste inchang&#233;, l&#39;objet de la source est ignor&#233;. Le comportement est le m&#234;me que pour <Italic> Renommer </Italic>  sans insertion d&#39;un pr&#233;fixe resp. un suffixe.
+
+- <Italic> Priorit&#233; au nouveau point </Italic> : Le nouveau point import&#233;, remplace le point existant.
+
+- <Italic> Resoudre int&#233;ractivement </Italic> : Il s&#39;ouvre un dialogue de collision, o&#249; vous pouvez d&#233;cider pour chaque point, si il faut utiliser le point depuis <Placeholder>product</Placeholder> ou le point depuis la source. 
+
+
+
+
+
+<Warning>
+Dans le cas de surfaces avec le m&#234;me nom, les surfaces import&#233;es sont renomm&#233;es avec pr&#233;fixe resp. suffixe. Si les deux valeurs sont vides, la surface n&#39;est pas import&#233;e. Le surface existante reste.
+</Warning>
+
+
+- <Bold> Protocole: </Bold>  Il d&#233;finit si le protocole d&#233;taill&#233; des objets import&#233;s, doit &#234;tre g&#233;n&#233;r&#233;, ou juste un r&#233;capitulatif.
+
+
+
+Appuyez sur  <Border>Terminer</Border> , pour finir l&#39;importation. Un dialogue qui affiche l&#39;&#233;tat de l&#39;importation s&#39;ouvre.
+
+<Warning>
+Pour pouvoir ex&#233;cuter cette importation dans  <Placeholder>product</Placeholder>  il faut poss&#233;der la licence et avoir install&#233;  <Italic> rmGEO4 </Italic>  sur l&#39;ordinateur.
+Si rmGEO est install&#233; sur un autre ordinateur, proc&#233;dez de la mani&#232;re suivante:
+
+ <Bold> Transf&#233;rer points depuis rmGEO vers  <Placeholder>product</Placeholder>  </Bold> 
+
+-  Exportez les points dans rmGEO depuis <Menu>Gestion / Exportation de données / rmDATA-XML</Menu>  vers <Placeholder>product</Placeholder> 
+-  Transferez le fichier XML export&#233; sur l&#39;ordinateur avec <Placeholder>product</Placeholder> 
+-  Importez les points dans <Placeholder>product</Placeholder> depuis <Menu>Fichier / Manager d'importation / Importer les données depuis fichier rmDATA XML</Menu> 
+
+
+ <Bold> Transf&#233;rer points depuis  <Placeholder>product</Placeholder> vers rmGEO: </Bold> 
+
+-  Exportez les points dans <Placeholder>product</Placeholder> depuis <Menu>Fichier / Gestionnaire d'exportation / Exporter les données vers fichier rmDATA XML</Menu> 
+-  Transf&#233;rez le fichier XML export&#233; sur l&#39;ordinateur avec rmGEO
+
+
+-  Importez les points dans rmGEO depuis <Menu>Gestion / Importation de données / rmDATA-XML</Menu> 
+
+
+</Warning>

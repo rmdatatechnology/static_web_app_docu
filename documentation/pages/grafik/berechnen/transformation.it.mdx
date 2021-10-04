@@ -1,0 +1,56 @@
+---
+title: "Trasformazione del sistema di coordinate"
+page: true
+---
+## Trasformazione del sistema di coordinate di una base dati completa in un altro sistema di coordinate di destinazione noto.
+<GeoMapper> <Menu> Menu: [Calcolare / Trasformazione sistema di coordinate] </Menu> 
+
+
+<Image>\img\grafik\berechnen\CrsTransformation.png$CrsTransformation</Image>
+
+
+1. Avviare il comando
+
+
+2. <Placeholder>product</Placeholder> apre il dialogo visualizzato in alto dove si possono selezionare il sistema di coordinate sorgente e la sua destinazione. Il sistema di coordinate definito nel progetto &#232; preimpostato per entrambi.
+
+
+3. La trasformazione nel medesimo sistema di coordinate non &#232; ammessa. Selezionare quindi un sistema di coordinate di destinazione valido e confermare con <Border>Ok</Border> .
+
+
+4. Per la trasformazione della base dei dati &#232; necessario salvare il file. Se il Geodatabase dovesse presentare delle modifiche non salvate, il programma richieder&#224; di salvare il file. Se non si desidera salvare, basta annullare e cos&#236; la trasformazione non avr&#224; luogo.
+
+
+5. Se la richiesta di salvataggio viene confermata con <Border>Ok</Border> , tutti i dati di base saranno trasformati nel sistema di destinazione.
+
+
+
+
+
+<Success>
+Dopo una trasformazione del sistema di coordinate terminata con successo, il sistema di coordinate di destinazione diventa il nuovo sistema di coordinate del progetto.
+</Success>
+
+<Warning>
+Alcuni sistemi di coordinate prevedono un cosiddetto file  <Italic> Grid </Italic> , in questo file sono contenuti i parametri di trasformazione. Se per il sistema di coordinate dovesse mancare il relativo file  <Italic> Grid </Italic> ,  <Placeholder>product</Placeholder> mostra un messaggio di errore ed impedisce di confermare la selezione, poich&#232; una trasformazione con dei parametri errati pu&#242; portare a risultati molto differenti. Ci&#242; vale sia per il sistema sorgente che per il sistema di destinazione (vedere in basso).
+
+
+<Image>\img\grafik\berechnen\gridMissingError.png$gridMissingError</Image>
+
+Una volta ottenuto il file Grid, copiarlo nella cartella productcrssettingspath.
+Il file Grid deve essere in formato binario ntv2.
+</Warning>
+
+<Warning>
+La trasformazione, in base alle dimensioni dei dati, pu&#242; richiedere un certo tempo di elaborazione. Il calcolo pu&#242; essere interrotto in qualunque momento, in tal caso i dati vengono completamente ristabiliti. I dati sono sempre completamente trasformati o non trasformati, restando cos&#236; sempre consistenti.
+</Warning>
+
+<Warning>
+La  <Italic> protezione in scrittura </Italic>  per le coordinate planimetriche e per l&#39;altezza non &#232; considerata per questa operazione, e quindi i punti sono trasformati in ogni caso!
+</Warning>
+
+<Warning>
+Gli elementi CAD invece non sono mai trasformati.
+</Warning>
+
+</GeoMapper>

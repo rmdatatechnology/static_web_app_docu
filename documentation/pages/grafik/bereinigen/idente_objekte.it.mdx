@@ -1,0 +1,56 @@
+---
+title: "Oggetti identici"
+page: true
+---
+## Permette di correggere gli oggetti identici.
+ <Menu> Menu: [Correggere / Oggetti identici] </Menu> 
+ <Menu> Cmd: [ObjectsIdenticalStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+
+1. Selezionare i dati
+
+- <Bold> Tutti gli oggetti caricati: </Bold>  Tutti gli oggetti sulla grafica - di una zona caricata - sono corretti.
+
+- <Bold> Selezione oggetti: </Bold>  Cliccando sulla selezione oggetti si passa alla grafica dove &#232; possibile scegliere gli oggetti da correggere.
+
+
+
+2. Cliccare su <Border>Fine</Border> .
+
+3. Gli errori di dati sono visualizzati in un 
+[Assistente di correzione](../bereinigen/assistent)
+ e gli errori possono essere trattati uno ad uno.
+
+
+
+Alternativa
+ 
+Definendo le  <Bold> Impostazioni di correzione </Bold>  molte correzioni possono essere eseguite automaticamente (vedere pi&#249; in basso).
+
+<Warning>
+Solo gli oggetti che corrispondono ai criteri del filtro definito nel file, possono essere corretti.
+</Warning>
+
+<Warning>
+Gli errori non correggibili automaticamente, sono elencati nel [Assistente di correzione](../bereinigen/assistent)
+ dove possono essere trattati manualmente.
+</Warning>
+
+<Success>
+La correzione degli oggetti identici non considera punti e superfici dotati di un nome. Poich&#232; il nome &#232; sempre univoco, tali oggetti non possono essere identici.
+</Success>
+
+
+
+### Dettagli - Impostazioni di correzione
+Seguono ulteriori impostazioni di correzione:
+
+- <Bold> Correggere oggetti con un tipo differente: </Bold>  Anche gli oggetti completamente identici ma con tipo differente, sono corretti.
+
+- <Bold> Correggere oggetti con valori differenti negli stessi attributi: </Bold>  Gli oggetti geometricamente identici sono corretti. Le differenze nei valori attributivi non sono controllate. Se l&#39;opzione non &#232; attivata, gli oggetti geometricamente identici col medesimo attributo non vengono corretti.
+
+- <Bold> Eliminare oggetti pi&#249; vecchi: </Bold>  Rimane solo l&#39;oggetto pi&#249; recente (valore ID pi&#249; alto).
+
+- <Bold> Eliminare oggetti pi&#249; recenti: </Bold>  Rimane solo l&#39;oggetto pi&#249; vecchio (valore ID pi&#249; basso).<Image>\img\grafik\bereinigen\PurgeIdenticalObjectsOptions_01.png$PurgeIdenticalObjectsOptions_01</Image>
+

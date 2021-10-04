@@ -1,0 +1,92 @@
+---
+title: "Assistente di correzione"
+page: true
+---
+## Informazioni sull&#39;assistente di correzione.
+Con l&#39;assistente di correzione possono essere trattati e corretti tutti gli errori sui dati, che non sono risolvibili automaticamente. 
+
+ <Placeholder>geodgm</Placeholder> 
+## Generale
+Cliccare su un caso di correzione, provoca uno zoom sulla zona interessata. Inoltre la posizione da correggere viene contrassegnata da un cerchio rosso. In base la metodo di correzione, sono proposte le diverse possibilit&#224; di trattare il caso. L&#39;elaborazione pu&#242; essere avviata tramite il menu contestuale o direttamente sul dialogo. Un caso di correzione pu&#242; avere diversi stati, i quali sono rappresentati tramite i seguenti simboli:
+
+-<Image>\img\grafik\bereinigen\PurgeCase.png$PurgeCase</Image> Caso di correzione non corretto
+
+-<Image>\img\grafik\bereinigen\PurgeNotUpToDateCase.png$PurgeNotUpToDateCase</Image> Caso di correzione che inseguito ad una correzione gi&#224; eseguita, probabiolmente non &#232; pi&#249; attale
+
+-<Image>\img\grafik\bereinigen\PurgeCaseIgnore.png$PurgeCaseIgnore</Image> Caso di correzione che &#232; ignorato (scelta dell&#39;utente)
+
+-<Image>\img\grafik\bereinigen\PurgeCaseError.png$PurgeCaseError</Image>  Caso di correzione che non ha potuto essere corretto col metodo dato
+
+
+
+Cliccando sul bottone di aggiornamento<Image>\img\grafik\bereinigen\PurgeReCheck.png$PurgeReCheck</Image>la correzione viene rieseguita.
+
+<Success>
+Cliccare col bottone destro del mouse su una riga nella lista dei casi di correzione, in tal modo &#232; possibile selezionare una opzione sul menu contestuale
+
+-  Ignorare un caso di correzione 
+
+
+-  Reimpostare un caso di correzione da &quot;Ignorare&quot; a &quot;non trattato&quot;
+
+
+-  Scegliere una opzione di risoluzione.
+
+
+
+
+</Success><Image>\img\grafik\bereinigen\PurgeAssistant_Main.png$PurgeAssistant_Main</Image>
+
+
+## Correzione dei cluster di punti
+Dopo aver selezionato un caso di correzione con un clic, i dettagli del cluster di punti sono mostrati in una lista:
+
+- Il punto con la spunta &#232; il punto che viene ripreso nel seguito
+
+- Le coordinate (separate per posizione e altezza) ed il tipo di punto, cliccando nella lista dei punti, possono anche essere usate da un altro punto o vertice. I dati correntemente selezionati per il risultato, sono mostrati nell&#39;ultima riga della lista (senza casella di spunta).
+
+- Media delle coordinate:
+
+- Media di tutte coordinate: Il valore medio di tutti i punti e vertici fornisce le nuove coordinate
+
+- Media delle coordinate del punto: Il valore medio dei soli punti fornisce le nuove coordinate
+
+- Nessuna: Nessuna media, le coordinate sono scelte dalla lista 
+
+
+
+
+
+
+Una volta fatte tutte le impostazioni, per eseguire un caso di correzione, cliccare su  <Border>Accettare</Border> . Se non si desidera trattare il caso di correzione, cliccare su  <Border>Ignorare</Border> .<Image>\img\grafik\bereinigen\PurgeAssistant_point.png$PurgeAssistant_point</Image>
+
+
+
+## Punto su segmento
+Dopo che un caso di correzione sia stato selezionato con un clic, sono mostrati i possibili metodi di correzione:
+
+- Sposta punto sulla proiezione ortogonale: Il punto viene spostato sulla sua proiezione ortogonale sulla linea
+
+- Spezza segmento ed collegalo al punto: Il punto rimane, la linea viene spezzata sul punto
+
+- Estendi segmento adiacente: Il punto viene spostato lungo la sua linea fino alla linea adiacente. Cio&#233; la linea viene accorciata o allungata, mentre la direzione viene mantenuta. 
+
+
+<Success>
+Ci&#242; &#232; possibile se il punto &#232; all&#39;inizio o alla fine della linea.
+
+</Success><Image>\img\grafik\bereinigen\PurgeAssistant_pointsegment.png$PurgeAssistant_pointsegment</Image>
+
+
+
+## Punti vertice sull&#39;intersezione di segmenti
+Selezionare il caso di correzione nella lista, nei dettagli sono elencate le diverse altezze. Per default viene scelta l&#39;altezza media. Scegliere l&#39;altezza desiderata e cliccare su  <Border>Accettare</Border> .<Image>\img\grafik\bereinigen\PurgeAssistant_crossing.png$PurgeAssistant_crossing</Image>
+
+<Success>
+I segmenti che si intersecano aventi altezze che non collimano possono essere trattati solo manualmente.
+</Success>
+
+
+
+## Riduci punti vertice
+Qui sono elencati i punti vertice da eliminare. L&#39;opzione  <Bold> Correggi tutto automaticamente </Bold>  fa s&#236; che tutti i casi siano accettati, e l&#39;assistente viene chiuso.<Image>\img\grafik\bereinigen\PurgeAssistant_verticespurge.png$PurgeAssistant_verticespurge</Image>

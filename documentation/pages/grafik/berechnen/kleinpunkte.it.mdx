@@ -1,0 +1,55 @@
+---
+title: "Punti di dettaglio"
+page: true
+---
+## Col metodo  <Menu>Punti di dettaglio</Menu>  si pu&#242; costruire un punto a partire da una linea di base, inserendo una distanza in ascissa ed una distanza in ordinata.
+ <Menu> Menu: [Calcolare / Punti di dettaglio] </Menu> 
+ <Menu> Cmd: [PointsOrthogonalCalc] </Menu> 
+
+ <Placeholder>geodgm</Placeholder><Image>\img\grafik\berechnen\Geo.KleinpunkteForm.png$Geo.KleinpunkteForm</Image>
+
+Procedere nel modo seguente:
+
+1. Avviare il comando.
+
+2. Selezionare il punto di inzio della linea di base.
+
+3. Selezionare il punto di fine della linea di base. 
+
+4. Attivando l&#39;opzione <Menu>Sovrascrivi distanza</Menu>  &#232; possibile &quot;sovrascrivere&quot; la distanza tra i punti iniziale e finale. La nuova distanza &#232; quindi usata come base per l&#39;ascissa.
+
+5. Inserire la lunghezza dell&#39;ascissa.
+
+6. Inserire la lunghezza dell&#39;ordinata.
+
+7. Attivando l&#39;opzione <Menu>Considera fattore di scala ordinate</Menu> , il sistema considera anche per le ordinate il fattore derivato dalle diverse lunghezze d&#39;ascissa (misurata e calcolata).
+
+8. Attivando l&#39;opzione <Menu>Rapporto di divisione</Menu>  il valore d&#39;ascissa dato, non viene visto come valore assoluto, ma come rapporto alla linea di base. Quando l&#39;opzione &#232; attiva, il fattore derivato dalle diverse lunghezze d&#39;ascissa (misurata e calcolata) non &#232; valido per le ascisse.
+
+9. Selezionare il risultato e confermare con <Border>   Ok   </Border> .
+
+
+
+<Success>
+ <Placeholder>product</Placeholder> propone automaticamente il prossimo numero di punto.
+</Success>
+
+
+1. A partire dal primo punto della linea di base viene riportata la distanza d&#39;ascissa in direzione della linea di base e da questo punto viene riportata in ortogonale la distanza in ordinata. Il punto calcolato viene visualizzato ed il calcolo &#232; protocollato.
+
+
+
+
+Il metodo &quot;Punti di dettaglio&quot; supporta due modalit&#224; continue. Queste possono essere selezionate con le opzioni  <Menu>Continua con l'ordinata come nuova linea di base</Menu>  oppure  <Menu>Continua con la linea di base corrente</Menu>  (default). In questo modo, alla fine del calcolo, come base per calcolare il prossimo punto, viene usato il punto di partenza della linea di base corrente, oppure la proiezione dell&#39;ultimo punto costruito ed il dialogo rimane aperto. 
+
+Se i punti di inizio/fine della linea di base dispongono dell&#39;altezza, pu&#242; essere attivata l&#39;opzione  <Menu>Determina l'altezza dei nuovi punti</Menu> . Quando l&#39;opzione viene usata, l&#39;altezza &#232; derivata dalla linea di base.
+
+<Success>
+I valori d&#39;ascissa negativa sono applicati in direzione contraria alla linea di base.
+I valori d&#39;ordinata sono applicati a destra della linea di base, se negativi sono applicati a sinistra della linea di base.
+</Success>
+
+<Success>
+Informazioni sui messaggi d&#39;errore e sulla selezione dei punti, si trovano al capitolo [Dialoghi](../benutzeroberflaeche/dialoge)
+.
+</Success>

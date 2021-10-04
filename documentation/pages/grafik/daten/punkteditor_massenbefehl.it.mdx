@@ -1,0 +1,112 @@
+---
+title: "Comando globale"
+page: true
+---
+## La funzione  <Menu>Comando globale</Menu>  permette di modificare pi&#249; attributi in una sola operazione.
+
+Procedere le modo seguente:
+
+1. Scegliere l&#39;attributo da modificare dalla prima lista di scelta.
+
+2. Scegliere una costante con il relativo metodo di modifica (dipende dal tipo, ad es.. Sommare, Impostare uguale).
+
+3. Cliccando sul bottone<Image>\img\grafik\daten\Geo.MassenbefehlAdd.png$Geo.MassenbefehlAdd</Image> si pu&#242; inserire una condizione, che deve essere soddisfatta affinch&#233; l&#39;attributo da modificare riceva il valore calcolato dalla costante e dal metodo di modifica. Qualora nessuna condizione venga inserita, tutti gli oggetti riceveranno il valore calcolato.
+
+4. Cliccando pi&#249; volte sul bottone<Image>\img\grafik\daten\Geo.MassenbefehlAdd.png$Geo.MassenbefehlAdd</Image> si possono inserire pi&#249; condizioni. Queste condizioni sono lette dall&#39;alto verso il basso dal comando, fino a quando una condizione sia soddisfatta. Se nessuna condizione &#232; soddisfatta, l&#39;attributo dell&#39;oggetto rimane inalterato.
+
+5. Cliccando sul bottone<Image>\img\grafik\daten\Geo.MassenbefehlRemove.png$Geo.MassenbefehlRemove</Image> le condizioni inserite possono essere eliminate.
+
+
+
+
+### Condizioni
+
+1. Scegliere l&#39;attributo.
+
+2. Scegliere l&#39;operatore. In ragione del tipo di attributo sono proposti i seguenti operatori:
+
+- <Bold>  = </Bold> : Esattamente uguale al valore comparativo
+
+- <Bold>  != </Bold> : Diverso dal valore comparativo
+
+- <Bold> &lt; </Bold> : Minore
+
+- <Bold> &lt; </Bold> =: Minore o uguale
+
+- <Bold> &gt; </Bold> : Maggiore
+
+- <Bold> &gt; </Bold> =: Maggiore o uguale
+
+- <Bold> Regex </Bold> : Espressione regolare (vedere pi&#249; in basso)
+
+- <Bold> like: </Bold>  Contiene il valore comparativo
+
+- <Bold> not like: </Bold>  Non contiene il valore comparativo
+
+
+
+3. Inserire il valore comparativo. 
+
+
+
+
+ <Bold> Espressioni regolari </Bold> 
+Con le espressioni regolari si pu&#242; definire un modello al quale il valore dell&#39;attributo deve corrispondere. Si possono usare:
+
+- <Bold> a </Bold>  			Esattamente la lettera a (le minuscole e le maiuscole sono considerate)
+
+- <Bold> 7 </Bold>  			Esattamente il numero 7
+
+- <Bold> [abc] </Bold>      Esattamente un carattere tra i caratteri forniti nelle parentesi quadre. In questo esempio a, b, oppure c
+
+- <Bold> [a-z] </Bold>       Esattamente un carattere dalla a alla z
+
+- <Bold> </Bold>  			Inizio della riga
+
+- <Bold> $ </Bold>  			Fine della riga
+
+- <Bold> . </Bold>  		Esattamente un carattere
+
+- <Bold> \d </Bold>  		Esattamente un numero
+
+
+
+
+<Info>
+
+ <Bold> P </Bold> : 	Valore iniziante con P
+ <Bold> P </Bold> : 		Valore iniziante con P
+ <Bold> P$ </Bold> : 	Valore che finisce con P        
+</Info>
+
+
+<Info>
+Con le definizioni visibili nell&#39;immagine, tutti i punti sono modificati come segue:
+
+-  Punti con altezza maggiore di 1000 m ricevono il colore 4
+
+
+-  Punti con altezza compresa tra 800 m e 1000 m ricevono il colore 5
+
+
+-  Punti con altezza compresa tra 600 m e 800 m ricevono il colore 6
+
+
+-  Punti con altezza compresa tra 0 m e 600 m ricevono il colore 8
+
+
+
+
+
+<Image>\img\grafik\daten\Massenbefehl.png$Massenbefehl</Image>
+</Info>
+
+
+<Success>
+Se nel comando sono definiti dei valori non validi (ad es. lettere per delle geometrie), il comando non pu&#242; essere terminato con  <Border>   OK   </Border> .
+</Success>
+
+
+<Success>
+Si possono scegliere solo attributi visibili nell&#39;editor.
+</Success>

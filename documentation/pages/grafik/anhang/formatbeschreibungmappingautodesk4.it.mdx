@@ -1,0 +1,274 @@
+---
+title: "Mappatura attributi - Punti"
+page: true
+---
+## Gestione della conversione di elementi CAD in punti nel Geodatabase.
+
+```
+La creazione dei punti &#232; definita tramite l&#39;elemento  <Bold> &lt;Points&gt; </Bold> .
+Si tratta di una raccolta di elementi  <Bold> &lt;Point&gt; </Bold> , che gestiscono la conversione:
+ <Bold> &lt;Points&gt; </Bold> 
+   &lt;Point Name=&quot;Esempio1&quot;&gt;
+       <Italic> &lt;!-- Definizione --&gt; </Italic> 
+   &lt;/Point&gt;
+    <Italic> &lt;!-- Ulteriori elementi &lt;Point&gt; --&gt; </Italic> 
+ <Bold> &lt;/Points&gt; </Bold> 
+```
+
+### &lt;Point&gt;
+### 
+# Attributi
+
+
+- <Bold> Name </Bold>  (obbligatorio)
+
+- Definisce il nome del tipo di punto destinazione nel Geodatabase. Tutti gli elementi CAD considerati dal filtro(i) sono convertiti in questo tipo di punto.
+
+
+
+
+
+### 
+# Elementi
+
+Con i seguenti elementi si possono definire gli oggetti da cui sono creati i punti.
+
+1. <Bold> &lt;GraphicAttributeSettings&gt; </Bold>  (da 0 a 1)
+
+- Descrive la ripresa di propriet&#224; grafiche da elementi CAD. Vedere 
+[Elemento GlobalSettings](../anhang/formatbeschreibungmappingautodesk2)
+.
+
+
+
+2. <Bold> &lt;Insert&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione di blocchi CAD.
+
+
+
+3. <Bold> &lt;Text&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione di testi.
+
+
+
+4. <Bold> &lt;Point&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione di punti CAD ( <Italic> POINT </Italic> ).
+
+
+
+
+
+<Success>
+Se descritto, al posto di un nome completo, possono anche essere usate delle espressioni regolari ( <Italic> RegEx </Italic> ). Per immettere una espressione regolare, usare il prefisso  <Bold> re: </Bold>  
+</Success>
+
+
+<Info>
+Esempi di espressioni regolari:
+
+<table>
+<tr><th>Espressione regolare</th>
+<th>Descrizione</th>
+<th>Esempio</th>
+</tr>
+<tr><td>re: <b> (N-)?TP$ </b> </td>
+<td>Una stringa, che opzionalmente inizia con &quot;N-&quot; e sicuramente termina con &quot;TP&quot;.</td>
+<td>&quot;N-TP&quot;&quot;TP&quot;</td>
+</tr>
+<tr><td>re: <b> (N-)?DIMLAYER\d$ </b> </td>
+<td>Una stringa, che opzionalmente inizia con &quot;N-&quot; e con &quot;DIMLAYER&quot; e termina con esattamente 1 cifra.</td>
+<td>&quot;N-DIMLAYER0&quot;&quot;DIMLAYER1&quot;&quot;DIMLAYER9&quot;ma non&quot;DIMLAYER&quot;&quot;N-DIMLAYER99&quot;</td>
+</tr>
+</table>
+
+</Info>
+
+
+### 
+#  Creare punti da blocchi CAD (&lt;Insert&gt;)
+
+
+
+```
+Struttura di una mappatura Blocco-a-Punto
+
+ <Bold> &lt;Insert&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Descrive come devono essere filtrati i blocchi sorgente. --&gt;
+          Tutti gli elementi seguenti sono facoltativi; 
+          gli elementi presenti sono collegati tra loro con AND,
+          quindi tutti devono essere soddisfatti --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Numero intero, colore indice --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Nome risp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;Blockname&gt; </Bold>  <Italic> &lt;!-- Nome risp. RegEx --&gt; </Italic>  <Bold> &lt;/Blockname&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+   <Bold> &lt;AttributeMapping&gt; </Bold> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- numero intero, cio&#232; colore indice; opzionale --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- nome risp. RegEx; opzionale --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;ACADAttribute Name </Bold> &quot;AttName <Bold> &quot; Tag </Bold> &quot;AttTag <Bold> &quot; Target  </Bold> &quot;AttTarget <Bold> &quot; &gt; </Bold>   <Italic> &lt;!-- per ogni attributo mappato --&gt; </Italic> 
+       <Bold> &lt;Tag&gt; </Bold>  <Italic> Attribuzione segnaposto; opzionale </Italic>  <Bold> &lt;/Tag&gt; </Bold> 
+       <Bold> &lt;Value&gt; </Bold>  <Italic> Attribuzione segnaposto; opzionale </Italic>  <Bold> &lt;/Value&gt; </Bold> 
+       <Bold> &lt;Name&gt; </Bold>  <Italic> Attribuzione segnaposto; opzionale </Italic>  <Bold> &lt;/Name&gt; </Bold> 
+       <Bold> &lt;Layer&gt; </Bold>  <Italic> Attribuzione segnaposto; opzionale </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;/ACADAttribute&gt; </Bold> 
+     <Bold> &lt;NG&gt; </Bold> 
+       <Italic> &lt;!-- Attributi destinazione nel Geodatabase --&gt; </Italic> 
+       <Italic> &lt;!-- Qui si possono immettere valori discreti oppure 
+            segnaposto da un ACADAttribute --&gt; </Italic> 
+       <Bold> &lt;Attribut Name=&quot; </Bold> Attributname1 <Bold> &quot;&gt; </Bold> Valore risp. stringa di formato <Bold> &lt;/Attribut&gt; </Bold> 
+     <Bold> &lt;/NG&gt; </Bold> 
+   <Bold> &lt;/AttributeMapping&gt; </Bold> 
+ <Bold> &lt;/Insert&gt; </Bold> 
+
+```
+
+
+<Success>
+&lt;ACADAttribute Name <Bold> &quot;AttName </Bold> &quot; Tag <Bold> &quot;AttTag </Bold> &quot; Target  <Bold> &quot;AttTarget </Bold> &quot; &gt; in questo elemento Attribute Name, Tag e Target sono opzionali. Name e Tag possono essere usati per identificare un determinato attributo. Target descrive la destinazione nella quale le propriet&#224; grafiche vengono riprese (AttributeSettings). Utilizzando Target=&quot;Annotation3&quot; il Colore/Posizione/ecc. viene ripreso nella etichetta 3.
+</Success>
+
+
+<Warning>
+I segnaposto tra parentesi graffe possono essere estratti da una stringa di un  <Bold> &lt;ACADAttribute&gt; </Bold>  ed utilizzati in un  <Bold> &lt;Attribut&gt; </Bold> . Da un attributo CAD si possono estrarre anche pi&#249; segnaposto.
+</Warning>
+
+
+<Info>
+Il seguente esempio deve essere letto nel seguente modo:
+
+- Si devono creare dei punti in Geodatabase del tipo <Bold> Triangulierungspunkt (TP) - Kirche </Bold> .
+
+
+- Rotazione e Posizione devono essere <Italic> generalmente </Italic>  ripresi da elementi CAD.
+
+
+- Questi punti devono essere ricavati da blocchi con il nome <Bold> FIG012 </Bold>  che si trovano sui layer <Bold> N-TP </Bold>  risp. <Bold> TP </Bold> .
+
+
+- Gli attributi di blocco devono essere ripresi nel modo seguente:
+
+
+- Dal <Italic> Tag </Italic>  (Marke) dell&#39;attributo di blocco <Bold> Punktnummer </Bold>  viene estratto un segnaposto che si chiama <Bold> KZ </Bold> .
+
+
+- Dal suo valore, separati dal trattino &#39;-&#39; sono estratti 2 segnaposti <Bold> Name </Bold>  e <Bold> Region </Bold> .
+
+
+
+
+-  I valori cos&#236; ottenuti devono essere importati negli attributi Geodatabase.
+
+
+- <Italic> Il valore di Name </Italic>  come Name del punto
+
+
+- <Italic> Il valore di Region </Italic>  come Region del punto
+
+
+- <Italic> Il valore di KZ </Italic>  come Subname del punto.
+
+
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\BlockToPointExample.png$BlockToPointExample</Image>
+
+
+</Info>
+
+
+### 
+#  Creare punti da testi (&lt;Text&gt;)
+
+
+
+```
+Struttura di una mappatura Testo-a-Punto
+
+ <Bold> &lt;Text&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Descrive come devono essere filtrati i testi. --&gt;
+          Tutti gli elementi seguenti sono facoltativi; 
+          gli elementi presenti sono collegati tra loro con AND,
+          quindi tutti devono essere soddisfatti --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- numero intero, cio&#233; colore indice --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- nome risp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;TextHeight&gt; </Bold>  <Italic> &lt;!-- numero a virgola mobile </Italic>  --&gt; <Bold> &lt;/TextHeight&gt; </Bold> 
+     <Bold> &lt;TextStyle&gt; </Bold>  <Italic> &lt;!-- nome risp. RegEx --&gt; </Italic>  <Bold> &lt;/TextStyle&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Text&gt; </Bold> 
+
+```
+
+<Info>
+Esempio:
+
+- Si devono creare in Geodatabase dei punti del tipo <Bold> Punto di etichetta </Bold> .
+
+
+- Rotazione e Posizione devono essere <Italic> generalmente </Italic>  ripresi da elementi CAD.
+
+
+- I testi devono trovarsi sui layer <Bold> N-SB </Bold>  risp. <Bold> SB </Bold> .
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\TextToPointExample.png$TextToPointExample</Image>
+
+
+</Info>
+
+
+### 
+#  Creare punti da elementi punto (&lt;Point&gt;)
+
+
+
+```
+Struttura di una mappatura Punto-a-Punto
+
+ <Bold> &lt;Point&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Descrive come devono essere filtrati i punti. --&gt;
+          Tutti gli elementi seguenti sono facoltativi; 
+          gli elementi presenti sono collegati tra loro con AND,
+          quindi tutti devono essere soddisfatti --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- numero intero, cio&#233; colore indice --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- nome risp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Point&gt; </Bold> 
+
+```
+
+<Info>
+Esempio:
+
+- Si devono creare in Geodatabase dei punti del tipo <Bold> Punto del terreno </Bold> .
+
+
+- La posizione deve essere <Italic> generalmente </Italic>  ripresa da elementi CAD, la rotazione non deve essere ripresa.
+
+
+- I punti devono trovarsi sui layer che cominciano con <Bold> DGM </Bold> _.
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\PointToPointExample.png$PointToPointExample</Image>
+
+
+</Info>

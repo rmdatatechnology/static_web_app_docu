@@ -1,0 +1,73 @@
+---
+title: "KVZ-Assistent für rmGEO"
+page: true
+---
+## Setzt die Klassifizierung f&#252;r Punkte und bereitet die Daten f&#252;r das Koordinatenverzeichnis in rmGEO auf.
+<Success>
+ <Bold> Fonctionnalit&#233; exclusivement d&#233;di&#233;e &#224; l&#39;Autriche </Bold> 
+</Success>
+
+ <Menu> Menu: [Daten / KVZ-Assistent für rmGEO] </Menu> 
+<GeoDesigner>
+ <Menu> Cmd: [CoordinatelistAssistent] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+<Warning>
+Diesen Befehl gibt es nur in der Fachschale &quot;Teilungsplan &#214;sterreich&quot;.
+</Warning>
+
+
+<GeoDesigner>
+<Image>\img\grafik\teilungsplan\KVZAssistent.png$KVZAssistent</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\teilungsplan\GeoMapper.KVZAssistent.png$GeoMapper.KVZAssistent</Image>
+</GeoMapper>
+
+
+Gehen Sie wie folgt vor:
+
+1. Beim Starten des Befehls w&#228;hlen Sie
+
+- Punkte aus der Grafik,
+
+- alle Punkte mit sichtbarer Punktnummer oder
+
+- alle Punkte
+
+
+
+2.  In der ersten Registerkarte k&#246;nnen Sie die 
+[Punktklassifizierungen](../teilungsplan/punktklassifizierungsetzen)
+ setzen
+
+3.  Bei den KVZ-Einstellungen werden alle gew&#228;hlten Punkte aufgelistet
+
+-  Diese k&#246;nnen mittels Drag&amp;Drop zwischen den Rubriken verschoben werden
+
+-  Neue Rubriken k&#246;nnen  eingef&#252;gt werden
+
+-  Der Name der Rubriken kann ge&#228;ndert werden
+
+
+
+4.  Mit <Border>Fertigstellen</Border>  werden die Einstellungen an rmGEO &#252;bergeben und das Koordinatenverzeichnis kann gedruckt werden
+
+
+
+
+ <Bold> Vorlagendateien </Bold> 
+In einer Auswahlliste werden alle vordefinierten Vorlagen aufgelistet. Diese sind in Form von Dateien mit der Endung  <Italic> .coordinatelist </Italic>  in den Reports-Verzeichnissen abgelegt:
+
+- %ProgramData%\rmDATA\ <Placeholder>product</Placeholder> Templates\Reports
+
+- %Firmenverzeichnis%\rmDATA\ <Placeholder>product</Placeholder> Templates\Reports
+
+- %AppData%\rmDATA\ <Placeholder>product</Placeholder> Templates\Reports
+
+
+
+ <U> Aussehen der Datei: </U> 
+ <Italic> RUBRIK=Festpunkte;Messpunkte;Grenzpunkte;Sonstige Punkte
+ETRS89=Ja;Ja;Ja;Ja
+FILTER=Filter_Festpunkte;Filter_Messpunkte_Filter_Grenzpunkte;Filter_Sonstige </Italic> 

@@ -1,0 +1,147 @@
+---
+title: "Allgemein"
+page: true
+---
+## Festlegen der allgemeinen Einstellungen
+
+<GeoDesigner>
+<Image>\img\grafik\datei\Projekteinstellung_allgemein_2.png$Projekteinstellung_allgemein_2</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\datei\GeoMapper.Projekteinstellung_allgemein_2.png$GeoMapper.Projekteinstellung_allgemein_2</Image>
+</GeoMapper>
+
+
+###  Aktuelle Vorlage
+In der Vorlage k&#246;nnen alle Einstellungen vordefiniert werden. W&#228;hlen Sie beim Anlegen einer Datei eine Vorlage aus. 
+Mit dem Speichern-Button k&#246;nnen alle aktuellen Einstellungen in einer neuen Vorlagen-Datei gespeichert werden. Neue Vorlagen k&#246;nnen auch in einem Firmenverzeichnis abgelegt werden - siehe [Verzeichnisse](../datei/programm-einstellungen6)
+. 
+
+<Success>
+Beim Anlegen einer neuen Datei w&#228;hlt  <Placeholder>product</Placeholder> automatisch die zuletzt gew&#228;hlte Projektvorlage aus, sodass Sie keinerlei Werte manuell eintragen m&#252;ssen, sofern die Vorlage vollst&#228;ndig ist!
+</Success>
+
+<Success>
+Beim Speichern der Dateivorlage werden auch alle Anzeigestatus der aktuellen Datei mit abgelegt und stehen damit f&#252;r neue Dateien zur Verf&#252;gung.
+</Success>
+
+<Warning>
+Wird die Dateivorlage in einer bestehenden Datei gewechselt, werden alle Einstellungen mit jenen aus der neuen Dateivorlage &#252;berschrieben. 
+Beim Anzeigestatus w&#228;hlen Sie, ob er aus der neuen Dateivorlage &#252;bernommen werden soll.
+</Warning>
+
+
+### Einstellungen
+Hier k&#246;nnen Sie allgemeine Attribute f&#252;r die Datei vergeben. Diese Attribute werden im Programm nicht verwendet und dienen nur der Information.
+
+<GeoMapper>
+
+### Koordinatensystemeinstellungen
+
+- <Bold> Koordinatensystem: </Bold>  Auswahl des Koordinatensystems f&#252;r die aktuelle Datei. Tippen Sie einfach einen Teil des gew&#252;nschten Systems in das Eingabefeld ein. Es klappt eine Auswahl aller Systeme auf, die zur Eingabe passen.
+
+
+- Mit 
+
+
+<Image>\img\grafik\datei\GeoMapper.HaufigVerwendeteSysteme.png$GeoMapper.HaufigVerwendeteSysteme</Image>klappt die Liste der am h&#228;ufigst verwendeten Systeme auf.
+
+
+- Mit 
+
+
+<Image>\img\grafik\datei\GeoMapper.Koordinatensysteme.png$GeoMapper.Koordinatensysteme</Image>kommen Sie zur vollen Auswahl von m&#246;glichen Koordinatensystemen.
+
+
+- Mit 
+
+
+<Image>\img\grafik\datei\GeoMapper.KoordinatensystemDetails.png$GeoMapper.KoordinatensystemDetails</Image>k&#246;nnen Sie Details zum ausgew&#228;hlten Koordinatensystem aufrufen:
+
+
+- 
+<Image>\img\grafik\datei\GeoMapper.GridDetailForm.png$GeoMapper.GridDetailForm</Image>
+
+
+- <Bold> Reduktionsfaktor: </Bold>  Wenn der Plan nicht in einem lokalen System erstellt wird, empfiehlt sich die Einstellung eines Reduktionsfaktors. So k&#246;nnen Sie bei Berechnungen und Konstruktionen f&#252;r alle Distanzen Werte aus der Natur eingeben. Die Naturma&#223;e werden von <Placeholder>fullproduct</Placeholder> automatisch in Planwerte umgerechnet. Auch alle Bema&#223;ungen in der Grafik werden immer als Werte in der Natur angezeigt. Der Reduktionsfaktor wird automatisch berechnet aus dem Koordinatensystem und folgenden Werten:
+
+
+- <Bold> Schwerpunkt: </Bold> Klicken Sie auf den Button und w&#228;hlen Sie den Schwerpunkt ihrer Daten direkt in der Grafik. Alternativ geben Sie die Koordinaten direkt ein.
+
+
+- <Bold> H&#246;he: </Bold> mittlere H&#246;he (ellipsoidisch)
+
+
+- <Bold> Geoidund.: </Bold> Mittlere Geoidundulation
+
+
+- <Bold> mittlerer Erdradius: </Bold> Der Mittlere Erdradius wird nach Auswahl eines Koordinatensystems automatisch mit dem dort definierten Wert vorbelegt. Sie k&#246;nnen diesen Wert nachtr&#228;glich manuell &#228;ndern. Sobald Sie jedoch eine &#196;nderung in der Koordinatensystem-Auswahl vornehmen, wird diese Einstellung wieder mit dem vordefinierten Wert des neuen Koordinatensystems &#252;berschrKonfigurationenieben.
+
+
+- <Bold> Geoidh&#246;he: </Bold> Wenn man die Geoidh&#246;he ber&#252;cksichtigen m&#246;chte, kann man hier einen Wert eintragen. Die Geoidh&#246;he wird bei der Ma&#223;stabsberechnung ber&#252;cksichtigt. Gibt es keinen Wert, wird die bisherige Berechnung belassen.
+
+
+
+
+
+
+
+<Warning>
+   Der Reduktionsfaktor hat keine Auswirkung auf die Berechnung von Fl&#228;chen. Daf&#252;r gibt es eigene Einstellungen auf der Seite [Berechnungen](../datei/datei-einstellungen5)
+. 
+</Warning>
+ 
+<Warning>
+ Der Reduktionsfaktor wird nur auf die 2D-Distanzen angebracht. H&#246;heninformationen werden nicht reduziert.
+</Warning>
+
+ 
+<Success>
+   Der Reduktionsfaktor wird automatisch aus den &#252;brigen Koordinatensystemeinstellungen errechnet. Die Formeln finden sie [hier ....](../anhang/reduktion)
+
+Der im Dialog angegebene Reduktionsfaktor (Abbildung --&gt; Natur) wird mit dem Planwert multipliziert um die Distanz in der Natur zu ermitteln.
+Sie k&#246;nnen diesen Wert nachtr&#228;glich manuell &#228;ndern. Sobald Sie jedoch danach eine der daf&#252;r ma&#223;geblichen Einstellungen (Koordinatensystem, Schwerpunkt, H&#246;he, Mittlerer Erdradius) &#228;ndern, wird der Reduktionsfaktor neu berechnet.  
+</Success>
+
+<Warning>
+Manche Koordinatensysteme setzten das Vorhandensein einer sog. Grid-Datei (Gitter) voraus, welche die Transformationsparameter enth&#228;lt. Sollte die dem Koordinatensystem zugeordnete Grid-Datei fehlen, dann zeigt  <Placeholder>product</Placeholder> eine entsprechende Warnung an. Solange diese Datei nicht vorhanden ist, kann man keine Transformation durchf&#252;hren, alle anderen Operation sind aber m&#246;glich.
+
+
+<Image>\img\grafik\datei\GeoMapper.GridDatei.png$GeoMapper.GridDatei</Image>
+
+Wenn Sie die Grid-Datei erworben haben, dann legen Sie die Datei ab im Verzeichnis |C:\ProgramData\rmDATA\GeoMapper\Settings\CRS
+Die Grid-Datei muss im bin&#228;ren Format ntv2 vorliegen.
+</Warning>
+
+
+</GeoMapper>
+
+### Konfigurationen<Image>\img\grafik\datei\Konfiguration_Hinzufügen.png$Konfiguration_Hinzufügen</Image>Hinzuf&#252;gen einer Konfiguration<Image>\img\grafik\datei\Konfiguration_Entfernen.png$Konfiguration_Entfernen</Image>Entfernen einer Konfiguration aus der Liste<Image>\img\grafik\datei\Konfiguration_Aktualisieren.png$Konfiguration_Aktualisieren</Image>Aktualisieren der Konfigurationen. Wenn sich die Original-Konfiguration in der Zwischenzeit ge&#228;ndert hat, k&#246;nnen Sie auf den aktuellen Stand updaten.<Image>\img\grafik\datei\Konfiguration_Speichern.png$Konfiguration_Speichern</Image>Wenn die Konfiguration der Datei ver&#228;ndert wurde, speichern Sie mit diesem Button die Konfiguration der Datei.<Image>\img\grafik\datei\Konfiguration_Zeichenreihenfolge.png$Konfiguration_Zeichenreihenfolge</Image>Zeichenreihenfolge einer Konfiguration &#228;ndern. Hier k&#246;nnen Sie durch Eingabe eines konstanten Wertes die Zeichenreihenfolge aller Objekte einer Konfiguration &#228;ndern, um mehrere Konfigurationen aufeinander abzustimmen oder alle Objekte einer Konfiguration in den Hintergrund zu verschieben.<Image>\img\grafik\datei\Konfiguration_Export.png$Konfiguration_Export</Image>Exportiert die aktuell gew&#228;hlte Konfiguration in eine neue Datei.
+
+<Success>
+Die Konfigurationen werden gem&#228;&#223; der Reihenfolge in der Liste geladen. Wenn ein Objekttyp in mehreren Konfigurationen vorkommt, dann gewinnt die erste Definition. 
+Bei Bedarf &#228;ndern Sie die Reihenfolge in der Liste durch Ziehen mit der Maus oder mit den Pfeiltasten rechts neben der Liste. 
+</Success>
+<GeoDesigner>
+<Warning>
+Auch bestimmte DWG-Einstellungen werden beim Laden der Konfiguration(en) aus der Prototypzeichnung der an erster Stelle gereihten Konfiguration geladen (siehe [DWG-Einstellungen](../datei/datei-einstellungen17)
+).
+</Warning>
+</GeoDesigner>
+<Success>
+Die Konfiguration wird in der Datei gespeichert. Wenn Sie die  <Placeholder>product</Placeholder> Datei weitergeben, brauchen Sie daher keine zus&#228;tzlichen Dateien mitliefern.
+</Success>
+
+<Success>
+Klicken Sie mit der rechten Maustaste auf die Liste der Konfigurationen. Dann erhalten Sie eine Liste aller Konfigurationen in den Standardverzeichnissen.
+
+<Image>\img\grafik\datei\Konfiguration_Auswahl.png$Konfiguration_Auswahl</Image>
+
+Weitere Informationen zur Ablage von installierten und selbst angepassten Konfigurationen finden Sie unter [hier ...](../anhang/dateien)
+ 
+</Success>
+
+<Warning>
+Das Laden, Entladen und Sortieren der Konfigurationen kann Auswirkungen auf die Versionierung haben.
+</Warning>
+

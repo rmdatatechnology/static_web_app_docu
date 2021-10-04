@@ -1,0 +1,51 @@
+---
+title: "Importation de données du Cadastre Luxembourgeois"
+page: true
+---
+## Importation de donn&#233;es du Cadastre Luxembourgeois
+<GeoMapper> <Menu> Menu: [Fichier / Import-Manager] </Menu> 
+
+<Warning>
+Cette exportation est disponible seulement pour le module &quot;Plan de fractionnement Luxembourg&quot;. 
+</Warning>
+
+
+<Success>
+Toutes les donn&#233;es sont import&#233;es dans l&#39;ancien &#233;tat. A la fin, nous vous conseillons de calculer toutes les surfaces avec la commande  <Menu>Calculer / Calculer les surfaces</Menu> .
+Ainsi toutes les valeurs des surfaces du cadastre restent inchang&#233;es.
+</Success>
+
+<Success>
+Si dans le fichier des points avec nom identique sont pr&#233;sents, ils sont automatiquement renomm&#233; selon les directives du bureau du cadastre. 
+</Success>
+
+
+### Param&#232;tres
+Ici vous pouvez d&#233;finir des ult&#233;rieurs param&#232;tres optionnels.
+
+- <Bold> R&#233;solution de conflits: </Bold> Noms des points et des surfaces doivent &#234;tre univoques. En cas de noms identiques les options suivantes sont disponibles:
+
+- <Italic> Renommer </Italic> : Les points et les surfaces import&#233;es sont renomm&#233;s avec un pr&#233;fixe resp. suffixe. Les objets existants restent non modifi&#233;s.
+
+- <Italic> Priorit&#233; au point existant </Italic> : Le point existant dans le fichier est maintenu, l&#39;objet depuis la source est ignor&#233;. Le comportement est le m&#234;me que pour <Italic> Renommer </Italic>  sans ajouter le pr&#233;fixe resp. le suffixe.
+
+- <Italic> Priorit&#233; au nouveau point </Italic> : Le nouveau point import&#233; remplace le point existant.
+
+- <Italic> Resoudre int&#233;ractivement </Italic> : Un dialogue de collision s&#39;ouvre o&#249; pour chaque point vous pouvez d&#233;cider si utiliser le point depuis GeoMapper ou depuis la source. 
+
+
+
+
+
+<Warning>
+Les surfaces import&#233;es ayant le m&#234;me nom, sont renomm&#233;es avec un pr&#233;fixe resp. un suffixe. Si pr&#233;fixe et suffixe sont vides, la surface n&#39;est pas import&#233;e et l&#39;ancienne surface est gard&#233;e.
+</Warning>
+
+
+- <Bold> Protocole: </Bold>  Il d&#233;finit si un protocole d&#233;taill&#233; des objets import&#233;s doit &#234;tre g&#233;n&#233;r&#233; ou seulement un r&#233;capitulatif.
+
+
+
+
+</GeoMapper>
+

@@ -1,0 +1,109 @@
+---
+title: "Assistant d'impression - Détails"
+page: true
+---
+## D&#233;finition des param&#232;tres d&#233;taill&#233;s, avant de finaliser l&#39;impression. 
+<GeoMapper>
+
+### Informations suppl&#233;mentaires
+      Dans cette fen&#234;tre vous pouvez modifier les attributs pr&#233;d&#233;finis par ex. les noms des documents. Ces attributs sont d&#233;pendants du layout s&#233;lectionn&#233; et ensuite visibles dans l&#39;impression.
+      
+<Image>\img\grafik\datei\Vordefinierte_Attribute.png$Vordefinierte_Attribute</Image>
+
+      
+<Success>
+Seulement les propri&#233;t&#233;s qui sont affich&#233;es dans le gabarit sont list&#233;s. En outre aussi les attributs de projet tels que les [attributs de fichier](../datei/datei-einstellungen14)
+ sont affich&#233;s pour votre information mais prot&#233;g&#233;s en &#233;criture.
+</Success>
+
+
+### Options avanc&#233;es<Image>\img\grafik\datei\Erweiterte_Optionen.png$Erweiterte_Optionen</Image>
+
+       <Bold> Style de trac&#233; courant </Bold> 
+      Si on souhaite que des couleurs ou des &#233;paisseurs de ligne sp&#233;cifiques soient diff&#233;rentes en impression, ceci est pilotable par une table de style de trac&#233;.
+      Par couleur (index) on peut d&#233;finir une couleur alternative et/ou une &#233;paisseur de ligne alternative.
+
+      Les tables de style de trac&#233; sont m&#233;moris&#233;es dans le r&#233;pertoire  <Bold> C:\ProgramData\rmDATA\GeoMapperSE\Templates\Printing </Bold>  et doivent pr&#233;senter la syntaxe suivante:
+
+      
+<Info>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Styles xmlns=&quot;http://rmdata.at/graphics/plotstyle&quot;&gt;
+   &lt;Style ForColorKey=&quot;1&quot;&gt;
+    &lt;Overrides&gt;
+      &lt;ColorKey&gt;1&lt;/ColorKey&gt;
+      &lt;LineWeight&gt;25&lt;/LineWeight&gt;
+    &lt;/Overrides&gt;
+  &lt;/Style&gt;
+  &lt;Style ForColorKey=&quot;2&quot;&gt;
+    &lt;Overrides&gt;
+      &lt;ColorKey&gt;3&lt;/ColorKey&gt;
+      &lt;LineWeight&gt;50&lt;/LineWeight&gt;
+    &lt;/Overrides&gt;
+&lt;/Style&gt;
+&lt;/Styles&gt;
+</Info>
+
+Dans cette exemple pour la couleur 1 (Rouge) une &#233;paisseur de ligne de 0.25 mm est d&#233;finie.
+La couleur 2 (Gelb) en impression est remplac&#233;e par la couleur 3 (Vert) et repr&#233;sent&#233;e avec une &#233;paisseur de ligne de 0.5 mm.
+<Warning>
+Seulement les administrateurs ont droits d&#39;&#233;criture dans ce r&#233;pertoire.
+</Warning>
+
+
+ <Bold> Imprimer transparence </Bold> 
+Avec la stylisation de rmDATA GeoMapper le niveau de transparence pour diff&#233;rentes classes d&#39;objets peut &#234;tre d&#233;fini. Avec cette option on peut d&#233;finir si la transparence doit &#234;tre imprim&#233;e.
+<Warning>
+Pas toutes les imprimantes (surtout les imprimantes Postscipt) sont capables d&#39;imprimer la transparence, resp. l&#39;impression peut prendre beaucoup de temps! 
+</Warning>
+
+
+ <Bold> Imprimer seulement les objets n&#233;cessaires </Bold> 
+Pour les objets qui rentrent partiellement dans la zone d&#39;impression, seulement la partie &#224; l&#39;int&#233;rieure est transf&#233;r&#233;e &#224; l&#39;imprimante.
+Si vous cochez cette option (comme conseill&#233;), les donn&#233;es sont coup&#233;es sur le bord de la zone d&#39;impression et ensuite envoy&#233;es &#224; l&#39;imprimante. Par contre ils existent des cas extr&#232;mes pour lesquels la coupe peut g&#233;n&#233;rer une erreur de calcul. Dans ces cas vous pouvez d&#233;cocher la case en question.
+
+Si cette option n&#39;est pas activ&#233;e, les situations suivantes peuvent se produire:
+
+-  Impression dans un fichier PDF: Quand des lignes tr&#232;s longues, par ex: les bords de route, sont imprim&#233;es dans un fichier PDF, le r&#233;sultat est impeccable. Par contre lors de l&#39;impression du fichier PDF, la ligne peut &#234;tre non correctement g&#233;r&#233;e par le visualisateur PDF, car le visualisateur n&#39;arrive pas &#224; supporter le domaine des coordonn&#233;es. Il arrive parfois que la ligne appara&#238;t une deuxi&#232;me fois dans une autre position sur le papier.
+
+-  Hachures de surfaces: Quand une surface avec un hachurage rentre avec une petite partie dans la zone d&#39;impression, n&#233;anmoins elle est envoy&#233;e compl&#232;tement &#224; l&#39;imprimante. Ceci co&#251;te inutilement beaucoup d&#39;espace de m&#233;moire.
+
+
+
+
+### Aper&#231;u d&#39;impression
+Dans la fen&#234;tre de cet onglet vous voyez un aper&#231;u de toutes les zones d&#39;impression et vous pouvez, avec les boutons disponibles, les modifier pour am&#233;liorer votre plan.
+
+Dans cette fen&#234;tre, des zones layout depuis le layout d&#39;impression courant peuvent &#234;tre cr&#233;&#233;es pour &#233;ventuellement r&#233;p&#233;ter cette impression dans un deuxi&#232;me temps.
+Dans ce but, l&#39;option  <Bold> Cr&#233;er zone layout </Bold>  doit &#234;tre s&#233;lectionn&#233;e et un nom univoque doit &#234;tre d&#233;fini pour cette zone layout. Une fois l&#39;impression termin&#233;e, pour chaque page une zone layout est cr&#233;&#233;e dans l&#39;aper&#231;u d&#39;impression.<Image>\img\grafik\datei\Druckvorschau.png$Druckvorschau</Image>
+
+
+<Success>
+ Avec le bouton  
+<Image>\img\grafik\datei\Edit.png$Edit</Image> une fen&#234;tre selon le choix d&#39;une zone d&#39;impression s&#39;ouvre, dans laquelle la zone d&#39;impression peut &#234;tre encore modifi&#233;e avant d&#39;imprimer: 
+
+
+<Image>\img\grafik\datei\Druckbereich_bearbeiten.png$Druckbereich_bearbeiten</Image>
+
+S&#233;lectionnez une autre repr&#233;sentation ou une autre &#233;chelle pour la zone d&#39;impression:
+
+
+<Image>\img\grafik\datei\Darstellung_Massstab.png$Darstellung_Massstab</Image>
+
+-  Si la configuration charg&#233;e supporte diff&#233;rentes vues/versions, alors vous pouvez &#224; c&#244;t&#233; de <Italic> Repr&#233;sentation </Italic>  et <Italic> Echelle </Italic>  aussi modifier la vue pour la zone d&#39;impression.
+
+
+
+
+
+
+<Image>\img\grafik\datei\Pan.png$Pan</Image> Il permet de d&#233;placer la zone &#224; imprimer.
+
+
+<Image>\img\grafik\datei\Move.png$Move</Image> Il permet de d&#233;placer un &#233;l&#233;ment de layout (e.g. la fl&#232;che du Nord). 
+
+
+<Image>\img\grafik\datei\Remove2.png$Remove2</Image> Il permet de supprimer un &#233;l&#233;ment de layout.
+</Success>
+
+</GeoMapper>

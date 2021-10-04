@@ -1,0 +1,69 @@
+---
+title: "Kleinpunkte mit Anlegemaß"
+page: true
+---
+## Mit der Methode  <Menu>Kleinpunkte mit Anlegemaß</Menu>  berechnen Sie orthogonale Punkte (Kleinpunkte) in Bezug auf eine unbekannte Basislinie mit gegebenen Abszissen und Ordinaten.
+ <Menu> Menu: [Berechnen / Kleinpunkte mit Anlegemaß] </Menu> 
+<GeoDesigner> <Menu> Cmd: [PointsCustomCalc] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+
+<Image>\img\grafik\berechnen\Geo.KleinpunkteAnlegemassForm.png$Geo.KleinpunkteAnlegemassForm</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\berechnen\GeoMapper.KleinpunkteAnlegemassForm.png$GeoMapper.KleinpunkteAnlegemassForm</Image>
+</GeoMapper>
+
+
+Gehen Sie wie folgt vor:
+
+1. Rufen Sie den Befehl auf.
+
+2. W&#228;hlen Sie den 1. Punkts und Abszisse und Ordinate in Bezug auf die unbekannte Basislinie.
+
+3. W&#228;hlen Sie den 2. Punkts und Abszisse und Ordinate in Bezug auf die unbekannte Basislinie.
+
+4. Fester Ma&#223;stab 1.0: Ist die Option angehakt erfolgt die Berechnung mit Ma&#223;stab 1. Andernfalls wird der Ma&#223;stab aus den Angaben mitbestimmt.
+
+5. Eingabe der Abszisse: Der Abstand bezieht sich immer auf den Anfangspunkt der unbekannten Basislinie. (Der zuvor bestimmte L&#228;ngsfehler wird proportional zur Abszisse angebracht)
+
+- Positiv: Neupunkt liegt auf der Basislinie vom Anfangspunkt in Richtung Endpunkt
+
+- Negativ: Neupunkt liegt auf der Basislinie vom Anfangspunkt in entgegengesetzter Richtung zum Endpunkt
+
+
+
+6. Eingabe der Ordinate: Der Abstand bezieht sich immer auf die unbekannte Basislinie
+
+-  Positiv: Neupunkt liegt rechts von der Basislinie
+
+- Negativ: Neupunkt liegt links von der Basislinie
+
+
+
+7. W&#228;hlen Sie das aus den Eingaben resultierende Ergebnis und best&#228;tigen Sie mit <Border>   Ok   </Border> .
+
+
+<Success>
+ <Placeholder>product</Placeholder> schl&#228;gt automatisch die n&#228;chste Punktnummer vor.
+
+</Success>
+
+
+
+<GeoMapper>
+<Warning>
+Die eingegebenen Abszissen und Ordinaten werden nicht reduziert, da bei dieser Berechnung im Standardfall Werte aus alten Pl&#228;nen und keine Naturma&#223;e eingegeben werden.
+</Warning>
+
+</GeoMapper>
+
+<Success>
+Negative Abszissenwerte laufen gegen die Richtung der Basislinie.
+Der Ordinatenwert wird rechts der Basislinie aufgetragen, negative Ordinatenwerte entsprechend links der Basislinie.
+</Success>
+
+<Success>
+Hinweise zu Fehlermeldungen und Punktauswahl finden Sie unter [Dialoge](../benutzeroberflaeche/dialoge)
+.
+</Success>

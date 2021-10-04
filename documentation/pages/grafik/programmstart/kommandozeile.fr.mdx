@@ -1,0 +1,83 @@
+---
+title: "Ligne de commande"
+page: true
+---
+## D&#233;marrage de  <Placeholder>fullproduct</Placeholder> via la ligne de commande.
+
+Appelez l&#39;invite de commande.<Image>\img\grafik\programmstart\CMDIcon.png$CMDIcon</Image>
+
+Maintenant vous pouvez d&#233;marrer GeoMapper avec une commande. Allez au r&#233;pertoire des programmes
+(par d&#233;faut: cd &quot;C:\Program Files (x86)\rmDATA\GeoMapperSE&quot;)
+
+Avec la commande GeoMapper.exe le programme d&#233;marre comme si il &#233;tait d&#233;marr&#233; sur le bureau.
+
+Si &#224; la commande on ajoute des param&#232;tres, on peut directement cr&#233;er ou ouvrir un fichier gabarit. On peut aussi d&#233;marrer une importation.
+
+ <Bold> Syntaxe: </Bold> 
+
+GeoMapper.exe &lt;filename&gt; [/t[emplate]:projecttemplate] [/c[ommand]:&lt;NomCommande&gt;([&lt;param1&gt;][,&lt;param2&gt;][,&lt;param3&gt;])]
+
+<table>
+<tr><th>Commande</th>
+<th>Description</th>
+</tr>
+<tr><td> <b> /t: </b> name <b> /template: </b> name</td>
+<td>Il charge un gabarit de fichier existant.  Au lieu de &quot;name&quot; saisissez le nom du gabarit de fichier (sans chemin).</td>
+</tr>
+<tr><td> <b> /c: </b> command(param1,param2,param3) <b> /command: </b> command(param1,param2,param3)</td>
+<td>Il appelle une commande directement apr&#232;s l&#39;ouverture ou la cr&#233;ation du fichier donn&#233;.Actuellement les commandes suivantes sont disponibles:
+ <ul> <li>[CLImport](../programmstart/kommandozeile2)
+ (Lignes de commande-Importation)
+</li> </ul> 
+</td>
+</tr>
+<tr></tr>
+</table>
+
+
+<Warning>
+Les informations de chemin doivent &#234;tre donn&#233;es entre guillemets (&quot;), surtout quand elles contiennent des espaces. Autrement  <Italic> Windows </Italic>  interpr&#232;te les espaces dans la ligne de commande comme des s&#233;parateurs entre les param&#232;tres.
+</Warning>
+
+
+ <Bold> Exemple: </Bold> 
+
+<Info>
+ <Bold> GeoMapper.exe </Bold>  &quot;C:\TestData\File1.geodb3&quot;  <Bold> /t: </Bold> Gabarit1  <Bold> /c: </Bold>  <Italic> CLImport </Italic> ( <Italic> Xml </Italic> ,&quot;C:\TestData\Grundlage.xml&quot;)
+
+Cet exemple cr&#233;e un nouveau fichier ( <Italic> File1.geodb3 </Italic> ) bas&#233; sur le mod&#232;le &quot;Gabarit1&quot; et importe le fichier  <Italic> Grundlage.xml </Italic>  du type  <Italic> Xml </Italic> .
+</Info>
+
+
+<Warning>
+Lors de l&#39;&#233;dition de la commande il faut respecter la casse des caract&#232;res! (Case sensitive).
+</Warning>
+
+<Warning>
+Tous les chemins doivent &#234;tre absolus et doivent exister. Le fichier est cr&#233;&#233;, si il n&#39;existe pas encore.
+</Warning>
+
+<Warning>
+Si dans le chemin ou dans le nom du fichier il y a des accents ou similaires, dans l&#39;appel de lignes de commande il faut donner le  <Italic> Codepage 1250 </Italic>  via un fichier BAT. (Ceci se fait avec la commande  <Italic> chcp 1250 </Italic>  au d&#233;but du fichier BAT). 
+</Warning>
+
+
+
+ <Bold> Messages d&#39;erreur: </Bold> 
+
+<Info>
+
+<Image>\img\grafik\programmstart\ErrorMessageBox1.png$ErrorMessageBox1</Image>
+
+Appara&#238;t lorsque le fichier a &#233;t&#233; d&#233;fini sans chemin absolu, ou le r&#233;pertoire donn&#233; n&#39;existe pas.
+</Info>
+
+
+<Info>
+
+<Image>\img\grafik\programmstart\ErrorMessageBox2.png$ErrorMessageBox2</Image>
+
+Appara&#238;t lorsque le nom du fichier donn&#233; contient des caract&#232;res non valables (\ / : * ? &quot; &lt; &gt; |)
+</Info>
+
+

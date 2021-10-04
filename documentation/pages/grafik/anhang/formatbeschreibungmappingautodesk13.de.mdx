@@ -1,0 +1,139 @@
+---
+title: "Mappingtabelle - rmMAP-Migration"
+page: true
+---
+##  Punkth&#246;hen aus dem Einsetzpunkt in rmMAP &#252;bernehmen
+Wenn in rmMAP der Plan in 2D gezeichnet wurde und die H&#246;he gerundet im Punktattribut dargestellt wird, kann man auch direkt auf das H&#246;henattribut des rmMAP-Einf&#252;gepunktes zugreifen:
+<Info>
+ &lt;Attribut Name=&quot;Internal~Elevation&quot;&gt;&quot;Internal~RmMapHeight&quot;&lt;/Attribut&gt;
+
+</Info>
+
+## Signaturbreite aus  <Placeholder>rmMAP</Placeholder> Daten &#252;bernehmen 
+ <Placeholder>rmMAP</Placeholder> Zeichnungen enthalten unter Umst&#228;nden  <Italic> Signaturen </Italic> , welche dort als eigene CAD-Elemente mit Bezugsobjekt (Linie) existieren. In  <Placeholder>product</Placeholder> werden Signaturinformationen (Breite einer Mauer / einer B&#246;schung, usw.) als Eigenschaften der grafischen Darstellung bzw. als Objektattribute behandelt. Diese Informationen k&#246;nnen mittels Mapping aus  <Placeholder>rmMAP</Placeholder> generiert werden.
+
+### Syntax 
+<Info>
+Die Ableitung der Signaturinformation eines Linienzuges kommt  <Italic> de facto </Italic>  dem Zusammenfassen mehrerer CAD-Elemente zu 1 Objekt gleich und wird daher &#252;ber das XML-Element  <Bold> &lt;MultipleObjectMapping&gt; </Bold>  und einer Aufz&#228;hlung von  <Bold> &lt;Objects&gt; </Bold>  definiert. Es kann als Unter-Element s&#228;mtlicher [Objektklassen-Elemente](../datei/cadkonvertieren5)
+ verwendet werden.
+</Info>
+
+<Warning>
+Signaturelemente werden &#252;blicherweise als  <Italic> Anonymer Block </Italic>  in der DWG gespeichert.  <Placeholder>product</Placeholder> assoziiert Signaturelement und Linie aufgrund des Filters sowie der r&#228;umlichen N&#228;he. D. h. der Einsetzpunkt des Signatur-Blocks muss  <Italic> exakt </Italic>  auf einem St&#252;tzpunkt (&#252;blicherweise der Anfangspunkt) der signierten Linie liegen.
+Die Konvertierung erfolgt nur dann, wenn alle Objekte anhand des Filters gefunden werden.
+</Warning>
+
+<Warning>
+In der Auswertung des Mappings passiert folgendes:
+
+1.  Zuerst werden alle Daten mit den  &lt;MultipleObjectMapping&gt; - Eintr&#228;gen verglichen und entsprechend gemappt.
+
+
+2.  Dann werden alle gemappten CAD-Elemente und auch alle ihre Referenzen von weiteren Mappings ausgenommen. Treffen auf ein rmMAP-Objekt mit Signatur mehrere Zuweisungen zu, dann wird es mehrfach gemappt!
+
+
+3.  Erst dann erfolgt die Zuweisung mit den &#252;brigen Mapping-Eintr&#228;gen. Der zuerst gefundende Eintrag gewinnt.
+
+
+
+</Warning>
+
+### Spezialwerte
+<Warning>
+ <Placeholder>product</Placeholder> kann die Signaturbreite aus der Ausgangszeichnung ableiten und einem Attribut zuweisen.
+
+<table>
+<tr><td> <i> Internal~DeriveDistanceOrthogonal </i> </td>
+<td>Breitenwert aus zugeordnetem Signaturblock ableiten.</td>
+</tr>
+</table>
+</Warning>
+
+Sie k&#246;nnen Attribute auch mit diskreten Werten belegen, siehe Kommentar im Beispiel.
+
+<Info>
+Beispiel:
+
+-  Ein Linienzug vom Typ <Bold> Mauer </Bold>  soll erzeugt werden (besitzt &#252;blicherweise eine <Italic> Breite </Italic> ).
+
+
+-  1 Mauer setzt sich zusammen aus...
+
+
+-  1 Polylinie auf dem Layer <Bold> B_EF_M-L </Bold>  sowie
+
+
+-  1 Anonymen Block (Name beginnt mit &quot;*U&quot;  mit anschlie&#223;enden Ziffern, z. B.&quot;*U123456&quot; ) auf dem Layer <Bold> B_EF-S </Bold> 
+
+
+-  Der Einsetzpunkt des Blocks muss geometrisch auf einem St&#252;tzpunkt der Polylinie liegen.
+
+
+-  Das Attribut <Italic> MauerBreite </Italic>  des erzeugten Linienzuges wird aus der Orthogonaldistanz zwischen Polylinie und Blockelementen abgeleitet.
+
+
+-  Internal~DeriveDistanceOrthogonal ermittelt den Abstand mit dem Attribut Internal~DeriveSideOrthogonal kann man die Seite (1 oder -1) ermitteln
+
+
+<Image>\img\grafikgnatureMultipleObjectMapping.png$SignatureMultipleObjectMapping</Image>
+
+
+</Info>
+
+
+### Signaturseite und -breite aus rmMAP-Daten &#252;bernehmen
+
+-  Falls die geometrische Suche f&#252;r Signaturbreiten nicht ausreichend ist, kann diese aus den rmMAP-Daten &#252;bernommen werden
+
+
+
+<Info>
+<table>
+<tr><td>Internal~RmMapOffset</td>
+<td>Signaturbreite der rmMAP-Signatur</td>
+</tr>
+<tr><td>Internal~RmMapSide</td>
+<td>Seite, auf der die rmMAP-Signatur gezeichnet wird</td>
+</tr>
+<tr><td>Internal~RmMapOffsetBack</td>
+<td>Signaturbreite der R&#252;ckseite der rmMAP-Signatur</td>
+</tr>
+</table>
+
+
+
+<Image>\img\grafikMAPOffestExample.png$rmMAPOffestExample</Image>
+
+</Info>
+
+
+
+### rmMAP-Typen
+<Warning>
+Das oben gezeigte Vorgehen ist m&#246;glicherweise nicht anwendbar, wenn unterschiedliche  <Placeholder>rmMAP</Placeholder> Objektarten auf dem selben  <Italic> Layer </Italic>  liegen. Dann n&#228;mlich kann die Erstellung von Geodatenbank-Objekten nicht getrennt erfolgen.
+F&#252;r diesen Zweck gibt es die M&#246;glichkeit, im Mapping gezielt nach  <Placeholder>rmMAP</Placeholder> Typ zu filtern.
+</Warning>
+
+<Info>
+Beispiel:
+
+-  Ein Linienzug vom Typ <Bold> Sockelzaun </Bold>  soll erzeugt werden.
+
+
+-  1 Sockelzaun setzt sich zusammen aus...
+
+
+-  1 <Placeholder>rmMAP</Placeholder> Linie einer Objektart, deren Name mit <Bold> Zaun </Bold>  beginnt sowie
+
+
+-  1 Anonymen Block (Name beginnt mit &quot;*U&quot;  mit anschlie&#223;enden Ziffern, z. B.&quot;*U123456&quot;) auf einem beliebigenLayer (nicht angegeben)
+
+
+-  Der Einsetzpunkt des Blocks muss geometrisch auf einem St&#252;tzpunkt der Polylinie liegen.
+
+
+-  Das Attribut <Italic> Breite </Italic>  des erzeugten Linienzuges wird aus der Orthogonaldistanz zwischen <Placeholder>rmMAP</Placeholder> Linie und Blockelementen abgeleitet.
+
+
+<Image>\img\grafikgnatureMultipleObjectMapping2.png$SignatureMultipleObjectMapping2</Image>
+</Info>

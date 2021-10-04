@@ -1,0 +1,62 @@
+---
+title: "Verifica di consistenza"
+page: true
+---
+La verifica di consistenza confronta tutti i punti di un file  <Placeholder>product</Placeholder> con una sorgente dati rmGEO. La verifica consiste nel trovare le differenze tra i punti nelle due banche dati, tali differenze sono mostrate in una lista di inconsistenza.
+In base alla lista l&#39;utente decide per ogni punto, quale variante riprendere.
+
+ <Placeholder>geodgm</Placeholder> 
+Gli attributi sempre verificati sono:
+
+- Coordinate planimetriche
+
+- Altezza
+
+- Codice Punto Fisso
+
+- Codice Misura
+
+
+
+Nel caso in cui, per una impostazione nel Gestore delle connessioni, il tipo di punto non sia automaticamente ripreso da  <Placeholder>product</Placeholder>  anche questo attributo verr&#224; verificato.
+
+Inoltre in base alle impostazioni utente (Attributmapping) anche ulteriori attributi rmGEO possono essere comparati (vedere [Gestore delle connessioni](../daten/rmgeo-verbindungsmanager)
+).
+
+La verifica di consistenza si attiva nei seguenti casi:
+
+
+- Creando una connessione con rmGEO.
+
+- I punti se presenti in un solo programma, sono ripresi automaticamente.
+
+- I punti se presenti nei due programmi ma con diversi attributi, sono mostrati nella lista di inconsistenza.
+
+
+
+- Modificando le impostazione di connessione (Attributmapping)
+
+- Estendendo la lista degli attributi da comparare.
+
+- Modificando la versioni pi&#249; alta da riprendere.
+
+
+
+- Aprendo un progetto avente gi&#224; una connessione.
+
+- I punti modificati o eliminati sono mostrati nella lista di inconsistenza.
+
+
+
+- Ricaricando dei punti dalla base dati di <Placeholder>product</Placeholder> 
+- Ogni punto ricaricato viene verificato nella consistenza. I nuovi punti sono automaticamente ripresi in rmGEO.
+
+
+
+
+
+
+<Success>
+Di principio i nuovi punti in qualunque variante sono sempre ripresi automaticamente nell&#39;altro programma. I punti eliminati in rmGEO sono mostrati nella lista di inconsistenza.
+</Success>
+

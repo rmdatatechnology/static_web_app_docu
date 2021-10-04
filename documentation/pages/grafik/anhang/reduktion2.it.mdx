@@ -1,0 +1,65 @@
+---
+title: "Riduzione delle superfici"
+page: true
+---
+## Riduzione dei valori di superficie in natura.
+<GeoMapper>
+La riduzione delle superfici in  <Placeholder>fullproduct</Placeholder> dipende dal sistema di coordinate ed &#232; utilizzata nel modo seguente:
+
+<Warning>
+La riduzione delle superfici deve essere attivata nelle [Impostazioni di file](../datei/datei-einstellungen)
+. 
+</Warning>
+
+
+### Riduzione UTM<Image>\img\grafik\anhang\UTM_Area_Reduktion.png$UTM_Area_Reduktion</Image>
+
+<table>
+<tr><th>Designazione</th>
+<th>Descrizione</th>
+</tr>
+<tr><td>FH </td>
+<td>Superficie sull&#39;orizzonte della regione di misura</td>
+</tr>
+<tr><td>FUTM </td>
+<td>Superficie calcolata dalle coordinate UTM</td>
+</tr>
+<tr><td>Hell </td>
+<td>Altezza media di FH per GRS80 (altrimenti: Altezza NHN + 45 m)</td>
+</tr>
+<tr><td>y </td>
+<td>Distanza dal meridiano medio 9&#176; [km]y = ( (E &#8211 32 500 000)/1000) / m0 (Scala di proiezione del meridiano medio m0 = 0,9996)</td>
+</tr>
+<tr><td>R </td>
+<td>Raggio terrestre medio = 6383 km risp. 6,383*10+6 m</td>
+</tr>
+</table>
+
+
+### Riduzione Gau&#223;-Kr&#252;ger
+
+FH = F_GK + F_GK * Y&#178; / R&#178;
+
+<table>
+<tr><th>Designazione</th>
+<th>Descrizione</th>
+</tr>
+<tr><td>FH </td>
+<td>Superficie sull&#39;orizzonte della regione di misura</td>
+</tr>
+<tr><td>F_GK </td>
+<td>Superficie calcolata dalle coordinate GK</td>
+</tr>
+<tr><td>Y  </td>
+<td>Distanza dal meridiano medio</td>
+</tr>
+<tr><td>R </td>
+<td>Raggio terrestre medio = 6383 km risp. 6,383*10+6 m</td>
+</tr>
+</table>
+
+
+<Success>
+Per la riduzione Gau&#223;-Kr&#252;ger l&#39;altezza non &#232; considerata.
+</Success>
+</GeoMapper>

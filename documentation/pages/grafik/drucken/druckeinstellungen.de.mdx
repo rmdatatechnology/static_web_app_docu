@@ -1,0 +1,92 @@
+---
+title: "Druckeinstellungen"
+page: true
+---
+## Festlegen von Drucker, Drucklayout und Druckma&#223;stab
+
+Im Dialog &quot;Druckeinstellungen&quot; werden folgende Einstellungen gesetzt:
+
+
+- Aktueller Drucker: Es wird der Standarddrucker bzw. der zuletzt verwendete Drucker vorgeschlagen. Erweiterte Druckeinstllungen k&#246;nnen &#252;ber den Button <Border>...</Border>  gesetzt werden. 
+
+- Druckdefinition w&#228;hlen: Sobald im Benutzer-, Abteilungs- oder Firmenverzeichnis eine gespeicherte Druckdefinition gefunden wird, kann diese &#252;ber die Combobox ausgew&#228;hlt werden. Diverse Druckeinstellungen wie Drucker, Papierformat, Drucklayout, Position des Druckbereichs, Zusatzinformationen und erweiterte Optionen werden dann aus der Druckdefinition gelesen und f&#252;r den Ausdruck gesetzt.
+
+- Papierformat: Die vom gew&#228;hlten Drucker zur Verf&#252;gung stehenden Papierformate werden in einer Liste angeboten. Das zuletzt verwendete Papierformat wird pro Drucker gemerkt.
+
+- Ausrichtung: Die Ausrichtung des Ausdruckes (Hochformat, Querformat) kann gesetzt werden. Die zuletzt verwendete Ausrichtung  wird pro Drucker gemerkt.
+
+- Aktuelles Drucklayout: Abh&#228;ngig vom gew&#228;hlten Papierformat und der Ausrichtung werden verschiedene Drucklayouts standardm&#228;&#223;ig angeboten. Drucklayouts k&#246;nnen vom Anwender &#252;ber den Drucklayouteditor (Icon rechts anklicken!) angepasst werden. Das Drucklayout &quot;Schnelldruck&quot; wird vom System angeboten und kann nicht ver&#228;ndert werden. Das zuletzt verwendete Drucklayout wird gemerkt, wenn keine Einstellungen zum Drucker ver&#228;ndert wurde.
+
+- Aktueller Druckma&#223;stab: Ma&#223;stab, in welchem der Ausdruck auf dem Plot erfolgen soll. Es werden Default-Ma&#223;st&#228;be in einer Liste angeboten, der Plot kann auch in einem benutzerspezifischen Ma&#223;stab erfolgen.<Image>\img\grafik\drucken\Druckeinstellungen.png$Druckeinstellungen</Image>
+
+### Benutzerspezifische Drucklayouts
+Drucklayouts und Plotstil-Dateien werden standardm&#228;&#223;ig aus folgendeden Ordnern gelesen:
+
+- Benutzerverzeichnis: <Menu>%appdata%\rmDATA\GeoDesktop\Templates\Printing</Menu>  (f&#252;r den aktuellen Benutzer)
+
+- Firmenverzeichnis: <Menu>\Firmenverzeichnis\Templates\Printing</Menu>  (Siehe Kapitel &quot;Register Verzeichnisse&quot; in den 
+[Programmeinstellungen](../einstellungen/benutzereinstellungen)
+)
+
+- Programmdatenverzeichnis: <Menu>C:\ProgramData\rmDATA\GeoDesktop\Templates\Printing</Menu>  (f&#252;r alle Benutzer des Rechners)
+
+
+
+Zur Ablage von benutzerspezifischen Drucklayouts verwenden Sie bitte das Benutzerverzeichnis oder das Firmenverzeichnis.
+
+### DWG-Drucker
+Neben den von Windows zur Verf&#252;gung gestellten Systemdruckern bietet  <Placeholder>product</Placeholder> auch einen eigenen DWG-Drucker an. &#220;ber diesen k&#246;nnen Vektor-Daten zusammen mit einem Drucklayout in eine DWG-Datei &#252;bertragen werden.
+Der DWG-Drucker ist in der Liste der verf&#252;gbaren Drucker  <Menu>Register Druckeinstellungen - Aktueller Drucker </Menu> enthalten. &#220;ber die Einstellungen werden die Optionen f&#252;r den DWG-Export gesetzt.
+Pro positioniertem Druckbereich wird eine eigene DWG-Datei erzeugt. Die Vektordaten werden am Druckbereich abgeschnitten (ausgenommen Texte, welche &#252;ber den Druckbereich hinausragen).
+
+### Druckdefinitionen
+In einer Druckdefinition k&#246;nnen die Druckeinstellungen eines einmal ausgef&#252;hrten Ausdrucks gespeichert und f&#252;r weitere Ausdrucke wieder aufgerufen werden.
+Druckdefinitionen k&#246;nnen am Ende eines Druckvorgangs im Register &quot;Druckvorschau&quot; im Benutzerverezichnis, im Firmenverzeichnis oder im Abteilungsverzeichnis gespeichert werden.
+In einer Druckdefinition werden folgende Informationen gespeichert:
+
+- Druckeinstellungen:
+
+- Drucker
+
+- Papierformat
+
+- Ausrichtung
+
+- Exemplare
+
+- verwendetes Drucklayout
+
+- verwendeter Druckma&#223;stab
+
+
+
+- Druckbereich-Position: Position, Ma&#223;stab und Verdrehung der gesetzten Druckbereiche
+
+- Zusatzinformationen: 
+
+- Name der Druckdefinition: Dieser wird aus dem Dateinamen der gespeicherten Druckdefinition abgeleitet und kann im Drucklayout als Attribut &quot;Name der Druckdefinition&quot; (&lt;PrintDefinitionName&gt;) verwendet werden.
+
+- Benutzerdefinierte Attribute, die im Drucklayout konfiguriert wurden
+
+
+
+- Erweiterte Optionen:
+
+- Plotstil
+
+- Transparenz drucken
+
+- Nur notwendige Daten drucken
+
+
+
+
+
+Steht ein Drucker nicht mehr zur Verf&#252;gung, wird versucht, das gespeicherte Papierformat aus dem aktuellen Drucker zu verwenden.
+Steht das Papierformat nicht zur Verf&#252;gung, werden keine Druckdefinitionen ausgelesen.
+Steht ein Drucklayout nicht mehr zur Verf&#252;gung, werden keine Druckdefinitionen ausgelesen.
+
+
+
+
+

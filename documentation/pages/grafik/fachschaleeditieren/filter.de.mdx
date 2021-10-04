@@ -1,0 +1,210 @@
+---
+title: "Filter verwalten"
+page: true
+---
+## Filtern Sie Objekte in der Grafik.
+ <Menu> Menu: [Multifunktionsleiste / Filter] </Menu>  
+
+Starten Sie die Filterverwaltung durch Klick auf den Filter-Button in der Multifunktionsleiste.
+
+<Success>
+Wenn Sie mit der Maus auf das Filter Icon fahren, 
+werden Ihnen als Tooltip alle aktiven Filter angezeigt.
+</Success>
+
+
+<GeoDesigner>
+<Image>\img\grafik\benutzeroberflaeche\Filter.MainDialog.png$Filter.MainDialog</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\benutzeroberflaeche\GeoMapper.FilterMainDialog.png$GeoMapper.FilterMainDialog</Image>
+</GeoMapper>
+
+
+Alle Objekte, die zumindest einem der angehakten Filter entsprechen, werden in der Grafik angezeigt. Alle anderen Objekte werden ausgeblendet.
+
+<Success>
+Wenn Sie den Filter brauchen um mehrere Objekte zu bearbeiten, dann nutzen Sie die Schnellauswahl im [Eigenschaften-Manager](../eigenschaftsmanager/uebersicht)
+</Success>
+
+
+<Success>
+Filter, die Sie in Ihren Projekten immer wieder ben&#246;tigen, f&#252;gen Sie einfach in der Konfiguration ein. Dann werden Sie beim Anlegen einer Datei eingef&#252;gt.
+</Success>
+
+
+### Filter (de-)aktivieren
+Um Filter ein- bzw. auszuschalten, klicken Sie einfach in das K&#228;stchen in der Spalte  <Menu>Aktiv</Menu> . Sie k&#246;nnen dabei auch mehrere Filter zugleich schalten, indem Sie zuvor einzelne Zeilen bei gedr&#252;ckter  <Border>Umschalt</Border>  oder  <Border>Strg</Border>  Taste markieren.
+<GeoDesigner>
+<Image>\img\grafik\benutzeroberflaeche\Filter.MainDialog.CheckSelection.png$Filter.MainDialog.CheckSelection</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\benutzeroberflaeche\FilterMainDialogCheckSelection.png$FilterMainDialogCheckSelection</Image>
+</GeoMapper>
+
+
+Zur noch schnelleren Deaktivierung s&#228;mtlicher Filter steht Ihnen der Button  <Border>Alle Filter ausschalten</Border>  zur Verf&#252;gung.
+Damit werden alle vorhandenen Filter deaktiviert und der Datenbestand erscheint nach Best&#228;tigung des Dialogs wieder ungefiltert.
+
+### Anlegen eines neuen Filters
+
+1. Klicken Sie auf den Button <Border>Neuer Filter</Border> .
+
+2. Geben Sie einen Namen f&#252;r den Filter ein.
+
+3. W&#228;hlen Sie die Filterkriterien:
+
+- <Bold> Objektklasse </Bold> : Einschr&#228;nkung auf Punkte, Linienz&#252;ge, ...
+
+- <Bold> Objektgruppe: </Bold>  Einschr&#228;nkung auf Objektgruppen, wie sie in der Konfiguration vordefiniert sind
+
+- <Bold> Objekttypen: </Bold>  Einschr&#228;nkung auf spezielle Objekttypen 
+
+- <Bold> Attribut: </Bold> Es stehen die Attribute aller Objekte zur Verf&#252;gung - auch die Attribute, die Sie im Eigenschaftsmanager bei einzelnen Objekten frei hinzugef&#252;gt haben. Wenn Sie mehrere Attributfilter einf&#252;gen, kombinieren Sie diese mit UND (alle Bedingungen m&#252;ssen erf&#252;llt sein) oder ODER (eine der Bedingungen muss erf&#252;llt sein). Weitere Informationen finden Sie weiter unten.
+
+- <Bold> Kombination: </Bold>  Kombination von mehreren Filtern. F&#252;gen Sie die Filter mit <Border>-&gt;</Border>  zur Liste hinzu oder entfernen Sie den Filter mit <Border>&lt;- </Border>. Mit <Border>+</Border>  beginnen Sie eine neue Gruppe, mit <Border>-</Border>  entfernen Sie eine Gruppe. Alle Filter innerhalb einer Gruppe sind ODER-verkn&#252;pft. D.h. nur einer der Filterkriterien muss erf&#252;llt sein. Die Gruppen werden UND-verkn&#252;pft. D.h. alle Gruppen m&#252;ssen erf&#252;llt sein.
+
+
+
+
+
+<Success>
+Wenn Sie mehrere Filterkriterien (z.B: Objekttyp und Attribut) angeben, dann m&#252;ssen beide Bedingungen erf&#252;llt sein. (Sie werden mit UND verkn&#252;pft)
+</Success>
+
+<Success>
+Jeden der Filterkriterien k&#246;nnen Sie mit der Checkbox &quot;Filter invertieren&quot; umdrehen. Damit werden z.b. die Objekttypen ausgeblendet, die im Filter angegeben sind. Alle anderen Objekttypen bleiben sichtbar.
+</Success>
+
+<GeoDesigner>
+<Image>\img\grafik\benutzeroberflaeche\Filter.png$Filter</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\benutzeroberflaeche\GeoMapper.Filter.png$GeoMapper.Filter</Image>
+</GeoMapper>
+
+
+
+### Filter bearbeiten
+
+1. Klicken Sie innerhalb einer Zeile auf den Button Filter bearbeiten.
+
+2. Der Filter wird geladen, best&#228;tigen Sie etwaige &#196;nderungen mit dem <Border>OK</Border>  Button.
+
+
+
+
+### Filter l&#246;schen
+
+1. Klicken Sie innerhalb einer Zeile auf den Button Filter l&#246;schen <Border>x</Border> .
+
+
+
+
+### Filter kopieren
+
+1. Klicken Sie innerhalb einer Zeile auf den Button <Border>Kopieren</Border> .
+
+2. <Placeholder>product</Placeholder> erzeugt eine Kopie des urspr&#252;nglichen Filters mit einem neuen Namen.
+
+3.  &#196;ndern Sie nach Belieben die Kriterien des neuen Filters oder best&#228;tigen Sie den Dialog gleich mit <Border>OK</Border> .
+
+
+
+
+### Filtern nach Attributen
+
+1. W&#228;hlen Sie das Attribut aus
+
+2. W&#228;hlen Sie den Operator aus. Abh&#228;ngig vom Typ des Attributs wird Ihnen eine Auswahl der folgenden Operatoren angeboten:
+
+- <Bold>  = </Bold> : Exakt gleich wie der Vergleichswert
+
+- <Bold>  != </Bold> : Nicht gleich dem Vergleichswert
+
+- <Bold> &lt; </Bold> : Kleiner
+
+- <Bold> &lt;= </Bold> : Kleiner gleich
+
+- <Bold> &gt; </Bold> : Gr&#246;&#223;er
+
+- <Bold> &gt;= </Bold> : Gr&#246;&#223;er gleich
+
+- <Bold> wie: </Bold>  Enth&#228;lt den Vergleichswert (siehe weiter unten)
+
+- <Bold> nicht wie: </Bold>  Enth&#228;lt nicht den Vergleichswert
+
+- <Bold> Regex </Bold> : Regul&#228;rer Ausdruck (siehe weiter unten)
+
+
+
+3. Geben Sie den Vergleichswert ein
+
+4. Weitere Vergleichsoperationen f&#252;gen Sie mit <Border>{+}</Border>   dazu. Diese werden verbunden mit:
+
+- <Bold> UND </Bold> : Alle Bedingungen m&#252;ssen erf&#252;llt sein
+
+- <Bold> ODER </Bold> : eine der Bedingungen muss erf&#252;llt sein
+
+
+
+
+
+
+ <Bold> &quot;Wie&quot; und &quot;Nicht wie&quot; </Bold> 
+Nutzen Sie diese Vergleichsoperatoren, wenn Sie Teile des Vergleichswerts kennen. Dabei k&#246;nnen Sie auch Wildcards verwenden:
+
+-  * ersetzt mehrere Zeichen
+
+-  ? ersetzt genau 1 Zeichen
+
+
+
+<Info>
+ <Bold> Filtern nach Punktnamen </Bold> 
+
+- <Border>Name</Border> <Border>wie</Border> <Border>PP</Border> : Es werden alle Objekte gefunden, die im Namen &quot;PP&quot; beinhalten (am Anfang, in der Mitte oder am Ende)
+
+
+- <Border>Name</Border> <Border>wie</Border> <Border>PP*</Border> : Es werden alle Objekte gefunden, deren Namen mit &quot;PP&quot; beginnt
+
+
+- <Border>Name</Border> <Border>wie</Border> <Border>PP?1</Border> : Es werden alle Objekte gefunden, deren Namen mit &quot;PP&quot; beginnt und mit &quot;1&quot; endet und dazwischen genau ein Zeichen haben, z.B: PP21
+
+
+
+
+</Info>
+
+
+ <Bold> Regul&#228;re Ausdr&#252;cke </Bold> 
+Mit regul&#228;ren Ausdr&#252;cken legen Sie ein Muster fest, dem der Attributwert entsprechen muss. Verwendet werden kann:
+
+- <Bold> a </Bold>  Genau der Buchstabe a (Die Gro&#223;-/Kleinschreibung wird ber&#252;cksichtigt)
+
+- <Bold> 7 </Bold>  Genau die Zahl 7
+
+- <Bold> [abc] </Bold>      Genau ein Zeichen aus den Zeichen, die in eckigen Klammern angegeben sind. In diesem Fall a, b, oder c
+
+- <Bold> [a-z] </Bold>       Genau ein Zeichen von a bis z
+
+- <Bold> </Bold>              Beginn der Zeile
+
+- <Bold> $ </Bold>              Ende der Zeile
+
+- <Bold> . </Bold>               Genau ein Zeichen
+
+- <Bold> \d </Bold>            Genau eine Zahl
+
+
+
+
+<Info>
+
+ <Bold> P </Bold> : Wert beginnt mit P
+ <Bold> P </Bold> : Wert beginnt mit P
+ <Bold>   P$ </Bold> : Wert endet mit P      
+</Info>
+
+
+

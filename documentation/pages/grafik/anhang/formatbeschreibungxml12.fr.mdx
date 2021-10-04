@@ -1,0 +1,55 @@
+---
+title: "Groupes"
+page: true
+---
+## Insertion d&#39;un groupe
+
+###  Mise en place de la section Groupe
+
+- <Bold> &lt;AggregationObjects&gt; </Bold>  Section de tous les groupes. Cette section ne peut exister qu&#39;une seule fois dans le fichier XML.
+
+- <Bold>      &lt;PointAggregationObject  Id=&quot;100&quot;&gt; </Bold>  Groupe avec ID univoque.
+
+- <Bold>      &lt;VertexId&gt;99&lt;/VertexId&gt; </Bold>  R&#233;f&#233;rence au point d&#39;insertion du groupe. Cette section ne peut exister qu&#39;une seule fois.
+
+- <Bold>         &lt;Name&gt;98&lt;/Name&gt; </Bold>  Nom du groupe
+
+- <Bold> &lt;PartList&gt; </Bold>  Liste des &#233;l&#233;ments du groupe
+
+- <Bold> &lt;PartId&gt; </Bold>  ID de l&#39;&#233;l&#233;ment du groupe. Cette section peut &#234;tre r&#233;p&#233;t&#233;e.
+
+
+
+- <Bold> &lt;/PartList&gt; </Bold>  Fin de la section
+
+- <Bold> &lt;ObjectType&gt; B&#226;timent (Groupe)&lt;/ObjectType&gt; </Bold>  Donn&#233;e sur le type d&#39;objet.
+
+
+
+- <Bold>      &lt;/AggregationObject&gt; </Bold> 
+
+
+- <Bold>    &lt;/AggregationObjects&gt; </Bold> 
+
+
+
+<Success>
+Au cas o&#249;, dans le fichier XML, il y aurait un objet dont le type n&#39;ait pas &#233;t&#233; configur&#233;, l&#39;objet est pourtant import&#233;. Selon les param&#232;tres, les objets sans type, sont affich&#233;s en magenta ou masqu&#233;s. (Voir Menu Fichier - Param&#232;tres de fichier).
+</Success>
+
+
+<Info>
+  &lt;AggregationObjects&gt;
+      &lt;AggregationObject Id=&quot;18&quot;&gt;
+        &lt;VertexId&gt;17&lt;/VertexId&gt;
+        &lt;Name&gt;
+        &lt;/Name&gt;
+        &lt;PartList&gt;
+          &lt;PartId&gt;4&lt;/PartId&gt;
+          &lt;PartId&gt;13&lt;/PartId&gt;
+        &lt;/PartList&gt;
+        &lt;ObjectType&gt;Geb&#228;ude (Groupe)&lt;/ObjectType&gt;
+      &lt;/AggregationObject&gt;
+    &lt;/AggregationObjects&gt;
+</Info>
+

@@ -1,0 +1,86 @@
+---
+title: "Import Eigentümer"
+page: true
+---
+## Eigent&#252;merdaten vom BEV oder Grundbuch importieren
+
+<Success>
+Der Befehl ist nur in der Fachschale &quot;Grundst&#252;ckskataster und Adressen (AT)&quot; aktiv.
+</Success>
+
+F&#252;r das Suchen von Grundst&#252;cken &#252;ber Eigent&#252;mer und die Ausgabe von Eigent&#252;merinformationen pro Grundst&#252;ck k&#246;nnen Eigent&#252;mer in ein GeoDokument eingebunden werden. Die Eigent&#252;mer werden in einer GeoDatabase gespeichert.
+
+Eigent&#252;mer-Daten werden &#252;ber den Befehl  <Menu>Daten importieren</Menu>  in der Werkzeugleiste von  <Placeholder>fullproduct</Placeholder> oder &#252;ber das  <Menu> Menu: [Daten - Daten importieren] </Menu>  eingef&#252;gt.
+
+Die Eigent&#252;mer werden in eine rmDATA Geodatabase importiert, diese wird danach in das aktuelle Geodokument eingebunden. Eigent&#252;mer k&#246;nnen sowohl in bestehende als auch in neue Geodatabases importiert werden.
+
+Nach Befehlsaufruf wird im Register  <Border>Typauswahl</Border>  die Option  <Border>Eigentümerdaten vom BEV oder Grundbuch importieren</Border>  gew&#228;hlt.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportEigentuemertypauswahl.png$ImportEigentuemertypauswahl</Image>
+
+Danach werden im Register  <Border>Dateiauswahl</Border>  die zu importierenden Eigent&#252;mer-Dateien gew&#228;hlt. 
+Es k&#246;nnen folgende Formate importiert werden:
+
+- Grundst&#252;cksverzeichnis mit Eigent&#252;mern (BEV ASCII/TXT alt: 80/120)
+
+- Grundst&#252;cksverzeichnis mit Eigent&#252;mern (BEV ASCII/TXT neu: 72/120)
+
+- Grundst&#252;cksverzeichnis mit Eigent&#252;mern (BEV CSV)
+
+
+
+<Success>
+Damit zusammengeh&#246;rige Grundst&#252;cks- und Eigent&#252;merdateien importiert werden, m&#252;ssen beide Dateien f&#252;r den Import ausgew&#228;hlt werden und folgenden Aufbau haben:
+
+- Im Dateinamen m&#252;ssen die folgende Bezeichnungen enthalten sein:
+
+
+
+
+
+
+<table>
+<tr><th>Grundst&#252;cke</th>
+<th>Eigent&#252;mer</th>
+</tr>
+<tr><td>AD80</td>
+<td>AD120</td>
+</tr>
+<tr><td>_80</td>
+<td>_120</td>
+</tr>
+<tr><td>GRUNDSTUECKE</td>
+<td>EIGENTUEMER</td>
+</tr>
+<tr><td>_GRUNDST&#220;CKE</td>
+<td>_EIGENT&#220;MER</td>
+</tr>
+<tr><td>GRUNDST&#220;CKE</td>
+<td>EIGENT&#220;MER</td>
+</tr>
+<tr><td>GST</td>
+<td>EIG</td>
+</tr>
+</table>
+
+
+- Der Rest des Dateinamens und das Ablageverzeichnis m&#252;ssen identisch sein.
+
+
+
+
+
+
+</Success>
+
+
+- Grundbuchauszug (XML - JUSTIZ)
+
+- GST-Auszug (XML-JUSTIZ)<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportEigentuemerdateiauswahl.png$ImportEigentuemerdateiauswahl</Image>
+
+Im Register  <Border>Geodatabase-Auswahl</Border>  wird festgelegt, in welche Geodatabase die Dateien importiert werden sollen.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportEigentuemerGeoDBAuswahl.png$ImportEigentuemerGeoDBAuswahl</Image>
+
+In den  <Border>Einstellungen</Border>  wird festgelegt, ob bestehende Adressen aus der Datenbank gel&#246;scht werden sollen. Diese Option wirkt sich nur aus, wenn in einen bestehende Datenbank importiert wird.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportEigentuemereinstellungen.png$ImportEigentuemereinstellungen</Image>
+
+Nach  <Border>Fertigstellen</Border>  werden die Daten importiert, ein Transferstatus wird angezeigt.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportEigentuemertransferstatus1.png$ImportEigentuemertransferstatus1</Image><Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\ImportEigentuemertransferstatus2.png$ImportEigentuemertransferstatus2</Image>
+
+Mit dem Button  <Border>Fertigstellen</Border>  wird der Importvorgang abgeschlossen und die Geodatabase wird ins Projekt eingebunden.
+

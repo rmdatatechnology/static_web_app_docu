@@ -1,0 +1,56 @@
+---
+title: "Objets identiques"
+page: true
+---
+## Il permet de nettoyer les objets identiques.
+ <Menu> Menu: [Nettoyer / Objets identiques] </Menu> 
+ <Menu> Cmd: [ObjectsIdenticalStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+
+1. S&#233;lectionnez les donn&#233;es.
+
+- <Bold> Tous les objets charg&#233;s: </Bold>  Tous les objets d&#39;une zone - si vous avez charg&#233; uniquement une zone - sont nettoy&#233;s.
+
+- <Bold> S&#233;lection d&#39;objets: </Bold>  En cliquant sur la s&#233;lection d&#39;objets, vous passez sur le graphique pour choisir les objets &#224; nettoyer.
+
+
+
+2. Cliquez sur <Border>Terminer</Border> .
+
+3. Les erreurs sur les donn&#233;es sont affich&#233;es dans un 
+[Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; chaque erreur peut &#234;tre trait&#233;e.
+
+
+
+Alternative
+ 
+En d&#233;finissant les  <Bold> Param&#232;tres de correction </Bold>  beaucoup de corrections peuvent &#234;tre ex&#233;cut&#233;es automatiquement (voir ci-dessous).
+
+<Warning>
+Seulement les erreurs correspondantes aux crit&#232;res du filtre d&#233;fini dans le fichier peuvent &#234;tre trait&#233;es.
+</Warning>
+
+<Warning>
+Si les erreurs de donn&#233;es ne peuvent pas &#234;tre corrig&#233;es automatiquement, ils sont list&#233;es dans le [Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; ils peuvent &#234;tre trait&#233;es.
+</Warning>
+
+<Success>
+Le nettoyage d&#39;objets identiques ne consid&#232;re pas les points et les surfaces qui ont un nom. Du moment que le nom est toujours univoque, ces objets ne peuvent pas &#234;tre identiques.
+</Success>
+
+
+
+### D&#233;tails - Param&#232;tres de correction
+Ici vous trouvez d&#39;autres param&#232;tres pour le nettoyage:
+
+- <Bold> Nettoyer objets avec un type diff&#233;rent: </Bold>  Aussi les objets identiques mais avec un type d&#39;objet diff&#233;rent sont nettoy&#233;s.
+
+- <Bold> Nettoyer objets avec valeurs diff&#233;rentes dans les m&#234;mes attributs: </Bold>  Les objets g&#233;om&#233;triquement identiques sont supprim&#233;s. Les diff&#233;rences entre les valeurs d&#39;attributs ne sont pas consid&#233;r&#233;es. Si l&#39;option n&#39;est pas activ&#233;e, les objets g&#233;om&#233;triquement identiques avec le m&#234;me attribut, ne sont pas nettoy&#233;s.
+
+- <Bold> Supprimer les plus anciens objets: </Bold>  Seulement l&#39;objet le plus r&#233;cent est maintenu (avec valeur ID sup&#233;rieur).
+
+- <Bold> Supprimer les plus r&#233;cents objets: </Bold>  Seulement l&#39;objet le plus ancien est maintenu (avec valeur ID inf&#233;rieur).<Image>\img\grafik\bereinigen\PurgeIdenticalObjectsOptions_01.png$PurgeIdenticalObjectsOptions_01</Image>
+

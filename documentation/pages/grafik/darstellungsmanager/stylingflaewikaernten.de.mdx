@@ -1,0 +1,282 @@
+---
+title: "Styling Flächenwidmungsplan Kärnten"
+page: true
+---
+## Vorgangsweise f&#252;r das Einbinden von FL&#196;WI-Shape-Daten des Landes K&#228;rnten
+
+G&#252;ltig f&#252;r Fl&#228;chenwidmungspl&#228;ne erstellt gem&#228;&#223; der Datenschnittstelle f&#252;r Fl&#228;chenwidmungspl&#228;ne des Landes K&#228;rnten, Stand M&#228;rz 2006
+
+## Shape-Daten in rmDATA GeoDesktop einbinden
+
+- Im Windows Explorer den Ordner anklicken, in welchem die Shape-Dateien liegen
+
+- Diesen Ordner aus dem Explorer in das Grafikfenster von <Placeholder>fullproduct</Placeholder> ziehen
+
+
+
+
+## Darstellungsreihenfolge der Objektklassen
+Im Darstellungsmanager die Objektklassen sortieren:
+### Punkte:
+
+- AUGBP
+
+- ERSI
+
+- TEXT
+
+- WIDGP
+
+- WIDP
+
+
+
+### Linien:
+
+- C21
+
+- D1001
+
+- D1002
+
+- D1003
+
+- D1004
+
+- D1005
+
+- D1006
+
+- D101
+
+- D102
+
+- D103
+
+- D16
+
+- D201
+
+- D202
+
+- D301
+
+- D302
+
+- D303
+
+- D304
+
+- D3301
+
+- D3302
+
+- D3502
+
+- D401
+
+- D402
+
+- D403
+
+- D404
+
+- D405
+
+- D406
+
+- D407
+
+- D408
+
+- D501
+
+- D502
+
+- D601
+
+- D602
+
+- D901
+
+- D902
+
+- D903
+
+- D904
+
+- D905
+
+- D906
+
+
+
+###  Fl&#228;chen: 
+
+- ALTL
+
+- AUGB
+
+- BAWA
+
+- BEGB
+
+- EBME
+
+- GEBE
+
+- GZ1
+
+- GZ10
+
+- GZ12
+
+- GZ13
+
+- GZ14
+
+- GZ15
+
+- GZ16
+
+- GZ17
+
+- GZ18
+
+- GZ19
+
+- GZ2
+
+- GZ20
+
+- GZ21
+
+- GZ3
+
+- GZ4
+
+- GZ5
+
+- GZ6
+
+- GZ7
+
+- GZ8
+
+- GZ9
+
+- HWA1
+
+- HWA2
+
+- KNBE
+
+- MIRO
+
+- NLA1
+
+- NLA2
+
+- NLA3
+
+- NLA4
+
+- NLA5
+
+- NLA6
+
+- NLA7
+
+- NLA8
+
+- PLGB
+
+- SOAB
+
+- SOAR
+
+- SOHB
+
+- SUWA
+
+- VDFL
+
+- WGB1
+
+- WGB2
+
+- WGB3
+
+- WGB4
+
+- WGB5
+
+- WGB6
+
+- WGB7
+
+- WGB8
+
+- WIDZ
+
+- WSAZ
+
+- WSKG
+
+- WSKZ
+
+- WALD
+
+- WIDG
+
+- GMGR
+
+
+
+
+## Styling zuweisen
+Im Darstellungsmangager folgende Schritte durchf&#252;hren:
+
+- Alle Objektklassen des Fl&#228;chenwidmungsplanes markieren
+
+- Kontextmen&#252; aufrufen (Rechtsklick auf eine Objektklasse)
+
+- Im Kontextmen&#252; den Befehl &quot;Styling-Definition aus Datei laden&quot; aufrufen
+
+- Datei &quot;C:\ProgramData\rmDATA\GeoDesktop\Configurations\FL&#196;WI_K&#228;rnten.styling&quot; &#246;ffnen
+
+- Den folgenden Dialog mit OK beenden
+
+
+
+
+# Alternative: Import der Shape-Dateien in eine rmDATA GeoDatabase
+Alternativ zum Einbinden und Stylen der Shape-Dateien kann der Fl&#228;chenwidmungsplan auch in eine rmDATA GeoDatabase importiert werden. 
+Der Vorteil liegt darin, dass beim Import die neuen Sachdatenfelder &quot;Kategorie&quot;, &quot;Widmung&quot; und &quot;Beschreibung&quot; bef&#252;llt werden und der Anwender damit zu jedem Objekt der Fl&#228;chenwidmung beschreibende Informationen in den Sachdaten vorfindet.
+Weiters kann durch &#196;ndern des Ma&#223;stabs die Gr&#246;&#223;e der angeziegten Texte gesteuert werden (Datenquellenmanager - Datenquelle bearbeiten - erweiterte Einstellungen - Ma&#223;stab)
+
+Gehen Sie wie folgt vor:
+
+- Men&#252; Daten - Daten importieren
+
+- Daten aus ESRI-Shape-Dateien importieren
+
+- Die Shape-Dateien f&#252;r den Import ausw&#228;hlen (Anmerkung: Die Dateien m&#252;ssen wie oben angef&#252;hrt bezeichnet sein, auch auf Gro&#223;-Kleinschreibung achten!)
+
+- In neue GeoDatabase importieren
+
+- Beim Anlegen der neuen GeoDatabase die Konfiguration &quot;FL&#196;WI_K&#228;rnten.config&quot; verwenden
+
+- Die neue GeoDatabase speichern
+
+- Die Konvertierungstabelle f&#252;r den Import angeben: &quot;FL&#196;WI_K&#228;rnten-Import-Shape.xml&quot;
+
+- Auf <Border>Fertigstellen</Border>  klicken
+
+- Nach dem Import im Dialog &quot;Verbindungseinstellungen&quot; auf das Register &quot;Einstellungen&quot; klicken und <Border>Verwendete Featureklassen auswählen</Border> 
+- Im Register &quot;Erweiterte Einstellungen&quot; den Ma&#223;stab auf 1000 &#228;ndern
+
+- <Border>Fertigstellen</Border> 
+
+
+

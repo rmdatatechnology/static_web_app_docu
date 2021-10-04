@@ -1,0 +1,100 @@
+---
+title: "Correzione dei cluster di punti"
+page: true
+---
+## Correzione degli errori dovuti a punti e vertici aventi, entro i limiti della tolleranza definita, le stesse coordinate planimetriche.
+
+ <Menu> Menu: [Correggere / Correzione cluster di punti] </Menu> 
+ <Menu> Cmd: [PointClusterStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+
+1. Selezionare i dati
+
+- <Bold> Tutti gli oggetti caricati: </Bold>  Tutti gli oggetti sulla grafica - di una zona caricata - sono corretti.
+
+- <Bold> Selezione oggetti: </Bold>  Cliccando sulla selezione oggetti si passa alla grafica dove &#232; possibile scegliere gli oggetti da correggere.
+
+
+
+2. Cliccare su <Border>Fine</Border> .
+
+3. Gli errori di dati sono visualizzati in un 
+[Assistente di correzione](../bereinigen/assistent)
+ e gli errori possono essere trattati uno ad uno.
+
+
+
+Alternativa
+ 
+Definendo le  <Bold> Impostazioni di correzione </Bold>  molte correzioni possono essere eseguite automaticamente (vedere pi&#249; in basso).
+
+<Warning>
+Solo gli oggetti che corrispondono ai criteri del filtro definito nel file, possono essere corretti.
+</Warning>
+
+<Warning>
+Gli errori non correggibili automaticamente, sono elencati nel [Assistente di correzione](../bereinigen/assistent)
+ dove possono essere trattati manualmente.
+</Warning>
+
+
+### Dettagli - Impostazioni di correzione
+Seguono ulteriori impostazioni di correzione:
+
+- <Bold> Risoluzione di cluster di punti: </Bold>  L&#39;opzione scelta, definisce quale punto del cluster debba rimanere. 
+
+
+<Success>
+Si tratta del punto stesso e non delle sue coordinate, per queste c&#39;&#232; un&#39;opzione dedicata.
+
+</Success>
+
+<Success>
+Se in seguito ad una importazione risulti un punto doppio, scegliere &quot;Elimina punti con il numero pi&#249; alto&quot;. Ad esempio se dopo l&#39;importazione si abbiano i punti doppi 101 e A101, con questa impostazione sar&#224; eliminato il punto A101.
+
+</Success>
+- <Bold> Elimina punti con il numero pi&#249; alto: </Bold>  Il punto col numero pi&#249; basso viene mantenuto, gli altri sono eliminati.
+
+- <Bold> Elimina punti con il numero pi&#249; basso: </Bold>  Il punto col numero pi&#249; alto viene mantenuto, gli altri sono eliminati.
+
+- <Bold> Interazione utente: </Bold>  Gli errori dei dati sono elencati nel 
+[Assistente di correzione](../bereinigen/assistent)
+ dove possono essere trattati manualmente.
+
+
+
+- <Bold> Opzioni per la media delle coordinate punti: </Bold>  Definisce quali coordinate debba avere il punto del cluster che viene mantenuto.
+
+- <Bold> Nessuna media delle coordinate: </Bold>  Il punto che viene mantenuto conserva anche le sue coordinate.
+
+- <Bold> Media di tutte le coordinate: </Bold>  Le nuove coordinate sono la media di tutti i punti e vertici del cluster.
+
+- <Bold> Media di tutte le coordinate dei punti: </Bold>  Le nuove coordinate sono la media di tutti i punti (aventi numero) ESCLUSI i vertici. 
+
+
+
+- <Bold> Impostazione della priorit&#224;: </Bold>  Definisce la priorit&#224; assegnata ai vertici ed ai punti senza numero, per la correzione.
+
+
+<Success>
+Nel caso ci sia sovrapposizione di punti senza numero e punti con numero, per la correzione scegliere entrambe le opzioni.
+
+</Success>
+
+
+
+
+<Success>
+Il superamento dei limiti di tolleranza richiede sempre l&#39;intervento dell&#39;utente.
+</Success><Image>\img\grafik\bereinigen\PurgePointHeap2.png$PurgePointHeap2</Image>
+
+
+### Dettagli - Tolleranze di correzione
+Qui &#232; possibile impostare le tolleranze altimetriche e planimetriche. 
+Cliccando sul bottone  <Border>Fine</Border>  viene avviata la correzione.<Image>\img\grafik\bereinigen\PurgePointHeap.png$PurgePointHeap</Image>
+
+
+
+
+

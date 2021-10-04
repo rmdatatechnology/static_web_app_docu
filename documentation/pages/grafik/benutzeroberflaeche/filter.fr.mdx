@@ -1,0 +1,187 @@
+---
+title: "Gérer un filtre"
+page: true
+---
+## Filtrer les objets dans le graphique.
+ <Menu> Menu: [Barre multifonctionnelle / Filtre] </Menu>  
+
+D&#233;marrez le gestionnaire de filtre en cliquant sur le bouton Filtre dans la barre multifonctionnelle.
+
+<Success>
+Quand vous bouger le pointeur de la souris sur l&#39;&#238;cone du filtre, 
+une info-bulle vous montre tous les filtres actifs.
+</Success><Image>\img\grafik\benutzeroberflaeche\Filter.MainDialog.png$Filter.MainDialog</Image>
+
+Tous les objets, qui correspondent au moins &#224; un filtre coch&#233;, sont affich&#233;s dans le graphique. Tous les autres objets sont masqu&#233;s.
+
+<Success>
+Si vous avez besoin d&#39;un filtre pour modifier plusieurs objets, utilisez alors la S&#233;lection rapide dans la fen&#234;tre des propri&#233;t&#233;s (voir [Gestionnaire des propri&#233;t&#233;s](../eigenschaftsmanager/uebersicht)
+)
+</Success>
+
+
+<Success>
+Les filtres dont vous avez toujours besoin dans vos projets, vous pouvez les ajouter dans la configuration. De mani&#232;re &#224; ce qu&#39;ils soient ins&#233;r&#233;s lors de la cr&#233;ation d&#39;un fichier.
+</Success>
+
+
+###  (D&#233;s-)activer un filtre
+Pour activer ou d&#233;sactiver un filtre coch&#233; la case dans la colonne  <Menu>Actif</Menu> . De cette mani&#232;re vous pouvez activer en m&#234;me temps plusieurs filtres, pour faire &#231;a, s&#233;lectionnez les lignes en appuyant sur la touche  <Border>Majuscule</Border>  ou  <Border>Ctrl</Border> .<Image>\img\grafik\benutzeroberflaeche\Filter.MainDialog.CheckSelection.png$Filter.MainDialog.CheckSelection</Image>
+
+Pour une d&#233;sactivation encore plus rapide des filtres un bouton  <Border>Désactiver tous les filtres</Border>  est aussi disponible.
+La fonction permet de d&#233;sactiver tous les filtres et d&#39;afficher sur le graphique tout l&#39;ensemble de donn&#233;es.
+
+### Cr&#233;er un nouveau filtre
+
+1. Cliquez sur le bouton <Border>Nouveau filtre</Border> .
+
+2. Saisissez un nom pour le filtre.
+
+3. S&#233;lectionnez les crit&#232;res de filtre:
+
+- <Bold> Classe d&#39;objets: </Bold>  Restriction aux points, polylignes, ...
+
+- <Bold> Groupe d&#39;objets: </Bold>  Restriction aux groupes d&#39;objets, comme ils sont pr&#233;d&#233;finis dans la configuration
+
+- <Bold> Types d&#39;objet: </Bold>  Restriction &#224; des types d&#39;objet sp&#233;ciaux
+
+- <Bold> Attribut: </Bold>  Tous les attributs de tous les objets sont disponibles - aussi les attributs, que vous avez ajout&#233;s librement dans le gestionnaire des propri&#233;t&#233;s pour les simples objets. Si vous ajoutez plusieurs attributs de filtre, combinez-les avec AND (toutes les conditions doivent &#234;tre remplies) ou OR (au moins une condition doit &#234;tre remplie). Pour plus d&#39;informations, voir ci-apr&#232;s.
+
+- <Bold> Combination: </Bold>  Combination de plusieurs filtres. Ajoutez un filtre &#224; la liste avec <Border>-&gt;</Border>  ou enlevez un filtre avec <Border>&gt;-</Border> . Avec <Border> + </Border>  vous commencez un nouveau groupe, avec <Border> - </Border>  vous enlevez un groupe. Tous les filtres dans un groupe sont li&#233;s avec l&#39;op&#233;rateur OR. C&#39;est-&#224;-dire que seulement un des crit&#232;res du filtre doit &#234;tre rempli. Les groupes sont li&#233;s avec l&#39;op&#233;rateur AND. C&#39;est-&#224;-dire que tous les groupes doivent &#234;tre remplis.
+
+
+
+
+
+<Success>
+Quand vous donnez plusieurs crit&#232;res de filtre (e.g: type d&#39;objet et attribut), alors les deux conditions doivent &#234;tre remplies (elle sont li&#233;es avec l&#39;op&#233;rateur AND).
+</Success>
+
+<Success>
+Vous pouvez inverser chaque crit&#232;re de filtre par la case &#224; cocher &quot;Inverser filtre&quot;. Se faisant, par exemple les types d&#39;objet saisies dans le filtre sont masqu&#233;s. Au contraire tous les autres types d&#39;objet restent visibles.
+</Success><Image>\img\grafik\benutzeroberflaeche\Filter.png$Filter</Image>
+
+
+### Modifier filtre
+
+1. Cliquez sur le bouton pour modifier le filtre sur la m&#234;me ligne.
+
+2. Le filtre est charg&#233;, confirmez les modifications eventuelles avec le bouton <Border>OK</Border> .
+
+
+
+
+### Supprimer le filtre
+
+1. Cliquez sur le bouton pour supprimer le filtre sur la m&#234;me ligne <Border>x</Border> .
+
+
+
+
+### Copier le filtre
+
+1. Cliquez sur le bouton pour copier le filtre sur la m&#234;me ligne <Border>Copier</Border> .
+
+2. <Placeholder>product</Placeholder> cr&#233;e une copie du filtre originaire avec un nouveau nom.
+
+3. Modifier les crit&#232;res du nouveau filtre ou confirmez le dialogue avec <Border>OK</Border> .
+
+
+
+
+### Filtrer par attributs
+
+1. S&#233;lectionnez l&#39;attribut
+
+2. S&#233;lectionnez l&#39;op&#233;rateur. Selon le type d&#39;attributs un des op&#233;rateurs suivants vous est propos&#233;:
+
+- <Bold>  = </Bold> : Strictement &#233;gal &#224; la valeur comparative
+
+- <Bold>  != </Bold> : Strictement non &#233;gal &#224; la valeur comparative
+
+- <Bold> &lt; </Bold> : Inf&#233;rieur
+
+- <Bold> &lt; </Bold> : &#201;gal ou inf&#233;rieur 
+
+- <Bold> &gt; </Bold> : Sup&#233;rieur
+
+- <Bold> &gt; </Bold> : &#201;gal ou sup&#233;rieur
+
+- <Bold> comme: </Bold>  Il contient la valeur comparative (voir ci-dessous)
+
+- <Bold> pas comme: </Bold>  Il ne contient pas la valeur comparative
+
+- <Bold> Regex </Bold> : Expression regulaire (voir ci-dessous)
+
+
+
+3. Ins&#233;rez la valeur comparative 
+
+4. Ajoutez d&#39;autres op&#233;rateurs de comparaison avec <Border>{+}</Border> . Ils sont li&#233;s avec:
+
+- <Bold> AND </Bold> : Toutes les conditions doivent &#234;tre remplies
+
+- <Bold> OR </Bold> : Au moins une des conditions doit &#234;tre remplie
+
+
+
+
+
+
+ <Bold> &quot;Comme&quot; et &quot;Non comme&quot; </Bold> 
+Utilisez ces op&#233;rateurs de comparaison si vous connaissez une partie de la valeur comparative. Cet op&#233;rateur accepte aussi les 2 jokers:
+
+-  * remplace plusieurs caract&#232;res
+
+-  ? remplace juste 1 caract&#232;re
+
+
+
+<Info>
+ <Bold> Filtrer par nom de point </Bold> 
+
+- <Border>Nom</Border> <Border>comme</Border> <Border>PP</Border> : Tous les objets contenant &quot;PP&quot; dans le Nom sont trouv&#233;s (au d&#233;but, au milieu ou &#224; la fin)
+
+
+- <Border>Nom</Border> <Border>comme</Border> <Border>PP*</Border> : Tous les objets dont le nom commence avec &quot;PP&quot; sont trouv&#233;s
+
+
+- <Border>Nom</Border> <Border>comme</Border> <Border>PP?1</Border> : Tous les objets dont le nom commence avec &quot;PP&quot; et termine avec &quot;1&quot; et dont ils ont juste un caract&#232;re sont trouv&#233;s, par ex: PP21
+
+
+
+
+</Info>
+
+
+ <Bold> Expression r&#233;guli&#232;re </Bold> 
+Avec les expressions r&#233;guli&#232;res d&#233;finissez un exemple, qui doit correspondre &#224; la valeur d&#39;attribut. On peut utiliser:
+
+- <Bold> a </Bold>  			Exactement la lettre a (Les &#233;criture en majuscules et minuscules sont consid&#233;r&#233;es)
+
+- <Bold> 7 </Bold>  			Exactement le num&#233;ro 7
+
+- <Bold> [abc] </Bold>      Exactement un caract&#232;re entre les caract&#232;res donn&#233;s entre les crochets. Dans ce cas a, b, ou c
+
+- <Bold> [a-z] </Bold>       Exactement un caract&#232;re de a &#224; z
+
+- <Bold> </Bold>           D&#233;but de la ligne
+
+- <Bold> $ </Bold>           Fin de la ligne
+
+- <Bold> . </Bold>           Juste un caract&#232;re
+
+- <Bold> \d </Bold>          Juste une ligne
+
+
+
+
+<Info>
+
+ <Bold> P </Bold> : 		La valeur commence avec P
+ <Bold> P </Bold> : 			La valeur commence avec P
+ <Bold>   P$ </Bold> : 		La valeur se termine avec P   
+</Info>
+
+
+

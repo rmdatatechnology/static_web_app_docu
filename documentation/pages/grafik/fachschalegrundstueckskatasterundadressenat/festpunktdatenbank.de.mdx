@@ -1,0 +1,74 @@
+---
+title: "Festpunktdatenbank aufbauen"
+page: true
+---
+## Festpunkte von rmGEO in eine  <Placeholder>fullproduct</Placeholder> Festpunktdatenbank importieren
+
+In  <Placeholder>fullproduct</Placeholder> kann eine Festpunktdatenbank angelegt und verwendet werden.
+In dieser k&#246;nnen Festpunkte importiert, gesucht und verwaltet werden.
+
+Im Zusammenspiel mit rmGEO wird folgender Workflow vorgeschlagen:
+### Export von Festpunkten aus rmGEO
+
+- rmGEO starten und die Festpunktdatenbank &#246;ffnen
+
+- &#220;ber das <Menu> Menu: [Verwaltung - Export ASCII] </Menu>  den Export in rmGEO starten.
+
+- die Export-Datei definieren
+
+- Elemente &quot;Punkte&quot; w&#228;hlen 
+
+- Format: <Border>Festpunktdatenbank-Export-GeoDesktop</Border> 
+
+<Success>
+Sollte dieses Format nicht in rmGEO angeboten werden, muss einmalig die Datei C:\ProgramData\rmDATA\GeoDesktop\TransferSettings\AT - Festpunktdatenbank-Export-GeoDesktop.FMT nach C:\Users\Public\Documents\rmDATA\rmGEO4\Formats kopiert und rmGEO neu gestartet werden.
+
+</Success>
+
+
+- Festpunkte exportieren
+
+
+
+
+### Anlegen einer Festpunktdatenbank in  <Placeholder>fullproduct</Placeholder> 
+
+- <Placeholder>product</Placeholder> starten
+
+- Im Datenquellenmanager 
+[eine neue GeoDB anlegen](../datenquellenmanager/neuegeodbanlegen)
+
+- Die Vorlage &quot;Festpunktdatenbank&quot; verwenden bzw. die Konfiguration &quot;Festpunktdatenbank.config&quot; laden
+
+
+
+- Die neue GeoDB wird automatisch in das GeoDokument eingebunden
+
+
+
+
+### Import der Festpunkte in  <Placeholder>fullproduct</Placeholder> 
+
+- GeoDokument &#246;ffnen, welches eine GeoDB mit der Konfiguration &quot;Festpunktdatenbank&quot; beinhaltet
+
+- Den Befehl 
+[Punkte aus ASCII-Daten importieren](../daten/importascii)
+ aufrufen
+
+- Im Register <Border>Dateiauswahl</Border> die Import-Datei w&#228;hlen, welche zuvor mit rmGEO exportiert wurde
+
+- Im Register <Border>Geodatabase - Auswahl</Border>  die Option <Border>in bestehende Geodatabase importieren</Border>  w&#228;hlen, und die GeoDB in der Auswahlliste selektieren
+
+- Im Register <Border>Mapping</Border>  die Konvertierungstabelle <Border>Festpunktdatenbank-Import-CSV</Border>  w&#228;hlen
+
+- Import durchf&#252;hren
+
+
+
+
+
+
+## Suche nach Festpunkten
+&#220;ber die [vorkonfigurierte Suche](../suche/vorkonfiguriertesuche)
+ kann nach Festpunkten gesucht werden.
+Es werden der Bereich, der Punktname und die Gesch&#228;ftszahl als Suchkriterien angeboten.<Image>\img\grafik\fachschalegrundstueckskatasterundadressenat\sucheFestpunkte.png$sucheFestpunkte</Image>

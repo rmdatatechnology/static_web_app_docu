@@ -1,0 +1,83 @@
+---
+title: "Punkt auf Segment"
+page: true
+---
+## Informationen zur Bereinigungsmethode Punkt auf Linie.
+&quot;Punkt auf Segment&quot; wird im Men&#252; <Menu>Bereinigen</Menu>  gestartet. Mit diesem Befehl ist es m&#246;glich Datenfehler zu bereinigen, bei denen ein Punkt oder Vertex auf einer Linie liegt, ohne dass diese dort aufgebrochen ist.
+
+<Success>
+Ein Punkt wird dann als auf der Linie liegend betrachtet, wenn sein Orthogonalabstand kleiner als die in den Projekteinstellungen angegebene Lagetoleranz ist. F&#252;r Daten mit H&#246;hen wird H&#246;hentoleranz ber&#252;cksichtigt.
+</Success>
+
+<Success>
+Mit dieser Bereinigungsmethode werden auch &quot;Over- und Undershoots&quot; bereinigt.
+</Success>
+
+
+
+- Datenauswahl: Im Datenauswahldialog werden jene Daten gew&#228;hlt, die f&#252;r die Bereinigung in Betracht gezogen werden.<Image>\img\grafik\fachschaleeditieren\Bereinigen-Datenauswahl3.png$Bereinigen-Datenauswahl3</Image>
+
+- Alle: Alle sichtbaren Daten werden Bereinigt
+
+- Objektwahl: Die zu bereinigenden Objekte k&#246;nnen in der Grafik gew&#228;hlt werden
+
+- Filter: Die Daten werden &#252;ber einen Filter ausgew&#228;hlt, dies kann sein:
+
+- Objektgruppen
+
+- Angepasster Filter: &#220;ber den Link &quot;Filter berarbeiten&quot; kann ein Filter zusammengestellt werden, der auf die in der Datenauswahl gew&#228;hlten Objekte angewendet wird. Wird der Filter nicht bearbeitet, so ist auch kein Filter gesetzt.
+
+
+
+
+
+
+
+
+- Mit <Border>Weiter</Border>  k&#246;nnen in einem eigenen Dialog die Optionen f&#252;r das Abarbeiten der gefundenen Datenfehler gesetzt werden.
+
+
+<Warning>
+Unabh&#228;ngig von der gew&#228;hlten Otption, m&#252;ssen Fehler die wegen einer zu gro&#223;en H&#246;hendifferenz entstehen, vom Benutzer &#252;ber den 
+[Bereinigungsassistenten](../fachschaleeditieren/bereinigen10)
+ bereinigt werden
+
+</Warning><Image>\img\grafik\fachschaleeditieren\PurgeSettingsPointOnSegment.png$PurgeSettingsPointOnSegment</Image>
+
+- Punkt auf Lotfu&#223;punkt verschieben: Der Punkt wird orthogonal auf die Linie verschoben
+
+- Angrenzendes Segment verl&#228;ngern:Die Linie, die an eine andere Linie grenzt wird verl&#228;ngert oder verk&#252;rzt.
+
+
+<Success>
+Nur m&#246;glich, wenn genau eine Linie an dem Punkt h&#228;ngt, der auf einer anderen Linie liegt.
+
+</Success>
+ 
+
+- Segment aufbrechen und auf den Punkt h&#228;ngen: Der Punkt wird nicht ver&#228;ndert, sondern die Linie wird entsprechend zum Punkt gezogen.
+
+- Benutzerinteraktion: Datenfehler werden in einem 
+[Bereinigungsassistenten](../fachschaleeditieren/bereinigen10)
+ angezeigt und k&#246;nnen Fehler f&#252;r Fehler abgarbeitet werden. 
+
+
+<Warning>
+Datenfehler, bei denen Punkte die innerhalb der geometrischen Toleranz von 1e-5 auf der Linie liegen, werden immer automatisch bereinigt!
+
+</Warning>
+
+
+
+
+
+- Nach <Border>Weiter</Border>  werden die Bereinigungstoleranzen f&#252;r die Lage und die H&#246;he angezeigt und k&#246;nnen ge&#228;ndert werden.<Image>\img\grafik\fachschaleeditieren\Bereinigen-Bereinigungstoleranzen.png$Bereinigen-Bereinigungstoleranzen</Image>
+
+- <Border>Fertigstellen</Border>  startet den Bereinigungsvorgang
+
+- K&#246;nnen Datenfehler nicht automatisch bereinigt werden, so werden sie im 
+[Bereinigungsassistenten](../fachschaleeditieren/bereinigen10)
+ aufgelistet und k&#246;nnen dort abgearbeitet werden.
+
+
+

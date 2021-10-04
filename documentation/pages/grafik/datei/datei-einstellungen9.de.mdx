@@ -1,0 +1,109 @@
+---
+title: "Darstellung"
+page: true
+---
+## Festlegen der Darstellung in der Grafik.
+
+<GeoDesigner>
+<Image>\img\grafik\datei\GeoDesigner.Projekteinstellungen_Darstellung.png$GeoDesigner.Projekteinstellungen_Darstellung</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\datei\GeoMapper.Projekteinstellungen_Darstellung.png$GeoMapper.Projekteinstellungen_Darstellung</Image>
+</GeoMapper>
+ 
+
+### Einstellung f&#252;r die Darstellung von Objekten ohne Typ
+Mit den Projekteinstellungen w&#228;hlen Sie, ob Objekte ohne Typ dargestellt werden. (Siehe auch [Unbekannte Typen in der Grafik](../grafik/unbekanntertyp)
+ und [Sichtbarkeit schalten](../ansicht/objektsichtbarkeiten_schalten)
+)
+
+- <Bold> Objekte ohne Typ darstellen: </Bold>  Objekte ohne Typ entstehen z.B. wenn ein Linienzug eingef&#252;gt wird, f&#252;r dessen Zwischenpunkte der Punkttyp &quot;Punkt ohne Typ&quot; gew&#228;hlt wird.
+
+- <Bold> Objekte mit unbekanntem Typ darstellen: </Bold>  Objekte mit unbekanntem Typ entstehen z.B. wenn:
+
+-  In der Datei eine Konfiguration durch eine andere ersetzt wird und nicht alle verwendeten Objekttypen in der neuen Konfiguration enthalten sind.
+
+- Ein Objekttyp im Darstellungsmanager gel&#246;scht wird.
+
+
+
+- <Bold> Unsichtbare Objekte darstellen </Bold> : Ausgeblendete Objekte werden in hellblauer Farbe dargestellt und k&#246;nnen somit selektiert und &#252;ber den 
+[Eigenschaften-Manager](../eigenschaftsmanager/uebersicht)
+ eingeblendet werden. 
+
+
+
+
+### Allgemeine Einstellungen
+
+- <Bold> Symbole aussparen: </Bold>  Bei Linienz&#252;gen k&#246;nnen die Punktsymbole der Zwischenpunkte ausgespart werden.
+
+
+
+<Success>
+Die Linienz&#252;ge m&#252;ssen bereits in der Konfiguration entsprechend vorbereitet sein. (siehe [Konfiguration Linienzug](../konfiguration/linienzug)
+)
+</Success>
+
+<GeoDesigner>
+- <Bold> Objekte 3D darstellen: </Bold>  W&#228;hlen Sieob Ihr Datenbestand 2D oder 3D angezeigt wird.
+
+
+-  aktiv: Die Daten sind in AutoCAD mit 3D-Koordinaten sichtbar.
+
+
+-  nicht aktiv: Die Daten sind in AutoCAD als 2D Objekte sichtbar. Dennoch haben die Punkte in GeoDesigner weiter ihre H&#246;heninformation.
+
+
+
+
+
+
+<Success>
+F&#252;r Konstruktionen und die Planerstellung empfehlen wir die 2D-Darstellung, f&#252;r die Visualisierung die 3D-Darstellung.
+</Success>
+
+<Success>
+Wenn die Objekte in 3D dargestellt werden, beachten Sie, dass dann auch die F&#228;nge dreidimensional arbeiten. Das kann u.U. nicht das gew&#252;nschte Ergebnis bringen. Denkt man z.b: an den Lotfu&#223;punkt, so liegt dieser in einer 2D-Darstellung u.U. an einer anderen Stelle, als bei einer dreidimensionalen Berechnung, wenn die Linie schief im Raum liegt.
+</Success>
+
+<Success>
+B&#246;gen bleiben zweidimensional.
+</Success>
+
+</GeoDesigner>
+
+
+- <Bold> Verdr&#228;ngung: </Bold>  Bei Linienz&#252;gen und Fl&#228;chenumfahrungen kann man angeben ob die darunter (bei Fl&#228;chen die dar&#252;ber liegende Linie) liegende Umfahrung/Linie verdr&#228;ngt werden soll.
+
+
+
+<Success>
+Die Linienz&#252;ge und Fl&#228;chen m&#252;ssen bereits in der Konfiguration entsprechend vorbereitet sein. (siehe [Konfiguration Linienzug](../konfiguration/linienzug)
+ bzw.[Konfiguration Fl&#228;che](../konfiguration/flaeche)
+)
+</Success>
+
+### Einstellung f&#252;r die Verwendung der Zeichnung
+
+- <Bold> Zeichungsverdrehung: </Bold>  Winkel um den die Zeichnung verdreht wird.  
+
+
+
+### Versionierung
+
+- <Bold> Neue Version bei grafischen &#196;nderungen: </Bold>  Wird in einer neuen Version z.b. eine Punktnummer freigestellt, dann entscheiden Sie, ob der Punkt damit als &quot;neu&quot; markiert wird. 
+
+
+<Success>
+Diese Einstellung ist nur sichtbar, wenn eine versionierte Konfiguration geladen ist.
+
+</Success>
+-  Bei Teilungspl&#228;nen / Zerlegungen empfehlen wir, diesen Schalter anzuhaken. Denn fachlich handelt es sich um den gleichen Punkt, er wird nur f&#252;r die Plandarstellung in seiner grafischen Auspr&#228;gung ver&#228;ndert.
+
+-  Bei Nachf&#252;hrungen vom Bestand sollten Sie den Schalter nicht setzen. Nur so k&#246;nnen alle &#196;nderungen sp&#228;ter auch in die weiteren Systeme &#252;bernommen werden.
+
+
+
+
+

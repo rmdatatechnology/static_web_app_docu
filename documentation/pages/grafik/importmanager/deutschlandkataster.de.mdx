@@ -1,0 +1,59 @@
+---
+title: "Daten aus NAS  Dateien importieren"
+page: true
+---
+## Setzen Sie NAS Import spezifische Einstellungen.
+<GeoMapper> <Menu> Menu: [Datei/ Importmanager] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [Datei/ Import] </Menu> </GeoDesigner>
+
+Auf den weiteren Einstellungsseiten k&#246;nnen NAS Import spezifische Einstellungen gesetzt werden.
+
+### Einstellungen
+Hier k&#246;nnen Sie weitere Import Einstellungen setzen. Folgende Einstellungen sind obligatorisch:
+
+- <Bold> NAS Einstellungen: </Bold>  
+
+- <Bold> Modell: </Bold>  Die NAS-Daten sind in Modelle unterteilt. Ein paar der Modelle enthalten allgemeine Daten, manche Daten nur f&#252;r einen bestimmten Ma&#223;stab.
+
+- <Bold> Koordinatensystem: </Bold>  Sind in der NAS-Datei mehrere Koordinatensysteme w&#228;hlen Sie das gew&#252;nschte.
+
+- <Bold> Themengebiete: </Bold>  Sie w&#228;hlen welche Themen sie importieren. F&#252;r Lagepl&#228;ne empfehlen wir die Flurst&#252;cke, Bauwerke, Geb&#228;udedaten und Eigent&#252;mer zu importieren.
+
+
+
+
+
+
+Alle weiteren Einstellungen sind optional:
+
+- <Bold> Konfliktaufl&#246;sung: </Bold> Punkt- und Fl&#228;chenbezeichnungen m&#252;ssen eindeutig sein. Es stehen folgende Optionen bei Namensgleichheit  zur Verf&#252;gung:
+
+- <Italic> Umbenennen </Italic> : Die importiereten Punkte und Fl&#228;chen werden mit dem Pr&#228;fix bzw. Suffix umbenannt. Die bestehenden Objekte bleiben unver&#228;ndert erhalten.
+
+- <Italic> Vorrang bestehender Punkt </Italic> : Der in der Datei existierende Punkt bleibt bestehen, das Objekt aus der Quelle wird ignoriert. Das Verhalten ist das selbe wie bei <Italic> Umbenennen </Italic>  ohne Angabe eines Pr&#228;fix bzw. Suffix.
+
+- <Italic> Vorrang neuer Punkt </Italic> : Der neu importierte Punkt ersetzt den bestehenden Punkt.
+
+- <Italic> Interaktiv l&#246;sen </Italic> : Sie erhalten einen Kollisionsdialog, in dem Sie f&#252;r jeden Punkt entscheiden, ob die Punkte aus GeoMapper oder aus der Quelle verwendet werden sollen. 
+
+
+<Warning>
+Bei gleichnamigen Fl&#228;chen werden die importierten Fl&#228;chen mit dem Pr&#228;fix bzw. Suffix umbenannt. Sind die beiden Werte leer, wird die Fl&#228;che nicht importiert. Es bleibt die alte Fl&#228;che erhalten.
+
+</Warning>
+
+
+- <Bold> Protokollierung: </Bold>  Legt fest, ob ein detailliertes Protokoll f&#252;r die importierten Objekte generiert werden soll, oder nur eine Zusammenfassung.
+
+- <Bold> Region importieren: </Bold>  Legt fest, ob bei Punkten das Namensfeld <Italic> Region </Italic>  importiert oder ignoriert werden soll.
+
+
+
+
+Dr&#252;cken Sie  <Border>Fertigstellen</Border> , um den Import abzuschlie&#223;en. Es wird ein Dialog ge&#246;ffnet, der den Status des Imports anzeigt.
+
+<Success>
+ <Bold> Punktnummern </Bold> 
+In manchen Bundesl&#228;ndern werden bei den Punkten keine Punktnummern gef&#252;hrt. Um die Punkte in den Berechnungsprogrammen dennoch sinnvoll nutzen zu k&#246;nnen, erhalten sie beim Import automatisch eine Punktnummer
+(Das gilt f&#252;r alle Punkte, deren Punkttyp eine Punktnummer erfordert.)
+</Success>
+

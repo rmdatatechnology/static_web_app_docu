@@ -1,0 +1,145 @@
+---
+title: "Importation de données depuis fichiers Autodesk DXF"
+page: true
+---
+## D&#233;finition des param&#232;tres sp&#233;cifiques pour l&#39;importation des DXF Autodesk.
+<GeoMapper> <Menu> Menu: [Fichier / Import-Manager] </Menu> 
+
+Sur les pages suivantes vous pouvez d&#233;finir les param&#232;tres sp&#233;cifiques pour l&#39;importation DXF Autodesk.
+
+<Success>
+Si vos donn&#233;es DWG/DXF contiennent des motifs de remplissage qui ne sont pas correctement affich&#233;s, alors vous pouvez les compl&#233;ter dans un propre fichier motif de remplissage.
+</Success>
+
+
+### Mappage
+A l&#39;aide de la table de conversion, les objets CAD peuvent &#234;tre attribu&#233;s &#224; des types d&#39;objets  <Placeholder>product</Placeholder><Image>\img\grafik\importmanager\GeoMapper.DatenImportieren.png$GeoMapper.DatenImportieren</Image>
+
+
+1. S&#233;lectionnez un fichier de mappage:
+
+- Dans un chemin pr&#233;d&#233;fini<Image>\img\grafik\importmanager\PfeilAuswahl.png$PfeilAuswahl</Image>: Ici vous trouvez les fichiers de mappage, qui ont &#233;t&#233; install&#233;s avec GeoMapper ou un des ces modules resp. les fichiers de mappage enregistr&#233;s dans un 
+[Dossier du bureau](../datei/programm-einstellungen6)
+ central.
+
+- Dans un chemin quelconque avec le bouton <Border>...</Border> : Si vous avez cr&#233;&#233; votre propre mappage, ce fichier se trouve normalement dans le dossier de projet.
+
+
+
+
+
+Alternative
+ En cliquant sur le bouton  <Border>Assistant ...</Border>  vous pouvez cr&#233;er une nouvelle table de conversion. 
+Pour plus d&#39;informations, voir [ici ...](../importmanager/autodesk3)
+
+
+### Param&#232;tres
+Ici vous pouvez d&#233;finir des ult&#233;rieurs param&#232;tres optionnels.
+
+- <Bold> Autres: </Bold>  
+
+- Interpr&#233;ter les hauteurs 0 comme non valables: 
+
+- Oui: Les coordonn&#233;es altim&#233;triques ne sont pas import&#233;es
+
+- Non: Le 0 est import&#233; comme coordonn&#233;es altim&#233;triques
+
+
+
+- Ins&#233;rer dans le graphique les objets AutoCAD non convertis
+
+- Oui: Les objets AutoCAD, qui n&#39;ont pas &#233;t&#233; convertis en type d&#39;objets <Placeholder>product</Placeholder>  sont ins&#233;r&#233;s dans le projet. 
+
+
+
+
+
+
+
+<Warning>
+Lors de l&#39;importation, les objets AutoCAD ne sont pas transform&#233;s.
+</Warning>
+
+
+- Non: Les objets AutoCAD, qui n&#39;ont pas &#233;t&#233; convertis en type d&#39;objets <Placeholder>product</Placeholder>  ne sont pas import&#233;s.
+
+- Rayon d&#39;accrochage au point: Si lors de l&#39;importation de polylignes, dans ce rayon, un point avec hauteur valable est trouv&#233;, cette hauteur est utilis&#233;e. Dans ce but, dans le mappage pour l&#39;hauteur, il faut choisir l&#39;option &quot;Accrochage au point&quot;.
+
+- Echelle du fichier source: D&#233;finissez l&#39;&#233;chelle des donn&#233;es de sortie. Si dans <Placeholder>product</Placeholder> vous utilisez la m&#234;me &#233;chelle, alors les positions et les hauteurs des donn&#233;es de sortie correspondent. Pour l&#39;&#233;chelle 1:1000 aucune modification ne se produit. 
+
+
+
+
+
+
+
+
+
+<Success>
+Elle est consid&#233;r&#233;e seulement si dans le mappage des donn&#233;es, la position de l&#39;&#233;tiquette et la hauteur sont import&#233;es. Sinon les &#233;tiquettes sont repr&#233;sent&#233;es selon la configuration.
+</Success>
+
+
+- <Bold> R&#233;solution de conflits: </Bold> Noms des points et des surfaces doivent &#234;tre univoques. En cas de noms identiques les options suivantes sont disponibles:
+
+- <Italic> Renommer </Italic> : Les points et les surfaces import&#233;es sont renomm&#233;s avec un pr&#233;fixe resp. suffixe. Les objets existants restent non modifi&#233;s.
+
+- <Italic> Priorit&#233; au point existant </Italic> : Le point existant dans le fichier est maintenu, l&#39;objet depuis la source est ignor&#233;. Le comportement est le m&#234;me que pour <Italic> Renommer </Italic>  sans ajouter le pr&#233;fixe resp. le suffixe.
+
+- <Italic> Priorit&#233; au nouveau point </Italic> : Le nouveau point import&#233; remplace le point existant.
+
+- <Italic> Resoudre int&#233;ractivement </Italic> : Un dialogue de collision s&#39;ouvre o&#249; pour chaque point vous pouvez d&#233;cider si utiliser le point depuis GeoMapper ou depuis la source. 
+
+
+
+
+
+<Warning>
+Les surface import&#233;es ayant le m&#234;me nom, sont renomm&#233;es avec un pr&#233;fixe resp. un suffixe. Si pr&#233;fixe et suffixe sont vides, la surface n&#39;est pas import&#233;e et l&#39;ancienne surface est gard&#233;e.
+</Warning>
+
+
+- <Bold> Protocole: </Bold>  Il d&#233;finit si un protocole d&#233;taill&#233; des objets import&#233;s doit &#234;tre g&#233;n&#233;r&#233; ou seulement un r&#233;capitulatif.
+
+- <Bold> Importer Region: </Bold>  Il d&#233;finit si pour les points, le champ <Italic> Region </Italic>  doit &#234;tre import&#233; ou non.
+
+
+
+
+Appuyez sur  <Border>Terminer</Border> , pour terminer l&#39;importation. Un dialogue qui affiche l&#39;&#233;tat de l&#39;importation, s&#39;ouvre.
+
+### Importation de graphiques de r&#233;seau depuis rmGEO
+Pour l&#39;importation de compensations de r&#233;seau, stations libres et polygonales depuis rmGEO, des tables de mappage d&#233;j&#224; pr&#234;tes sont disponibles. Proc&#233;dez de la mani&#232;re suivante:
+
+1. Ex&#233;cutez le calcul dans rmGEO
+
+2. Depuis rmGEO, sortez la constellation dans un fichier DXF. Consid&#233;rez les param&#232;tres suivants:
+
+- D&#233;finissez l&#39;&#233;chelle du graphique de r&#233;seau et du dessin &#224; 1:1000 
+
+- Sortez les symbole de points comme blocs
+
+
+
+3. Appelez &quot;Importation Autodesk DXF&quot; 
+
+4. S&#233;lectionnez le graphique de r&#233;seau
+
+5. S&#233;lectionnez une des tables de mappage install&#233;es:
+
+- <Bold> rmGEO_Netzbild_Mit-Punkte.xml: </Bold>  Vous importez le graphique de r&#233;seau dans un nouveau fichier et vous n&#39;&#234;tes pas connect&#233; avec le projet rmGEO.
+
+- <Bold> rmGEO_Netzbild_Ohne-Punkte.xml: </Bold>  Vous importez le graphique de r&#233;seau dans un fichier existant dans lequel les points existent d&#233;j&#224;.
+
+
+
+6. D&#233;finissez le param&#232;tre d&#39;importation &quot;Ins&#233;rer dans le graphique les objets AutoCAD non convertis&quot; sur &quot;Non&quot;
+
+7. Appuyez sur <Border>Terminer</Border> 
+
+
+
+
+
+</GeoMapper>
+

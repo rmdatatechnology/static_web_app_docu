@@ -1,0 +1,185 @@
+---
+title: "Bemaßungen"
+page: true
+---
+## Einf&#252;gen von Bema&#223;ungen
+
+<Warning>
+Voraussetzung f&#252;r eine Bema&#223;ung ist, dass die referenzierten Koordinaten und Segmente in der XML-Datei vorhanden sind!
+</Warning>
+
+
+###  Aufbau von Sperrma&#223;en/Spannma&#223;en
+
+- <Bold> &lt;AlignedDimensions&gt; </Bold>  Sektion aller Sperrma&#223;e/Spannma&#223;e. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>       &lt;AlignedDimension Id=&quot;800&quot;&gt; </Bold>  Bema&#223;ung mit einer eindeutiger ID
+
+- <Bold>         &lt;StartVertexId&gt;578&lt;/StartVertexId&gt; </Bold>  Anfangspunkt. Die Sektion darf nur 1 mal vorkommen.
+
+- <Bold>         &lt;EndVertexId&gt;579&lt;/EndVertexId&gt; </Bold>  Endpunkt. Die Sektion darf nur 1 mal vorkommen.
+
+- <Bold> &lt;ObjectType&gt;Spannma&#223; 2D&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps
+
+
+
+- <Bold>     &lt;/AlignedDimension&gt; </Bold> 
+
+
+- <Bold>     &lt;/AlignedDimensions&gt; </Bold> 
+
+
+
+<Success>
+Falls in der XML-Datei Attribute angegeben sind, die nicht konfiguriert wurden, werden diese dennoch dem Objekt angef&#252;gt.
+</Success>
+
+<Success>
+Falls in der XML-Datei ein Objekttyp vorhanden ist, der nicht konfiguration wurde, dann das Objekt dennoch importiert. Je nach Einstellung werden Objekte mit unbekannten Typ in Magenta dargestellt oder ausgeblendet. (Siehe Men&#252; Datei - Datei-Einstellungen)
+</Success>
+
+
+<Info>
+
+    &lt;AlignedDimensions&gt;
+      &lt;AlignedDimension Id=&quot;802&quot;&gt;
+        &lt;StartVertexId&gt;578&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;579&lt;/EndVertexId&gt;
+        &lt;ObjectType&gt;Spannma&#223; 2D&lt;/ObjectType&gt;
+      &lt;/AlignedDimension&gt;
+    &lt;/AlignedDimensions&gt;
+</Info>
+
+
+###  Aufbau von Winkelma&#223;en
+
+-  _&lt;AngularDimensions&gt; <Bold>  Sektion aller Winkelbema&#223;ungen. Die Sektion darf nur 1 mal in der XML-Datei vorkommen. </Bold> 
+-       &lt;AngularDimension Id=&quot;800&quot;&gt; <Bold>  Bema&#223;ung mit einer eindeutiger ID </Bold> 
+-         &lt;BaseVertexId&gt;579&lt;/BaseVertexId&gt; <Bold>  Ausgangspunkt. Die Sektion darf nur 1 mal vorkommen. </Bold> 
+-         &lt;StartVertexId&gt;578&lt;/StartVertexId&gt; <Bold>  Anfangspunkt. Die Sektion darf nur 1 mal vorkommen. </Bold> 
+-         &lt;EndVertexId&gt;579&lt;/EndVertexId&gt; <Bold>  Endpunkt. Die Sektion darf nur 1 mal vorkommen. </Bold> 
+- &lt;ObjectType&gt;Winkelma&#223;&lt;/ObjectType&gt; <Bold>  Angabe des Objekttyps </Bold> 
+
+
+-     &lt;/AngularDimension&gt; <Bold> </Bold> 
+
+
+-     &lt;/AngularDimensions&gt; <Bold> </Bold> 
+
+
+
+<Info>
+
+    &lt;AngularDimensions&gt;
+      &lt;AngularDimension Id=&quot;811&quot;&gt;
+        &lt;BaseVertexId&gt;579&lt;/BaseVertexId&gt;
+        &lt;StartVertexId&gt;578&lt;/StartVertexId&gt;
+        &lt;EndVertexId&gt;851&lt;/EndVertexId&gt;
+        &lt;ObjectType&gt;Winkelma&#223;&lt;/ObjectType&gt;
+      &lt;/AngularDimension&gt;
+    &lt;/AngularDimensions&gt;
+</Info>
+
+
+###  Aufbau von Bogenbema&#223;ungen
+
+-  _&lt;ArcDimensions&gt;
+ Sektion aller Bogenbema&#223;ungen. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>       &lt;ArcDimension Id=&quot;800&quot;&gt; </Bold>  Bema&#223;ung mit einer eindeutiger ID
+
+- <Bold> &lt;SegmentId&gt;809&lt;/SegmentId&gt; </Bold>  Referenz auf ein Segment. Die Sektion darf nur 1 mal vorkommen.
+
+- <Bold> &lt;ObjectType&gt;Bogenma&#223; einzeilig&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps
+
+
+
+- <Bold>     &lt;/ArcDimension&gt; </Bold> 
+
+
+- <Bold>     &lt;/ArcDimensions&gt; </Bold> 
+
+
+
+<Info>
+
+    &lt;ArcDimensions&gt;
+      &lt;ArcDimension Id=&quot;810&quot;&gt;
+        &lt;SegmentId&gt;809&lt;/SegmentId&gt;
+        &lt;ObjectType&gt;Bogenma&#223; einzeilig&lt;/ObjectType&gt;
+      &lt;/ArcDimension&gt;
+    &lt;/ArcDimensions&gt;
+</Info>
+
+
+###  Aufbau von Basislinienbema&#223;ungen
+
+- <Bold> &lt;BaselinePoints&gt; </Bold>  Sektion aller Zwischenpunkte der Basislinienbema&#223;ungen. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>       &lt;BaselinePoint Id=&quot;800&quot;&gt; </Bold>  Zwischenpunkt mit einer eindeutiger ID
+
+- <Bold>     &lt;VertexId&gt;883&lt;/VertexId&gt; </Bold>  Referenz auf die Koordinaten. Die Sektion darf nur 1 mal vorkommen.
+
+- <Bold> &lt;ObjectType&gt;L&#228;uferma&#223;-Anfangspunkt&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps. Anfangs-, End- und Zwischenpunkte einer Basislinienbema&#223;ung werden durch den Objekttyp unterschieden. Sie finden die verwendeten Objekttypen in Ihrer Konfiguration.
+
+
+
+- <Bold>     &lt;/BaselinePoint&gt; </Bold> 
+
+
+- <Bold>       &lt;/BaselinePoints&gt; </Bold> 
+
+
+
+
+- <Bold>     &lt;BaselineDimensions&gt; </Bold>  Sektion aller Basislinienbema&#223;ungen. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>       &lt;BaselineDimension Id=&quot;887&quot;&gt; </Bold>  Basislinienbema&#223;ung mit einer eindeutiger ID
+
+- <Bold>         &lt;BaselinePointList&gt; </Bold>  Liste aller Zwischenpunkte (Inkl. Anfangs- und Endpunkt)
+
+- <Bold>           &lt;BaselinePointId&gt;884&lt;/BaselinePointId&gt; </Bold>  Referenz auf die Punktnummer. Die Sektion wird beliebig oft wiederholt.
+
+
+
+- <Bold>         &lt;/BaselinePointList&gt; </Bold>  
+
+- <Bold>         &lt;ObjectType&gt;L&#228;uferma&#223;&lt;/ObjectType&gt; </Bold>  Angabe des Objekttyps
+
+
+
+- <Bold>       &lt;/BaselineDimension&gt; </Bold> 
+
+
+- <Bold>     &lt;/BaselineDimensions&gt; </Bold> 
+
+
+
+
+<Info>
+
+    &lt;BaselinePoints&gt;
+      &lt;BaselinePoint Id=&quot;884&quot;&gt;
+        &lt;VertexId&gt;883&lt;/VertexId&gt;
+        &lt;ObjectType&gt;L&#228;uferma&#223;-Anfangspunkt&lt;/ObjectType&gt;
+      &lt;/BaselinePoint&gt;
+      &lt;BaselinePoint Id=&quot;889&quot;&gt;
+        &lt;VertexId&gt;888&lt;/VertexId&gt;
+        &lt;ObjectType&gt;L&#228;uferma&#223;-Zwischenpunkte&lt;/ObjectType&gt;
+      &lt;/BaselinePoint&gt;
+      &lt;BaselinePoint Id=&quot;886&quot;&gt;
+        &lt;VertexId&gt;885&lt;/VertexId&gt;
+        &lt;ObjectType&gt;L&#228;uferma&#223;-Endpunkt&lt;/ObjectType&gt;
+      &lt;/BaselinePoint&gt;
+    &lt;/BaselinePoints&gt;
+    &lt;BaselineDimensions&gt;
+      &lt;BaselineDimension Id=&quot;887&quot;&gt;
+        &lt;BaselinePointList&gt;
+          &lt;BaselinePointId&gt;884&lt;/BaselinePointId&gt;
+          &lt;BaselinePointId&gt;889&lt;/BaselinePointId&gt;
+          &lt;BaselinePointId&gt;886&lt;/BaselinePointId&gt;
+        &lt;/BaselinePointList&gt;
+        &lt;ObjectType&gt;L&#228;uferma&#223;&lt;/ObjectType&gt;
+      &lt;/BaselineDimension&gt;
+    &lt;/BaselineDimensions&gt;
+</Info>

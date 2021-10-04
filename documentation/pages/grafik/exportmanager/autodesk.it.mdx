@@ -1,0 +1,92 @@
+---
+title: "Esportazione dei dati in file DWG Autodesk"
+page: true
+---
+## Impostazioni specifiche per l&#39;esportazione Autodesk DWG. 
+ <Menu> Menu: [File / Export-Manager] </Menu> 
+
+Su ulteriori schede &#232; possibile eseguire delle impostazioni specifiche per l&#39;esportazione Autodesk DWG.
+
+### Impostazioni
+
+- <Bold> Versione del file: </Bold>  Selezionare la versione del file da esportare.
+
+- <Bold> Esportare il file prototipo: </Bold>  Selezionare se devono essere esportate tutte le definizioni di blocchi della configurazione o solo quelle usate.
+
+
+<GeoDesigner>
+- <Bold> Esportare i layouts: </Bold>  Selezionare se devono essere esportati anche i layouts. 
+
+
+
+</GeoDesigner>
+- <Bold> Esportare gli elementi CAD: </Bold>  Se nel proprio file sono presenti elementi CAD, questi possono eventualmente essere esportati. 
+
+- <Bold> Esportare gli oggetti 3D: </Bold> 
+- Con questa opzione si pu&#242; definire se gli oggetti che abbiano un&#39;altezza in GeoMapper, debbano essere scritti nel file DWG come veri oggetti 3D. Gli oggetti seguenti ricevono un&#39;altezza.
+
+- Punti
+
+- Polilinee (gli archi sono approssimati con segmenti di linea e l&#39;altezza dei punti intermedi viene interpolata linearmente)
+
+- Simboli-2-Punti (l&#39;altezza del primo punto &#232; ripresa come altezza del simbolo-punto)
+
+- Simboli-3-Punti (l&#39;altezza del primo punto &#232; ripresa come altezza del simbolo-punto)
+
+
+
+- <U> Approssimazione d&#39;archi </U>  definisce la <Italic> Freccia </Italic>  in metri, con la quale sono segmentati gli archi in 3D.
+
+- A condizione che il proprio file abbia un modello del terreno, le sue curve di livello sono esportate come <Italic> Polilinee AutoCAD 3D </Italic>  con <U> l&#39;informazione altimetrica di ogni vertice </U>  oppure come <Italic> Polilinea 2D </Italic>  con <U> <Italic> Elevazione </Italic> </U>  (altezza unica per tutta la polilinea).
+
+
+
+
+
+<Warning>
+Le curve di livello hanno in ogni caso una informazione altimetrica.
+Questa opzione gestisce unicamente il formato di output.
+</Warning>
+
+
+- <Bold> Esportare le polilinee nascoste: </Bold>  Opzione disponibile solo per l&#39;esportazione 2D. Sono nascoste le zone delle linee su cui giaccioni i punti.
+
+- <Bold> Esportare i testi invisibili: </Bold>  Le etichette configurate nel file come <Italic> non visibili </Italic>  - ad es. i testi dei simboli - normalmente non sono esportate. Con questa opzione queste etichette possono comunque essere esportate, cosa necessaria in diversi formati di scambio dati CAD. Nel file destinazione si trovano quindi i testi invisibili o gli attributi di blocco.
+
+- <Bold> Esportare le coordinate arrotondate al cm: </Bold>  Definisce se le coordinate (punto di inserimento dei punti, vertici delle polilinee) sono arrotondate al cm ed esportate.
+
+- <Bold> Esportare le polilinee mascherate: </Bold>  Definisce se le polilinee mascherate debbono essere esportate.
+
+
+
+Cliccare su  <Border>Fine</Border> , per terminare l&#39;esportazione ed aprire un dialogo che mostra lo stato dell&#39;esportazione.
+<GeoMapper>
+<Success>
+Per esportare solo il contenuto di un&#39;area di layout, passare al layout ed avviare l&#39;esportazione.
+</Success>
+
+<Success>
+Per esportare anche i dati vettoriali di sfondo (DWG, DXF, GeoDB), avviare l&#39;esportazione dall&#39;area di layout.
+</Success>
+
+
+
+### Applicazione &quot;Piano di frazionamento Austria&quot;
+Quando &#232; attiva l&#39;applicazione &quot;Piano di frazionamento Austria&quot; &#232; disponibile anche l&#39;opzione &quot;VDE-Export&quot; per la selezione degli oggetti:
+
+1.  Selezionare l&#39;opzione &quot;VDE-Export&quot;
+
+2.  Selezionare la versione, che viene usata per il confronto
+
+3.  Sulla base dei fondi calcolati, sono selezionati tutti gli oggetti che sono stati modificati tra la versione corrente e la versione selezionata
+
+4.  Col tasto Ctrl la selezione pu&#242; essere estesa o ridotta.
+
+
+
+
+<Info>
+Esempio: Ci si trova nella Rappresentazione &quot;DKM&quot;, nella Vista &quot;Nuovo stato&quot; e quindi nella versione &quot;nuova&quot;. Per l&#39;esportazione DXF scegliere l&#39;opzione &quot;Selezione nella grafica&quot; e quindi &quot;VDE-Export&quot;. Qui selezionare l&#39;opzione &quot;Rettificato&quot;. In tal modo sono selezionati tutti gli oggetti che tra la rettifica ed il nuovo stato sono stati modificati.
+</Info>
+
+</GeoMapper>

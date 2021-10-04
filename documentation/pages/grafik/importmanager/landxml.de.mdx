@@ -1,0 +1,55 @@
+---
+title: "Daten aus LandXML Dateien importieren"
+page: true
+---
+## Setzen Sie LandXML Import spezifische Einstellungen.
+<GeoMapper> <Menu> Menu: [Datei/ Importmanager] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [Datei/ Import] </Menu> </GeoDesigner>
+
+Auf den weiteren Einstellungsseiten k&#246;nnen LandXML Import spezifische Einstellungen gesetzt werden.
+
+<Success>
+Es werden die Elemente &quot;CgPoints&quot; und &quot;Surfaces&quot; importiert. Von den Surfaces werden die Basisdaten (&quot;SourceData&quot;) und TIN-Vermaschungen (&quot;Definition&quot;) importiert. Surfaces, die keine Basisdaten enthalten, werden beim Import nicht ber&#252;cksichtigt. Andere Vermaschungs-Typen au&#223;er TIN (Dreiecksvermaschung) werden nicht unterst&#252;tzt.
+</Success>
+
+
+### Einstellungen
+Hier k&#246;nnen Sie weitere Import Einstellungen setzen, diese Einstellungen sind optional.
+
+- <Bold> Einstellungen f&#252;r LandXML-Import: </Bold> 
+- <Bold> Punkte importieren als: </Bold>  Gibt an, ob Punkte aus den Basisdaten und CgPoints als einzelne Punkt-Objekte importiert werden oder als Punktwolke.
+
+- <Bold> Objekttyp f&#252;r Punkte: </Bold>  Gibt an, welchem Objekttyp Punkte, die aus den Basisdaten bzw. aus CgPoints importiert werden, zugeordnet werden sollen.
+
+- <Bold> Objekttyp f&#252;r Zwangskanten: </Bold>  Gibt an, welchem Objekttyp Zwangskanten, die aus den Basisdaten importiert werden, zugeordnet werden sollen.
+
+- <Bold> Objekttyp f&#252;r Modellgrenzen: </Bold>  Gibt an, welchem Objekttyp Modellgrenzen, die aus den Basisdaten importiert werden, zugeordnet werden sollen.
+
+- <Bold> Objekttyp f&#252;r Gel&#228;ndemodell: </Bold>  Gibt an, welchem Objekttyp das Gel&#228;ndemodell zugeordnet werden soll.
+
+
+
+- <Bold> Konfliktaufl&#246;sung: </Bold> Punkt- und Fl&#228;chenbezeichnungen m&#252;ssen eindeutig sein. Es stehen folgende Optionen bei Namensgleichheit  zur Verf&#252;gung:
+
+- <Italic> Umbenennen </Italic> : Die importiereten Punkte und Fl&#228;chen werden mit dem Pr&#228;fix bzw. Suffix umbenannt. Die bestehenden Objekte bleiben unver&#228;ndert erhalten.
+
+- <Italic> Vorrang bestehender Punkt </Italic> : Der in der Datei existierende Punkt bleibt bestehen, das Objekt aus der Quelle wird ignoriert. Das Verhalten ist das selbe wie bei <Italic> Umbenennen </Italic>  ohne Angabe eines Pr&#228;fix bzw. Suffix.
+
+- <Italic> Vorrang neuer Punkt </Italic> : Der neu importierte Punkt ersetzt den bestehenden Punkt.
+
+- <Italic> Interaktiv l&#246;sen </Italic> : Sie erhalten einen Kollisionsdialog, in dem Sie f&#252;r jeden Punkt entscheiden, ob die Punkte aus <Placeholder>product</Placeholder> oder aus der Quelle verwendet werden sollen. 
+
+
+<Warning>
+Bei gleichnamigen Fl&#228;chen werden die importierten Fl&#228;chen mit dem Pr&#228;fix bzw. Suffix umbenannt. Sind die beiden Werte leer, wird die Fl&#228;che nicht importiert. Es bleibt die alte Fl&#228;che erhalten.
+
+</Warning>
+
+
+- <Bold> Protokollierung: </Bold>  Legt fest, ob ein detailliertes Protokoll f&#252;r die importierten Objekte generiert werden soll, oder nur eine Zusammenfassung.
+
+- <Bold> Region importieren: </Bold>  Legt fest, ob bei Punkten das Namensfeld <Italic> Region </Italic>  importiert oder ignoriert werden soll.
+
+
+
+
+Dr&#252;cken Sie  <Border>Fertigstellen</Border> , um den Import abzuschlie&#223;en. Es wird ein Dialog ge&#246;ffnet, der den Status des Imports anzeigt.

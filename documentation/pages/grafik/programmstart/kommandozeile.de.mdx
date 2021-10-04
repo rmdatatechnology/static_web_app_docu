@@ -1,0 +1,83 @@
+---
+title: "Kommandozeile"
+page: true
+---
+## Starten Sie  <Placeholder>fullproduct</Placeholder> &#252;ber die Kommandozeile.
+
+Rufen Sie die Eingabeaufforderung auf. (Alle Programme-&gt;Zubeh&#246;r)<Image>\img\grafik\programmstart\CMDIcon.png$CMDIcon</Image>
+
+Nun k&#246;nnen Sie GeoMapper mittels eines Kommandos aufrufen. Wechseln Sie in den Programmordner 
+(standardm&#228;&#223;ig: cd &quot;C:\Program Files (x86)\rmDATA\GeoMapperSE&quot;)
+
+Mittels des Befehls GeoMapper.exe startet nun das Programm genauso, wie wenn man es &#252;ber den Desktop startet.
+
+Durch &#220;bergabe von Parameter kann jedoch direkt eine Datei mit Dateivorlage erstellt bzw. ge&#246;ffnet werden. Und auch ein Import gestartet werden.
+
+ <Bold> Syntax: </Bold> 
+
+GeoMapper.exe &lt;filename&gt; [/t[emplate]:projecttemplate] [/c[ommand]:&lt;befehlsname&gt;([&lt;param1&gt;][,&lt;param2&gt;][,&lt;param3&gt;])]
+
+<table>
+<tr><th>Schalter</th>
+<th>Beschreibung</th>
+</tr>
+<tr><td> <b> /t: </b> name <b> /template: </b> name</td>
+<td>L&#228;dt eine vorhandene Dateivorlage.  Statt &quot;name&quot; geben Sie den Namen der Dateivorlage (ohne Pfad) an.</td>
+</tr>
+<tr><td> <b> /c: </b> command(param1,param2,param3) <b> /command: </b> command(param1,param2,param3)</td>
+<td>Ruft ein Kommando direkt nach dem &#214;ffnen bzw. Erstellen der angegebenen Datei auf.Zurzeit sind folgende Kommandos verf&#252;gbar:
+ <ul> <li>[CLImport](../programmstart/kommandozeile2)
+ (Kommandozeilen-Import)
+</li> </ul> 
+</td>
+</tr>
+<tr></tr>
+</table>
+
+
+<Warning>
+Pfadangaben sollten grunds&#228;tzlich in doppelte Anf&#252;hrungszeichen (&quot;) gefasst werden, vor allem aber dann, wenn sie Leerzeichen beinhalten. Andernfalls missinterpretiert die  <Italic> Windows </Italic>  Kommandozeile die Leerzeichen als Trennzeichen zwischen Parametern.
+</Warning>
+
+
+ <Bold> Beispiel: </Bold> 
+
+<Info>
+ <Bold> GeoMapper.exe </Bold>  &quot;C:\TestData\Datei1.geodb3&quot;  <Bold> /t: </Bold> Vorlage1  <Bold> /c: </Bold>  <Italic> CLImport </Italic> ( <Italic> Xml </Italic> ,&quot;C:\TestData\Grundlage.xml&quot;)
+
+Dieses Beispiel erstellt eine neue Datei ( <Italic> Datei1.geodb3 </Italic> ) auf Basis der Vorlage &quot;Vorlage1&quot; und importiert die Datei  <Italic> Grundlage.xml </Italic>  vom Typ  <Italic> Xml </Italic> .
+</Info>
+
+
+<Warning>
+Gro&#223;- bzw. Kleinschreibung muss bei der Eingabe beachtet werden! (case sensitive)
+</Warning>
+
+<Warning>
+Alle angegebenen Pfade m&#252;ssen absolut sein und existieren.  Die Datei selbst wird neu erstellt, wenn diese noch nicht existiert.
+</Warning>
+
+<Warning>
+Wenn im Dateipfad oder -namen Umlaute oder dergleichen verwenden werden, muss beim Kommandozeilenaufruf &#252;ber eine BAT-Datei die  <Italic> Codepage 1250 </Italic>  angegeben werden. (Dies erfolgt mit dem Befehl  <Italic> chcp 1250 </Italic>  zu Beginn der BAT-Datei) 
+</Warning>
+
+
+
+ <Bold> Fehlermeldungen: </Bold> 
+
+<Info>
+
+<Image>\img\grafik\programmstart\ErrorMessageBox1.png$ErrorMessageBox1</Image>
+
+Tritt auf, wenn die Datei ohne absoluten Pfad angegeben wurde, oder das angegebene Dateiverzeichnis nicht existiert.
+</Info>
+
+
+<Info>
+
+<Image>\img\grafik\programmstart\ErrorMessageBox2.png$ErrorMessageBox2</Image>
+
+Tritt auf, wenn der angegebene Dateiname ung&#252;ltige Zeichen enth&#228;lt (\ / : * ? &quot; &lt; &gt; |)
+</Info>
+
+

@@ -1,0 +1,47 @@
+---
+title: "rmDATA Private Geodatabase"
+page: true
+---
+## Verbindungseinstellungen f&#252;r eine rmDATA Private Geodatabase
+
+## Verbindungsauswahl
+Der Dateipfad zu einer rmDATA Geodatabase kann angegeben oder &#252;ber einen &#214;ffnen-Dialog ausgew&#228;hlt werden.<Image>\img\grafik\datenquellenmanager\rmdataprivategeodatabase.png$rmdataprivategeodatabase</Image>
+
+## Einstellungen
+Siehe auch [allgemeine Verbindungseinstellungen](../datenquellenmanager/verbindungseinstellungen)
+
+
+Bei aktivierter Fachschale &quot;Enterprise Geodatabase&quot; kann eine Verbindung zu einer Oracle Sachdaten Datenquelle hergestellt und diese Daten mit Objekten der rmDATA Geodatabase verkn&#252;pft werden.
+### Verbindung zu Sachdaten herstellen:
+Im Register &quot;Einstellungen&quot; kann bei Bestehen einer Sachdaten-Verbindung pro Featureklasse eine oder mehrere Sachdaten-Tabellen zugeordnet werden ( <Border>+</Border>  &quot;Sachdatenverbindung hinzuf&#252;gen&quot;).
+Die Verbindungseinstellungen zur Sachdaten-Verbindung k&#246;nnen mit  <Border>Exportieren</Border>  als XML-Datei gespeichert und in anderen Projekten mit  <Border>Importieren</Border>  verwendet werden. Es werden pro Featureklasse die zugewiesenen Tabellen und Attribut-Spalten gespeichert.<Image>\img\grafik\datenquellenmanager\geodatabasverbindungseinstellungen.png$geodatabasverbindungseinstellungen</Image>
+
+W&#228;hlen Sie im Register &quot;Verbindungsauswahl&quot; die eingebundene Sachdaten-Verbindung aus.<Image>\img\grafik\datenquellenmanager\SachdatenVerbinden.png$SachdatenVerbinden</Image>
+
+Geben Sie im Register &quot;Objektklasse&quot; an, welche Sachdaten aus welchen Tabellen dem der Featureklasse hinzugef&#252;gt werden sollen.<Image>\img\grafik\datenquellenmanager\SachdatenVerbindenObjektwahl.png$SachdatenVerbindenObjektwahl</Image>
+
+- Bedingungen: Pro Tabelle muss eine ID-Spalte mit einem Attribut der Featureklasse verkn&#252;pft werden, auf Basis derer dann Attribute der Sachdaten-Tabelle den Attributen der Featureklasse zugewiesen werden.
+
+- Objekttyp GeoDB: Gibt an, ob aus der entsprechenden Sachdaten-Tabelle der Featureklasse Sachdaten zugewiesen werden sollen.
+
+- Attributzuweisung: Legt fest, welche Attribute aus der Sachdaten-Tabelle welchen Attributen der Featureklasse zugewiesen werden sollen.<Image>\img\grafik\datenquellenmanager\AttributeZuweisen.png$AttributeZuweisen</Image>
+
+
+- Attribute aus der Sachdaten-Tabelle in bestehende Attribute kopieren: Im Standardfall wird ein Attribut aus der Sachdaten-Tabelle in ein bereits bestehendes Attribut der Feauterklasse kopiert. Die Attribute der Featureklasse werden im Dialog aufgelistet und es k&#246;nnen Attribute aus der Sachdatenquelle zugewiesen werden. 
+
+- Attribute aus der Sachdaten-Tabelle direkt anzeigen: Attribute der Sachdaten-Tabelle k&#246;nnen aber auch zus&#228;tzlich zu den bestehenden Attributen der Featureklasse (lesend) angezeigt werden. Um solche Verlinkungen anzulegen, klicken Sie im Dialog &quot;Attribute zuweisen&quot; mit der rechten Maustaste ins Dialogfeld und geben den Alias des neuen Attributes an. Anschlie&#223;end weisen Sie dem Attribut das entsprechende Feld aus der Sachdaten-Tabelle zu.
+
+
+
+
+## Erweiterte Einstellungen
+### Aktive Konfiguration
+In jeder rmDATA Geodatabase sind eine oder mehrere Darstellungen, Ansichten und Ma&#223;st&#228;be konfiguriert. Je nach gew&#228;hlter Darstellung, aktueller Ansicht  und aktuellem Ma&#223;stab werden Daten unterschiedlich angezeigt.
+### Ausdehnung aktualisieren
+Pro Featureklasse wird in der Datenbank die Ausdehnung der Elemente gespeichert. Kommen neue Objekte hinzu, oder werden solche entfernt, kann mit der Funktion &quot;Ausdehnung aktualisieren&quot; die aktuelle Ausdehnung ermittelt werden, sodass beim Befehl &quot;Gesamte Karte anzeigen&quot; oder beim Befehl &quot;Gesamte Ausdehnung anzeigen&quot; der richtige Bereich angezeigt wird.<Image>\img\grafik\datenquellenmanager\rmdataprivategeodatabaseerweitert.png$rmdataprivategeodatabaseerweitert</Image>
+
+## Filter
+Sind in der Konfiguration der Geodatabase Filter definiert, werden diese hier angezeigt. Es k&#246;nnen ein oder mehrere Fitler aktiviert werden, die Daten werden dann gem&#228;&#223; gew&#228;hlter Filter angezeigt.<Image>\img\grafik\datenquellenmanager\rmdataprivategeodatabasefilter.png$rmdataprivategeodatabasefilter</Image>
+
+
+

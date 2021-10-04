@@ -1,0 +1,175 @@
+---
+title: "Mapping-Assistent DWG, DXF-Elemente"
+page: true
+---
+## Assistent f&#252;r das Erstellen einer Konvertierungstabelle f&#252;r die Konvertierung von CAD Elementen
+<GeoMapper></GeoMapper><GeoDesigner></GeoDesigner>
+<GeoDesigner>F&#252;r die Konvertierung von CAD Elementen steht ein Mapping-Assistent zur Verf&#252;gung, sodass ein oder mehrere CAD Elemente in  <Placeholder>product</Placeholder> Objekte konvertiert werden k&#246;nnen. </GeoDesigner>
+<GeoMapper>F&#252;r den Import von Autodesk DWG/DXF Dateien steht ein Mapping-Assistent zur Verf&#252;gung, sodass die Objekte der Autodesk-Dateien in  <Placeholder>product</Placeholder> Objekte &#252;bernommen werden k&#246;nnen.</GeoMapper>
+
+ <Placeholder>fullproduct</Placeholder> analysiert Ihre gew&#228;hlten Dateien und zeigt dann die zuordenbaren Objektklassen in Registern an.
+
+F&#252;r jede Objektklasse werden alle Layer einer AutoCAD-Gruppe (Insert, Point, Text, ...) aufgelistet, und es kann jedem Layer ein  <Placeholder>product</Placeholder> Objekttyp zugeordnet werden.
+Liegen Bl&#246;cke auf unterschiedlichen Layern, wird f&#252;r jeden Block eine Zeile mit einer Bedingung angelegt. Als Bedingungen k&#246;nnen auch Eigenschaften wie Farbe, Textstil, Texth&#246;he oder Linientyp definiert werden.
+
+Im Dialog k&#246;nnen einzelne Zeilen dupliziert und danach ge&#228;ndert werden:  <Border>+</Border> ,  <Border>x</Border> 
+In der Spalte &quot;Objekttyp der GeoDB&quot; w&#228;hlen Sie den gew&#252;nschten  <Placeholder>product</Placeholder> Objekttyp.
+Weiters k&#246;nnen dem Objekttyp Attribute (entweder aus dem AutoCAD-Objekt, oder fixe Attributwerte) zugewiesen werden.
+Jedes AutoCAD-Objekt kann nur einmal &#252;bernommen werden. Bei Doppeldefinitionen gilt die Reihenfolge der Register und die Reihenfolge der Zeilen.
+
+<Success>
+Nach  <Border>Fertigstellen</Border>  kann das erstellte Mapping in einer Datei gespeichert werden.
+</Success>
+
+
+In der folgenden Tabelle ist eine &#220;bersicht &#252;ber die M&#246;glichkeiten des Mappings enthalten:
+<table>
+<tr><th>Objektklasse Geodatabase</th>
+<th>M&#246;gliche AutoCAD Elemente (Gruppe)</th>
+<th>Bedingungen</th>
+<th>Attribut-Zuweisung</th>
+</tr>
+<tr><td>Punkt</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>Fl&#228;che</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Hatch</td>
+<td>Farbe</td>
+<td></td>
+</tr>
+<tr><td></td>
+<td>Polygon</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness), Erhebung der Linie (Elevation)</td>
+</tr>
+<tr><td>Linienzug</td>
+<td>Arc</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness)</td>
+</tr>
+<tr><td></td>
+<td>Line</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness), St&#252;tzpunkth&#246;hen (Punktfang)</td>
+</tr>
+<tr><td></td>
+<td>Polyline</td>
+<td>Farbe, Linientyp</td>
+<td>Objekth&#246;he (Thickness), Erhebung der Linie (Elevation), St&#252;tzpunkth&#246;hen (Punktfang)</td>
+</tr>
+<tr><td>Text</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>Linienzugsymbol</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>2-Punkt Symbol</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>3-Punkt Symbol</td>
+<td>Insert</td>
+<td>Blockname, Farbe</td>
+<td>Blockattribute, Z-Koordinate</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Farbe, Textstil, Texth&#246;he</td>
+<td>Textwert</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Farbe</td>
+<td>Objekth&#246;he (Thickness), Z-Koordinate</td>
+</tr>
+<tr><td>Sperrbema&#223;ung</td>
+<td>AlignedDimension</td>
+<td>DimensionStyle</td>
+<td></td>
+</tr>
+</table>
+
+
+### Erweiterte M&#246;glichkeiten
+<Warning>
+Mit Hilfe des Mapping-Assistenten k&#246;nnen Sie die meisten Anforderungen an eine Konvertierung von CAD-Elementen abdecken. Die Konvertierungstabelle an sich bietet noch eine Reihe erweiterter M&#246;glichkeiten, die nicht &#252;ber den Assistenten zug&#228;nglich sind und die direkt in der Konvertierungstabelle codiert werden m&#252;ssen, z. B.:
+
+-  Zusammenfassen mehrerer CAD-Elemente zu einem Geodatenbank-Objekt.
+
+
+-  Erzeugen und Verbinden versionierter Objekte (Vorg&#228;nger, Nachfolger).
+
+
+-  Signaturen aus CAD-Elementen
+
+
+-  uvm.
+
+
+
+
+Mehr zu den erweiterten M&#246;glichkeiten finden Sie [hier](../anhang/formatbeschreibungmappingautodesk)
+.
+</Warning>

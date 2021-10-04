@@ -1,0 +1,176 @@
+---
+title: "Mappage d'attributs - Polygonales"
+page: true
+---
+## Gestion da la conversion d&#39;&#233;l&#233;ments CAD vers polygonales dans la G&#233;odatabase.
+Les polygonales peuvent &#234;tre cr&#233;&#233;es depuis diff&#233;rents types d&#39;&#233;l&#233;ments lineaires CAD.
+
+```
+La cr&#233;ation de polygonales est d&#233;finie par l&#39;&#233;l&#233;ment  <Bold> &lt;LineStrings&gt; </Bold> .
+Il s&#39;agit d&#39;une r&#233;colte d&#39;&#233;l&#233;ments  <Bold> &lt;LineString&gt; </Bold> , qui g&#233;rent la conversion:
+ <Bold> &lt;LineStrings&gt; </Bold> 
+   &lt;LineString Name=&quot;Exemple1&quot;&gt;
+       <Italic> &lt;!-- D&#233;finition --&gt; </Italic> 
+   &lt;/LineString&gt;
+    <Italic> &lt;!-- Ult&#233;rieurs &#233;l&#233;ments &lt;LineString&gt; --&gt; </Italic> 
+ <Bold> &lt;/LineStrings&gt; </Bold> 
+```
+
+### &lt;LineString&gt;
+### 
+# Attributs
+
+
+- <Bold> Name </Bold>  (obligatoire)
+
+- Il d&#233;finit le nom du type de polygonale de destination dans la g&#233;odatabase. Tous les &#233;l&#233;ments CAD s&#233;lectionn&#233;s par le(s) filtre(s) sont convertis en ce type de polygonale.
+
+
+
+
+
+### 
+# El&#233;ments
+
+Avec les &#233;l&#233;ments suivants on peut d&#233;finir de quels objets les polygonales sont cr&#233;&#233;s.
+
+1. <Bold> &lt;GraphicAttributeSettings&gt; </Bold>  (de 0 &#224; 1)
+
+- Il d&#233;finit la reprise des propri&#233;t&#233;s graphiques depuis les &#233;l&#233;ments CAD. Voir 
+[El&#233;ment GlobalSettings](../anhang/formatbeschreibungmappingautodesk2)
+.
+
+
+
+2. <Bold> &lt;Line&gt; </Bold>  (de 0 &#224; 1)
+
+- Il g&#232;re la conversion de lignes.
+
+
+
+3. <Bold> &lt;Polyline&gt; </Bold>  (de 0 &#224; 1)
+
+- Il g&#232;re la conversion de polylignes.
+
+
+
+4. <Bold> &lt;Arc&gt; </Bold>  (de 0 &#224; 1)
+
+- Il g&#232;re la conversion d&#39;arcs.
+
+
+
+
+
+<Success>
+Si d&#233;crit, au lieu de noms complets on peut utiliser aussi les expressions r&#233;guli&#232;res ( <Italic> RegEx </Italic> ). Pour ins&#233;rer une expression r&#233;guli&#232;re, utilisez le pr&#233;fixe  <Bold> re: </Bold>  
+</Success>
+
+
+### 
+#  Cr&#233;er polygonales depuis lignes (&lt;Line&gt;)
+
+
+
+```
+Structure d&#39;un mappage Ligne-&#224;-Polygonale
+
+ <Bold> &lt;Line&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Il d&#233;finit d&#39;o&#249; les lignes doivent &#234;tre filtr&#233;s. --&gt;
+          Chacun des &#233;l&#233;ments qui suit est facultatif; 
+          les &#233;l&#233;ments existants sont li&#233;s avec AND,
+          c&#39;est &#224; dire que tous doivent &#234;tre valables --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Nombre entier, index des couleurs --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Nom resp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Line&gt; </Bold> 
+
+```
+
+
+### 
+#  Cr&#233;er polygonales depuis polylignes (&lt;Polyline&gt;)
+
+
+
+```
+Structure d&#39;un mappage Polyligne-&#224;-Polygonale
+
+ <Bold> &lt;Polyline&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Il d&#233;finit selon quoi les polylignes doivent &#234;tre filtr&#233;s. --&gt;
+          Chacun des &#233;l&#233;ments qui suit est facultatif; 
+          les &#233;l&#233;ments existants sont li&#233;s avec AND,
+          c&#39;est &#224; dire que tous doivent &#234;tre valables --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Nombre entier, index des couleurs --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Nom resp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Polyline&gt; </Bold> 
+
+```
+
+
+### 
+#  Cr&#233;er polygonales depuis arcs (&lt;Arc&gt;)
+
+
+
+```
+Structure d&#39;un mappage Arc-&#224;-Polygonale
+
+ <Bold> &lt;Arc&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Il d&#233;finit selon quoi les lignes doivent &#234;tre filtr&#233;s. --&gt;
+          Chacun des &#233;l&#233;ments qui suit est facultatif; 
+          les &#233;l&#233;ments existants sont li&#233;s avec AND,
+          c&#39;est &#224; dire que tous doivent &#234;tre valables --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Nombre entier, index des couleurs --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Nom resp. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Arc&gt; </Bold> 
+
+```
+
+
+<Info>
+Exemple:
+
+- Il faut cr&#233;er des polygonales g&#233;odatabase du type <Bold> Grundst&#252;cksgrenze </Bold> .
+
+
+- Les propri&#233;t&#233;s graphiques sont affect&#233;es selon la configuration du type d&#39;objet (ne sont pas reprises).
+
+
+- La g&#233;om&#233;trie doit &#234;tre implicitement g&#233;n&#233;r&#233;e depuis la g&#233;om&#233;trie des lignes.
+
+
+- Ces polygonales doivent r&#233;sulter depuis:
+
+
+-  Lignes sur les layers <Bold> N-GG </Bold>  bzw. <Bold> GG </Bold> 
+-  Polylignes sur les layers <Bold> N-GG </Bold>  bzw. <Bold> GG </Bold>  
+
+
+-  Arcs sur les layers <Bold> N-GG </Bold>  bzw. <Bold> GG </Bold>  
+
+
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\LinearToLineStringExample.png$LinearToLineStringExample</Image>
+
+
+
+Le m&#234;me r&#233;sultat est obtenu par 3 simples mappages pour chaque type d&#39;&#233;l&#233;ment:
+
+
+- 
+<Image>\img\grafik\anhang\LinearToLineStringExample2.png$LinearToLineStringExample2</Image>
+
+
+</Info>

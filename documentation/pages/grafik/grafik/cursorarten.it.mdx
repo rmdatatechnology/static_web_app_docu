@@ -1,0 +1,84 @@
+---
+title: "Tipi di cursori"
+page: true
+---
+## Durante la modifica degli oggetti,  <Placeholder>product</Placeholder> supporta l&#39;utente con diversi tipi di cursori
+
+<table>
+<tr><td><Image>\img\grafik\grafik\ModelessCursor.png$ModelessCursor</Image> </td>
+<td>Quando nessun comando &#232; attivo, gli oggetti possono essere selezionati con un clic del bottone sinistro (selezione singola) oppure tramite una finestra di selezione (selezione multipla). 
+<Success>
+Dopo la selezione le propriet&#224; dell&#39;oggetto sono mostrate nel gestore delle propriet&#224;, inoltre i comandi principali per modificare gli oggetti, sono disponibili nella barra multifunzionale.
+</Success>
+</td>
+</tr>
+<tr><td><Image>\img\grafik\grafik\PositionPickingCrosshair.png$PositionPickingCrosshair</Image></td>
+<td>Nessun oggetto nel raggio di snap</td>
+</tr>
+<tr><td><Image>\img\grafik\grafik\Punkt.png$Punkt</Image></td>
+<td>Un punto o un vertice &#232; catturato</td>
+</tr>
+</table>
+
+<Success>
+Con lo snap a oggetto attivo, anche gli snap AutoCAD attivati possono essere usati.
+</Success>
+
+<Success>
+Se durante la selezione vengono catturati oggetti diversi a causa della loro vicinanza, viene mostrata una post-selezione: 
+
+<Image>\img\grafik\grafik\SelectionPostSelection.png$SelectionPostSelection</Image>
+Selezionare sulla lista l&#39;oggetto desiderato.
+</Success>
+
+
+<Success>
+Le dimensioni del quadro di snap si possono variare nelle [impostazioni definite dall&#39;utente](../datei/programm-einstellungen)
+. Qui &#232; possibile definire quanto il cursore deve essere vicino per selezionare un oggetto.
+</Success>
+
+
+<Success>
+Nella funzione di snap gli elementi sono considerati in sequenza:
+
+- Per primi sono catturati gli oggetti puntiformi (ad es. punti e testi)
+
+
+- Quindi sono selezionati gli elementi lineari (segmenti, contorni di superfici)
+
+
+- Alla fine sono considerate le superfici.
+
+
+
+
+Se un testo si trova su di una superficie, per selezionare la superficie occorre cliccare in un punto dove non sia visibile il testo.
+<table>
+<tr><td>
+<Image>\img\grafik\grafik\Flächenwahl_Text.png$Flächenwahl_Text.png</Image></td>
+<td>Il testo &#232; selezionato</td>
+</tr>
+<tr><td>
+<Image>\img\grafik\grafik\Flächenwahl_ohneText.png$Flächenwahl_ohneText.png</Image></td>
+<td>La superficie &#232; selezionata</td>
+</tr>
+</table>
+
+</Success>
+
+### Disattivazione dello snap
+Per disattivare completamente o parzialmente lo Snap a oggetto, durante la selezione cliccare uno dei seguenti tasti:
+<table>
+<tr><td> <Border>Alt</Border> </td>
+<td>Sono selezionati solo blocchi e vertici. 
+<Success>
+In questo caso se si clicca su di un numero di punto, il punto non &#232; selezionato.
+</Success>
+</td>
+</tr>
+<tr><td> <Border>Ctrl</Border> </td>
+<td>Lo snap a oggetto &#232; completamente disattivato</td>
+</tr>
+</table>
+
+

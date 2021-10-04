@@ -1,0 +1,22 @@
+---
+title: "Objekt löschen"
+page: true
+---
+## L&#246;schen von Objekten aus der geladenen Objektmenge
+
+Mit dem Aufruf  <Bold>  <Italic> Application.Project.Delete(objToDelete) </Italic>  </Bold>  kann ein Objekt aus der geladenen Objektmenge entfernt werden.
+
+ <Bold> objToDelete </Bold>  ... Eine Objektreferenz oder eine ganzzahlige Objekt-Id, gibt das zu l&#246;schende Objekt an
+
+```
+prompt = &#39;W&#228;hlen Sie ein Objekt zum L&#246;schen:&#39;
+
+obj = Application.IO.GetObject(prompt).Value
+Application.Project.Delete(obj.Id)
+
+obj = Application.IO.GetObject(prompt).Value
+Application.Project.Delete(obj)
+
+```
+
+

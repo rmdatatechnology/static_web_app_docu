@@ -1,0 +1,70 @@
+---
+title: "Geladene Objekte ermitteln"
+page: true
+---
+## Zugriff auf die geladenen Objekte
+### Geladende Objekte ermitteln
+Mit dem Aufruf  <Bold>  <Italic> Application.Project.GetObjects() </Italic>  </Bold>  kann die aktuell geladene Objektmenge mittels Iterator ermittelt werden.
+
+Folgendes Beispiel ermittelt die geladenen Objekte und gibt die Attribute Id und Objekttyp aus:
+
+```
+objekte = Application.Project.GetObjects()
+for obj in objekte:
+    if obj.ObjectClass  &#39;Point&#39;:
+        print str(obj.Id) + &#39; (&#39; + obj.ObjectType + &#39;)&#39;
+
+```
+
+
+<Success>
+Auf dem Ergebnisobjekt von  <Italic> Application.Project.GetObjects() </Italic>  (Iterations-Objekt) k&#246;nnen keine direkten Listen-Operationen durchgef&#252;hrt werden.
+Dazu kann das Ergebnis mittels  <Bold>  <Italic> pyList = list(Application.Project.GetObjects()) </Italic>  </Bold>  in eine Pyhton-Liste umgewandelt werden.
+ <Bold>  <Italic> elementId = pyList[0].Id </Italic>  </Bold> 
+Dies gilt f&#252;r alle Iterator-Objekte, die mittels R&#252;ckgabewerten in die Skript-Umgebung geladen werden k&#246;nnen.
+</Success>
+
+
+### Geladene Objekte mittels vorgegebener Geometrie ermitteln
+Mit dem Aufruf   <Bold>  <Italic> Application.Project.GetObjectsInWindow(bufgeom) </Italic>  </Bold>    werden alle geladenen Objekte ermittelt die innerhalb der &#252;bergebenen Fenster-Geometrie liegen bzw. von dieser geschnitten werden. 
+
+Folgendes Beispiel kann dazu verwendet werden um einen Punkt mit Puffer zu erzeugen. Diese Geometrie wird verwendet um die angrenzenden Objekte zu ermitteln. 
+Es werden die Id des Objektes und der Objekttyp in der Skriptausgabe angezeigt. 
+
+```
+
+res= Application.IO.GetPoint(&#39;W&#228;hlen Sie einen Punkt aus:&#39;)     
+bufgeom = Application.Geometry.Buffer(res.Value, 5)               
+envelop = Application.Geometry.Envelope(bufgeom)              
+
+Application.Draw.DrawGeometry(envelope)                              
+
+for object in Application.Project.GetObjectsInWindow(envelope):  
+    print str(object.Id) + &#39; &#39; + object.ObjectType                                
+
+```
+
+
+<Success>
+Es k&#246;nnen verschiedene Geometrien (Bounding Box) der Methode &#252;bergeben werden. Siehe dazu [Puffer](../schnittstellen/geometry7)
+ und [Begrenzungsrahmen](../schnittstellen/geometry3)
+. 
+</Success>
+
+
+### Geladene Objekte auf einem Punkt ermitteln
+Mit dem Aufruf   <Bold>  <Italic> Application.Project.GetObjectsOnPoint(point) </Italic>  </Bold>    werden alle geladenen Objekte ermittelt die auf dieser Koordinate liegen bzw. im Falle von Linienz&#252;gen oder Fl&#228;chen, diese Koordinate als St&#252;tzpunkt haben. 
+
+
+```
+
+res= Application.IO.GetPoint(&#39;W&#228;hlen Sie einen Punkt aus:&#39;)     
+
+for object in Application.Project.GetObjectsOnPoint(res.Value
+    print str(object.Id) + &#39; &#39; + object.ObjectType                                
+
+```
+
+
+
+

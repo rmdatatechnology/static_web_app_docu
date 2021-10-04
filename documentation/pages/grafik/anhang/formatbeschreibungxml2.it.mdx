@@ -1,0 +1,77 @@
+---
+title: "Parametri di file"
+page: true
+---
+## Inserimento degli attributi di file
+
+###  Struttura
+
+- <Bold>  &lt;ProjectSettings&gt; </Bold>  Lista dei parametri di progetto (opzionale)
+
+- <Bold> &lt;ProjectSetting Name=&quot;Meta~att1&quot; Type=&quot;System.String&quot; Value=&quot;hallo&quot; /&gt; </Bold>   parametro di file, dove:
+
+- <Bold> Name: </Bold>  Nome del parametro. Per gli attributi di file impostare prima del nome &quot;Meta~&quot;, ad es. &quot;Meta~att1&quot;
+
+- <Bold> Type: </Bold>  Tipo di parametro
+
+- <Bold> Value: </Bold>  Valore
+
+
+
+- <Bold> &lt;/ProjectSettings&gt; </Bold>  Fine sezione
+
+
+
+
+<Info>
+    
+ <Bold> Parametri di file </Bold> 
+    &lt;ProjectSetting Name=&quot;CoordinateSystem&quot; Type=&quot;System.String&quot; Value=&quot;rmDATA:6715&quot; /&gt;
+ <Bold> Attributi di file </Bold> 
+&lt;ProjectSetting Name=&quot;Meta~att1&quot; Type=&quot;System.String&quot; Value=&quot;hallo&quot; /&gt;
+&lt;ProjectSetting Name=&quot;Meta~att2&quot; Type=&quot;System.String&quot; Value=&quot;welt&quot; /&gt;
+</Info>
+
+
+Esistono tra gli altri i seguenti parametri di file
+### Parametri di file - Generale
+<table>
+<tr><th>Parametro di file</th>
+<th>Descrizione</th>
+</tr>
+<tr><td>CoordinateSystem</td>
+<td>Codice del sistema di coordinate</td>
+</tr>
+<tr><td>CrsMeanGeoidUndulation</td>
+<td>Ondulazione del geoide media</td>
+</tr>
+<tr><td>CrsMeanEarthRadius</td>
+<td>Raggio terrestre medio</td>
+</tr>
+<tr><td>CrsReductionPointEastCrsReductionPointNorth</td>
+<td>Baricentro</td>
+</tr>
+<tr><td>CrsReductionPointElevation</td>
+<td>Altezza media</td>
+</tr>
+<tr><td>CrsReductionFactor</td>
+<td>Fattore di riduzione</td>
+</tr>
+</table>
+
+
+### Parametri di file - Calcoli
+<table>
+<tr><th>Parametro di file</th>
+<th>Descrizione</th>
+</tr>
+<tr><td>ActiveRounding</td>
+<td>Arrotondamento coordinate per i calcoli di superficie e per le quote</td>
+</tr>
+<tr><td>CrsAreaReduceToNatureValues</td>
+<td>Riduzione della superficie alla misura del sito</td>
+</tr>
+<tr><td>CrsAreaReductionConsiderMeanElevation</td>
+<td>Considerazione dell&#39;altezza media per la riduzione di superfici</td>
+</tr>
+</table>

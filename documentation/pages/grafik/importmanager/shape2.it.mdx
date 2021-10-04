@@ -1,0 +1,70 @@
+---
+title: "Assistente di mappatura importazione Esri-Shape"
+page: true
+---
+## Assistente per la creazione di una tabella di conversione per importare i file Esri-Shape.
+
+Per importare i file Esri-Shape &#232; disponibile un assistente di mappatura, in tal modo gli oggetti dei file Shape possono essere ripresi in oggetti  <Placeholder>product</Placeholder> 
+
+ <Placeholder>fullproduct</Placeholder> analizza i file selezionati e mostra in schede separate le classi di oggetti attribuibili.
+
+Per ogni classe di oggetti tutti i file Shape sono listati in gruppi (Point, Polygon, Polyline,...), e ad ogni file &#232; possibile assegnare un tipo di oggetti  <Placeholder>product</Placeholder> 
+Tutti gli attributi di un file Shape possono essere usati come condizioni.
+Nel dialogo si possono duplicare le righe per poi modificarle:  <Border>+</Border> ,  <Border>x</Border> .
+Nella colonna &quot;Tipo di oggetti del GeoDB&quot; l&#39;utente definisce il tipo di oggetti desiderato in  <Placeholder>product</Placeholder>  
+Inoltre al tipo di oggetti si possono assegnare degli attributi (attributi del file Shape oppure attributi con valore fisso).
+Ogni oggetto pu&#242; essere ripreso una sola volta. In caso di definizioni doppie vale l&#39;ordine delle schede e l&#39;ordine delle righe.
+
+<Success>
+Cliccando su  <Border>Fine</Border>  la mappatura creata pu&#242; essere salvata in un file.
+</Success>
+
+
+Nella tabella seguente &#232; fornita una panoramica delle mappature possibili:
+<table>
+<tr><th>Classe di oggetti Geodatabase</th>
+<th>Formati Esri-Shape (Gruppi)</th>
+</tr>
+<tr><td>Punto</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Multipoint</td>
+</tr>
+<tr><td>Superficie</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Polygon</td>
+</tr>
+<tr><td></td>
+<td>Multi-Point</td>
+</tr>
+<tr><td></td>
+<td>Multi-Polygon</td>
+</tr>
+<tr><td>Polilinea</td>
+<td>Polyline</td>
+</tr>
+<tr><td></td>
+<td>Polygon</td>
+</tr>
+<tr><td>Text</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Multi-Point</td>
+</tr>
+<tr><td>Simbolo di polilinea</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Multi-Point</td>
+</tr>
+<tr><td>Simbolo-2-Punti</td>
+<td>Multi-Point (esattamente due punti)</td>
+</tr>
+<tr><td>Simbolo-3-Punti</td>
+<td>Multi-Point (esattamente tre punti)</td>
+</tr>
+</table>

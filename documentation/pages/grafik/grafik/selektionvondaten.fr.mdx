@@ -1,0 +1,67 @@
+---
+title: "Sélection de données lors de l'utilisation des commandes"
+page: true
+---
+## S&#233;lection d&#39;objets lors de la modification
+
+Quand lors d&#39;une modification (e.g. copier) vous recevez une invite &#224; s&#233;lectionner un objet, proc&#233;dez de la mani&#232;re suivante:
+
+- Ex&#233;cution d&#39;une commande avec 1 objet:
+
+1. Cliquez avec la souris sur un objet 
+
+
+<Success>
+Quand lors de la s&#233;lection, plusieurs objets sont captur&#233;s &#224; cause de leur proximit&#233;s, une post-s&#233;lection vous est propos&#233;e: 
+
+
+<Image>\img\grafik\grafik\SelectionPostSelection.png$SelectionPostSelection</Image>
+S&#233;lectionnez l&#39;objet d&#233;sir&#233; depuis la liste.
+
+</Success>
+2. La commande avance automatiquement. (e.g. cet objet est copi&#233;) 
+
+
+
+
+
+
+ 
+
+- Ex&#233;cution d&#39;une commande avec plusieurs objets:
+
+1. D&#233;finissez une fen&#234;tre de s&#233;lection ou maintenez enfonc&#233;e la touche <Border>Ctrl</Border>  pour s&#233;lectionner plusieurs objets. Les objets s&#233;lectionn&#233;s sont mis en surbrillance avec une couleur.
+
+2. Terminez la s&#233;lection avec <Border>Enter</Border>  ou avec l&#39;option &quot;Finir&quot;.
+
+3. La commande est appliqu&#233;e aux objets s&#233;lectionn&#233;s.
+
+
+
+
+
+
+<Success>
+Certaines commandes ou fonctions permettent une s&#233;lection multiple par un zone  <Italic> polygonale </Italic> . Dans ce cas,  <Placeholder>product</Placeholder> met &#224; disposition dans la  <Italic> barre multifonctionnelle </Italic>  ou dans le  <Italic> menu contextuel </Italic>  deux possibilit&#233;s :
+
+1. <Bold> <Italic> Dessiner </Italic>  un nouveau polygone </Bold> 
+- 
+<Image>\img\grafik\grafik\MultiSelectDrawPolygon.png$MultiSelectDrawPolygon</Image>
+- Avec cette m&#233;thode vous pouvez saisir graphiquement un nombre illimit&#233; de points/coordonn&#233;es, qui vont &#234;tre joint en s&#233;quence pour cr&#233;er un polygone. Il n&#39;est pas n&#233;cessaire de fermer le polygone - <Placeholder>product</Placeholder> va le faire pour vous.
+
+
+
+
+2. <Bold> <Italic> S&#233;lectionner </Italic>  un polygone existant </Bold> 
+- 
+<Image>\img\grafik\grafik\MultiSelectPickPolygon.png$MultiSelectPickPolygon</Image>
+- Avec cette m&#233;thode vous pouvez s&#233;lectionner un <Italic> objet </Italic>  polygonale, comme par ex. une surface qui contourne la zone &#224; selectionner. Aussi des polylignes compos&#233;es de plus que 1 segment, qui repr&#233;sentent une g&#233;om&#233;trie convexe sont permises.
+
+
+
+
+
+
+Cette m&#233;thode est propos&#233;e par exemple pour [exporter les donn&#233;es](../datei/exportmanager) ou pour la  <Italic> [transformation Helmert 2D](../berechnen/transformationhelmert2d)</Italic> , elle permet de mieux d&#233;finir les objets d&#233;sir&#233;s.
+</Success>
+

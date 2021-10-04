@@ -1,0 +1,90 @@
+---
+title: "Etichettare i fondi"
+page: true
+---
+## Inserire le etichette dei proprietari sui fondi.
+ <Menu> Menu: [Dati / Etichetta i fondi] </Menu> 
+ <Menu> Cmd: [PlotAnnotateOwners] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+<Warning>
+Questo comando &#232; disponibile solo con il modulo &quot;Austria&quot;. 
+</Warning>
+
+
+
+1. Starten Sie den Befehl &#252;ber das Men&#252;.
+
+2. W&#228;hlen Sie die Grundst&#252;cksfl&#228;chen, welche Sie mit Grundst&#252;cksinformationen beschriften m&#246;chten, direkt in der Grafik.
+
+
+
+Alternativa
+
+
+1. Selektieren Sie die gew&#252;nschten Grundst&#252;cksfl&#228;chen in der Grafik.
+
+2. Rufen Sie den Befehl &#252;ber das Kontextmen&#252; auf der <Border>Rechten Maustaste</Border>  oder &#252;ber die Multifunktionsleiste auf.
+
+
+
+
+<Success>
+Sollten im Datenbestand keine Grundbuch- bzw. Eigent&#252;merdaten vorhanden sein, dann bietet Ihnen  <Placeholder>product</Placeholder> im Zuge dieses Befehls die M&#246;glichkeit, diese Daten  <Italic> ad hoc </Italic>  zu importieren.
+</Success>
+
+
+
+- Anschlie&#223;end zeigt <Placeholder>product</Placeholder> einen Dialog an, in dem Sie Einstellungen bez&#252;glich der Grundst&#252;cksbeschriftung vornehmen k&#246;nnen:
+
+-<Image>\img\grafik\beschriften\AnnotateParcelOwners.png$AnnotateParcelOwners</Image>
+
+
+
+
+<Success>
+
+- <Bold> Weitere Eigent&#252;mer zusammenfassen </Bold> : Hiermit steuern Sie, ob und ab wie vielen Miteigent&#252;mern lediglich ein Platzhaltertext beschriftet wird.
+
+
+- <Bold> max. Eigent&#252;mer </Bold> : Diese Anzahl von Eigent&#252;mern wird mit dem ausgew&#228;hlten Muster beschriftet.
+
+
+- <Bold> Ersatztext </Bold> : Dieser Text wird anstelle weiterer Eigent&#252;mer abschlie&#223;end ausgegeben.
+
+
+- <Bold> Adressen zusammenfassen </Bold> : Unterdr&#252;ck sich wiederholene Adressen bei unmittelbar aufeinander folgenden Eigent&#252;mern.
+
+
+
+
+</Success>
+
+
+- Nach Best&#228;tigung des Dialogs mittels <Border>Ok</Border>  werden die Grundst&#252;cksinformationen zu den gew&#228;hlten Grundst&#252;cksfl&#228;chen ermittelt und die Beschriftungen erzeugt.
+
+
+
+
+<Success>
+Sie k&#246;nnen die Zusammenstellung der Eigent&#252;merbeschriftung &#228;ndern, indem Sie eine  <Italic> Eigent&#252;mer-Vorlage </Italic>  verwenden. Diese kann in den  <Italic> [Programm-Einstellungen](../datei/programm-einstellungen5)
+ </Italic>  vorgegeben werden und wird dann in diesem Dialog standardm&#228;&#223;ig vorgeschlagen. Sie k&#246;nnen die  <Italic> aktuell </Italic>  verwendete Vorlage in diesem Dialog auch frei &#228;ndern oder auch  <Italic> keine </Italic>  Vorlage verwenden, indem Sie die Einstellung  <Bold> Default </Bold>  w&#228;hlen.
+</Success>
+
+<Success>
+Die Beschriftung der Eigent&#252;mer wird gem&#228;&#223; der ausgew&#228;hlten Eigent&#252;mer-Vorlage zusammengestellt. Falls Sie keine eigene Vorlage nutzen m&#246;chten, dann wird von  <Placeholder>product</Placeholder> ein Standardmuster verwendet.
+Mehr zu Vorlagen siehe Thema [Eigent&#252;mer-Vorlage](../daten/grundstueckebeschriften2)
+.
+</Success>
+
+
+<Warning>
+Um zu gew&#228;hrleisten, dass dieser Befehl korrekt arbeitet, ist es notwendig, dass f&#252;r die zu beschriftenden Fl&#228;chen-Objekttypen die f&#252;r die Beschriftung ma&#223;gebliche  <Italic> Objektyp-Eigenschaft </Italic>   <Bold> Fl&#228;chenbeschriftungsattribut </Bold>  in der Konfigurationsdatei definiert ist.
+
+<Info>
+
+<Image>\img\grafik\beschriften\OwnerAnnotationAttribute.png$OwnerAnnotationAttribute</Image>
+
+In diesem Beispiel soll ein Attribut namens &quot;Grundst&#252;cksbeschriftung&quot; die Fl&#228;chenbeschriftung enthalten. Der Wert dieses Attributes kann dann als  <Italic> &lt;Grundst&#252;cksbeschriftung&gt; </Italic>  in einem Text verwendet werden, um das Fl&#228;chenobjekt zu beschriften.
+</Info>
+</Warning>

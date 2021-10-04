@@ -1,0 +1,37 @@
+---
+title: "Mapping-Assistent Sachdaten aus ASCII Daten importieren"
+page: true
+---
+## Assistent f&#252;r das Erstellen einer Konvertierungstabelle f&#252;r den Import von Sachdaten aus ASCII Dateien
+
+F&#252;r den Import von Sachdaten aus ASCII Dateien in eine rmDATA Geodatabase steht ein Mapping-Assistent zur Verf&#252;gung, sodass Sachdaten aus ein oder mehreren ASCII-Dateien in eine Geodatabase &#252;bernommen werden k&#246;nnen.
+
+## Objekttyp
+Aus einer Liste aller Objekttypen der gew&#228;hlten GeoDB wird ein Objekttyp bestimmt, in welchen die Sachdaten importieren werden sollen:  <Border>Objekttyp Auswahl</Border> 
+Danach werden alle Attribute des gew&#228;hlten Objekttyps angezeigt. Aus diesen wird das Schl&#252;ssel-Attribut bestimmt, &#252;ber welches die Sachdatens&#228;tze in weiterer Folge zugeordnet werden:  <Border>ID Attribut Auswahl</Border><Image>\img\grafik\daten\mappingsachdatenobjekttyp.png$mappingsachdatenobjekttyp</Image>
+
+## Format-Typ
+Im n&#228;chsten Schritt wird festgelegt, ob die Daten der ASCII-Datei durch Trennzeichen getrennt werden, oder in Spalten mit fixer Breite angeordnet sind.
+Weiters kann eine vorhandene Kopfzeile beim Import ausgeklammert werden, und es k&#246;nnen auch Kommentare ausgenommen werden.<Image>\img\grafik\daten\mappingasciiformattyp.png$mappingasciiformattyp</Image>
+
+## Format-Konfiguration
+Durch Rechtsklick auf einen Spaltenkopf wird die Liste &quot;Attribute/Felder&quot; mit dem Attribut  <Border>ID (Text)</Border>  sowie alle anderen Konfigurationsattribute des gew&#228;hlten Objekttyps der GeoDB angeboten. Das ID-Feld ist ein Pflichtfeld und muss zugewiesen werden. Weiters muss zumindest ein weiteres Attribut zugewiesen werden, damit der Import durchgef&#252;hrt werden kann. 
+
+### Trennzeichen getrennt
+Es werden das Trennzeichen sowie das Trennzeichen f&#252;r Dezimalzahlen festgelegt.
+<Warning>
+Weiters muss auf jeden Fall die Spalte f&#252;r die ID und zumidest eine weitere Spalte f&#252;r den Import von Sachdaten  ausgew&#228;hlt werden! 
+Dazu wird die entsprechende Spalte mit der rechten Maustaste angeklickt und dem gew&#252;nschten Attribut zugewiesen.
+</Warning><Image>\img\grafik\daten\mappingsachdatenformatkonfigurationtrennzeichen.png$mappingsachdatenformatkonfigurationtrennzeichen</Image>
+
+### Feste Spaltenbreiten
+Es m&#252;ssen die Spalten definiert werden.
+<Warning>
+Weiters muss auf jeden Fall die Spalte f&#252;r die ID und zumidest eine weitere Spalte f&#252;r den Import von Sachdaten  ausgew&#228;hlt werden! 
+Dazu wird die entsprechende Spalte mit der rechten Maustaste angeklickt und dem gew&#252;nschten Attribut zugewiesen.
+</Warning><Image>\img\grafik\daten\mappingsachdatenformatkonfigurationfestespaltenbreiten.png$mappingsachdatenformatkonfigurationfestespaltenbreiten</Image>
+
+<Success>
+Nach  <Border>Fertigstellen</Border>  kann das erstellte Mapping in einer Datei gespeichert werden.
+</Success>
+

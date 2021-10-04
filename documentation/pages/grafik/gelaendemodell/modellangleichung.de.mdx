@@ -1,0 +1,182 @@
+---
+title: "Modellangleichung"
+page: true
+---
+## Ausgangsdaten mit unterschiedlicher Genauigkeit in einem Gel&#228;ndemodell vereinigen.
+<GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Konstruktion / Modellangleichung] </Menu> </GeoDesigner><GeoMapper> <Menu>Geländemodell / Modellangleichung</Menu> </GeoMapper>
+
+<Success>
+Diese Funktion dient beispielsweise dazu, um Datens&#228;tze aus  <Italic> ALS </Italic> -Befliegungen mit terrestrischen Messungen oder  <Italic> GPS </Italic> -Daten zusammenzuf&#252;hren. 
+</Success>
+
+<Warning>
+Voraussetzung ist dabei immer, dass der Datensatz mit der h&#246;heren Genauigkeit (z. B. Tachymeter) von den weniger pr&#228;zisen Daten (meist  <Italic> ALS </Italic> -Daten) eingeschlossen wird. Die Funktion ist nicht dazu geeignet, um mehrere Inselmodelle zu einem Modell zusammenzuf&#252;gen.
+</Warning>
+
+
+
+1. Starten Sie den Befehl
+
+2. W&#228;hlen Sie im Assistenten zur Modellangleichung die Modell-Datens&#228;tze aus, die Sie vereinigen m&#246;chten. Sie k&#246;nnen w&#228;hlen zwischen
+
+- <Italic> ASCII </Italic> -Datei (CSV mit XYZ/ENH Zeilen od. <Italic> ArcInfo ASCII-Grid </Italic> 
+- Modelloberfl&#228;che (jedes vorhandene, berechnete Modell)  
+
+
+<GeoDesigner>
+<Image>\img\grafik\geländemodell\DtmMatchingWizard1.png$DtmMatchingWizard1</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\geländemodell\GeoMapper.DtmMatchingWizard1.png$GeoMapper.DtmMatchingWizard1</Image>
+</GeoMapper>
+
+
+3. Beim Hinzuf&#252;gen der Datens&#228;tze in die Auswahl muss eine <Italic> Priorit&#228;t </Italic>  vergeben werden. Priorit&#228;t muss jeweils  dem Datensatz mit der h&#246;heren Pr&#228;zision gegeben werden. Auf diese Weise entscheidet das Programm, welche Punkte f&#252;r die Angleichung relevant sind.
+
+
+<Success>
+Es muss immer mindestens 1 Datensatz mit Priorit&#228;t und 1 ohne Priorit&#228;t geben, damit der Assistent fortfahren kann! Standardm&#228;&#223;ig bekommt der erste hinzugef&#252;gte Datensatz diese zugesprochen.
+
+</Success>
+- Die priorisierte Datenquelle wird immer mit einem &quot;Gl&#252;hbirnen&quot;-Symbol (<Image>\img\grafik\geländemodell\DtmMatchingWizardPriorityOn.png$DtmMatchingWizardPriorityOn</Image>) dargestellt.
+
+- Sie k&#246;nnen die Priorit&#228;t an dieser Stelle jederzeit &#196;ndern, indem Sie den Button<Image>\img\grafik\geländemodell\DtmMatchingWizardPrioritizeButton.png$DtmMatchingWizardPrioritizeButton</Image> ( <Italic> Priorit&#228;t der Datenquelle &#228;ndern </Italic> ) in der entsprechenden Zeile klicken oder die Datenquelle doppelklicken.
+
+- Datens&#228;tze k&#246;nnen jederzeit mit dem Button<Image>\img\grafik\geländemodell\DtmMatchingWizardRemoveButton.png$DtmMatchingWizardRemoveButton</Image> wieder entfernt werden.
+
+
+
+4. Sobald Sie mindestens zwei Datenquellen f&#252;r die Angleichung ausgew&#228;hlt und priorisiert haben, gibt der Assistent den Button <Border>Weiter</Border>  frei.
+
+- Solange keine Priorit&#228;t vergeben wurde, zeigt der Assistent eine entprechende Fehlermeldung an.
+
+
+<GeoDesigner>
+<Image>\img\grafik\geländemodell\DtmMatchingWizardNoPriorityError.png$DtmMatchingWizardNoPriorityError</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\geländemodell\GeoMapper.DtmMatchingWizardNoPriorityError.png$GeoMapper.DtmMatchingWizardNoPriorityError</Image>
+</GeoMapper>
+
+
+5. Klicken Sie auf <Border>Weiter</Border>  um mit dem n&#228;chsten Schritt des Assistenten fortzufahren.
+
+6. Das Programm analysiert die Eingangsdaten und zeigt danach eine &#220;bersicht &#252;ber die Datens&#228;tze:
+
+
+<GeoDesigner>
+<Image>\img\grafik\geländemodell\DtmMatchingWizardPreview.png$DtmMatchingWizardPreview</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\geländemodell\GeoMapper.DtmMatchingWizardPreview.png$GeoMapper.DtmMatchingWizardPreview</Image>
+</GeoMapper>
+ 
+<Success>
+Die Massendaten werden als 
+ <Italic> Shading Image
+ </Italic>  dargestellt, w&#228;hrend die priorisierten Punkte als Kreissymbole erscheinen, um Ihnen einen &#220;berblick der zu vereinigenden Modelle zu schaffen.
+
+</Success>
+
+<Success>
+An dieser Stelle k&#246;nnen Sie mittels des Buttons 
+
+<Image>\img\grafik\geländemodell\DtmMatchingWizardAreaSelectionButton.png$DtmMatchingWizardAreaSelectionButton</Image> eine r&#228;umliche Einschr&#228;nkung vornehmen, um sp&#228;ter nur Punkte innerhalb dieses Bereichs zu &#252;bernehmen. N&#228;heres zur Bereichsauswahl siehe 
+[Details zur Bereichsauswahl](../gelaendemodell/modellangleichung2)
+.
+
+</Success>
+7. Auf der folgenden Seite w&#228;hlen Sie aus, wie Sie die Modelle vereinigen m&#246;chten und welchen Modell Sie das Ergebnis zuweisen wollen. Optional k&#246;nnen die Ergebnisdaten auch mittels Punktreduktion ausged&#252;nnt werden, um die Datenmenge <Italic> ohne  signifikanten Informationsverlust </Italic>  zu verringern. Diese Option ist standardm&#228;&#223;ig aktiviert. Um zus&#228;tzlich eine Analysegrafik der Reduktion zu erhalten, aktivieren Sie bitte die Option <Menu>Ergebnisanalyse</Menu> . Standardm&#228;&#223;ig ist diese nicht aktiviert, da dies je nach Modellgr&#246;&#223;e eine entsprechend l&#228;ngere Laufzeit bedeutet.
+
+
+<GeoDesigner>
+<Image>\img\grafik\geländemodell\DtmMatchingWizardChooseMatching.png$DtmMatchingWizardChooseMatching</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\geländemodell\GeoMapper.DtmMatchingWizardChooseMatching.png$GeoMapper.DtmMatchingWizardChooseMatching</Image>
+</GeoMapper>
+8. W&#228;hlen Sie aus den verf&#252;gbaren Methoden
+
+- <Bold> Verschiebung: </Bold>  Das ALS-Modell wird in Lage und H&#246;he so verschoben, sodass es sich bestm&#246;glich an das terrestrische Modell angleicht.
+
+- <Bold> Flie&#223;ender &#220;bergang: </Bold>  Zwischem dem ALS- und dem terrestrischen Modell wird ein einem &#220;bergangsbereich ein flie&#223;ender &#220;bergang gerechnet, sodass keine Stufe an der Modellgrenze entsteht. Das ALS-Modell wird nicht in Lage und H&#246;he ver&#228;ndert.
+
+- <Bold> Zusammenf&#252;hrung: </Bold>  Wie bei der Methode <Italic> Verschiebung </Italic>  wird das ALS-Modell in Lage und H&#246;he verschoben, jedoch werden die ALS-Daten nicht ausgeschnitten  (siehe auch unten bei &quot;Offset&quot;), d.h. s&#228;mtliche Daten aus beiden verwendeten Modellen werden kombiniert.
+
+
+
+9. Offset: Bei den Methoden <Italic> Verschiebung </Italic>  und <Italic> Flie&#223;ender &#220;bergang </Italic>  werden die Daten aus dem ALS-Modell dort ausgeschnitten, wo terrestrische Daten vorliegen. Beim Ausschneiden wird die Modellgrenze der terrestrischen Daten wird um den <Italic> Offset </Italic>  nach au&#223;en verschoben, soda&#223; die ALS- und terrestrischen Daten nicht unmittelbar aneinander grenzen.
+
+
+<Success>
+Bei schmalen, langen terrestrischen Modellen kann es sein, dass der automatisch berechnete Offset zu gro&#223; ist. Speziell in diesem Fall sollten Sie das H&#228;kchen bei &quot;offset automatisch&quot; entfernen und den zu verwendenden Offset angegeben.
+
+</Success>
+10. W&#228;hlen Sie das Modell aus, welchem das Ergebnis zugewiesen werden soll. Soll ein neues Modell erstellt werden, dann muss dessen Name eindeutig sein. 
+
+11. W&#228;hlen Sie den Punkttyp bzw. den Typ der zu verwendenden Punktwolke lt. Konfiguration aus, die f&#252;r die Punkte des jeweils priorisierten bzw. nicht priorisierten Datensatzes zur Darstellung verwendet werden. Standardm&#228;&#223;ig ist die Punktwolke und <Italic> &lt;kein Typ&gt; </Italic>  gew&#228;hlt, d. h. die Punkte haben keine besondere grafische Auspr&#228;gung. Soll eine neues Punktwolke erstellt werden, dann muss dessen Name eindeutig sein. 
+
+
+<Warning>
+Die Anwendung dieser Typen ist nicht in jedem Fall m&#246;glich, z. B. wenn eine anschlie&#223;ende Punktausd&#252;nnung erfolgt bzw. wenn ein 
+ <Italic> &quot;Flie&#223;ender &#220;bergang&quot;
+ </Italic>  modelliert wird, da in diesen F&#228;llen Punkte neu generiert werden, die keinem Eingangs-Datensatz zuzuordnen sind.
+
+</Warning>
+ Eine entsprechende Meldung zeigt der Assistent im Fehlerfall an. Sobald Ihre Eingaben vollst&#228;ndig sind, gibt der Assistent wiederum den  <Border>Weiter</Border> -Button frei und Sie k&#246;nnen mit der Angleichung fortfahren.
+
+12. W&#228;hrend das Programm die Angleichung berechnet, wird vom Assistenten ein Ladekreis ( <Italic> Loading Circle </Italic> ) angezeigt.
+
+
+<GeoDesigner>
+<Image>\img\grafik\geländemodell\DtmMatchingWizardLoadingCircle.png$DtmMatchingWizardLoadingCircle</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\geländemodell\GeoMapper.DtmMatchingWizardLoadingCircle.png$GeoMapper.DtmMatchingWizardLoadingCircle</Image>
+</GeoMapper>
+
+<Success>
+W&#228;hrend dessen steht es Ihnen jederzeit frei, die Verarbeitung abzubrechen, indem Sie auf den Button 
+ <Border>Abbrechen</Border>  klicken. In diesem Fall wird der Assistent sofort beendet und es gibt keine weiteren Auswirkungen auf die bearbeitete Projektdatei.
+
+</Success>
+13. Nach erfolgter Berechnung zeigt der Assistent das Ergebnis wiederum in Form eines <Italic> Shading Images </Italic>  an und bietet einen &#220;berblick &#252;ber die Angleichungsstatistik sowie ggf. &#252;ber eine erfolgte Punktreduktion.
+
+
+<GeoDesigner>
+<Image>\img\grafik\geländemodell\DtmMatchingWizardFinalPage.png$DtmMatchingWizardFinalPage</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\geländemodell\GeoMapper.DtmMatchingWizardFinalPage.png$GeoMapper.DtmMatchingWizardFinalPage</Image>
+</GeoMapper>
+ 
+<Warning>
+Die Qualit&#228;t der Grafik h&#228;ngt sehr von den Ausma&#223;en und der Dichte der Eingangsdaten ab. Bereiche mit zu geringer Dichte k&#246;nnen sich als &quot;L&#246;cher&quot; bemerkbar machen.
+
+</Warning>
+14. Klicken Sie auf <Border>Fertigstellen</Border> , um das Ergebnis dem gew&#228;hlten Modell zuzuweisen. Es ist Ihnen an dieser Stelle aber immer noch m&#246;glich, das Ergebnis zu verwerfen, indem Sie <Border>Abbrechen</Border>  w&#228;hlen oder einzelne Seiten zur&#252;ck zu springen, um Einstellungen zu ver&#228;ndern.
+
+
+
+
+<Success>
+ <Italic>  <Bold> Begriffserkl&#228;rungen: </Bold> </Italic>
+
+- <U> Standardabweichung </U> : Die Standardabweichung ist ein Ma&#223; f&#252;r die Streubreite der Werte eines Merkmals rund um dessen Mittelwert (arithmetisches Mittel). Vereinfacht gesagt, ist die Standardabweichung die durchschnittliche Entfernung aller gemessenen Auspr&#228;gungen eines Merkmals vom Durchschnitt.  
+
+
+- <U> Residuum </U> : Die Bezeichnung &quot;Residuum&quot; definiert den Anteil der Variabilit&#228;t, der durch ein gegebenes Modell nicht erkl&#228;rt werden kann. Residuen werden durch Subtraktion der Modellsch&#228;tzungen von den eigentlichen Daten berechnet. 
+
+
+
+
+</Success>
+ 
+
+<Success>
+Am Ende der Angleichung wird das Ergebnismodell im Protokoll dokumentiert. Auf diese Weise sind die Eingangsdaten und Statistiken jederzeit nachvollziehbar abgelegt.
+</Success>
+
+<Warning>
+Nach Fertigstellung des Befehls ist kein UNDO <Italic>  m&#246;glich. </Italic> 
+</Warning>

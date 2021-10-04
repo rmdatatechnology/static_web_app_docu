@@ -1,0 +1,126 @@
+---
+title: "Datenbankschema anlegen"
+page: true
+---
+## Anlegen eines neuen Datenbankschemas
+
+F&#252;r das Anlegen der notwendigen Tabellen in einem neuen Datenbankschema steht ein Tool zur Verf&#252;gung, welches von jedem Client mit darauf installiertem rmDATA GeoDesktop aufgerufen werden kann.
+
+## Voraussetzungen in der Datenbank:
+In der Datenbank sind folgende Voraussetzungen notwendig:
+### Oracle
+
+-  leeres Schema
+
+-  ben&#246;tigte Rollen:
+
+-  CONNECT
+
+-  RESOURCE
+
+-  UNLIMITED TABLESPACE
+
+-  CREATE TYPE
+
+-  CREATE ANY VIEW
+
+
+
+- Auf das neue Schema muss folgendes Statement abgesetzt werden:
+
+- GRANT EXECUTE ON SYS.DBMS_LOCK TO &lt;Schema&gt;;
+
+
+
+-  Verbindungsdaten:
+
+- Hostname
+
+- Servicename
+
+- Benutzername
+
+- Passwort
+
+
+
+
+
+
+### SQL-Server
+
+-  leere Datenbank mit der Option &quot;IS READ_COMMITTED_SNAPSHOT&quot; auf &quot;ON&quot;
+
+-  Datenbankzugriff &#252;ber TCP/IP mit fix definiertem Port (z.B. 1433, Achtung Firewall!)
+
+-  Auf die Datenbank muss &#252;ber SQL Server Authentication zugegriffen werden k&#246;nnen.
+
+- User mit den Rollen &lt;public&gt; und &lt;db_owner&gt;
+
+
+
+Mit Hilfe des folgenden SQL-Befehls kann der Port ermittelt werden, &#252;ber welchen auf den SQL-Server zugegriffen wird:
+
+```
+xp_readerrorlog 0, 1, N&#39;Server is listening on
+```
+
+Falls beim Neuanlegen eines Projektes folgende Fehlermeldung angezeigt wird:
+ <Menu>The EXECUTE permission was denied on the object 'rm_type_sysprj_settings_list', database 'pladok_online', schema 'dbo'.</Menu> 
+wird folgendes Recht auf der Datenbank ben&#246;tigt:
+
+- EXECUTE auf alle User-Defined-Table-Types.
+
+
+
+Dieses Recht kann vom Admin mit folgendem DB-Skript gesetzt werden:
+<Info>
+
+DECLARE @user	sysname = &#39;your_user&#39; -- set username here!!!
+DECLARE @name	sysname
+DECLARE @cmd	NVARCHAR(4000)
+
+DECLARE usertypes CURSOR LOCAL FAST_FORWARD FOR
+SELECT name FROM sys.types WHERE is_user_defined = 1 AND UPPER(name) LIKE &#39;RM_TYPE%&#39;
+OPEN usertypes
+FETCH usertypes INTO @name
+WHILE @@FETCH_STATUS = 0
+BEGIN		
+	SET @cmd = &#39;GRANT EXECUTE ON TYPE::&#39; + @name + &#39; TO [&#39; + @user + &#39;]&#39;
+	EXEC (@cmd)
+	FETCH usertypes INTO @name
+END	
+CLOSE usertypes
+DEALLOCATE usertypes	
+</Info>
+
+
+-  Verbindungsdaten:
+
+- Hostname
+
+- Datenbankname
+
+- Benutzername
+
+- Passwort
+
+
+
+
+
+
+## GeoDBManager
+Der GeoDBManager wird mit folgender Datei ge&#246;ffnet:
+ <Menu>C:\Program Files\rmDATA\GeoDesktop\EnterpriseGeoDBManager.exe</Menu> 
+
+Nach dem &#214;ffnen des GeoDBManagers sind im Register &quot;Verbindung&quot; die Verbindungsdaten anzugeben:<Image>\img\grafik\fachschaleenterprisegeodatabase\verbindungoracle.png$verbindungoracle</Image><Image>\img\grafik\fachschaleenterprisegeodatabase\verbindung sqlserver.png$verbindung sqlserver</Image>
+
+Wird der Benutzername eines leeren Schemas bzw. einer leeren Datenbank angegeben, wird folgende Meldung ausgegeben:<Image>\img\grafik\fachschaleenterprisegeodatabase\datenbankleer.png$datenbankleer</Image>
+Mit JA wird auf das Register &quot;Scripts durchf&#252;hren&quot; gewechselt und die entsprechenden Scripts zum Anlegen der Tabellen in jeweils einem Register angezeigt. Im Dialog ist unter &quot;Version&quot; ein Minus-Zeichen eingetragen, da die Datenbank noch leer ist.<Image>\img\grafik\fachschaleenterprisegeodatabase\verbindenoracle.png$verbindenoracle</Image>
+
+Die angebotenen Scripts k&#246;nnen vom System-Adiminstrator gegebenenfalls gepr&#252;ft werden.
+Mit  <Border>Durchführen</Border>  werden alle Scripts automatisch der Reihe nach ausgef&#252;hrt und das Ergebnis im Fenster unterhalb der Scripts protokolliert.
+Wurden alle Scripts erfolgreich ausgef&#252;hrt, steht ab sofort die Datenbank f&#252;r GeoDesktop zur Verf&#252;gung.
+
+

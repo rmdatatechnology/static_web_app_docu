@@ -1,0 +1,62 @@
+---
+title: "Importation de données depuis fichiers NAS (Société Burg)"
+page: true
+---
+Description]D&#233;finition des param&#232;tres sp&#233;cifiques pour l&#39;importation NAS.[/Description]
+ <Menu> Menu: [Fichier / Manager d'importation] </Menu> 
+
+<Warning>
+Cette commande n&#39;est disponible que dans la configuration &quot;Allemagne&quot;. 
+</Warning>
+
+
+Auf den weiteren Einstellungsseiten k&#246;nnen NAS Import spezifische Einstellungen gesetzt werden.
+
+<Success>
+Der Import von NAS-Dateien verwendet eine Komponente, f&#252;r die Sie eine Lizenz bei der Firma Burg erwerben m&#252;ssen. F&#252;hren Sie vor dem ersten Import einmal folgende Schritte durch:
+
+-  Installieren Sie den NAS-Datenimport (erh&#228;ltlich im rmDATA Supportcenter)
+
+
+-  Kopieren Sie die Lizenzdatei von Burg in das Verzeichnis <Menu>Programmverzeichnis\Transfers\</Menu> .
+
+
+
+
+</Success>
+
+
+### Einstellungen
+Hier k&#246;nnen Sie weitere Import Einstellungen setzen. Folgende Einstellungen sind obligatorisch:
+
+- <Bold> NAS Einstellungen: </Bold>  Da die Darstellung der Daten l&#228;nderspezifisch ist, muss hier das jeweilige Bundesland ausgew&#228;hlt werden, f&#252;r welches die Daten &#252;bertragen werden. Die Einstellung der Gitterlinienpunkte wiederum beeinflusst die Punktnummerndarstellung. Weiters muss angegeben werden, welche Modellarten importiert werden und ob Daten aus einem bestimmten Koordinatensystem &#252;bernommen werden sollen (wird nur angeboten, wenn in den Basisdaten unterschiedliche Koordinatensysteme definiert sind).
+
+
+
+Alle weiteren Einstellungen sind optional:
+
+- <Bold> Konfliktaufl&#246;sung: </Bold> Punkt- und Fl&#228;chenbezeichnungen m&#252;ssen eindeutig sein. Es stehen folgende Optionen bei Namensgleichheit  zur Verf&#252;gung:
+
+- <Italic> Umbenennen </Italic> : Die importiereten Punkte und Fl&#228;chen werden mit dem Pr&#228;fix bzw. Suffix umbenannt. Die bestehenden Objekte bleiben unver&#228;ndert erhalten.
+
+- <Italic> Vorrang bestehender Punkt </Italic> : Der in der Datei existierende Punkt bleibt bestehen, das Objekt aus der Quelle wird ignoriert. Das Verhalten ist das selbe wie bei <Italic> Umbenennen </Italic>  ohne Angabe eines Pr&#228;fix bzw. Suffix.
+
+- <Italic> Vorrang neuer Punkt </Italic> : Der neu importierte Punkt ersetzt den bestehenden Punkt.
+
+- <Italic> Interaktiv l&#246;sen </Italic> : Sie erhalten einen Kollisionsdialog, in dem Sie f&#252;r jeden Punkt entscheiden, ob die Punkte aus GeoMapper oder aus der Quelle verwendet werden sollen. 
+
+
+<Warning>
+Bei gleichnamigen Fl&#228;chen werden die importierten Fl&#228;chen mit dem Pr&#228;fix bzw. Suffix umbenannt. Sind die beiden Werte leer, wird die Fl&#228;che nicht importiert. Es bleibt die alte Fl&#228;che erhalten.
+
+</Warning>
+
+
+- <Bold> Protokollierung: </Bold>  Legt fest, ob ein detailliertes Protokoll f&#252;r die importierten Objekte generiert werden soll, oder nur eine Zusammenfassung.
+
+- <Bold> Region importieren: </Bold>  Legt fest, ob bei Punkten das Namensfeld <Italic> Region </Italic>  importiert oder ignoriert werden soll.
+
+
+
+
+Dr&#252;cken Sie  <Border>Fertigstellen</Border> , um den Import abzuschlie&#223;en. Es wird ein Dialog ge&#246;ffnet, der den Status des Imports anzeigt.

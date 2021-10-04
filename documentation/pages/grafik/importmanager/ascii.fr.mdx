@@ -1,0 +1,65 @@
+---
+title: "Importer les points depuis les fichiers ASCII"
+page: true
+---
+## Param&#232;tres sp&#233;cifiques pour l&#39;importation Ascii.
+ <Menu> Menu: [Fichier / Gestionnaire d'importation] </Menu> 
+
+Sur d&#39;autres pages de param&#233;trisation, vous pouvez d&#233;finir des param&#232;tres sp&#233;cifiques pour le format Ascii.
+
+### Mappage
+Le mappage des colonnes, du fichier Ascii, avec les attributs/champs dans  <Placeholder>product</Placeholder> se fait avec l&#39;aide d&#39;une table de conversion.<Image>\img\grafik\importmanager\DatenImportieren.png$DatenImportieren</Image>
+
+
+1. S&#233;lectionnez un fichier de mappage:
+
+- Depuis un dossier pr&#233;d&#233;fini<Image>\img\grafik\importmanager\PfeilAuswahl.png$PfeilAuswahl</Image>: ici vous trouvez les fichiers de mappage, install&#233;s avec <Placeholder>product</Placeholder> ou un des modules resp. les fichiers de mappage enregistr&#233;s dans un 
+[dossier de soci&#233;t&#233;](../datei/programm-einstellungen6)
+ centralis&#233;.
+
+- Depuis un dossier choisi avec le bouton <Border>...</Border> : quand vous cr&#233;ez vos propres fichiers de mappage, ils se trouvent normalement directement dans un dossier de projet.
+
+
+
+
+
+Alternative
+ En cliquant sur le bouton  <Border>Assistant ...</Border>  vous cr&#233;ez une nouvelle table de conversion. 
+Pour plus d&#39;informations lisez [ici...](../datei/importmanager3)
+
+
+<Warning>
+Si plusieurs fichies ASCII sont s&#233;lectionn&#233;s, ils doivent poss&#233;der la m&#234;me structure!
+</Warning>
+
+
+### Param&#232;tres
+Ici vous pouvez d&#233;finir d&#39;autres param&#232;tres d&#39;importation, ces param&#232;tres sont optionnels.
+
+- <Bold> R&#233;solution de conflits: </Bold> Les noms des points et des surfaces doivent &#234;tre univoques. En cas d&#39;&#233;galit&#233; de nom, les options suivantes sont disponibles:
+
+- <Italic> Renommer </Italic> : Les points et les surfaces import&#233;s sont renomm&#233;s avec un pr&#233;fixe resp. un suffixe. Les objet existants restent inchang&#233;s.
+
+- <Italic> Priorit&#233; au point existant </Italic> : Les points existants dans le fichier restent inchang&#233;s, l&#39;objet depuis la source est ignor&#233;. Le comportement est comme pour <Italic> Renommer </Italic>  mais sans ajout d&#39;un pr&#233;fixe resp. suffixe.
+
+- <Italic> Priorit&#233; au nouveau point </Italic> : Le nouveau point import&#233; remplace le point existant.
+
+- <Italic> Resoudre int&#233;ractivement </Italic> : Un dialogue de collision s&#39;ouvre, o&#249; vous pouvez d&#233;cider, pour chaque point, si utiliser les points depuis <Placeholder>fullproduct</Placeholder> ou depuis la source. 
+
+
+
+
+
+<Warning>
+En cas de surfaces avec nom identique, les surfaces import&#233;es sont renomm&#233;es avec un pr&#233;fixe resp. suffixe. Quand les deux valeurs sont vides, la surface n&#39;est pas import&#233;e. La surface existante est gard&#233;e.
+</Warning>
+
+
+- <Bold> Protocole: </Bold>  Il d&#233;finit si pour les objets import&#233;s, un protocole d&#233;taill&#233; ou un r&#233;capitulatif doit &#234;tre g&#233;n&#233;r&#233;.
+
+- <Bold> Importer Region: </Bold>  Il d&#233;finit si le champ de nom <Italic> Region </Italic>  des points doit &#234;tre import&#233; ou ignor&#233;.
+
+
+
+
+Cliquez sur  <Border>Terminer</Border> , pour terminer l&#39;importation et ouvrir un dialogue qui montre l&#39;&#233;tat de l&#39;importation.

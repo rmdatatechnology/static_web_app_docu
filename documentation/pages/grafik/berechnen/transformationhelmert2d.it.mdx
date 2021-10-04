@@ -1,0 +1,68 @@
+---
+title: "Trasformazione (Helmert 2D)"
+page: true
+---
+## Esecuzione di una trasformazione Helmert 2D della banca dati completa o parziale.
+ <Menu> Menu: [Calcolare / Trasformazione] </Menu> 
+ <Menu> Cmd: [ProjectHelmertTransform] </Menu> 
+
+ <Placeholder>geodgm</Placeholder><Image>\img\grafik\berechnen\Helmert2DTransformation.png$Helmert2DTransformation</Image>
+
+
+1. Avviare il comando.
+
+2. <Placeholder>product</Placeholder> mostra il dialogo come da figura in alto, per la scelta dei parametri di trasformazione.
+
+3. Inserire i parametri della trasformazione Helmert 2D.
+
+4. Avviare il calcolo con <Border>Ok</Border> .
+
+5. Selezionare gli oggetti da trasformare:
+
+1. [Selezione sulla grafica](../grafik/selektionvondaten)
+ oppure
+
+2. Tutti gli oggetti del GeoDB
+
+
+
+
+
+
+Alternativa
+:  <Bold> Calcolo dei parametri di trasformazione </Bold> 
+
+1. Selezionare le coppie di punti d&#39;appoggio ed aggiungerle alla lista cliccando su <Border>+</Border> . I parametri sono cos&#236; determinati automaticamente.
+
+2. Modifica dei parametri:
+
+- Mantenere la rotazione a 0 gon: Non vistare la casella della Rotazione.
+
+- Mantenere la scala 1:1. Non vistare la casella della Scala.
+
+- Modifica manuale dei parametri: Gli scarti delle coppie di punti d&#39;appoggio sono rideterminate in base ai parametri modificati. Per ritornare ai parametri originali, cliccare sul bottone <Border>Ricalcola</Border> .
+
+
+
+
+
+
+Alternativa
+:  <Bold> Importare i parametri di trasformazione </Bold> 
+
+1. Cliccare sul bottone <Border>Apri</Border> .
+
+2. Selezionare il file con i parametri di trasformazione.
+
+3. Dopo aver scelto il file, le trasformazioni in esso contenute sono visualizzate nei campi di editazione e possono essere selezionate.
+
+
+
+
+ <Border>Salva</Border> 
+Con questo comando, i parametri di trasformazione correntemente impostati, sono salvati in un file.
+
+ <Bold> Struttura del file con i parametri di trasformazione: </Bold> 
+&#39;Nome         |102  PtoRot(Est) PtoRot(Nord) Spostamento(Est) Spostamento(Nord) Rotazione		Scala       Commento
+Esempio|102 13.0950000000000 93.4950000000000 510208.9950000000000 423062.8299999999600 392.6195152961504 1.0001614448183
+

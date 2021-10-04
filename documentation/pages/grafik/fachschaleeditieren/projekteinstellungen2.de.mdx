@@ -1,0 +1,50 @@
+---
+title: "Projekteinstellungen Allgemein"
+page: true
+---
+## Allgemeine Projekteinstellungen<Image>\img\grafik\fachschaleeditieren\Projekteinstellung_allgemein.png$Projekteinstellung_allgemein</Image>
+
+ <Bold> Projektvorlage </Bold> 
+
+In der Projektvorlage k&#246;nnen alle Projekteinstellungen vordefiniert werden. W&#228;hlen Sie beim Anlegen einer Datei eine Projektvorlage aus. Unter anderem sind hier auch die zu ladenden Konfigurationen angegeben.
+
+<Warning>
+Wird die Projektvorlage in einer bestehenden Datei gewechselt, werden alle Einstellungen mit jenen aus der neuen Projektvorlage &#252;berschrieben.
+</Warning>
+
+
+ <Bold> Projekteinstellungen </Bold> 
+
+Hier k&#246;nnen Sie allgemeine Attribute f&#252;r die Datenbank vergeben. Diese Attribute werden im Programm nicht verwendet und dienen nur der Information.
+
+ <Bold> Koordinatensystemeinstellungen </Bold> 
+
+In diesem Bereich kann das Koordinatensystem gesetzt werden. Damit verbunden k&#246;nnen auch die Standardwerte f&#252;r H&#246;he, mittlerer Erdradius und Reduktionsfaktor ver&#228;ndert werden. Au&#223;erdem l&#228;sst sich der Schwerpunkt durch Klick auf den Button direkt in der Grafik bestimmen, alternativ kann auch ein Wert eingegeben werden.
+
+<Success>
+Der  <Italic> Mittlere Erdradius </Italic>  wird nach Auswahl eines Koordinatensystems automatisch mit dem dort definierten Wert vorbelegt. Sie k&#246;nnen diesen Wert nachtr&#228;glich manuell &#228;ndern, sobald Sie jedoch eine &#196;nderung in der Koordinatensystem-Auswahl vornehmen, wird diese Einstellung wieder mit dem vordefinierten Wert des neuen Koordinatensystems &#252;berschrieben.
+</Success>
+
+
+<Success>
+Der  <Italic> Reduktionsfaktor </Italic>  wird automatisch aus den &#252;brigen Koordinatensystemeinstellungen errechnet. Sie k&#246;nnen diesen Wert nachtr&#228;glich manuell &#228;ndern, sobald Sie jedoch danach eine der daf&#252;r ma&#223;geblichen Einstellungen (Koordinatensystem, Schwerpunkt, H&#246;he, Mittlerer Erdradius) &#228;ndern, wird der Reduktionsfaktor neu berechnet.
+</Success>
+
+<Warning>
+Der Reduktionsfaktor wird auf 1 gesetzt, wenn das Koordinatensystem der Geodatabase vom Koordinatensystem des Geodokuments, in welchem editiert wird, abweicht. 
+</Warning>
+
+<Warning>
+Manche Koordinatensysteme setzten das Vorhandensein einer sog.  <Italic> Grid </Italic> -Datei (Gitter) voraus, welche die  Transformationsparameter enth&#228;lt. Sollte die dem Koordinatensystem zugeordnete  <Italic> Grid </Italic> -Datei fehlen, dann zeigt  <Placeholder>product</Placeholder> eine entsprechende Fehlermeldung an und verhindert die Best&#228;tigung der Auswahl, da eine Transformation mit falschen Parametern zu grob abweichenden Ergebnissen f&#252;hren kann.
+
+
+<Image>\img\grafik\fachschaleeditieren\gridMissingError.png$gridMissingError</Image>
+
+Wenn Sie die Grid-Datei erworben haben, dann legen Sie die Datei ab im Verzeichnis  <Menu>C:\ProgramData\rmDATA\GeoDesktop\Settings\CRS\</Menu> 
+Die Grid-Datei muss im bin&#228;ren Format ntv2 vorliegen.
+</Warning>
+
+
+ <Bold> Projektkonfigurationen </Bold> 
+
+Erm&#246;glicht das Laden, Entladen, Umreihen, Exportieren und Aktualisieren der Projektkonfigurationen. 

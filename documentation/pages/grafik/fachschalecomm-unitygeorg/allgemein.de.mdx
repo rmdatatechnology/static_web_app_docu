@@ -1,0 +1,419 @@
+---
+title: "Allgemein"
+page: true
+---
+## Schnittstelle zum Produkt &quot;GeOrg&quot; der Firma Comm-Unity
+
+&#220;ber die Fachschale werden Daten mit dem Produkt &quot;GeOrg&quot; der Firma Comm-Unity ausgetauscht sowie diverse Prozesse und Workflows abgewickelt. Es k&#246;nnen Grundst&#252;cke, Adressen oder beliebige andere Objekte im GIS gesucht werden. Weiters k&#246;nnen auf vorgegebenen Koordinaten Punktobjekte erzeugt und auf diese im GIS gezoomt werden. Zu einem Grundst&#252;ck k&#246;nnen die Anrainer im GIS ermittelt und zur&#252;ck nach GeOrg &#252;bergeben werden.
+Werden aktuelle Eigent&#252;mer- oder Adressinformationen von GeOrg bereitgestellt, k&#246;nnen diese im GIS abgerufen werden.
+
+## Fachschale aktivieren
+Das Aktivieren der Fachschale erfolgt in den [Dokumenteigenschaften](../einstellungen/dokumenteneinstellungen)
+
+
+## Einstellungen zur Fachschale
+Damit der Datenaustausch zwischen GeOrg und  <Placeholder>product</Placeholder> funktioniert, m&#252;ssen in beiden Produkten gemeinsame Ordner f&#252;r den Dateiaustausch definiert werden. In diesen werden die Dateien f&#252;r den Datenaustausch gelesen und geschrieben.
+Die gemeinsamen Ordner werden &#252;ber das  <Menu> Menu: [Dokument - Programmeinstellungen - GeOrg] </Menu>  angegeben:<Image>\img\grafik\fachschalecomm-unitygeorg\georgEinstellungen.png$georgEinstellungen</Image>
+
+### Pfad f&#252;r den Austausch von Objekten
+In dem angegebenen Ordner gibt es drei Unterordner:
+
+- Export: Ordner f&#252;r Daten, welche von GeOrg geschrieben und von <Placeholder>product</Placeholder> gelesen werden
+
+- Import: Ordner f&#252;r Daten, welche von <Placeholder>product</Placeholder> geschrieben und von GeOrg gelesen werden
+
+- Metadaten: Ordner f&#252;r Metadaten (z.B. Liste mit Transaktionscodes,...)
+
+
+
+### Pfad f&#252;r den Austausch von Adress- und Eigent&#252;merdaten
+In diesem Ordner werden die Eigent&#252;merdaten (CSV-Dateien) aus GeOrg gespeichert. Diverse Fachschalen-Befehle greifen auf diese Daten direkt zu.
+Weiters werden in diesem Ordner neue GWR-Adress-Dateien gelegt. Beim Start von GeoDesktop werden diese Daten in das Projekt importiert.
+
+## Grundst&#252;ck suchen
+Nachdem der Befehl &quot;Grundst&#252;ck im GIS suchen&quot; in GeOrg aufgerufen und die gew&#252;nschten Grundst&#252;cksnummern angegeben wurden, wird die entsprechende XML-Datei in den Ordner &quot;Export&quot; gelegt.
+Danach ruft der Anwender in  <Placeholder>fullproduct</Placeholder> der Befehl  <Menu>Auftrag übernehmen</Menu>  im  <Menu> Menu: [Verbindungen] </Menu>  auf.
+Die Grundst&#252;cke werden im GIS &#252;ber die Grundst&#252;cksnummer gesucht, selektiert und im Grafikfenster angezeigt.
+K&#246;nnen bestimmte Grundst&#252;cksnummern im GIS nicht gefunden werden, wird eine entsprechende Meldung angezeigt.
+Die von GeOrg generierte XML-Datei wird danach gel&#246;scht.
+
+Aufbau der XML-Datei:
+
+```
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;GISImport xmlns=&quot;urn:georg:gis&quot;&gt;
+  &lt;GeOrgInfo version=&quot;version1&quot;&gt;
+    &lt;TransactionID&gt;1234567890&lt;/TransactionID&gt;
+    &lt;Principle&gt;
+      &lt;Organisation&gt;
+        &lt;OrgType&gt;GKZ&lt;/OrgType&gt;
+        &lt;OrgKey&gt;99999&lt;/OrgKey&gt;
+        &lt;Bezeichnung&gt;Gemeinde&lt;/Bezeichnung&gt;
+      &lt;/Organisation&gt;
+      &lt;User&gt;
+        &lt;UserId&gt;1234&lt;/UserId&gt;
+        &lt;Username&gt;1001MAXMUS&lt;/Username&gt;
+      &lt;/User&gt;
+    &lt;/Principle&gt;
+  &lt;/GeOrgInfo&gt;
+  &lt;Anzeige&gt;
+    &lt;Elemente&gt;
+      &lt;Element&gt;
+        &lt;Objekt&gt;
+          &lt;Name&gt;Grundst&#252;ck&lt;/Name&gt;
+          &lt;Schl&#252;ssel&gt;34057#1793&lt;/Schl&#252;ssel&gt;
+        &lt;/Objekt&gt;
+      &lt;/Element&gt;
+      &lt;Element&gt;
+        &lt;Objekt&gt;
+          &lt;Name&gt;Grundst&#252;ck&lt;/Name&gt;
+          &lt;Schl&#252;ssel&gt;34057#832/1&lt;/Schl&#252;ssel&gt;
+        &lt;/Objekt&gt;
+      &lt;/Element&gt;
+    &lt;/Elemente&gt;
+  &lt;/Anzeige&gt;
+&lt;/GISImport&gt;
+
+```
+
+
+## Adresse suchen
+Nachdem der Befehl &quot;Adresse im GIS suchen&quot; in GeOrg aufgerufen und die gew&#252;nschten Adressen (bzw. Adresscodes) angegeben wurden, wird die entsprechende XML-Datei in den Ordner &quot;Export&quot; gelegt.
+Danach ruft der Anwender in  <Placeholder>fullproduct</Placeholder> der Befehl  <Menu>Auftrag übernehmen</Menu>   <Menu> Menu: [Verbindungen] </Menu>  auf.
+Die Adressen werden im GIS &#252;ber den Adresscode gesucht, selektiert und im Grafikfenster angezeigt.
+K&#246;nnen bestimmte Adressen im GIS nicht gefunden werden, wird eine entsprechende Meldung angezeigt.
+Die von GeOrg generierte XML-Datei wird danach gel&#246;scht.
+
+Aufbau der XML-Datei:
+
+```
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;GISImport xmlns=&quot;urn:georg:gis&quot;&gt;
+  &lt;GeOrgInfo version=&quot;version1&quot;&gt;
+    &lt;TransactionID&gt;1234567890&lt;/TransactionID&gt;
+    &lt;Principle&gt;
+      &lt;Organisation&gt;
+        &lt;OrgType&gt;GKZ&lt;/OrgType&gt;
+        &lt;OrgKey&gt;99999&lt;/OrgKey&gt;
+        &lt;Bezeichnung&gt;Gemeinde&lt;/Bezeichnung&gt;
+      &lt;/Organisation&gt;
+      &lt;User&gt;
+        &lt;UserId&gt;1234&lt;/UserId&gt;
+        &lt;Username&gt;1001MAXMUS&lt;/Username&gt;
+      &lt;/User&gt;
+    &lt;/Principle&gt;
+  &lt;/GeOrgInfo&gt;
+  &lt;Anzeige&gt;
+    &lt;Elemente&gt;
+      &lt;Element&gt;
+        &lt;Objekt&gt;
+          &lt;Name&gt;Adresse&lt;/Name&gt;
+          &lt;Schl&#252;ssel&gt;5252379&lt;/Schl&#252;ssel&gt;
+        &lt;/Objekt&gt;
+      &lt;/Element&gt;
+    &lt;/Elemente&gt;
+  &lt;/Anzeige&gt;
+&lt;/GISImport&gt;
+
+```
+
+
+
+## Anrainer ermitteln
+Nachdem der Befehl &quot;Anrainer im GIS ermitteln&quot; in GeOrg aufgerufen, das gew&#252;nschte Grundst&#252;ck sowie der gew&#252;nschte Puffer angegeben wurden, wird die entsprechende XML-Datei in den Ordner &quot;Export&quot; gelegt.
+Danach ruft der Anwender in  <Placeholder>fullproduct</Placeholder> der Befehl  <Menu>Auftrag übernehmen</Menu>   <Menu> Menu: [Verbindungen] </Menu>  auf.
+Das gesuchte Grundst&#252;ck wird gesucht, die Anrainer-Grundst&#252;cke innerhalb des angegebenen Puffers ermittelt und im Grafikfenster angezeigt.
+Wurde kein Puffer von GeOrg &#252;bergeben, wird der Puffer in  <Placeholder>product</Placeholder> abgefragt.
+Jetzt hat der Anwender die M&#246;glichkeit, die bestehende Selektion durch Klicken auf weitere Grundst&#252;cke zu &#228;ndern.
+Klick auf ein selektiertes Grundst&#252;ck deselektiert dieses, Klick auf ein nicht selektiertes Grundst&#252;ck selektiert dieses.
+Mit dem Befehl  <Menu>Auftrag übergeben</Menu>  werden die Grundst&#252;cke wieder zur&#252;ck an GeOrg &#252;bergeben, indem eine entsprechende XML-Datei im Ordner &quot;Import&quot; erzeugt wird.
+Die von GeOrg generierte XML-Datei wird gel&#246;scht.
+
+Kann das gesuchte Grundst&#252;ck nicht gefunden werden, wird eine entsprechende Meldung angezeigt.
+
+Aufbau der XML-Datei:
+
+```
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;GISImport xmlns=&quot;urn:georg:gis&quot;&gt;
+  &lt;GeOrgInfo version=&quot;version1&quot;&gt;
+    &lt;TransactionID&gt;1234567890&lt;/TransactionID&gt;
+    &lt;Principle&gt;
+      &lt;Organisation&gt;
+        &lt;OrgType&gt;GKZ&lt;/OrgType&gt;
+        &lt;OrgKey&gt;99999&lt;/OrgKey&gt;
+        &lt;Bezeichnung&gt;Gemeinde&lt;/Bezeichnung&gt;
+      &lt;/Organisation&gt;
+      &lt;User&gt;
+        &lt;UserId&gt;1234&lt;/UserId&gt;
+        &lt;Username&gt;1001MAXMUS&lt;/Username&gt;
+      &lt;/User&gt;
+    &lt;/Principle&gt;
+  &lt;/GeOrgInfo&gt;
+  &lt;Anrainersuche&gt;
+    &lt;Puffer&gt;15&lt;/Puffer&gt;
+    &lt;Element&gt;
+      &lt;Objekt&gt;
+        &lt;Name&gt;Grundst&#252;ck&lt;/Name&gt;
+        &lt;Schl&#252;ssel&gt;34057#21156&lt;/Schl&#252;ssel&gt;
+      &lt;/Objekt&gt;
+    &lt;/Element&gt;
+  &lt;/Anrainersuche&gt;
+&lt;/GISImport&gt;
+
+```
+
+
+
+## Objekte &#252;ber Koordinaten suchen
+Nachdem der Befehl &quot;Koordinate im GIS suchen&quot; in GeOrg aufgerufen und die gew&#252;nschten Koordinaten angegeben wurden, wird die entsprechende XML-Datei in den Ordner &quot;Export&quot; gelegt.
+Danach ruft der Anwender in  <Placeholder>fullproduct</Placeholder> der Befehl  <Menu>Auftrag übernehmen</Menu>   <Menu> Menu: [Verbindungen] </Menu>  auf.
+Die Koordinaten werden im GIS gesucht, und Objekte vom Typ &quot;Punkt tempor&#228;r&quot; auf diese Koordinaten gezeichnet. In diesen Objekten ist die von GeOrg angegebene Beschreibung als Attribut und als Beschriftung enthalten. 
+Die tempor&#228;ren Objekte werden im Darstellungsmanager eingebunden und k&#246;nnen dort ein- und ausgeschaltet werden.
+Sie bleiben solange erhalten, bis neue Koordinaten von GeOrg &#252;bernommen wurden, oder das GeoDocument geschlossen wird.
+Tempor&#228;re Objekte werden nicht im GeoDocument gespeichert.
+
+Die von GeOrg generierte XML-Datei wird nach der &#220;bernahme der Koordinaten gel&#246;scht.
+
+Aufbau der XML-Datei:
+
+```
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;GISImport xmlns=&quot;urn:georg:gis&quot;&gt;
+  &lt;GeOrgInfo version=&quot;version1&quot;&gt;
+    &lt;TransactionID&gt;1234567890&lt;/TransactionID&gt;
+    &lt;Principle&gt;
+      &lt;Organisation&gt;
+        &lt;OrgType&gt;GKZ&lt;/OrgType&gt;
+        &lt;OrgKey&gt;99999&lt;/OrgKey&gt;
+        &lt;Bezeichnung&gt;Gemeinde&lt;/Bezeichnung&gt;
+      &lt;/Organisation&gt;
+      &lt;User&gt;
+        &lt;UserId&gt;1234&lt;/UserId&gt;
+        &lt;Username&gt;1001MAXMUS&lt;/Username&gt;
+      &lt;/User&gt;
+    &lt;/Principle&gt;
+  &lt;/GeOrgInfo&gt;
+  &lt;Anzeige&gt;
+    &lt;Elemente&gt;
+      &lt;Element&gt;
+        &lt;Geometrie&gt;
+          &lt;WKT&gt;POINT(-10125 239350)&lt;/WKT&gt;
+          &lt;CRS&gt;M34&lt;/CRS&gt;
+        &lt;/Geometrie&gt;
+        &lt;Bezeichnung&gt;31633/15028/.135/6475222&lt;/Bezeichnung&gt;
+      &lt;/Element&gt;
+      &lt;Element&gt;
+        &lt;Geometrie&gt;
+          &lt;WKT&gt;LINESTRING(-8819.71 239013.05, -8814.25 238991.03, -8803.25 238971.63, -8796.23 238962.41)&lt;/WKT&gt;
+          &lt;CRS&gt;M34&lt;/CRS&gt;
+        &lt;/Geometrie&gt;
+        &lt;Bezeichnung&gt;OSG Zufahrt&lt;/Bezeichnung&gt;
+      &lt;/Element&gt;
+      &lt;Element&gt;
+        &lt;Geometrie&gt;
+          &lt;WKT&gt;POLYGON <Menu>(</Menu> (-8795.90 238943.06, -8803.64 238954.29, -8787.19 238966.10, -8779.64 238955.45, -8795.90 238943.06), (-8793.75 238950.85, -8795.68 238954.29, -8790.04 238958.83, -8787.28 238955.39, -8793.75 238950.85) <Menu>)</Menu> &lt;/WKT&gt;
+          &lt;CRS&gt;M34&lt;/CRS&gt;
+        &lt;/Geometrie&gt;
+        &lt;Bezeichnung&gt;OSG Wohngeb&#228;ude&lt;/Bezeichnung&gt;
+      &lt;/Element&gt;
+    &lt;/Elemente&gt;
+  &lt;/Anzeige&gt;
+&lt;/GISImport&gt;
+
+```
+
+
+- WKT: Geometrie als WKT (Point, Linestring, Polygon (auch mit Inseln))
+
+- CRS: Name des Koordinatensystems in GeOrg
+
+- Bezeichnung: Text, der in <Placeholder>product</Placeholder> bei der Geometrie angezeigt wird
+
+
+
+
+
+## Objekte nach GeOrg &#252;bergeben
+Der Anwender selektiert in   <Placeholder>fullproduct</Placeholder> Objekte, um diese nach GeOrg zu &#252;bergeben und dort die weitere Bearbeitung durchzuf&#252;hren.
+
+Befehlsablauf:
+Der Anwender ruft in  <Placeholder>fullproduct</Placeholder> den Befehl  <Menu>Auftrag übergeben</Menu>  im  <Menu> Menu: [Verbindungen] </Menu>  auf.
+Danach wird er aufgefordert, Objekte zu selektieren. Nach  <Border>Enter</Border>  werden die Objekte nach GeOrg &#252;bergeben und es wird im GIS angezeigt, wieviele Objekte &#252;bergeben wurden.
+
+Wurden Objekte selektiert und wird der Befehl danach aufgerufen, wird die aktuelle Selektion nach GeOrg &#252;bergeben.
+
+Als Ergebnis wird eine XML-Datei im Ordner  <Border>%Pfad für den Austausch von Objekten%\Import</Border>  angelegt. Diese Datei hat einen zuf&#228;llig gew&#228;hlten Dateinamen mit der Endung *.XML.
+Jedes &#252;bergebene Objekt wird mit dem Objektnamen &lt;Name&gt; aus  <Placeholder>product</Placeholder> sowie einem &lt;Schl&#252;ssel&gt; zur Identifikation &#252;bergeben.
+Aufbau der XML-Datei:
+
+```
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;GISExport xmlns=&quot;urn:georg:gis&quot;&gt;
+  &lt;GeOrgInfo /&gt;
+  &lt;Verarbeiten&gt;
+    &lt;Elemente&gt;
+      &lt;Element&gt;
+        &lt;Objekt&gt;
+          &lt;Name&gt;Grundst&#252;ck&lt;/Name&gt;
+          &lt;Schl&#252;ssel&gt;34057#208&lt;/Schl&#252;ssel&gt;
+        &lt;/Objekt&gt;
+      &lt;/Element&gt;
+      &lt;Element&gt;
+        &lt;Objekt&gt;
+          &lt;Name&gt;Geb&#228;udegrenze (Hausgrenze)&lt;/Name&gt;
+          &lt;Schl&#252;ssel&gt;88383&lt;/Schl&#252;ssel&gt;
+        &lt;/Objekt&gt;
+      &lt;/Element&gt;
+      &lt;Element&gt;
+        &lt;Objekt&gt;
+          &lt;Name&gt;Adresse&lt;/Name&gt;
+          &lt;Schl&#252;ssel&gt;5252365&lt;/Schl&#252;ssel&gt;
+        &lt;/Objekt&gt;
+      &lt;/Element&gt;
+    &lt;/Elemente&gt;
+  &lt;/Verarbeiten&gt;
+&lt;/GISExport&gt;
+```
+
+
+## Aufbau der Mapping-Datei
+Welche Objekte mit welchem Schl&#252;ssel &#252;bergeben werden, ist in einer Mapping-Datei definiert:
+ <Border>C:\ProgramData\rmDATA\GeoDesktop\TransferSettings\Comm-Unity_GeOrg.mapping</Border> 
+Die Mappingdatei hat folgenden Aufbau:
+
+```
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Georg&gt;
+  &lt;ObjectTypeGeorg Name=&quot;Grundst&#252;ck&quot;&gt;
+  &lt;Feature&gt;
+    &lt;ObjectClass&gt;Area&lt;/ObjectClass&gt;
+    &lt;ObjectTypeName&gt;Grundst&#252;ck&lt;/ObjectTypeName&gt;
+    &lt;KeyStructure&gt; <Menu>{Internal~Region}</Menu> # <Menu>{Internal~Name}</Menu> &lt;/KeyStructure&gt;
+  &lt;/Feature&gt;
+  &lt;/ObjectTypeGeorg&gt;
+  &lt;ObjectTypeGeorg Name=&quot;Adresse&quot;&gt;
+  &lt;Feature&gt;
+    &lt;ObjectClass&gt;Point&lt;/ObjectClass&gt;
+    &lt;ObjectTypeName&gt;Adresse&lt;/ObjectTypeName&gt;
+    &lt;KeyStructure&gt; <Menu>{Adresscode}</Menu> &lt;/KeyStructure&gt;
+  &lt;/Feature&gt;
+  &lt;/ObjectTypeGeorg&gt;
+  &lt;ObjectTypeGeorg Name=&quot;Geb&#228;udegrenze (Hausgrenze)&quot;&gt;
+  &lt;Feature&gt;
+    &lt;ObjectClass&gt;LineString&lt;/ObjectClass&gt;
+    &lt;ObjectTypeName&gt;Geb&#228;udegrenze (Hausgrenze)&lt;/ObjectTypeName&gt;
+    &lt;KeyStructure&gt; <Menu>{Internal~Id}</Menu> &lt;/KeyStructure&gt;
+  &lt;/Feature&gt;
+  &lt;/ObjectTypeGeorg&gt;
+  &lt;GeometryGeorg&gt;
+    &lt;CrsMapping&gt;
+      &lt;Georg&gt;M28&lt;/Georg&gt;
+      &lt;Crs&gt;rmDATA:31251&lt;/Crs&gt;
+    &lt;/CrsMapping&gt;
+    &lt;CrsMapping&gt;
+      &lt;Georg&gt;M31&lt;/Georg&gt;
+      &lt;Crs&gt;rmDATA:31252&lt;/Crs&gt;
+    &lt;/CrsMapping&gt;
+    &lt;CrsMapping&gt;
+      &lt;Georg&gt;M34&lt;/Georg&gt;
+      &lt;Crs&gt;rmDATA:31253&lt;/Crs&gt;
+    &lt;/CrsMapping&gt;
+    &lt;CrsMapping&gt;
+      &lt;Georg&gt;BMN28&lt;/Georg&gt;
+      &lt;Crs&gt;rmDATA:31257&lt;/Crs&gt;
+    &lt;/CrsMapping&gt;
+  &lt;/GeometryGeorg&gt;
+&lt;/Georg&gt;
+
+```
+
+
+- ObjectClass: Objektklasse aus <Placeholder>product</Placeholder> 
+- ObjectTypeName: Objektname aus <Placeholder>product</Placeholder> 
+- KeyStructure: Kombination aus Attributen zur eindeutigen Identifikation eines Objektes. Es k&#246;nnen alle in <Placeholder>product</Placeholder> konfigurierten Attribute als auch interne Attribute verwendet werden.
+
+- Georg: Name des Koordinatensystems in GeOrg
+
+- Crs: Name des Koordinatensystems in <Placeholder>product</Placeholder> 
+
+
+## GeOrg-Eigent&#252;mer anzeigen
+Werden von GeOrg aktuelle Eigent&#252;mer-Informationen bereitgestellt, so k&#246;nnen diese in  <Placeholder>fullproduct</Placeholder> in einem Dialog pro Grundst&#252;ck angezeigt werden.
+Der Befehl kann im  <Menu> Menu: [Verbindungen - GeOrg-Eigentümer anzeigen] </Menu>  aufgerufen werden:
+
+- Befehl aufrufen
+
+- Grundst&#252;cke im Grafikfenster ausw&#228;hlen
+
+
+
+
+Der Befehl greift auf Eigent&#252;merdateien im amtlichen CSV-Format des BEV zu,welche im aktuellen Verzeichnis f&#252;r den Austausch von Adress- und Eigent&#252;merdaten abgelegt werden.
+
+## Grundst&#252;ck &#252;ber GeOrg-Eigent&#252;mer suchen
+Werden von GeOrg aktuelle Eigent&#252;mer-Informationen bereitgestellt, so kann ein Grundst&#252;ck &#252;ber eine Eigent&#252;mer-Suche auf Basis dieser Daten gesucht werden.
+
+Der Befehl kann im  <Menu> Menu: [Verbindungen - Grundstück über GeOrg-Eigentümer suchen] </Menu>  aufgerufen werden.
+
+Siehe auch [Fachschale Grundst&#252;ckskataster und Adressen AT - Eigent&#252;mer suchen](../fachschalegrundstueckskatasterundadressenat/eigentuemersuchen)
+
+
+## Objekte mit GeOrg-Eigent&#252;merdaten beschriften
+&#220;ber den Befehl  <Menu>Objekte mit GeOrg-Eigentümerdaten beschriften</Menu>  in der Werkzeugleiste von  <Placeholder>fullproduct</Placeholder> oder im  <Menu> Menu: ["Verbindungen"] </Menu>  k&#246;nnen zu einem oder mehreren Objekten mit Grundst&#252;cksnummer die Eigent&#252;mer aus GeOrg als Text angeschrieben werden.
+Dazu muss die Grundst&#252;cksnummer als Sachdateninformation beim Objekt vorhanden sein, weiters m&#252;ssen die GeOrg-Eigent&#252;merdaten als Datei im Pfad f&#252;r den Austausch von GeOrg-Adress und Eigent&#252;merdaten vorhanden sein.
+
+Nach Befehlsaufruf wird &#252;ber einen Dialog das Format der Beschriftung festgelegt:<Image>\img\grafik\fachschalecomm-unitygeorg\eigentümerbeschriftenvorlagegeorg.png$eigentümerbeschriftenvorlagegeorg</Image>
+
+
+-  Eigent&#252;mer-Vorlage: Diese gibt an, welche Informationen in der Beschriftung angef&#252;hrt werden.
+
+-  Weitere Eigent&#252;mer zusammenfassen: Beschr&#228;nkt die Ausgabe von zu vielen Eigent&#252;mern. Ist die maximale Anzahl an Eigent&#252;mern erreicht, wird danach der Ersatztext ausgegeben.
+
+-  Adressen zusammenfassen: Gleiche Adressen von mehreren Eigent&#252;mern werden zusammengefasst.
+
+
+
+Es werden die Eigent&#252;mer-Informationen als Redlining-Texte ausgegeben.
+
+## GeOrg Report erstellen
+&#220;ber den Befehl  <Menu>GeOrg Report erstellen</Menu>  im  <Menu> Menu: [Verbindungen] </Menu>  kann ein Verzeichnis von Grundst&#252;cken mit Eigent&#252;mern aus GeOrg und einer &#220;bersichtsgrafik der betroffenen Grundst&#252;cke erzeugt werden. Die Eigent&#252;mer-Informationen werden dabei aus dem GeOrg-Austauschverzeichnis gelesen und sind keine amtlichen Daten!
+
+Nach Befehlsaufruf selektiert der Anwender ein oder mehrere Grundst&#252;cke im Grafikfenster.
+Wurden vor dem Befehlsaufruf bereits Grundst&#252;cke selektiert, wird der Report mit den selektierten Grundst&#252;cken  erzeugt.
+
+Der erzeugte Report kann gespeichert, gedruckt oder als E-Mail versendet werden
+
+
+- Speichern: F&#252;r das Speichern stehen folgende Formate zur Vef&#252;gung:
+
+- PDF
+
+- DOC
+
+- XLS
+
+
+
+- Drucken: Wird ein Report gedruckt, kann auch eine Kopf- und Fu&#223;zeile f&#252;r den Ausdruck konfiguriert werden (siehe 
+[Benutzerdefinierte Einstellungen](../einstellungen/benutzereinstellungen)
+)
+
+- Als E-Mail versenden: Es wird der aktuelle Mail-Client ge&#246;ffnet und eine neue E-Mail ge&#246;ffnet. Der Report wird im Format PDF als Anhang eingef&#252;gt.
+
+
+
+
+## Automatischer Import von GWR-Adressen
+Bei aktivierter Fachschale &quot;Schnittstelle Comm-Unity: GeOrg&quot; k&#246;nnen bei Bedarf aktualisierte Adressdaten im Format GWR automatisch importiert werden, wenn diese von GeOrg zur Verf&#252;gung gestellt werden.
+Beim &#246;ffnen eines GeoDokuments wird im Pfad f&#252;r den Austausch von Adress- und Eigent&#252;merdaten nach einer aktuellen Adress-Datei gesucht. Ist diese neuer als der letzte Adress-Import, wird der Anwender gefragt, ob er die neuere Datei importieren m&#246;chte.
+Wenn JA, wird die Adressdatei automatisch in eine Geodatabase importiert, alte Adressen werden aus der Geodatabase gel&#246;scht.
+
+
+

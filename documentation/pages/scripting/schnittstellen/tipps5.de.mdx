@@ -1,0 +1,99 @@
+---
+title: "Geometrie von bestehenden Objekten ändern"
+page: true
+---
+&#196;ndern Sie die Geometrie eines gestehenden Objektes, indem Sie der Eigenschaft  <Bold> .Geometry </Bold>  einen neuen, g&#252;ltigen Wert zuweisen.
+Die Struktur der Geometrie ist dabei dieselbe wie bei der Erzeugung des Objekts angegeben, siehe [Einf&#252;gen von Objekten](../schnittstellen/commands)
+.
+
+ <Bold> St&#252;tzpunkt(e) des selektierten Objekts  um Vektor (10,10) verschieben: </Bold> 
+
+```
+obj=Application.IO.GetObject(&#39;Objekt w&#228;hlen:&#39;).Value
+if obj.ObjectClass  &#39;Point&#39; or obj.ObjectClass  &#39;Text&#39;:
+    (east,north,elev) = obj.Geometry
+    obj.Geometry = (east+10,north+10,elev)
+elif obj.ObjectClass  &#39;LineString&#39;:
+    geomNeu=[]
+    for (east,north,elev,bulge) in obj.Geometry:
+        geomNeu.append( (east+10,north+10,elev) )
+    obj.Geometry = geomNeu
+elif obj.ObjectClass  &#39;Area&#39;:
+    (aussen,innen) = obj.Geometry
+    geomNeu = []
+    for (east,north,elev,bulge) in aussen:
+        geomNeu.append( (east+10,north+10,elev) )
+    obj.Geometry = (geomNeu,None)
+elif obj.ObjectClass  &#39;TwoPointSymbol&#39;:
+    [(east1,north1,elev1),(east2,north2,elev2)]=obj.Geometry
+    obj.Geometry = [(east1-5,north1-5,elev1),(east2+5,north2+5,elev2)]
+elif obj.ObjectClass  &#39;ThreePointSymbol&#39;:
+    [(east1,north1,elev1),(east2,north2,elev2),(east3,north3,elev3)]=obj.Geometry
+    obj.Geometry = [(east1-5,north1-5,elev1),(east2+5,north2+5,elev2),(east3,north3,elev3)]
+else:
+    print &quot;Die Geometrie des Objekts kann nicht ge&#228;ndert werden!&quot;
+```
+
+
+<Warning>
+Die Geometrie von  <Italic> Bema&#223;ungen </Italic>  kann nach ihrer Erzeugung  <Italic> nicht </Italic>  ge&#228;ndert werden.
+Folgende Objektarten hingegen erlauben das nachtr&#228;gliche &#196;ndern der Geometrie:
+
+- Punkte
+
+
+- 2-Punkt-Symbole
+
+
+- 3-Punkt-Symbole
+
+
+- Texte
+
+
+- Linienz&#252;ge
+
+
+- Fl&#228;chen
+
+
+
+
+</Warning>
+
+
+### Geometrie einer B&#246;schungsfl&#228;che auslesen und &#228;ndern
+B&#246;schungsfl&#228;chen sind insofern eine Besonderheit, als dass ihre Geometrie einerseits eine Fl&#228;che beschreibt. Zum Anderen ist oft auch die Information &#252;ber die linienhafte Geometrie der Ober- und Unterkante relevant. Deshalb bieten Fl&#228;chen, die als  <Bold> B&#246;schung </Bold>  bzw. allgemein als  <Italic> gerichtete Fl&#228;che </Italic>  konfiguriert sind,  zwei unterschiedliche Eigenschaften an:  <Bold> .Geometry </Bold>  und  <Bold> .SlopeGeometry </Bold> .
+
+
+```
+slope=Application.Project.AreaNew(&#39;B&#246;schung&#39;, ([(20,20),(30,30),(40,20)],[(20,0),(30,10),(40,0)])).Object
+print &#39;SLOPE:&#39;,slope.SlopeGeometry #Ergibt jeweils Linienzug f&#252;r Ober- und Unterseite
+print &#39;AREA:&#39;,slope.Geometry       #Ergibt r&#228;umlich eingenommenes Polygon
+```
+
+<Success>
+Geometriearten verhalten sich beim Verschnitt sehr unterschiedlich, siehe [Geometrische Operationen](../schnittstellen/geometry)
+, weshalb der Einsatz der einen oder anderen Eigenschaft vom Anwendungskontext abh&#228;ngig ist.
+</Success>
+
+<Warning>
+Die Eigenschaft <Bold> .SlopeGeometry </Bold>  wird nicht bei der Auto-Vervollst&#228;ndigung gelistet, da sie nur f&#252;r B&#246;schungsfl&#228;chen verf&#252;gbar ist. Dies kann zum Zeitpunkt der Eingabe nicht ausgewertet werden.
+</Warning>
+
+
+
+```
+...
+# Fortsetzung von oben
+# B&#246;schungsgeometrie &#228;ndern
+slope.SlopeGeometry = ([(20,20),(30,25),(40,20)],[(20,0),(30,5),(40,0)])
+...
+```
+
+
+<Warning>
+Die Eigenschaft <Bold> .SlopeGeometry </Bold>  wird nicht bei der Auto-Vervollst&#228;ndigung gelistet, da sie nur f&#252;r B&#246;schungsfl&#228;chen verf&#252;gbar ist. Dies kann zum Zeitpunkt der Eingabe nicht ausgewertet werden.
+</Warning>
+
+

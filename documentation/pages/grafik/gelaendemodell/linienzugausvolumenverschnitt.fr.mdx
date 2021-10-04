@@ -1,0 +1,46 @@
+---
+title: "Créer polyligne depuis l'intersection de volumes"
+page: true
+---
+## Cr&#233;er des polylignes sur la base de calculs de volumes existants.
+<GeoDesigner>
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+ <Menu> Menu: [Gestionnaire d'affichage / Menu contextuel des polylignes / Créer depuis intersection de volumes] </Menu> 
+<GeoDesigner> <Menu> Cmd: [LinestringFromVolumeIntersection] </Menu> </GeoDesigner>
+
+
+1.  Cliquez avec le bouton droit de la souris dans le gestionnaire d&#39;affichage sur le type de polyligne d&#233;sir&#233;.
+
+2.  S&#233;lectionnez <Menu>Créer depuis intersection de volumes</Menu> .
+
+3.  S&#233;lectionnez dans le graphique <Italic> l&#39;Objet-Calcul de volume </Italic> , sur la base duquel il faut cr&#233;er la ligne d&#39;intersection.
+
+4. <Placeholder>product</Placeholder> cr&#233;e la g&#233;om&#233;trie des lignes d&#39;intersection calcul&#233;es correspondante au type de polyligne choisi.
+
+
+<Success>
+Selon le parcours des lignes d&#39;intersection originales plusieurs polylignes peuvent en r&#233;sulter.
+
+</Success>
+5. En outre <Placeholder>product</Placeholder> s&#233;lectionne dans le graphique les objets r&#233;sultants, ainsi vous pouvez les utiliser imm&#233;diatement pour d&#39;autres op&#233;rations.
+
+
+
+Alternative
+
+
+1. S&#233;lectionnez d&#39;abord <Italic> l&#39;objet-calcul de volume </Italic>  dans le graphique
+
+2. S&#233;lectionnez ensuite l&#39;option <Menu>Créer depuis intersection de volumes</Menu>  depuis le menu contextuel du type souhait&#233; dans le gestionnaire d&#39;affichage.
+
+
+
+<Warning>
+Si le calcul de volume ne pr&#233;sente aucune intersection, mais seulement des prismes de remblais ou de d&#233;blai, alors la commande se termine sans cr&#233;er aucune polyligne.
+</Warning>
+
+<Warning>
+Cette fonction n&#39;est disponible qu&#39;avec l&#39;activation du module  <Italic> Mod&#232;le de terrain </Italic> .
+</Warning>
+
+

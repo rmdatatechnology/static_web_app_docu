@@ -1,0 +1,77 @@
+---
+title: "Services WMS e WMTS"
+page: true
+---
+## Configurer une connexion &#224; un  <Italic> Web Map Service (WMS) </Italic>  ou  <Italic> Web Map Tile Service (WMTS) </Italic>  et int&#233;grer les relatives donn&#233;es raster.
+
+### Donner une nouvelle connexion
+
+1. <Bold> Nom de la connexion: </Bold>  Nom affich&#233; dans le gestionnaire d&#39;affichage
+
+2. <Bold> Service URL: </Bold>  Ins&#233;rer le nom du service WMS
+
+3. <Bold> D&#233;tail de connexion: </Bold>  Si le service est prot&#233;g&#233;, saisissez l&#39;utilisateur et le mot de passe. 
+
+
+<Success>
+Cliquez sur 
+
+<Image>\img\grafik\darstellungsmanager\datenquellen\Speichern.png$Speichern</Image> pour m&#233;moriser le service pour une utilisation ult&#233;rieure. Le service est enregistr&#233; sous le nom de connexion donn&#233;.
+
+</Success>
+4. Cliquez sur <Border>Terminer</Border> . Si vous d&#233;sirez ins&#233;rer d&#39;autre param&#232;tres, cliquez sur <Border>Suivant</Border> 
+
+
+
+### Utiliser les services enregistr&#233;s
+Lor de l&#39;installation de  <Placeholder>fullproduct</Placeholder> des services sont d&#233;j&#224; configur&#233;s. En outre vous pouvez enregistrer vos propres services et les s&#233;lectionner (voir ci-dessus).
+
+1. Cliquez sur<Image>\img\grafik\darstellungsmanager\datenquellen\Auswahl.png$Auswahl</Image>
+2. S&#233;lectionnez un service
+
+3. Cliquez sur <Border>Terminer</Border> 
+
+
+
+### Param&#232;tres
+
+- <Bold> S&#233;lectionnez la classe d&#39;objets: </Bold>  Toutes les classes d&#39;objets disponibles du service WMS sont affich&#233;s. S&#233;lectionnez les classes d&#39;objets d&#233;sir&#233;s.
+
+- <Bold> S&#233;lectionnez le syst&#232;me de coordonn&#233;es: </Bold>  (Seulement pour les services WMS)
+
+- <Bold> Serveur de syst&#232;me de coordonn&#233;es: </Bold>  Les syst&#232;mes de coordonn&#233;es propos&#233;s par le serveur sont affich&#233;s.
+
+- <Bold> Syst&#232;me de coordonn&#233;es utilis&#233;: </Bold> <Placeholder>product</Placeholder> s&#233;lectionne automatiquement le syst&#232;me de coordonn&#233;es du serveur appropri&#233; selon le <Italic> Syst&#232;me de coordonn&#233;es utilis&#233; </Italic> . Les donn&#233;es sont transform&#233;es dans ce syst&#232;me. Si le nom du Serveur de syst&#232;me de coordonn&#233;es n&#39;est pas reconnu automatiquement, le syst&#232;me de coordonn&#233;es peut &#234;tre d&#233;fini manuellement. 
+
+
+
+
+
+
+<Warning>
+Si dans le projet en &#233;laboration aucun syst&#232;me de coordonn&#233;es n&#39;est d&#233;fini, alors  <Bold> aucune transformation de coordonn&#233;es </Bold>  ser&#224; effectu&#233;e.
+Vous pouvez modifier le syst&#232;me de coordonn&#233;es du projet dans les [param&#232;tres de fichier](../datei/datei-einstellungen2)
+.
+</Warning>
+
+
+### Param&#232;tres suppl&#233;mentaires
+Actuellement tous les services WMTS sont affich&#233;s jusq&#39;au niveau de zoom 19.
+L&#39;utilisateur peut configurer les niveaux de zoom dans le fichier  <Italic> %appdata%\rmDATA\ <Placeholder>product</Placeholder> rmdata_konfiguration.xml </Italic>  avec la cl&#233;  <Bold> &quot;MaxLevel&quot; </Bold> :
+<Info>
+
+&lt;section name=&quot;GeoDesktop-WMTS Server&quot;&gt;
+    &lt;entry name=&quot;Basemap.at_ServiceUrl&quot;&gt;http://www.basemap.at/wmts/1.0.0/WMTSCapabilities.xml&lt;/entry&gt;
+    &lt;entry name=&quot;Magistrat Wien_ServiceUrl&quot;&gt;http://maps.wien.gv.at/wmts/1.0.0/WMTSCapabilities.xml&lt;/entry&gt;
+    &lt;entry name=&quot;OpenGeoServer_ServiceUrl&quot;&gt;http://services.opengeoserver.org/wmts/1.0.0/WMTSCapabilities.xml&lt;/entry&gt;
+    &lt;entry name=&quot;MaxLevel&quot;&gt;23&lt;/entry&gt;
+ &lt;/section&gt;
+</Info>
+
+
+###  Vue
+
+- <Bold> Transparence: </Bold>  Saisissez une valeur pour la transparence. Valeur 0 pour totalement visible et 255 pour opaque. 
+
+
+

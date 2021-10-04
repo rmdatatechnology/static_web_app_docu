@@ -1,0 +1,99 @@
+---
+title: "Attributzuweisung - Sperrmaße/Spannmaße"
+page: true
+---
+## Steuern Sie die &#220;bernahme von CAD-Elementen als Sperrma&#223;/Spannma&#223; in der Geodatenbank.
+
+```
+Die Erzeugung von Sperrma&#223;en wird &#252;ber das Element  <Bold> &lt;AlignedDimensions&gt; </Bold>  definiert.
+Es ist eine Sammlung von  <Bold> &lt;AlignedDimension&gt; </Bold>  Elementen, welche die Konvertierung steuern:
+ <Bold> &lt;AlignedDimensions&gt; </Bold> 
+   &lt;AlignedDimension Name=&quot;Beispiel1&quot;&gt;
+       <Italic> &lt;!-- Definition --&gt; </Italic> 
+   &lt;/AlignedDimension&gt;
+    <Italic> &lt;!-- Weitere &lt;AlignedDimension&gt; Elemente --&gt; </Italic> 
+ <Bold> &lt;/AlignedDimensions&gt; </Bold> 
+```
+
+### &lt;AlignedDimension&gt;
+### 
+# Attribute
+
+
+- <Bold> Name </Bold>  (obligat)
+
+-  Bezeichnet den Namen des Ziel-Objekttyps in der Geodatenbank. S&#228;mtliche durch den/die Filter betroffenen CAD-Element werden in diesen Objekttyp konvertiert.
+
+
+
+
+
+### 
+# Elemente
+
+Mit folgenden Elementen kann definiert werden, woraus Sperrma&#223;e/Spannma&#223;e erzeugt werden.
+
+1. <Bold> &lt;GraphicAttributeSettings&gt; </Bold>  (0 bis 1)
+
+- Beschreibt die &#220;bernahme grafischer Eigenschaften aus CAD-Elementen. Siehe 
+[GlobalSettings-Element](../anhang/formatbeschreibungmappingautodesk2)
+.
+
+
+
+2. <Bold> &lt;AlignedDimension&gt; </Bold>  (0 bis 1)
+
+- Steuert die Konvertierung von CAD-Bema&#223;ungen.
+
+
+
+
+
+<Success>
+Wo beschrieben, k&#246;nnen anstatt ganzer Namen auch Regul&#228;re Ausdr&#252;cke ( <Italic> RegEx </Italic> ) verwendet werden. Um einen Regul&#228;ren Ausdruck einzuleiten, verwenden Sie das Pr&#228;fix  <Bold> re: </Bold>  
+</Success>
+
+
+### 
+#  Bema&#223;ungen aus CAD-Bema&#223;ungen erzeugen (&lt;AlignedDimension&gt;)
+
+
+
+```
+Struktur eines Bema&#223;ung-zu-Bema&#223;ung Mappings
+
+ <Bold> &lt;AlignedDimension&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Beschreibt, wonach Schraffuren gefiltert werden sollen. --&gt;
+          Jedes der folgenden Elemente ist optional; 
+          vorhandene Elemente werden mit UND verkn&#252;pft,
+          d. h. alle m&#252;ssen zutreffen --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Ganzzahl, d. i. Farbindex --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;DimensionStyle&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx --&gt; </Italic>  <Bold> &lt;/DimensionStyle&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/AlignedDimension&gt; </Bold> 
+
+```
+
+<Info>
+Beispiel:
+
+- Es sollen Bema&#223;ungen vom Typ <Bold> Sperrbema&#223;ung mit Pfeil </Bold>  erzeugt werden.
+
+
+- Vom CAD-Element soll nichts &#252;bernommen werden.
+
+
+- Die Bema&#223;ungen sollen aus Bema&#223;ungen vom Stil <Bold> Standard </Bold>  auf den Layern <Bold> N-DIMLAYER </Bold>  bzw. <Bold> DIMLAYER </Bold>  entstehen.
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\DimToDimExample.png$DimToDimExample</Image>
+
+
+</Info>

@@ -1,0 +1,87 @@
+---
+title: "Smart Pick Ein-/Ausschalten"
+page: true
+---
+## Smart Pick bietet Ihnen wesentliche Erleichterungen beim Fang von Punkten in der Punktwolke.
+<GeoMapper> <Menu> Menu: [Virtueller Vermesser/ Smart Pick Ein-/Ausschalten] </Menu> 
+
+Wenn Sie in die 3D-Ansicht klicken wird der Sehstrahl an dieser Stelle mit der Punktwolke geschnitten. So k&#246;nnen Punkte weiter vorne von Ihrer Aufnahme oder auch weiter hinten erfasst werden. Es kann nat&#252;rlich auch sein, dass Sie mit der Maus genau in einen Zwischenraum zwischen den Punkten treffen und somit keinen Punkt erfassen. Smart Picks helfen den gew&#252;nschten Punkt ihrer Aufnahme exakt zu erwischen.
+
+Wenn Sie Smart Picks aktivieren, dann wird im Smart Pick Manager eine Vergr&#246;&#223;erung der 3D-Ansicht angezeigt. Mit Blick auf den Smart Pick Manager k&#246;nnen Sie Ihre Bewegungen mit der Maus in der 3D-Ansicht noch feiner steuern.
+
+<Success>
+Sie k&#246;nnen Smart Picks jederzeit bei Ihren Konstruktionen aktivieren oder deaktivieren!
+</Success>
+
+<Success>
+Sobald Smart Picks verwendet werden, ist der Objektfang in der 3D-Ansicht deaktiviert.
+</Success>
+
+
+Es gibt folgende Arten von Smart Picks:
+
+<table>
+<tr><td><Image>\img\grafik\virtuellervermesser\SmartPick_Aus.png$SmartPick_Aus</Image></td>
+<td> <b> Schaltet Smart Picks aus.  </b> Beim Selektieren von Punkten in der 3D-Ansicht m&#252;ssen sie die gescannten Punkte mit der Maus genau treffen um sie zu f&#252;r Konstruktionen oder zum Messen zu nutzen. </td>
+</tr>
+<tr><td><Image>\img\grafik\virtuellervermesser\SmartPick_Nächster.png$SmartPick_Nächster</Image></td>
+<td> <b> W&#228;hlt den n&#228;chsten Punkt </b>  W&#228;hlt den Punkt innerhalb des  Fangradius aus, der am n&#228;chsten zur Maus liegt.Auch wenn ein Punkt n&#228;her beim Mausklick ist, in der Natur aber weiter entfernt ist, wird der vordere Punkt genommen.
+<Success>
+Je weiter Sie in das Bild hineinzoomen, umso kleiner wird der Fangbereich.
+</Success><Image>\img\grafik\virtuellervermesser\Fang_Nächster.png$Fang_Nächster</Image>
+<Success>
+Beachten Sie beim Picken der Punkte die Kameraposition, wie in diesem Bild dargestellt:
+
+<Image>\img\grafik\virtuellervermesser\Fang_Nächster_Kameraposition.png$Fang_Nächster_Kameraposition</Image>
+Aus Sicht der Kamera liegt der Punkt daneben n&#228;her zur Kameraposition, obwohl die Ecke angeklickt wurde.
+</Success>
+</td>
+</tr>
+<tr><td><Image>\img\grafik\virtuellervermesser\SmartPick_Tiefster.png$SmartPick_Tiefster</Image></td>
+<td> <b> W&#228;hlt den tiefsten Punkt </b> Innerhalb des Fangradius wird der tiefste Punkt, d.h. mit der kleinsten H&#246;hen-Koordinate gepickt.<Image>\img\grafik\virtuellervermesser\Fang_Tiefster.png$Fang_Tiefster</Image>
+<Success>
+Sie k&#246;nnen die [Programm-Einstellungen](../datei/programm-einstellungen6)
+ so ver&#228;ndern, dass der tiefste Punkt in Blickrichtung gepickt wird.
+</Success>
+</td>
+</tr>
+<tr><td><Image>\img\grafik\virtuellervermesser\SmartPick_Höchster.png$SmartPick_Höchster</Image></td>
+<td> <b> W&#228;hlt den h&#246;chsten Punkt </b> Innerhalb des Fangradius wird der h&#246;chste Punkt, d.h. mit der gr&#246;&#223;ten H&#246;hen-Koordinate gepickt.</td>
+</tr>
+<tr><td><Image>\img\grafik\virtuellervermesser\SmartPick_Bodenpunkt.png$SmartPick_Bodenpunkt</Image></td>
+<td> <b> W&#228;hlt den Bodenpunkt </b> F&#252;r den Smart Pick Bodenpunkt wird automatisch ein Gel&#228;ndemodell &#252;ber die gescannten Punkte berechnet. Damit k&#246;nnen die tats&#228;chlichen Bodenpunkte ermittelt werden. Im Vergleich zu den anderen Smart Picks werden in diesem Fall die gepickten Punkte interpoliert.<Image>\img\grafik\virtuellervermesser\Fang_Bodenpunkt.png$Fang_Bodenpunkt</Image>
+<Success>
+Verwenden Sie diese Methode um einfach den Grundriss von H&#228;usern zu erfassen!
+</Success>
+<Warning>
+Innerhalb eines Hauses gibt es keine Laserscanpunkte vom Boden des Hauses, die erfasst werden k&#246;nnen. Das Gel&#228;ndemodell wandert an dieser Stelle &#252;ber das Haus und sie erhalten so einen Punkt vom Dach! 
+</Warning>
+</td>
+</tr>
+</table>
+
+
+Die Einstellungen zu den Smart Picks, u.a. den Fangradius, finden Sie in den [Programm-Einstellungen](../datei/programm-einstellungen6)
+.
+
+Innerhalb des SmartPick-Managers navigieren Sie mit folgenden Buttons:
+<table>
+<tr><td><Image>\img\grafik\virtuellervermesser\Zoom_In.png$Zoom_In</Image></td>
+<td>Vergr&#246;&#223;ert die Ansicht </td>
+</tr>
+<tr><td><Image>\img\grafik\virtuellervermesser\Zoom_Out.png$Zoom_Out</Image></td>
+<td>Verkleinert die Ansicht</td>
+</tr>
+<tr><td><Image>\img\grafik\virtuellervermesser\Kippen_Links.png$Kippen_Links</Image></td>
+<td>Kippt die Darstellung nach links</td>
+</tr>
+<tr><td><Image>\img\grafik\virtuellervermesser\Kippen_Rechts.png$Kippen_Rechts</Image></td>
+<td>Kippt die Darstellung nach rechts</td>
+</tr>
+</table>
+
+<Success>
+Bleiben Sie mit Ihrer Maus in der 3D-Ansicht. Der Cursor geht im SmartPick-Manager geht automatisch mit.
+</Success>
+
+</GeoMapper>

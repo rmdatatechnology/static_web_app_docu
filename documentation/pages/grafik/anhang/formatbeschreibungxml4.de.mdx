@@ -1,0 +1,48 @@
+---
+title: "Punktnamen"
+page: true
+---
+## Einf&#252;gen von Punktnamen
+
+###  Aufbau
+
+- <Bold> &lt;PointLabels&gt; </Bold>  Sektion aller Koordinaten. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>  &lt;PointLabel Id=&quot;98&quot;&gt; </Bold>  Name eines Punktes mit einer eindeutigen ID
+
+- <Bold> &lt;Name&gt; </Bold>  Punktname
+
+- <Bold> &lt;Region&gt; </Bold>  Region / KG / Nummerierungsbezirk
+
+- <Bold> &lt;SubName&gt; </Bold>  Subname 
+
+
+
+- <Bold> &lt;/PointLabel&gt; </Bold>  Ende der Sektion
+
+
+
+- <Bold> &lt;/PointLabels&gt; </Bold>  Ende der Sektion
+
+
+
+
+<Success>
+Der Punktname muss in der Kombination aus Name, Region und Subname eindeutig sein. Je nach Konfiguration ist ein Punktname f&#252;r einen Punkt notwendig. Z.b. hat ein Standpunkt sicher einen Punktnamen, ein Laubbaum oftmals nicht.
+</Success>
+
+<Success>
+Wir empfehlen den Punktnamen immer aufzuteilen in Region, Punktname und Subname. Damit kann man die Region getrennt von der Punktnummer ein- oder ausschalten.
+</Success>
+
+
+<Info>
+    &lt;PointLabels&gt;
+      &lt;PointLabel Id=&quot;98&quot;&gt;
+        &lt;Name&gt;1108&lt;/Name&gt;
+        &lt;Region&gt;07580&lt;/Region&gt;
+        &lt;SubName&gt;
+        &lt;/SubName&gt;
+      &lt;/PointLabel&gt;
+    &lt;/PointLabels&gt;
+</Info>

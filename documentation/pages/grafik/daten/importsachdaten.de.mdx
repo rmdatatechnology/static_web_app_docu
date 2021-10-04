@@ -1,0 +1,71 @@
+---
+title: "Sachdaten aus ASCII Daten importieren"
+page: true
+---
+## Sachdaten aus ASCII Dateien zu Objekten einer bestehenden GeoDB importieren
+
+Sachdaten aus ASCII Dateien werden &#252;ber den Befehl  <Menu>Daten importieren</Menu>  in der Werkzeugleiste von  <Placeholder>fullproduct</Placeholder> oder &#252;ber das  <Menu> Menu: [Daten - Daten importieren] </Menu>  in eine bestehende rmDATA Geodatabase eingef&#252;gt.
+Im Editiermodus wird der Import &#252;ber das  <Menu> Menu: [Datenbank - Daten importieren] </Menu>  aufgerufen und es wird in die zum Bearbeiten ge&#246;ffnete Geodatabase imortiert.
+
+Nach Befehlsaufruf wird im Register  <Border>Typauswahl</Border>  die Option 
+ <Border>Sachdaten aus ASCII Daten importieren</Border> 
+gew&#228;hlt.<Image>\img\grafik\daten\ImportSACHDATENTypauswahl.png$ImportSACHDATENTypauswahl</Image>
+
+Danach werden im Register  <Border>Dateiauswahl</Border>  die zu importierenden Dateien gew&#228;hlt.
+
+<Warning>
+Werden mehrere ASCII-Dateien gew&#228;hlt, m&#252;ssen diese inhaltlich gleich aufgebaut sein!
+</Warning><Image>\img\grafik\daten\ImportSACHDATENDateiauswahl.png$ImportSACHDATENDateiauswahl</Image>
+
+Im Register  <Border>Geodatabase-Auswahl</Border>  wird festgelegt, in welche Geodatabase die Dateien importiert werden sollen. Die Dateien k&#246;nnen nur in eine bestehende Geodatabase importiert werden:
+
+- In bestehende Geodatabase importieren: Eine der im aktuellen Geodokument eingebundenen Geodatabase-Dateien kann in der Drop-down-Liste ausgew&#228;hlt werden oder es kann eine existierende Geodatabase &#252;ber den Datei-&#214;ffnen-Dialog ausgew&#228;hlt werden.
+
+
+
+<Success>
+Im Editiermodus entf&#228;llt das Register, da immer in die zum Bearbeiten ge&#246;ffnete Geodatabase importiert wird.
+</Success><Image>\img\grafik\daten\ImportSACHDATENGeodatabaseauswahl.png$ImportSACHDATENGeodatabaseauswahl</Image>
+
+Im Register  <Border>Mapping</Border>  kann eine bestehende Konvertierungstabelle f&#252;r den Import ausgew&#228;hlt werden oder es kann eine neue Konvertierungstabelle &#252;ber den [Assistent ... ](../daten/importsachdaten2)
+ f&#252;r den Import definiert werden.<Image>\img\grafik\daten\ImportSACHDATENMapping.png$ImportSACHDATENMapping</Image>
+
+In den  <Border>Einstellungen</Border>  werden weitere Optionen f&#252;r den Import festgelegt:
+
+- Existierende Sachdaten &#252;berschreiben
+
+- JA: Attributwerte aus den ASCII-Dateien werden in die GeoDB &#252;bernommen.
+
+- NEIN: Attributwerte werden nur dann aus den ASCII-Dateien &#252;bernommen, wenn der Attributwert in der GeoDB leer ist.
+
+
+
+- Existierende Sachdaten mit leeren Werten &#252;berschreiben
+
+- JA: Bestehende Attributwerte der GeoDB werden gel&#246;scht, wenn aus der importierten Datei ein leerer Wert importiert wird.
+
+- NEIN: Bestehende Attributwerte der GeoDB bleiben erhalten, wenn das importierte Attribut einen leeren Wert enth&#228;lt.
+
+
+<Warning>
+Die Option &quot;Existierende Sachdaten mit leeren Werten &#252;berschreiben&quot; kann nur aktiviert werden, wenn die Option &quot;Existierende Sachdaten &#252;berschreiben&quot; = JA gesetzt ist. 
+
+Sachdaten der GeoDB werden nur gel&#246;scht, wenn der Datentyp des Attributs ein String ist.
+
+</Warning><Image>\img\grafik\daten\ImportSACHDATENEinstellungen.png$ImportSACHDATENEinstellungen</Image>
+
+Nach  <Border>Fertigstellen</Border>  werden die Sachdaten importiert, ein Transferstatus wird angezeigt.
+
+### Regeln f&#252;r den Import
+
+- Kommt in der ASCII-Datei die selbe ID &#246;fter vor, wird bei Option &quot;Existierende Sachdaten &#252;berschreiben&quot; = JA immer der Attributwert aus dem letzten gefundenen Datensatz &#252;bernommen.
+
+- Kommt in der Geodatabase die selbe ID &#246;fter vor, erhalten alle Datens&#228;tzen mit derselben ID die selben Sachdaten.
+
+- Der Vergleich der ID wird Case-Insensitive durchgef&#252;hrt
+
+- Leerzeichen am Beginn und am Ende der ID werden automatisch entfernt.
+
+
+
+

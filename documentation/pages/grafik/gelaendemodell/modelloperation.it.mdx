@@ -1,0 +1,64 @@
+---
+title: "Operazione di modello"
+page: true
+---
+## Abbassare o sollevare un modello del terreno o calcolare un nuovo modello per differenza tra due modelli esistenti.
+<GeoMapper> <Menu> Menu: [Modello del terreno / Operazione di modello] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Modello del terreno / Operazione di modello] </Menu> 
+ <Menu> Cmd: [modeloperation] </Menu> </GeoDesigner>
+
+
+1. Lanciare il comando.
+
+2. Selezionare le impostazioni desiderate nel dialogo:<Image>\img\grafik\geländemodell\Dialog-Modelloperation.png$Dialog-Modelloperation</Image>
+
+
+## Operazione &quot;Variazione d&#39;altezza&quot;
+I dati originali del modello sono direttamente modificati o utilizzati come copia per un nuovo modello.
+
+Opzioni:
+
+- <Bold> Modello d&#39;origine </Bold> : Il modello sul quale si vuole eseguire l&#39;operazione (deve contenere dei dati attribuiti ma non deve essere comunque calcolato).
+
+- <Bold> Altezza </Bold> : La variazione d&#39;altezza in metri.
+
+- <Bold> Risultato </Bold>  :
+
+- <Bold> Modifica il modello originale </Bold> : Tutti i dati originali sono geometricamente modificati nell&#39;altezza (punti, nuvole di punti, polilinee come contorno di modello o linee di rottura)
+
+- <Bold> Nuovo modello </Bold> : Tutti i dati originali sono duplicati nell&#39;altezza ed applicati al nuovo modello (punti, nuvole di punti, polilinee come contorno di modello o linee di rottura)
+
+
+
+- <Bold> Nome del nuovo modello </Bold>  (deve essere univoco)
+
+- <Bold> Tipi di oggetto </Bold> :
+
+- <Bold> Modello del terreno </Bold> 
+- <Bold> Tipo di punto </Bold> 
+- <Bold> Tipo di nuvola di punti </Bold> 
+- <Bold> Nome di nuvola di punti </Bold>  (deve essere univoco)
+
+- <Bold> Controno di modello </Bold> 
+- <Bold> Linee di rottura </Bold> 
+- <Bold> Linee di rottura dure </Bold> 
+
+
+
+
+## Operazione &quot;Modello differenziale&quot;
+A partire dalla magliatura di due modelli esistenti viene calcolato un modello differenziale, le cui altezze dei nodi sono derivate dalla differenza delle altezze.
+
+Opzioni:
+
+- <Bold> Modello d&#39;origine </Bold> : Modello di base dal quale vuole si vuole sottrarre il secondo modello (deve essere calcolato)
+
+- <Bold> Modello da sottrarre </Bold> : Modello che viene sottratto al modello d&#39;origine generando il modello differenziale (deve essere calcolato)
+
+- <Bold> Nome del nuovo modello </Bold> : (deve essere univoco)
+
+
+
+La magliatura del modello differenziale tra l&#39;altro pu&#242; essere esportata oppure usata per produrre una rappresentazione tematica.
+<Success>
+Il modello differenziale non contiene dati d&#39;origine e quindi non pu&#242; essere modificato o ricalcolato.
+</Success>

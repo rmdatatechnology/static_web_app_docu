@@ -1,0 +1,49 @@
+---
+title: "Importazione dei dati del Catasto Lussemburghese"
+page: true
+---
+## Importazione dei dati del Catasto Lussemburghese
+<GeoMapper> <Menu> Menu: [File / Import-Manager] </Menu> 
+
+<Warning>
+Questa funzionalit&#224; &#232; disponibile solo per il modulo &quot;Piano di frazionamento Lussemburgo&quot;. 
+</Warning>
+
+
+<Success>
+Alle Daten werden in den alten Stand importiert. Wir empfehlen Ihnen im Anschluss mit dem Befehl  <Menu>Berechnen / Flächen berechnen</Menu>  alle Fl&#228;chen zu berechnen.
+Die Fl&#228;chenwerte vom Katasteramt bleiben dabei erhalten.
+</Success>
+
+<Success>
+Wenn in der Datei Punkte mit dem gleichen Namen mehrmals vorkommen, werden sie automatisch nach den Vorgaben des Katasteramts umbenannt. 
+</Success>
+
+
+### Einstellungen
+Hier k&#246;nnen Sie weitere Import Einstellungen setzen, diese Einstellungen sind optional.
+
+- <Bold> Konfliktaufl&#246;sung: </Bold> Punkt- und Fl&#228;chenbezeichnungen m&#252;ssen eindeutig sein. Es stehen folgende Optionen bei Namensgleichheit  zur Verf&#252;gung:
+
+- <Italic> Umbenennen </Italic> : Die importiereten Punkte und Fl&#228;chen werden mit dem Pr&#228;fix bzw. Suffix umbenannt. Die bestehenden Objekte bleiben unver&#228;ndert erhalten.
+
+- <Italic> Vorrang bestehender Punkt </Italic> : Der in der Datei existierende Punkt bleibt bestehen, das Objekt aus der Quelle wird ignoriert. Das Verhalten ist das selbe wie bei <Italic> Umbenennen </Italic>  ohne Angabe eines Pr&#228;fix bzw. Suffix.
+
+- <Italic> Vorrang neuer Punkt </Italic> : Der neu importierte Punkt ersetzt den bestehenden Punkt.
+
+- <Italic> Interaktiv l&#246;sen </Italic> : Sie erhalten einen Kollisionsdialog, in dem Sie f&#252;r jeden Punkt entscheiden, ob die Punkte aus GeoMapper oder aus der Quelle verwendet werden sollen. 
+
+
+<Warning>
+Bei gleichnamigen Fl&#228;chen werden die importierten Fl&#228;chen mit dem Pr&#228;fix bzw. Suffix umbenannt. Sind die beiden Werte leer, wird die Fl&#228;che nicht importiert. Es bleibt die alte Fl&#228;che erhalten.
+
+</Warning>
+
+
+- <Bold> Protokollierung: </Bold>  Legt fest, ob ein detailliertes Protokoll f&#252;r die importierten Objekte generiert werden soll, oder nur eine Zusammenfassung.
+
+
+
+
+</GeoMapper>
+

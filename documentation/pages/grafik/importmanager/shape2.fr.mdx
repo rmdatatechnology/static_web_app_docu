@@ -1,0 +1,70 @@
+---
+title: "Assistant de mappage Importation Esri-Shape "
+page: true
+---
+## Assistant pour la cr&#233;ation d&#39;une table de conversion pour l&#39;importation de fichiers Esri-Shape.
+
+Pour l&#39;importation de fichiers Esri-Shape, un assistant de mappage est disponible, ainsi les objets Esri-Shape peuvent &#234;tre convertis en objets  <Placeholder>product</Placeholder> 
+
+ <Placeholder>fullproduct</Placeholder> analyse les fichiers s&#233;lectionn&#233;s et montre dans propres onglets les classe d&#39;objets affectables.
+
+Pour chaque classe d&#39;objets tous les fichiers Shape sont list&#233;s par groupe (Point, Polygon, Polyline,...), et pour chaque fichier on peut affecter un type d&#39;objet  <Placeholder>product</Placeholder> 
+Tous les attributs des fichiers Shape peuvent &#234;tre utilis&#233;s comme conditions.
+Dans le dialogue les simples lignes peuvent &#234;tre dupliqu&#233;es et ensuite modifi&#233;es:  <Border>+</Border> ,  <Border>x</Border> 
+Dans la colonne &quot;Type d&#39;objets du GeoDB&quot; le type d&#39;objet  <Placeholder>product</Placeholder> est d&#233;fini par l&#39;utilisateur. 
+En outre des attributs peuvent &#234;tre affect&#233;s au type d&#39;objet (soit attributs du fichier Shape, soit attributs avec valeur fixe).
+Chaque objet peut &#234;tre repris une seule fois. En cas de d&#233;finition double, la s&#233;quence de l&#39;onglet et des lignes est valable.
+
+<Success>
+Appuyez sur  <Border>Terminer</Border>  pour enregistrer le mappage dans un fichier.
+</Success>
+
+
+Dans la table suivante on montre un aper&#231;u des mappages possibles:
+<table>
+<tr><th>Classe d&#39;objets G&#233;odatabase</th>
+<th>Formats Esri-Shape (Groupes)</th>
+</tr>
+<tr><td>Point</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Multipoint</td>
+</tr>
+<tr><td>Surface</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Polygone</td>
+</tr>
+<tr><td></td>
+<td>Multi-Point</td>
+</tr>
+<tr><td></td>
+<td>Multi-Polygone</td>
+</tr>
+<tr><td>Polyligne</td>
+<td>Polyline</td>
+</tr>
+<tr><td></td>
+<td>Polygone</td>
+</tr>
+<tr><td>Texte</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Multi-Point</td>
+</tr>
+<tr><td>Symbole de polyligne</td>
+<td>Point</td>
+</tr>
+<tr><td></td>
+<td>Multi-Point</td>
+</tr>
+<tr><td>Symbole-2-Points</td>
+<td>Multi-Point (exactement deux points)</td>
+</tr>
+<tr><td>Symbole-3-Points</td>
+<td>Multi-Point (exactement trois points)</td>
+</tr>
+</table>

@@ -1,0 +1,116 @@
+---
+title: "Einfügen von Linienzügen"
+page: true
+---
+## F&#252;gen Sie einen Linienzug &#252;ber den Darstellungsmanager ein
+ <Menu> Menu: [Darstellungsmanager / linke Maustaste auf gewünschten Objekttyp] </Menu> 
+<GeoDesigner> <Menu> Cmd: [LineStringNew] </Menu> 
+</GeoDesigner>
+<Success>
+Nutzen Sie den [Orthomodus](../benutzeroberflaeche/statusleiste)
+ f&#252;r die Konstruktion von Linienz&#252;gen. Einfach mit  <Border>F8</Border>  aktivieren bzw. die Verdrehung &#252;ber das Symbol in der Statusleiste festlegen.
+</Success>
+
+
+
+1. Rufen Sie den Befehl auf oder w&#228;hlen Sie den gew&#252;nschen Objekttyp aus dem Darstellungsmanager aus.
+
+2. Zeigen Sie den ersten Punkt des Linienzuges
+
+- Wahl eines bestehenden Punktes
+
+- Zeigen einer neuen Position in der Grafik
+
+- Eingabe einer Koordinate im aktuellen Koordinatensystem
+
+- Aufruf einer 
+[Konstruktionsmethode](../konstruktion/allgemein)
+
+- Mit der Option <Menu>Segmentwahl</Menu>  k&#246;nnen Sie sofort mit einem bereits bestehenden Segment starten. 
+
+- Mit der Option <Menu>Punktnummer</Menu>  geben Sie die Punktnummer eines bestehenden Punktes an. 
+
+- Wechseln Sie in den Modus <Menu>Linienverfolgung interaktiv</Menu>  
+
+- W&#228;hlen Sie ein bestehendes Liniensegment und bewegen Sie den Mauscursor anschlie&#223;end solange - ohne zu klicken - &#252;ber benachbarte Liniensegmente, bis die hervorgehobenen Segmente dem gew&#252;nschten Verlauf des neuen Linienzuges entsprechen. Mit der Option <Menu>fertig</Menu>  beenden Sie das Zeichnen des Linienzuges. 
+
+- Durch Halten der <Border>Shift</Border> -Taste und Bewegen des Mauscursors in die entgegengesetzte Richtung k&#246;nnen Sie um ein oder mehrere Segmente zur&#252;ckgehen, um den Verlauf des Linienzuges zu korrigieren.  
+
+- Bei gedr&#252;ckter <Border>Strg</Border> -Taste wird kein neues Liniensegment hervorgehoben. Bei Punkten mit zahlreichen verbundenen Liniensegmenten kann diese Funktion hilfreich sein, um die automatische Auswahl eines falschen Liniensegments zu verhindern. Nach dem Loslassen der <Border>Strg</Border> -Taste wird das Liniensegment unter dem Mauscursor hervorgehoben, wenn es an das zuletzt gew&#228;hlte anschlie&#223;t. 
+
+
+
+- Umschalten in den Modus <Menu>Linienverfolgung automatisch</Menu> 
+- W&#228;hlen Sie einen beliebigen Punkt oder St&#252;tzpunkt, an dem der Verlauf starten soll.
+
+- Zeigen Sie den gew&#252;nschten Endpunkt f&#252;r die Wegfindung.
+
+- <Placeholder>product</Placeholder> sucht selbst&#228;ndig die geometrisch k&#252;rzeste <Italic> bestehende </Italic>  Verbindung zwischen diesen Punkten.
+
+
+<Warning>
+Wenn keine Verbindung zwischen Start- und Endpunkt besteht, dann ist keine Wegfindung m&#246;glich und 
+ <Placeholder>product</Placeholder> gibt eine entsprechende Fehlermeldung aus. Verwenden Sie dann zum Fertigstellen des Verlaufs eine der anderen Optionen.
+
+</Warning>
+
+
+
+
+3. Nach Auswahl des Punktes wird an der gew&#228;hlen Position ein neuer Punkt mit dem aktuellen Punkttyp eingef&#252;gt.
+
+4. Danach stehen Ihnen folgenden Optionen zur Verf&#252;gung:
+
+- W&#228;hlen eines weiteren Punktes. Es wird ein Liniensegment zum neuen Punkt eingef&#252;gt - Siehe Punkt 2.
+
+- W&#228;hlen Sie direkt ein benachbartes Liniensegment aus (bei aktiver Option <Menu>Segmentwahl</Menu> ). 
+
+- <Menu>Bogen</Menu>  - schaltet auf die Konstruktion eines 3-Punkt Bogens um.
+
+- <Menu>Bogen Mittelpunkt</Menu>  - schaltet auf die Konstruktion eines Bogens mit Mittelpunkt um.
+
+- <Menu>Bogen Radius</Menu>  - schaltet auf die Konstruktion eines Bogens mit Radius um.
+
+- <Menu>Tangentenbogen</Menu>  - schaltet auf die Konstruktion eines Tangentenbogens um.
+
+- <Menu>Schließen</Menu>  - schlie&#223;t den Linienzug (die Option wird aktiv sobald mehr als 1 Segment vorhanden ist.
+
+- <Menu>Fertig</Menu>  - beendet das Erfassen dieses Linienzuges.
+
+- <Menu>Zurück</Menu>  - l&#246;scht den letzten Punkt; es kann ein neuer Punkt angegeben werden.
+
+
+
+5. Wenn in der Konfiguration Pflichtattribute f&#252;r diesen Objekttyp festgelegt wurden, erscheint das Eingabefenster f&#252;r die Attribute. Sie k&#246;nnen direkt mit der Eingabe des ersten Attributes beginnen. Mit <Border>Enter</Border>  beenden Sie die Eingabe und erzeugen den Linienzug.
+
+
+
+
+Alternative
+
+
+1. Rufen Sie den Befehl auf oder w&#228;hlen Sie den gew&#252;nschen Objekttyp aus dem Darstellungsmanager aus.
+
+2. W&#228;hlen Sie die Option <Menu>Segmentwahl</Menu> 
+3. Im Segmentwahl-Modus fehlen die meisten genannten Optionen und <Placeholder>product</Placeholder> l&#228;sst nur die Auswahl von an den bisherigen Linienverlauf angrenzenden Segmenten zu
+
+4. Um in den urspr&#252;nglichen Modus zur&#252;ck zu gelangen, w&#228;hlen Sie die Option <Menu>Punktwahl</Menu> .
+
+
+
+
+<Success>
+Den aktuellen Punkttyp der neuen Punkte w&#228;hlen Sie in der Fu&#223;zeile (siehe [Benutzeroberfl&#228;che.Statusleiste](../benutzeroberflaeche/statusleiste)
+). &#196;ndern Sie den Punkttyp bei Bedarf auch w&#228;hrend des Zeichnens eines Linienzugs.
+W&#228;hlen Sie &quot;Kein Punkt&quot; um keinen Punkttyp auf den St&#252;tzpunkt zu setzen.
+</Success>
+
+
+<Warning>
+Die Optionen  <Menu>Segmentwahl</Menu>  und  <Menu>Punktwahl</Menu>  beeinflussen das Eingabeverhalten von  <Placeholder>product</Placeholder> 
+W&#228;hrend Sie im Segmentwahl-Modus lediglich bestehende Segmente  <Italic> selektieren </Italic>  k&#246;nnen, ist w&#228;hrend der Punktwahl jede beliebige Eingabe von Koordinaten m&#246;glich.
+</Warning>
+
+
+Siehe auch [Einf&#252;gen von Kreisen](../../darstellungsmanager/neueobjekte/kreis)
+.

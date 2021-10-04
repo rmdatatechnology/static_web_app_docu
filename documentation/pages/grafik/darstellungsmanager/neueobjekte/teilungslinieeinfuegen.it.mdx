@@ -1,0 +1,50 @@
+---
+title: "Inserire una linea di frazionamento"
+page: true
+---
+## Con la polilinea selezionata dividere le superfici in base a delle specifiche: ad esempio frazionare una superficie ottenendo un&#39;area predefinita oppure far passare la linea di frazionamento per un punto definito.
+ <Menu> Menu: [Gestore rappresentazione / Menu contestuale (Bottone destro del mouse) / Inserire linea di frazionamento] </Menu> 
+<GeoDesigner> <Menu> Cmd: [PartitioningLineInsert] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+
+1. Cliccare col <Border>Bottone destro del mouse</Border>  sul tipo di polilinea desiderato.
+
+2. Richiamare il comando tramite il menu contestuale.
+
+3. Selezionare sulla grafica la superficie da frazionare, tramite selezione del punto d&#39;inserimento o del poligono della superficie stessa.
+
+- Ora se la superficie non &#232; ancora stata calcolata, <Placeholder>product</Placeholder> cerca di eseguire il calcolo.
+
+
+
+4. Selezionare un segmento a piacere al quale la linea di frazionamento deve essere <Bold> parallela </Bold>  oppure scegliere una delle seguenti opzioni:
+
+- <U> <Bold> Linea di frazionamento ortogonale al segmento </Bold> </U>  - La linea &#232; inserita con un angolo retto rispetto al segmento scelto.
+
+- <U> <Bold> Definire direzione tramite 2 punti </Bold> </U>  - Definire la direzione della linea di frazionamento, selezionando 2 coordinate di punti a piacere.
+
+- <U> <Bold> Ruota tra 2 segmenti </Bold> </U>  - Selezione di 2 segmenti. A partire dal punto d&#39;intersezione, la linea viene ruotata sino ad ottenere la superficie desiderata.
+
+
+
+5. Una volta che la direzione della linea di frazionamento &#232; stata definita, scegliere una delle seguenti optioni per posizionarla:
+
+- <U> <Bold> Inserire distanza </Bold> </U>  - Inserire la distanza ed indicare il lato per lo spostamento della linea.
+
+- <U> <Bold> Spostare tramite punto </Bold> </U>  - indicare direttamente il punto per il quale deve passare la linea di frazionamento precedentemente orientata.
+
+- <U> <Bold> Immettere superficie </Bold> </U>  - Inserire la superficie assoluta in m&#178;, che deve essere sottratta dalla superficie originale. Inoltre definire sulla grafica la direzione nella quale la superficie deve essere sottratta.
+
+
+
+
+
+
+<Success>
+Nel calcolo tramite distanza o superficie, la linea di frazionamento viene spostata dal punto pi&#249; esterno della superficie, fino ad ottenere il valore desiderato.
+</Success>
+
+<Warning>
+La linea di frazionamento &#232; sempre inserita nella versione al momento attiva del piano. Si consiglia prima di eseguire il comando, di verificare che la versione sia quella desiderata.
+</Warning>

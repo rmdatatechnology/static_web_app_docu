@@ -1,0 +1,123 @@
+---
+title: "Table de mappage - rmMAP-Migration"
+page: true
+---
+##  Reprendre dans rmMAP l&#39;altitude des points depuis le point d&#39;insertion
+Quand le plan a &#233;t&#233; d&#233;ssin&#233; avec rmMAP en 2D et l&#39;altitude arrondie est saisie dans un attribut du point, il est possible d&#39;acc&#233;der directement &#224; l&#39;attribut de l&#39;altitude du point d&#39;insertion de rmMAP:
+<Info>
+ &lt;Attribut Name=&quot;Internal~Elevation&quot;&gt;&quot;Internal~RmMapHeight&quot;&lt;/Attribut&gt;
+
+</Info>
+
+## Reprendre la largeur du signe conventionnel depuis  <Placeholder>rmMAP</Placeholder> 
+Les dessins  <Placeholder>rmMAP</Placeholder> peuvent contenir des  <Italic> Signes conventionnels </Italic> , qui sont des propres &#233;l&#233;ments CAD avec un objet de r&#233;f&#233;rence (Ligne). Dans  <Placeholder>product</Placeholder> les informations des Signes conventionnels (largeur d&#39;un mur / d&#39;un talus, etc.) sont g&#233;r&#233;es comme propri&#233;t&#233;s de la repr&#233;sentation graphique resp. comme attribut d&#39;objet. Ces informations via le mappage peuvent &#234;tre g&#233;n&#233;r&#233;es depuis  <Placeholder>rmMAP</Placeholder> 
+
+### Syntaxe 
+<Info>
+L&#39;information d&#39;un signe conventionnel d&#39;une polyligne d&#233;rive  <Italic> de facto </Italic>  de l&#39;union de plusieurs &#233;l&#233;ments CAD dans 1 objet et donc depuis l&#39;&#233;l&#233;ment XML  <Bold> &lt;MultipleObjectMapping&gt; </Bold>  avec la liste des  <Bold> &lt;Objects&gt; </Bold> . Elle peut &#234;tre utilis&#233;e comme sous-&#233;l&#233;ment de l&#39;ensemble des [Classes d`objets-El&#233;ments](../datei/cadkonvertieren5)
+
+</Info>
+
+<Warning>
+Les signes conventionnels sont normalement enregistr&#233;s comme  <Italic> Bloc anonyme </Italic>  dans le DWG.  <Placeholder>product</Placeholder> affecte le signe conventionnel &#224; la ligne via le filtre aussi bien que la proximit&#233; spatiale. C&#39;est-&#224;-dire que le point d&#39;insertion du bloc/signe conventionnel doit se trouver  <Italic> exactement </Italic>  sur un sommet (habituellement le point de d&#233;part) de la ligne en question.
+La conversion aura lieu seulement quand tous les objets, sur la base du filtre, seront trouv&#233;s.
+</Warning>
+
+### Valeurs sp&#233;ciales
+<Warning>
+ <Placeholder>product</Placeholder> peut d&#233;terminer la largeur du signe conventionnel depuis le dessin d&#39;origine et l&#39;affecter &#224; un attribut.
+
+<table>
+<tr><td> <i> Internal~DeriveDistanceOrthogonal </i> </td>
+<td>Largeur d&#233;termin&#233;e depuis le bloc/signe conventionnel attribu&#233;.</td>
+</tr>
+</table>
+</Warning>
+
+Vous pouvez saisir les attributs aussi avec des valeurs discr&#232;tes, voir commentaire dans l&#39;exemple.
+
+<Info>
+Exemple:
+
+-  Il faut cr&#233;er une polyligne du type <Bold> Mauer (Mur) </Bold>  (le mur poss&#232;de normalement une <Italic> Largeur </Italic> ).
+
+
+-  1 Mur est compos&#233; de...
+
+
+-  1 Polyligne sur le layer <Bold> B_EF_M-L </Bold>  et 
+
+
+-  1 Bloc anonyme (le nom commence par &quot;*U&quot; avec une chiffre &#224; la fin, e.g. &quot;*U123456&quot; ) sur le layer <Bold> B_EF-S </Bold> 
+
+
+-  Le point d&#39;insertion du bloc doit se trouver exactement sur un sommet de la polyligne.
+
+
+-  L&#39;attribut <Italic> MauerBreite </Italic>  de la polyligne cr&#233;&#233;e est d&#233;termin&#233; depuis la distance orthogonale entre la polyligne et les &#233;l&#233;ments du bloc.
+
+
+-  L&#39;attribut Internal~DeriveDistanceOrthogonal d&#233;fini la distance et l&#39;attribut Internal~DeriveSideOrthogonal d&#233;fini le c&#244;t&#233; (1 ou -1)
+
+
+<Image>\img\grafik\anhang\SignatureMultipleObjectMapping.png$SignatureMultipleObjectMapping</Image>
+
+
+</Info>
+
+
+### Reprendre le c&#244;t&#233; et la largeur du signe conventionnel depuis des donn&#233;es rmMAP
+
+-  Au cas o&#249; la recherche g&#233;om&#233;trique pour la largeur du signe conventionnel ne suffirait pas, elle pourrait &#234;tre reprise depuis les donn&#233;es rmMAP
+
+
+
+<Info>
+<table>
+<tr><td>Internal~RmMapOffset</td>
+<td>Largeur signe conventionnel du signe conventionnel rmMAP</td>
+</tr>
+<tr><td>Internal~RmMapSide</td>
+<td>C&#244;t&#233; sur lequel le signe conventionnel de rmMAP est dessin&#233;</td>
+</tr>
+<tr><td>Internal~RmMapOffsetBack</td>
+<td>Largeur signe conventionnel du c&#244;t&#233; verso du signe conventionnel rmMAP</td>
+</tr>
+</table>
+
+
+
+<Image>\img\grafik\anhang\rmMAPOffestExample.png$rmMAPOffestExample</Image>
+
+</Info>
+
+
+
+### rmMAP-Types
+<Warning>
+La proc&#233;dure indiqu&#233;e ci-dessus n&#39;est pas utilisable quand diff&#233;rents types d&#39;objets  <Placeholder>rmMAP</Placeholder> se trouvent sur le m&#234;me  <Italic> Layer </Italic> . Dans ce cas la cr&#233;ation d&#39;objets s&#233;par&#233;s dans la G&#233;obase de donn&#233;es n&#39;est pas possible.
+Pour ce faire, il y a la possibilit&#233; de filtrer la mappage de mani&#232;re cibl&#233;e selon le type de  <Placeholder>rmMAP</Placeholder> 
+</Warning>
+
+<Info>
+Exemple:
+
+-  Il faut cr&#233;er une polyligne du type <Bold> Sockelzaun (socle de cl&#244;ture) </Bold> .
+
+
+-  1 Socle de cl&#244;ture est compos&#233; de ...
+
+
+-  1 Ligne <Placeholder>rmMAP</Placeholder> d&#39;un certain type d&#39;objet, dont le nom commence par <Bold> Zaun </Bold>  et 
+
+
+-  1 Bloc anonyme (dont le nom commence par &quot;*U&quot;  avec une chiffre &#224; la fin, e.g. &quot;*U123456&quot; ) sur un layer quelconque (non d&#233;fini)
+
+
+-  Le point d&#39;insertion du bloc doit se trouver exactement sur un sommet de la polyligne.
+
+
+-  L&#39;attribut <Italic> Breite (largeur) </Italic>  de la polyligne cr&#233;&#233;e est d&#233;termin&#233; depuis la distance orthogonale entre la ligne <Placeholder>rmMAP</Placeholder> et les &#233;l&#233;ments du bloc.
+
+<Image>\img\grafik\anhang\SignatureMultipleObjectMapping2.png$SignatureMultipleObjectMapping2</Image>
+</Info>

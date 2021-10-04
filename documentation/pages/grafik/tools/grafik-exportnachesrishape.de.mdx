@@ -1,0 +1,93 @@
+---
+title: "Grafik-Export nach ESRI Shape"
+page: true
+---
+## Export von Grafik-Informationen aus einer Enterprise Geodatabase nach ESRI Shape
+
+rmDATA bietet eine Export-Tool an, welches aus einer Enterprise Geodatabase die Geometrie und alle zugeh&#246;rigen grafischen Informationen in das Format ESRI Shape schreibt. Weitere Attribute werden nicht exportiert.
+Die erzeugten Shape-Daten beinhalten als Sachdaten jene Informationen, die f&#252;r die Darstellung der Objektklassen gebraucht werden.
+
+Das Export-Tool ist auf Anfrage bei rmDATA erh&#228;ltlich und wird als ZIP-Archiv ausgeliefert.
+
+## Vorgangsweise zum Start des Exports:
+
+- Entpacken des gelieferten ZIP-Archivs
+
+- rmdata.Tools.GeoDbPublisher.exe.config: Konfigurationsdatei, in welcher die erforderlichen Parameter eingestellt werden
+
+- rmdata.Tools.GeoDbPublisher.exe: F&#252;hrt den Export durch.
+
+
+
+
+## exportierbare Objektklassen:
+
+- Point
+
+- LineString
+
+- Area
+
+- Text
+
+- LineStringSymbol
+
+- TwoPointSymbol
+
+- ThreePointSymbol
+
+- AlignedDimension
+
+- AngularDimension
+
+- ArcDimension
+
+- BaselineDimension
+
+
+
+
+## Exportierte Attribute:
+
+- ID
+
+- LAYER
+
+- TOOLTIP
+
+- WIDTH
+
+- HEIGHT
+
+- ROTATION
+
+- BLOCKNAME
+
+- COLOR
+
+
+
+
+## Parameter
+Soll die Ausgabe auf bestimmte Objektklassen und Objekttypen eingeschr&#228;nkt werden, k&#246;nnen diese als Parameter an die rmdata.Tools.GeoDbPublisher.exe &#252;bergeben werden. Wird kein Parameter angegeben, werden alle Klassen exportiert. Werden keine Objekttypen angegeben, so werden alle Objekttypen der angegebenen Objektklassen exportiert.
+Syntax:  <Menu>rmdata.Tools.GeoDbPublisher.exe Point,LineString,Area,Text Objekttyp1,Objekttyp2</Menu> 
+
+## Ausgabe
+Die Ergebnisdateien werden in der konfigurierten Ausgabeorder oder auf dem Desktop im Ordner &quot;ShapeExport&quot; abgelegt.
+Das Exporttool erzeugt Shape-Dateien pro Objektklasse und Objekttyp:
+Syntax der Dateinamen:  <Menu>ArtderShapeDatei_Objektklasse_Objekttyp_Layer.shp</Menu> 
+Es werden 4 Arten exportiert: Point, Line, Polygon, Text
+
+## Aufbau und Inhalt der config-Datei
+Die Konfiguration der Exporttools erfolgt in der rmdata.Tools.GeoDbPublisher.exe.config Datei.
+
+SourceDB.connectionstring: Quelldatenbank
+value=&quot;POOLING=True;USER ID=bamberg;PASSWORD=BAMBERG;DATA SOURCE=//tim-oracle11:1521/ora11.rmdata.at&quot;
+
+OutputPath: Ausgabeordner. Wenn leer, wird automatisch auf dem Desktop ins Verzeichnis &quot;ShapeExport&quot; exportiert
+
+ActiveRepresenationName: Name der zu exportierenden Darstellung
+ActiveViewName: Name der zu exportierenden Ansicht
+ActiveScale: zu exportierender Ma&#223;stab
+
+

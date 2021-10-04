@@ -1,0 +1,49 @@
+---
+title: "Importazione di file Interlis"
+page: true
+---
+## Importazione di dati da file Interlis.
+
+<Warning>
+Per il trasferimento &#232; indispensabile un file di licenza della soci&#233;t&#224; Infogrips. Copiare questo file nella cartella  <Border>C:\Program Files\rmDATA\GeoMapperSE\Thirdparty\iltools\user\license</Border> .  
+</Warning>
+
+
+<Warning>
+Questa funzione &#232; disponibile solamente se l&#39;applicazione &quot;Interlis&quot; &#232; attivata.
+</Warning>
+
+
+
+### Impostazioni
+Qui possono essere eseguite ulteriori impostazioni d&#39;importazione.
+
+
+- <Bold> File ITF-Mappatura: </Bold>  Questo file gestisce la conversione dei dati Interlis in oggetti <Placeholder>fullproduct</Placeholder> . Nel file si possono inserire pi&#249; linee con i relativi parametri.
+
+- <Bold> Risoluzione dei conflitti: </Bold>  I nomi dei punti e delle superfici devono essere univoci. In caso di omonimia sono disponibili le seguenti opzioni:
+
+- <Italic> Rinomina </Italic> : I punti e le superfici importate sono rinominati tramite un prefisso risp. suffisso. Gli oggetti esistenti restano inalterati.
+
+- <Italic> Priorit&#224; al punto esistente </Italic> : Il punto esistente nel file resta inalterato, l&#39;oggetto dalla sorgente viene ignorato. Il comportamento &#232; lo stesso che nel caso di <Italic> Rinomina </Italic>  senza inserire un prefisso risp. suffisso.
+
+- <Italic> Priorit&#224; al nuovo punto </Italic> : Il nuovo punto importato sostituisce il punto esistente.
+
+- <Italic> Risolvere interattivamente </Italic> : Si apre un dialogo di collisione, nel quale &#232; possibile decidere per ogni punto, se usare il punto da <Placeholder>product</Placeholder> o dalla sorgente. 
+
+
+
+
+
+<Warning>
+Per le superfici con lo stesso nome, viene fatta la ridenominazione tramite prefisso risp. suffisso. Se entrambi i valori sono vuoti, la superficie non &#232; importata. Resta la vecchia superficie.
+</Warning>
+
+
+- <Bold> Protocollo: </Bold>  Definisce se debba essere generato un protocollo dettagliato degli oggetti importati, oppure un semplice riepilogo.
+
+- <Bold> Importa Region: </Bold>  Definisce se per i punti debba essere importato o ignorato il campo <Italic> Region </Italic> .
+
+
+
+

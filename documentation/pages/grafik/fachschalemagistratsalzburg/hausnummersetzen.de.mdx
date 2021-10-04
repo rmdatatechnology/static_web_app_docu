@@ -1,0 +1,36 @@
+---
+title: "Hausnummer setzen"
+page: true
+---
+## Setzen von Hausnummern und &#220;bernahme des Stra&#223;encodes
+
+Der Befehl  <Menu>Hausnummern setzen</Menu>  wird im Editiermodus im  <Menu> Menu: [MAG Salzburg] </Menu>  aufgerufen.
+Nach Befehlsaufruf kann f&#252;r die &#220;bernahme des Stra&#223;encodes ein Stra&#223;enname aus einer Liste gew&#228;hlt werden oder ein bestehender Text mit einem Stra&#223;ennamen selektiert werden. In diesem Fall wird der Stra&#223;encode aus dem Textobjekt &#252;bernommen.
+Weiters wird im Dialog die gew&#252;nschte neue Hausnummer angegeben.<Image>\img\grafik\fachschalemagistratsalzburg\hausnummerndialog.png$hausnummerndialog</Image>
+
+Nach  <Border>OK</Border>  wird der Text in der Grafik wie folgt positioniert:
+
+- Wahl einer Hauskante (Linienzug oder Fl&#228;chenumgrenzung)
+
+- Wahl der Seite, auf welche die Hausnummer eingesetzt werden soll
+
+- Wahl eines Punktes f&#252;r die Position der neuen Hausnummer
+
+
+
+
+Der neue Text wird im Abstand von 1m entweder mittig zur gew&#228;hlten Linie oder in der H&#246;he des gew&#228;hlten Positionspunktes eingef&#252;gt.
+Der Text wird so eingef&#252;gt, dass er nicht auf dem Kopf steht und bei Ma&#223;stabswechsel und infolgedessen &#196;nderung der Texth&#246;he nicht in die Geb&#228;udelinie hineinragt.
+
+Die Stra&#223;enname wird als Textwert &#252;bernommen, der zugeh&#246;rige Stra&#223;encode in das Attribut &quot;CODE&quot; geschrieben.
+
+<Success>
+Der Befehl funktioniert nur in einer Enterprise Geodatabase. Die Liste der Stra&#223;ennamen muss als View im Oracle-Schema angelegt sein und folgende Struktur aufweisen:  <Border>create view SBG_STREETS (CODE, NAME) as ....;</Border>   
+</Success>
+
+
+<Success>
+Der Texttyp f&#252;r die Hausnummer wird in den [Projekteinstellungen der Fachschale](../fachschalemagistratsalzburg/einstellungen)
+ gew&#228;hlt
+</Success>
+

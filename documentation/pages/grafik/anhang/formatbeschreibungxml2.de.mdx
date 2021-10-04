@@ -1,0 +1,77 @@
+---
+title: "Dateieinstellungen"
+page: true
+---
+## Einf&#252;gen von Dateiattributen
+
+###  Aufbau
+
+- <Bold>  &lt;ProjectSettings&gt; </Bold>  Liste der Projekteinstellungen (optional)
+
+- <Bold> &lt;ProjectSetting Name=&quot;Meta~att1&quot; Type=&quot;System.String&quot; Value=&quot;hallo&quot; /&gt; </Bold>   Dateieinstellung, wobei:
+
+- <Bold> Name: </Bold>  Name der Einstellung. Bei Dateiattributen setzen Sie vor den Namen &quot;Meta~&quot;, z.B. &quot;Meta~att1&quot;
+
+- <Bold> Type: </Bold>  Typ der Einstellung
+
+- <Bold> Value: </Bold>  Wert
+
+
+
+- <Bold> &lt;/ProjectSettings&gt; </Bold>  Ende der Sektion
+
+
+
+
+<Info>
+    
+ <Bold> Dateieinstellungen </Bold> 
+    &lt;ProjectSetting Name=&quot;CoordinateSystem&quot; Type=&quot;System.String&quot; Value=&quot;rmDATA:6715&quot; /&gt;
+ <Bold> Dateiattribute </Bold> 
+&lt;ProjectSetting Name=&quot;Meta~att1&quot; Type=&quot;System.String&quot; Value=&quot;hallo&quot; /&gt;
+&lt;ProjectSetting Name=&quot;Meta~att2&quot; Type=&quot;System.String&quot; Value=&quot;welt&quot; /&gt;
+</Info>
+
+
+Es gibt u.a. folgende Dateieinstellungen
+### Dateieinstellungen - Allgemein
+<table>
+<tr><th>Dateieinstellung</th>
+<th>Beschreibung</th>
+</tr>
+<tr><td>CoordinateSystem</td>
+<td>Codes des Koordinatensystems</td>
+</tr>
+<tr><td>CrsMeanGeoidUndulation</td>
+<td>Mittlere Geoidundulation</td>
+</tr>
+<tr><td>CrsMeanEarthRadius</td>
+<td>mittlerer Erdradius </td>
+</tr>
+<tr><td>CrsReductionPointEastCrsReductionPointNorth</td>
+<td>Schwerpunkt</td>
+</tr>
+<tr><td>CrsReductionPointElevation</td>
+<td>Mittlere H&#246;he</td>
+</tr>
+<tr><td>CrsReductionFactor</td>
+<td>Reduktionsfaktor</td>
+</tr>
+</table>
+
+
+### Dateieinstellungen - Berechnungen
+<table>
+<tr><th>Dateieinstellung</th>
+<th>Beschreibung</th>
+</tr>
+<tr><td>ActiveRounding</td>
+<td>Koordinaten-Rundung f&#252;r Fl&#228;chenberechnungen und Bema&#223;ungen</td>
+</tr>
+<tr><td>CrsAreaReduceToNatureValues</td>
+<td>Fl&#228;chen auf Naturma&#223; reduzieren</td>
+</tr>
+<tr><td>CrsAreaReductionConsiderMeanElevation</td>
+<td>Mittlere H&#246;he bei Fl&#228;chenreduktion ber&#252;cksichtigen</td>
+</tr>
+</table>

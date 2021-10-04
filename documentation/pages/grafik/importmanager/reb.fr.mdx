@@ -1,0 +1,73 @@
+---
+title: "Importation de données de modèle depuis fichiers REB "
+page: true
+---
+## Importation des donn&#233;es de mod&#232;le depuis des fichiers de texte dans les formats REB suivants:
+
+- DA30 - Points
+
+- DA45 - Points
+
+- DA49 - Lignes de rupture, contours limite de mod&#232;le
+
+
+
+
+ <Menu> Menu: [Fichier / Manager d'importation] </Menu> 
+
+Sur d&#39;autres pages de configuration, vous pouvez d&#233;finir des configurations sp&#233;cifiques pour le format REB.
+
+### S&#233;lection horizon
+Si les donn&#233;es ont diff&#233;rents horizons REB, vous pouvez s&#233;lectionner un horizon, qui sera import&#233; dans le mod&#232;le choisi. Le premier enregistrement est propos&#233; automatiquement dans la liste.
+
+### Param&#232;tres
+Ici vous pouvez d&#233;finir d&#39;autres param&#232;tres d&#39;importation, ces d&#233;finitions sont optionelles.
+
+- <Bold> R&#233;solution de conflits: </Bold> Les noms de points et surfaces, doivent &#234;tre univoques. En cas de noms &#233;gaux, les options suivantes sont disponibles:
+
+- <Italic> Renommer </Italic> : Les points et les surfaces import&#233;s sont renomm&#233;s avec un pr&#233;fixe resp. un suffixe. Les objets existants restent inchang&#233;s.
+
+
+
+
+
+
+
+- <Italic> Priorit&#233; au point existant </Italic> : Le point d&#233;j&#224; existant dans le fichier reste inchang&#233;, l&#39;objet de la source est ignor&#233;. Le comportement est le m&#234;me que pour <Italic> Renommer </Italic>  sans insertion d&#39;un pr&#233;fixe resp. un suffixe.
+
+- <Italic> Priorit&#233; au nouveau point </Italic> : Le nouveau point import&#233;, remplace le point existant.
+
+- <Italic> Resoudre int&#233;ractivement </Italic> : Il s&#39;ouvre un dialogue de collision, o&#249; vous pouvez d&#233;cider pour chaque point, si il faut utiliser le point depuis <Placeholder>product</Placeholder> ou le point depuis la source. 
+
+
+
+
+
+<Warning>
+Dans le cas de surfaces avec le m&#234;me nom, les surfaces import&#233;es sont renomm&#233;es avec pr&#233;fixe resp. suffixe. Si les deux valeurs sont vides, la surface n&#39;est pas import&#233;e. Le surface existante reste.
+</Warning>
+
+
+- <Bold> Protocole: </Bold>  Il d&#233;finit si le protocole d&#233;taill&#233; des objets import&#233;s, doit &#234;tre g&#233;n&#233;r&#233;, ou juste un r&#233;capitulatif.
+
+- <Bold> Importer Region: </Bold>  Il d&#233;finit si pour les points, le champ <Italic> Region </Italic>  doit &#234;tre import&#233; ou ignor&#233;.
+
+- <Bold> Mod&#232;le de terrain: </Bold>  La propri&#233;t&#233; <Italic> Mod&#232;le destination </Italic>  d&#233;finit que les points import&#233;s doivent &#234;tre attribu&#233;s au mod&#233;le de terrain s&#233;lectionn&#233;. Par d&#233;faut le mod&#232;le actif est s&#233;lectionn&#233;.
+
+
+
+<Warning>
+Aucun mod&#232;le de r&#233;f&#233;rence n&#39;est list&#233;. Dans le cas o&#249; le fichier ne contient aucun mod&#232;le appropri&#233;, cette propri&#233;t&#233; n&#39;est pas affich&#233;e.
+</Warning>
+
+
+Appuyez sur  <Border>Terminer</Border> , pour terminer l&#39;importation. Un dialogue s&#39;ouvrira, et affichera l&#39;&#233;tat d&#39;importation.
+
+<Warning>
+Le DA49 peut &#234;tre import&#233; seulement avec le DA30 ou le DA45, sinon les informations sur les ar&#234;tes-sommets manquent!
+</Warning>
+
+<Warning>
+Les filtres actifs ne sont pas consid&#233;r&#233;s lors de cette exportation.
+</Warning>
+

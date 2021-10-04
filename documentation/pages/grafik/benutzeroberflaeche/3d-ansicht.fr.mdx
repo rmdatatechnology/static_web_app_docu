@@ -1,0 +1,104 @@
+---
+title: "Vue-3D"
+page: true
+---
+## Vue en 3 dimensions des donn&#233;es de la zone de dessin
+<GeoMapper>
+
+### Visualiser / masquer un nuage de points 3D
+Activez la Vue-3D dans la barre d&#39;outils avec le bouton 
+<Image>\img\grafik\benutzeroberflaeche\3D-Ansicht.png$3D-Ansicht</Image> Cliquez &#224; nouveau sur ce bouton et la vue est &#224; nouveau masqu&#233;e.
+
+<Success>
+Les objets relativement loins de la position de la cam&#233;ra, sont repr&#233;sent&#233;s comme transparents.
+</Success>
+
+<Success>
+Les classes d&#39;objets suivantes ne sont pas visualis&#233;es dans la Vue-3D:
+
+-  Symboles de polylignes
+
+
+-  Surfaces
+
+
+-  Textes
+
+
+-  Cotes
+
+
+-  Calculs de volume
+
+
+-  Profils
+
+
+
+
+</Success>
+
+<Success>
+ Les textes sont toujours repr&#233;sent&#233;s comme debuts, ainsi qu&#39;&#234;tre bien lisibles. Dans les param&#232;tres d&#39;utilisateur vous pouvez masquer les textes.
+</Success>
+
+<Success>
+ Pour les polylignes seulement la ligne de base (&quot;Linie1&quot;) est repr&#233;sent&#233;e. La repr&#233;sentation n&#39;est pas mise en premier plan et les arrondis sont ignor&#233;s.
+</Success>
+
+
+### S&#233;lection resp. choix de donn&#233;es
+Tous les objets peuvent &#234;tre s&#233;lectionn&#233;s aussi dans la Vue-3D. En outre il est possible, lors de la construction, d&#39;acqu&#233;rir de simples coordonn&#233;es 3D dans la repr&#233;sentation 3D (&quot;Picking&quot;). Sur la coordonn&#233;e concern&#233;e un marquer (croix rouge) est affich&#233;. Ici les r&#232;gles suivantes son valables:
+
+-  Tol&#233;rance de s&#233;lection et de &quot;Picking&quot;: Le param&#232;tre d&#39;utilisateur &quot;Accrochage aux objets&quot; d&#233;fini dans le &quot;Rayon d&#39;accrochage&quot; est utilis&#233; (valeur en pixels).
+
+-  Symboles: Le point d&#39;insertion est automatiquement livr&#233; (la seule &quot;v&#233;ritable&quot; Info-3D d&#39;un symbole).
+
+-  Segments de ligne: Exclusivement le point de d&#233;part et de fin sont livr&#233;s (aucun point moyen, ...).
+
+-  Nuage de points: Seulement un point du nuage de points est livr&#233;. Si en raison de la tol&#233;rance plusieurs points sont consern&#233;s, le point livr&#233; est le plus proche au rayon de s&#233;lection (&quot;pick ray&quot;). (Note: non pas le point avec la plus petite distance depuis la cam&#233;ra). Quand le mode &quot;Smart Pick&quot; du module G&#233;om&#232;tre Virtuel est activ&#233;, ceci est exclusif - seulement les points du nuage de points sont livr&#233;s.
+
+
+
+
+### Zoom et Pan
+Pour la navigation dans la Vue-3D, utilisez les boutons suivants de la souris:
+
+
+- <Bold> Roulette: </Bold>  &#8203Zoom dans la Vue-3D. 
+
+- <Bold> <Border>Ctrl</Border>  + Roulette: </Bold>  &#8203Zoom dans la Vue-3D par petits pas.
+
+- <Bold> <Border>Shift</Border>  + Roulette: </Bold> &#8203 Ainsi vous bougez la cam&#233;ra vers les donn&#233;es et vous pouvez avancer encore le zoom dans la Vue-3D. 
+
+- <Bold> <Border>Shift</Border>  + <Border>Ctrl</Border>  + Roulette: </Bold> &#8203 Ainsi vous d&#233;placez la cam&#233;ra vers les donn&#233;es par petits pas.
+
+- <Bold> Double-clic avec le bouton central: </Bold>  Vue standard sur les donn&#233;es (comme juste apr&#232;s l&#39;activation de la Vue-3D)
+
+- <Bold> Double-clic avec le bouton droit: </Bold>  Placer le point central sur l&#39;objet au dessous du pointer de la souris
+
+- <Bold> &#8203Bouton droit + mouvement de la souris: </Bold>  Rotation de la cam&#233;ra autour du point central courant (&quot;Orbit&quot;).
+
+- <Bold> &#8203Bouton central + Shift + mouvement de la souris: </Bold>  &#8203Rotation (pivoter) du point central courant autour de la cam&#233;ra (&quot;Sweep&quot;) 
+
+- <Bold> Bouton central + mouvement de la souris: </Bold>  D&#233;placement du point central et de la cam&#233;ra orthogonalement &#224; la direction de vis&#233;e (&quot;Pan&quot;)
+
+
+
+<table>
+<tr><td><Image>\img\grafik\benutzeroberflaeche\Slider.png$Slider</Image></td>
+<td>Dans le Slider vous voyez la plage d&#39;altitudes des donn&#233;es. Cliquez simplement sur l&#39;altitude souhait&#233;e pour afficher les donn&#233;es qui se trouvent &#224; cette altitude.
+<Success>
+Utilisez cette fonction pour vous positionner rapidement &#224; la hauteur o&#249; vous voyez les donn&#233;es erron&#233;es relatives.
+</Success>
+<Success>
+Si il y a des donn&#233;es avec une altitude non valable, pour ces donn&#233;es l&#39;altitude 0 est affect&#233;e, ainsi elles sont affich&#233;es dans la Vue-3D.
+</Success>
+</td>
+</tr>
+</table>
+
+
+### Affichage de la position de la cam&#233;ra et de l&#39;angle d&#39;ouverture dans la zone de dessin
+Dans la zone de dessin, la portion visible dans la Vue-3D est affich&#233;e avec 2 lignes bleues. Quand vous faites un zoom, un pan ou une rotation dans la Vue-3D, les lignes bleues sont automatiquement adapt&#233;es.<Image>\img\grafik\benutzeroberflaeche\kameraposition.png$kameraposition</Image>
+</GeoMapper>

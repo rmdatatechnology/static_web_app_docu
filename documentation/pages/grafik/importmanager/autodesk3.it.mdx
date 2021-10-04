@@ -1,0 +1,176 @@
+---
+title: "Assistente di mappatura per elementi DWG, DXF"
+page: true
+---
+## Assistente per la creazione di una tabella di conversione per di elementi CAD
+<GeoMapper></GeoMapper>
+  <GeoDesigner></GeoDesigner>
+<GeoDesigner>Per la conversione di elementi CAD &#232; disponibile un assistente di mappatura, in tal modo uno o pi&#249; elementi CAD possono essere convertiti in oggetti di  <Placeholder>product</Placeholder>  </GeoDesigner>
+<GeoMapper>Per l&#39;importazione di file Autodesk DWG/DXF &#232; disponibile un assistente di mappatura, in tal modo gli oggetti di un file Autodesk possono essere ripresi in oggetti di  <Placeholder>product</Placeholder> </GeoMapper>
+
+ <Placeholder>fullproduct</Placeholder> analizza i file selezionati dall&#39;utente e mostra in un registo tutte le classi di oggetti attribuibili.
+
+Per ogni classe di oggetti sono elencati tutti i layer di un gruppo AutoCAD (Insert, Point, Text, ...) e per ogni layer pu&#242; venire assegnato un tipo di oggetti di  <Placeholder>product</Placeholder> 
+Se dei blocchi si trovano su layer differenti, viene creata per ogni blocco una linea separata con una condizione. Come condizioni si possono definire anche delle propriet&#224; come colore, stile testo, altezza testo o tipo di linea.
+
+Nel dialogo &#232; possibile duplicare una linea e poi modificarla:  <Border>+</Border> ,  <Border>x</Border> 
+Nella colonna &quot;Tipo di oggetto GeoDB&quot; scegliere il tipo di oggetti  <Placeholder>product</Placeholder> desiderato.
+Inoltre &#232; possibile assegnare ai tipi di oggetti anche degli attributi (sia ripresi da oggetti AutoCAD che valori fissi).
+Ogni oggetto AutoCAD pu&#242; essere ripreso una sola volta. In caso di definizioni doppie vale la sequenza del registro e poi la sequenza delle righe.
+
+<Success>
+Cliccando su  <Border>Fine</Border>  la mappatura creata pu&#242; essere salvata in un file.
+</Success>
+
+
+Nella tabella che segue c&#39;&#232; una panoramica sulle possibilit&#224; di mappatura:
+<table>
+<tr><th>Classe di oggetti Geodatabase</th>
+<th>Possibili elementi AutoCAD (Gruppi)</th>
+<th>Condizioni</th>
+<th>Assegnazione attributo</th>
+</tr>
+<tr><td>Punto</td>
+<td>Insert</td>
+<td>Nome blocco, Colore</td>
+<td>Attributi di blocco, Coord.-Z</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Colore, Stile testo, Altezza testo</td>
+<td>Valore testo</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Colore</td>
+<td>Altezza oggetto (Thickness), Coord.-Z</td>
+</tr>
+<tr><td>Superficie</td>
+<td>Insert</td>
+<td>Nome blocco, Colore</td>
+<td>Attributi di blocco, Coord.-Z</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Colore, Stile testo, Altezza testo</td>
+<td>Valore testo</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Colore</td>
+<td>Altezza oggetto (Thickness), Coord.-Z</td>
+</tr>
+<tr><td></td>
+<td>Hatch</td>
+<td>Colore</td>
+<td></td>
+</tr>
+<tr><td></td>
+<td>Polygon</td>
+<td>Colore, Tipo linea</td>
+<td>Altezza oggetto (Thickness), Elevazione della linea (Elevation)</td>
+</tr>
+<tr><td>Polilinea</td>
+<td>Arc</td>
+<td>Colore, Tipo linea</td>
+<td>Altezza oggetto (Thickness)</td>
+</tr>
+<tr><td></td>
+<td>Line</td>
+<td>Colore, Tipo linea</td>
+<td>Altezza oggetto (Thickness), Altezza vertici (snap al punto)</td>
+</tr>
+<tr><td></td>
+<td>Polyline</td>
+<td>Colore, Tipo linea</td>
+<td>Altezza oggetto (Thickness), Elevazione della linea (Elevation), Altezza vertici (snap al punto)</td>
+</tr>
+<tr><td>Text</td>
+<td>Insert</td>
+<td>Nome blocco, Colore</td>
+<td>Attributi di blocco, Coord.-Z</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Colore, Stile testo, Altezza testo</td>
+<td>Valore testo</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Colore</td>
+<td>Altezza oggetto (Thickness), Coord.-Z</td>
+</tr>
+<tr><td>Simbolo di polilinea</td>
+<td>Insert</td>
+<td>Nome blocco, Colore</td>
+<td>Attributi di blocco, Coord.-Z</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Colore, Stile testo, Altezza testo</td>
+<td>Valore testo</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Colore</td>
+<td>Altezza oggetto (Thickness), Coord.-Z</td>
+</tr>
+<tr><td>Simbolo-2-punti</td>
+<td>Insert</td>
+<td>Nome blocco, Colore</td>
+<td>Attributi di blocco, Coord.-Z</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Colore, Stile testo, Altezza testo</td>
+<td>Valore testo</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Colore</td>
+<td>Altezza oggetto (Thickness), Coord.-Z</td>
+</tr>
+<tr><td>Simbolo-3-punti</td>
+<td>Insert</td>
+<td>Nome blocco, Colore</td>
+<td>Attributi di blocco, Coord.-Z</td>
+</tr>
+<tr><td></td>
+<td>Text</td>
+<td>Colore, Stile testo, Altezza testo</td>
+<td>Valore testo</td>
+</tr>
+<tr><td></td>
+<td>Point</td>
+<td>Colore</td>
+<td>Altezza oggetto (Thickness), Coord.-Z</td>
+</tr>
+<tr><td>Quota di distanza</td>
+<td>AlignedDimension</td>
+<td>DimensionStyle</td>
+<td></td>
+</tr>
+</table>
+
+
+### Possibilit&#224; estese
+<Warning>
+Con l&#39;aiuto dell&#39;assistente di mappatura &#232; possibile coprire la maggior parte delle richieste di conversione di elementi CAD. Peraltro la tabella di conversione offre lei stessa ancora una serie di possibilit&#224; ampliate, le quali non sono accessibili tramite l&#39;assistente ma che possono essere codificate direttamente nella tabella di conversione, ad es.:
+
+- Raggruppare pi&#249; elementi CAD in un oggetto di Geodatabase.
+
+
+- Creare e collegare oggetti versionati (predecessore, successore).
+
+
+- Creare segni convenzionali da elementi CAD
+
+
+- ed altre ancora...
+
+
+
+
+Per saperne di pi&#249; sulle possibilit&#224; estese vedere [qui](../anhang/formatbeschreibungmappingautodesk)
+.
+</Warning>

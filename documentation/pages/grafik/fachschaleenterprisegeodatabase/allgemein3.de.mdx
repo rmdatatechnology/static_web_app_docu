@@ -1,0 +1,24 @@
+---
+title: "Datenbankschema updaten"
+page: true
+---
+## Update eines bestehenden Datenbankschemas
+
+Mit neuen Versionen von rmDATA GeoDesktop ist mitunter auch ein Update des Datenbankschemas notwendig.
+F&#252;r das Update der notwendigen Tabellen in einem existierenden Datenbankschema steht ein Tool zur Verf&#252;gung, welches von jedem Client mit darauf installiertem rmDATA GeoDesktop aufgerufen werden kann.
+
+## GeoDBManager
+Der GeoDBManager wird mit folgender Datei ge&#246;ffnet:
+ <Menu>C:\Program Files\rmDATA\GeoDesktop\EnterpriseGeoDBManager.exe</Menu> 
+
+Nach dem &#214;ffnen des GeoDBManagers sind im Register &quot;Verbindung&quot; die Verbindungsdaten anzugeben:<Image>\img\grafik\fachschaleenterprisegeodatabase\verbindungoracle.png$verbindungoracle</Image><Image>\img\grafik\fachschaleenterprisegeodatabase\verbindung sqlserver.png$verbindung sqlserver</Image>
+
+Nach der Eingabe der Verbindungsparamter wird auf das Register &quot;Scripts durchf&#252;hren&quot; gewechselt und die entsprechenden Scripts zum Uptdate der Tabellen in jeweils einem Register angezeigt. Im Dialog ist unter &quot;Version&quot; die alte Version des Datenbankschemas eingetragen. Es werden nur jene Scripts angeboten, welche zum Hochziehen des Schemas auf die aktuelle Version notwendig sind.<Image>\img\grafik\fachschaleenterprisegeodatabase\updatescriptsoracle.png$updatescriptsoracle</Image>
+
+Die angebotenen Scripts k&#246;nnen vom System-Adiminstrator gegebenenfalls gepr&#252;ft werden.
+Mit  <Border>Durchführen</Border>  werden alle Scripts automatisch der Reihe nach ausgef&#252;hrt und das Ergebnis im Fenster unterhalb der Scripts protokolliert.
+Wurden alle Scripts erfolgreich ausgef&#252;hrt, steht ab sofort die Datenbank f&#252;r GeoDesktop zur Verf&#252;gung und kann mit der neuen Version von GeoDesktop ge&#246;ffnet werden.
+<Warning>
+Das Update kann je nach Gr&#246;&#223;e der Datenbank mehrere Minuten bis zu einer Stunde dauern. Brechen Sie den Vorgang daher niemals ab!
+</Warning>
+

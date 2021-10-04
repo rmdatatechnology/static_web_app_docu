@@ -1,0 +1,41 @@
+---
+title: "Objekte mit Eigentümer-Informationen beschriften"
+page: true
+---
+## Objekte mit ALKIS-Eigent&#252;mer-Informationen beschriften
+
+<Success>
+Der Befehl ist nur in der Fachschale &quot;Liegenschaftskataster (DE)&quot; aktiv.
+</Success>
+
+&#220;ber den Befehl  <Menu>Objekte mit Eigentümer-Informationen beschriften</Menu>  in der Werkzeugleiste von  <Placeholder>fullproduct</Placeholder> oder im  <Menu> Menu: [Liegenschaftskataster] </Menu>  k&#246;nnen zu einem oder mehreren Objekten mit Flurst&#252;cksnummer die Eigent&#252;mer als Text angeschrieben werden.
+Dazu muss die Flurst&#252;cksnummer als Sachdateninformation beim Objekt vorhanden sein, weiters m&#252;ssen die Eigent&#252;mer &#252;ber einen ALKIS-Import in einer Fachschalen-GeoDB importiert worden sein.
+
+Nach Befehlsaufruf wird &#252;ber einen Dialog das Format der Beschriftung festgelegt:<Image>\img\grafik\fachschaleliegenschaftskatasterde\eigentümerbeschriftenvorlage.png$eigentümerbeschriftenvorlage</Image>
+
+
+-  Eigent&#252;mer-Vorlage: Diese gibt an, welche Informationen in der Beschriftung angef&#252;hrt werden.
+
+-  Weitere Eigent&#252;mer zusammenfassen: Beschr&#228;nkt die Ausgabe von zu vielen Eigent&#252;mern. Ist die maximale Anzahl an Eigent&#252;mern erreicht, wird danach der Ersatztext ausgegeben.
+
+-  Adressen zusammenfassen: Gleiche Adressen von mehreren Eigent&#252;mern werden zusammengefasst.
+
+
+
+
+## Viewing-Modus
+Im Viewing-Modus werden die Eigent&#252;mer-Informationen als Redlining-Texte ausgegeben.
+
+## Editier-Modus
+Im Editier-Modus funktioniert die Beschriftung f&#252;r alle Hintergrund-Daten gleich wie im Viewing-Modus, es werden Relining-Texte erzeugt.
+Werden Objekte der editierten Datenquelle f&#252;r die Beschriftung ausgew&#228;hlt, werden die Eigent&#252;mer in ein w&#228;hlbares Sachdatenfeld des Objektes der editierten GeoDB geschrieben. Damit der Eigent&#252;mer-Text in der Grafik dargestellt wird, muss in diesem Fall eine entsprechende Beschriftung konfiguriert sein, welche das angegebene Attribut visualisiert.
+&#220;ber die Eigent&#252;mer-Vorlage wird angegeben, in welches Sachdatenfeld die Informationen geschrieben werden:
+
+[Beschriftungsattribut]
+NAME    = Eigent&#252;mer
+
+Im obigen Beispiel werden die Eigent&#252;mer-Informationen in das Attribut &lt;Eigent&#252;mer&gt; geschrieben.
+<Success>
+&#220;ber diesen Weg k&#246;nnen die Sachdaten von Flurst&#252;cken mit Eigent&#252;mern, Buchungsblattnummer oder anderen ALKIS-Eigent&#252;mer-Informationen erg&#228;nzt werden.
+</Success>
+

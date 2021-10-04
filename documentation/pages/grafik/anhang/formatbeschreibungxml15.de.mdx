@@ -1,0 +1,130 @@
+---
+title: "Hinweislinien"
+page: true
+---
+## Hinweislinien bei Texten einf&#252;gen
+
+### Format des Schl&#252;ssel f&#252;r die Hinweislinie
+In den Darstellungseigenschaften kann die Hinweislinie aktiviert und der Verlauf eangegeben werden:
+
+- <Bold> ReferenceLine </Bold> : Aktivierung der Hinweislinie
+
+- <Bold> ReferenceLinePathWay </Bold> : Verlauf der Hinweislinie 
+
+- <Bold> Format: </Bold>  east,north;east,north;east,north;
+
+-  alle Koordinaten sind relativ zum Einsetzpunkt, der sich aus den Geometrieinformationen des Objektes definiert
+
+-  Der Abschlie&#223;ende Strichpunkt ist notwendig 
+
+-  der erste angegebene Punkt ist der Startpunkt der Linie
+
+
+
+
+
+
+<Info>
+&lt;KeyValuePair Key=&quot;ReferenceLine&quot; Type=&quot;System.Int32&quot; Value=&quot;1&quot; ConsiderScaleFactor=&quot;False&quot; /&gt;
+&lt;KeyValuePair Key=&quot;ReferenceLinePathWay&quot; Type=&quot;System.String&quot; Value=&quot;-5.8,0.1;-2.8,0.9;&quot; ConsiderScaleFactor=&quot;False&quot; /&gt;
+</Info>
+
+
+###  Aufbau
+
+- <Bold>  &lt;DisplayInformation&gt; </Bold>  Beginn der Sektion f&#252;r die grafische Darstellung
+
+- <Bold>           &lt;Representation Id=&quot;0&quot;&gt; </Bold>   Id=&quot;0&quot; &#228;ndert die Verdrehung in allen Darstellungen
+
+- <Bold>             &lt;Styles&gt; </Bold> : Beginn der Sektion &lt;Styles&gt;
+
+- <Bold>               &lt;Style Id=&quot;1&quot;&gt; </Bold>  Bezug auf den Style mit der ID 1 
+
+
+<Success>
+Hier muss fix 
+ <Bold> Id=&quot;1
+ </Bold> &quot; angegeben werden!
+
+</Success>
+- <Bold>                 &lt;Representation Id=&quot;0&quot; /&gt; </Bold>   Id=&quot;0&quot; &#228;ndert die Verdrehung in allen Darstellungen
+
+- <Bold>                 &lt;ScaleRange StartScale=&quot;0&quot; EndScale=&quot;0&quot; /&gt; </Bold>  Angabe des Ma&#223;stabsbereiches. Von StartScale=&quot;0&quot; bis EndScale=&quot;0&quot; betrifft alle Ma&#223;st&#228;be.
+
+- <Bold>                  &lt;Sections&gt; </Bold>  
+
+- <Bold>                    &lt;Section Id=&quot;1&quot;&gt; </Bold>  
+
+- <Bold>                     &lt;SectionType&gt;Annotation&lt;/SectionType&gt; </Bold>  Angabe der Sektion Beschriftung
+
+- <Bold>                     &lt;KeyValuePairs&gt; </Bold> 
+- <Bold>                       &lt;KeyValuePair Key=&quot;ReferenceLine&quot; Type=&quot;System.Int32&quot; Value=&quot;1&quot; ConsiderScaleFactor=&quot;False&quot; /&gt; </Bold>  Hinweislinie aktivieren
+
+- <Bold>                       &lt;KeyValuePair Key=&quot;ReferenceLinePathWay&quot; Type=&quot;System.String&quot; Value=&quot;-5.80133758019656,0.134914821945131;-2.83321137633175,0.944403749890625;&quot; ConsiderScaleFactor=&quot;False&quot; /&gt; </Bold>  Verlauf angeben
+
+
+
+- <Bold>                      &lt;/KeyValuePairs&gt; </Bold> 
+
+
+- <Bold>                   &lt;/Section&gt; </Bold> 
+
+
+- <Bold>                 &lt;/Sections&gt; </Bold> 
+
+
+- <Bold>               &lt;/Style&gt; </Bold> 
+
+
+- <Bold>             &lt;/Styles&gt; </Bold> 
+
+
+- <Bold>           &lt;/Representation&gt; </Bold> 
+
+
+- <Bold>        &lt;/DisplayInformation&gt; </Bold> 
+
+
+
+<Info>
+&#65279&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Project Name=&quot;Demo&quot; Version=&quot;1&quot; DV=&quot;-837503012&quot; xmlns=&quot;rmData/XML&quot;&gt;
+  &lt;Objects&gt;
+    &lt;Vertices&gt;
+      &lt;Vertex Id=&quot;804&quot;&gt;
+        &lt;East&gt;4349069.72586761&lt;/East&gt;
+        &lt;North&gt;5499048.06641216&lt;/North&gt;
+        &lt;Elevation&gt;NaN&lt;/Elevation&gt;
+      &lt;/Vertex&gt;
+    &lt;/Vertices&gt;
+    &lt;Texts&gt;
+      &lt;Text Id=&quot;805&quot;&gt;
+        &lt;VertexId&gt;804&lt;/VertexId&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Internal~TextValue&quot; Type=&quot;System.String&quot; Value=&quot;Beschreibung&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;DisplayInformation&gt;
+          &lt;Representation Id=&quot;0&quot;&gt;
+            &lt;Styles&gt;
+              &lt;Style Id=&quot;1&quot;&gt;
+                &lt;Representation Id=&quot;0&quot; /&gt;
+                &lt;ScaleRange StartScale=&quot;0&quot; EndScale=&quot;0&quot; /&gt;
+                &lt;Sections&gt;
+                  &lt;Section Id=&quot;1&quot;&gt;
+                    &lt;SectionType&gt;Annotation&lt;/SectionType&gt;
+                    &lt;KeyValuePairs&gt;
+                      &lt;KeyValuePair Key=&quot;ReferenceLine&quot; Type=&quot;System.Int32&quot; Value=&quot;1&quot; ConsiderScaleFactor=&quot;False&quot; /&gt;
+                      &lt;KeyValuePair Key=&quot;ReferenceLinePathWay&quot; Type=&quot;System.String&quot; Value=&quot;-5.80133758019656,0.134914821945131;-2.83321137633175,0.944403749890625;&quot; ConsiderScaleFactor=&quot;False&quot; /&gt;
+                    &lt;/KeyValuePairs&gt;
+                  &lt;/Section&gt;
+                &lt;/Sections&gt;
+              &lt;/Style&gt;
+            &lt;/Styles&gt;
+          &lt;/Representation&gt;
+        &lt;/DisplayInformation&gt;
+        &lt;ObjectType&gt;Sonstige Beschriftung 2.5mm&lt;/ObjectType&gt;
+      &lt;/Text&gt;
+    &lt;/Texts&gt;
+  &lt;/Objects&gt;
+&lt;/Project&gt;
+</Info>

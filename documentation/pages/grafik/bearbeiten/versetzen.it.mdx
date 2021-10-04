@@ -1,0 +1,80 @@
+---
+title: "Offset"
+page: true
+---
+## Eseguire un offset di polilinee.
+ <Menu> Menu: [Modifica / Offset] </Menu> 
+ <Menu> Cmd: [LinestringRelocate] </Menu> 
+
+
+1. Selezionare gli oggetti cliccando direttamente sulla grafica. Premere <Border>Ctrl + Clic</Border>  per selezionare pi&#249; elementi (vedere 
+[Selezione dei dati](../grafik/selektionvondaten)
+). In alternativa selezionare tutti gli oggetti con l&#39;opzione &quot;Tutto&quot;.
+
+2. Definire la direzione di offset delle polilinee.
+
+3. Inserire la distanza.
+
+
+
+
+Alternativa
+
+
+1. Selezionare le polilinee a cui applicare l&#39;offset.
+
+2. Scegliere l&#39;opzione &quot;Immissione punto&quot; dal menu contestuale.
+
+3. Selezionare un punto, per il quale deve passare la nuova polilinea. 
+
+
+
+
+Alternativa
+
+
+1. Selezionare le polilinee a cui applicare l&#39;offset.
+
+2. Scegliere l&#39;opzione &quot;Con-offset-in-altezza&quot; dal menu contestuale.
+
+3. Definire la direzione di offset delle polilinee.
+
+4. Inserire la distanza.
+
+5. Definire l&#39;offset in altezza, del quale devono essere modificate le altezze dei vertici. Le altezze non valide non vengono applicate come offset.
+
+
+
+
+<Success>
+
+- Il comando cerca sempre di trasferire le altezze dei vertici (Z-Coordinata) nella nuova polilinea. Quando la vecchia e la nuova polilinea sono basate sullo stesso numero di vertici, le altezze sono trasferite automaticamente.
+
+
+- Se il numero di vertici &#232; differente, la ripresa delle altezze &#232; priva di senso. Lo stesso &#232; valido nel caso che dall&#39;offset di una polilinea risultino pi&#249; nuove polilinee (vedere figura in basso, le polilinee rosse sono create tramite un &quot;Offset&quot;). In tal caso le altezze di tutti i vertici non sono valide. Inoltre non viene applicato alcun offset in altezza.
+
+
+
+
+
+<Image>\img\grafik\bearbeiten\Bearbeiten.Versetzen.Stuetzpunktanzahl.png$Bearbeiten.Versetzen.Stuetzpunktanzahl</Image>
+</Success>
+
+
+<Success>
+Se la nuova polilinea &#232; generata dalla scelta di un punto con altezza valida, viene eseguito automaticamente un offset in altezza, qualora la proiezione ortogonale del punto selezionato sulla vecchia polilinea possieda a sua volta un&#39;altezza valida. 
+
+<Image>\img\grafik\bearbeiten\Bearbeiten.Versetzen.Punktangabe.png$Bearbeiten.Versetzen.Punktangabe</Image>
+</Success>
+
+
+<Success>
+&#200; possibile continuare a creare oggetti con offset, nei modi ( <Italic> Distanza </Italic>  o  <Italic> Immissione punto </Italic> ), fintanto che il comando non venga interrotto.
+</Success>
+
+
+<Success>
+I punti sui quali sia stata disegnata la polilinea di base, non vengono spostati assieme. 
+La polilinea originale viene conservata.
+</Success>
+ 

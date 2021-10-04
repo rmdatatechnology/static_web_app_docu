@@ -1,0 +1,35 @@
+---
+title: "Riprendere la configurazione da un oggetto"
+page: true
+---
+## Permette di riprendere le modifiche applicate ad un oggetto tramite il gestore delle propriet&#224;, nella configurazione del progetto.
+<GeoDesigner> <Menu> Cmd: [ConfigSaveOfObject] </Menu> </GeoDesigner>
+Tramite il menu contestuale  <Menu>Gestore della rappresentazione / Bottone destro del mouse</Menu>  le propriet&#224; di rappresentazione specifiche di un singolo oggetto possono essere riprese in un intero tipo di oggetto ed essere quindi valide in seguito per tutti gli oggetti del tipo in questione.
+
+<GeoDesigner>
+<Image>\img\grafik\darstellungsmanager\konfiguration\ObjectManCopyObjectConfig.png$ObjectManCopyObjectConfig</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\darstellungsmanager\konfiguration\GeoMapper.ObjectManCopyObjectConfig.png$GeoMapper.ObjectManCopyObjectConfig</Image>
+</GeoMapper>
+
+
+Dopo la selezione del comando  <Bold> Riprendi la configurazione da un oggetto </Bold>  il programma richiede di selezionare graficamente un oggetto della stessa classe - cio&#232; se si desidere riprendere delle propriet&#224; in un tipo di polilinea, nella grafica occorre selezionare una polilinea.
+
+Se per errore si sceglie un oggetto di classe non compatibile, compare il seguente messaggio:<Image>\img\grafik\darstellungsmanager\konfiguration\ObjectManCopyObjectConfigWrongClass.png$ObjectManCopyObjectConfigWrongClass</Image>
+
+<Success>
+Il comando permette anche di selezionare  <Italic> prima </Italic>  un oggetto e poi di richiamare il comando dal menu contestuale. Questo &#232; il modo probabilmente pi&#249; comodo per riprendere le propriet&#224; di un oggetto.
+</Success>
+
+
+Una volta che tutti i dati siano corretti, le propriet&#224; vengono copiate nel tipo di oggetti selezionato e tutti gli oggetti di questo tipo vengono ridisegnati riprendendone le modifiche.
+
+<Success>
+Grazie a questa funzione &#232; semplice applicare le modifiche alla rappresentazione a tutti gli oggetti di uno stesso tipo senza dover avviare l&#39;assistente di configurazione.
+</Success>
+
+
+<Warning>
+Questo comando modifica solamente la configurazione caricata nel progetto. Il prototipo di configurazione memorizzato sull&#39;hard-disk non viene modificato! Per distribuire queste modifiche bisogna prima esportare la configurazione del progetto. Vedere anche [salva configurazione come...](../darstellungsmanager/konfiguration_speichern_unter)
+</Warning>

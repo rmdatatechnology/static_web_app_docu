@@ -1,0 +1,63 @@
+---
+title: "Konsistenzprüfung"
+page: true
+---
+Die Konsistenzpr&#252;fung erfasst alle Punkte einer  <Placeholder>product</Placeholder> Datei und einer rmGEO-Datenquelle. Diese Punkte werden auf gegenseitige Unterschiede gepr&#252;ft, die Unterschiede werden in einer Inkonsistenzliste angezeigt.
+Der Anwender entscheidet f&#252;r jeden Punkt, welche Variante &#252;bernommen wird.
+<GeoDesigner>
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+Fix gepr&#252;ft werden:
+
+- Lagekoordinaten
+
+- H&#246;he
+
+- Festcode
+
+- Messcode
+
+
+
+Wird aufgrund einer Einstellung im Verbindungsmanager der Punkttyp nicht automatisch aus  <Placeholder>product</Placeholder> &#252;bernommen, wird auch dieser auf Konsistenz gepr&#252;ft.
+
+Zus&#228;tzlich werden je nach Anwendereinstellungen (Attributmapping) auch weitere rmGEO-Attribute abgeglichen (siehe [Verbindungsmanager](../daten/rmgeo-verbindungsmanager)
+).
+
+Die Konsistenzpr&#252;fung wird in folgenden F&#228;llen aktiv:
+
+
+- Beim Herstellen einer rmGEO-Verbindung
+
+- Punkte, die nur in einem Programmteil vorhanden sind, werden automatisch &#252;bertragen
+
+- Punkte, die in beiden Programmteilen mit unterschiedlichen Attributen vorhanden sind, werden in der Inkonsistenzliste angezeigt.
+
+
+
+- Beim &#196;ndern der Verbindungseinstellungen (Attributmapping)
+
+- Beim Erweitern der Liste der abzugleichenden Attribute
+
+- &#196;ndern der h&#246;chsten zu &#252;bertagenden Version
+
+
+
+- Beim &#214;ffnen eines Projektes mit einer bestehenden Verbindung
+
+- Ge&#228;nderte und gel&#246;schte Punkte werden in der Inkonsistenzliste angezeigt.
+
+
+
+- Beim Nachladen von Punkten aus der <Placeholder>product</Placeholder> Datenbasis
+
+- Jeder nachgeladene Punkt wird auf Konsistenz gepr&#252;ft. Neue Punkte werden automatisch nach rmGEO &#252;bertragen.
+
+
+
+
+
+
+<Success>
+Grunds&#228;tzlich werden neue Punkte bei jeder Variante immer automatisch in den anderen Programmteil &#252;bertragen. In rmGEO gel&#246;schte Punkte werden in der Inkonsistenzliste angezeigt.
+</Success>
+

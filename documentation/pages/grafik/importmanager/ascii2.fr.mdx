@@ -1,0 +1,37 @@
+---
+title: "Assistant de mappage d'importation ASCII"
+page: true
+---
+## Assistant pour la cr&#233;ation d&#39;une table de conversion pour l&#39;importation de fichiers ASCII 
+
+Pour l&#39;importation de fichiers ASCII, un assistant de mappage est disponible, de mani&#232;re que un ou plusieurs fichiers ASCII de points peuvent &#234;tre reprises.
+
+### Type de format
+En premier on d&#233;finie si les donn&#233;es du fichier ASCII sont s&#233;par&#233;es par caract&#232;re, ou structur&#233;es en colonnes avec largeur fixe.
+En outre une ligne d&#39;en-t&#234;te existante lors de l&#39;importation peut &#234;tre exclues, et les commentaires peuvent &#234;tre exclus aussi.
+
+## Configuration de format
+### S&#233;par&#233; par caract&#232;re
+Ils sont d&#233;finis les caract&#232;res de s&#233;paration et le s&#233;parateur pour les d&#233;cimales.
+<Warning>
+En outre il faut absolument s&#233;lectionner les colonnes pour les coordonn&#233;es (Valeur Est, Valeur Nord)! 
+Dans ce but cliquez avec le bouton droit de la souris sur la colonne relative et assignez l&#39;attribut d&#233;sir&#233;.
+</Warning><Image>\img\grafik\importmanager\mappingasciiformatkonfigurationtrennzeichen.png$mappingasciiformatkonfigurationtrennzeichen</Image>
+
+### Colonnes &#224; largeur fixe
+Les colonnes doivent &#234;tre d&#233;finies.
+<Warning>
+En outre il faut absolutement s&#233;lectionner les colonnes pour les coordonn&#233;es (Valeur Est, Valeur Nord)! 
+Dans ce but cliquez avec le bouton droit de la souris sur la colonne relative et assignez l&#39;attribut d&#233;sir&#233;.
+</Warning><Image>\img\grafik\importmanager\mappingasciiformatkonfigurationfestespaltenbreiten.png$mappingasciiformatkonfigurationfestespaltenbreiten</Image>
+
+## Point
+Dans la colonne &quot;Type d&#39;objet de la GeoDB&quot; le type d&#39;objet de la G&#233;odatabase est d&#233;fini par l&#39;utilisateur. 
+Dans le dialogue les simples lignes peuvent &#234;tre dupliqu&#233;es et ensuite modifi&#233;es:  <Border>+</Border> ,  <Border>x</Border> .
+Comme conditions, tous les attributs du fichier ASCII peuvent &#234;tre utilis&#233;s et ainsi diff&#233;rents types d&#39;objets peuvent &#234;tre cr&#233;&#233;s.
+En outre au type d&#39;objets, des attributs (soit d&#39;attributs du fichier ASCII ou des valeurs d&#39;attributs fixes) peuvent &#234;tre affect&#233;s.<Image>\img\grafik\importmanager\mappingasciipunkt.png$mappingasciipunkt</Image>
+
+<Success>
+Apr&#232;s  <Border>Terminer</Border>  le mappage cr&#233;&#233; peut &#234;tre enregistr&#233; dans un fichier.
+</Success>
+

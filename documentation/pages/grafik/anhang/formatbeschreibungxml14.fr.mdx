@@ -1,0 +1,114 @@
+---
+title: "Rotation d'objets"
+page: true
+---
+## Pour tourner un objet, l&#39;affichage graphique est modifi&#233;. 
+
+<Success>
+La rotation n&#39;est possible que pour des types d&#39;objet d&#233;finis dans la configuration!
+</Success>
+
+
+###  Structure
+
+Pour l&#39;objet il est possible de donner la rotation e.g. dans la section &lt;Point&gt;:
+
+- <Bold>  &lt;DisplayInformation&gt; </Bold>  D&#233;but de la section pour l&#39;affichage graphique.
+
+- <Bold>           &lt;Representation Id=&quot;0&quot;&gt; </Bold>   Id=&quot;0&quot; modifie la rotation dans tous les affichages.
+
+- <Bold>             &lt;Styles&gt; </Bold> : D&#233;but de la section &lt;Styles&gt;
+
+- <Bold>               &lt;Style Id=&quot;1&quot;&gt; </Bold>  R&#233;f&#233;rence &#224; le style avec ID=1 
+
+
+<Success>
+Pour la rotation des objets il faut d&#233;finir 
+ <Bold> Id=&quot;1
+ </Bold> &quot; fixe!
+
+</Success>
+- <Bold>                 &lt;Representation Id=&quot;0&quot; /&gt; </Bold>   Id=&quot;0&quot; modifie la rotation dans tous les affichages.
+
+- <Bold>                 &lt;ScaleRange StartScale=&quot;0&quot; EndScale=&quot;0&quot; /&gt; </Bold>  Domaine d&#39;&#233;chelle. O&#249; StartScale=&quot;0&quot; EndScale=&quot;0&quot; signifie toutes les &#233;chelles.
+
+- <Bold>                  &lt;Sections&gt; </Bold>  
+
+- <Bold>                    &lt;Section Id=&quot;1&quot;&gt; </Bold>  
+
+- <Bold>                     &lt;SectionType&gt;Block&lt;/SectionType&gt; </Bold>  El&#233;ment &#224; tourner. Symbole = Block, Etiquettes = Annotation
+
+- <Bold>                     &lt;KeyValuePairs&gt; </Bold> 
+- <Bold>                       &lt;KeyValuePair Key=&quot;Rotate&quot; Type=&quot;System.Int32&quot; Value=&quot;3&quot; ConsiderScaleFactor=&quot;False&quot; /&gt; </Bold>  La rotation est d&#233;finie par l&#39;utilisateur et non pas par ex. selon le marge de la feuille.
+
+- <Bold>                        &lt;KeyValuePair Key=&quot;RelativeAngle&quot; Type=&quot;System.Double&quot; Value=&quot;-55,3895940516485&quot; ConsiderScaleFactor=&quot;True&quot; /&gt; </Bold>  Angle de rotation.
+
+
+
+- <Bold>                      &lt;/KeyValuePairs&gt; </Bold> 
+
+
+- <Bold>                   &lt;/Section&gt; </Bold> 
+
+
+- <Bold>                 &lt;/Sections&gt; </Bold> 
+
+
+- <Bold>               &lt;/Style&gt; </Bold> 
+
+
+- <Bold>             &lt;/Styles&gt; </Bold> 
+
+
+- <Bold>           &lt;/Representation&gt; </Bold> 
+
+
+- <Bold>        &lt;/DisplayInformation&gt; </Bold> 
+
+
+
+<Info>
+
+&#65279&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Project Name=&quot;&quot; Version=&quot;1&quot; DV=&quot;-837503012&quot; xmlns=&quot;rmData/XML&quot;&gt;
+  &lt;Objects&gt;
+    &lt;Vertices&gt;
+      &lt;Vertex Id=&quot;1&quot;&gt;
+        &lt;East&gt;4349068.46672517&lt;/East&gt;
+        &lt;North&gt;5499062.46723084&lt;/North&gt;
+        &lt;Elevation&gt;333.432958742219&lt;/Elevation&gt;
+      &lt;/Vertex&gt;
+    &lt;/Vertices&gt;
+    &lt;Points&gt;
+      &lt;Point Id=&quot;2&quot;&gt;
+        &lt;VertexId&gt;1&lt;/VertexId&gt;
+        &lt;PointLabelId&gt;0&lt;/PointLabelId&gt;
+        &lt;Attributes&gt;
+          &lt;Attribute Name=&quot;Longueur&quot; Type=&quot;System.Double&quot; Value=&quot;1&quot; /&gt;
+          &lt;Attribute Name=&quot;Largeur&quot; Type=&quot;System.Double&quot; Value=&quot;3&quot; /&gt;
+        &lt;/Attributes&gt;
+        &lt;DisplayInformation&gt;
+          &lt;Representation Id=&quot;0&quot;&gt;
+            &lt;Styles&gt;
+              &lt;Style Id=&quot;1&quot;&gt;
+                &lt;Representation Id=&quot;0&quot; /&gt;
+                &lt;ScaleRange StartScale=&quot;0&quot; EndScale=&quot;0&quot; /&gt;
+                &lt;Sections&gt;
+                  &lt;Section Id=&quot;1&quot;&gt;
+                    &lt;SectionType&gt;Block&lt;/SectionType&gt;
+                    &lt;KeyValuePairs&gt;
+                      &lt;KeyValuePair Key=&quot;Rotate&quot; Type=&quot;System.Int32&quot; Value=&quot;3&quot; ConsiderScaleFactor=&quot;False&quot; /&gt;
+                      &lt;KeyValuePair Key=&quot;RelativeAngle&quot; Type=&quot;System.Double&quot; Value=&quot;-55,3895940516485&quot; ConsiderScaleFactor=&quot;True&quot; /&gt;
+                    &lt;/KeyValuePairs&gt;
+                  &lt;/Section&gt;
+                &lt;/Sections&gt;
+              &lt;/Style&gt;
+            &lt;/Styles&gt;
+          &lt;/Representation&gt;
+        &lt;/DisplayInformation&gt;
+        &lt;ObjectType&gt;Gully eckig&lt;/ObjectType&gt;
+      &lt;/Point&gt;
+    &lt;/Points&gt;
+  &lt;/Objects&gt;
+&lt;/Project&gt;
+</Info>

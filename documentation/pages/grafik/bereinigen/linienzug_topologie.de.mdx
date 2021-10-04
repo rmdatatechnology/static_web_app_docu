@@ -1,0 +1,95 @@
+---
+title: "Knoten-Kanten Topologie"
+page: true
+---
+## Bereinigung f&#252;r eine saubere Knoten-/Kantentopologie. 
+ <Menu> Menu: [Bereinigen / Knoten-Kanten Topologie] </Menu> 
+<GeoDesigner> <Menu> Cmd: [NodeEdgeTopoStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+Dabei werden Linienz&#252;gen an einem Knoten aufgebrochen bzw. Linienz&#252;ge verbunden, welche einen gemeinsamen Vertex haben, der kein Knoten ist.
+
+
+1. W&#228;hlen Sie Daten aus
+
+- <Bold> Alle geladenen Objekte: </Bold>  Alle Objekte in der Grafik
+
+
+<GeoMapper> - wenn Sie nur einen Bereich geladen haben, dann wird nur dieser Bereich bereinigt
+
+</GeoMapper>
+.
+
+- <Bold> Objektwahl: </Bold>  Durck Klick auf Objektwahl wechseln Sie direkt in die Grafik und w&#228;hlen die zu bereinigenden Objekte.
+
+
+
+2. Klicken Sie auf <Border>Fertigstellen</Border> 
+3. Datenfehler werden in einem 
+[Bereinigungsassistenten](../bereinigen/assistent)
+ angezeigt und k&#246;nnen Fehler f&#252;r Fehler abgearbeitet werden.
+
+
+
+Alternative
+ 
+Durch Setzen der  <Bold> Bereinigungseinstellungen </Bold>  k&#246;nnen viele Bereinigungen automatisch durchgef&#252;hrt werden (siehe weiter unten).
+
+<Warning>
+Es k&#246;nnen nur all jene Objekte bereinigt werden die den Filterkriterien, des in der Datei gesetzten Filters, entsprechen.
+</Warning>
+
+
+### Details - Bereinigungsoptionen
+Hier finden Sie weitere Einstellungen f&#252;r die Bereinigung:
+
+- <Bold> Linienz&#252;ge an Knoten aufbrechen: </Bold>  Verl&#228;uft ein Linienzug &#252;ber einen Knoten, so wird dieser am Knoten aufgebrochen.
+
+- <Bold> Benachbarte Linienz&#252;ge verbinden: </Bold>  Benachbarte Linienz&#252;ge, welche nicht an einem Knoten verbunden sind, werden zu einem Linienzug vereinigt
+
+- <Bold> Beide F&#228;lle korrigieren: </Bold>  Bricht Linienz&#252;ge an den Knoten auf und verbindet benachbarte Linienz&#252;ge
+
+
+
+
+Nach Klick auf den Button  <Border>Fertigstellen</Border>  wird die Bereinigung gestartet.
+
+
+<GeoDesigner>
+<Image>\img\grafik\bereinigen\PurgeSettingsNodeEdgeTopology.png$PurgeSettingsNodeEdgeTopology</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\bereinigen\GeoMapper.PurgeSettingsNodeEdgeTopology.png$GeoMapper.PurgeSettingsNodeEdgeTopology</Image>
+</GeoMapper>
+
+
+<Success>
+Ein Knoten ist ein Vertex der eine Referenz auf mehr als 2 Linienz&#252;ge hat.
+</Success>
+
+
+
+<Info>
+  <Bold> Linienz&#252;ge an Knoten aufbrechen: </Bold> 
+
+
+<Image>\img\grafik\bereinigen\PurgeNode1.png$PurgeNode1</Image>
+Linienz&#252;ge vor der Bereingung
+
+
+<Image>\img\grafik\bereinigen\PurgeNode2.png$PurgeNode2</Image>
+Linienz&#252;ge nach der Bereinigung
+</Info>
+
+
+<Info>
+ <Bold> Benachbarte Linienz&#252;ge verbinden: </Bold> 
+
+
+<Image>\img\grafik\bereinigen\PurgeConnect1.png$PurgeConnect1</Image>
+Linienz&#252;ge vor der Bereinigung
+
+
+<Image>\img\grafik\bereinigen\PurgeConnect2.png$PurgeConnect2</Image>
+Linienz&#252;ge nach der Bereinigung. Linienzug 2 wurde gel&#246;scht
+</Info>

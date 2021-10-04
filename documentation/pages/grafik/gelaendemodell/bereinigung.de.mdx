@@ -1,0 +1,47 @@
+---
+title: "Datenbereinigung vor der Modellberechnung"
+page: true
+---
+## Die Modellbereinigung findet Inkonsistenzen im Datenbestand und bereinigt diese oder informiert Sie dar&#252;ber
+ <Placeholder>fullproduct</Placeholder> pr&#252;ft vor der Modellbildung, ob die Modelldaten konsistent sind. Das bedeutet, es wird gepr&#252;ft, ob f&#252;r jeden Punkt des Modells eine eindeutige H&#246;he definiert ist.
+
+Folgende Verletzungen dieser Bedingung werden gepr&#252;ft:
+
+1. <Bold> Punktcluster: </Bold>  Liegen Punkte innerhalb einer Toleranz auf gleichen Koordinaten, wird versucht, diese Punkte zusammenzufassen.
+
+1. <Bold> <Italic> Automatische Bereinigung: </Italic> </Bold>  Wenn der H&#246;henunterschied der Punkte im Punktcluster kleiner als die Bereinigungstoleranz f&#252;r die H&#246;he ist, wird die Bereinigung (Mittelung) automatisch durchgef&#252;hrt und protokolliert.
+
+2. <Bold> <Italic> Manuelle Bereinigung: </Italic> </Bold>  Wenn der H&#246;henunterschied gr&#246;&#223;er als die Bereinigungstoleranz f&#252;r die H&#246;he2) ist, wird eine Meldung ausgegeben und die Bereinigung muss manuell durchgef&#252;hrt werden.
+
+
+
+2. <Bold> Punkt auf Linie: </Bold>  Liegt ein Punkt innerhalb einer Toleranz1) auf einer Linie (Zwangskante oder Modellgrenze), wird versucht, in die Linie einen zus&#228;tzlichen St&#252;tzpunkt einzuf&#252;gen.
+
+1. Die <Bold> <Italic> Bereinigung </Italic> </Bold>  erfolgt <Italic> <Bold> automatisch </Bold> </Italic> , wenn der H&#246;henunterschied zwischen Punkt und Liniensegment kleiner als die Bereinigungstoleranz f&#252;r die H&#246;he ist.
+
+2. Die <Bold> <Italic> Bereinigung </Italic> </Bold>  muss <Bold> <Italic> manuell </Italic> </Bold>  durchgef&#252;hrt werden, wenn der H&#246;henunterschied zwischen Punkt und Liniensegment gr&#246;&#223;er als die Bereinigungstoleranz f&#252;r die H&#246;he ist.
+
+
+
+3. <Bold> Schnittpunkt: </Bold>  Schneiden sich zwei Linien, wird versucht, einen zus&#228;tzlichen St&#252;tzpunkt in beide Linien einzuf&#252;gen.
+
+1. Die <Bold> <Italic> Bereinigung </Italic> </Bold>  erfolgt <Italic> <Bold> automatisch </Bold> </Italic> , wenn der H&#246;henunterschied zwischen den beiden Linien am Schnittpunkt kleiner als die Bereinigungstoleranz f&#252;r die H&#246;he ist.
+
+2. Die <Bold> <Italic> Bereinigung </Italic> </Bold>  muss <Bold> <Italic> manuell </Italic> </Bold>  durchgef&#252;hrt werden, wenn der H&#246;henunterschied zwischen den beiden Linien am Schnittpunkt gr&#246;&#223;er als die Bereinigungstoleranz f&#252;r die H&#246;he ist.
+
+
+
+
+
+<Success>
+Das Modell wird nur dann berechnet, wenn alle Bereinigungsprobleme gel&#246;st wurden.
+Die Schritte 1), 2) und 3) werden sequentiell abgearbeitet. D.h. die Pr&#252;fung, ob Punkte auf Linien liegen, erfolgt erst dann, wenn alle Punktcluster (automatisch oder manuell) bereinigt wurden.
+</Success>
+
+<Success>
+Die  <Bold> automatische Bereinigung </Bold>  wird dann durchgef&#252;hrt, wenn die H&#246;hentoleranz nicht &#252;berschritten wird. Siehe [Datei-Einstellungen](../datei/datei-einstellungen15)
+</Success>
+
+<Success>
+Werden Bereinigungsprobleme im Protokoll angezeigt, f&#252;hrt ein Link direkt zur betroffenen Stelle im Plan! Diese Probleme m&#252;ssen  <Bold> manuell bereinigt </Bold>  werden.
+</Success>

@@ -1,0 +1,42 @@
+---
+title: "Bonitätsteilflächen alt in die Datenbank übertragen"
+page: true
+---
+## Gebildete Bonit&#228;tsteilfl&#228;chen alt werden in Kommassierung-Datenbank &#252;bertragen. 
+<Success>
+ <Bold> Fonctionnalit&#233; non utilis&#233;e en Suisse </Bold> 
+</Success>
+
+<GeoMapper> <Menu> Menu: [Kommassierung / Bonitätsteilflächen alt in die Datenbank übertragen] </Menu> 
+
+<Warning>
+ Eine Verbindung zur Kommassierungsdatenbank muss vorhanden sein. 
+</Warning>
+
+
+<Success>
+Nach dem Aufruf werden alle Bonit&#228;tsteilfl&#228;chen mit den Bonit&#228;tsklassen mit ihren Fl&#228;chenwerten in die Datenbank &#252;bertragen. 
+</Success>
+
+
+Es m&#252;ssen vorher alle Eintr&#228;ge in der Datenbank gel&#246;scht werden, damit die aktuellen Bonit&#228;tsteilfl&#228;chen &#252;bertragen werden k&#246;nnen.<Image>\img\grafik\kommassierung\Löschen.png$Löschen</Image>
+
+
+<Success>
+Sollte  <Border> Nein </Border>  gedr&#252;ckt werden, wird der Befehl abgebrochen. 
+Aus der Kommassierungsdatenbank wird nichts gel&#246;scht! 
+</Success>
+
+
+
+
+```
+ Es wird jetzt versucht, alle Bonit&#228;tsteilfl&#228;chen mit ihren Fl&#228;chenwerten in die Datenbank zu schreiben. 
+```
+
+
+
+In der Protokollausgabe werden f&#252;r jeden Besitzkomplex, der in der Grafik vorhanden ist, die dazugeh&#246;rigen Bonit&#228;tsteilfl&#228;chen mit den Fl&#228;chenwerten aufgelistet.
+Sollte ein Fehler auftreten, wird zus&#228;tzlich ein Fehlerprotokoll geschrieben und die Bonit&#228;tsteilfl&#228;chen nicht in die DB &#252;bertragen.
+
+</GeoMapper>

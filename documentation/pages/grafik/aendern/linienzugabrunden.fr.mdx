@@ -1,0 +1,56 @@
+---
+title: "Arrondir une polyligne"
+page: true
+---
+## Il joint 2 polylignes avec un arc
+ <Menu> Menu: [Modifier/ Arrondir polyligne] </Menu> 
+ <Menu> Cmd: [LinestringAdjustDown] </Menu> 
+
+
+1. Appelez la commande.
+
+2. S&#233;lectionnez la 1&#232;re polyligne que vous voulez joindre.
+
+3. S&#233;lectionnez la 2&#232;me polyligne que vous voulez joindre.
+
+4. Pour d&#233;terminer le rayon d&#39;arc, il y a plusieurs alternatives:
+
+- Si les deux polylignes se croisent sur un point, donnez un <Bold> Rayon </Bold>  d&#39;arc d&#233;sir&#233; ou d&#233;termin&#233; la <Bold> Distance </Bold>  entre le point d&#39;intersection des droites et le point de d&#233;part de l&#39;arc.
+
+- Si les deux polylignes ne se croisent pas, il y a trois options &#224; disposition:
+
+1. <Bold> Automatique: </Bold>  Les distances entre les points de fin de ligne et le point d&#39;intersection imaginaire est d&#233;termin&#233;e. Sur la ligne avec la distance la plus courte commence l&#39;arc, l&#39;autre ligne est prolong&#233;e en cons&#233;quence. Si une ligne d&#233;passe le point d&#39;intersection, l&#39;arc commence au point final de l&#39;autre ligne.
+
+2. <Bold> Distance: </Bold>  Donnez la distance d&#233;sirez entre le point d&#39;intersection imaginaire et le d&#233;but et la fin d&#39;arc. Les deux lignes sont prolong&#233;es ou raccourcis en cons&#233;quence.
+
+3. <Bold> Rayon: </Bold>  Donnez le rayon d&#39;arc d&#233;sirez. Les deux lignes sont prolong&#233;es ou raccourcis en cons&#233;quence.
+
+
+
+
+
+5. Les deux polylignes sont jointes avec un arc. Si au lieu de simples polylignes, sont s&#233;lectionn&#233;s les segments d&#39;une polyligne, l&#39;arc est ins&#233;r&#233; comme segment entre les deux segments s&#233;lectionn&#233;s.
+
+
+
+
+<Success>
+Aussi des polylignes de type diff&#233;rent sont jointes et elles re&#231;oivent le type de la polyligne choisie en premier.
+</Success>
+
+<Success>
+Les &#233;l&#233;ments de la polyligne qui ont &#233;t&#233; s&#233;lectionn&#233;s avec la souris, sont toujours gard&#233;s.
+</Success>
+
+<Success>
+Les &#233;l&#233;ments de polyligne doivent &#234;tre des segments de droite (pas d&#39;arc).
+</Success>
+
+<Success>
+Quand les lignes originales &#224; joindre sont prolong&#233;es, les points d&#39;arriv&#233;es de ces lignes sont gard&#233;s comme sommets. 
+</Success>
+
+<Success>
+Quand les lignes sont raccorcies, un possible point de mensuration reste, si ce dernier existe d&#233;j&#224;. 
+</Success>
+

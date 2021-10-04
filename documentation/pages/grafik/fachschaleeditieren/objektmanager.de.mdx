@@ -1,0 +1,83 @@
+---
+title: "Darstellungsmanager"
+page: true
+---
+## Einf&#252;gen von neuen Objekten &#252;ber den Darstellungsmanager
+
+&#220;ber den Darstellungsmanager werden im Editiermodus neue Objekte in die Grafik eingef&#252;gt.
+
+### Objekte einf&#252;gen
+Objekte werden eingef&#252;gt, indem man im Darstellungsmanager auf einen Eintrag klickt und danach im Grafikfenster die Position f&#252;r das neue Objekt bestimmt. 
+Befehlsoptionen werden in der Kontexttoolbar und im Kontextmen&#252; angef&#252;hrt. Aufforderungen werden links oben im Grafikfenster angezeigt.
+
+### Sachdaten erfassen
+Werden Objekte &#252;ber den Darstellungsmanager eingef&#252;gt, welche Sachdaten beinhalten, werden diese nach der Konstruktion des Objektes in einem eigenen Dialog abgefragt.<Image>\img\grafik\fachschaleeditieren\SachdatenAlle.png$SachdatenAlle</Image>
+
+Der Anwender hat die Option, nur Pflichtattribute anzuzeigen:<Image>\img\grafik\fachschaleeditieren\SachdatenPflicht.png$SachdatenPflicht</Image>
+
+
+### Filter
+Auch mit dem Filter kann die Liste der verf&#252;gbaren Objekte eingeschr&#228;nkt werden.
+
+### Nur verwendete Typen anzeigen
+Ist diese Option aktiv, werden nur jene Objekte im Darstellungsmanager angezeigt, welche bereits in der Grafik vorhanden sind.
+
+## Kontextmen&#252; des Darstellungsmanagers
+Das Kontextmen&#252; des Darstellungsmanagers wird durch Klick mit der rechten Maustaste auf ein Objekt im Darstellungsmanager aufgerufen.
+### Aus Grafik erzeugen
+Mit diesem Befehl k&#246;nnen Elemente, die nicht zur editierten Datenquelle geh&#246;ren, als Modellobjekte &#252;bernommen werden. Z. B. wird durch Anklicken einer Polylinie einer eingebundenen DWG-Datei ein Linienzug &quot;Geb&#228;ude&quot; erzeugt. Wird ein Modellobjekt der aktuellen Datenquelle gew&#228;hlt, wird das alte Objekt gel&#246;scht und an der gleichen Position ein neues Objekt eingef&#252;gt.
+### Einf&#252;gen
+Startet den Einf&#252;gebefehl f&#252;r das gew&#228;hlte Objekt
+### Einf&#252;gen mit Dialog
+Startet den Einf&#252;gebefehl f&#252;r das gew&#228;hlte Objekt. Bei Vermessungspunkten wird danach auch der Eigenschaften-Dialog f&#252;r die Attributeingabe ge&#246;ffnet
+### Punkte automatisch auf Linie einf&#252;gen
+Nach Wahl eines Linienzuges werden Punkte vom gew&#228;hlten Typ automatisch auf jeden St&#252;tzpunkt des Linienzuges eingesetzt.
+### Aus Linienzug erzeugen
+Im Kontextmen&#252; von Fl&#228;chen kann mit dem Befehl ein geschlossener Linienzug in ein Fl&#228;chenobjekt umgewandelt werden. Attribute werden &#252;bernommen, wenn sie den gleichen Attributnamen haben.
+### Kreis konstruieren
+Startet bei Linienz&#252;gen und Fl&#228;chen die Kreis-Konstruktion. Der Kreis kann &#252;ber folgende Konstruktionsmethoden erzeugt werden
+
+- 3 Punkte
+
+- Mittelpunkt, Radius
+
+- Kreispunkt, Mittelpunkt
+
+- 2 Punkte, Radius
+
+
+
+### Typ wechseln
+Bestehende Objekte werden in den gew&#228;hlten Typ konvertiert. Darstellungseigenschaften (z.B. Position von Beschriftungen) werden jedoch beibehalten.
+### Konfiuration von Objekt &#252;bernehmen
+F&#252;r den gew&#228;hlten Objekttyp wird die Konfiguration aus einem anderen Objekttyp (dieser wird im Grafikfenster ausgew&#228;hlt) &#252;berommen. Alle Objekte des gew&#228;hlten Typs werden danach gem&#228;&#223; den neuen Konfigurationsvorgaben dargestellt.
+### Typ einblenden
+Der gew&#228;hlte Typ wird in der Grafik eingeblendet, sofern er vorher ausgeblendet war.
+### Typ ausblenden
+Der gew&#228;hlte Typ wird in der Grafik ausgeblendet.
+### Typen einer Objektklasse oder alle Typen gemeinsam ein/ausblenden
+Im Kontextmen&#252; der Objektklasse stehen die Befehle 
+ <Menu>Objektklasse einblenden</Menu> 
+ <Menu>Objektklasse ausblenden</Menu> 
+bzw. bei &quot;Alle&quot;
+ <Menu>Alle Objektklassen einblenden</Menu> 
+ <Menu>Alle Objektklassen ausblenden</Menu> 
+zur Vef&#252;gung.
+Damit k&#246;nnen massenhaft Objekte ein- und ausgeblendet werden.
+### Neuen Typ auf Basis dieses Typs erstellen (Assistent)
+Mit diesem Befehl kann der Anwender eigene Objekttypen auf Grundlage des gew&#228;hlten Objekttyps konfigurieren. Es steht ein Konfigurationsassistent zur Verf&#252;gung, &#252;ber welchen die wesentlichen Eigenschaften eines Objektes definiert werden.
+### Typ bearbeiten
+Der Anwender kann bestehende Objekttypen nach eigenen Vorstellungen &#228;ndern. Die &#196;nderungen wirken sich auf alle gezeichneten Objekte dieses Typs aus.
+### Neuen Typ erstellen
+Erstellen eines neuen Typs mit dem Konfigurationsassistenten.
+### Typ bearbeiten (Konfigurationseditor)
+Mit dem Konfigurationseditor k&#246;nnen alle Eigenschaften eines Objekte ge&#228;ndert werden.
+### Konfiguration speichern unter...
+Wurde die Konfiguration einer Geodatabase ge&#228;ndert (siehe Befehle oben), kann diese Konfiguration gespeichert werden und in neuen Geodatabases wieder verwendet werden.
+###  Z&#228;hler zur&#252;cksetzen
+Wurde bei einem Objekt ein oder mehrere Attribute mit einem Z&#228;hler konfiguriert, kann der aktuelle Z&#228;hlerstand &#252;ber diesen Befehl auf einen beliebigen Wert zur&#252;ckgesetzt werden. Der Berehl ist nur bei Objekten verf&#252;gbar, welche Attribute mit einem [Z&#228;hlerstand](../konfiguration/zaehlerverwenden)
+ beinhalten.<Image>\img\grafik\fachschaleeditieren\zählerzurücksetzen.png$zählerzurücksetzen</Image>
+
+
+
+

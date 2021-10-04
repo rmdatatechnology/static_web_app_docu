@@ -1,0 +1,50 @@
+---
+title: "Teilungslinie einfügen (Fläche teilen)"
+page: true
+---
+## Mit dem aktuell gew&#228;hlten Linienzug teilen Sie Fl&#228;chen nach Ihren Vorgaben: Es soll z.b. eine bestimmte Fl&#228;che abgetrennt werden oder die Teilungslinie soll durch einen bestimmten Punkt laufen. 
+ <Menu> Menu: [Darstellungsmanager / Kontextmenü (Rechte Maustaste) / Teilungslinie einfügen] </Menu> 
+<GeoDesigner> <Menu> Cmd: [PartitioningLineInsert] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+
+1. Klicken Sie mit der <Border>Rechten Maustaste</Border>  auf den gew&#252;nschten Linienzugtyp.
+
+2. Rufen Sie den Befehl  durch Auswahl im angezeigten Kontextmen&#252; auf
+
+3. W&#228;hlen Sie die zu teilende Fl&#228;che in der Grafik aus, indem Sie den Fl&#228;cheneinsetzpunkt oder das Fl&#228;chenpolygon ausw&#228;hlen.
+
+- Sofern die Fl&#228;che zu diesem Zeitpunkt nicht berechnet ist, versucht <Placeholder>product</Placeholder> sie im Verlauf des Befehl zu berechnen.
+
+
+
+4. W&#228;hlen Sie ein beliebiges Segment, zu dessen Verlauf die einzuf&#252;gende Teilungslinie <Bold> parallel </Bold>  verlaufen soll oder w&#228;hlen Sie aus den Optionen
+
+- <U> <Bold> Teilungslinie orthogonal zu Segment </Bold> </U>  - Die Linie wird im Rechten Winkel zum im Anschluss gew&#228;hlten Segment eingef&#252;gt.
+
+- <U> <Bold> Richtung durch 2 Punkte festlegen </Bold> </U>  - Zeigen Sie die Richtung der Teilungslinie, indem Sie 2 beliebige Punktkoordinaten selektieren.
+
+- <U> <Bold> Verdrehen zwischen 2 Segmenten </Bold> </U>  - Auswahl von 2 Segmenten. Vom Schnittpunkt wird die Linie solange verdreht, bis die gew&#252;nschte Fl&#228;che erreicht ist.
+
+
+
+5. Nachdem die Richtung der Teilungslinie somit definiert ist, w&#228;hlen Sie eine der folgenden Optionen aus, um die Teilungslinie zu positionieren:
+
+- <U> <Bold> Eingabe Abstand </Bold> </U>  - Geben Sie den Abstandswert ein und zeigen Sie die Seite, auf welcher der Abstand aufgetragen wird.
+
+- <U> <Bold> Verschieben durch  Punkt </Bold> </U>  - Zeigen Sie direkt den Punkt, durch welchen die Teilungslinie mit der vorher definierten Orientierung verlaufen soll.
+
+- <U> <Bold> Eingabe Fl&#228;chenwert </Bold> </U>  - Geben Sie den absoluten Fl&#228;chenwert in m&#178; an, der von der bestehenden Fl&#228;che abgeteilt werden soll. Zus&#228;tzlich zeigen Sie die Richtung, in die abgeteilt werden soll, in der Grafik.
+
+
+
+
+
+
+<Success>
+Bei den Berechnungen mittels Abstand oder Fl&#228;che wird die Teilungslinie ausgehend vom &#228;u&#223;ersten Punkt der Fl&#228;che verschoben, bis der gew&#252;nschte Wert erreicht ist.
+</Success>
+
+<Warning>
+Die Teilungslinie wird immer in der gerade aktiven Version des Plans eingef&#252;gt. Stellen Sie also bitte vor Aufruf des Befehls sicher, dass Sie die gew&#252;nschte Version sehen.
+</Warning>

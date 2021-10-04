@@ -1,0 +1,80 @@
+---
+title: "Mappatura attributi - Simboli-2-punti"
+page: true
+---
+## Gestione della conversione di elementi CAD in simboli-3-punti nel Geodatabase.
+
+```
+La creazione dei simboli-3-punti &#232; definita tramite l&#39;elemento  <Bold> &lt;ThreePointSymbols&gt; </Bold> .
+Si tratta di una raccolta di elementi  <Bold> &lt;ThreePointSymbol&gt; </Bold>  che gestiscono la conversione:
+ <Bold> &lt;ThreePointSymbols&gt; </Bold> 
+   &lt;ThreePointSymbol Name=&quot;Esempio1&quot;&gt;
+       <Italic> &lt;!-- Definizione --&gt; </Italic> 
+   &lt;/ThreePointSymbol&gt;
+    <Italic> &lt;!-- Ulteriori elementi &lt;ThreePointSymbol&gt; --&gt; </Italic> 
+ <Bold> &lt;/ThreePointSymbols&gt; </Bold> 
+```
+
+
+Per l&#39;elemento  <Bold> &lt;ThreePointSymbol&gt; </Bold>  &#232; possibile dare come attributo opzionale un fattore di scala addizionale, una rotazione addizionale e/o una modifica della linea di base:
+
+```
+ &lt;ThreePointSymbol Name=&quot;Esempio1&quot; Scale=&quot;1.2&quot; Rotation=&quot;100&quot; InvertBaseLine=&quot;AdditionalPoints&quot;&gt;
+```
+
+La scala viene applicata come moltiplicativo, la rotazione come additivo ed entrambe determinano l&#39;estensione geometrica del blocco.
+L&#39;elemento  <Italic> InvertBaseLine </Italic>  possiede due valori possibili &quot; <Italic> AdditionalPoints </Italic> &quot; e &quot; <Italic> Baseline </Italic> &quot;:
+&quot; <Italic> AdditionalPoints </Italic> &quot; scambia il secondo ed il terzo punto producendo una rotazione geometrica dell&#39;intero simbolo.
+&quot; <Italic> Baseline </Italic> &quot; scambia il primo ed il secondo punto invertendo la geometria dell&#39;oggetto.
+
+### &lt;ThreePointSymbol&gt;
+### 
+# Attributui
+
+
+- <Bold> Name </Bold>  (obbligatorio)
+
+- Definisce il nome del tipo di oggetto destinazione nel geodatabase. Tutti gli elementi CAD considerati dal filtro sono convertiti in questo tipo di oggetto.
+
+
+
+
+
+### 
+# Elementi
+
+Con i seguenti elementi si possono definire gli oggetti da cui sono creati i simboli-3-punti.
+
+1. <Bold> &lt;GraphicAttributeSettings&gt; </Bold>  (da 0 a 1)
+
+- Descrive la ripresa di propriet&#224; grafiche dagli elementi CAD. Vedere 
+[Elemento GlobalSettings](../anhang/formatbeschreibungmappingautodesk2)
+.
+
+
+
+2. <Bold> &lt;Insert&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione dei blocchi CAD.
+
+
+
+3. <Bold> &lt;Text&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione dei testi.
+
+
+
+4. <Bold> &lt;Point&gt; </Bold>  (da 0 a 1)
+
+- Gestisce la conversione dei punti CAD ( <Italic> POINT </Italic> ).
+
+
+
+
+
+
+<Success>
+L&#39;utilizzo di questo elemento &#232; come nel caso di [Conversione di elementi CAD in punti](../anhang/formatbeschreibungmappingautodesk4)
+.
+</Success>

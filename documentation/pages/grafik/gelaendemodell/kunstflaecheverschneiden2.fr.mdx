@@ -1,0 +1,71 @@
+---
+title: "Intersection d'une surface projetée (multiple)"
+page: true
+---
+## Construction en une &#233;tape de plusieurs surface projet&#233;es dans un mod&#232;le de terrain existant.
+<GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Construction / Intersecter la surface projetée (multiple)] </Menu> </GeoDesigner>
+<GeoMapper> <Menu> Menu: [Modèle de terrain / Intersecter la surface projetée (multiple)] </Menu> </GeoMapper>
+
+S&#39;il est pr&#233;vu resp. possible, de cr&#233;er plusieurs surfaces projet&#233;es avec les m&#234;mes angles de talus et de tranch&#233;e dans un mod&#232;le de terrain, alors cette commande permet de raccourcir ce calcul r&#233;p&#233;titif.
+
+
+
+1. Mettez &#224; disposition les contours des surfaces projet&#233;es en tant que polylignes 3D. 
+
+
+
+<Success>
+Ici vous pouvez utiliser des polylignes dot&#233;es d&#39;informations d&#39;altitude.
+Alternative
+
+Sinon utilisez la commande [Dessiner ligne de construction](../gelaendemodell/konstruktionsliniezeichnen)
+.
+</Success>
+
+
+1. Appelez la commande.
+
+2. Saisissez <Menu>l'angle de talus</Menu>  et <Menu>l'angle de tranchée</Menu> .
+
+- Tous les angles peuvent &#234;tre saisis en Degr&#233;, Gon, pente ou rapport de talus.
+
+
+
+
+
+<Success>
+Un rapport de talus de 1:2 produit une diff&#233;rence d&#39;altitude de 1 m sur 2 m en horizontale. Un rapport de talus de 2:1 est donc plus raide qu&#39;un rapport de 1:2.
+</Success>
+
+
+1. <Menu>Distance standard automatique</Menu> : De fa&#231;on &#224; ce que le maillage de la nouvelle surface soit correct, des sommets sont ajout&#233;s pour le maillage de triangles. La distance entre les sommets peut &#234;tre d&#233;termin&#233;e automatiquement ou fix&#233;e par l&#39;utilisateur.
+
+2. <Menu>Créer un nouveau modèle</Menu> : Le talus est intersect&#233; avec le mod&#232;le actif. Si vous d&#233;sirez que la g&#233;om&#233;trie du mod&#232;le actif soit gard&#233;e, cr&#233;er un nouveau mod&#232;le et donnez-lui un nom.
+
+3. Cliquez ensuite sur le bouton <Border>Construire</Border> .
+
+4. S&#233;lectionnez les lignes de construction l&#39;une apr&#232;s l&#39;autre dans la s&#233;quence dans laquelle elles doivent &#234;tre ins&#233;r&#233;es.
+
+
+
+<Warning>
+La s&#233;quence peut influencer de mani&#232;re determinante le r&#233;sultat - sp&#233;cialement pour des surfaces projet&#233;es tr&#232;s proches.
+</Warning>
+
+
+1. S&#233;lectionnez o&#249; en g&#233;n&#233;ral cr&#233;er le talus <Menu>Intérieur</Menu>  ou <Menu>Extérieure</Menu> .
+
+2. <Placeholder>product</Placeholder> calcule les surfaces projet&#233;es de mani&#232;re it&#233;ratif et applique le r&#233;sultat d&#233;finitif au mod&#232;le s&#233;lectionn&#233;.
+
+
+
+<Success>
+Cette variante de commande ne permet pas la possibilit&#233; de donner des angles diff&#233;rents pour chaque cot&#233; de surface projet&#233;e.
+Si vous devez quand-m&#234;me construire des talus avec angles diff&#233;rents, utilisez la [commande standard](../gelaendemodell/kunstflaecheverschneiden)
+.
+Selon la situation du terrain on peut utiliser plus efficacement une combinaison des deux commandes.
+</Success>
+
+<Warning>
+La fonction est disponible seulement si l&#39;application  <Italic> Mod&#232;le de terrain </Italic>  est activ&#233;e.
+</Warning>

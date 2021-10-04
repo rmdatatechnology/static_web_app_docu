@@ -1,0 +1,56 @@
+---
+title: "Reduktionsfaktor"
+page: true
+---
+## Reduktion von Distanzeingaben bzw. Bema&#223;ungen
+<GeoMapper>
+<Success>
+Alle Distanzeingaben in  <Placeholder>fullproduct</Placeholder> erfolgen in Naturma&#223;en. Auch die Ausgaben im Protokoll und in der Grafik (wie z.B. bei Bema&#223;ungen) werden als Werte in der Natur angegeben. 
+</Success>
+
+
+<Success>
+L&#228;ngenangaben in den grafischen Einstellungen der Konfiguration werden nicht reduziert.
+</Success>
+
+
+Die Streckenreduktion wird in den [Datei-Einstellungen](../datei/datei-einstellungen)
+ aktiviert, wenn der Reduktionsfaktor ungleich 1 ist. Dann wird der Reduktionsfaktor an die Natur- bzw. umgekehrt an die Planwerte angebracht.
+
+### Bestimmung Reduktionsfaktor
+Bei Eingabe von Schwerpunkt, mittlerer H&#246;he und Erdradius wird der Reduktionsfaktor folgenderma&#223;en bestimmt:
+
+1. Eine Strecke von 100 m beginnend bei dem in den Einstellungen angegegebenen Schwerpunkt wird mit nachfolgenden Formeln reduziert. Dabei geht das Koordinatensystem, die mittlere H&#246;he und der mittlere Erdradius in die Berechnung ein.
+
+2. Aus dem Vergleich der originalen Strecke und der reduzierten Strecke wird der Reduktionsfaktor bestimmt.
+
+
+
+
+<Success>
+Sie k&#246;nnen den Ma&#223;stabsfaktor in den [Datei-Einstellungen](../datei/datei-einstellungen)
+ auch manuell &#252;berschreiben.
+</Success>
+
+
+### Reduktion einer 2D-Strecke
+ <Bold> Reduktion auf Bezugsh&#246;he: </Bold> 
+Reduktion der Horizontaldistanz DHm auf die H&#246;he der Bezugsfl&#228;che HBez durch den Faktor:<Image>\img\grafik\anhang\Strecke_Höhe.png$Strecke_Höhe.png</Image>
+
+ <Bold> Reduktion entsprechend der Projektion: </Bold> 
+Die Strecke in der Natur (dh) wird reduziert in  die Strecke im Plan (dKoordEbene ) mit:<Image>\img\grafik\anhang\Strecke.png$Strecke</Image>
+wobei:
+
+- Die Reduktion der Horizontaldistanz f&#252;r die Gau&#223;/Kr&#252;ger-Projektion erfolgt mit: (Von den y-Koordinaten wird zuerst die Additionskonstante zum Nullmeridian abgezogen)<Image>\img\grafik\anhang\Strecke_GK.png$Strecke_GK</Image>
+- Die Reduktion der Horizontaldistanz f&#252;r die UTM-Projektion erfolgt mit:<Image>\img\grafik\anhang\Strecke_UTM.png$Strecke_UTM</Image> 
+
+- Die Reduktion der Horizontaldistanz f&#252;r die Gau&#223;-Boaga-Projektion (S&#252;dtirol) erfolgt mit:<Image>\img\grafik\anhang\Strecke_GB.png$Strecke_GB</Image>
+
+
+
+### Reduktion einer 3D-Strecke
+Bei Berechnungen einer 3D-Strecke wird zuerst die 2D-Strecke ermittelt. An dieser wird der Reduktionsfaktor angebracht. Dann wird aus der reduzierten Strecke und der H&#246;he die 3D-Strecke berechnet.
+
+</GeoMapper>
+
+ 

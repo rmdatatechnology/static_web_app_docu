@@ -1,0 +1,67 @@
+---
+title: "Transformation (Helmert 2D)"
+page: true
+---
+## Ex&#233;cuter une transformation Helmert 2D pour une base de donn&#233;es compl&#232;te ou une partie des donn&#233;es.
+ <Menu> Menu: [Calculer / Transformation] </Menu> 
+ <Menu> Cmd: [ProjectHelmertTransform] </Menu> 
+
+ <Placeholder>geodgm</Placeholder><Image>\img\grafik\berechnen\Helmert2DTransformation.png$Helmert2DTransformation</Image>
+
+
+1. Appelez la commande.
+
+2. <Placeholder>product</Placeholder> affiche le dialogue ci-dessus pour le choix des param&#232;tres de transformation.
+
+3. Saisissez les param&#232;tres de la transformation Helmert 2D.
+
+4. D&#233;marrez le calcul avec <Border>Ok</Border> 
+5. S&#233;lectionnez les objets &#224; transformer par
+
+1. [S&#233;lection depuis le graphique](../grafik/selektionvondaten)
+ ou
+
+2. Tous les objets du GeoDB
+
+
+
+
+
+
+Alternative
+:  <Bold> Calcul des param&#232;tres de transformation </Bold> 
+
+1. S&#233;lectionnez les couples de points de calage et ajoutez-les &#224; la liste avec le bouton <Border>+</Border> . Les param&#232;tres sont d&#233;termin&#233;s automatiquement.
+
+2. Modifier les param&#232;tres:
+
+- Fixer la rotation &#224; 0 gon: Ne pas activer la case &#224; cocher devant la Rotation
+
+- Fixer l&#39;&#233;chelle &#224; 1: Ne pas activer la case &#224; cocher devant l&#39;Echelle
+
+- Modifier manuellement les param&#232;tres calcul&#233;s: Les &#233;carts des couples de points de calage sont calcul&#233;s &#224; nouveau avec les param&#232;tres modifi&#233;s. Pour retourner aux param&#232;tres originaux, appuyez sur le bouton <Border>Recalculer</Border> .
+
+
+
+
+
+
+Alternative
+:  <Bold> Importation des param&#232;tres de transformation </Bold> 
+
+1. Appuyez sur <Border>Ouvrir</Border> .
+
+2. S&#233;lectionnez le fichier avec les param&#232;tres de transformation.
+
+3. Apr&#232;s le choix du fichier, les transformations ici contenues sont affich&#233;es dans le champ de saisie o&#249; vous pouvez les s&#233;lectionner.
+
+
+
+
+ <Border>Enregistrer</Border> 
+Avec cette commande, les param&#232;tres de transformation couramment d&#233;finis sont enregistr&#233;s dans un fichier.
+
+ <Bold> Structure du fichier avec les param&#232;tres de transformation: </Bold> 
+&#39;Nom         |102  PtRot(Valeur est) PtRot(Valeur nord) D&#233;plac(Valeur est) D&#233;plac(Valeur nord) Rotation    Echelle     Commentaire
+Exemple|102 13.0950000000000 93.4950000000000 510208.9950000000000 423062.8299999999600 392.6195152961504 1.0001614448183
+

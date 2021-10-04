@@ -1,0 +1,140 @@
+---
+title: "Adattamento dei modelli"
+page: true
+---
+## Unione di dati, con in origine diverse precisioni, in un unico modello digitale del terreno.
+ <Menu> Menu: [ ^^dtmRibbonTitle^^ / Costruzione / Adattamento dei modelli] </Menu> 
+
+<Success>
+Questa funzione serve ad esempio per unificare dati provenienti da rilievi aerei  <Italic> ALS </Italic>  con misurazioni terrestri oppure con dati  <Italic> GPS </Italic> . 
+</Success>
+
+<Warning>
+Il prerequisito &#232; sempre che i dati con la pi&#249; alta precisione (ad es. Tacheometro) siano compresi nei dati con precisione inferiore (principalmente dati  <Italic> ALS </Italic> ). La funzione infatti non &#232; adatta a gestire la riunione di diversi modelli isola in un modello unico.
+</Warning>
+
+
+
+1. Lanciare il comando.
+
+2. Selezionare la serie di dati da riunire, nell&#39;assistente di Adattamento dei modelli. &#200; possibile scegliere tra
+
+- File <Italic> ASCII </Italic>  (CSV con righe XYZ/ENH) o <Italic> ArcInfo ASCII-Grid </Italic> 
+- Modello digitale (un modello esistente gi&#224; calcolato)<Image>\img\grafik\geländemodell\DtmMatchingWizard1.png$DtmMatchingWizard1</Image>
+
+
+3. Nell&#39;inserimento della serie di dati, deve essere definita una <Italic> Priorit&#224; </Italic> . La Priorit&#224; deve essere sempre data ai dati con la precisione pi&#249; alta. In tal modo, il programma decide quali punti siano rilevanti per l&#39;adattamento.
+
+
+
+<Success>
+Affinch&#232; l&#39;assistente possa proseguire, occorre sempre definire almeno una serie di dati con Priorit&#224; ed una senza Priorit&#224;! Per default la Priorit&#224; viene assegnata alla prima serie di dati inserita.
+</Success>
+
+
+- La sorgente di dati avente Priorit&#224; viene rappresentata col simbolo della &quot;Lampadina&quot; (<Image>\img\grafik\geländemodell\DtmMatchingWizardPriorityOn.png$DtmMatchingWizardPriorityOn</Image>).
+
+- La Priorit&#224; pu&#242; essere modificata in ogni momento, cliccando il bottone<Image>\img\grafik\geländemodell\DtmMatchingWizardPrioritizeButton.png$DtmMatchingWizardPrioritizeButton</Image> ( <Italic> Modifica priorit&#224; della sorgente dati </Italic> ) nella riga corrispondente, oppure con un doppio clic sulla sorgente dei dati.
+
+- La serie di dati pu&#242; essere eliminata in ogni momento col bottone<Image>\img\grafik\geländemodell\DtmMatchingWizardRemoveButton.png$DtmMatchingWizardRemoveButton</Image>
+
+
+
+
+
+1. Non appena siano state selezionate due serie di dati ed assegnata la Priorit&#224;, l&#39;assistente liberer&#224; il bottone <Border>Avanti</Border> .
+
+- Fintanto che non sia stata assegnata la Priorit&#224;, sull&#39;assistente apparir&#224; un avviso.<Image>\img\grafik\geländemodell\DtmMatchingWizardNoPriorityError.png$DtmMatchingWizardNoPriorityError</Image>
+- <Italic> Opzionalmente </Italic>  in questa pagina &#232; possibile scegliere un tipo di punto come da configurazione, che verr&#224; usato per rappresentare i punti delle serie di dati con o senza Priorit&#224;. Il default &#232; <Italic> &lt;nessun tipo&gt; </Italic> , cio&#232; i punti non hanno alcuna rappresentazione grafica specifica.
+
+
+
+
+
+<Warning>
+L&#39;utilizzo di questi tipi non &#232; sempre possibile, ad esempio quando viene eseguita una rarefazione dei punti conclusiva oppure quando viene modellata una  <Italic> &quot;Transizione fluida&quot; </Italic> , poich&#232; in questi casi, i punti vengono rigenerati e non hanno nessuna relazione con i dati originali.
+</Warning>
+
+
+1. Cliccare su <Border>Avanti</Border>  per proseguire al passo successivo dell&#39;assistente.
+
+2. Il programma analizza i dati d&#39;ingresso e mostra un&#39;anteprima della serie di dati:<Image>\img\grafik\geländemodell\DtmMatchingWizardPreview.png$DtmMatchingWizardPreview</Image>
+
+
+<Success>
+I dati di misura sono rappresentati come  <Italic> Immagine ombreggiata </Italic> , mentre i punti con Priorit&#224; compaiono con un simbolo a croce, in modo da fornire una panoramica dei modelli da unificare.
+</Success>
+
+<Success>
+In questo dialogo, tramite il bottone 
+<Image>\img\grafik\geländemodell\DtmMatchingWizardAreaSelectionButton.png$DtmMatchingWizardAreaSelectionButton</Image> si pu&#242; definire una delimitazione spaziale, in modo da riprendere in seguito, solo i punti al suo interno. Per maggiori informazioni sulla scelta dell&#39;area, vedere [Dettagli sulla scelta della area](../modellierung/modellangleichung2)
+.
+</Success>
+
+
+1. Nella pagina successiva, scegliere come si desidera unificare i modelli ed a quale modello assegnare il risultato. Opzionalmente, i dati risultato possono anche essere rarefatti tramite la riduzione dei punti, onde ridurre la quantit&#224; di dati <Italic> senza una significativa perdita di informazioni </Italic> . Per default questa opzione &#232; attiva. Per ottenere anche un&#39;analisi grafica della riduzione, attivare l&#39;opzione <Menu>Analisi dei risultati</Menu> . Per default questa opzione non &#232; attiva, poich&#232; in ragione della dimensione del modello, ci&#242; pu&#242; comportare un certo aumento del tempo necessario al processo.<Image>\img\grafik\geländemodell\DtmMatchingWizardChooseMatching.png$DtmMatchingWizardChooseMatching</Image>
+2. Selezionare uno dei metodi disponibili
+
+- <Bold> Spostamento: </Bold>  Il modello ALS viene spostato in posizione ed altezza, in modo da adattarsi nel miglior modo possibile al modello terrestre.
+
+- <Bold> Transizione fluida: </Bold>  Tra il modello ALS e quello terrestre, in una zona di transizione, viene calcolata una Transizione fluida, in modo che ai limiti del modello non si produca alcun gradino. Il modello ALS non viene spostato n&#233; in posizione n&#233; in altezza.
+
+- <Bold> Riunione: </Bold>  Come per il metodo <Italic> Spostamento </Italic> , il modello ALS viene spostato in posizione ed altezza, per&#242; i dati ALS non vengono esclusi (vedere anche &quot;Offset&quot; in basso), vale a dire, tutti i dati di entrambi i modelli vengono combinati.
+
+
+
+3. Offset: Con i metodi <Italic> Spostamento </Italic>  e <Italic> Transizione fluida </Italic>  i dati del modello ALS vengono esclusi la dove esistono i dati terrestri. Nell&#39;escludere, il limite del modello terrestre, viene spostato verso l&#39;esterno del valore di <Italic> Offset </Italic> , cos&#236; che i dati ALS e terrestri non abbiano limiti che si sovrappongono.
+
+
+
+<Success>
+Per modelli terrestri lunghi e sottili, pu&#242; succedere che l&#39;Offset sia troppo grande. In questo speciale caso, bisogna togliere il visto all&#39;opzione &quot;Offset automatico&quot; ed immettere manualmente l&#39;Offset da usare.
+</Success>
+
+
+1. Scegliere il modello al quale assegnare il risultato. Se si desiderasse creare un nuovo modello, il suo nome deve essere univoco. Nel caso, l&#39;assistente genera un messaggio di errore. Non appena tutti i dati siano completi, l&#39;assistente libera il bottone <Border>Avanti</Border>  ed &#232; possibile proseguire con l&#39;adattamento.
+
+2. Durante il calcolo dell&#39;adattamento, l&#39;assistente mostra un simbolo di caricamento ( <Italic> Loading Circle </Italic> ).<Image>\img\grafik\geländemodell\DtmMatchingWizardLoadingCircle.png$DtmMatchingWizardLoadingCircle</Image>
+
+
+<Success>
+Durante questa operazione &#232; possibile interrompere il processo cliccando su  <Border>Annulla</Border> . In tal caso si chiude l&#39;assitente e i file del progetto non subiscono alcuna elaborazione.
+</Success>
+
+
+1. Terminato correttamente il calcolo, l&#39;assistente mostra il risultato in forma di <Italic> Immagine ombreggiata </Italic>  ed offre una statistica sull&#39;adattamento e sulla riduzione eseguita sui punti.<Image>\img\grafik\geländemodell\DtmMatchingWizardFinalPage.png$DtmMatchingWizardFinalPage</Image>
+
+
+<Warning>
+La qualit&#224; della grafica dipende fortemente dalla mole e dalla densit&#224; dei dati d&#39;ingresso. Aree con poca densit&#224; possono essere visualizzate come &quot;buchi&quot;.
+</Warning>
+
+<Success>
+ <Italic>  <Bold> Glossario: </Bold> </Italic>
+
+- <U> Scarto residuo standardizzato </U> : Lo scarto residuo standardizzato &#232; una misura della dispersione dei valori di un ambito dato attorno al suo valore medio (media aritmetica). Detto in modo semplice, &#232; la distanza media di tutti i valori misurati dalla media dei valori stessi.
+
+
+
+
+- <U> Residuo </U> : La parola &quot;Residuo&quot; definisce la parte della variabilit&#224;, che non pu&#242; essere chiarita dato un certo modello. I residui sono calcolati tramite la sottrazione dei valori stimati del modello dai dati veri e propri. 
+
+
+
+
+</Success>
+
+
+
+1. Cliccare su <Border>Terminare</Border> , per assegnare il risultato al modello scelto. A questo punto &#232; sempre possibile rifiutare il risultato, cliccando su <Border>Annulla</Border>  o ritornando indietro nelle varie tappe dell&#39;assistente per modificare le impostazioni.
+
+
+
+
+<Success>
+Al termine dall&#39;adattamento, il modello risultato viene documentato nel protocollo. In questo modo sono documentati i dati originali e le statistiche che possono essere riprodotti in ogni momento.
+</Success>
+
+<Warning>
+Una volta completato il comando non esiste possibilit&#224; di UNDO <Italic> . </Italic> 
+</Warning>

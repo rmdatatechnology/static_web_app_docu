@@ -1,0 +1,39 @@
+---
+title: "Anbindung rmGEO"
+page: true
+---
+## Eine rmGEO-Datenquelle kann auf 2 Arten angebunden werden
+
+### Automatischer Abgleich
+Die Anbindung von rmGEO an GeoMapper erfolgt als Datenbank-Anbindung mit einer 1:1-Beziehung. Das bedeutet, dass an ein Projekt genau eine rmGEO-Datenbank angebunden werden kann, und alle Daten (Punkte) sowohl in rmGEO als auch in GeoMapper gleichzeitig vorhanden sind. 
+
+Punkte aus und zu anderen rmGEO-Datenquellen werden &#252;ber eine eigene Import-Export-Schnittstelle in GeoMapper  transferiert.
+
+Das Speichern einer mit rmGEO verbundenen GeoMapper-Datei wird ausschlie&#223;lich vom Anwender ausgel&#246;st: Alle &#196;nderungen werden erst nach dem Speichern sowohl in rmGEO als auch in GeoMapper abgelegt. Trotzdem haben rmGEO und GeoMapper  immer den gleichen Dateninhalt, da jeder Editiervorgang tempor&#228;r sofort in eine Arbeitskopie der originalen rmGEO-Datenquelle &#252;bertragen wird. Nach dem Speichern wird die originale rmGEO-Datenquelle mit der Arbeitskopie &#252;berschrieben.
+
+Alle Daten sind sowohl in GeoMapper als auch in rmGEO editierbar: Durch einen Wechsel nach rmGEO wird die GeoMapper-Datei f&#252;r Eingaben gesperrt, und rmGEO als Arbeitskopie ge&#246;ffnet. Wechselt man zur&#252;ck nach GeoMapper, wird rmGEO geschlossen und alle &#196;nderungen sofort nachgef&#252;hrt.
+
+Auch wenn Daten bei geschlossenem Projekt in rmGEO ge&#228;ndert werden, wird dies beim n&#228;chsten &#214;ffnen des Projektes &#252;ber die Konsistenzpr&#252;fung nachgef&#252;hrt. 
+
+Beim Starten einer Verbindung und beim &#214;ffnen eines mit rmGEO verbundenen Projektes wird die Konsistenz auf beiden Seiten gepr&#252;ft und hergestellt - Der Vorrang kann bei einer Kollision f&#252;r jeden Punkt entweder f&#252;r rmGEO oder f&#252;r rmMAP vergeben werden. Es MUSS immer ein Vorrang vergeben werden, es ist also nicht m&#246;glich, einzelne Punkte nicht abzugleichen. Der Abgleich erfolgt immer f&#252;r den gesamten Punkt und dessen Attribute, unterschiedliche Vorrangvergaben f&#252;r verschiedene Attribute desselben Punktes sind nicht zul&#228;ssig.
+
+Die Konsistenz wird ebenfalls automatisch gepr&#252;ft, wenn Einstellungen im Verbindungsmanager ge&#228;ndert werden, oder wenn Daten aus dem Projekt nachgeladen werden.
+
+Es werden auf jeden Fall folgende Attribute abgeglichen:  Lagekoordinaten, H&#246;he, Punkttyp, Festcode, Messcode.
+
+Der Abgleich von weiteren Attributen kann vom Anwender gesteuert werden: Jene Attribute aus rmGEO, welche in GeoMapper nicht als Klassenattribute definiert wurden, werden nur nach Wunsch des Anwenders nach GeoMapper &#252;bertragen. Attribute in GeoMapper werden nur dann (auf Wunsch) nach rmGEO &#252;bertragen, wenn diese in rmGEO auch angelegt sind.
+
+Ist in GeoMapper die Versionierung aktiv, werden Punkte in folgender Weise abgeglichen:
+Neue Punkte aus rmGEO werden immer in der aktuell eingestellten Version laut Verbindungsmanager nach GeoMapper &#252;bertragen.
+Versionierte Punkte aus GeoMapper werden in der h&#246;chsten Version nach rmGEO &#252;bertragen. Diese h&#246;chste Version kann im Verbindungsmanager auch herabgestuft werden, sodass auch Punkte niedriger Versionen nach rmGEO &#252;bertragbar sind.
+
+### Manueller Abgleich
+Hier wird &#252;ber den [Verbindungsmanager](../rmgeo4/rmgeo-verbindungsmanager)
+ eine Zuordnung zu einer rmGEO-Datenquelle erstellt.
+Der Abgleich erfolgt hier nicht bei einem Speichern bzw. &#214;ffnen eines Projekts automatisch, sondern wird &#252;ber 3 Befehle manuell angesto&#223;en.
+
+[Abgleich zur rmGEO-Datenquelle](../rmgeo4/abgleich-rmgeo4)
+
+[Export zur rmGEO-Datenquelle](../rmgeo4/export-rmgeo4)
+
+[Import aus rmGEO-Datenquelle](../rmgeo4/import-rmgeo4)

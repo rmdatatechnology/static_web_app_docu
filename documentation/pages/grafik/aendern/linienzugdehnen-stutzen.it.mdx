@@ -1,0 +1,79 @@
+---
+title: "Estendere/tagliare una polilinea"
+page: true
+---
+## Estende una o pi&#249; polilinee fino alla prossima polilinea o al prossimo punto, oppure le taglia alle estremit&#224;.
+<GeoMapper> <Menu> Menu: [Modifica / Estendi/taglia polilinea] </Menu> </GeoMapper>
+<GeoDesigner> <Menu> Menu: [Edita e modifica / Linee I / Estendi/taglia] </Menu> 
+ <Menu> Cmd: [LinestringExtendCut] </Menu> </GeoDesigner>
+
+
+1. Avviare il comando.
+
+2. Selezionare le polilinee da estendere o tagliare. Nel caso di taglio, selezionare la parte di linea che deve rimanere. 
+
+
+<Success>
+Se si selezionano le linee tramite una finestra, definire tramite il punto finale della finestra quale parte delle linee deve restare.
+
+</Success>
+3. Sono 2 le opzioni disponibili:
+
+1. <Bold> Nuovo vertice: </Bold>  La prima volta che il comando &#232; lanciato questa opzione &#232; standard. Qui viene creato un nuovo vertice. Se sul punto finale della polilinea da estendere giace un punto di misura, questo non viene spostato sul nuovo vertice.
+
+2. <Bold> Sposta vertice: </Bold>  Questa opzione sposta il punto finale della linea insieme a tutti i punti di misura che si trovano su di esso. Non viene creato alcun nuovo vertice.
+
+
+
+
+
+4. Selezionare il punto o la linea limite, fino al quale le polilinee precedentemente selezionate devono essere estese rispettivamente tagliate, quindi confermare con <Border>Enter</Border> .
+
+5. Le polilinee sono estese o tagliate fino al limite selezionato.
+
+
+
+
+Alternativa
+
+
+1. Selezionare sulla grafica una o pi&#249; polilinee. 
+
+
+<Success>
+Se si selezionano le linee tramite una finestra, definire tramite il punto finale della finestra quale parte delle linee deve restare.
+
+</Success>
+2. Avviare il comando dalla barra multifunzionale o tramite il menu contestuale (bottone destro del mouse sulla grafica).
+
+
+
+
+<Success>
+Come oggetto limite, si possono selezionare punti, polilinee o altri elementi lineari tra gli elementi CAD.
+</Success>
+
+<Success>
+Limite dato da una linea:
+
+- Se la linea taglia il segmento limite, allora la linea viene estesa / tagliata fino a questo limite. Altrimenti entrambe le fine linee vengono estese / tagliate. 
+
+
+
+
+</Success>
+<Success>
+Limite dato da un punto:
+
+- In questo caso viene modificato solo il lato pi&#249; vicino al punto di selezione della linea.
+
+
+- Il punto viene proiettato ortogonalmente sul segmento iniziale risp. finale (dipende da quale lato della linea sia stato selezionato) e la linea viene estesa/tagliata fino a questo punto. 
+
+
+- Gli archi sono estesi/tagliati fino alla linea che si trova tra il centro dell&#39;arco ed il punto limite. 
+
+
+
+
+</Success>

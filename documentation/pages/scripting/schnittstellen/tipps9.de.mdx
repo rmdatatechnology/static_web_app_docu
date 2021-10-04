@@ -1,0 +1,24 @@
+---
+title: "Flächeneinsetzpunkte von bestehenden Flächen lesen und ändern"
+page: true
+---
+## Auslesen und &#196;ndern von Fl&#228;cheneinsetzpunkten.
+
+### Auslesen und &#196;ndern
+ <Bold>  <Italic> .InsertPointsGeometry </Italic>  </Bold> 
+
+```
+objektNachAuswahl = list(Application.IO.GetObject(&#39;Objekte w&#228;hlen&#39;).Value
+#Ersten Einsetzpunkt ausgeben
+print objektNachAuswahl.InsertPointsGeometry[0]
+
+#Einsetzpunkte l&#246;schen und 1 Einsetzpunkt auf 10/10 hinzuf&#252;gen
+objektNachAuswahl.InsertPointsGeometry = (10,10,0)
+
+#Einsetzpunkte setzen
+objektNachAuswahl.InsertPointsGeometry = [(10,10,0), (20,20,0)]
+
+#Einsetzpunkte l&#246;schen
+objektNachAuswahl.InsertPointsGeometry = None
+
+```

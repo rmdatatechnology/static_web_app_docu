@@ -1,0 +1,64 @@
+---
+title: "Intersection d'une surface projetée"
+page: true
+---
+## Construction de talus et intersection avec la surface du mod&#232;le de terrain
+<GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Construction / Intersecter la surface projeté] </Menu> </GeoDesigner>
+<GeoMapper> <Menu> Menu: [Modèle de terrain / Intersecter la surface projeté] </Menu> </GeoMapper>
+
+A partir d&#39;une ligne de contruction en 3D, un talus ou une tranch&#233;e est dessin&#233; avec un angle donn&#233; jusqu&#39;&#224; atteindre la surface du mod&#232;le de terrain.<Image>\img\grafik\geländemodell\Böschung.png$Böschung</Image>
+Figure: Surface projet&#233;e avec talus et tranch&#233;e (Affichage exemplaire!)
+
+
+1. Dessinez une ligne de contruction qui d&#233;limite la surface projet&#233;e. 
+
+
+
+Alternative
+ Dans le menu contextuel de la commande, est disponible l&#39;option &quot;Cr&#233;er&quot;. Avec cette option, la commande [Cr&#233;er ligne de construction](../gelaendemodell/konstruktionsliniezeichnen)
+ est d&#233;marr&#233;e.
+
+1. Appelez la commande.
+
+2. Saisissez <Menu>l'angle de talus</Menu>  et <Menu>l'angle de tranchée</Menu> .
+
+- Tous les angles peuvent &#234;tre saisis en Degr&#233;, Gon, pente ou rapport de talus.
+
+
+
+
+
+<Success>
+Un rapport de talus de 1:2 produit une diff&#233;rence d&#39;altitude de 1 m sur 2 m en horizontale. Un rapport de talus de 2:1 est donc plus raide qu&#39;un rapport de 1:2.
+</Success>
+
+
+1. <Menu>Distance standard automatique</Menu> : De fa&#231;on &#224; ce que le maillage de la nouvelle surface soit correct, des sommets sont ajout&#233;s pour le maillage de triangles. La distance entre les sommets peut &#234;tre d&#233;termin&#233;e automatiquement ou fix&#233;e par l&#39;utilisateur.
+
+2. <Menu>Créer un nouveau modèle</Menu> : Le talus est intersect&#233; avec le mod&#232;le actif. Si vous d&#233;sirez que la g&#233;om&#233;trie du mod&#232;le actif soit gard&#233;e, cr&#233;er un nouveau mod&#232;le et donnez-lui un nom.
+
+3. Cliquez ensuite sur le bouton <Border>Construire</Border> .
+
+4. S&#233;lectionnez la ligne de contruction pr&#233;c&#233;demment dessin&#233;e.
+
+5. D&#233;finissez le c&#244;t&#233; de la ligne o&#249; le talus doit &#234;tre cr&#233;&#233;.
+
+
+
+
+<GeoDesigner>
+<Image>\img\grafik\geländemodell\KunstflächeDialog.png$KunstflächeDialog</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\geländemodell\GeoMapper.KunstflächeDialog.png$GeoMapper.KunstflächeDialog</Image>
+</GeoMapper>
+
+<Success>
+Au cas o&#249; vous avez &#224; calculer une s&#233;rie de surfaces projet&#233;es similaires, vous pouvez utiliser aussi la [Commande multiple](../gelaendemodell/kunstflaecheverschneiden2)
+ correspondante.
+</Success>
+
+<Warning>
+La fonction est disponible seulement si l&#39;application  <Italic> Mod&#232;le de terrain </Italic>  est activ&#233;e.
+</Warning>
+

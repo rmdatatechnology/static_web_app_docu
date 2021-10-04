@@ -1,0 +1,146 @@
+---
+title: "Daten aus Autodesk DXF Dateien importieren"
+page: true
+---
+## Setzen Sie Autodesk DXF Import spezifische Einstellungen.
+<GeoMapper> <Menu> Menu: [Datei/ Importmanager] </Menu> 
+
+Auf den weiteren Einstellungsseiten k&#246;nnen Autodesk DXF Import spezifische Einstellungen gesetzt werden.
+
+<Success>
+Wenn Ihre externen DWG-/DXF-Daten Fl&#228;chenf&#252;llmuster enthalten, die nicht korrekt dargestellt werden, dann k&#246;nnen Sie diese in einer eigenen F&#252;llmusterdatei erg&#228;nzen. 
+</Success>
+
+
+### Mapping
+Mit Hilfe der Konvertierungstabelle k&#246;nnen CAD-Objekte  <Placeholder>product</Placeholder> Objekttypen zugeordnet werden.<Image>\img\grafik\importmanager\GeoMapper.DatenImportieren.png$GeoMapper.DatenImportieren</Image>
+
+
+1.  W&#228;hlen Sie eine Mapping-Datei aus:
+
+-  Aus einem vordefinierten Verzeichnis<Image>\img\grafik\importmanager\PfeilAuswahl.png$PfeilAuswahl</Image> Hier finden Sie die Mappingdateien, die mit GeoMapper oder einer seiner Fachschalen installiert bzw. Mappingdateien, die in einem zentralen 
+[Firmenverzeichnis](../datei/programm-einstellungen6)
+ abgelegt wurden.
+
+-  Aus einem beliebigen Verzeichnis mit dem Button <Border>...</Border> : Wenn Sie sich eine eigene Mapping-Datei angelegt haben, liegt diese im Normalfall direkt im Projektordner.
+
+
+
+
+
+Alternative
+ Durch Klick auf den Button  <Border>Assistent ...</Border>  erstellen Sie eine neue Konvertierungstabelle. 
+N&#228;here Informationen finden Sie [hier ...](../importmanager/autodesk3)
+
+
+### Einstellungen
+Hier k&#246;nnen Sie weitere Import Einstellungen setzen, diese Einstellungen sind optional.
+
+- <Bold> Sonstiges: </Bold>  
+
+- Dezimaltrennzeichen: Definiert, wie Dezimalzahlen in Texten oder Attributen der Eingangsdatei generell zu interpretieren sind.
+
+- 0-H&#246;hen als ung&#252;litge H&#246;hen interpretieren: 
+
+- Ja: Es wird keine H&#246;henkoordinate &#252;bernommen
+
+- Nein: 0 wird als H&#246;henkoordinate &#252;bernommen
+
+
+
+- Nicht konvertierte AutoCAD Objekte in der Grafik  einf&#252;gen
+
+- Ja: AutoCAD Objekte, welche nicht in <Placeholder>product</Placeholder> Objekttypen konvertiert wurden, werden in das Projekt eingef&#252;gt.
+
+- Nein: AutoCAD Objekte, welche nicht in <Placeholder>product</Placeholder> Objekttypen konvertiert wurden, werden nicht importiert.
+
+
+
+- Gefrorene Layer auftauen
+
+- Ja: <Italic> Gefrorene </Italic>  Ebenen der Eingangsdatei werden als EIN &#252;bernommen, sodass die CAD-Elemente darauf in <Placeholder>product</Placeholder> sichtbar werden.
+
+- Nein: <Italic> Gefrorene </Italic>  Ebenen der Eingangsdatei werden als AUS &#252;bernommen, und CAD-Elemente  darauf sind in <Placeholder>product</Placeholder> zun&#228;chst nicht sichtbar.
+
+
+<Warning>
+Ein Ebenenzustand 
+ <Italic> gefroren
+ </Italic>  ist in 
+ <Placeholder>product</Placeholder> nicht vorgesehen.
+
+</Warning>
+
+
+- Punktfangradius: Wird innerhalb dieses Radius ein Punkt mit g&#252;ltiger H&#246;he beim Import von Lininenz&#252;gen gefunden, wird diese H&#246;he verwendet. Im Mapping muss die Auswahl &quot;Punktfang&quot; bei der H&#246;he gew&#228;hlt sein, damit diese Option greift.
+
+-  Ma&#223;stab der Quelldatei: Geben Sie den Ma&#223;stab der Ausgangsdaten an. Wenn Sie in <Placeholder>product</Placeholder> den gleichen Ma&#223;stab nutzen, dann entsprechen die Positionen und H&#246;hen den Ausgangsdaten. Beim Ma&#223;stab 1:1000 erfolgt keine &#196;nderung. 
+
+
+<Success>
+Wird nur ber&#252;cksichtigt, wenn im Mapping der Daten die Beschriftungsposition und H&#246;he &#252;bernommen wird. Ansonsten werden die Beschriftungen entsprechend der Konfiguration dargestellt.
+
+</Success>
+
+
+- <Bold> Konfliktaufl&#246;sung: </Bold> Punkt- und Fl&#228;chenbezeichnungen m&#252;ssen eindeutig sein. Es stehen folgende Optionen bei Namensgleichheit  zur Verf&#252;gung:
+
+- <Italic> Umbenennen </Italic> : Die importiereten Punkte und Fl&#228;chen werden mit dem Pr&#228;fix bzw. Suffix umbenannt. Die bestehenden Objekte bleiben unver&#228;ndert erhalten.
+
+- <Italic> Vorrang bestehender Punkt </Italic> : Der in der Datei existierende Punkt bleibt bestehen, das Objekt aus der Quelle wird ignoriert. Das Verhalten ist das selbe wie bei <Italic> Umbenennen </Italic>  ohne Angabe eines Pr&#228;fix bzw. Suffix.
+
+- <Italic> Vorrang neuer Punkt </Italic> : Der neu importierte Punkt ersetzt den bestehenden Punkt.
+
+- <Italic> Interaktiv l&#246;sen </Italic> : Sie erhalten einen Kollisionsdialog, in dem Sie f&#252;r jeden Punkt entscheiden, ob die Punkte aus GeoMapper oder aus der Quelle verwendet werden sollen. 
+
+
+<Warning>
+Bei gleichnamigen Fl&#228;chen werden die importierten Fl&#228;chen mit dem Pr&#228;fix bzw. Suffix umbenannt. Sind die beiden Werte leer, wird die Fl&#228;che nicht importiert. Es bleibt die alte Fl&#228;che erhalten.
+
+</Warning>
+
+
+- <Bold> Protokollierung: </Bold>  Legt fest, ob ein detailliertes Protokoll f&#252;r die importierten Objekte generiert werden soll, oder nur eine Zusammenfassung.
+
+- <Bold> Region importieren: </Bold>  Legt fest, ob bei Punkten das Namensfeld <Italic> Region </Italic>  importiert oder ignoriert werden soll.
+
+
+
+
+Dr&#252;cken Sie  <Border>Fertigstellen</Border> , um den Import abzuschlie&#223;en. Es wird ein Dialog ge&#246;ffnet, der den Status des Imports anzeigt.
+
+### Import von rmGEO-Netzbildern
+F&#252;r den Import von Netzausgleichen, Freien Stationierungen und Polygonz&#252;gen aus rmGEO gibt es bereits fertige Mapping-Tabellen. Gehen Sie daf&#252;r wie folgt vor:
+
+1. F&#252;hren Sie in rmGEO die Berechnung durch
+
+2. Geben Sie in rmGEO die Konstellation in eine DXF-Datei aus. Beachten Sie folgende Einstellungen:
+
+- Ma&#223;stab des Netzbildes und der Zeichnung auf 1:1000 stellen
+
+- Punktsymbole als Bl&#246;cke ausgeben
+
+
+
+3. Rufen Sie den &quot;Autodesk DXF Import&quot; auf
+
+4. W&#228;hlen Sie das Netzbild aus
+
+5. W&#228;hlen Sie eine der installierten Mapping-Tabellen:
+
+- <Bold> rmGEO_Netzbild_Mit-Punkte.xml: </Bold>  Wenn Sie das Netzbild in eine neue Datei importieren und nicht mit dem rmGEO-Projekt verbunden sind.
+
+- <Bold> rmGEO_Netzbild_Ohne-Punkte.xml: </Bold>  Wenn Sie das Netzbild in eine bestehende Datei importieren, in der die Punkte bereits vorhanden sind.
+
+
+
+6. Setzen Sie in den Import-Einstellungen &quot;Nicht konvertierte AutoCAD Objekte in der Grafik  einf&#252;gen&quot; auf &quot;Nein&quot;
+
+7. Klicken Sie auf <Border>Fertigstellen</Border> 
+
+
+
+
+
+</GeoMapper>
+

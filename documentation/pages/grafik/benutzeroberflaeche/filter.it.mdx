@@ -1,0 +1,187 @@
+---
+title: "Gestire un filtro"
+page: true
+---
+## Filtrare gli oggetti sulla grafica.
+ <Menu> Menu: [Barra multifunzionale / Filtro] </Menu>  
+
+Avviare la gestione dei filtri cliccando sul bottone filtro della barra multifunzionale.
+
+<Success>
+Quando ci si muove col puntatore del mouse sull&#39;icona del filtro, 
+un tooltip mostra tutti i filtri al momento attivi.
+</Success><Image>\img\grafik\benutzeroberflaeche\Filter.MainDialog.png$Filter.MainDialog</Image>
+
+Tutti gli oggetti che corrispondono ad almeno uno dei filtri spuntati, sono mostrati sulla grafica. Tutti gli altri oggetti sono nascosti.
+
+<Success>
+Se il filtro serve per modificare pi&#249; oggetti, conviene usare la selezione rapida sulla finestra delle propriet&#224; (vedere [Gestore delle propriet&#224;](../eigenschaftsmanager/uebersicht)
+).
+</Success>
+
+
+<Success>
+I filtri che devono essere usati spesso nel proprio progetto, &#232; utile inserirli nella configurazione. In tal caso essi sono inseriti quando si crea un nuovo file.
+</Success>
+
+
+###  (Dis-)attivare un filtro
+Per attivare o disattivare un filtro, cliccare semplicemente nella casella nella colonna  <Menu>Attivo</Menu> . Ci&#242; pu&#242; essere fatto anche per contemporaneamente per pi&#249; filtri, basta selezionare le singole righe tenendo premuto il tasto  <Border>Maiuscole</Border>  o  <Border>Ctrl</Border> .<Image>\img\grafik\benutzeroberflaeche\Filter.MainDialog.CheckSelection.png$Filter.MainDialog.CheckSelection</Image>
+
+Per disattivare velocemente tutti i filtri &#232; disponibile anche il bottone  <Border>Disattivare tutti i filtri</Border> .
+In tal modo tutti i filtri sono disattivati e confermando il dialogo, tutti i dati vengono visualizzati.
+
+### Creare un nuovo filtro
+
+1. Cliccare sul bottone <Border>Nuovo filtro</Border> .
+
+2. Inserire un nome per il nuovo filtro.
+
+3. Selezionare i criteri del filtro:
+
+- <Bold> Classe di oggetti: </Bold>  Restrizione ai punti, polilinee, ...
+
+- <Bold> Gruppo d&#39;oggetti: </Bold>  Restrizione a gruppi d&#39;oggetti come da propria predefinizione nella configurazione
+
+- <Bold> Tipo di oggetto: </Bold>  Restrizione a tipi di oggetto speciali
+
+- <Bold> Attributo: </Bold>  Sono disponibili tutti gli attributi per tutti gli oggetti - anche gli attributi liberi inseriti con il gestore delle propriet&#224; ai singoli oggetti. Quando si inseriscono pi&#249; filtri su attributi, combinarli con AND (tutte le condizioni devono essere soddisfatte) oppure OR (almeno una delle condizioni deve essere soddisfatta). Ulteriori informazioni si trovano in seguito.
+
+- <Bold> Combinazione: </Bold>  Combinazione di pi&#249; filtri. Aggiungere un filtro alla lista con <Border>-&gt;</Border>  o eliminare un filtro con <Border>&gt;-</Border> . Con <Border>+</Border>  si pu&#242; creare un nuovo gruppo, con <Border>-</Border>  eliminare un gruppo. Tutti i filtri all&#39;interno di un gruppo sono collegati in OR. Cio&#233; almeno una delle condizioni deve essere soddisfatta. I gruppi sono collegati in AND. Cio&#232; tutti i gruppi devono essere soddisfatti.
+
+
+
+
+
+<Success>
+Se vengono definiti pi&#249; criteri di filtro (ad es: tipo di oggetto e attributo), entrambe le condizioni devono essere soddisfatte (sono collegate in AND).
+</Success>
+
+<Success>
+Tutti i criteri di filtro possono essere invertiti tramite la casella di spunta &quot;Invertire filtro&quot;. Con ci&#242;, ad es. tutti i tipi d&#39;oggetto che soddisfano il filtro sono nascosti. Tutti gli altri tipi d&#39;oggetto invece sono visualizzati.
+</Success><Image>\img\grafik\benutzeroberflaeche\Filter.png$Filter</Image>
+
+
+### Modificare un filtro
+
+1. Cliccare sulla stessa riga sul bottone modifica filtro.
+
+2. Il filtro viene caricato, confermare le eventuali modifiche col bottone <Border>OK</Border> .
+
+
+
+
+### Eliminare un filtro
+
+1. Cliccare sulla stessa riga sul bottone elimina filtro. <Border>x</Border> .
+
+
+
+
+### Copiare un filtro
+
+1. Cliccare sulla stessa riga sul bottone <Border>Copia</Border> .
+
+2. <Placeholder>product</Placeholder> crea una copia del filtro originario con un nuovo nome.
+
+3. Modificare se desiderato i criteri del nuovo filtro oppure confermare il dialogo con <Border>OK</Border> .
+
+
+
+
+### Filtrare secondo attributi
+
+1. Scegliere l&#39;attributo
+
+2. Scegliere l&#39;operatore. Secondo il tipo d&#39;attributo, vengono proposti i seguenti operatori:
+
+- <Bold>  = </Bold> : 	Esattamente uguale al valore comparativo
+
+- <Bold>  != </Bold> : 	Diverso dal valore comparativo
+
+- <Bold> &lt; </Bold> : 	Minore
+
+- <Bold> &lt; </Bold> : 	Minore o uguale
+
+- <Bold> &gt; </Bold> : 	Maggiore
+
+- <Bold> &gt; </Bold> : 	Maggiore o uguale
+
+- <Bold> like </Bold> :		Contiene il valore comparativo (vedere pi&#249; in basso)
+
+- <Bold> not like </Bold> : Non contiene il valore comparativo
+
+- <Bold> Regex </Bold> : 	Espressione regolare (vedere pi&#249; in basso)
+
+
+
+3. Inserire un valore comparativo
+
+4. Inserire ulteriori operatori di comparazione con <Border>{+}</Border>  . Questi operatori sono collegati con:
+
+- <Bold> AND </Bold> : 		Tutte le condizioni devono essere soddisfatte
+
+- <Bold> OR </Bold> : 		Almeno una delle condizioni deve essere soddisfatta
+
+
+
+
+
+
+ <Bold> &quot;like&quot; e &quot;not like&quot; </Bold> 
+Questi operatori si usano quando si conosce solo una parte del valore comparativo. Si possono anche usare 2 caratteri jolly:
+
+-  * sostituisce pi&#249; caratteri
+
+-  ? sostituisce giusto 1 carattere
+
+
+
+<Info>
+ <Bold> Filtrare secondo il nome del punto </Bold> 
+
+- <Border>Nome</Border> <Border>like</Border> <Border>PP</Border> : Sono trovati tutti gli oggetti il cui nome contiene &quot;PP&quot; (all&#39;inizio, alla fine o all&#39;interno)
+
+
+- <Border>Nome</Border> <Border>like</Border> <Border>PP*</Border> : Sono trovati tutti gli oggetti il cui nome inizia con &quot;PP&quot;
+
+
+- <Border>Nome</Border> <Border>like</Border> <Border>PP?1</Border> : Sono trovati tutti gli oggetti il cui nome inizia con &quot;PP&quot; e finisce con &quot;1&quot; e in mezzo contiene un solo carattere, ad es.: PP21
+
+
+
+
+</Info>
+
+
+ <Bold> Espressioni regolari </Bold> 
+Con le espressioni regolari si pu&#242; definire un esempio che deve corrispondere al valore dell&#39;attributo. Si possono usare:
+
+- <Bold> a </Bold>  			Esattamente la lettera a (maiuscole e minuscole sono considerate)
+
+- <Bold> 7 </Bold>  			Esattamente il numero 7
+
+- <Bold> [abc] </Bold>      Esattamente un carattere tra i caratteri inclusi tra le parentesi quadre. In questo esempio a, b, oppure c
+
+- <Bold> [a-z] </Bold>       Esattamente dalla a alla z
+
+- <Bold> </Bold>           Inizio della riga
+
+- <Bold> $ </Bold>           Fine della riga
+
+- <Bold> . </Bold>           Esattamente un carattere
+
+- <Bold> \d </Bold>          Esattamente un numero
+
+
+
+
+<Info>
+
+ <Bold> P </Bold> : 	Il valore inizia con P
+ <Bold> P </Bold> : 		Il valore inizia con P
+ <Bold>   P$ </Bold> : 	Il valore termina con P      
+</Info>
+
+
+

@@ -1,0 +1,78 @@
+---
+title: "Attributzuweisung - Zweipunktsymbole"
+page: true
+---
+## Steuern Sie die &#220;bernahme von CAD-Elementen als Zweipunktsymbol in der Geodatenbank.
+
+```
+Die Erzeugung von Zweipunktsymbolen wird &#252;ber das Element  <Bold> &lt;TwoPointSymbols&gt; </Bold>  definiert.
+Es ist eine Sammlung von  <Bold> &lt;TwoPointSymbol&gt; </Bold>  Elementen, welche die Konvertierung steuern:
+ <Bold> &lt;TwoPointSymbols&gt; </Bold> 
+   &lt;TwoPointSymbol Name=&quot;Beispiel1&quot;&gt;
+       <Italic> &lt;!-- Definition --&gt; </Italic> 
+   &lt;/TwoPointSymbol&gt;
+    <Italic> &lt;!-- Weitere &lt;TwoPointSymbol&gt; Elemente --&gt; </Italic> 
+ <Bold> &lt;/TwoPointSymbols&gt; </Bold> 
+```
+
+
+Beim Element  <Bold> &lt;TwoPointSymbol&gt; </Bold>  kann als Attribut optional ein zus&#228;tzlicher Skalierungsfaktor, eine zus&#228;tzliche Rotation und/oder eine Ver&#228;nderung der Basislinie angegeben werden:
+
+```
+ &lt;TwoPointSymbol Name=&quot;Beispiel1&quot; Scale=&quot;1.2&quot; Rotation=&quot;100&quot; invertBaseLine=&quot;Baseline&quot;&gt; 
+```
+
+Die Skalierung wird multiplikativ gerechnet, die Rotation additiv und beide bestimmen die geometrische Ausdehnung des Blocks.
+Das Element  <Italic> InvertBaseLine </Italic>  besitzt einen m&#246;glichen g&#252;ltigen Wert &quot; <Italic> Baseline </Italic> &quot;. Das Setzen dieses Wertes tauscht den 1ten und 2ten Punkt, wodurch das Objekt geometrisch invertiert wird.
+
+### &lt;TwoPointSymbol&gt;
+### 
+# Attribute
+
+
+- <Bold> Name </Bold>  (obligat)
+
+-  Bezeichnet den Namen des Ziel-Objekttyps in der Geodatenbank. S&#228;mtliche durch den/die Filter betroffenen CAD-Element werden in diesen Objekttyp konvertiert.
+
+
+
+
+
+### 
+# Elemente
+
+Mit folgenden Elementen kann definiert werden, woraus Zweipunktsymbole erzeugt werden.
+
+1. <Bold> &lt;GraphicAttributeSettings&gt; </Bold>  (0 bis 1)
+
+- Beschreibt die &#220;bernahme grafischer Eigenschaften aus CAD-Elementen. Siehe 
+[GlobalSettings-Element](../anhang/formatbeschreibungmappingautodesk2)
+.
+
+
+
+2. <Bold> &lt;Insert&gt; </Bold>  (0 bis 1)
+
+- Steuert die Konvertierung von CAD-Bl&#246;cken.
+
+
+
+3. <Bold> &lt;Text&gt; </Bold>  (0 bis 1)
+
+- Steuert die Konvertierung von Texten.
+
+
+
+4. <Bold> &lt;Point&gt; </Bold>  (0 bis 1)
+
+- Steuert die Konvertierung von CAD-Punkten ( <Italic> POINT </Italic> ).
+
+
+
+
+
+
+<Success>
+Die Verwendung dieser Elemente ist gleich wie bei der [Konvertierung von CAD-Elementen in Punkte](../anhang/formatbeschreibungmappingautodesk4)
+.
+</Success>

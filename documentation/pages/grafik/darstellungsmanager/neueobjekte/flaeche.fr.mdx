@@ -1,0 +1,169 @@
+---
+title: "Insérer des surfaces"
+page: true
+---
+## Ins&#233;rtion d&#39;une nouvelle surface avec le type d&#39;objet courant.
+ <Menu> Menu: [Gestionnaire d'affichage / Bouton gauche de la souris sur le type d'objet] </Menu> 
+<GeoDesigner> <Menu> Cmd: [AreaNew] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+Il existe 2 genres diff&#233;rentes de surfaces
+
+- <Bold> Surfaces avec groupes d&#39;objets enregitr&#233;s </Bold>  
+
+- <Bold> Surfaces libres </Bold> 
+
+
+
+ <Bold> Surfaces avec groupes d&#39;objets enregitr&#233;s </Bold> 
+
+
+1. Appelez la commande ou s&#233;lectionnez le type d&#39;objet d&#233;sir&#233; sur le gestionnaire d&#39;affichage.
+
+2. S&#233;lectionnez un point comme point d&#39;insertion de la surface
+
+- Indiquez une nouvelle position dans le graphique
+
+- Saisissez les coordonn&#233;es dans le syst&#232;me de coordonn&#233;es existant
+
+- Apellez une 
+[m&#233;thode de construction](../konstruktion/allgemein)
+
+
+
+3. Si dans la configuration pour ce type d&#39;objet, des attributs obligatoires ont &#233;t&#233; d&#233;finis, la fen&#234;tre de saisie des attributs s&#39;ouvre et vous pouvez commencer &#224; saisir le premier attribut. Avec <Border>Enter</Border>  vous terminez la saisie.
+
+4. A la position s&#233;lectionn&#233;e, un point d&#39;insertion de la surface est ins&#233;r&#233; avec le type de surface courant, et si possible, la surface, avec ses lignes de p&#233;rim&#232;tre d&#233;finies dans la configuration est calcul&#233;e.
+
+
+
+
+ <Bold> Surfaces libres </Bold> 
+Pour l&#39;insertion de surfaces libres, 3 options sont disponibles:
+
+- Surface libre par p&#233;rim&#232;tre
+
+- Surface libre par point d&#39;insertion
+
+- Surface libre par s&#233;lection de surfaces
+
+
+
+
+
+
+Option  <Menu>Surface libre par périmètre</Menu> 
+<Success>
+Utilisez le [Mode Ortho](../benutzeroberflaeche/statusleiste)
+ pour construire les polylignes. Il est simple &#224; activer avec le bouton  <Border>F8</Border>  resp. d&#233;finissez la rotation par le relatif symbole dans la barre d&#39;&#233;tat.
+</Success>
+
+
+1. S&#233;lectionnez le type d&#39;objet d&#233;sir&#233; sur le gestionnaire d&#39;affichage.
+
+2. Pour s&#233;lectionner le p&#233;rim&#232;tre les options suivantes sont disponibles:
+
+- S&#233;lection de points. Les points s&#233;lectionn&#233;s sont joints avec des segments de ligne.
+
+- S&#233;lection d&#39;un point existant
+
+- Indication d&#39;une nouvelle position sur le graphique
+
+- Saisie de coordonn&#233;es dans le syst&#232;me de coordonn&#233;es courant
+
+- Appel d&#39;une 
+[m&#233;thode de construction](../konstruktion/allgemein)
+
+
+
+- S&#233;lection de segments (pour la s&#233;lection d&#39;un segment au lieux d&#39;un point, il faut passer &#224; l&#39;option <Menu>Sélection de segment</Menu> )
+
+- L&#39;option <Menu>Numéro de point</Menu>  permet de saisir le num&#233;ro de point d&#39;un point existant. 
+
+- Passez au mode <Menu>Suivi de ligne intéractif</Menu>  
+
+- S&#233;lectionnez un segment de ligne existant et bouger - sans cliquer - la souris sur les segments adjacents, jusqu&#39;&#224; avoir tous les segments qui donnent le p&#233;rim&#232;tre, mises en surbrillance. Avec l&#39;option <Menu>Finir</Menu>  terminez le suivi de ligne et ainsi vous pouvez utiliser d&#39;autres options. 
+
+- En appuyant sur la touche <Border>Shift</Border>  et bougeant la souris dans le sense inverse, vous pouvez d&#233;s&#233;lectionner les segments pour corriger le p&#233;rim&#232;tre.  
+
+- En appuyant sur la touche <Border>Ctrl</Border>  aucun nouveau segment n&#39;est mis en surbrillance. Cette fonction est tr&#232;s utile, avec des points qui sont connect&#233;s avec beaucoup de segments de lignes, pour emp&#233;cher de s&#233;lectionner automatiquement des segments non d&#233;sir&#233;s. Apr&#232;s avoir rel&#226;ch&#233; la touche <Border>Ctrl</Border>  le segment de ligne (qui suit le dernier segment s&#233;lectionn&#233;) au dessous de la souris est mis en &#233;vidence. 
+
+
+
+- Passez au mode <Menu>Suivi de ligne automatique</Menu> 
+- S&#233;lectionnez le point ou le sommet, de d&#233;part du suivi.
+
+- S&#233;letionnez le point d&#39;arriv&#233;e pour la fin du suivi.
+
+- <Placeholder>product</Placeholder> cherche la liaison g&#233;om&#233;trique la plus courte <Italic> existante </Italic>  entre ces 2 points.
+
+
+<Warning>
+Si aucune connexion entre point de d&#233;part et d&#39;arriv&#233;e n&#39;existe, alors il est impossible de trouver le chemin et 
+ <Placeholder>product</Placeholder> montre un message d&#39;erreur. Alors pour d&#233;terminer le parcours utilisez une des autres options.
+
+</Warning>
+
+
+- <Menu>Arc</Menu>  - il passe &#224; la construction d&#39;un arc par 3 points.
+
+- <Menu>Arc Centre</Menu>  - il passe &#224; la construction d&#39;un arc par le centre.
+
+- <Menu>Arc Rayon</Menu>  - il passe &#224; la construction d&#39;un arc par le rayon.
+
+- <Menu>Arc-tangent</Menu>  - il passe &#224; la construction d&#39;un arc tangent.
+
+- <Menu>Finir</Menu>  - il termine la cr&#233;ation du p&#233;rim&#232;tre. Si le p&#233;rim&#232;tre n&#39;est pas encore ferm&#233;, il est ferm&#233; automatiquement.
+
+- <Menu>Précédent</Menu>  - il supprime le dernier point ou segment; vous pouvez saisir un autre point ou segment.
+
+
+
+3. Si dans la configuration pour ce type d&#39;objet, des attributs obligatoires ont &#233;t&#233; d&#233;finis, la fen&#234;tre de saisie des attributs s&#39;ouvre et vous pouvez commencer &#224; saisir le premier attribut. Avec <Border>Enter</Border>  vous terminez la saisie et la nouvelle surface est cr&#233;&#233;e.
+
+
+
+
+Option  <Menu>Surface libre par point d'insertion</Menu> 
+
+1. S&#233;lectionnez le type d&#39;objet d&#233;sir&#233; sur le gestionnaire d&#39;affichage.
+
+2. Cliquez avec le <Border>bouton droit de la souris</Border>  dans le graphique pour ouvrir le menu contextuel.
+
+3. Choisissez l&#39;option &quot;Point d&#39;insertion&quot;.
+
+4. S&#233;lectionnez un point comme point d&#39;insertion de la surface.
+
+- Indiquez une nouvelle position dans le graphique
+
+- Saisissez les coordonn&#233;es dans le syst&#232;me de coordonn&#233;es existant
+
+- Apellez une 
+[m&#233;thode de construction](../konstruktion/allgemein)
+
+
+
+5. Si dans la configuration pour ce type d&#39;objet, des attributs obligatoires ont &#233;t&#233; d&#233;finis, la fen&#234;tre de saisie des attributs s&#39;ouvre et vous pouvez commencer &#224; saisir le premier attribut. Avec <Border>Enter</Border>  vous terminez la saisie.
+
+6. Sur la position donn&#233;e un point d&#39;insertion de la surface avec le type de surface courant est ins&#233;r&#233;, et la surface avec le p&#233;rim&#232;tre le plus petit possible est cr&#233;&#233;e et calcul&#233;e.
+
+
+
+
+Option  <Menu>Surface libre par sélection de surface</Menu> 
+
+1. S&#233;lectionnez le type d&#39;objet d&#233;sir&#233; sur le gestionnaire d&#39;affichage.
+
+2. Cliquez avec le <Border>bouton droit de la souris</Border>  dans le graphique pour ouvrir le menu contextuel.
+
+3. Choisissez l&#39;option &quot;S&#233;lection de surfaces&quot;.
+
+4. S&#233;lectionnez dans le grphique les surfaces qui forment la nouvelle surface.
+
+5. Depuis les lignes de contour des surfaces s&#233;lectionn&#233;es, la topolgie de la nouvelle surface est calcul&#233;e.
+
+6. Si dans la configuration pour ce type d&#39;objet, des attributs obligatoires ont &#233;t&#233; d&#233;finis, la fen&#234;tre de saisie des attributs s&#39;ouvre et vous pouvez commencer &#224; saisir le premier attribut. Avec <Border>Enter</Border>  vous terminez la saisie et la nouvelle surface est ins&#233;r&#233;e.
+
+
+
+

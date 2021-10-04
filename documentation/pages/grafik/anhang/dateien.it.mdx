@@ -1,0 +1,90 @@
+---
+title: "Panoramica sui files"
+page: true
+---
+## Elenco di tutti i file di configurazione per  <Placeholder>fullproduct</Placeholder> 
+
+ <Placeholder>fullproduct</Placeholder> per default &#232; installato in C:\Programme\rmDATA\GeoDesigner\.
+ <Placeholder>fullproductdgm</Placeholder> per default &#232; installato in C:\Programme\rmDATA\ <Placeholder>productdgm</Placeholder> .
+
+Segue un elenco dei file d&#39;impostazione di  <Placeholder>fullproduct</Placeholder>  
+<Success>
+I file d&#39;impostazione possono essere salvati anche in una cartella aziendale di rete. Per la cartella di rete aziendale vedere [Impostazioni di programma](../datei/programmeinstellungen)
+.
+</Success>
+
+<Warning>
+Non modificare i file che sono installati da  <Placeholder>product</Placeholder>  infatti col prossimo aggiornamento verrebbero sovrascritti.
+</Warning>
+
+
+### Impostazioni per tutti gli utenti (per computer)
+Le impostazioni valide per tutti gli utenti si trovano in 
+C:\ProgramData\rmDATA\GeoDesigner
+
+<table>
+<tr><th>Cartella /  File</th>
+<th>Descrizione</th>
+</tr>
+<tr><td> <b>\Configurations\</b> </td>
+<td>La cartella contiene:
+ <ul> <li> Configurazioni con i propri disegni prototipo e file modelli di tratteggio (vedere 
+[Configurazione](../konfiguration/allgemein)
+)
+</li> </ul> 
+
+ <ul> <li>gisdefaulttemplate.dwg: disegno prototipo per i simboli che possono essere usati nell&#39;editor dei layout di stampa - solo fino a che nel prototipo non venga per&#242; inserito un proprio disegno prototipo.
+</li> </ul> 
+</td>
+</tr>
+<tr><td> <b>\Settings\CRS\</b> </td>
+<td>File Grid per le trasformazioni tra sistemi di coordinate sulla base dei file binari ntv2.</td>
+</tr>
+<tr><td> <b>\Templates\Patterns\</b> </td>
+<td>Nei file xml sono definiti i modelli tratteggio. I file DWG aventi lo stesso nome, contengono i relativi simboli.</td>
+</tr>
+<tr><td> <b>\Templates\Protocol\</b> </td>
+<td>Prototipi per intestazioni e pi&#232; di pagina del protocollo. Per inserirvi il nome della societ&#224; ed il proprio logo, aprire il file standard.header con un editor di testi. Ulteriori informazioni si trovano direttamente nel file. </td>
+</tr>
+<tr><td> <b>\Templates\ProjectTemplates\</b> </td>
+<td>Prototipi per i nuovi file (vedere [Prototipi](../datei/datei-einstellungen12)
+).</td>
+</tr>
+<tr><td> <b>\Templates\Printing\</b> </td>
+<td>Layout di stampa predefiniti validi per tutti gli utenti.</td>
+</tr>
+<tr><td> <b>\Templates\Reports\</b> </td>
+<td>Prototipi per l&#39;etichetta dei proprietari dei fondi; validi per tutti gli utenti.</td>
+</tr>
+<tr><td> <b>\Templates\Tables\</b> </td>
+<td>Tabelle prototipo, ad es. le tabelle dei nomi di punti usate per la ripresa dei punti da uno schema; validi per tutti gli utenti.</td>
+</tr>
+<tr><td> <b>\TransferSettings\</b> </td>
+<td>Tabelle di conversione per le importazioni ed esportazioni</td>
+</tr>
+</table>
+
+
+### Impostazioni per utente
+Tutte le impostazioni, che sono salvate separatamente per ogni utente, sono salvate in  <Bold> %appdata%\rmDATA\GeoDesigner\ </Bold> . Dove  <Bold> %appdata%  </Bold>  sta per C:\Documenti e configurazioni\ <Italic> utente </Italic> \Dati applicazioni\ bzw. C:\Users\ <Italic> utente </Italic> \Appdata\Roaming\
+<Success>
+Per arrivare velocemente alla cartella  <Bold> %appdata%  </Bold>  aprire nel menu  <Menu>File</Menu>  le  <Menu>Impostazioni programma</Menu>  e nel selettore &quot;Cartelle&quot;, cliccare su 
+<Image>\img\grafik\anhang\Explorer.png$Explorer</Image>accanto alla Cartella utente.
+
+<table>
+<tr><th>Cartella /  File</th>
+<th>Descrizione</th>
+</tr>
+<tr><td> <b>\Configurations\</b> </td>
+<td>Configurazioni personalizzate.</td>
+</tr>
+<tr><td> <b>\Templates\Printing\</b> </td>
+<td>Layout di stampa personalizzati.</td>
+</tr>
+<tr><td> <b>\UIPersistency\</b> </td>
+<td>Impostazioni sull&#39;interfaccia del programma, come ad esempio dimensioni, posizione ecc. dell&#39;ultima finestra usata.[Note]In caso di necessit&#224; la cartella pu&#242; essere completamente eliminata. L&#39;interfaccia utente di  <Placeholder>fullproduct</Placeholder> apparir&#224; nuovamente come a programma appena installato.</td>
+</tr>
+</table>
+</Success>
+
+

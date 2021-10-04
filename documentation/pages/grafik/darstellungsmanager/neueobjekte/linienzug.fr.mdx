@@ -1,0 +1,116 @@
+---
+title: "Insérer des polylignes"
+page: true
+---
+## Insertion d&#39;une polyligne depuis le gestionnaire d&#39;affichage
+ <Menu> Menu: [Gestionnaire d'affichage / Bouton gauche de la souris sur le type d'objet désiré] </Menu> 
+<GeoDesigner> <Menu> Cmd: [LineStringNew] </Menu> </GeoDesigner>
+
+<Success>
+Utilisez le [Mode Ortho](../benutzeroberflaeche/statusleiste)
+ pour construire les polylignes. Il est simple &#224; activer avec le bouton  <Border>F8</Border>  resp. d&#233;finissez la rotation par le relatif symbole dans la barre d&#39;&#233;tat.
+</Success>
+
+
+
+1. Appelez la commande ou s&#233;lectionnez le type d&#39;objet d&#233;sir&#233; depuis le gestionnaire d&#39;affichage.
+
+2. D&#233;terminez le 1er point de la polyligne:
+
+- S&#233;lection d&#39;un point existant
+
+- Indication d&#39;une nouvelle position sur le graphique
+
+- Saisie de coordonn&#233;es dans le syst&#232;me de coordonn&#233;es courant
+
+- Appel d&#39;une 
+[m&#233;thode de construction](../konstruktion/allgemein)
+
+- Avec l&#39;option <Menu>Sélection de segment</Menu>  vous pouvez commencer tout de suite avec un segment d&#233;j&#224; existant. 
+
+- Avec l&#39;option <Menu>Numéro-point</Menu>  vous pouvez donner le num&#233;ro d&#39;un point existant. 
+
+- Passez au mode <Menu>Suivi de ligne interactif</Menu>  
+
+- S&#233;lectionnez un segment de ligne existant et bouger - sans cliquer - la souris sur les segments adjacents, jusqu&#39;&#224; s&#233;lectionner tous les segments qui forment la polyligne d&#233;sir&#233;e. Avec l&#39;option <Menu>Finir</Menu>  terminez le dessin de la polyligne. 
+
+- En appuyant sur la touche <Border>Shift</Border>  et bougeant la souris dans le sens inverse, vous pouvez d&#233;s&#233;lectionner les segments pour corriger le parcours de la polyligne.  
+
+- En appuyant sur la touche <Border>Ctrl</Border>  aucun nouveau segment n&#39;est mise en surbrillance. Cette fonction est tr&#232;s utile, avec des points qui sont connect&#233;s avec beaucoup de segments de lignes, pour emp&#233;cher de s&#233;lectionner automatiquement des segments non d&#233;sir&#233;s. Apr&#232;s avoir rel&#226;ch&#233; la touche <Border>Ctrl</Border>  le segment de ligne (qui suit le d&#233;rnier segment s&#233;lectionn&#233;) au dessous de la souris est mis en &#233;vidence. 
+
+
+
+- Passez au mode <Menu>Suivi de ligne automatique</Menu> 
+- S&#233;lectionnez le point ou le sommet, de d&#233;part du suivi.
+
+- S&#233;lectionnez le point d&#39;arriv&#233;e pour la fin du suivi.
+
+- <Placeholder>product</Placeholder> cherche la liaison g&#233;om&#233;trique la plus courte <Italic> existante </Italic>  entre ces 2 points.
+
+
+<Warning>
+Si aucune connexion entre point de d&#233;part et d&#39;arriv&#233;e n&#39;existe, alors il est impossible de trouver le chemin et 
+ <Placeholder>product</Placeholder> montre un message d&#39;erreur. Alors pour d&#233;terminer le parcours utilisez une des autres options.
+
+</Warning>
+
+
+
+
+3. Apr&#232;s la s&#233;lection du point, sur la position choisie un nouveau point du type courant est ins&#233;r&#233;.
+
+4. Ensuite vous avez &#224; disposition les options suivantes:
+
+- S&#233;lectionnez un point ult&#233;rieur. Un segment de ligne est ins&#233;r&#233; au nouveau point - voir point 2.
+
+- S&#233;lectionnez directement un segment de ligne adjacente (Option <Menu>Sélection de segment</Menu>  active). 
+
+- <Menu>Arc</Menu>  - il passe &#224; la construction d&#39;un arc par 3 points.
+
+- <Menu>Arc Centre</Menu>  - il passe &#224; la construction d&#39;un arc par le centre.
+
+- <Menu>Arc Rayon</Menu>  - il passe &#224; la construction d&#39;un arc par le rayon.
+
+- <Menu>Arc-tangent</Menu>  - il passe &#224; la construction d&#39;un arc tangent.
+
+- <Menu>Fermer</Menu>  - il ferme la polyligne (l&#39;option devient active d&#232;s qu&#39;au moins un segment existe).
+
+- <Menu>Finir</Menu>  - il termine la construction de la polyligne.
+
+- <Menu>Précédent</Menu>  - il supprime le dernier point; on peut d&#233;finir un nouveau point.
+
+
+
+5. Si dans la configuration pour ce type d&#39;objet, des attributs obligatoires ont &#233;t&#233; d&#233;finis, une fen&#234;tre pour la saisie des attributs est affich&#233;e. Vous pouvez commencer directement avec la saisie du premier attribut. Avec <Border>Enter</Border>  vous terminez la saisie et cr&#233;ez la polyligne.
+
+
+
+
+Alternative
+
+
+1. Appelez la commande ou s&#233;lectionnez le type d&#39;objet d&#233;sir&#233; depuis le gestionnaire d&#39;affichage.
+
+2. Choisissez l&#39;option <Menu>Sélection de segment</Menu> 
+3. Dans le mode &quot;s&#233;lection de segment&quot;, les options les plus nomm&#233;es manquent et <Placeholder>product</Placeholder> permet seulement la s&#233;lection des segments adjacents au parcours des lignes pr&#233;c&#233;dentes
+
+4. Pour retourner en mode original, s&#233;lectionnez l&#39;option <Menu>Sélection de point</Menu> .
+
+
+
+
+<Success>
+Dans la ligne au pied de page, s&#233;lectionnez le type de point courant du nouveau point (voir [Barre d&#180;&#233;tat](../benutzeroberflaeche/statusleiste)
+). Si n&#233;cessaire vous pouvez modifier le type de point aussi lors du dessin d&#39;une polyligne.
+S&#233;lectionnez &quot;Aucun point&quot; pour ne pas d&#233;finir un type de point pour le sommet.
+</Success>
+
+
+<Warning>
+Les options  <Menu>Sélection de segment</Menu>  et  <Menu>Sélection de point</Menu>  ont une influence sur le comportement de  <Placeholder>product</Placeholder> 
+Quand vous etes en mode &quot;S&#233;lection de segment&quot; vous pouvez  <Italic> s&#233;lectionner </Italic>  seulement des segments existants, par contre quand vous etes en mode &quot;S&#233;lection de point&quot; vous pouvez ins&#233;rer des coordonn&#233;es quelconque.
+</Warning>
+
+
+Voir aussi [Ins&#233;rer des cercles](../objektmanager/kreis)
+.

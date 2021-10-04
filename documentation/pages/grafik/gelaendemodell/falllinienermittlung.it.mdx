@@ -1,0 +1,38 @@
+---
+title: "Determinare la linea di massima pendenza"
+page: true
+---
+## Determinare la linea di massima pendenza a partire da un punto.
+<GeoMapper> <Menu> Menu: [Modello del terreno / Linea di massima pendenza] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Modello del terreno / Linea di massima pendenza] </Menu> 
+ <Menu> Cmd: [slopelinenew] </Menu> </GeoDesigner>
+
+
+1. Lanciare il comando.
+
+
+<Warning>
+Assicurarsi che nel file sia definito un 
+ <Italic> [tipo di polilinea corrente](../benutzeroberflaeche/statusleiste4)
+ </Italic> .
+
+Ci&#242; &#232; richiesto da 
+ <Placeholder>product</Placeholder>  per poter generare la linea corrispondente al risultato.
+
+</Warning>
+2. Indicare col mouse il punto di partenza nella finestra grafica.
+
+3. <Placeholder>product</Placeholder> calcola la geometria della linea di massima pendenza nel modello del terreno attivo ed inserisce una polilinea del tipo corrente.
+
+4. Ripetere l&#39;indicazione del punto di partenza quante volte si desideri ed infine scegliere l&#39;opzione <Menu>Annulla</Menu> .
+
+
+
+
+<Warning>
+Il calcolo si svolge ogni volta sulla base dell&#39;impostazione del [Modello del terreno attivo](../benutzeroberflaeche/multifunktionsleiste)
+. Questo non necessariamente &#232; quello visibile nella grafica. Prestare quindi attenzione a tale impostazione quando si usa questo comando.
+</Warning>
+
+<Success>
+Indicare uno dopo l&#39;altro i punti di partenza desiderati per il calcolo.  <Placeholder>product</Placeholder> seleziona ogni volta l&#39;ultimo risultato, in questo modo &#232; semplice in seguito elaborare la polilinea corrispondente.
+</Success>

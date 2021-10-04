@@ -1,0 +1,33 @@
+---
+title: "Adaptation de modèles - Sélection de zone"
+page: true
+---
+## Avec la s&#233;lection de zone, il est possible de filtrer de mani&#232;re spatiale les donn&#233;es, que vous d&#233;sirez reprendre dans le mod&#232;le r&#233;sultat.
+
+Apr&#232;s avoir appel&#233; la s&#233;lection de zone depuis le [Assistant d&#39;adaptation de mod&#232;les](../modellierung/modellangleichung)
+ le programme passe &#224; la zone de dessin pour permettre de s&#233;lectionner un polygone devant l&#39;arri&#232;re-plan de l&#39;aper&#231;u des donn&#233;es:<Image>\img\grafik\geländemodell\DtmMatchingAreaSelection.png$DtmMatchingAreaSelection</Image>
+
+<Success>
+Vous pouvez soit dessiner le polygone, soit importer une entit&#233; AutoCAD existante.
+Les options correspondantes s&#39;appellent  <Menu>Dessiner-nouveau</Menu>  resp.  <Menu>Import-autocad</Menu> .
+</Success>
+
+<Warning>
+Les polygones  <Bold> en sens horaire </Bold>  sont consid&#233;r&#233;es comme contour ext&#233;rieurs, les polygones  <Bold> en sens antihoraire </Bold>  sont consid&#233;r&#233;s comme  <Italic> &quot;&#238;les&quot; </Italic>  &#224; &#233;pargner (trous). Faire donc attention quand vous importez depuis  <Italic> AutoCAD </Italic>  &#224; la direction de dessin des  <Italic> entit&#233;s </Italic>  &#224; reprendre.
+</Warning>
+
+
+<Success>
+Dans le graphique, les &#238;les &#233;pargn&#233;es sont affich&#233;es comme surfaces rouges car verrouill&#233;es. Depuis ces zones, les donn&#233;es ne seront pas reprises.
+
+<Image>\img\grafik\geländemodell\DtmMatchingWizardAreaPreview.png$DtmMatchingWizardAreaPreview</Image>
+</Success>
+
+<Success>
+Vous pouvez aussi seulement d&#233;couper des zones, sans donner un polygone ext&#233;rieur. Dans ce cas le rectangle qui contient toutes les donn&#233;es ( <Italic> Bounding Box </Italic> ) est consid&#233;r&#233; comme limite ext&#233;rieur (voir graphique).
+
+<Image>\img\grafik\geländemodell\DtmMatchingAreaPreview2.png$DtmMatchingAreaPreview2</Image>
+</Success>
+
+
+D&#232;s que vous avez termin&#233; la d&#233;finition des zones, terminez en appuyant sur  <Border>Esc</Border> . Le programme revient &#224; l&#39;assistant et affiche la zone dans le graphique d&#39;aper&#231;u.

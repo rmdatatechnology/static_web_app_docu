@@ -1,0 +1,64 @@
+---
+title: "Modelloperation"
+page: true
+---
+## Senken oder heben Sie Ihr Gel&#228;ndemodell oder errechnen Sie aus der Differenz zweier Modelle ein neues Modell.
+<GeoMapper> <Menu> Menu: [Geländemodell / Modelloperation] </Menu> </GeoMapper><GeoDesigner> <Menu> Menu: [ ^^dtmRibbonTitle^^ / Geländemodell / Modelloperation] </Menu> 
+ <Menu> Cmd: [modeloperation] </Menu> </GeoDesigner>
+
+
+1. Rufen Sie den Befehl auf.
+
+2.  W&#228;hlen Sie die gew&#252;nschten Einstellungen im Dialog:<Image>\img\grafik\geländemodell\Dialog-Modelloperation.png$Dialog-Modelloperation</Image>
+
+
+## Operation &quot;H&#246;hen&#228;nderung&quot;
+Die Ausgangsdaten eines Modells werden direkt ver&#228;ndert oder als ver&#228;nderte Kopie f&#252;r ein neues Modell verwendet.
+
+Einstellbare Optionen:
+
+- <Bold> Ausgangsmodell </Bold> : Das gew&#252;nschte Modell, dessen Daten benutzt werden sollen (muss zugeordnete Daten enthalten, muss jedoch nicht berechnet sein)
+
+- <Bold> H&#246;he </Bold> : Die gew&#252;nschte H&#246;hen&#228;nderung in Metern.
+
+- <Bold> Ergebnis </Bold>  :
+
+- <Bold> Vorhandenes Modell ver&#228;ndern </Bold> : Alle zugeordneten Ausgangsdaten werden geometrisch in der H&#246;he ver&#228;ndert (Punkte, Punktwolken, Linienz&#252;ge als Modellgrenze oder weiche/harte Zwangskante)
+
+- <Bold> Neues Modell </Bold> : Alle zugeordneten Ausgangsdaten werden dupliziert, in der H&#246;he ver&#228;ndert und dem neuen Modell zugeordnet (Punkte, Punktwolken, Linienz&#252;ge als Modellgrenze oder weiche/harte Zwangskante)
+
+
+
+- <Bold> Name des neuen Modells </Bold>  (muss eindeutig sein)
+
+- <Bold> Objekttypen </Bold> :
+
+- <Bold> Gel&#228;ndemodell </Bold> 
+- <Bold> Punkttyp </Bold> 
+- <Bold> Punktwolkentyp </Bold> 
+- <Bold> Name der Punktwolke </Bold>  (muss eindeutig sein)
+
+- <Bold> Modellgrenze </Bold> 
+- <Bold> Zwangskanten </Bold> 
+- <Bold> Harte Zwangskanten </Bold> 
+
+
+
+
+## Operation &quot;Differenzmodell&quot;
+Aus der Vermaschung von zwei vorhandenen Modellen wird ein Differenzmodell berechnet, dessen Knotenh&#246;hen aus der H&#246;hendifferenz gebildet werden.
+
+Einstellbare Optionen:
+
+- <Bold> Ausgangsmodell </Bold> : Das Modell, von dem f&#252;r die Differenzbildung das Subtrahendmodell abgezogen wird (muss berechnet sein)
+
+- <Bold> Subtrahendmodell </Bold> : Das Modell, dass f&#252;r die Differenzbildung vom Ausgangsmodell abgezogen wird (muss berechnet sein)
+
+- <Bold> Name des neuen Modells </Bold> : (muss eindeutig sein)
+
+
+
+Die Vermaschung des Differenzmodells kann u.a. exportiert werden oder f&#252;r eine thematische Darstellung benutzt werden.
+<Success>
+Das entstehende Differenzmodell enth&#228;lt keine Ausgangsdaten und kann daher nicht ver&#228;ndert oder neu berechnet werden.
+</Success>

@@ -1,0 +1,28 @@
+---
+title: "Editieren, Sperrbereiche"
+page: true
+---
+## Sperrbereiche beim Editieren einer rmDATA Enterprise Geodatabase
+
+Eine rmDATA Enterprise Geodatabase kann im Multi-User-Betrieb editiert werden.
+Wechselt ein Anwender in den Editiermodus, so wird der von ihm bearbeitete Bereich gesperrt und andere Anwender k&#246;nnen diesen Bereich nicht gleichzeitig editieren.
+
+Gesperrte Bereiche einer Enterprise Geodatabase werden im Darstellungsmanager mit einer eigenen Featureklasse dargestellt:<Image>\img\grafik\fachschaleenterprisegeodatabase\sperrbereiche.png$sperrbereiche</Image>
+
+Im Editiermodus k&#246;nnen nur jene Objekte editiert werden, welche vollst&#228;ndig innerhalb des editierbaren Bereiches liegen. Weiters m&#252;ssen auch neu eingef&#252;gte Objekte vollst&#228;ndig innerhalb des editierbaren Bereiches gezeichnet werden. 
+Werden &#252;ber einen Import Daten au&#223;erhalb des editierbaren Bereiches importiert, k&#246;nnen diese nicht gespeichert werden. Sollen diese Objekte gespeichert werden, muss der betroffene Bereich zuvor nachgeladen werden.
+
+Befindet sich der Anwender im Bearbeitungsmodus, und wird die Verbindung zur Datenbank unerwartet beendet, so bleibt der editierte Bereich in der Datenbank weiterhin gesperrt.
+&#214;ffnet der Anwender danach die Anwendung neu und wechselt wieder in den Bearbeitungsmodus, so wird er darauf hingewiesen, dass noch ein von ihm gesperrter Bereich existiert.
+Der Anwender kann in diesen Bereich wechseln oder die Sperre aufheben.
+<Success>
+In einer Enterprise-GeoDatabase kann die Option &quot;Auto Wiederherstellen&quot; nicht angewendet werden, alle &#196;nderungen m&#252;ssen vom Anwender manuell gespeichert werden. 
+</Success>
+
+
+## Bauauftrag &#228;ndern
+Sind einem Projekt Bauauftr&#228;ge zugeordnet, werden beim Editieren alle Objekte dem gew&#228;hlten Bauauftrag zugeordnet.
+Der aktuelle Bauauftrag kann im Editiermodus auch gewechselt werden.
+Der entsprechende Befehl  <Menu>Bauauftrag wählen</Menu>  wird in der Statusleiste aufgerufen.<Image>\img\grafik\fachschaleenterprisegeodatabase\BauauftragÄndern.png$BauauftragÄndern</Image>
+
+Nach Befehlsaufruf muss das Projekt gespeichert werden. Danach ist der neue Bauauftrag zu w&#228;hlen. Alle &#196;nderungen werden nun dem neuen Bauauftrag zugeordnet.<Image>\img\grafik\fachschaleenterprisegeodatabase\BauauftragWählen.png$BauauftragWählen</Image>

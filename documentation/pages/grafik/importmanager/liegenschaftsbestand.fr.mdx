@@ -1,0 +1,53 @@
+---
+title: "Liegenschaftsbestand aus Bestandsdatenauszug importieren"
+page: true
+---
+## Importieren Sie die Liegenschaftsbestandsdokumentation gem&#228;&#223; den Vorgaben und Festlegungen des Liegenschaftsbestandsmodells (LgBestMod)
+<Success>
+ <Bold> Fonctionnalit&#233; non utilis&#233;e en Suisse </Bold> 
+</Success>
+
+ <Menu> Menu: [Datei/ Importmanager] </Menu> 
+
+<Warning>
+Diesen Export gibt es nur in der Fachschale &quot;&quot;Liegenschaftsbestand&quot;. 
+</Warning>
+
+
+Die Daten werden im alten Stand importiert. In dieser Ansicht k&#246;nnen Sie sich jederzeit die Ausgangsdaten ansehen. 
+Nach dem Import befinden Sie sich automatisch im neuen Stand und k&#246;nnen mit der Fortf&#252;hrung des Liegenschaftsbestands beginnen.
+
+
+<Warning>
+ <Bold> Fortf&#252;hrungsdaten </Bold> 
+Der Import ist darauf ausgelegt den Gesamtdatenbestand zu erhalten und keine Fortf&#252;hrungsdaten.
+Dennoch kann der Import ruditment&#228;r Fortf&#252;hrungsdaten importieren - wenn er auch keine Fortf&#252;hrung an sich durchf&#252;hren kann. Das bedeutet:
+
+-  Wenn in der Fortf&#252;hrungsdatei die Information enthalten ist, dass ein Objekt gel&#246;scht wurde, dann wird diese Information nicht ber&#252;cksichtigt.
+
+
+-  Wurde ein Objekt in der Fortf&#252;hrungsdatei ge&#228;ndert, dann werden Sie es nach dem Import als neues Objekt sehen. War es zuvor in Ihrer $product$-Datei, dann wird es danach doppelt enthalten sein.
+
+
+
+
+Dennoch k&#246;nnen Sie so eine Pr&#252;fung durchf&#252;hren, welche Daten beim Export geschrieben wurden.
+</Warning>
+
+
+<Success>
+ <Bold> B&#246;schungen </Bold> 
+Um die Performance zu wahren und die Arbeit in $product$ zu vereinfachen, werden nicht die einzelnen B&#246;schungsschraffen importiert, sondern die Darstellung der B&#246;schungsfl&#228;che in $product$ generiert. Das hat zur Folge, dass die Darstellung der B&#246;schung leicht unterschiedlich zur Darstellung in LISA ist.
+</Success>
+
+
+<Warning>
+ <Bold> Objektattribute identifier... </Bold> 
+Beim Import werden Objektattribute f&#252;r die importierten Beschriftungen angelegt. Sie beginnen mit &quot;identifier&quot;. Diese Attribute d&#252;rfen f&#252;r den korrekten Export nicht gel&#246;scht werden.
+</Warning>
+
+
+<Success>
+ <Bold> Punktnummern </Bold>  
+Bei einigen Punktobjekten gibt es laut Katalog das Attribut &quot;Nummer&quot;. Dieses wird als Punktbezeichnung importiert. Um die Eindeutigkeit zu wahren, wird in der Region eine Kennung geschrieben. Z.B. erhalten Liegenschaftsbezogene Aufnahmepunkte in der Region die Kennung &quot;L&quot;.
+</Success>

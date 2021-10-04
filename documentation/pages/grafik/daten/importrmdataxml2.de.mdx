@@ -1,0 +1,25 @@
+---
+title: "Mapping-Assistent rmDATA XML Import"
+page: true
+---
+## Assistent f&#252;r das Erstellen einer Konvertierungstabelle f&#252;r den Import von rmDATA XML Dateien
+
+F&#252;r den Import von rmDATA XML Dateien in eine rmDATA Geodatabase steht ein Mapping-Assistent zur Verf&#252;gung, sodass die Objekte der rmDATA XML-Dateien in Objekte der Geodatabase &#252;bernommen werden k&#246;nnen.<Image>\img\grafik\daten\mappingrmdataxml.png$mappingrmdataxml</Image>
+
+Im ersten Schritt wird der Inhalt der Import-Dateien analysiert.
+Danach werden die zuordenbaren Objektklassen in Registern angezeigt.
+Jedem Objekttyp der XML-Datei kann ein Objekttyp der Geodatabase zugeordnet werden.
+Als Bedingungen k&#246;nnen alle Attribute des Objekttyps der XML-Datei verwendet werden.
+Im Dialog k&#246;nnen einzelne Zeilen dupliziert und danach ge&#228;ndert werden:  <Border>+</Border> ,  <Border>x</Border> 
+In der Spalte &quot;Objekttyp der GeoDB&quot; wird vom Anwender der gew&#252;nschte Objekttyp der Geodatabase eingestellt. 
+Weiters k&#246;nnen dem Objekttyp Attribute (entweder Attribute des Objekttyps der rmDATA XML-Datei oder fixe Attributwerte) zugewiesen werden.
+Jedes Objekt kann nur einmal &#252;bernommen werden. Bei Doppeldefinitionen gilt die Reihenfolge der Register und die Reihenfolge der Zeilen.
+
+<Success>
+Nicht gemappte Objekte werden mit ihrer Definition laut rmDATA XML Datei &#252;bernommen.
+</Success>
+
+<Success>
+Nach  <Border>Fertigstellen</Border>  kann das erstellte Mapping in einer Datei gespeichert werden.
+</Success>
+

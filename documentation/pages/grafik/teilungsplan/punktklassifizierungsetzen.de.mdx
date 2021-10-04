@@ -1,0 +1,119 @@
+---
+title: "Punkte klassifizieren"
+page: true
+---
+## Mit diesem Befehl k&#246;nnen Sie die Attribute Klassifizierung, BEV-Typ und Kennzeichnung bei Punkten bearbeiten
+ <Menu> Menu: [Daten / Punkte klassifizieren] </Menu> 
+<GeoDesigner> <Menu> Cmd: [PointSetClassification] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> </GeoDesigner>
+<Warning>
+Diesen Befehl gibt es nur in der Fachschale &quot;Teilungsplan &#214;sterreich&quot;. 
+</Warning>
+
+
+<GeoDesigner>
+<Image>\img\grafik\teilungsplan\Punktklassifizierung.png$Punktklassifizierung</Image>
+</GeoDesigner>
+<GeoMapper>
+<Image>\img\grafik\teilungsplan\GeoMapper.Punktklassifizierung.png$GeoMapper.Punktklassifizierung</Image>
+</GeoMapper>
+
+
+Gehen Sie wie folgt vor:
+
+1. Beim Starten des Befehls w&#228;hlen Sie
+
+- Punkte aus der Grafik,
+
+- alle Punkte mit sichtbarer Punktnummer oder
+
+- alle Punkte
+
+
+
+2. Alle gew&#228;hlten Punkte werden in der Liste im Dialog mit den aktuellen Attributwerten dargestellt.
+
+3. Die gew&#228;hlten Punkte werden mit dem markierten Filter eingeschr&#228;nkt.
+
+4. Mit <Border>Klassifizierung: Defaults setzen</Border>  werden sinnvolle Werte f&#252;r das Attribut &quot;Klassifizierung&quot; vorgeschlagen. Dabei werden folgende Werte gesetzt: 
+<table>
+<tr><th>Wenn:
+</th>
+<th>wird gesetzt:
+</th>
+</tr>
+<tr><td>Aktive Version ist <U> neu </U>  und Punkt hat einen Vorg&#228;nger in Version <U> berichtigt </U>  mit dem Wert <U> neu </U>  oder <U> &#252;berpr&#252;ft </U> </td>
+<td> 
+ <b> &#252;berpr&#252;ft </b> </td>
+</tr>
+<tr><td>Die Version des Punktes befindet sich in einer niedrigeren als die aktive Version
+</td>
+<td> <b> &#252;bernommen </b> </td>
+</tr>
+<tr><td>Aktions des Punktes ist <U> gel&#246;scht </U> </td>
+<td> <b> gel&#246;scht </b> </td>
+</tr>
+<tr><td>Aktions des Punkte ist <U> Hinzugef&#252;gt </U> </td>
+<td> <b> hinzugef&#252;gt </b>  
+(sofern noch kein Wert gesetzt war)
+</td>
+</tr>
+<tr><td> Punkt von der Gruppe <U> Grenzpunkte </U>  ist <U> neu vermarkt </U> </td>
+<td> <b> &#252;berpr&#252;ft </b>  
+(sofern noch kein Wert gesetzt war)
+</td>
+</tr>
+<tr><td>Punkt befindet sich in der Gruppe <U> Grenzpunkte mit Vermarkung </U> </td>
+<td> <b> &#252;berpr&#252;ft </b>  
+(sofern noch kein Wert gesetzt war)
+</td>
+</tr>
+</table>
+
+- M&#246;gliche Werte f&#252;r die Klassifizierung sind:
+
+- &lt;keine&gt;
+
+-  ge&#228;ndert
+
+-  gel&#246;scht
+
+-  neu
+
+-  &#252;berpr&#252;ft
+
+- transformiert
+
+-  &#252;bernommen
+
+-  sonstige
+
+
+
+
+
+5. Mit <Border>BEV-Typ:Default setzen</Border>  wird die Grundeinstellung laut Konfiguration zu allen Punkten in der Liste gesetzt. Das ist auch f&#252;r das Attribut &quot;Kennzeichnung&quot; m&#246;glich.
+
+6.  Selektieren Sie alle Punkte in der Liste, die Sie manuell &#228;ndern m&#246;chten und w&#228;hlen anschlie&#223;end den gew&#252;nschten Wert aus der Auswahlliste im unteren Bereich. Sofort nach der Auswahl wird der gew&#228;hlte Wert f&#252;r die gew&#252;nschten Punkte vorgeschlagen.
+
+7. Nach Best&#228;tigen mit <Border>   Ok   </Border>  werden alle Punkte in der Liste mit dem neuen Wert versehen und protokolliert.
+
+
+
+
+<Success>
+Durch Doppelklick in eine Tabellenzeile zoomt  <Placeholder>product</Placeholder> zu dem Punkt im Zeichenbereich. Der Punkt wird selektiert.
+</Success>
+
+<Success>
+Mit  <Border>   Weitere Punkte hinzufügen ...   </Border>  k&#246;nnen zus&#228;tzliche Punkte in die Liste aufgenommen werden
+</Success>
+
+<Success>
+Dr&#252;cken Sie &quot;Strg+A&quot; um alle Punkte in der Liste zu selektieren
+</Success>
+
+<Success>
+Dr&#252;cken Sie &quot;Entf&quot; um selektierte Punkte aus der Liste zu entfernen.
+</Success>

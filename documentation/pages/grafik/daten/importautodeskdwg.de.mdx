@@ -1,0 +1,87 @@
+---
+title: "Import Autodesk DWG/DXF"
+page: true
+---
+## Daten aus Autodesk DWG/DXF Dateien importieren
+
+Daten aus Autodesk DWG oder DXF Dateien werden &#252;ber den Befehl  <Menu>Daten importieren</Menu>  in der Werkzeugleiste von  <Placeholder>fullproduct</Placeholder> oder &#252;ber das  <Menu> Menu: [Daten - Daten importieren] </Menu>  in eine neue oder bestehende rmDATA Geodatabase eingef&#252;gt.
+Im Editiermodus wird der Import &#252;ber das  <Menu> Menu: [Datenbank - Daten importieren] </Menu>  aufgerufen und es wird in die zum Bearbeiten ge&#246;ffnete Geodatabase imortiert.
+
+Nach Befehlsaufruf wird im Register  <Border>Typauswahl</Border>  die Option 
+ <Border>Daten aus Autodesk DWG Dateien importieren</Border>  bzw. 
+ <Border>Daten aus Autodesk DXF Dateien importieren</Border> 
+gew&#228;hlt.<Image>\img\grafik\daten\ImportAutodeskDWGTypauswahl.png$ImportAutodeskDWGTypauswahl</Image>
+
+Danach werden im Register  <Border>Dateiauswahl</Border>  die zu importierenden Dateien gew&#228;hlt.
+Weiters kann das Koordinatensystem f&#252;r die Koordinaten der Quelldateien angegeben werden. Je nach Koordinatensystem der Geodatabase werden die Koordinaten beim Import transformiert.<Image>\img\grafik\daten\ImportAutodeskDWGdateiauswahl.png$ImportAutodeskDWGdateiauswahl</Image>
+
+Im Register  <Border>Geodatabase-Auswahl</Border>  wird festgelegt, in welche Geodatabase die Dateien importiert werden sollen. Die Dateien k&#246;nnen in eine neue oder bestehende Geodatabase importiert werden:
+
+- [in neue Geodatabase importieren](../datenquellenmanager/neuegeodbanlegen)
+
+- in bestehende Geodatabase importieren: Eine der im aktuellen Geodokument eingebundenen Geodatabase-Dateien k&#246;nnen in der Drop-down-Liste ausgew&#228;hlt werden oder es kann eine existierende Geodatabase &#252;ber den Datei-&#214;ffnen-Dialog ausgew&#228;hlt werden.
+
+
+
+<Success>
+Im Editiermodus entf&#228;llt das Register, da immer in die zum Bearbeiten ge&#246;ffnete Geodatabase importiert wird.
+</Success><Image>\img\grafik\daten\ImportAutodeskDWGgeodatabaseauswahl.png$ImportAutodeskDWGgeodatabaseauswahl</Image>
+
+Im Register  <Border>Mapping</Border>  kann eine bestehende Konvertierungstabelle f&#252;r den Import ausgew&#228;hlt werden oder es kann eine neue Konvertierungstabelle &#252;ber den [Assistent ... ](../daten/importautodeskdwg2)
+ f&#252;r den Import definiert werden.<Image>\img\grafik\daten\ImportAutodeskDWGMapping.png$ImportAutodeskDWGMapping</Image>
+
+In den  <Border>Einstellungen</Border>  werden weitere Optionen f&#252;r den Import festgelegt:
+
+- Dezimaltrennzeichen: Definiert, wie Dezimalzahlen in Texten oder Attributen der Eingangsdatei generell zu interpretieren sind.
+
+- 0-H&#246;hen als ung&#252;litge H&#246;hen interpretieren: 
+
+- Ja: Es wird keine H&#246;henkoordinate &#252;bernommen
+
+- Nein: 0 wird als H&#246;henkoordinate &#252;bernommen
+
+
+
+- Nicht konvertierte AutoCAD Objekte in der Grafik  einf&#252;gen
+
+- Ja: AutoCAD Objekte, welche nicht in Modellobjekte konvertiert wurden, werden in das Projekt eingef&#252;gt. Diese Objekte sind in der Gruppe &quot;CAD-Elemente&quot; im Darstellungsmanager ersichtlich.
+
+- Nein: AutoCAD Objekte, welche nicht in Modellobjekte konvertiert wurden, werden nicht importiert.
+
+
+
+-  Import in eine Enterprise GeoDatabase - Objekttyp f&#252;r nicht konvertierte AutoCAD Objekte: Ist in der Konfiguration die Objektklasse &quot;AcadEntityAdapter&quot; konfiguriert, k&#246;nnen nicht konvertierte AutoCAD-Objekte in einen der Objekttypen dieser Objektklasse konvertiert werden. Objekte dieser Objektklasse k&#246;nnen im Editiermodus gel&#246;scht bzw. im Viewingmodus angezeigt werden.
+
+- Gefrorene Layer auftauen
+
+- Ja: <Italic> Gefrorene </Italic>  Ebenen der Eingangsdatei werden als EIN &#252;bernommen, sodass die CAD-Elemente darauf in <Placeholder>product</Placeholder> sichtbar werden.
+
+- Nein: <Italic> Gefrorene </Italic>  Ebenen der Eingangsdatei werden als AUS &#252;bernommen, und CAD-Elemente  darauf sind in <Placeholder>product</Placeholder> zun&#228;chst nicht sichtbar.
+
+
+<Warning>
+Ein Ebenenzustand 
+ <Italic> gefroren
+ </Italic>  ist in 
+ <Placeholder>product</Placeholder> nicht vorgesehen.
+
+</Warning>
+
+
+- Ma&#223;stab der Quelldatei: Unterscheiden sich die Ma&#223;st&#228;be von Quelldatei und ZielDatenbank, werden Offsets von Texten umgerechnet.
+
+- Konfliktaufl&#246;sung: Punkt- und Fl&#228;chenbezeichnungen m&#252;ssen eindeutig sein. F&#252;r die Konfliktaufl&#246;sung stehen folgende Optionen zur Verf&#252;gung:
+
+- Vorrang bestehender Punkt: Gleichnamige Punkte werden nicht erneut importiert.
+
+- Umbenennen: Gleichnamige Punkte aus der Import-Datei werden gem&#228;&#223; den Pr&#228;fix/Suffix-Einstellungen umbenannt und importiert.
+
+- Interaktiv l&#246;sen: Es wird der Punkt-Kollisions-Dialog angezeigt, der Anwender entscheidet, ab der neue Punkt &#252;bernommen werden soll.
+
+- Vorrang vorhandener Punkt: Gleichnamige Punkte werden importiert, die entsprechenden bestehenden Punkte werden gel&#246;scht.
+
+
+
+- Region importieren: Legt fest, ob bei Punkten das Namensfeld <Italic> Region </Italic>  importiert oder ignoriert werden soll.<Image>\img\grafik\daten\ImportAutodeskDWGEinstellungen.png$ImportAutodeskDWGEinstellungen</Image>
+
+Nach  <Border>Fertigstellen</Border>  werden die Daten importiert, ein Transferstatus wird angezeigt.

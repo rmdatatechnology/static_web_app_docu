@@ -1,0 +1,88 @@
+---
+title: "Topologie Noeuds-Arêtes"
+page: true
+---
+## Nettoyage pour avoir une topologie Noeuds-Ar&#234;tes correcte. 
+ <Menu> Menu: [Nettoyer / Topologie Noeuds-Arêtes] </Menu> 
+ <Menu> Cmd: [NodeEdgeTopoStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+Les polylignes sont coup&#233;es &#224; un noeud, resp. les polylignes avec un sommet commun, qui ne soit pas un noeud, sont jointes.
+
+
+1. S&#233;lectionnez les donn&#233;es
+
+- <Bold> Tous les objets charg&#233;s: </Bold>  Tous les objets d&#39;une zone - si vous avez charg&#233; uniquement une zone - sont nettoy&#233;s.
+
+- <Bold> S&#233;lection d&#39;objets: </Bold>  En cliquant sur la s&#233;lection d&#39;objets, vous passez sur le graphique pour choisir les objets &#224; nettoyer.
+
+
+
+2. Cliquez sur <Border>Terminer</Border> .
+
+3. Les erreurs sur les donn&#233;es sont affich&#233;es dans un 
+[Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; chaque erreur peut &#234;tre trait&#233;e.
+
+
+
+Alternative
+ 
+En d&#233;finissant les  <Bold> Param&#232;tres de correction </Bold>  beaucoup de corrections peuvent &#234;tre ex&#233;cut&#233;es automatiquement (voir ci-dessous).
+
+<Warning>
+Seulement les erreurs correspondantes aux crit&#232;res du filtre d&#233;fini dans le fichier peuvent &#234;tre trait&#233;es.
+</Warning>
+
+<Warning>
+Si les erreurs de donn&#233;es ne peuvent pas &#234;tre corrig&#233;es automatiquement, elles sont list&#233;es dans le [Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; elles peuvent &#234;tre trait&#233;es.
+</Warning>
+
+
+### D&#233;tails - Options de nettoyage
+Ici vous trouvez d&#39;autres param&#232;tres pour le nettoyage:
+
+- <Bold> Couper polylignes aux noeuds: </Bold>  Si la polyligne passe par un noeud, elle est coup&#233;e &#224; ce noeud.
+
+- <Bold> Joindre polylignes adjacentes: </Bold>  Les polylignes adjacentes, qui ne sont pas li&#233;es par un noeud, sont r&#233;unies dans une polyligne.
+
+- <Bold> Corriger les deux cas: </Bold>  Il coupe les polylignes aux noeuds et il joint les polylignes adjacentes.
+
+
+
+
+
+
+En cliquant sur le bouton  <Border>Terminer</Border>  la correction est d&#233;marr&#233;e.<Image>\img\grafik\bereinigen\PurgeSettingsNodeEdgeTopology.png$PurgeSettingsNodeEdgeTopology</Image>
+
+<Success>
+Un noeud est un vertex avec une r&#233;f&#233;rence &#224; plus de 2 polylignes.
+</Success>
+
+
+
+<Info>
+  <Bold> Couper polylignes aux noeuds: </Bold> 
+
+
+<Image>\img\grafik\bereinigen\PurgeNode1.png$PurgeNode1</Image>
+Polylignes avant la correction.
+
+
+<Image>\img\grafik\bereinigen\PurgeNode2.png$PurgeNode2</Image>
+Polylignes apr&#232;s la correction.
+</Info>
+
+
+<Info>
+ <Bold> Joindre polylignes adjacentes: </Bold> 
+
+
+<Image>\img\grafik\bereinigen\PurgeConnect1.png$PurgeConnect1</Image>
+Polylignes avant la correction.
+
+
+<Image>\img\grafik\bereinigen\PurgeConnect2.png$PurgeConnect2</Image>
+Polylignes apr&#232;s la correction. La polyligne 2 a &#233;t&#233; supprim&#233;e.
+</Info>

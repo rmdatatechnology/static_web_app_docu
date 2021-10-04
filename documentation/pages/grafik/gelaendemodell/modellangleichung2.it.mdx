@@ -1,0 +1,33 @@
+---
+title: "Adattamento dei modelli - Selezione dell'area"
+page: true
+---
+## Tramite la selezione dell&#39;area, &#232; possibile applicare un filtro spaziale per riprendere solo i dati che si desidera nel modello finito.
+
+Dopo aver lanciato il comando di Selezione dell&#39;area da [Assistente adattamento modelli](../modellierung/modellangleichung)
+ il programma sposta il focus sul disegno per permettere la definizione di un poligono con lo sfondo dell&#39;anteprima dei dati:<Image>\img\grafik\geländemodell\DtmMatchingAreaSelection.png$DtmMatchingAreaSelection</Image>
+
+<Success>
+Il poligono pu&#242; essere sia disegnato manualmente,che importato da entit&#224; CAD esistenti.
+Le opzioni del comando relativo si chiamano  <Menu>Disegna-nuovo</Menu>  risp.  <Menu>Import-autocad</Menu> .
+</Success>
+
+<Warning>
+I poligoni digitalizzati  <Bold> in senso orario </Bold>  vengono interpretati come perimetro esterno, quelli invece  <Bold> in senso antiorario </Bold>  vengono interpretati come  <Italic> &quot;Isola&quot; </Italic>  da risparmiare. Porre quindi attenzione, nella ripresa da  <Italic> AutoCAD </Italic>  alla direzione delle  <Italic> Entit&#224; </Italic>  da importare.
+</Warning>
+
+
+<Success>
+Le isole da risparmiare, sono mostrate in rosso nella grafica, come superfici bloccate. Da queste aree, in seguito, non verranno ripresi i dati.
+
+<Image>\img\grafik\geländemodell\DtmMatchingWizardAreaPreview.png$DtmMatchingWizardAreaPreview</Image>
+</Success>
+
+<Success>
+&#200; possibile anche definire solo aree da escludere, non definendo alcun poligono esterno. In questo caso viene assunto come limite esterno il rettangolo che racchiude tutti i dati ( <Italic> Bounding Box </Italic> ) (vedere grafica).
+
+<Image>\img\grafik\geländemodell\DtmMatchingAreaPreview2.png$DtmMatchingAreaPreview2</Image>
+</Success>
+
+
+Appena finito di definire l&#39;area, terminare l&#39;operazione con  <Border>Esc</Border> . Il programma ritorna all&#39;assistente mostrando l&#39;area nella finestra di anteprima.

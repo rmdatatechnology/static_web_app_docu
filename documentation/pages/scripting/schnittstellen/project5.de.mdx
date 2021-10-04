@@ -1,0 +1,17 @@
+---
+title: "Objekteigenschaften ändern"
+page: true
+---
+## &#196;ndern der Eigenschaften &#252;ber eine python-Liste
+
+Um Mengenoperationen durchzuf&#252;hren, k&#246;nnen auch die Objekt-Eigenschaften &#252;ber das Iterator-Objekt ge&#228;ndert werden.
+Dazu sollte das Ergebnis vorher in eine  <Italic>  <Bold> python-Liste umgewandelt </Bold>  </Italic>  werden (siehe oben).
+
+```
+objekte = list(Application.Project.GetObjects())
+for obj in objekte:
+    if obj.ObjectClass  &#39;Point&#39;:
+        obj.ObjectType = &#39;Messpunkt&#39;
+
+```
+

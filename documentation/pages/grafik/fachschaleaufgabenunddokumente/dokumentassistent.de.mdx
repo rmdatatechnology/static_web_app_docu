@@ -1,0 +1,45 @@
+---
+title: "Dokumentassistent"
+page: true
+---
+## Erfassen und Bearbeiten von Dokumenten
+
+Mit dem Dokumentassistent werden neue Dokumente erfasst und bestehende Dokumente ge&#228;ndert.
+
+Ein Dokument hat folgende Attribute:
+
+- <Bold> Betreff </Bold> : Pflichtfeld
+
+- <Bold> Nummer </Bold> : Wird automatisch bef&#252;llt.
+
+- <Bold> Kategorie </Bold> : z.B: Wasserversorgung, Kanalnetz, Stra&#223;ennetz, ... Kategorien k&#246;nnen beliebig erg&#228;nzt werden und stehen jederzeit zur Verf&#252;gung.
+
+- <Bold> Notizen </Bold> : Freies Textfeld
+
+
+
+
+Das Dokument kann &#252;ber den Befehl  <Menu>Position ändern</Menu>  im Grafikfenster verschoben werden.<Image>\img\grafik\fachschaleaufgabenunddokumente\Dokumentassistent.png$Dokumentassistent</Image>
+
+Dokumente k&#246;nnen Datei-Verkn&#252;pfungen enthalten, welche z.B. auf Fotos, Pl&#228;ne oder Schacht-Protokolle verweisen.
+&#220;ber die entsprechenden Icons werden ein oder mehrere Dateien oder Dateiordner als Verkn&#252;pfungen ausgew&#228;hlt und an das Dokument angeh&#228;ngt.
+Durch Doppelklick auf einen Dateilink wird die Datei mit der im Windows registrierten Anwendung ge&#246;ffnet.
+Mit dem Button  <Border>X</Border>  oder der Taste  <Border>Entf</Border>  werden selektierte Verkn&#252;pfungen gel&#246;scht.
+
+### Einf&#252;gen von Datei-Verkn&#252;pfungen &#252;ber Drag&amp;Drop
+Dateien k&#246;nnen auch per Drag&amp;Drop aus dem Windows-Explorer in den Dokumentassistent gezogen werden.
+
+Ist der Dokumentassistent nicht ge&#246;ffnet, kann man Dateien auch in das Grafikfenster ziehen. W&#228;hlt man dort eine Position aus, wird danach ein neues Dokument angelegt, dieses im Dokumentassistent ge&#246;ffnet und die Dateien als Datei-Verkn&#252;pfungen angeh&#228;ngt.
+<Success>
+Zieht man Dateien &#252;ber Drag&amp;Drop in das Grafikfenster, d&#252;rfen diese Dateien keine regul&#228;ren Datenquellen sein (z.B. Georeferenzierte TIFF, JPG, Autocad DWG/DXF,...). In diesem Fall werden die Dateien als Datenquellen in das Geodokument eingebunden. &#220;brige Dateien ohne Georeferenzierung werden ignoriert. 
+</Success>
+
+
+### Einf&#252;gen von Bildern mit GPS-Informationen
+Werden &#252;ber Drag&amp;Drop Bilder in das Grafikfenster gezogen, welche g&#252;ltige GPS-Koordinaten in der Dateiinformation haben, werden diese Dateien nach R&#252;ckfrage automatisch als einzelne Dokument eingebunden. Das Attribut &quot;Betreff&quot; wird mit dem Dateinamen automatisch bef&#252;llt, das Dokument wird automatisch in der Grafik mit Hilfe der GPS-Koordinaten positioniert. Dateien mit der GPS-Koordinate 0/0 werden nicht automatisch eingef&#252;gt.
+F&#252;r alle anderen Dateien legt der Anwender eine Position f&#252;r ein neues Dokument in der Grafik fest, und die Verkn&#252;pfungen zu den restlichen Dateien werden in diesem Dokument gespeichert.
+<Warning>
+Das automatische Einf&#252;gen von Bildern mit GPS-Informationen funktioniert nur, wenn im aktuellen Geodokument auch ein g&#252;ltiges Zielkoordinatensystem eingestellt ist!
+</Warning>
+
+

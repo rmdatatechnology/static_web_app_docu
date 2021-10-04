@@ -1,0 +1,274 @@
+---
+title: "Attributzuweisung - Punkte"
+page: true
+---
+## Steuern Sie die &#220;bernahme von CAD-Elementen als Punkt in der Geodatenbank.
+
+```
+Die Erzeugung von Punkten wird &#252;ber das Element  <Bold> &lt;Points&gt; </Bold>  definiert.
+Es ist eine Sammlung von  <Bold> &lt;Point&gt; </Bold>  Elementen, welche die Konvertierung steuern:
+ <Bold> &lt;Points&gt; </Bold> 
+   &lt;Point Name=&quot;Beispiel1&quot;&gt;
+       <Italic> &lt;!-- Definition --&gt; </Italic> 
+   &lt;/Point&gt;
+    <Italic> &lt;!-- Weitere &lt;Point&gt; Elemente --&gt; </Italic> 
+ <Bold> &lt;/Points&gt; </Bold> 
+```
+
+### &lt;Point&gt;
+### 
+# Attribute
+
+
+- <Bold> Name </Bold>  (obligat)
+
+-  Bezeichnet den Namen des Ziel-Punkttyps in der Geodatenbank. S&#228;mtliche durch den/die Filter betroffenen CAD-Element werden in diesen Punkttyp konvertiert.
+
+
+
+
+
+### 
+# Elemente
+
+Mit folgenden Elementen kann definiert werden, woraus Punkte erzeugt werden.
+
+1. <Bold> &lt;GraphicAttributeSettings&gt; </Bold>  (0 bis 1)
+
+- Beschreibt die &#220;bernahme grafischer Eigenschaften aus CAD-Elementen. Siehe 
+[GlobalSettings-Element](../anhang/formatbeschreibungmappingautodesk2)
+.
+
+
+
+2. <Bold> &lt;Insert&gt; </Bold>  (0 bis 1)
+
+- Steuert die Konvertierung von CAD-Bl&#246;cken.
+
+
+
+3. <Bold> &lt;Text&gt; </Bold>  (0 bis 1)
+
+- Steuert die Konvertierung von Texten.
+
+
+
+4. <Bold> &lt;Point&gt; </Bold>  (0 bis 1)
+
+- Steuert die Konvertierung von CAD-Punkten ( <Italic> POINT </Italic> ).
+
+
+
+
+
+<Success>
+Wo beschrieben, k&#246;nnen anstatt ganzer Namen auch Regul&#228;re Ausdr&#252;cke ( <Italic> RegEx </Italic> ) verwendet werden. Um einen Regul&#228;ren Ausdruck einzuleiten, verwenden Sie das Pr&#228;fix  <Bold> re: </Bold>  
+</Success>
+
+
+<Info>
+Beispiele f&#252;r Regul&#228;re Ausdr&#252;cke:
+
+<table>
+<tr><th>Regul&#228;rer Ausdruck</th>
+<th>Beschreibung</th>
+<th>Beispielwert</th>
+</tr>
+<tr><td>re: <b> (N-)?TP$ </b> </td>
+<td>Eine Zeichenfolge, die optional mit &quot;N-&quot; beginnt und in jedem Fall mit &quot;TP&quot; endet.</td>
+<td>&quot;N-TP&quot;&quot;TP&quot;</td>
+</tr>
+<tr><td>re: <b> (N-)?DIMLAYER\d$ </b> </td>
+<td>Eine Zeichenfolge, die optional mit &quot;N-&quot; beginnt und mit &quot;DIMLAYER&quot; sowie genau 1 Ziffer endet.</td>
+<td>&quot;N-DIMLAYER0&quot;&quot;DIMLAYER1&quot;&quot;DIMLAYER9&quot;nicht aber&quot;DIMLAYER&quot;&quot;N-DIMLAYER99&quot;</td>
+</tr>
+</table>
+
+</Info>
+
+
+### 
+#  Punkte aus CAD-Bl&#246;cken erzeugen (&lt;Insert&gt;)
+
+
+
+```
+Struktur eines Block-zu-Punkt Mappings
+
+ <Bold> &lt;Insert&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Beschreibt, wonach Quell-Bl&#246;cke gefiltert werden sollen. --&gt;
+          Jedes der folgenden Elemente ist optional; 
+          vorhandene Elemente werden mit UND verkn&#252;pft,
+          d. h. alle m&#252;ssen zutreffen --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Ganzzahl, d. i. Farbindex --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;Blockname&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx --&gt; </Italic>  <Bold> &lt;/Blockname&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+   <Bold> &lt;AttributeMapping&gt; </Bold> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Ganzzahl, d. i. Farbindex; optional --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx; optional --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;ACADAttribute Name </Bold> &quot;AttName <Bold> &quot; Tag </Bold> &quot;AttTag <Bold> &quot; Target  </Bold> &quot;AttTarget <Bold> &quot; &gt; </Bold>   <Italic> &lt;!-- Pro gemapptem Attribut --&gt; </Italic> 
+       <Bold> &lt;Tag&gt; </Bold>  <Italic> PlatzhalterZuordnung; optional </Italic>  <Bold> &lt;/Tag&gt; </Bold> 
+       <Bold> &lt;Value&gt; </Bold>  <Italic> PlatzhalterZuordnung; optional </Italic>  <Bold> &lt;/Value&gt; </Bold> 
+       <Bold> &lt;Name&gt; </Bold>  <Italic> PlatzhalterZuordnung; optional </Italic>  <Bold> &lt;/Name&gt; </Bold> 
+       <Bold> &lt;Layer&gt; </Bold>  <Italic> PlatzhalterZuordnung; optional </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;/ACADAttribute&gt; </Bold> 
+     <Bold> &lt;NG&gt; </Bold> 
+       <Italic> &lt;!-- D. s. Ziel-Attribute in der Geodatenbank --&gt; </Italic> 
+       <Italic> &lt;!-- Hier k&#246;nnen diskrete Werte oder 
+            Platzhalter aus einem ACADAttribute eingesetzt werden --&gt; </Italic> 
+       <Bold> &lt;Attribut Name=&quot; </Bold> Attributname1 <Bold> &quot;&gt; </Bold> Wert bzw. Formatstring <Bold> &lt;/Attribut&gt; </Bold> 
+     <Bold> &lt;/NG&gt; </Bold> 
+   <Bold> &lt;/AttributeMapping&gt; </Bold> 
+ <Bold> &lt;/Insert&gt; </Bold> 
+
+```
+
+
+<Success>
+&lt;ACADAttribute Name <Bold> &quot;AttName </Bold> &quot; Tag <Bold> &quot;AttTag </Bold> &quot; Target  <Bold> &quot;AttTarget </Bold> &quot; &gt; in diesem Element sind die Attribute Name, Tag und Target optional. Name und Tag k&#246;nnen verwendet werden um ein bestimmtes Attribut auszuweisen. Target beschreibt das Ziel in welches die Grafischen Eigenschaften &#252;bernommen werden (AttributeSettings). Bei Verwendung von Target=&quot;Annotation3&quot; wird die Farbe/Position/etc in die Beschriftung 3 &#252;bernommen.
+</Success>
+
+
+<Warning>
+Platzhalter k&#246;nnen jeweils zwischen geschwungenen Klammern aus einer Zeichenfolge eines  <Bold> &lt;ACADAttribute&gt; </Bold>  extrahiert und in einem  <Bold> &lt;Attribut&gt; </Bold>  verwendet werden. Es lassen sich auch mehrere Platzhalter aus einem CAD-Attribut extrahieren.
+</Warning>
+
+
+<Info>
+Das folgende Beispiel ist wie folgt zu lesen:
+
+- Es sollen Geodatenbank-Punkte vom Typ <Bold> Triangulierungspunkt (TP) - Kirche </Bold>  erzeugt werden.
+
+
+- Verdrehung und Position sollen <Italic> generell </Italic>  aus den CAD-Elementen &#252;bernommen werden.
+
+
+- Diese Punkte sollen aus Bl&#246;cken mit Namen <Bold> FIG012 </Bold>  auf den Layern <Bold> N-TP </Bold>  bzw. <Bold> TP </Bold>  entstehen.
+
+
+- Blockattribute sollen wie folgt &#252;bernommen werden:
+
+
+- Aus dem <Italic> Tag </Italic>  (Marke) des Blockattributs <Bold> Punktnummer </Bold>  wird ein Platzhalter namens <Bold> KZ </Bold>  extrahiert.
+
+
+- Aus seinem Wert, getrennt durch ein Minuszeichen &#39;-&#39; 2 Platzhalter <Bold> Name </Bold>  und <Bold> Region </Bold> .
+
+
+
+
+-  Die so erhaltenen Werte sollen in Geodatenbank-Attribute &#252;berf&#252;hrt werden.
+
+
+- <Italic> Der Wert von Name </Italic>  als Punktname
+
+
+- <Italic> Der Wert von Region </Italic>  als Punktregion
+
+
+- <Italic> Der Wert von KZ </Italic>  als Punkt-Subname.
+
+
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\BlockToPointExample.png$BlockToPointExample</Image>
+
+
+</Info>
+
+
+### 
+#  Punkte aus Texten erzeugen (&lt;Text&gt;)
+
+
+
+```
+Struktur eines Text-zu-Punkt Mappings
+
+ <Bold> &lt;Text&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Beschreibt, wonach Texte gefiltert werden sollen. --&gt;
+          Jedes der folgenden Elemente ist optional; 
+          vorhandene Elemente werden mit UND verkn&#252;pft,
+          d. h. alle m&#252;ssen zutreffen --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Ganzzahl, d. i. Farbindex --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+     <Bold> &lt;TextHeight&gt; </Bold>  <Italic> &lt;!-- Gleitkommazahl </Italic>  --&gt; <Bold> &lt;/TextHeight&gt; </Bold> 
+     <Bold> &lt;TextStyle&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx --&gt; </Italic>  <Bold> &lt;/TextStyle&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Text&gt; </Bold> 
+
+```
+
+<Info>
+Beispiel:
+
+- Es sollen Geodatenbank-Punkte vom Typ <Bold> Beschriftungspunkt </Bold>  erzeugt werden.
+
+
+- Verdrehung und Position sollen <Italic> generell </Italic>  aus den CAD-Elementen &#252;bernommen werden.
+
+
+- Diese Punkte sollen aus Texten auf den Layern <Bold> N-SB </Bold>  bzw. <Bold> SB </Bold>  entstehen.
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\TextToPointExample.png$TextToPointExample</Image>
+
+
+</Info>
+
+
+### 
+#  Punkte aus Punkt-Elementen erzeugen (&lt;Point&gt;)
+
+
+
+```
+Struktur eines Punkt-zu-Punkt Mappings
+
+ <Bold> &lt;Point&gt; </Bold> 
+   <Bold> &lt;Filter&gt; </Bold> 
+     <Italic> &lt;!-- Beschreibt, wonach Punkte gefiltert werden sollen. --&gt;
+          Jedes der folgenden Elemente ist optional; 
+          vorhandene Elemente werden mit UND verkn&#252;pft,
+          d. h. alle m&#252;ssen zutreffen --&gt; </Italic> 
+     <Bold> &lt;Color&gt; </Bold>  <Italic> &lt;!-- Ganzzahl, d. i. Farbindex --&gt; </Italic>  <Bold> &lt;/Color&gt; </Bold> 
+     <Bold> &lt;Layer&gt; </Bold>  <Italic> &lt;!-- Name bzw. RegEx --&gt; </Italic>  <Bold> &lt;/Layer&gt; </Bold> 
+   <Bold> &lt;/Filter&gt; </Bold> 
+ <Bold> &lt;/Point&gt; </Bold> 
+
+```
+
+<Info>
+Beispiel:
+
+- Es sollen Geodatenbank-Punkte vom Typ <Bold> Gel&#228;ndepunkt </Bold>  erzeugt werden.
+
+
+- Die Position soll <Italic> generell </Italic>  aus den CAD-Elementen &#252;bernommen werden, nicht aber etwa die Verdrehung.
+
+
+- Diese Punkte sollen aus Punkten auf Layern, die mit <Bold> DGM </Bold> _ beginnen, entstehen.
+
+
+
+
+
+
+- 
+<Image>\img\grafik\anhang\PointToPointExample.png$PointToPointExample</Image>
+
+
+</Info>

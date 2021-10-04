@@ -1,0 +1,137 @@
+---
+title: "Schlüssel zur Projektvorlage"
+page: true
+---
+## Beschreibung der Schl&#252;ssel zur Projektvorlagendatei
+
+Die Vorlagendatei ist ein XML-File, das einem bestimmten Aufbau folgt. Grunds&#228;tzlich gibt es die Attribute  <Italic> Id </Italic> ,  <Italic> Type </Italic>  und  <Italic> Value </Italic> .
+
+<table>
+<tr><th>Id</th>
+<th>Type</th>
+<th>Beispiel f&#252;r Value</th>
+<th>Anmerkung</th>
+</tr>
+<tr><td>ClusterToleranceElevation</td>
+<td>System.Double</td>
+<td>0.05</td>
+<td>Bereinigungstoleranz H&#246;he</td>
+</tr>
+<tr><td>ClusterTolerancePosition</td>
+<td>System.Double</td>
+<td>0.05</td>
+<td>Bereinigungstoleranz Lage</td>
+</tr>
+<tr><td>CreateCopyBeforeSave</td>
+<td>System.Boolean</td>
+<td>true</td>
+<td>Gibt an, ob eine Sicherungskopie beim Speichern angelegt wird.</td>
+</tr>
+<tr><td>DefaultComparisonPlaneOffset</td>
+<td>System.Int32</td>
+<td>5</td>
+<td>Abrundung f&#252;r Vergleichsebene von Profilen</td>
+</tr>
+<tr><td>DefaultProfileScaleHeight</td>
+<td>System.Double</td>
+<td>500.0</td>
+<td>Vorgabe f&#252;r H&#246;henma&#223;stab neu eingef&#252;gter Profile. Der Wert ist immer der Divisor, d. h. &quot;500.0&quot; bedeutet &quot;1/500&quot;.</td>
+</tr>
+<tr><td>DefaultProfileScaleLength</td>
+<td>System.Double</td>
+<td>250.0</td>
+<td>Vorgabe f&#252;r L&#228;ngenma&#223;stab neu eingef&#252;gter Profile. Der Wert ist immer der Divisor, d. h. &quot;250.0&quot; bedeutet &quot;1/250&quot;.</td>
+</tr>
+<tr><td>Description</td>
+<td>System.String</td>
+<td>Beschreibung einf&#252;gen</td>
+<td>Projektbeschreibung</td>
+</tr>
+<tr><td>FloatingPointPrecisionAngle</td>
+<td>System.Int32</td>
+<td>2</td>
+<td>Genauigkeit in Nachkommastellen f&#252;r Winkelausgabe.</td>
+</tr>
+<tr><td>FloatingPointPrecisionElevation</td>
+<td>System.Int32</td>
+<td>3</td>
+<td>Genauigkeit in Nachkommastellen f&#252;r H&#246;he</td>
+</tr>
+<tr><td>FloatingPointPrecisionNone</td>
+<td>System.Int32</td>
+<td>3</td>
+<td>Allgemeine Genauigkeit in Nachkommastellen.</td>
+</tr>
+<tr><td>FloatingPointPrecisionPosition</td>
+<td>System.Int32</td>
+<td>4</td>
+<td>Genauigkeit in Nachkommastellen f&#252;r Lage-Koordinaten</td>
+</tr>
+<tr><td>LeaveSymbolFree</td>
+<td>System.Boolean</td>
+<td>true..jafalse..nein</td>
+<td>Aussparen von Punktsymbolen an Linienzug</td>
+</tr>
+<tr><td>PointCollisionDefaultSolutionElevation</td>
+<td>System.Int32</td>
+<td>1..Alte H&#246;he2..Neue H&#246;he3..Mitteln4..Eingabe</td>
+<td>Verhalten bei Punktkollision - H&#246;he</td>
+</tr>
+<tr><td>PointCollisionDefaultSolutionPosition</td>
+<td>System.Int32</td>
+<td>1..Alte Lage2..Neue Lage3..Mitteln4..Eingabe</td>
+<td>Verhalten bei Punktkollision - Lage</td>
+</tr>
+<tr><td>PointHighlightColor</td>
+<td>rmdata.Configuration.Color</td>
+<td>1</td>
+<td>Farbe f&#252;r das Hervorheben von Punkten.Der Wert ist der Farbindex.</td>
+</tr>
+<tr><td>ProjectName</td>
+<td>System.String</td>
+<td>Projekt 1</td>
+<td>Name des Projekts</td>
+</tr>
+<tr><td>ProjectName2</td>
+<td>System.String</td>
+<td></td>
+<td>Erweiterter Projektname, z. B. der Name aus einer Drittsoftware</td>
+</tr>
+<tr><td>RegionDelimiter</td>
+<td>System.String</td>
+<td>#</td>
+<td>Regions-Trennzeichen im Punktnamen</td>
+</tr>
+<tr><td>ShowName</td>
+<td>System.Boolean</td>
+<td>true..jafalse..nein</td>
+<td>Einstellung, ob &quot;Name&quot;-Teil von Punktnamen dargestellt wird</td>
+</tr>
+<tr><td>ShowRegion</td>
+<td>System.Boolean</td>
+<td>true..jafalse..nein</td>
+<td>Einstellung, ob &quot;Region&quot;-Teil von Punktnamen dargestellt wird</td>
+</tr>
+<tr><td>ShowSubName</td>
+<td>System.Boolean</td>
+<td>true..jafalse..nein</td>
+<td>Einstellung, ob &quot;Subname&quot;-Teil von Punktnamen dargestellt wird</td>
+</tr>
+<tr><td>ShowTemporaryRepresentation</td>
+<td>System.Boolean</td>
+<td>true..jafalse..nein</td>
+<td>Einstellung, ob Punkte ohne Typ mit einer fixen Darstellung dargestellt werden (sonst gar nicht).</td>
+</tr>
+<tr><td>SnapRadius</td>
+<td>System.Double</td>
+<td>0.5</td>
+<td>Fangradius f&#252;r Objekte bei Konstruktionsbefehlen</td>
+</tr>
+<tr><td>SubNameDelimiter</td>
+<td>System.String</td>
+<td> -</td>
+<td>Trennzeichen zwischen Name und Subname</td>
+</tr>
+<tr></tr>
+</table>
+

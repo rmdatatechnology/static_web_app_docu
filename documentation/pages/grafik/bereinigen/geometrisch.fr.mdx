@@ -1,0 +1,56 @@
+---
+title: "Nettoyage géométrique"
+page: true
+---
+## Correction des erreurs se trouvant dans une tol&#233;rance de 1e-5. Les clusters de points, les points sur ligne et les points d&#39;intersection de lignes, sont corrig&#233;s.
+ <Menu> Menu: [Nettoyer / Nettoyage géométrique ] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+###  Nettoyage g&#233;om&#233;trique
+Le nettoyage g&#233;om&#233;trique n&#39;a aucune autre page de param&#233;trage. En cliquant sur  <Border>Terminer</Border>  vous d&#233;marrez le nettoyage.
+
+ <Bold>  <U> Faire attention aux points suivants: </U>  </Bold> 
+
+
+- <Bold> Nettoyage grappes de points </Bold> 
+- Points de mensuration: Si il y a plus qu&#39;un point de mensuration dans une grappe, l&#39;utilisateur doit le traiter avec le 
+[Assistant de nettoyage](../bereinigen/assistent)
+. 
+
+
+<Success>
+Les points de mensuration ne sont pas modifi&#233;s automatiquement.
+
+</Success>
+- Sommets: Si dans la grappe il y a un point de mensuration, tous les sommets sont d&#233;plac&#233;s sur celui-ci. Si il n&#39;y aucun point de mensuration, les sommets sont moyenn&#233;s.
+
+
+
+
+
+
+
+
+
+- <Bold> Point sur segment: </Bold>  Quand lors de ce nettoyage un sommet est ins&#233;r&#233; dans une polyligne, le proc&#233;d&#233; est le suivant:
+
+- Il s&#39;agit d&#39;un point (point avec/sans num&#233;ro, point sans type) sur une ligne, la ligne est dessin&#233;e par le point de mensuration.
+
+- Il s&#39;agit d&#39;un sommet sur une ligne, le point sommet est d&#233;plac&#233; perpendiculairement sur la ligne et ins&#233;r&#233; comme nouveau sommet.
+
+
+
+
+
+
+
+
+
+
+
+- <Bold> Segments de ligne se croisant: </Bold>  Sur les polylignes est ajout&#233; un sommet &#224; leur intersection.
+
+
+
+
+

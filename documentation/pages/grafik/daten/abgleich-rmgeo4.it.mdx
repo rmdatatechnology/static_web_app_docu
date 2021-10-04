@@ -1,0 +1,77 @@
+---
+title: "Comparazione con la sorgente dati rmGEO"
+page: true
+---
+## Comparazione di tutti i punti
+ <Menu>Comparazione con la sorgente dati rmGEO</Menu>  nella barra multifunzionale<Image>\img\grafik\daten\IconAbgleich.png$IconAbgleich</Image>
+ <Menu> Cmd: [RmgeoManualComparison] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+In questa finestra di dialogo sono elencati tutti i punti che...
+
+- in rmGEO e <Placeholder>product</Placeholder> abbiano attributi diversi, o
+
+- siano presenti solo in <Placeholder>product</Placeholder> oppure
+
+- siano presenti solo in rmGEO 
+
+
+
+
+<Success>
+Solo i punti nella regione selezionata, sono usati per la comparazione.
+</Success>
+
+
+La finestra di dialogo &#232; suddivisa in 3 schede:
+### Differenze<Image>\img\grafik\daten\Abgleichswizard.png$Abgleichswizard</Image>
+
+Le differenze sono marcate in grassetto. Per ogni attibuto valgono diverse regole di priorit&#224;:
+
+- <Bold> Coordinate </Bold> : qui rmGEO ha la priorit&#224; di default
+
+- <Bold> Tipo di punto </Bold>  ed altri <Bold> Attributi </Bold> : qui <Placeholder>product</Placeholder> ha la priorit&#224;.
+
+
+
+
+Di default, tutti i punti nella lista sono vistati per la comparazione (colonna TRASFERIRE). Se un punto non dovesse essere comparato, l&#39;opzione TRASFERIRE pu&#242; essere disattivata.
+Per ogni differenza, pu&#242; essere selezionato un attributo o un altro attributo, tramite una casella di scelta.
+
+Nella visualizzazione estesa, per un punto sono usate 3 righe. Nella prima si trova il risultato atteso. Nella seconda, come il punto esista in rmGEO e nella terza, come il punto esista in  <Placeholder>product</Placeholder> 
+
+<Success>
+Valore est e valore nord non possono avere priorit&#224; diverse. Pertanto quando si cambia una priorit&#224;, anche l&#39;altra viene cambiata automaticamente
+</Success>
+
+<Success>
+Con un doppio-clic su di un attributo nella colonna rmGEO o Grafica, esso &#232; usato come proposta
+</Success>
+
+
+### Solo nella grafica<Image>\img\grafik\daten\NurInGrafik.png$NurInGrafik</Image>
+
+Come standard, con questi punti non viene fatto nulla. Attivando l&#39;opzione TRASFERIRE, dopo la chiusura della finestra di dialogo, il punto &#232; copiato in rmGEO. Con ELIMINA il punto viene evidenziato con un fondo colorato ed alla fine, viene eliminato da  <Placeholder>product</Placeholder> 
+
+<Success>
+Utilizzare i tasti rapidi per scegliere rapidamente l&#39;azione desiderata:
+
+- Ctrl+A: Tutti i record vengono marcati
+
+
+- Spazio: Tutti i punti selezionati sono attivati risp. disattivati per essere trasferiti
+
+
+- Canc (Delete): Tutti i punti selezionati sono marcati per essere eliminati
+
+
+
+
+</Success>
+
+
+### Solo in rmGEO4
+
+In questa scheda sono elencati tutti i punti che esistono solo in rmGEO.
+Qui valgono gli stessi parametri visti in  <Bold> Solo nella grafica </Bold> .
+

@@ -1,0 +1,37 @@
+---
+title: "Mapping-Assistent ASCII Import"
+page: true
+---
+## Assistent f&#252;r das Erstellen einer Konvertierungstabelle f&#252;r den Import von ASCII Dateien
+
+F&#252;r den Import von ASCII Dateien in eine rmDATA Geodatabase steht ein Mapping-Assistent zur Verf&#252;gung, sodass aus ein oder mehreren ASCII-Dateien Punkte in eine Geodatabase &#252;bernommen werden k&#246;nnen.
+
+## Format-Typ
+Im ersten Schritt wird festgelegt, ob die Daten der ASCII-Datei durch Trennzeichen getrennt werden, oder in Spalten mit fixer Breite angeordnet sind.
+Weiters kann eine vorhandene Kopfzeile beim Import ausgeklammert werden, und es k&#246;nnen auch Kommentare ausgenommen werden.<Image>\img\grafik\daten\mappingasciiformattyp.png$mappingasciiformattyp</Image>
+
+## Format-Konfiguration
+### Trennzeichen getrennt
+Es werden das Trennzeichen sowie das Trennzeichen f&#252;r Dezimalzahlen festgelegt.
+<Warning>
+Weiters muss auf jeden Fall die Spalte f&#252;r die Koordinaten (Rechtswert, Hochwert) ausgew&#228;hlt werden! 
+Dazu wird die entsprechende Spalte mit der rechten Maustaste angeklickt und dem gew&#252;nschten Attribut zugewiesen.
+</Warning><Image>\img\grafik\daten\mappingasciiformatkonfigurationtrennzeichen.png$mappingasciiformatkonfigurationtrennzeichen</Image>
+
+### Feste Spaltenbreiten
+Es m&#252;ssen die Spalten definiert werden.
+<Warning>
+Weiters muss auf jeden Fall die Spalte f&#252;r die Koordinaten (Rechtswert, Hochwert) ausgew&#228;hlt werden! 
+Dazu wird die entsprechende Spalte mit der rechten Maustaste angeklickt und dem gew&#252;nschten Attribut zugewiesen.
+</Warning><Image>\img\grafik\daten\mappingasciiformatkonfigurationfestespaltenbreiten.png$mappingasciiformatkonfigurationfestespaltenbreiten</Image>
+
+## Punkt
+In der Spalte &quot;Objekttyp der GeoDB&quot; wird vom Anwender der gew&#252;nschte Objekttyp der Geodatabase eingestellt. 
+Im Dialog k&#246;nnen einzelne Zeilen dupliziert und danach ge&#228;ndert werden:  <Border>+</Border> ,  <Border>x</Border> 
+Als Bedingungen k&#246;nnen alle Attribute der ASCII-Datei verwendet werden und damit unterschiedliche Objekttypen erzeugt werden.
+Weiters k&#246;nnen dem Objekttyp Attribute (entweder Attribute der ASCII-Datei oder fixe Attributwerte) zugewiesen werden.<Image>\img\grafik\daten\mappingasciipunkt.png$mappingasciipunkt</Image>
+
+<Success>
+Nach  <Border>Fertigstellen</Border>  kann das erstellte Mapping in einer Datei gespeichert werden.
+</Success>
+

@@ -1,0 +1,130 @@
+---
+title: "Zoom"
+page: true
+---
+## Zeigen Sie Objekte in der Grafik oder zoomen Sie zu einem gewissen Bereich.
+
+### Zoom Grenzen
+Zoomt die Darstellung damit alle Objekte im Zeichenbereich sichtbar sind.
+
+```
+Application.IO.ZoomExtents()
+```
+
+
+### Kartenausschnitt festlegen und Objekte in der Grafik selektieren
+Folgende Scripting-Befehle erm&#246;glichen den Zoom auf einen Grafik-Bereich:
+
+F&#252;r alle Aufrufm&#246;glichkeiten gilt:
+
+
+- Der Parameter <Bold> <Italic> width </Italic> </Bold>  ist <Bold> optional </Bold>  und kann zur Steuerung der Kartenbreite f&#252;r den Zoom verwendet werden (Angabe in <Italic> m </Italic> ) .
+
+
+
+
+ <Bold> Zoom auf eine Koordinate </Bold> 
+
+
+```
+Application.IO.ZoomGoTo(centerEastNorth,width)
+```
+
+ <Italic> centerEastNorth </Italic>  ... Ziel-Koordinate, wo die Kartenansicht platziert werden soll
+
+```
+ziel = (20650, 285780)
+breite = 30
+Application.IO.ZoomGoTo(ziel)
+Application.IO.ZoomGoTo(ziel, breite)
+
+```
+
+
+ <Bold> Zoom auf einen Begrenzungsrahmen </Bold> 
+
+```
+Application.IO.ZoomGoTo(envelope,width)
+```
+
+ <Italic> envelope </Italic>  ... Begrenzungsrahmen, in dem die Kartenansicht platziert werden soll
+
+```
+rahmen=Application.Geometry.Envelope(Application.IO.GetObject(&#39;Objekt w&#228;hlen:&#39;).Value.Geometry)
+Application.IO.ZoomGoTo(envelope)
+```
+
+
+
+### Zoom auf Objekt(e)
+<Success>
+Alle nachfolgenden Zoom-Anweisungen f&#252;hren auch zu einer Objekt-Selektion in der Grafik.
+</Success>
+
+
+ <Bold> Zoom auf ein Einzelobjekt: </Bold> 
+
+```
+import time
+from datetime import datetime
+gartenListe = list(Application.Project.GetObjects().WhereObjectType(&#39;Garten&#39;))
+print str(len(gartenListe)) + &#39; G&#228;rten gefunden...&#39;
+for o in gartenListe:
+    print &#39;zoome auf objekt...&#39; + str(datetime.today())
+    Application.IO.ZoomGoTo(o)
+    time.sleep(1)
+```
+
+ <Bold> Zoom auf eine Objektliste: </Bold> 
+
+```
+gartenListe = list(Application.Project.GetObjects().WhereObjectType(&#39;Garten&#39;))
+Application.IO.ZoomGoTo(gartenListe)
+```
+
+ <Bold> Zoom auf einen Objekt-Enumerator: </Bold> 
+
+```
+Application.IO.ZoomGoTo(Application.Project.GetObjects().WhereObjectType(&#39;Garten&#39;))
+```
+
+
+### Zoom auf Objekt-Id(s)
+<Success>
+Alle nachfolgenden Zoom-Anweisungen f&#252;hren auch zu einer Objekt-Selektion in der Grafik.
+</Success>
+
+
+ <Bold> Zoom auf eine Einzel-Id: </Bold> 
+
+```
+Application.IO.ZoomGoTo(1845)
+```
+
+
+```
+gartenListe = list(Application.Project.GetObjects().WhereObjectType(&#39;Garten&#39;))
+print str(len(gartenListe)) + &#39; G&#228;rten gefunden...&#39;
+print &#39;zoome auf objekt mit Id - &#39; + str(gartenListe[0].Id)
+Application.IO.ZoomGoTo(gartenListe[0].Id)
+```
+
+
+ <Bold> Zoom auf eine Id-Liste: </Bold> 
+
+```
+Application.IO.ZoomGoTo([1880, 1901])
+```
+
+
+```
+gartenListe = list(Application.Project.GetObjects().WhereObjectType(&#39;Garten&#39;))
+idList = []
+print str(len(gartenListe)) + &#39; G&#228;rten gefunden...&#39;
+
+for o in gartenListe:
+    idList.append(o.Id)    
+
+print &#39;zoom auf Id-Liste&#39;
+Application.IO.ZoomGoTo(idList)
+```

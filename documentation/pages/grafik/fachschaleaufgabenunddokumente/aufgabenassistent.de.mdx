@@ -1,0 +1,64 @@
+---
+title: "Aufgabenassistent"
+page: true
+---
+## Erfassen und Bearbeiten von Aufgaben
+
+Mit dem Aufgabenassistenten werden neue Aufgaben erfasst und bestehende Aufgaben ge&#228;ndert.
+
+Zum Befehlsaufruf siehe  [Aufgabe erfassen](../fachschaleaufgabenunddokumente/aufgabeerfassen)
+ bzw. [Aufgabe bearbeiten](../fachschaleaufgabenunddokumente/aufgabebearbeiten)
+
+
+### Register &quot;Informationen&quot;
+Die Attribute einer Aufgabe werden im Register &quot;Informationen&quot; verwaltet:
+
+- <Bold> Betreff </Bold> : Pflichtfeld
+
+- <Bold> Nummer </Bold> : Wird automatisch bef&#252;llt. Wird zur Kennzeichnung von Aufgaben in der Grafik verwendet.
+
+- <Bold> Kategorie </Bold> : z.B: Wasserversorgung, Kanalnetz, Stra&#223;ennetz, ... Kategorien k&#246;nnen beliebig erg&#228;nzt werden und stehen jederzeit zur Verf&#252;gung.
+
+- <Bold> Priorit&#228;t </Bold> : M&#246;gliche Werte sind &quot;Hoch&quot;, &quot;Normal&quot;, &quot;Niedrig&quot;. Aufgaben werden je nach Priorit&#228;t in der Grafik unterschiedlich eingef&#228;rbt.
+
+- <Bold> Status </Bold> : M&#246;gliche Werte sind: &quot;Nicht begonnen&quot;, &quot;In Bearbeitung&quot;, &quot;Erledigt&quot;, &quot;Wartet auf jemanden anderen&quot;, &quot;Zur&#252;ckgestellt&quot;. Erledigte Aufgaben werden in der Grafik nicht mehr angezeigt.
+
+- <Bold> % erledigt </Bold> : Gibt an, wie weit die Aufgabe bereits erledigt wurde.
+
+- <Bold> Zust&#228;ndig </Bold> : Person, welcher die Aufgabe zugeordnet wird. Eine vollst&#228;ndige Liste aller verwendeten Personen steht zur Verf&#252;gung, und es k&#246;nnen jederzeit neue Personen erfasst werden.
+
+- <Bold> Beginnt am </Bold> : Datum, wann die Aufgabe beginnen soll.
+
+- <Bold> F&#228;llig am </Bold> : Datum, wann die Aufgabe f&#228;llig wird. &#220;berf&#228;llige Aufgaben werden im 
+[Aufgabenmanager](../fachschaleaufgabenunddokumente/aufgabenmanager)
+ und in der 
+[Aufgaben&#252;bersicht](../fachschaleaufgabenunddokumente/aufgabenuebersicht)
+ rot dargestellt.
+
+- <Bold> Notizen </Bold> : Freies Textfeld. Wurde eine Aufgabe erledigt, wird das Datum der Erledigung automatisch in die Notizen eingetragen.
+
+
+
+Die Aufgabe kann &#252;ber den Befehl  <Menu>Aufgabe positionieren...</Menu>  im Grafikfenster positioniert oder verschoben werden, bzw. kann &#252;ber  <Border>X</Border>  die Positionierung gel&#246;scht werden.
+
+Die Aufgabe kann eine Einzelaufgabe sein oder  <Menu>als Serie festgelegt werden.</Menu> . Eine Serie kann ge&#228;ndert oder gel&#246;scht werden. Siehe auch Kapitel [Serienaufgaben](../fachschaleaufgabenunddokumente/aufgabealsserie)
+.
+
+Mit  <Border>Drucken</Border>  wird die aktuelle Aufgabe mit allen Informationen in einem Report gedruckt.<Image>\img\grafik\fachschaleaufgabenunddokumente\Aufgabe-Informationen.png$Aufgabe-Informationen</Image>
+
+### Register &quot;Dokumente&quot;
+Aufgaben k&#246;nnen auch Datei-Verkn&#252;pfungen enthalten, welche z.B. auf Fotos, Pl&#228;ne oder Schacht-Protokolle verweisen. Die Datei-Verkn&#252;pfungen werden im Register &quot;Dokumente&quot; verwaltet.
+
+&#220;ber die entsprechenden Icons k&#246;nnen ein oder mehrere Dateien oder Dateiordner als Verkn&#252;pfungen ausgew&#228;hlt und an die Aufgabe angeh&#228;ngt werden.
+Durch Doppelklick auf einen Dateilink wird die Datei mit der im Windows registrierten Anwendung ge&#246;ffnet.
+Mit dem Button  <Border>X</Border>  oder der Taste  <Border>Entf</Border>  werden selektierte Verkn&#252;pfungen gel&#246;scht.<Image>\img\grafik\fachschaleaufgabenunddokumente\Aufgabe-Dokumente.png$Aufgabe-Dokumente</Image>
+
+
+### Einf&#252;gen von Datei-Verkn&#252;pfungen &#252;ber Drag&amp;Drop
+Dateien k&#246;nnen auch per Drag&amp;Drop aus dem Windows-Explorer in das Register &quot;Dokumente&quot; gezogen und so an die Aufgabe angeh&#228;ngt werden.
+
+Ist der Aufgabenassistent nicht ge&#246;ffnet, kann man Dateien auch in das Grafikfenster ziehen. W&#228;hlt man danach eine bestehende Aufgabe, wird diese ge&#246;ffnet und die Dateien an die Aufgabe angeh&#228;ngt.
+<Success>
+Zieht man Dateien &#252;ber Drag&amp;Drop in das Grafikfenster, d&#252;rfen diese Dateien keine regul&#228;ren Datenquellen sein (z.B. Georeferenzierte TIFF, JPG, Autocad DWG/DXF,...). In diesem Fall werden die Dateien als Datenquellen in das Geodokument eingebunden. &#220;brige Dateien ohne Georeferenzierung werden ignoriert. 
+</Success>
+

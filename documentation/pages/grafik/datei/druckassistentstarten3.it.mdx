@@ -1,0 +1,109 @@
+---
+title: "Assistente di stampa - Dettagli"
+page: true
+---
+## Definizione di alcune impostazioni di dettaglio prima di stampare il piano. 
+<GeoMapper>
+
+### Informazioni supplementari
+      In questa finestra &#232; possibile modificare gli attributi predefiniti come i nomi dei documenti. Questi attributi dipendono dal layout di stampa selezionato e sono in seguito visibili in stampa.
+      
+<Image>\img\grafik\datei\Vordefinierte_Attribute.png$Vordefinierte_Attribute</Image>
+
+      
+<Success>
+Sono elencate le propriet&#224; che compaiono nel prototipo. Inoltre sono mostrati gli attributi di progetto esistenti come  gli [attributi di file](../datei/datei-einstellungen14)
+ per scopo informativo e non modificabili.
+</Success>
+
+
+### Opzioni avanzate<Image>\img\grafik\datei\Erweiterte_Optionen.png$Erweiterte_Optionen</Image>
+
+       <Bold> Stile di stampa corrente </Bold> 
+      Se si desidera che in stampa compaiano colori o spessori di linea differenti, &#232; possibile usare le tabelle degli stili di stampa.
+      Per ogni colore (indice) &#232; possibile definire un colore e/o spessore di linea alternativi.
+
+      Le tabelle degli stili di stampa si trovano nella cartella  <Bold> C:\ProgramData\rmDATA\GeoMapperSE\Templates\Printing </Bold>  e devono avere la sintassi seguente:
+
+      
+<Info>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Styles xmlns=&quot;http://rmdata.at/graphics/plotstyle&quot;&gt;
+   &lt;Style ForColorKey=&quot;1&quot;&gt;
+    &lt;Overrides&gt;
+      &lt;ColorKey&gt;1&lt;/ColorKey&gt;
+      &lt;LineWeight&gt;25&lt;/LineWeight&gt;
+    &lt;/Overrides&gt;
+  &lt;/Style&gt;
+  &lt;Style ForColorKey=&quot;2&quot;&gt;
+    &lt;Overrides&gt;
+      &lt;ColorKey&gt;3&lt;/ColorKey&gt;
+      &lt;LineWeight&gt;50&lt;/LineWeight&gt;
+    &lt;/Overrides&gt;
+&lt;/Style&gt;
+&lt;/Styles&gt;
+</Info>
+
+Nell&#39;esempio citato, per il colore 1 (rosso) &#232; definito uno spessore di linea di 0.25 mm.
+In stampa, il colore 2 (giallo) &#232; sostituito col colore 3 (verde) e con uno spessore di linea di 0.5 mm.
+<Warning>
+Solamente con i diritti di amministratore &#232; possibile modificare i file in questa cartella.
+</Warning>
+
+
+ <Bold> Stampa trasparenza </Bold> 
+Tramite la stilizzazione di rmDATA GeoMapper per varie classi di oggetti &#232; possibile definire un livello di trasparenza. Attivare questa opzione se si desidera stampare la trasparenza.
+<Warning>
+Non tutte le stampanti (soprattutto se Postscipt) possono stampare la trasparenza, risp. il processo di stampa pu&#242; durare molto tempo! 
+</Warning>
+
+
+ <Bold> Stampare solo gli oggetti necessari </Bold> 
+Per gli oggetti che entrano solo parzialmente nella area di stampa, alla stampate viene trasmessa solo la parte interna all&#39;area.
+Se questa opzione &#232; attivata (come consigliato), i dati vengono tagliati sul bordo dell&#39;area di stampa ed in seguito mandati alla stampante. Esistono per&#242; dei casi limite per i quali il calcolo del taglio va in errore senza soluzione. In quasti casi occorre disabilitare questa funzione.
+
+Quando questa opzione non &#232; attivata, si possono verificare le seguenti situazioni:
+
+-  Stampa in file PDF: Stampando delle linee molto lunghe, ad esempio i bordi delle strade, il risultato in PDF &#232; eccellente. Per&#242; stampando il file PDF la linea potrebbe non essere gestita correttamente dal visualizzatore PDF, ci&#242; perch&#232; il visualizzatore non gestisce correttamente il dominio delle coordinate. Pu&#242; succedere che la linea sia appaia doppia in un&#39;altra posizione.
+
+-  Tratteggi di superfici: Quando una superficie tratteggiata rientra solo in piccola parte nell&#39;area di stampa, tuttavia l&#39;intera superficie &#232; inviata alla stampante. Ci&#242; costa spazio di memoria inutile.
+
+
+
+
+### Anteprima di stampa
+In questa finestra sono mostrate tutte le aree di stampa che con i sottostanti bottoni possono ulteriormente essere elaborate.
+
+In questa finestra possono anche essere create delle aree di layout dall&#39;attuale layout di stampa, in questo modo &#232; possibile ripetere la stampa in un secondo momento.
+A quest scopo occorre selezionare l&#39;opzione  <Bold> Crea area di layout </Bold>  e definire un nome univoco per la nuova area di layout. Terminato il processo di stampa, per ogni pagina nell&#39;anteprima di stampa viene creata un&#39;area di layout.<Image>\img\grafik\datei\Druckvorschau.png$Druckvorschau</Image>
+
+
+<Success>
+ col bottone  
+<Image>\img\grafik\datei\Edit.png$Edit</Image> dopo la scelta di un&#39;area di stampa si apre una finestra, nella quale &#232; possibile eleborare ancora una volta l&#39;area di stampa prima di stampare il tutto: 
+
+
+<Image>\img\grafik\datei\Druckbereich_bearbeiten.png$Druckbereich_bearbeiten</Image>
+
+Selezionare un&#39;altra rappresentazione ed un&#39;altra scala per l&#39;area di stampa:
+
+
+<Image>\img\grafik\datei\Darstellung_Massstab.png$Darstellung_Massstab</Image>
+
+-  Nel caso in cui la configurazione caricata supporti diverse viste/versioni, accanto a <Italic> Rappresentazione </Italic>  e <Italic> Scala </Italic>  &#232; possibile anche modificare la vista per l&#39;area di stampa.
+
+
+
+
+
+
+<Image>\img\grafik\datei\Pan.png$Pan</Image> Permette di spostare l&#39;area da stampare.
+
+
+<Image>\img\grafik\datei\Move.png$Move</Image> Permette di spostare un elemento di layout (per es. la freccia del Nord).
+
+
+<Image>\img\grafik\datei\Remove2.png$Remove2</Image> Permette di eliminare un elemento di layout.
+</Success>
+
+</GeoMapper>

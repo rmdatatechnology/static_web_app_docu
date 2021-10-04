@@ -1,0 +1,88 @@
+---
+title: "Ligne de commande - Commande d'importation"
+page: true
+---
+## Lors du d&#233;marrage du programme, importez directement un fichier.
+
+- D&#233;marrez <Placeholder>fullproduct</Placeholder> via la ligne de commande de Windows.
+
+- Via le commutateur de commande ( <Bold> /c: </Bold>  ou <Bold> /command: </Bold> ) lancez la commande <Bold> CLImport </Bold> .
+
+
+
+
+<Info>
+ <Bold> GeoMapper.exe </Bold>  &quot;C:\TestData\Projet1.geodb3&quot;  <Bold> /t: </Bold> Gabarit1  <Bold> /c: </Bold>  <Italic> CLImport </Italic> ( <Italic> Xml </Italic> ,&quot;C:\TestData\Grundlage.xml&quot;)
+
+Cet exemple cr&#233;e un nouveau fichier ( <Italic> Projekt1.geodb3 </Italic> ) bas&#233; sur le mod&#232;le &quot;Gabarit1&quot; et importe le fichier  <Italic> Grundlage.xml </Italic>  du type  <Italic> Xml </Italic> .
+</Info>
+
+
+<Success>
+Avec  <Italic> CLImport </Italic>  les donn&#233;es suivantes peuvent &#234;tre import&#233;es:
+
+-  Fichier XML
+
+
+- <Bold> /c: </Bold> CLImport( <Bold> Xml,Param1 </Bold> , <Italic> [Param2],
+[Param3],
+[Param4],
+[Param5],
+[Param6] </Italic> )
+
+
+- <Bold> Param1 </Bold> : chemin absolu du fichier .xml (param&#232;tre obligatoire)
+
+
+- <Italic> Param2 </Italic> : chemin absolu d&#39;un fichier .mapping (param&#232;tre optionnel)
+
+
+- <Italic> Param3 </Italic> : gestion de collisions de points (param&#232;tre optionnel)
+
+
+- <Bold> IgnoreNewPoint </Bold> : priorit&#233; au point existant
+
+
+- <Bold> RenameNewPoint </Bold> : renommer
+
+
+- <Bold> PointCollision </Bold> : resoudre interactivement
+
+
+- <Bold> UpdateGeometry </Bold> : priorit&#233; au point nouveau
+
+
+
+
+- <Italic> Param4 </Italic> : Pr&#233;fixe du Name (param&#232;tre optionnel)
+
+
+- <Italic> Param5 </Italic> : Suffixe du Name (param&#232;tre optionnel)
+
+
+- <Italic> Param6 </Italic> : Suffixe du Subname (param&#232;tre optionnel)
+
+
+
+
+
+
+
+
+</Success>
+
+
+<Warning>
+Lors de l&#39;&#233;dition de la commande il faut respecter la casse des caract&#232;res! (case sensitive, voir ci-dessus:  <Bold> Xml </Bold> )
+</Warning>
+
+<Warning>
+Lors de l&#39;importation via ligne de commande, les points et les surfaces avec le m&#234;me nom sont remplac&#233;s et non pas ins&#233;r&#233;s une deuxi&#232;me fois avec un pr&#233;fixe/suffixe!
+</Warning>
+
+<Info>
+
+<Image>\img\grafik\programmstart\ErrorMessageBox3.png$ErrorMessageBox3</Image>
+
+Appara&#238;t lorsque le fichier &#224; importer n&#39;existe pas ou que son chemin n&#39;a pas &#233;t&#233; saisie correctement.
+</Info>

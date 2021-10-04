@@ -1,0 +1,139 @@
+---
+title: "Adaptation de modèles"
+page: true
+---
+## R&#233;union de donn&#233;es originales, avec diff&#233;rentes pr&#233;cisions, dans un mod&#232;le de terrain.
+ <Menu> Menu: [ ^^dtmRibbonTitle^^ / Construction / Adaptation de modèles] </Menu> 
+
+<Success>
+Cette fonction est par exemple con&#231;u pour mettre ensemble des donn&#233;es  <Italic> ALS </Italic>  (survols) avec des mensurations terrestres ou des donn&#233;es  <Italic> GPS </Italic> . 
+</Success>
+
+<Warning>
+Le pr&#233;requis est toujours que les donn&#233;es avec la plus haute pr&#233;cision (e.g. tach&#233;om&#232;tre) soient inclues dans les donn&#233;es avec la plus basse pr&#233;cision (le plus souvent ce sont des donn&#233;es  <Italic> ALS </Italic> ). La fonction n&#39;est pas appropri&#233;e pour mettre ensemble plusieurs mod&#232;les &#238;les dans un mod&#232;le unique.
+</Warning>
+
+
+
+1. Appelez la commande.
+
+2. S&#233;lectionnez dans l&#39;assistant pour l&#39;adaptation de mod&#232;les, les donn&#233;es de mod&#232;le qu&#39;il faut r&#233;unir. Vous pouvez choisir entre
+
+- Fichier <Italic> ASCII </Italic>  (CSV avec lignes XYZ/ENH ou <Italic> ArcInfo ASCII-Grid </Italic> 
+- Surface de mod&#232;le de terrain (tous les mod&#232;les existants et calcul&#233;s)<Image>\img\grafik\geländemodell\DtmMatchingWizard1.png$DtmMatchingWizard1</Image>
+
+
+3. Lors de l&#39;ajout des donn&#233;es dans la s&#233;lection, il faut donner une <Italic> Priorit&#233; </Italic> . La priorit&#233; est &#224; donner &#224; chaque fois aux donn&#233;es avec la plus haute pr&#233;cision. De cette mani&#232;re le programme d&#233;cide quels points sont pertinents pour l&#39;adaptation de mod&#232;le.
+
+
+
+<Success>
+Il faut toujours d&#233;finir un set de donn&#233;es avec priorit&#233; et un set de donn&#233;es sans priorit&#233;, comme-&#231;a l&#39;assistant peut continuer! Par d&#233;faut le set de donn&#233;es ajout&#233; en premier, re&#231;oit la priorit&#233;.
+</Success>
+
+
+- La source de donn&#233;es avec la priorit&#233; est repr&#233;sent&#233;e avec un symbole &quot;ampoule&quot;  (<Image>\img\grafik\geländemodell\DtmMatchingWizardPriorityOn.png$DtmMatchingWizardPriorityOn</Image>).
+
+- Ici vous pouvez toujours modifier la priorit&#233;, en cliquant sur le bouton<Image>\img\grafik\geländemodell\DtmMatchingWizardPrioritizeButton.png$DtmMatchingWizardPrioritizeButton</Image> ( <Italic> Modifier la priorit&#233; de la source de donn&#233;es </Italic> ) dans la ligne correspondante ou en double-cliquant sur la source de donn&#233;es.
+
+- Les sets de donn&#233;es peuvent &#234;tre toujours enlev&#233;s avec le bouton<Image>\img\grafik\geländemodell\DtmMatchingWizardRemoveButton.png$DtmMatchingWizardRemoveButton</Image>
+
+
+
+
+
+1. D&#233;s que vous avez s&#233;lectionn&#233; deux sources de donn&#233;es et d&#233;finit la priorit&#233;, l&#39;assistant lib&#232;re le bouton <Border>Suivant</Border> .
+
+- Tant qu&#39;aucune priorit&#233; n&#39;a &#233;t&#233; d&#233;finit, l&#39;assistant montre un message d&#39;erreur.<Image>\img\grafik\geländemodell\DtmMatchingWizardNoPriorityError.png$DtmMatchingWizardNoPriorityError</Image>
+- <Italic> Optionellement </Italic>  sur cette page vous pouvez s&#233;lectionner le type de point selon la configuration, &#224; utiliser pour la repr&#233;sentation des points des sets de donn&#233;es avec priorit&#233; resp. sans priorit&#233;. Par d&#233;faut est choisi <Italic> &lt;aucun type&gt; </Italic> , c&#39;est &#224; dire que les points n&#39;ont aucune repr&#233;sentation graphique particuli&#232;re.
+
+
+
+
+
+<Warning>
+L&#39;utilisation de ces types n&#39;est pas toujours possible, e.g. quand &#224; la fin est ex&#233;cut&#233;e un r&#233;duction de points resp. quand la mod&#233;lisation pr&#233;sente une  <Italic> &quot;Transition fluide&quot; </Italic> , car dans ce cas, de nouveaux points sont g&#233;n&#233;r&#233;s, et ces points n&#39;ont aucune relation avec les sets de donn&#233;es d&#39;origine.
+</Warning>
+
+
+1. Cliquez sur <Border>Suivant</Border>  pour aller &#224; la prochaine &#233;tape de l&#39;assistant.
+
+2. Le programme analyse les donn&#233;es d&#39;origine et montre une vue d&#39;ensemble sur les sets de donn&#233;es:<Image>\img\grafik\geländemodell\DtmMatchingWizardPreview.png$DtmMatchingWizardPreview</Image> 
+
+
+
+<Success>
+Le masses de donn&#233;es sont affich&#233;es comme  <Italic> Shading Image </Italic> , alors que les points mis en priorit&#233; sont affich&#233;s avec un cercle, pour vous donner un aper&#231;u des mod&#232;les &#224; r&#233;unir.
+</Success>
+
+<Success>
+Ici avec le bouton 
+<Image>\img\grafik\geländemodell\DtmMatchingWizardAreaSelectionButton.png$DtmMatchingWizardAreaSelectionButton</Image>vous pouvez d&#233;finir une restriction spatiale, pour apr&#232;s reprendre uniquement les points dans cette r&#233;gion. Pour plus d&#39;informations sur la s&#233;lection de zone, voir [D&#233;tails sur la s&#233;lection de zone](../gelaendemodell/modellangleichung2)
+.
+</Success>
+
+
+1. Sur les pages suivantes vous pouvez choisir de quelle fa&#231;on vous d&#233;sirez r&#233;unir les mod&#232;les et &#224; quel mod&#232;le vous voulez attribuer le r&#233;sultat. Optionellement les donn&#233;es r&#233;sultat peuvent encore &#234;tre r&#233;duites avec l&#39;op&#233;ration correspondante, dans le but de diminuer la masse de donn&#233;es <Italic> sans perte significative d&#39;information </Italic> . Cette option est active par d&#233;faut. Pour avoir en plus une analyse graphique de la r&#233;duction, activez l&#39;option <Menu>Analyse des résultats</Menu> . Par d&#233;faut elle n&#39;est pas activ&#233;e, car selon les dimensions du mod&#232;le elle peut exiger un certain temps pour &#234;tre ex&#233;cut&#233;e.<Image>\img\grafik\geländemodell\DtmMatchingWizardChooseMatching.png$DtmMatchingWizardChooseMatching</Image>
+2. S&#233;lectionnez entre les m&#233;thodes disponibles
+
+- <Bold> D&#233;placement: </Bold>  Le mod&#232;le ALS est d&#233;plac&#233; en position et altitude de mani&#232;re &#224; &#234;tre le mieux possible adapt&#233; au mod&#232;le terrestre.
+
+- <Bold> Transition fluide: </Bold>  Entre les mod&#232;les ALS et terrestre, est calcul&#233;e une r&#233;gion de transition de mani&#232;re &#224; ce qu&#39;entre les mod&#232;les il n&#39;y ait pas de discontinuit&#233;s. Le mod&#232;le ALS n&#39;est pas modifi&#233; en position ni en altim&#233;trie.
+
+- <Bold> Fusion compl&#233;te: </Bold>  Comme pour la m&#233;thode <Italic> D&#233;placement </Italic>  le mod&#232;le ALS est d&#233;plac&#233; en position et altim&#233;trie, mais les donn&#233;es ALS ne sont pas d&#233;coup&#233;es (voir en bas &quot;D&#233;calage&quot;), c&#39;est &#224; dire que toutes les donn&#233;es depuis les deux mod&#232;les utilis&#233;s sont combin&#233;es.
+
+
+
+3. D&#233;calage: Pour les m&#233;thodes <Italic> D&#233;placement </Italic>  et <Italic> Transition fluide </Italic>  les donn&#233;es du mod&#232;le ALS sont d&#233;coup&#233;es ou des donn&#233;es terrestres sont pr&#233;sentes. Lors du d&#233;coupage les limites du mod&#232;le terrestre sont <Italic> d&#233;cal&#233;s </Italic>  vers l&#39;ext&#233;rieur, telles que les donn&#233;es ALS et terrestres ne soient pas directement adjacentes.
+
+
+
+<Success>
+Pour des mod&#232;les terrestres &#233;troits et longs il est possible que le d&#233;calage calcul&#233; automatiquement soit trop grand. Sp&#233;cifiquement dans ce cas il faut enlever la coche de l&#39;option &quot;D&#233;calage automatique&quot; et saisir le d&#233;calage &#224; utiliser.
+</Success>
+
+
+1. S&#233;lectionnez le mod&#232;le auquel il faut attribuer le r&#233;sultat. Si il faut cr&#233;er un nouveau mod&#232;le, son nom doit &#234;tre univoque. En cas d&#39;erreur l&#39;assitant montre un message d&#39;erreur. D&#232;s que les donn&#233;es sont compl&#232;tes, l&#39;assitant lib&#232;re le bouton <Border>Suivant</Border>  et vous pouvez continuer l&#39;adaptation.
+
+2. Lors du calcul de l&#39;adaptation de mod&#232;les, l&#39;assistant affiche un cercle de chargement ( <Italic> Loading Circle </Italic> ).<Image>\img\grafik\geländemodell\DtmMatchingWizardLoadingCircle.png$DtmMatchingWizardLoadingCircle</Image>
+
+
+<Success>
+Durant cette op&#233;ration vous &#234;tes libre d&#39;interrompre l&#39;&#233;laboration, en cliquant sur  <Border>Annuler</Border> . Dans ce cas l&#39;assistant arr&#234;te l&#39;ex&#233;cution et il n&#39;y aura aucun effect sur les fichiers de projet en &#233;laboration.
+</Success>
+
+
+1. Une fois le calcul ex&#233;cut&#233; sans probl&#232;me, l&#39;assistant montre le r&#233;sultat sous forme d&#39;une <Italic> Shading Images </Italic>  et offre une vue d&#39;ensemble sur la statistique de l&#39;adaptation et le cas &#233;cheant sur la r&#233;duction de points r&#233;alis&#233;e.<Image>\img\grafik\geländemodell\DtmMatchingWizardFinalPage.png$DtmMatchingWizardFinalPage</Image>
+
+
+<Warning>
+La qualit&#233; du graphique depend beaucoup de l&#39;ampleur et de la densit&#233; des donn&#233;es r&#233;sultat. Les zones avec une basse densit&#233; peuvent apparaitre comme &quot;trous&quot;.
+</Warning>
+
+<Success>
+ <Italic>  <Bold> Glossaire: </Bold> </Italic>
+
+- <U> Ecart-type </U> : L&#39;&#233;cart-type est une mesure de la dispersion des valeurs d&#39;une caract&#233;ristique autour de leur moyenne (moyenne arithm&#233;tique). Dit simplement, l&#39;&#233;cart-type est la distance moyenne de toutes les valeurs mesur&#233;es d&#39;une caract&#233;ristique de leur moyenne.
+
+
+- <U> R&#233;sidu </U> : La d&#233;nomination &quot;R&#233;sidu&quot; d&#233;finit la partie de la variabilit&#233;, qui ne peut pas &#234;tre expliqu&#233;e avec un mod&#232;le donn&#233;. Les r&#233;sidus sont calcul&#233;s &#224; partir des donn&#233;es r&#233;elles, par soustraction des estimations du mod&#232;le. 
+
+
+
+
+</Success>
+
+
+
+1. Cliquez sur <Border>Terminer</Border> , pour attribuer le resultat au mod&#232;le s&#233;lectionn&#233;. A cette &#233;tape de l&#39;&#233;laboration, vous pouvez encore rejeter le r&#233;sultat, en appuyant sur <Border>Annuler</Border>  ou en retournant en arri&#232;re aux pages pr&#233;c&#233;dentes, pour modifier les param&#232;tres.
+
+
+
+
+<Success>
+A la fin de l&#39;adaptation, le mod&#232;le r&#233;sultat est protocol&#233;. Comme &#231;a les donn&#233;es d&#39;origine et les statistiques sont toujours enregistr&#233;es de mani&#232;re compr&#233;hensible.
+</Success>
+
+<Warning>
+Une fois la commande termin&#233;e, il n&#39;est plus possible d&#39;ex&#233;cuter un UNDO
+</Warning>

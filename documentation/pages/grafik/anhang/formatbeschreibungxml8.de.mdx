@@ -1,0 +1,124 @@
+---
+title: "Polygone"
+page: true
+---
+## Zusammensetzung der Segmente zu Polygonen
+
+<Warning>
+Voraussetzung f&#252;r ein Polygon ist, dass die referenzierten Segmente in der XML-Datei vorhanden sind!
+</Warning>
+
+
+###  Aufbau von geschlossenen Polygonen
+
+- <Bold> &lt;Polygons&gt; </Bold>  Sektion aller Polygone. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>     &lt;Polygon Id=&quot;797&quot;&gt; </Bold>  Polygon mit einer eindeutigen ID
+
+- <Bold> &lt;Exterior&gt; </Bold>  Umring des Polygons
+
+- <Bold> &lt;SegmentList&gt; </Bold>  Auflistung aller Segmente, die zum Polygon geh&#246;ren (in der richtigen Reihenfolge)
+
+- <Bold> &lt;SegmentId&gt;828&lt;/SegmentId&gt; </Bold> Referenz auf Segment. Die Sektion kann &#246;fters wiederholt werden.
+
+
+
+- <Bold> &lt;/SegmentList&gt; </Bold>  Ende der Sektion
+
+
+
+- <Bold> &lt;/Exterior&gt; </Bold> 
+- <Bold> &lt;Interiors /&gt; </Bold>  Inseln im Polygons (optional)
+
+
+
+- <Bold>       &lt;/Polygon&gt; </Bold> 
+
+
+- <Bold>     &lt;/Polygons&gt; </Bold> 
+
+
+
+<Info>
+    &lt;Polygons&gt;
+      &lt;Polygon Id=&quot;797&quot;&gt;
+        &lt;Exterior&gt;
+          &lt;SegmentList&gt;
+            &lt;SegmentId&gt;747&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;746&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;745&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;748&lt;/SegmentId&gt;
+          &lt;/SegmentList&gt;
+        &lt;/Exterior&gt;
+        &lt;Interiors /&gt;
+      &lt;/Polygon&gt;
+    &lt;/Polygons&gt;
+</Info>
+
+
+
+###  Aufbau von gerichteten Fl&#228;chen, wie B&#246;schungen 
+
+- <Bold> &lt;Polygons&gt; </Bold>  Sektion aller Polygone. Die Sektion darf nur 1 mal in der XML-Datei vorkommen.
+
+- <Bold>      &lt;Polygon Id=&quot;850&quot;&gt; </Bold>  Polygon mit einer eindeutigen ID
+
+- <Bold> &lt;Upside&gt; </Bold>  Oberkante
+
+- <Bold> &lt;SegmentList&gt; </Bold>  Auflistung aller Segmente, die zur Oberkante geh&#246;ren (in der richtigen Reihenfolge)
+
+- <Bold> &lt;SegmentId&gt;839&lt;/SegmentId&gt; </Bold> Referenz auf Segment. Die Sektion kann &#246;fters wiederholt werden.
+
+
+
+- <Bold> &lt;/SegmentList&gt; </Bold>  Ende der Sektion
+
+
+
+- <Bold> &lt;/Upside&gt; </Bold> 
+- <Bold> &lt;Downside&gt; </Bold>  Unterkante
+
+- <Bold> &lt;SegmentList&gt; </Bold>  Auflistung aller Segmente, die zur Unterkantegeh&#246;ren (in der richtigen Reihenfolge)
+
+- <Bold> &lt;SegmentId&gt;839&lt;/SegmentId&gt; </Bold> Referenz auf Segment. Die Sektion kann &#246;fters wiederholt werden.
+
+
+
+- <Bold> &lt;/SegmentList&gt; </Bold>  Ende der Sektion
+
+
+
+- <Bold> &lt;/Downside&gt; </Bold> 
+
+
+- <Bold>       &lt;/Polygon&gt; </Bold> 
+
+
+- <Bold>     &lt;/Polygons&gt; </Bold> 
+
+
+
+<Info>
+
+      &lt;Polygon Id=&quot;850&quot;&gt;
+		&lt;Upside&gt;
+          &lt;SegmentList&gt;
+            &lt;SegmentId&gt;839&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;840&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;841&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;842&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;843&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;844&lt;/SegmentId&gt;
+            &lt;/SegmentList&gt;
+		  &lt;/Upside&gt;
+		  &lt;Downside&gt;
+		  &lt;SegmentList&gt;
+            &lt;SegmentId&gt;845&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;846&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;847&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;848&lt;/SegmentId&gt;
+            &lt;SegmentId&gt;849&lt;/SegmentId&gt;
+          &lt;/SegmentList&gt;
+		  &lt;/Downside&gt;
+      &lt;/Polygon&gt;
+</Info>

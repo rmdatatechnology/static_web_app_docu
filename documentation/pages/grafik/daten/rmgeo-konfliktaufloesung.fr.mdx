@@ -1,0 +1,62 @@
+---
+title: "Vérification de consistance"
+page: true
+---
+La v&#233;rification de consistance concerne tous les points d&#39;un ficher  <Placeholder>product</Placeholder> et une source de donn&#233;es rmGEO. Les diff&#233;rences entre les points des deux cot&#233;s sont v&#233;rifi&#233;es, tels diff&#233;rences sont affich&#233;es dans une liste d&#39;inconsistance.
+L&#39;utilisateur d&#233;cide pour chaque point, la variante &#224; reprendre.
+
+ <Placeholder>geodgm</Placeholder> 
+Ils sont s&#251;rement v&#233;rifi&#233;s:
+
+- Coordonn&#233;es planimetriques
+
+- Altitude
+
+- Code point fixe
+
+- Code de mesure
+
+
+
+Si &#224; cause d&#39;une d&#233;finition dans le Gestionnaire de connexions le type de point n&#39;est pas repris automatiquement depuis  <Placeholder>product</Placeholder>  sa consistance est aussi v&#233;rifi&#233;e.
+
+En outre, selon les param&#232;tres d&#39;utilisateur (Attributmapping) aussi d&#39;autres attributs rmGEO sont compar&#233;s (voir [Gestionnaire de connexions](../daten/rmgeo-verbindungsmanager)
+).
+
+La v&#233;rification de consistance est activ&#233;e dans les cas suivantes:
+
+
+- Lors de la cr&#233;ation d&#39;une connexions avec rmGEO.
+
+- Les points, pr&#233;sents dans une seule programme, sont automatiquement reprises.
+
+- Les points, pr&#233;sents dans les deux programmes avec des attributs diff&#233;rents, sont affich&#233;es dans la liste d&#39;inconsistance.
+
+
+
+- Lors de la modification des param&#232;tres de connexion (Attributmapping).
+
+- Extension de la liste des attributs &#224; comparer.
+
+- Modification de la version la plus haute &#224; reprendre.
+
+
+
+- Lors de l&#39;ouverture d&#39;un projet avec une connexion existante.
+
+- Les points modifi&#233;s et supprim&#233;s sont affich&#233;s dans la liste d&#39;inconsistance.
+
+
+
+- Lors du rechargement de points depuis la base de donn&#233;es de <Placeholder>product</Placeholder> 
+- Chaque point recharg&#233; est v&#233;rifi&#233; en consistance. Les nouveaux points sont automatiquement transf&#233;r&#233;s dans rmGEO.
+
+
+
+
+
+
+<Success>
+En principe les nouveaux points pour n&#39;importe quelle variante, sont toujours automatiquement transf&#233;r&#233;s dans l&#39;autre programme. Les points supprim&#233;s dans rmGEO sont affich&#233;es dans la liste d&#39;inconsistance.
+</Success>
+

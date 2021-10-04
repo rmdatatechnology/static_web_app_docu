@@ -1,0 +1,33 @@
+---
+title: "Straßennamen setzen"
+page: true
+---
+## Auswahl und Einf&#252;gen von Stra&#223;ennamen
+
+Der Befehl  <Menu>Straßennamen setzen</Menu>  wird im Editiermodus im  <Menu> Menu: [MAG Salzburg] </Menu>  aufgerufen.
+Nach Befehlsaufruf kann ein Stra&#223;enname aus einer Liste gew&#228;hlt werden.<Image>\img\grafik\fachschalemagistratsalzburg\straßennamendialog.png$straßennamendialog</Image>
+
+Nach  <Border>OK</Border>  wird der Text in der Grafik zwischen zwei Linien positioniert:
+
+- Wahl der ersten Linie
+
+- Wahl der zweiten Linie
+
+- Wahl eines Punktes f&#252;r den Texteinf&#252;gepunkt
+
+
+
+
+Der neue Text wird genau mittig zwischen die beiden gew&#228;hlten Linien positioniert und nach der Winkelsymmetrale dieser Linien ausgerichtet. Der Text wird immer lesbar eingef&#252;gt.
+
+Der Stra&#223;enname wird als Textwert &#252;bernommen, der zugeh&#246;rige Stra&#223;encode in das Attribut &quot;CODE&quot; geschrieben.
+
+<Success>
+Der Befehl funktioniert nur in einer Enterprise Geodatabase. Die Liste der Stra&#223;ennamen muss als View im Oracle-Schema angelegt sein und folgende Struktur aufweisen:  <Border>create view SBG_STREETS (CODE, NAME) as ....;</Border>   
+</Success>
+
+
+<Success>
+Der Texttyp f&#252;r den Stra&#223;ennamen wird in den [Projekteinstellungen der Fachschale](../fachschalemagistratsalzburg/einstellungen)
+ gew&#228;hlt
+</Success>

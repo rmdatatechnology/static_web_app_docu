@@ -1,0 +1,85 @@
+---
+title: "Point sur segment"
+page: true
+---
+## Correction des points ou des sommets plac&#233;s sur une ligne, o&#249; la ligne n&#39;est pas coup&#233;e &#224; ce point.
+ <Menu> Menu: [Nettoyer / Point sur segment] </Menu> 
+ <Menu> Cmd: [PointOnSegmentStart] </Menu> 
+
+ <Placeholder>geodgm</Placeholder> 
+
+1. S&#233;lectionnez les donn&#233;es
+
+- <Bold> Tous les objets charg&#233;s: </Bold>  Tous les objets d&#39;une zone - si vous avez charg&#233; uniquement une zone - sont nettoy&#233;s.
+
+- <Bold> S&#233;lection d&#39;objets: </Bold>  En cliquant sur la s&#233;lection d&#39;objets, vous passez sur le graphique pour choisir les objets &#224; nettoyer.
+
+
+
+2. Cliquez sur <Border>Terminer</Border> .
+
+3. Les erreurs sur les donn&#233;es sont affich&#233;es dans un 
+[Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; chaque erreur peut &#234;tre trait&#233;e.
+
+
+
+Alternative
+ 
+En d&#233;finissant les  <Bold> Param&#232;tres de correction </Bold>  beaucoup de corrections peuvent &#234;tre ex&#233;cut&#233;es automatiquement (voir ci-dessous).
+
+<Warning>
+Seulement les erreurs correspondantes aux crit&#232;res du filtre d&#233;fini dans le fichier peuvent &#234;tre trait&#233;es.
+</Warning>
+
+<Warning>
+Si les erreurs de donn&#233;es ne peuvent pas &#234;tre corrig&#233;es automatiquement, elles sont list&#233;es dans le [Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; elles peuvent &#234;tre trait&#233;es.
+</Warning>
+
+
+### D&#233;tails - Param&#232;tres de correction
+Ici vous trouvez d&#39;autres param&#232;tres pour le nettoyage:
+
+- <Bold> D&#233;placer point sur la projection orthogonale: </Bold>  Le point est d&#233;plac&#233; perpendiculairement sur la ligne.
+
+- <Bold> Prolonger segment adjacent: </Bold>  La ligne, adjacente &#224; une autre ligne, est prolong&#233;e ou raccourcie.
+
+
+
+<Success>
+Il est possible quand juste une ligne est li&#233;e &#224; un point, qui se trouve sur une autre ligne.
+</Success>
+ 
+
+- <Bold> Couper le segment et le joindre sur le point: </Bold>  Le point n&#39;est pas d&#233;plac&#233;, c&#39;est la ligne qui est d&#233;plac&#233;e sur le point.
+
+- <Bold> Interaction utilisateur: </Bold>  Les erreurs des donn&#233;es sont affich&#233;es dans un 
+[Assistant de nettoyage](../bereinigen/assistent)
+ o&#249; chaque erreur peut &#234;tre trait&#233;e. 
+
+
+
+<Warning>
+Les points se trouvant sur une ligne, dans une tol&#233;rance g&#233;ometrique de 1e-5, sont toujours corrig&#233;s automatiquement!
+</Warning><Image>\img\grafik\bereinigen\PurgeSettingsPointOnSegment.png$PurgeSettingsPointOnSegment</Image>
+
+
+### D&#233;tails - Tol&#233;rances de correction
+Ici vous pouvez d&#233;finir les tol&#233;rances altim&#233;triques et planim&#233;triques. En cliquant sur le bouton  <Border>Terminer</Border>  la correction est d&#233;marr&#233;e.<Image>\img\grafik\bereinigen\PurgeSettingsPointOnSegment2.png$PurgeSettingsPointOnSegment2</Image>
+
+
+<Success>
+Un point est donc consid&#233;r&#233; appartenant &#224; une ligne, quand sa distance orthogonale est inf&#233;rieure &#224; la tol&#233;rance planim&#233;trique d&#233;finie dans les param&#232;tres de projet. Pour les donn&#233;es avec altitude, la tol&#233;rance altim&#233;trique est consid&#233;r&#233;e.
+</Success>
+
+<Success>
+Avec cette m&#233;thode de nettoyage on peut r&#233;soudre aussi les cas de &quot;Overshoots et Undershoots&quot;.
+</Success>
+
+
+
+
+
+
+

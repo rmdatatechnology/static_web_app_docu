@@ -1,0 +1,36 @@
+---
+title: "Planabzug erstellen"
+page: true
+---
+## Export von Daten des geladenen Bereichs in ein lokales Projekt
+
+Mit dem Planabzug werden im Editiermodus alle Daten, welche sich im geladenen Bereich befinden, in ein neues lokales Projekt exportiert.
+Dieses lokale Projekt kann zu einem sp&#228;teren Zeitpunkt ge&#246;ffnet und bearbeitet bzw. ausgedruckt werden.
+
+<Success>
+Der Befehl steht im Editiermodus bei aktiverter Fachschale &quot;MAG Salzburg&quot; zur Verf&#252;gung
+</Success>
+
+Alle Daten aus rmDATA Geodatenbanken werden in neue private Geodatenbanken exportiert. 
+Alle Hintergrund-Vektordaten (DWG, DXF, Shape, Oracle SDO) werden in eine AutoCAD-DWG-Datei exportiert.
+Weiters wird ein Geodokument erstellt, in welchem die exportierten Datenquellen bereits eingebunden sind, sodass der Anwender nur mehr dieses Geodokument &#246;ffnen muss, um einen Ausdruck mit dem exportierten Datenstand durchzuf&#252;hren.
+
+F&#252;r das Erzeugen des neuen Geodokumentes kann eine Vorlage verwendet werden, in welcher weitere Datenquellen per Default eingebunden sind (z.B. Basemap, Orthofotos,...). Diese Datei muss die Bezeichnung  <Bold> &quot;plot_template.geodoc&quot; </Bold>  haben.
+
+Weiters kann f&#252;r das Anlegen der GeoDB3-Dateien eine Projektvorlage verwendet werden. Die in dieser Projektvorlage enthaltenen Konfigurationen werden in alle exportierten GeoDB3-Dateien eingef&#252;gt und in der Reihenfolge vorangestellt.
+Die Projektvorlage muss die Bezeichnung  <Bold> &quot;plotexport.projecttemplate&quot; </Bold>  haben.
+
+Die beiden Vorlagen m&#252;ssen in einem der folgenden Verzeichnisse liegen:
+
+ <Menu>%programdata%\rmDATA\GeoDesktop\Templates\ProjectTemplates</Menu> 
+ <Menu>%appdata%\rmDATA\GeoDesktop\Templates\ProjectTemplates</Menu> 
+ <Menu>\Firmenverzeichnis\Templates\ProjectTemplates</Menu> 
+
+## Export
+Der Export eines Planabzuges steht im Editiermodus im Men&#252;  <Menu>Datenbank - Datenbank exportieren - Planabzug erstellen</Menu> zur Verf&#252;gung.
+
+Im Register &quot;Datenquellenauswahl&quot; werden die zu exportierenden Datenquellen angegeben.<Image>\img\grafik\fachschalemagistratsalzburg\datenquellen.png$datenquellen</Image>
+
+Im Register &quot;Dateiauswahl&quot; wird der Ordner definiert, in welchen die Daten exportiert werden sollen. Dieser Ordner muss leer sein.<Image>\img\grafik\fachschalemagistratsalzburg\dateiauswahl.png$dateiauswahl</Image>
+
+Nach &quot;Fertigstellen&quot; werden die Daten exportiert und ein neues Geodokument angelegt.

@@ -1,0 +1,48 @@
+---
+title: "Iterations-Objekte und Filter"
+page: true
+---
+## Auslesen und Ver&#228;ndern von Objekten
+Folgende Aufrufe liefern als Ergebnis ein Iterations-Objekt, das auch gefiltert werden kann:
+
+
+- <Italic> <Bold> objektIterator = Application.IO.GetObjects(&#39;Objektauswahl&#39;).Value </Bold> </Italic> 
+- <Italic> <Bold> objektIterator = Application.Project.GetObjects() </Bold> </Italic> 
+
+
+
+F&#252;r  <Italic> alle Objektmengen (Iterations-Objekte) </Italic> , die in die Skript-Umgebung als R&#252;ckgabewerte zur&#252;ckgegeben werden, kann ein  <Bold>  <Italic> Filter </Italic>  </Bold>  angewendet werden.
+
+<Success>
+Iterations-Objekte k&#246;nnen mit dem python-Befehl  <Bold>  <Italic> for </Italic>  </Bold>  ausgewertet werden ( <Italic>  <Bold> for objekt in objektIterator </Bold>  </Italic> ).
+Wollen Sie  <Bold> Listen-Operationen </Bold>  oder  <Bold> schreibende &#196;nderungen </Bold>  auf einzelnen Objekten ausf&#252;hren, so muss das Iterationsobjekt in eine pyhton-Liste umgewandelt werden mit dem Befehl  <Italic>  <Bold> objekte = list(objektIterator) </Bold>  </Italic> .
+ <Italic> einzelObjekt = objekte[0] </Italic> 
+</Success>
+
+
+### Filter nach Objektklasse
+ <Italic>  <Bold> .WhereObjectClass(filter) </Bold>  </Italic> 
+
+```
+punkte = Application.Project.GetObjects().WhereObjectClass(&#39;Point&#39;)
+for o in punkte:
+    print o.Name
+
+linienUndPunkte = Application.Project.GetObjects().WhereObjectClass([&#39;Point&#39;, &#39;LineString&#39;])
+for o in linienUndPunkte:
+    print o.Id
+
+symbole2Punkt = Application.Project.GetObjects().WhereObjectClass(&#39;TwoPointSymbol&#39;)
+for o in symbole2Punkt:
+    print o.Id
+
+symbole3Punkt = Application.Project.GetObjects().WhereObjectClass(&#39;ThreePointSymbol&#39;)
+for o in symbole3Punkt:
+    print o.Id
+
+flaechen = Application.Project.GetObjects().WhereObjectClass(&#39;Area&#39;)
+for o in flaechen:
+	print o.Id
+
+```
+
