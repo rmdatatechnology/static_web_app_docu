@@ -17,7 +17,11 @@ const ProductDropDown = () => {
   let pro = params.get('product'); // product 
   if(pro)
    {
-	  changeProduct(pro.toString().toLowerCase());
+	  let prod = pro.toString().toLowerCase();
+	  if(prod.toString().toLowerCase() === "geomapperse")
+		  prod = "geomapper";
+		  
+	  changeProduct(prod.toString().toLowerCase());
 	  params.delete('product');
 	  pro=null;
    }
@@ -29,14 +33,18 @@ const ProductDropDown = () => {
   
   const onOptionClicked = value => () => {
 	pro=null;
-	changeProduct(value.toString().toLowerCase());
+	
+	let opt = productItems.find(
+		k => k.name.toString().toLowerCase() === value.toString().toLowerCase()
+		);
+	changeProduct(opt.product);
     setIsOpen(false);
   };
   
-  const getProduct = () => 
+  const getProductName = () => 
   {
 	let opt = productItems.find(
-		k => k.name.toString().toLowerCase() === product.toString().toLowerCase()
+		k => k.product.toString().toLowerCase() === product.toString().toLowerCase()
 		);
 		
 	return opt ? opt.name : "Products";
@@ -55,7 +63,7 @@ const ProductDropDown = () => {
 	 <S.Dropdown>
 				<S.Button onClick={toggling}>
 					<div>
-					<span>{getProduct()}</span>
+					<span>{getProductName()}</span>
 					{isOpen ?
 					<S.ArrowOpen /> :
 					<S.ArrowClosed />

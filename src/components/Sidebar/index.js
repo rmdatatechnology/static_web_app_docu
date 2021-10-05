@@ -30,7 +30,11 @@ function GetItems()
 	 }
 	  else if(product.toString().toLowerCase() === "scripting")
 	 {
-		 return require('../../../documentation/toc/geomapper.json');;
+		 return require('../../../documentation/toc/scripting.json');;
+	 }
+	  else if(product.toString().toLowerCase() === "configuration")
+	 {
+		 return require('../../../documentation/toc/configuration.json');;
 	 }
 	 else
 	 {

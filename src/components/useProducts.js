@@ -37,6 +37,7 @@ const query = graphql`
           productItems {
 			link
             name
+			product
           }
         }
       }

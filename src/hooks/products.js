@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ProductContext = createContext('');
 
 const ProductProvider = ({ children }) => {
-  const [product, setProduct] = useState('geomapperse');
+  const [product, setProduct] = useState('geomapper');
 
   function changeProduct(product) {
     setProduct(product);
