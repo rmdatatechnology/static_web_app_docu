@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import TitlePage from '../components/TitlePage';
-import SearchItem from '../components/SearchItem';
 import { useFlexSearch } from 'react-use-flexsearch';
 import { useStaticQuery } from 'gatsby'
 import { useLocale } from '../hooks/locale';

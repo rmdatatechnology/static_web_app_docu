@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import useTranslations from '../useTranslations';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import * as S from './styled';
 
@@ -21,10 +22,7 @@ const PostItem = ({
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 600, maxHeight: 350) {
-                  src
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData
               }
 			  name
             }
@@ -54,14 +52,14 @@ const PostItem = ({
     <S.PostItemLink to={slug}>
       <S.PostItemWrapper>
         {imageToUse && (
-          <S.PostItemImg
-            fluid={imageToUse.node.childImageSharp.fluid}
+          <GatsbyImage
+            image={imageToUse.node.childImageSharp.gatsbyImageData}
             alt={title}
           />
         )}
         {!imageToUse && defaultImg && (
           <S.PostItemImg
-            fluid={defaultImg.node.childImageSharp.fluid}
+            image={defaultImg.node.childImageSharp.gatsbyImageData}
             alt={title}
           />
         )}

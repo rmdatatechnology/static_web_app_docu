@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import Img from 'gatsby-image';
 import LocalizedLink from '../LocalizedLink';
 
 export const PostItemLink = styled(LocalizedLink)`
@@ -23,14 +22,6 @@ export const PostItemWrapper = styled.section`
   /* .homepage & {
     flex-direction: row;
   } */
-`;
-
-// export const PostItemImg = styled.img`
-//   display: block;
-// `
-
-export const PostItemImg = styled(Img)`
-  width: 100%;
 `;
 
 export const PostItemInfo = styled.div`
