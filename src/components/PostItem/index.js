@@ -8,19 +8,16 @@ import * as S from './styled';
 const PostItem = ({
   slug,
   background,
-  category,
-  date,
-  timeToRead,
   title,
   description,
-  image,
+  imageName,
 }) => {
   const { toRead } = useTranslations();
 
   const { listImages } = useStaticQuery(
     graphql`
       query {
-        listImages: allFile {
+        listImages: allFile (filter: {ext: {eq: ".png"}}) {
           edges {
             node {
               childImageSharp {
@@ -29,6 +26,7 @@ const PostItem = ({
                   ...GatsbyImageSharpFluid
                 }
               }
+			  name
             }
           }
         }
@@ -36,45 +34,42 @@ const PostItem = ({
     `,
   );
 
-  const postImgCover = listImages.edges.find(img => {
-    return img.node.childImageSharp 
-		? img.node.childImageSharp.fluid.src.includes('default') 
-		: null;
+  const defaultImg = listImages.edges.find(img => {
+    if(img.node.name === 'default')
+		return img;
+		
+	return null;
+  });
+  
+  const imageToUse = listImages.edges.find(img => {
+    if(img.node.name === imageName.toString())
+		return img;
+		
+	return null;
   });
 
-  const imgName = image ? image.split('/')[3] : false;
-
-  const postImg = imgName
-    ? listImages.edges.find(img => {
-        return img.node.childImageSharp.fluid.src.includes(imgName);
-      })
-    : false;
+  
 	
   return (
     <S.PostItemLink to={slug}>
       <S.PostItemWrapper>
-        {postImg && (
+        {imageToUse && (
           <S.PostItemImg
-            fluid={postImg.node.childImageSharp.fluid}
+            fluid={imageToUse.node.childImageSharp.fluid}
             alt={title}
           />
         )}
-        {!postImg && postImgCover && (
+        {!imageToUse && defaultImg && (
           <S.PostItemImg
-            fluid={postImgCover.node.childImageSharp.fluid}
+            fluid={defaultImg.node.childImageSharp.fluid}
             alt={title}
           />
         )}
 
         <S.PostItemInfo>
-          <S.PostItemTag background={background}>
-            {category}
-          </S.PostItemTag>
-          <S.PostItemDate>
-            {date} • {timeToRead} min {toRead}
-          </S.PostItemDate>
+          <S.PostItemTag background={background} />
           <S.PostItemTitle>{title}</S.PostItemTitle>
-          <S.PostItemDescription>{description}</S.PostItemDescription>
+          <S.PostItemDescription>{imageName}</S.PostItemDescription>
         </S.PostItemInfo>
       </S.PostItemWrapper>
     </S.PostItemLink>
@@ -83,12 +78,9 @@ const PostItem = ({
 
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
-  background: PropTypes.string,
-  category: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  imageName: PropTypes.string.isRequired,
 };
 
 export default PostItem;

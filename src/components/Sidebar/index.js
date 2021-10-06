@@ -20,7 +20,7 @@ function GetItems()
 	 {
 		 return require('../../../documentation/toc/geodesigner.json');
 	 }
-	 else if(product.toString().toLowerCase() === "geomapperse")
+	 else if(product.toString().toLowerCase() === "geomapper")
 	 {
 		 return require('../../../documentation/toc/geomapper.json');;
 	 }
@@ -35,6 +35,10 @@ function GetItems()
 	  else if(product.toString().toLowerCase() === "configuration")
 	 {
 		 return require('../../../documentation/toc/configuration.json');;
+	 }
+	  else if(product.toString().toLowerCase() === "inventorymanager")
+	 {
+		 return require('../../../documentation/toc/inventorymanager.json');;
 	 }
 	 else
 	 {

@@ -100,6 +100,7 @@ exports.createPages = async ({ graphql, actions }) => {
   //  `./src/templates/posts-list.js`,
   //);
   const pageTemplate = path.resolve(`./src/templates/page.js`);
+  const defaultTemplate = path.resolve(`./src/templates/default.js`);
 
   const result = await graphql(`
     {
@@ -143,10 +144,10 @@ exports.createPages = async ({ graphql, actions }) => {
     const isPage = file.frontmatter.page;
 
     // Setting a template for page or post depending on the content
-    const template = pageTemplate;//isPage ? pageTemplate : postTemplate;
+    const template = isPage ? pageTemplate : defaultTemplate;
 
     createPage({
-      path: localizedSlug({ isDefault, locale, slug, isPage }),
+      path: localizedSlug({ isDefault, locale, slug }),
       component: template,
       context: {
         // Pass both the "title" and "locale" to find a unique file

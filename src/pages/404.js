@@ -1,10 +1,16 @@
 import React from 'react';
 import SEO from '../components/seo';
+import "../styles/styles.scss";
 
 const NotFound = () => (
   <>
-    <SEO title="404: Not found" />
-    <h1>404</h1>
+   <div className="pagecontainer">
+		<div className="sidebar" id="sidemenu" />
+		<div className="content">
+			<SEO title="404: Not found" />
+			<h1>404</h1>
+		</div>
+	</div>
   </>
 );
 

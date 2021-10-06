@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import TitlePage from '../components/TitlePage';
 import SearchItem from '../components/SearchItem';
-import * as S from '../components/Content/styled';
 import { useFlexSearch } from 'react-use-flexsearch';
 import { useStaticQuery } from 'gatsby'
 import { useLocale } from '../hooks/locale';
+import "../styles/styles.scss";
+import * as S from '../components/Content/styled';
 
 const unflattenResults = (results) =>
 	results.map(entry => {
@@ -42,32 +43,38 @@ const SearchContent  = () => {
   
   return (
   <>
-      <TitlePage text="Suche" />
-	  <S.Content>	 
-      <label>
-        <span>Search query</span>
-        <input
-          name="query"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-        />
-      </label>
-      <h2>Results</h2>
-      {filteredEntries.length > 0 ? (
-        <ul>
-          {filteredEntries.map((result) => (
-			<SearchItem
-                slug={result.slug.split(`.`)[0]}              
-                category="Test"
-                title={result.frontmatter.title}
-				//description={result.body}
-              />
-		  ))}
-        </ul>
-      ) : (
-        <p>No results!</p>
-      )}
-	</S.Content>
+      <div className="pagecontainer">
+		<div className="sidebar" id="sidemenu" />
+		<div className="content">
+			<TitlePage text="Suche" />
+			<S.Content>	 
+			<label>
+				<span>Search query</span>
+				<input
+				name="query"
+				value={query}
+				onChange={(event) => setQuery(event.target.value)}
+				/>
+			</label>
+			<h2>Results</h2>
+			{filteredEntries.length > 0 ? (
+				<ul>
+				{filteredEntries.map((result) => (
+					<SearchItem
+						slug={result.slug.split(`.`)[0]}              
+						category="Test"
+						title={result.frontmatter.title}
+						//description={result.body}
+					/>
+				))}
+				</ul>
+			) : (
+				<p>No results!</p>
+			)}
+			</S.Content>
+		</div>
+		<div className="end"></div>
+	</div>
 	</>
   )
 }

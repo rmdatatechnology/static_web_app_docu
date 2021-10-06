@@ -6,7 +6,8 @@ import Footer from '../components/Footer';
 
 import { useLocale } from '../hooks/locale';
 
-import * as S from './styled';
+import "./styles.scss";
+//import * as S from './styled';
 import Sidebar from "../components/Sidebar";
 
 const BaseLayout = ({ children, pageContext: { locale } }) => {
@@ -18,16 +19,15 @@ const BaseLayout = ({ children, pageContext: { locale } }) => {
   return (
     <>
       <GlobalStyles />
-      <S.Wrapper>
-        <Header />
-        <S.SiteContent role="main">
-		<S.ContainerMenu id="sidemenu">
-          <Sidebar  />
-		  </ S.ContainerMenu>
-          <S.Container>{children}</S.Container>
-        </S.SiteContent>
-        <Footer />
-      </S.Wrapper>
+      <div className="maincontainer">
+        <div>
+		<Header />
+		</div>
+        <div role="main">
+          <div>{children}</div>
+        </div>
+        
+      </div>
     </>
   )
 };

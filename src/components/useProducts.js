@@ -38,6 +38,8 @@ const query = graphql`
 			link
             name
 			product
+			img
+			slug
           }
         }
       }

@@ -1,11 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import SEO from '../components/seo';
-import PostItem from '../components/PostItem';
 import TitlePage from '../components/TitlePage';
-import LocalizedLink from '../components/LocalizedLink';
+import Sidebar from "../components/Sidebar";
+import SEO from '../components/seo';
 import Hr from "../components/Hr";
-import useProducts from '../components/useProducts';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -27,33 +25,17 @@ import {
   Image,
 } from "../components/MdxComponents";
 
-
-import * as S from '../components/ListWrapper/styled';
-import * as St from '../components/Content/styled'
+import * as S from '../components/Content/styled';
 import "../styles/styles.scss";
 
-const Index = ({ data }) => {
-  
-  const productItems = useProducts();
-  
-  if (!data || !data.mdx) {
-    return (
-		<div className="pagecontainer">
-			<div className="sidebar" id="sidemenu" />
-			<div className="content">
-				<div id="pageContent">
-					<TitlePage text={data.mdx.frontmatter.title} />
-				</div>
-				<br />
-				<br />
-			</div>
-			<div className="end"></div>
-		</div>
-	);
-  }
-  
-  
 
+const Default = ({ data }) => {
+	
+	if (!data) {
+    return null;
+  }
+	
+  const post = data.mdx;
   
   // Customize markdown component
     const mdxComponents = {
@@ -90,61 +72,50 @@ const Index = ({ data }) => {
       Italic,
       Image,
     }
+	
 
   return (
-    <>
+   
+	<>
 	<div className="pagecontainer">
 		<div className="sidebar" id="sidemenu" />
 		<div className="content">
+			<SEO
+				title={post.frontmatter.title}
+				description={post.frontmatter.description}
+				image={post.frontmatter.image}
+			/>
 			<div id="pageContent">
-				<TitlePage text={data.mdx.frontmatter.title} />
-				<St.Content>	 
+				<TitlePage text={post.frontmatter.title} />
+				<S.Content>	 
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer>{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
-				</St.Content>
+				</S.Content>
 			</div>
-			<br />
-			<br />
-			<S.ListWrapper>
-				{productItems.map(
-				({
-					name,
-					title,
-					slug,
-					img,
-          }) => (
-              <PostItem
-                slug={slug}
-                title={name}
-                key={name}
-				imageName={img}
-              />
-            ),
-        )}
-      </S.ListWrapper>
 		</div>
+		<div />
 		<div className="end"></div>
-	</div>
-	</>
+	 </div>
+    </>
   );
 };
 
-export default Index;
-
 export const query = graphql`
-  query Index($locale: String!) {
+  query Default($locale: String!, $title: String!) {
     mdx(
-        fields: { locale: { eq: $locale } }
-        frontmatter: {description: {eq: "index"}}
+      frontmatter: { title: { eq: $title } }
+      fields: { locale: { eq: $locale } }
     ) {
-	frontmatter {
-      title
+      frontmatter {
+        title
+		image
+		description
+      }
+      body
     }
-    body
-    fields {
-      locale
-    }
-	}
   }
 `;
+
+
+export default Default;

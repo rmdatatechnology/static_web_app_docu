@@ -1,0 +1,18 @@
+.pagecontainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: flex-start;
+  row-gap: 10px;
+}
+.sidebar {
+        flex: 1;
+		}
+.content {
+        flex: 1;
+		flex-grow: 4;
+		}
+.end {
+        flex: 1;
+		}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import TitlePage from '../components/TitlePage';
+import Sidebar from "../components/Sidebar";
 import SEO from '../components/seo';
 import Hr from "../components/Hr";
 import { MDXProvider } from "@mdx-js/react";
@@ -25,7 +26,7 @@ import {
 } from "../components/MdxComponents";
 
 import * as S from '../components/Content/styled';
-
+import "../styles/styles.scss";
 
 
 const Page = ({ data }) => {
@@ -76,20 +77,27 @@ const Page = ({ data }) => {
   return (
    
 	<>
-	  
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        image={post.frontmatter.image}
-      />
-	  <div id="pageContent">
-      <TitlePage text={post.frontmatter.title} />
-	  <S.Content>	 
-	   <MDXProvider components={mdxComponents}>
-			<MDXRenderer>{data.mdx.body}</MDXRenderer>
-	    </MDXProvider>
-      </S.Content>
-	  </div>
+	<div className="pagecontainer">
+		<div className="sidebar" id="sidemenu">
+			<Sidebar />
+		</div>
+		<div className="content">
+			<SEO
+				title={post.frontmatter.title}
+				description={post.frontmatter.description}
+				image={post.frontmatter.image}
+			/>
+			<div id="pageContent">
+				<TitlePage text={post.frontmatter.title} />
+				<S.Content>	 
+					<MDXProvider components={mdxComponents}>
+						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+					</MDXProvider>
+				</S.Content>
+			</div>
+		</div>
+		<div />
+	 </div>
     </>
   );
 };

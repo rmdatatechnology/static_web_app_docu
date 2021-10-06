@@ -11,9 +11,11 @@ export const SidebarLink = styled(Link)`
 `;
 
 export const Sidebar = styled.div`
-  max-width: 240px;
-  height: 100vh;
+  position: fixed;
+  width: 240px;
+  height: 75vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
   
   .sidebar-item {
   display: flex;
