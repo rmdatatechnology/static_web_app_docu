@@ -33,9 +33,8 @@ const SearchContent  = () => {
   `)
   
   const { locale } = useLocale();
-  
-  const urlMain = window.location.pathname;
-  const isLocale = urlMain.includes(`/${locale}/`);
+  let urlMain = typeof window !== 'undefined' ? window.location.pathname : '';
+  let isLocale = urlMain.includes(`/${locale}/`);
   
   function getSlug(slug) {
 		if(isLocale === false && locale === "de")
