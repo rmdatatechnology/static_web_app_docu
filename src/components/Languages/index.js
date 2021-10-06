@@ -17,9 +17,9 @@ const Languages = () => {
     if (locale === lang) return;
 
     const url = window.location.pathname.split("/").pop();
-	 if(!url || url === "en" || url === "fr" ||url === "it" || url === "de") 
+	 if(!url || url === "en" || url === "fr" ||url === "it") 
 	 {
-		return url === "de" ?
+		return lang === "de" ?
 			navigate(`/`) :
 			navigate(`/${lang}`);
 	 }
