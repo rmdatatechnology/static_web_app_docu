@@ -3,6 +3,7 @@ import useProducts from '../useProducts';
 import { useStaticQuery, graphql } from 'gatsby';
 import LocalizedLink from '../LocalizedLink';
 import { useProduct } from '../../hooks/products';
+import { navigate } from "gatsby";
 
 import * as S from './styled';
 
@@ -24,6 +25,9 @@ const ProductDropDown = () => {
 	  changeProduct(prod.toString().toLowerCase());
 	  params.delete('product');
 	  pro=null;
+	  let newUrl = typeof window !== 'undefined' ? window.location.pathname : null;
+	  if(newUrl)
+		navigate(newUrl);
    }
   
   const toggling = () => 
