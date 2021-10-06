@@ -24,23 +24,22 @@ const Languages = () => {
 			navigate(`/${lang}`);
 	 }
 	
-
-    const associatedUrls = languageMapping.find(item => {
-      let hasUrl = false;
-
-      Object.entries(item).forEach(([key, value]) => {
-        let last = value.split("/").pop();
-		if (last === url) return hasUrl = true;
-      });
-
-      return hasUrl
-    });
-
-    if (!associatedUrls) return navigate("/");
-
-    return lang === "de" ?
-      navigate(`/`) :
-      navigate(`/${lang}${associatedUrls[lang]}`);
+	function associatedUrl() 
+	{
+	  let newUrl = window.location.pathname.split("/");
+	  if(newUrl[0] === "")
+		  newUrl.shift();
+	  let hasLang = newUrl[0];
+	  if(hasLang === "en" || hasLang === "fr" || hasLang === "it"|| hasLang === "de")
+		  newUrl.shift();
+	  
+		return newUrl.join("/");
+	} 
+	
+	if(lang === "de")
+		navigate(`/` + associatedUrl());
+	else	
+		navigate(`/${lang}/` + associatedUrl());
   }
 
   return (

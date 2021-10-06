@@ -20,10 +20,7 @@ const Header = () => {
           <Logo />
 		  
         </S.LogoLink>
-		<S.TitleLink>
-		<a href="/">rmDATA Documentation
-		</a>
-		</S.TitleLink>
+		<S.TitleLink to="/"> rmDATA Documentation</S.TitleLink>
 		
         <S.ButtonMenu className={openedMenu ? 'is-active' : ''}>
           <ButtonMenu handleClick={toggleMenu} isActive={openedMenu} />
