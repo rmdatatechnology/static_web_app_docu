@@ -69,7 +69,7 @@ const PostItem = ({
         <S.PostItemInfo>
           <S.PostItemTag background={background} />
           <S.PostItemTitle>{title}</S.PostItemTitle>
-          <S.PostItemDescription>{imageName}</S.PostItemDescription>
+          <S.PostItemDescription>{description}</S.PostItemDescription>
         </S.PostItemInfo>
       </S.PostItemWrapper>
     </S.PostItemLink>
