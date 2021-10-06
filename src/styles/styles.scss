@@ -16,3 +16,35 @@
 .end {
         flex: 1;
 		}
+		
+.mySearch {
+   background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.list {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    align-items: center
+}
+
+.border-bottom {
+    border-bottom: 2px solid #eee
+}
+
+.list small {
+    color: #dedddd
+}

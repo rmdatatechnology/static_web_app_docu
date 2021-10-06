@@ -4,6 +4,7 @@ import SearchItem from '../components/SearchItem';
 import { useFlexSearch } from 'react-use-flexsearch';
 import { useStaticQuery } from 'gatsby'
 import { useLocale } from '../hooks/locale';
+import { Link, navigate } from "gatsby";
 import "../styles/styles.scss";
 import * as S from '../components/Content/styled';
 
@@ -33,6 +34,16 @@ const SearchContent  = () => {
   
   const { locale } = useLocale();
   
+  const urlMain = window.location.pathname;
+  const isLocale = urlMain.includes(`/${locale}/`);
+  
+  function getSlug(slug) {
+		if(isLocale === false && locale === "de")
+			return `/${slug}`;
+		else
+			return `/${locale}/${slug}`;
+  }
+  
   const index = queryData.localSearchPages.index
   const store = queryData.localSearchPages.store
 
@@ -46,31 +57,35 @@ const SearchContent  = () => {
       <div className="pagecontainer">
 		<div className="sidebar" id="sidemenu" />
 		<div className="content">
+			<S.Content>
 			<TitlePage text="Suche" />
-			<S.Content>	 
-			<label>
-				<span>Search query</span>
+			<div>	
 				<input
+				className="mySearch"
+				placeholder="&#x1F50D; Search for.."
 				name="query"
 				value={query}
 				onChange={(event) => setQuery(event.target.value)}
 				/>
-			</label>
-			<h2>Results</h2>
+			<h1>Results</h1>
 			{filteredEntries.length > 0 ? (
-				<ul>
+				<ul className="myUL">
 				{filteredEntries.map((result) => (
-					<SearchItem
-						slug={result.slug.split(`.`)[0]}              
-						category="Test"
-						title={result.frontmatter.title}
-						//description={result.body}
-					/>
+				
+					<Link to={getSlug(result.slug.split(`.`)[0])}> 
+					<div className="list border-bottom">
+					<span>{result.frontmatter.title}</span>
+					<br />
+					<small>{result.slug}</small>
+					</div>
+					</Link>
+				
 				))}
 				</ul>
 			) : (
 				<p>No results!</p>
 			)}
+			</div>
 			</S.Content>
 		</div>
 		<div className="end"></div>
