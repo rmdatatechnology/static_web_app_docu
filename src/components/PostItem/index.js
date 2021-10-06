@@ -58,7 +58,7 @@ const PostItem = ({
           />
         )}
         {!imageToUse && defaultImg && (
-          <S.PostItemImg
+          <GatsbyImage
             image={defaultImg.node.childImageSharp.gatsbyImageData}
             alt={title}
           />

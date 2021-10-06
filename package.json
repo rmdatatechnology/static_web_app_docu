@@ -1,7 +1,7 @@
 {
 					"name": "productinformations",
 					"private": true,
-					"description": "Gatsby example site using MDX and dependency-free i18n",
+					"description": "rmDATA Produktdokumentation",
 					"author": "DKoenigshofer",
 					"version": "0.1.0",
 					"license": "MIT",

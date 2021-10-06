@@ -112,11 +112,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-blog-mdx`,
-        short_name: `blog`,
+        name: `rmDATA Produkt-Dokumentation`,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: `./src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo_square.png`, // This path is relative to the root of the site.
       },
     },
 	// You can have multiple instances of this plugin to create indexes with
