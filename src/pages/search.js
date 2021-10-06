@@ -5,6 +5,7 @@ import { useFlexSearch } from 'react-use-flexsearch';
 import { useStaticQuery } from 'gatsby'
 import { useLocale } from '../hooks/locale';
 import { Link, navigate } from "gatsby";
+import { graphql } from 'gatsby'
 import "../styles/styles.scss";
 import * as S from '../components/Content/styled';
 
