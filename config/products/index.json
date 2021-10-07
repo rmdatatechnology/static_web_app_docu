@@ -3,8 +3,8 @@
     { "name": "GeoMapper", "link": "/grafik", "product": "geomapper" , "img":"geomapper", "slug":"/grafik?product=geomapper"},
 	{ "name": "GeoDesigner", "link": "/grafik" , "product": "geodesigner",  "img":"geodesigner", "slug":"/grafik?product=geodesigner"},
     { "name": "GeoDesktop", "link": "/grafik" , "product": "geodesktop" , "img":"geodesktop", "slug":"/grafik?product=geodesktop"},
-	{ "name": "Scripting", "link": "/scripting" , "product": "scripting",  "img":"geomapper", "slug":"/scripting"},
-	{ "name": "Konfigutation", "link": "/configuration" , "product": "configuration" , "img":"geomapper", "slug":"/configuration"},
-    { "name": "InventoryManager", "link": "/inventory" , "product": "inventorymanager" , "img":"inventory", "slug":"/inventory"}
+	{ "name": "Scripting", "link": "/scripting" , "product": "scripting",  "img":"geomapper", "slug":"/scripting?product=scripting"},
+	{ "name": "Konfiguration", "link": "/configuration" , "product": "configuration" , "img":"geomapper", "slug":"/configuration?product=configuration"},
+    { "name": "InventoryManager", "link": "/inventory" , "product": "inventorymanager" , "img":"inventory", "slug":"/inventory?product=inventorymanager"}
   ]
 }
