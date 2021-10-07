@@ -1,5 +1,5 @@
 // Text blocks
-export { default as Primary } from "./TextBlock/Primary"
+export { default as Example } from "./TextBlock/Example"
 export { default as Danger } from "./TextBlock/Danger"
 export { default as Warning } from "./TextBlock/Warning"
 export { default as Success } from "./TextBlock/Success"

@@ -7,7 +7,7 @@ import Hr from "../components/Hr";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
-  Primary,
+  Example,
   Danger,
   Warning,
   Success,
@@ -55,7 +55,7 @@ const Default = ({ data }) => {
       },
       hr: () => <Hr widthInPercent="100" verticalMargin="0.8rem" />,
       // Use the below components without having to import in *.mdx
-      Primary,
+      Example,
       Danger,
       Warning,
       Success,

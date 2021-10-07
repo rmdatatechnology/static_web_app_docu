@@ -3,10 +3,11 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import "./styles.scss"
 
-const TextBlock = ({ theme, children }) => {
+const TextBlock = ({ theme, children , symbol }) => {
  
   return (
     <div className={theme}>
+	<span>{symbol}</span>
       {children}
     </div>
   )

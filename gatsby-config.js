@@ -40,14 +40,14 @@ module.exports = {
 	{
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/config/products`,
+        path: `${__dirname}/documentation/settings/products`,
         name: `products`,
       },
     },
 	{
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/config/placeholder`,
+        path: `${__dirname}/documentation/settings/placeholder`,
         name: `placeholder`,
       },
     },
