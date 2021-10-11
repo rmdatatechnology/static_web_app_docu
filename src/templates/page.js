@@ -53,7 +53,14 @@ const Page = ({ data }) => {
           </li>
         )
       },
-      hr: () => <Hr widthInPercent="100" verticalMargin="0.8rem" />,
+	   "table": ({ children }) => {
+        return (
+          <table className="mdxTable" >
+            {children}
+          </table>
+        )
+      },
+	   hr: () => <Hr widthInPercent="100" verticalMargin="0.8rem" />,
       // Use the below components without having to import in *.mdx
       Example,
       Danger,

@@ -33,7 +33,7 @@ import * as St from '../components/Content/styled'
 import "../styles/styles.scss";
 
 const Index = ({ data }) => {
-  
+	
   const productItems = useProducts();
   
   if (!data || !data.mdx) {
@@ -69,6 +69,13 @@ const Index = ({ data }) => {
           <li>
             <span>{children}</span>
           </li>
+        )
+      },
+	  "table": ({ children }) => {
+        return (
+          <table className="mdxTable" >
+            {children}
+          </table>
         )
       },
       hr: () => <Hr widthInPercent="100" verticalMargin="0.8rem" />,
@@ -123,7 +130,7 @@ const Index = ({ data }) => {
             ),
         )}
       </S.ListWrapper>
-		</div>
+			</div>
 		<div className="end"></div>
 	</div>
 	</>
