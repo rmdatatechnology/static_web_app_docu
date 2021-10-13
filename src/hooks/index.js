@@ -4,12 +4,15 @@ import PropTypes from 'prop-types';
 import { LocaleProvider } from './locale';
 import { ProductProvider } from './products';
 import { MenuProvider } from './menu';
+import { SidebarProvider } from './sidebar';
 
 // Wrapping the application with all Contexts
 const AppProvider = ({ children }) => (
   <LocaleProvider>
 	<ProductProvider>
-		<MenuProvider>{children}</MenuProvider>
+		<SidebarProvider>
+			<MenuProvider>{children}</MenuProvider>
+		</SidebarProvider>
 	</ProductProvider>
   </LocaleProvider>
 );

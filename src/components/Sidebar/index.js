@@ -1,94 +1,60 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, navigate } from "gatsby";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Divider from "@material-ui/core/Divider";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
-import Collapse from "@material-ui/core/Collapse";
 import { useStaticQuery, graphql } from 'gatsby';
 import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
+import { useSidebar } from '../../hooks/sidebar';
 import LocalizedLink from '../LocalizedLink';
 import * as S from './styled';
+import OpenedSvg from '../../images/opened';
+import ClosedSvg from '../../images/closed';
+import "../../styles/styles.scss";
 
-function GetItems()
-{
-	 const { product } = useProduct();
-	 
-	 if(product.toString().toLowerCase() === "geodesigner")
-	 {
-		 return require('../../../documentation/toc/geodesigner.json');
-	 }
-	 else if(product.toString().toLowerCase() === "geomapper")
-	 {
-		 return require('../../../documentation/toc/geomapper.json');;
-	 }
-	 else if(product.toString().toLowerCase() === "geodesktop")
-	 {
-		 return require('../../../documentation/toc/geodesktop.json');;
-	 }
-	  else if(product.toString().toLowerCase() === "scripting")
-	 {
-		 return require('../../../documentation/toc/scripting.json');;
-	 }
-	  else if(product.toString().toLowerCase() === "configuration")
-	 {
-		 return require('../../../documentation/toc/configuration.json');;
-	 }
-	  else if(product.toString().toLowerCase() === "inventorymanager")
-	 {
-		 return require('../../../documentation/toc/inventorymanager.json');;
-	 }
-	 else
-	 {
-		 return require('../../../documentation/toc/geomapper.json');;
-	 }
-}
+const {
+  getSidebarItems,
+} = require(`../../utils/pageHelper`);
 
-function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
-  const [collapsed, setCollapsed] = React.useState(true);
-  const { title, items, de, it, fr, Icon, url, onClick: onClickProp } = item;
+
+
+const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item}) => {
   const { locale } = useLocale();
+  const { title, items, de, it, fr, Icon, url, onClick: onClickProp } = item;	
+  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const active = pathname === ('/' + url) || pathname === url;
+ // State and setter for storing whether element is visible
+  const [isIntersecting, setIntersecting] = useState(false);
 
-  function toggleCollapse() {
-    setCollapsed(prevValue => !prevValue);
-  }
+  const focusDiv = useRef();
+
+  useEffect(() => {
+		if (focusDiv) {
+		// Our ref has a value, pointing to an HTML element
+		// The perfect time to observe it.
+		
+			if(focusDiv.current && active) focusDiv.current.focus(); 
+		}
+		 return () => {
+			if (focusDiv) {
+			// We need to clean up after this ref
+			// The perfect time to unobserve it.
+			
+		}	
+    };
+	 
+	}, [focusDiv]);
   
-  function onClick(e) {
-	e.preventDefault();
-    if (Array.isArray(items)) {
-      toggleCollapse();
-    }
-	else
-	{
-		const urlMain = window.location.pathname;
-		const isLocale = urlMain.includes(`/${locale}/`);
 
-		if(isLocale === false && locale === "de")
-			return navigate(`/${item.url}`);
-		else
-			return navigate(`/${locale}/${item.url}`);
-	}
-    if (onClickProp) {
-      onClickProp(e, item);
-    }
-  }
+  const isAlreadyOpen = opened[url] === true;
+  const expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url || checkForValue(item, pathname, opened);
+	  
+  const collapse = () => {
+	setOpened(url);
+  };
 
-  let expandIcon;
+  const hasChildren = items && items.length !== 0;
+  
+  const calculatedClassName = active ? 'sidebar-item active' : 'sidebar-item';
  
-  if (Array.isArray(items) && items.length) {
-    expandIcon = !collapsed ? (
-      <ExpandLessIcon
-        className={
-          "sidebar-item-expand-arrow" + " sidebar-item-expand-arrow-expanded"
-        }
-      />
-    ) : (
-      <ExpandMoreIcon className="sidebar-item-expand-arrow" />
-    );
-  }
-  
   let label = item.de;
   if(locale === "it")
   {
@@ -98,73 +64,109 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
   {
 	  label = item.fr;
   }
+   
+  function onClick(e) {
+	e.preventDefault();
+    if (hasChildren) {
+      collapse();
+    }
+	else
+	{
+		const urlM = window.location.pathname;
+		const isLocale = urlM.includes(`/${locale}/`);
+
+		if(isLocale === false && locale === "de")
+			return navigate(`/${url}`);
+		else
+			return navigate(`/${locale}/${url}`);
+	}
+   
+  }
 
   return (
+    
     <>
-      <ListItem
-        className="sidebar-item"
+	  {label && (
+         <S.SidebarButton
+        className={calculatedClassName}
+		ref={focusDiv}
         onClick={onClick}
-        button
-        dense
-        {...rest}
       >
 		<div
           style={{ paddingLeft: depth * depthStep }}
           className="sidebar-item-content"
         >
           {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
-          <div className="sidebar-item-text">{label}</div>
+	  <div className="sidebar-item-text">{label}</div>
         </div>
-        {expandIcon}
-      </ListItem>
-      <Collapse in={!collapsed} timeout="auto" unmountOnExit>
-        {Array.isArray(items) ? (
-          <List disablePadding dense>
-            {items.map((subItem, index) => (
-              <React.Fragment key={`${subItem.title}${index}`}>
-                {subItem === "divider" ? (
-                  <Divider style={{ margin: "6px 0" }} />
-                ) : (
-                  <S.SidebarLink>
-				  <SidebarItem
-                    depth={depth + 1}
-                    depthStep={depthStep}
-                    item={subItem}
-                  />
-				  </ S.SidebarLink>
-                )}
-              </React.Fragment>
-            ))}
-          </List>
-        ) : null}
-      </Collapse>
+		{hasChildren ? (
+		<>
+		{expanded ? <OpenedSvg /> : <ClosedSvg />}
+		</>
+		) : null}
+      </S.SidebarButton>
+      )}
+
+      {expanded && hasChildren ? (
+        <ul>
+          {items.map((item, index) => (
+            <SidebarItem
+              setOpened={setOpened}
+              opened={opened}
+			  item={item}
+			  depth={depth + 1}
+              depthStep={depthStep}
+            />
+          ))}
+        </ul>
+      ) : null}
     </>
+	
+	
   );
+};
+
+function checkForValue(item, url, opened) {
+    
+	if(!item)
+		return false;
+	
+	let expanded = false;
+	const hasChildren = item.items && item.items.length !== 0;
+	if(hasChildren)
+	{
+		return item.items.some(function(element) 
+		{ 
+			return checkForValue(element, url, opened)
+		});
+	}
+	else
+	{
+		const alreadyOpened = opened[item.url] === true;
+		expanded = alreadyOpened || url === item.url || url === item.url + '/' || url === '/' + item.url;
+		opened[item.url] = expanded;
+	}
+	return expanded;
 }
 
-
-function Sidebar({ depthStep, depth, expanded }) {
-		
-  const items = GetItems();
-		
+function Sidebar({ depthStep, depth}) {
+  const { product } = useProduct();
+  const items = getSidebarItems(product);
+  const { opened, toggle } = useSidebar();
+ 
   return (
     <S.Sidebar>
-      <List disablePadding dense>
-        {items.map((sidebarItem, index) => (
-          <React.Fragment key={`${sidebarItem.title}${index}`}>
-            {sidebarItem === "divider" ? (
-              <Divider style={{ margin: "6px 0" }} />
-            ) : (
-              <SidebarItem
-                depthStep={depthStep}
+      <ul>
+	 {items.map((sidebarItem, index) => (
+			  <SidebarItem
+				depthStep={depthStep}
                 depth={depth}
-                expanded={expanded}
-                item={sidebarItem}
+                setOpened={toggle}
+				opened={opened}
+				item={sidebarItem}
               />
-            )}
-          </React.Fragment>
         ))}
-      </List>
+      </ul>
     </S.Sidebar>
   );
 }

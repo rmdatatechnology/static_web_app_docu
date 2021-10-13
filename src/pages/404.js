@@ -10,6 +10,7 @@ const NotFound = () => (
 			<SEO title="404: Not found" />
 			<h1>404</h1>
 		</div>
+		<div className="end"></div>
 	</div>
   </>
 );

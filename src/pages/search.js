@@ -8,6 +8,9 @@ import { Link, navigate } from "gatsby";
 import { graphql } from 'gatsby'
 import "../styles/styles.scss";
 import * as S from '../components/Content/styled';
+const {
+  getSidebarItems,
+} = require(`../utils/pageHelper`);
 
 const unflattenResults = (results) =>
 	results.map(entry => {
@@ -15,37 +18,7 @@ const unflattenResults = (results) =>
         return { body, slug, frontmatter: { title }, fields: { locale } };
     });
 
-function getItems(product)
-{
-	if(product.toString().toLowerCase() === "geodesigner")
-	 {
-		 return require('../../documentation/toc/geodesigner.json');
-	 }
-	 else if(product.toString().toLowerCase() === "geomapper")
-	 {
-		 return require('../../documentation/toc/geomapper.json');
-	 }
-	 else if(product.toString().toLowerCase() === "geodesktop")
-	 {
-		 return require('../../documentation/toc/geodesktop.json');
-	 }
-	  else if(product.toString().toLowerCase() === "scripting")
-	 {
-		 return require('../../documentation/toc/scripting.json');
-	 }
-	  else if(product.toString().toLowerCase() === "configuration")
-	 {
-		 return require('../../documentation/toc/configuration.json');
-	 }
-	  else if(product.toString().toLowerCase() === "inventorymanager")
-	 {
-		 return require('../../documentation/toc/inventorymanager.json');
-	 }
-	 else
-	 {
-		 return require('../../documentation/toc/geomapper.json');
-	 }
-};
+
 function checkForValue(items, value) {
     
 	if(!items)
@@ -97,7 +70,7 @@ const SearchContent  = () => {
 			return `/${locale}/${slug}`;
   }
   
-  let items = getItems(product);
+  let items = getSidebarItems(product);
   
   const index = queryData.localSearchPages.index
   const store = queryData.localSearchPages.store
