@@ -51,3 +51,40 @@
 .active{
 	color: #325ea8
 }
+
+.sidebarButton {
+	font-size: 16px;
+	text-decoration: none;
+	position: relative;
+	padding: 5px;
+	margin-bottom: var(--space-sm);
+	text-align: left;
+	border: 0px;
+	background-color: transparent;
+	width: 100%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	 white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	outline: none;
+}
+.sidebarButton:hover{
+	background-color: #f6f6f6;
+	text-decoration: none;
+	border: 0px;
+	outline: none;
+}
+.sidebarButton:active{
+	background-color: #f6f6f6;
+	text-decoration: none;
+	border: 0px;
+	outline: none;
+}
+.sidebarButton:focus{
+	background-color: #f6f6f6;
+	text-decoration: none;
+	border: 0px;
+	outline: none;
+}

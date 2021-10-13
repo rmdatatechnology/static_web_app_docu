@@ -21,17 +21,17 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
   const { title, items, de, it, fr, Icon, url, onClick: onClickProp } = item;	
   let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
   const active = pathname === ('/' + url) || pathname === url;
- // State and setter for storing whether element is visible
-  const [isIntersecting, setIntersecting] = useState(false);
-
+  const isAlreadyOpen = opened[url] === true;
+  let expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url || checkForValue(item, pathname, opened);
+	  
   const focusDiv = useRef();
 
   useEffect(() => {
 		if (focusDiv) {
 		// Our ref has a value, pointing to an HTML element
 		// The perfect time to observe it.
-		
-			if(focusDiv.current && active) focusDiv.current.focus(); 
+		if(focusDiv.current && active) focusDiv.current.focus(); 
+			
 		}
 		 return () => {
 			if (focusDiv) {
@@ -43,17 +43,13 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
 	 
 	}, [focusDiv]);
   
-
-  const isAlreadyOpen = opened[url] === true;
-  const expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url || checkForValue(item, pathname, opened);
-	  
   const collapse = () => {
 	setOpened(url);
   };
 
   const hasChildren = items && items.length !== 0;
   
-  const calculatedClassName = active ? 'sidebar-item active' : 'sidebar-item';
+  const calculatedClassName = active ? 'sidebarButton active' : 'sidebarButton';
  
   let label = item.de;
   if(locale === "it")
@@ -87,24 +83,23 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
     
     <>
 	  {label && (
-         <S.SidebarButton
+         <button 
         className={calculatedClassName}
 		ref={focusDiv}
         onClick={onClick}
       >
 		<div
           style={{ paddingLeft: depth * depthStep }}
-          className="sidebar-item-content"
         >
           {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
-	  <div className="sidebar-item-text">{label}</div>
+	  <div>{label}</div>
         </div>
 		{hasChildren ? (
 		<>
 		{expanded ? <OpenedSvg /> : <ClosedSvg />}
 		</>
 		) : null}
-      </S.SidebarButton>
+      </button>
       )}
 
       {expanded && hasChildren ? (
