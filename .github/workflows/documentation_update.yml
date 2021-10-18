@@ -1,0 +1,27 @@
+name: Trigger from Dokumentation
+on:
+  repository_dispatch:
+    types: [doku_sync]
+jobs:
+  doku_sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Information
+        run: |
+          echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: true
+      - name: Pull submodule
+        run: |
+          git pull --recurse-submodules
+          git submodule update --init --recursive --remote
+      - name: Push changes
+        run: |
+          git config --global user.name 'DorisKoenigshofer'
+          git config --global user.email 'doris.koenigshofer@gmail.com'
+          git add .
+          git commit -m "Automated Update from Dokumentation"
+          git push
