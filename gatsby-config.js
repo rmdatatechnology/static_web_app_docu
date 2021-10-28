@@ -136,7 +136,7 @@ module.exports = {
         // for advanced users.
         //
         engineOptions: {
-			tokenize: "full",
+			tokenize: "forward",
 			},
 
         // GraphQL query used to fetch all data for the search index. This is
