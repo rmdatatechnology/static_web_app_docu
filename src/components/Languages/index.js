@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from "gatsby";
+import { navigate, withPrefix } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import useLanguageMapping from '../useLanguageMapping';
 
@@ -26,7 +26,11 @@ const Languages = () => {
 	
 	function associatedUrl() 
 	{
-	  let newUrl = window.location.pathname.split("/");
+	  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+	  let isWithPrefix = pathname === withPrefix("/");
+	  let newUrl = pathname.split("/");
+	  if(isWithPrefix)
+		  newUrl.shift();
 	  if(newUrl[0] === "")
 		  newUrl.shift();
 	  let hasLang = newUrl[0];
