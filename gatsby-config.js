@@ -137,6 +137,7 @@ module.exports = {
         //
         engineOptions: {
 			tokenize: "forward",
+			optimize: true,
 			},
 
         // GraphQL query used to fetch all data for the search index. This is
