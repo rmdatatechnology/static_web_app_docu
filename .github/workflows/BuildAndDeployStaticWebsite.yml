@@ -33,5 +33,5 @@ jobs:
       with:
         enabled-static-website: 'true'
         folder: 'public'
-        connection-string: ${{ secrets.AZURE_ENDPOINT_TEST }}
+        connection-string: ${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}
 
