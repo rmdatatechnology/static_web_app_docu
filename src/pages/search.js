@@ -14,8 +14,8 @@ const {
 
 const unflattenResults = (results) =>
 	results.map(entry => {
-        const { locale, title, body, slug } = entry;
-        return { body, slug, frontmatter: { title }, fields: { locale } };
+        const { locale, title, slug } = entry;
+        return { slug, frontmatter: { title }, fields: { locale } };
     });
 
 

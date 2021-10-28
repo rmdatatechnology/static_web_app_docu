@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, navigate } from 'gatsby';
 import useTranslations from '../useTranslations';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useLocale } from '../../hooks/locale';
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as S from './styled';
 
@@ -31,7 +32,7 @@ const PostItem = ({
       }
     `,
   );
-
+	const { locale } = useLocale();
   const defaultImg = listImages.edges.find(img => {
     if(img.node.name === 'default')
 		return img;
@@ -46,10 +47,21 @@ const PostItem = ({
 	return null;
   });
 
-  
+  function onClick(e) {
+	e.preventDefault();
+   
+		const urlM = window.location.pathname;
+		const isLocale = urlM.includes(`/${locale}/`);
+
+		if(isLocale === false && locale === "de")
+			return navigate(`/${slug}`);
+		else
+			return navigate(`/${locale}/${slug}`);
+   
+  }
 	
   return (
-    <S.PostItemLink to={slug}>
+    <S.PostItemLink to="" onClick={onClick}>
       <S.PostItemWrapper>
         {imageToUse && (
           <GatsbyImage

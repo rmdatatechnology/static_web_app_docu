@@ -138,7 +138,9 @@ module.exports = {
         //
         engineOptions: {
 			tokenize: "forward",
-			optimize: true,
+			fastupdate: true,
+			minlength: 3,
+			cache: 100,
 			},
 
         // GraphQL query used to fetch all data for the search index. This is
@@ -173,7 +175,7 @@ module.exports = {
         // List of keys to store and make available in your UI. The values of
         // the keys are taken from the normalizer function below.
         // Default: all fields
-        store: ['id', 'title', 'locale', 'slug', 'body'],
+        store: ['id', 'title', 'locale', 'slug'],
 
         // Function used to map the result from the GraphQL query. This should
         // return an array of items to index in the form of flat objects
