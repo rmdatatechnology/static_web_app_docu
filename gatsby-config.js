@@ -1,9 +1,10 @@
 module.exports = {
+   pathPrefix: `/documentation`,
    siteMetadata: {
     title: `Produktinformation`,
-    description: `Test`,
-	author: `Me`,
-    siteUrl: `http://localhost:8000/`,
+    description: `rmData Produktdokumentation`,
+	author: `Doris Koenigshofer`,
+    siteUrl: `https://portal.rmdatacloud-test.com/documentation/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

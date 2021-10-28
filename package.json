@@ -6,7 +6,8 @@
 					"version": "0.1.0",
 					"license": "MIT",
 					"scripts": {
-										"build": "npm run copyImages && npm run clean && gatsby build",
+										"build": "npm run copyImages && npm run clean && gatsby build --prefix-paths",
+										"build-local": "npm run copyImages && npm run clean && gatsby build",
 										"develop": "gatsby develop",
 										"start": "npm run develop",
 										"clean": "gatsby clean",
