@@ -4,8 +4,7 @@ import { useStaticQuery, graphql, navigate } from 'gatsby';
 import useTranslations from '../useTranslations';
 import { useLocale } from '../../hooks/locale';
 import { GatsbyImage } from "gatsby-plugin-image"
-
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 const PostItem = ({
   slug,
@@ -54,15 +53,15 @@ const PostItem = ({
 		const isLocale = urlM.includes(`/${locale}/`);
 
 		if(isLocale === false && locale === "de")
-			return navigate(`/${slug}`);
+			return navigate(`${slug}`);
 		else
-			return navigate(`/${locale}/${slug}`);
+			return navigate(`/${locale}${slug}`);
    
   }
 	
   return (
-    <S.PostItemLink to="" onClick={onClick}>
-      <S.PostItemWrapper>
+    <button onClick={onClick}>
+      <section>
         {imageToUse && (
           <GatsbyImage
             image={imageToUse.node.childImageSharp.gatsbyImageData}
@@ -76,13 +75,13 @@ const PostItem = ({
           />
         )}
 
-        <S.PostItemInfo>
-          <S.PostItemTag background={background} />
-          <S.PostItemTitle>{title}</S.PostItemTitle>
-          <S.PostItemDescription>{description}</S.PostItemDescription>
-        </S.PostItemInfo>
-      </S.PostItemWrapper>
-    </S.PostItemLink>
+        <div className="productItem">
+          <span className="productInfo" />
+          <h1 className="productTitle">{title}</h1>
+          <p>{description}</p>
+        </div>
+      </section>
+    </button>
   );
 };
 

@@ -88,3 +88,31 @@
 	border: 0px;
 	outline: none;
 }
+
+.productItem{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 0px;
+}
+.productInfo{
+ display: inline-block;
+  align-items: center;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+}
+
+.productTitle{
+	font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+
+}
