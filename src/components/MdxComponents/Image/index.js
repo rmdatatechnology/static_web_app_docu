@@ -12,18 +12,16 @@ const Image = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
-        siteMetadata {
-          siteUrl
+        pathPrefix
         }
       }
-    }
   `)
   
   let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
   let isWithPrefix = pathname === withPrefix("/");
   
   if(isWithPrefix)
-	  child = data.site.siteMetadata.siteUrl + child;
+	  child = data.site.pathPrefix + child;
   
   return (<span class="custom-image"><img src={child} alt={alt} /></span>);
 }
