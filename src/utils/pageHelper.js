@@ -5,6 +5,8 @@ import scripting from '../../documentation/toc/scripting.json';
 import configuration from '../../documentation/toc/configuration.json';
 import inventorymanager from '../../documentation/toc/inventorymanager.json';
 
+import { withPrefix } from "gatsby";
+
 // Sets variables for light and dark theme
 export const getSidebarItems = (product) => {
 {
@@ -39,3 +41,24 @@ export const getSidebarItems = (product) => {
 	 }
 }
 }
+
+export const getNewUrlWithoutPrefix = (withLocale) => {
+	  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+	  let isWithPrefix = pathname === withPrefix("/");
+	  let newUrl = pathname.split("/");
+	 
+	  if(newUrl[0] === "")
+		  newUrl.shift();
+	   
+	  if(isWithPrefix)
+		   newUrl.shift();
+
+	  if(withLocale === false)
+	  {
+		let hasLang = newUrl[0];
+		if(hasLang === "en" || hasLang === "fr" || hasLang === "it"|| hasLang === "de")
+		  newUrl.shift();
+	  }
+	  
+		return newUrl.join("/");
+	} 

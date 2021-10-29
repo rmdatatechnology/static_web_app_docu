@@ -7,6 +7,11 @@ import { navigate } from "gatsby";
 
 import * as S from './styled';
 
+const {
+  getNewUrlWithoutPrefix,
+} = require(`../../utils/pageHelper`);
+
+
 const ProductDropDown = () => {
   const productItems = useProducts();
   
@@ -25,9 +30,9 @@ const ProductDropDown = () => {
 	  changeProduct(prod.toString().toLowerCase());
 	  params.delete('product');
 	  pro=null;
-	  let newUrl = typeof window !== 'undefined' ? window.location.pathname : null;
+	  let newUrl = getNewUrlWithoutPrefix(true);
 	  if(newUrl)
-		navigate(newUrl);
+		navigate("/" + newUrl);
    }
   
   const toggling = () => 

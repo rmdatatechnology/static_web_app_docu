@@ -2,8 +2,13 @@ import React from 'react';
 import { navigate, withPrefix } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import useLanguageMapping from '../useLanguageMapping';
-
 import * as S from './styled';
+
+
+const {
+  getNewUrlWithoutPrefix,
+} = require(`../../utils/pageHelper`);
+
 
 const Languages = () => {
   // Grab the locale (passed through context) from the Locale Provider 
@@ -24,26 +29,10 @@ const Languages = () => {
 			navigate(`/${lang}`);
 	 }
 	
-	function associatedUrl() 
-	{
-	  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
-	  let isWithPrefix = pathname === withPrefix("/");
-	  let newUrl = pathname.split("/");
-	  if(isWithPrefix)
-		  newUrl.shift();
-	  if(newUrl[0] === "")
-		  newUrl.shift();
-	  let hasLang = newUrl[0];
-	  if(hasLang === "en" || hasLang === "fr" || hasLang === "it"|| hasLang === "de")
-		  newUrl.shift();
-	  
-		return newUrl.join("/");
-	} 
-	
 	if(lang === "de")
-		navigate(`/` + associatedUrl());
+		navigate(`/` + getNewUrlWithoutPrefix(false));
 	else	
-		navigate(`/${lang}/` + associatedUrl());
+		navigate(`/${lang}/` + getNewUrlWithoutPrefix(false));
   }
 
   return (
