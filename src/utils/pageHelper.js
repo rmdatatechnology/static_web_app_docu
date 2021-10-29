@@ -44,9 +44,9 @@ export const getSidebarItems = (product) => {
 
 export const getNewUrlWithoutPrefix = (withLocale) => {
 	  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
-	  let isWithPrefix = pathname === withPrefix("/");
 	  let newUrl = pathname.split("/");
-	 
+	  let isWithPrefix = pathname === withPrefix("/");
+
 	  if(newUrl[0] === "")
 		  newUrl.shift();
 	   
