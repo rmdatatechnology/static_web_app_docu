@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate, withPrefix } from "gatsby";
+import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import useLanguageMapping from '../useLanguageMapping';
 import * as S from './styled';
@@ -17,6 +17,14 @@ const Languages = () => {
 
   const languageMapping = useLanguageMapping();
 
+const prefix = useStaticQuery(graphql`
+    query {
+      site {
+        pathPrefix
+        }
+      }
+  `)
+
   function handleClickLanguage(e, lang) {
     e.preventDefault();
     if (locale === lang) return;
@@ -30,9 +38,9 @@ const Languages = () => {
 	 }
 	
 	if(lang === "de")
-		navigate(`/` + getNewUrlWithoutPrefix(false));
+		navigate(`/` + getNewUrlWithoutPrefix(false, prefix.site.pathPrefix));
 	else	
-		navigate(`/${lang}/` + getNewUrlWithoutPrefix(false));
+		navigate(`/${lang}/` + getNewUrlWithoutPrefix(false, prefix.site.pathPrefix));
   }
 
   return (

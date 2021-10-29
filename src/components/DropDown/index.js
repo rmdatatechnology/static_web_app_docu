@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
 import useProducts from '../useProducts';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, navigate } from 'gatsby';
 import LocalizedLink from '../LocalizedLink';
 import { useProduct } from '../../hooks/products';
-import { navigate } from "gatsby";
 
 import * as S from './styled';
 
@@ -13,8 +12,15 @@ const {
 
 
 const ProductDropDown = () => {
-  const productItems = useProducts();
+  const prefix = useStaticQuery(graphql`
+    query {
+      site {
+        pathPrefix
+        }
+      }
+  `)
   
+  const productItems = useProducts();
   const [isOpen, setIsOpen] = useState(false);
   
   const { product, changeProduct } = useProduct();
@@ -30,7 +36,7 @@ const ProductDropDown = () => {
 	  changeProduct(prod.toString().toLowerCase());
 	  params.delete('product');
 	  pro=null;
-	  let newUrl = getNewUrlWithoutPrefix(true);
+	  let newUrl = getNewUrlWithoutPrefix(true, prefix.site.pathPrefix);
 	  if(newUrl)
 		navigate("/" + newUrl);
    }

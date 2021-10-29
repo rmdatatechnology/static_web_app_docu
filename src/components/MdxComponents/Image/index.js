@@ -18,7 +18,14 @@ const Image = ({ children }) => {
   `)
   
   let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
-  let isWithPrefix = pathname === withPrefix("/");
+  let newUrl = pathname.split("/");
+  let isWithPrefix = false;
+
+  if(newUrl[0] === "")
+	newUrl.shift();
+	   
+  if(data.site.pathPrefix.toLower().includes(newUrl[0].toLower()))
+	isWithPrefix=true;
   
   if(isWithPrefix)
 	  child = data.site.pathPrefix + child;
