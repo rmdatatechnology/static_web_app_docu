@@ -14,15 +14,17 @@ const Image = ({ children }) => {
   let newUrl = pathname.split("/");
   let isWithPrefix = false;
 
-  if(newUrl[0] === "")
+if(newUrl)
+{
+  if(newUrl.length > 1 && newUrl[0] === "")
 	newUrl.shift();
 	   
-  if("/documentation".toLowerCase().includes(newUrl[0].toLowerCase()))
+  if(newUrl.length > 1 && "/documentation".toLowerCase().includes(newUrl[0].toLowerCase()))
 	isWithPrefix=true;
   
  if(isWithPrefix)
 	 child = "/documentation" + child;
-  
+}
   return (<span class="custom-image"><img src={child} alt={alt} /></span>);
 }
 
