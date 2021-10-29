@@ -50,7 +50,7 @@ export const getNewUrlWithoutPrefix = (withLocale, prefix) => {
 	  if(newUrl[0] === "")
 		  newUrl.shift();
 	   
-	  if(prefix.toString().toLower().includes(newUrl[0].toLower()))
+	  if(prefix && prefix.toString().toLowerCase().includes(newUrl[0].toLowerCase()))
 		   newUrl.shift();
 
 	  if(withLocale === false)
