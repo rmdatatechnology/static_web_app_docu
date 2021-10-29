@@ -24,7 +24,7 @@ const Image = ({ children }) => {
   if(newUrl[0] === "")
 	newUrl.shift();
 	   
-  if(data.site.pathPrefix.toLower().includes(newUrl[0].toLower()))
+  if(data.site.pathPrefix && data.site.pathPrefix.toString().toLower().includes(newUrl[0].toLower()))
 	isWithPrefix=true;
   
   if(isWithPrefix)
