@@ -1,8 +1,6 @@
 import React from 'react';
 import useTranslations from '../useTranslations';
-import SocialLinks from '../SocialLinks';
-
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 const Footer = () => {
   const {
@@ -13,14 +11,14 @@ const Footer = () => {
   } = useTranslations();
 
   return (
-    <S.FooterWrapper id="footer">
-      <S.FooterContainer>
+    <div className="footer-wrapper" id="footer">
+      <div className="footer-container">
        
         <p>
           {maintainedBy}{' '}
         </p>
-      </S.FooterContainer>
-    </S.FooterWrapper>
+      </div>
+    </div>
   );
 };
 

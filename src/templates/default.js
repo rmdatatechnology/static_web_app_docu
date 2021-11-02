@@ -25,7 +25,6 @@ import {
   Image,
 } from "../components/MdxComponents";
 
-import * as S from '../components/Content/styled';
 import "../styles/styles.scss";
 
 
@@ -94,11 +93,11 @@ const Default = ({ data }) => {
 			/>
 			<div id="pageContent">
 				<TitlePage text={post.frontmatter.title} />
-				<S.Content>	 
+				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer>{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
-				</S.Content>
+				</section>
 			</div>
 		</div>
 		<div />

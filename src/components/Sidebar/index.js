@@ -5,7 +5,6 @@ import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
 import { useSidebar } from '../../hooks/sidebar';
 import LocalizedLink from '../LocalizedLink';
-import * as S from './styled';
 import OpenedSvg from '../../images/opened';
 import ClosedSvg from '../../images/closed';
 import "../../styles/styles.scss";
@@ -150,7 +149,7 @@ function Sidebar({ depthStep, depth}) {
   const { opened, toggle } = useSidebar();
  
   return (
-    <S.Sidebar>
+    <div className="sidebar-content">
       <ul>
 	 {items.map((sidebarItem, index) => (
 			  <SidebarItem
@@ -162,7 +161,7 @@ function Sidebar({ depthStep, depth}) {
               />
         ))}
       </ul>
-    </S.Sidebar>
+    </div>
   );
 }
 

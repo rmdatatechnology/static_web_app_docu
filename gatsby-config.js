@@ -79,15 +79,18 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+		plugins: ['gatsby-remark-images'],
         gatsbyRemarkPlugins: [
-          // Adding title to code blocks. Usage: ```js:title=example.js
           {
-            resolve: "gatsby-remark-code-titles",
+            resolve: 'gatsby-remark-images',
             options: {
-              className: "code-title-custom",
+              maxWidth: 500,
+			  linkImagesToOriginal: false,
+			  wrapperStyle: 'display: inline-block; z-index: 1',
             },
           },
         ],
+		
       },
     },
 

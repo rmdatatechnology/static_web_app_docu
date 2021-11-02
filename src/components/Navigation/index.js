@@ -4,27 +4,28 @@ import useProducts from '../useProducts';
 import useTranslations from '../useTranslations';
 import { useStaticQuery, graphql } from 'gatsby';
 import ProductDropDown from '../DropDown';
+import LocalizedLink from '../LocalizedLink';
 
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 const Navigation = ({ isActive, handleToggleMenu }) => {
   const menuItems = useMenu();
   
   return (
     <>
-      <S.Navigation>
+      <nav className="navigation">
         {menuItems.map((menu, index) => (
-          <S.NavigationLink
+          <LocalizedLink className="navigation-link"
             to={menu.link}
             aria-label={menu.name}
             activeClassName="active"
             key={`${menu.link}${index}`}
             >
             {menu.name}
-          </S.NavigationLink>
+          </LocalizedLink>
         ))}
 		<ProductDropDown />
-      </S.Navigation>
+      </nav>
     </>
   );
 };

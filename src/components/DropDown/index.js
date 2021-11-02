@@ -3,8 +3,7 @@ import useProducts from '../useProducts';
 import { useStaticQuery, graphql, navigate } from 'gatsby';
 import LocalizedLink from '../LocalizedLink';
 import { useProduct } from '../../hooks/products';
-
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 const {
   getNewUrlWithoutPrefix,
@@ -66,35 +65,28 @@ const ProductDropDown = () => {
 	  
   }
 
-	const arrowClosed = (
-	<span className="arrow-closed" />
-	)
-	const arrowOpen = (
-	<span className="arrow-open" />
-	)
-  
   return (
 	 <>
-	 <S.Dropdown>
-				<S.Button onClick={toggling}>
+	 <div className="dropdown">
+				<button className="dropdown-button" onClick={toggling}>
 					<div>
 					<span>{getProductName()}</span>
 					{isOpen ?
-					<S.ArrowOpen /> :
-					<S.ArrowClosed />
+					<span className="arrow-open" /> :
+					<span className="arrow-closed" />
 					}
 					</div>
-					</S.Button>
+					</button>
 			{isOpen && (
-				<S.DropDownList>
+				<ul className="dropdown-list">
 					{productItems.map(option => (
-						<S.ListItem onClick={onOptionClicked(option.name)}>
-							<S.DropDownLink to={option.link}>{option.name}</S.DropDownLink>
-						</S.ListItem>
+						<li className="dropdown-listitem" onClick={onOptionClicked(option.name)}>
+							<LocalizedLink className="dropdown-link" to={option.link}>{option.name}</LocalizedLink>
+						</li>
               ))}
-			</S.DropDownList>
+			</ul>
 			)}
-      </S.Dropdown>
+      </div>
 	  </>
   );
 };

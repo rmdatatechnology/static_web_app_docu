@@ -1,14 +1,15 @@
 import React from 'react';
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 export const ButtonMenu = props => {
+  let className = props.isActive ? 'btn-menu active' : 'btn-menu';
   return (
-    <S.ButtonHamburger
+    < button 
       onClick={props.handleClick}
-      className={props.isActive ? 'active' : ''}
+      className={className}
     >
-      <span></span>
-    </S.ButtonHamburger>
+      <span className="span-menu"></span>
+    </button>
   );
 };
 

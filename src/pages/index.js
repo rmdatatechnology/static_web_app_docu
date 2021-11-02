@@ -27,9 +27,6 @@ import {
   Image,
 } from "../components/MdxComponents";
 
-
-import * as S from '../components/ListWrapper/styled';
-import * as St from '../components/Content/styled'
 import "../styles/styles.scss";
 
 const Index = ({ data }) => {
@@ -105,15 +102,15 @@ const Index = ({ data }) => {
 		<div className="content">
 			<div id="pageContent">
 				<TitlePage text={data.mdx.frontmatter.title} />
-				<St.Content>	 
+				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer>{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
-				</St.Content>
+				</section>
 			</div>
 			<br />
 			<br />
-			<S.ListWrapper>
+			<section className="custom-section">
 				{productItems.map(
 				({
 					name,
@@ -129,7 +126,7 @@ const Index = ({ data }) => {
               />
             ),
         )}
-      </S.ListWrapper>
+      </section>
 			</div>
 		<div className="end"></div>
 	</div>

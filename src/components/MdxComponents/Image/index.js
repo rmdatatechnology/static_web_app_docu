@@ -1,5 +1,5 @@
 import React from "react"
-import "./styles.scss"
+import "../../../styles/styles.scss";
 import { useStaticQuery, graphql, withPrefix } from 'gatsby'
 
 const Image = ({ children }) => {

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 const TitlePage = props => {
   const { text } = props;
 
-  return <S.TitleElement>{text}</S.TitleElement>;
+  return <h1 className="title-wrapper">{text}</h1>;
 };
 
 export default TitlePage;

@@ -4,37 +4,38 @@ import Navigation from '../Navigation';
 import Languages from '../Languages';
 import ButtonMenu from '../ButtonMenu';
 import Logo from '../Logo';
+import LocalizedLink from '../LocalizedLink';
 
 import { useMenu } from '../../hooks/menu';
 
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 const Header = () => {
   const { home } = useTranslations();
   const { openedMenu, toggleMenu } = useMenu();
 
   return (
-    <S.HeaderWrapper id="headermenu">
-      <S.Container>
-        <S.LogoLink to="/" title={home} aria-label={home}>
+    <div className="header-wrapper" id="headermenu">
+      <div className="header-container">
+        <LocalizedLink className="logo-link" to="/" title={home} aria-label={home}>
           <Logo />
 		  
-        </S.LogoLink>
-		<S.TitleLink to="/"> rmDATA Documentation</S.TitleLink>
+        </LocalizedLink>
+		<LocalizedLink className="title-link" to="/"> rmDATA Documentation</LocalizedLink>
 		
-        <S.ButtonMenu className={openedMenu ? 'is-active' : ''}>
+        <div className={openedMenu ? 'button-menu is-active' : 'button-menu'}>
           <ButtonMenu handleClick={toggleMenu} isActive={openedMenu} />
-        </S.ButtonMenu>
+        </div>
 
-        <S.NavMenu className={openedMenu ? 'is-active' : ''}>
+        <div className={openedMenu ? 'nav-menu is-active' : 'nav-menu'}>
           <Navigation />
-        </S.NavMenu>
+        </div>
 		
-		<S.NavLanguages>
+		<div className="nav-languages">
           <Languages />
-        </S.NavLanguages>
-      </S.Container>
-    </S.HeaderWrapper>
+        </div>
+      </div>
+    </div>
   );
 }
 

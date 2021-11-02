@@ -1,8 +1,8 @@
 import React from 'react';
-import { navigate, useStaticQuery, graphql } from "gatsby";
+import { navigate, useStaticQuery, graphql, Link } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import useLanguageMapping from '../useLanguageMapping';
-import * as S from './styled';
+import "../../styles/styles.scss";
 
 
 const {
@@ -44,35 +44,35 @@ const prefix = useStaticQuery(graphql`
   }
 
   return (
-    <S.LanguageWrapper>
-      <S.LanguageItem>
-        <S.LanguageLink 
+    <ul className="language-wrapper">
+      <li className="language-item">
+        <Link
           to="/" 
           onClick={(e) => handleClickLanguage(e, "de")}
-          className={locale === 'de' ? 'is-active' : ''}
+          className={locale === 'de' ? 'language-link is-active' : 'language-link'}
         >
           DE
-        </S.LanguageLink>
-      </S.LanguageItem>
-      <S.LanguageItem>
-        <S.LanguageLink 
+        </Link>
+      </li>
+      <li>
+        <Link 
           to="/" 
           onClick={(e) => handleClickLanguage(e, "it")}
-          className={locale === 'it' ? 'is-active' : ''}
+          className={locale === 'it' ? 'language-link is-active' : 'language-link'}
         >
           IT
-        </S.LanguageLink>
-      </S.LanguageItem>
-	   <S.LanguageItem>
-        <S.LanguageLink 
+        </Link>
+      </li>
+	   <li>
+        <Link 
           to="/" 
           onClick={(e) => handleClickLanguage(e, "fr")}
-          className={locale === 'fr' ? 'is-active' : ''}
+          className={locale === 'fr' ? 'language-link is-active' : 'language-link'}
         >
           FR
-        </S.LanguageLink>
-      </S.LanguageItem>
-    </S.LanguageWrapper>
+        </Link>
+      </li>
+    </ul>
   );
 };
 

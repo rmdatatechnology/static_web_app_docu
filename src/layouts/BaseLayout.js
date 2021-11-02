@@ -6,8 +6,7 @@ import Footer from '../components/Footer';
 
 import { useLocale } from '../hooks/locale';
 
-import "./styles.scss";
-//import * as S from './styled';
+import "../styles/styles.scss";
 import Sidebar from "../components/Sidebar";
 
 const BaseLayout = ({ children, pageContext: { locale } }) => {

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import "./styles.scss"
+import "../../../styles/styles.scss";
 
 const TextBlock = ({ theme, children , symbol }) => {
  

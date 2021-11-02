@@ -7,7 +7,6 @@ import { useProduct } from '../hooks/products';
 import { Link, navigate } from "gatsby";
 import { graphql } from 'gatsby'
 import "../styles/styles.scss";
-import * as S from '../components/Content/styled';
 const {
   getSidebarItems,
 } = require(`../utils/pageHelper`);
@@ -85,7 +84,7 @@ const SearchContent  = () => {
       <div className="pagecontainer">
 		<div className="sidebar" id="sidemenu" />
 		<div className="content">
-			<S.Content>
+			<section className="main-content">
 			<TitlePage text="Suche" />
 			<div>	
 				<input
@@ -112,7 +111,7 @@ const SearchContent  = () => {
 				<p>No results!</p>
 			)}
 			</div>
-			</S.Content>
+			</section>
 		</div>
 		<div className="end"></div>
 	</div>
