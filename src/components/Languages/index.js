@@ -1,7 +1,6 @@
 import React from 'react';
 import { navigate, useStaticQuery, graphql, Link } from "gatsby";
 import { useLocale } from '../../hooks/locale';
-import useLanguageMapping from '../useLanguageMapping';
 import "../../styles/styles.scss";
 
 
@@ -14,8 +13,6 @@ const Languages = () => {
   // Grab the locale (passed through context) from the Locale Provider 
   // through useLocale() hook
   const { locale } = useLocale();
-
-  const languageMapping = useLanguageMapping();
 
 const prefix = useStaticQuery(graphql`
     query {
@@ -54,7 +51,7 @@ const prefix = useStaticQuery(graphql`
           DE
         </Link>
       </li>
-      <li>
+      <li className="language-item">
         <Link 
           to="/" 
           onClick={(e) => handleClickLanguage(e, "it")}
@@ -63,7 +60,7 @@ const prefix = useStaticQuery(graphql`
           IT
         </Link>
       </li>
-	   <li>
+	   <li className="language-item">
         <Link 
           to="/" 
           onClick={(e) => handleClickLanguage(e, "fr")}

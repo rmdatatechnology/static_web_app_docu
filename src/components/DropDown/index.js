@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import useProducts from '../useProducts';
 import { useStaticQuery, graphql, navigate } from 'gatsby';
 import LocalizedLink from '../LocalizedLink';

@@ -4,7 +4,7 @@ import { useFlexSearch } from 'react-use-flexsearch';
 import { useStaticQuery } from 'gatsby'
 import { useLocale } from '../hooks/locale';
 import { useProduct } from '../hooks/products';
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import { graphql } from 'gatsby'
 import "../styles/styles.scss";
 const {
@@ -43,6 +43,8 @@ const filterEntries = (entries, query, locale, items) => {
 		let check = checkForValue(items, entry.slug.split(`.`)[0])
 		if(check && entry.fields.locale === locale)
 			return true;
+		
+		return false;
 	});
 };
 

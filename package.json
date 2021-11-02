@@ -6,15 +6,14 @@
 					"version": "0.1.0",
 					"license": "MIT",
 					"scripts": {
-										"build": "npm run copyImages && npm run clean && gatsby build --prefix-paths",
-										"build-local": "npm run copyImages && npm run clean && gatsby build",
+										"build": "npm run clean && gatsby build --prefix-paths",
+										"build-local": "npm run clean && gatsby build",
 										"develop": "gatsby develop",
 										"start": "npm run develop",
 										"clean": "gatsby clean",
 										"serve": "gatsby serve --prefix-paths",
 										"serve-local": "gatsby serve",
-										"prettier": "prettier --write **/*.{md,css,scss,yaml,yml,ts}",
-										"copyImages": "node scripts/copyImages.js"
+										"prettier": "prettier --write **/*.{md,css,scss,yaml,yml,ts}"
 					},
 					"dependencies": {
 										"@babel/core": "^7.15.5",

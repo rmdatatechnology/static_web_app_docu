@@ -1,8 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import useMenu from '../useMenu';
-import useProducts from '../useProducts';
-import useTranslations from '../useTranslations';
-import { useStaticQuery, graphql } from 'gatsby';
 import ProductDropDown from '../DropDown';
 import LocalizedLink from '../LocalizedLink';
 
@@ -13,7 +10,7 @@ const Navigation = ({ isActive, handleToggleMenu }) => {
   
   return (
     <>
-      <nav className="navigation">
+      <div className="navigation">
         {menuItems.map((menu, index) => (
           <LocalizedLink className="navigation-link"
             to={menu.link}
@@ -25,7 +22,7 @@ const Navigation = ({ isActive, handleToggleMenu }) => {
           </LocalizedLink>
         ))}
 		<ProductDropDown />
-      </nav>
+      </div>
     </>
   );
 };

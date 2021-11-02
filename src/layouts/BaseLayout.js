@@ -1,13 +1,8 @@
 import React from 'react';
 import GlobalStyles from '../styles/global';
-
 import Header from '../components/Header';
-import Footer from '../components/Footer';
-
 import { useLocale } from '../hooks/locale';
-
 import "../styles/styles.scss";
-import Sidebar from "../components/Sidebar";
 
 const BaseLayout = ({ children, pageContext: { locale } }) => {
   // Using the useLocale() hook to define the correct locale 

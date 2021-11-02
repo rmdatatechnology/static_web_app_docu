@@ -7,7 +7,6 @@ import locales from '../../config/i18n';
 const LocalizedLink = ({ to, ...props }) => {
   const { locale } = useLocale();
   const keys = ['en', 'de', 'it', 'fr']
-  const defaultLang = 'de';
   
   const pathname = `${to}`;
   const lang = keys.find(

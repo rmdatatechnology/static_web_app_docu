@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import PropTypes from "prop-types"
 import "../../../styles/styles.scss";
 
@@ -7,7 +6,7 @@ const TextBlock = ({ theme, children , symbol }) => {
  
   return (
     <div className={theme}>
-	<span>{symbol}</span>
+	<span>{symbol}  </span>
       {children}
     </div>
   )

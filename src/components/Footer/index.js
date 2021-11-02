@@ -4,10 +4,7 @@ import "../../styles/styles.scss";
 
 const Footer = () => {
   const {
-    aboutProject,
-    seeMorePWA,
     maintainedBy,
-    contributeMessage,
   } = useTranslations();
 
   return (

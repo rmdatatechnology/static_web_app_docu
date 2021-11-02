@@ -1,9 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import SEO from '../components/seo';
 import PostItem from '../components/PostItem';
 import TitlePage from '../components/TitlePage';
-import LocalizedLink from '../components/LocalizedLink';
 import Hr from "../components/Hr";
 import useProducts from '../components/useProducts';
 import { MDXProvider } from "@mdx-js/react";

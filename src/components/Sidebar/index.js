@@ -1,10 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, navigate } from "gatsby";
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useRef, useEffect } from 'react';
+import { navigate } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
 import { useSidebar } from '../../hooks/sidebar';
-import LocalizedLink from '../LocalizedLink';
 import OpenedSvg from '../../images/opened';
 import ClosedSvg from '../../images/closed';
 import "../../styles/styles.scss";
@@ -17,7 +15,7 @@ const {
 
 const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item}) => {
   const { locale } = useLocale();
-  const { title, items, de, it, fr, Icon, url, onClick: onClickProp } = item;	
+  const { Icon, url, items } = item;	
   let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
   const active = pathname === ('/' + url) || pathname === url;
   const isAlreadyOpen = opened[url] === true;

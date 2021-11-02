@@ -7,7 +7,6 @@ import inventorymanager from '../../documentation/toc/inventorymanager.json';
 
 // Sets variables for light and dark theme
 export const getSidebarItems = (product) => {
-{
 
 	 if(product.toString().toLowerCase() === "geodesigner")
 	 {
@@ -37,7 +36,6 @@ export const getSidebarItems = (product) => {
 	 {
 		 return geomapper;
 	 }
-}
 }
 
 export const getNewUrlWithoutPrefix = (withLocale, prefix) => {

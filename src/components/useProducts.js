@@ -1,11 +1,6 @@
-import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { useLocale } from '../hooks/locale';
 
 function useProducts() {
-  // Grab the locale (passed through context) from the Locale Provider 
-  // through useLocale() hook
-  const { locale } = useLocale();
   // Query the JSON files in <rootDir>/i18n/translations
   const { rawData } = useStaticQuery(query);
 
@@ -17,7 +12,7 @@ function useProducts() {
     };
   });
 
-  // Only return menu for the current locale
+  // Only return menu for the current product
   const { productItems } = simplified.filter(
     lang => lang.name === "index",
   )[0];

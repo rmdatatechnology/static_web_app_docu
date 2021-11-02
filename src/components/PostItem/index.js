@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql, navigate } from 'gatsby';
-import useTranslations from '../useTranslations';
 import { useLocale } from '../../hooks/locale';
 import { GatsbyImage } from "gatsby-plugin-image"
 import "../../styles/styles.scss";
@@ -13,7 +12,6 @@ const PostItem = ({
   description,
   imageName,
 }) => {
-  const { toRead } = useTranslations();
 
   const { listImages } = useStaticQuery(
     graphql`

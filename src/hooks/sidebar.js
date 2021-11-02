@@ -1,10 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { useProduct } from './products';
-const {
-  getSidebarItems,
-} = require(`../utils/pageHelper`);
-
 
 const SidebarContext = createContext('');
 

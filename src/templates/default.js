@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import TitlePage from '../components/TitlePage';
-import Sidebar from "../components/Sidebar";
 import SEO from '../components/seo';
 import Hr from "../components/Hr";
 import { MDXProvider } from "@mdx-js/react";
