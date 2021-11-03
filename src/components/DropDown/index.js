@@ -1,24 +1,12 @@
 import React, { useState } from 'react';
 import useProducts from '../useProducts';
-import { useStaticQuery, graphql, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 import LocalizedLink from '../LocalizedLink';
 import { useProduct } from '../../hooks/products';
 import "../../styles/styles.scss";
 
-const {
-  getNewUrlWithoutPrefix,
-} = require(`../../utils/pageHelper`);
-
-
 const ProductDropDown = () => {
-  const prefix = useStaticQuery(graphql`
-    query {
-      site {
-        pathPrefix
-        }
-      }
-  `)
-  
+ 
   const productItems = useProducts();
   const [isOpen, setIsOpen] = useState(false);
   
@@ -31,13 +19,10 @@ const ProductDropDown = () => {
 	  let prod = pro.toString().toLowerCase();
 	  if(prod.toString().toLowerCase() === "geomapperse")
 		  prod = "geomapper";
-		  
-	  changeProduct(prod.toString().toLowerCase());
-	  params.delete('product');
-	  pro=null;
-	  let newUrl = getNewUrlWithoutPrefix(true, prefix.site.pathPrefix);
-	  if(newUrl)
-		navigate("/" + newUrl);
+	
+	  if(prod.toString().toLowerCase() !== product.toString().toLowerCase()) 
+		changeProduct(prod.toString().toLowerCase());
+	 
    }
   
   const toggling = () => 
@@ -46,12 +31,6 @@ const ProductDropDown = () => {
   } 
   
   const onOptionClicked = value => () => {
-	pro=null;
-	
-	let opt = productItems.find(
-		k => k.name.toString().toLowerCase() === value.toString().toLowerCase()
-		);
-	changeProduct(opt.product);
     setIsOpen(false);
   };
   
@@ -64,7 +43,10 @@ const ProductDropDown = () => {
 	return opt ? opt.name : "Products";
 	  
   }
-
+	function getNagigateTo(link, prod){
+		let newLink = link + "?product=" + prod.toString().toLowerCase();
+		return newLink;
+	};
   return (
 	 <>
 	 <div className="dropdown">
@@ -81,7 +63,7 @@ const ProductDropDown = () => {
 				<ul className="dropdown-list">
 					{productItems.map(option => (
 						<li className="dropdown-listitem" onClick={onOptionClicked(option.name)}>
-							<LocalizedLink className="dropdown-link" to={option.link}>{option.name}</LocalizedLink>
+							<LocalizedLink className="dropdown-link" to={getNagigateTo(option.link, option.name)}>{option.name}</LocalizedLink>
 						</li>
               ))}
 			</ul>

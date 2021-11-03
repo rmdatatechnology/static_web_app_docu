@@ -40,9 +40,11 @@ export const getSidebarItems = (product) => {
 
 export const getNewUrlWithoutPrefix = (withLocale, prefix) => {
 	
-	
-	
-	  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+	  let pathname = typeof window !== 'undefined' ? window.location.pathname : null;
+	  
+	  if(!pathname)
+		  return "";
+	  
 	  let newUrl = pathname.split("/");
 
 	  if(newUrl[0] === "")

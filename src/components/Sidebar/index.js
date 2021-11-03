@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { navigate } from "gatsby";
+import { navigate, useStaticQuery, graphql, Link } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
 import { useSidebar } from '../../hooks/sidebar';
@@ -9,14 +9,16 @@ import "../../styles/styles.scss";
 
 const {
   getSidebarItems,
+  getNewUrlWithoutPrefix,
 } = require(`../../utils/pageHelper`);
 
 
 
-const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item}) => {
+const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item, prefix, product}) => {
   const { locale } = useLocale();
   const { Icon, url, items } = item;	
-  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+
+  let pathname = getNewUrlWithoutPrefix(false, prefix);
   const active = pathname === ('/' + url) || pathname === url;
   const isAlreadyOpen = opened[url] === true;
   let expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url || checkForValue(item, pathname, opened);
@@ -69,9 +71,9 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
 		const isLocale = urlM.includes(`/${locale}/`);
 
 		if(isLocale === false && locale === "de")
-			return navigate(`/${url}`);
+			return navigate(`/${url}?product=${product}`);
 		else
-			return navigate(`/${locale}/${url}`);
+			return navigate(`/${locale}/${url}?product=${product}`);
 	}
    
   }
@@ -108,6 +110,8 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
 			  item={item}
 			  depth={depth + 1}
               depthStep={depthStep}
+			  prefix={prefix}
+		      product={product}
             />
           ))}
         </ul>
@@ -146,6 +150,13 @@ function Sidebar({ depthStep, depth}) {
   const items = getSidebarItems(product);
   const { opened, toggle } = useSidebar();
  
+ const prefix = useStaticQuery(graphql`
+    query {
+      site {
+        pathPrefix
+        }
+      }
+  `)
   return (
     <div className="sidebar-content">
       <ul>
@@ -156,6 +167,8 @@ function Sidebar({ depthStep, depth}) {
                 setOpened={toggle}
 				opened={opened}
 				item={sidebarItem}
+				prefix={prefix.site.pathPrefix}
+				product={product}
               />
         ))}
       </ul>
