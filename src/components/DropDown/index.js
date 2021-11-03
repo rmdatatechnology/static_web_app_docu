@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import useProducts from '../useProducts';
-import { navigate } from 'gatsby';
 import LocalizedLink from '../LocalizedLink';
 import { useProduct } from '../../hooks/products';
 import "../../styles/styles.scss";
@@ -44,7 +43,14 @@ const ProductDropDown = () => {
 	  
   }
 	function getNagigateTo(link, prod){
-		let newLink = link + "?product=" + prod.toString().toLowerCase();
+		
+		let opt = productItems.find(
+		k => k.name.toString().toLowerCase() === prod.toString().toLowerCase()
+		);
+		
+		let newProd = opt ? ("?product=" + opt.product) : "";
+		
+		let newLink = link + newProd ;
 		return newLink;
 	};
   return (
