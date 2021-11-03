@@ -101,7 +101,7 @@ const Page = ({ data }) => {
 				</section>
 			</div>
 		</div>
-		<div />
+		<div className="end"></div>
 	 </div>
     </>
   );

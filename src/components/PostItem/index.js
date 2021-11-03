@@ -61,14 +61,14 @@ const { locale } = useLocale();
           <img
             src={imageToUse.publicURL}
             alt={title}
-			width="380px"
+			
           />
         )}
         {!imageToUse && defaultImg && (
          <img
             src={imageToUse.publicURL}
             alt={title}
-			width="380px"
+			
           />
         )}
         <div className="productItem">
