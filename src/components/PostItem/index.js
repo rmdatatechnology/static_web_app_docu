@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql, navigate } from 'gatsby';
 import { useLocale } from '../../hooks/locale';
-import { GatsbyImage } from "gatsby-plugin-image"
 import "../../styles/styles.scss";
 
 const PostItem = ({
@@ -12,33 +11,31 @@ const PostItem = ({
   description,
   imageName,
 }) => {
-
+const { locale } = useLocale();
   const { listImages } = useStaticQuery(
     graphql`
       query {
-        listImages: allFile (filter: {ext: {eq: ".png"}}) {
-          edges {
-            node {
-              childImageSharp {
-                gatsbyImageData
-              }
-			  name
+        listImages: allFile (filter: {ext: {eq: ".png"}, relativeDirectory: {eq: ""}}) {
+          
+			 nodes {
+				name
+				publicURL
+				absolutePath
+				}
             }
           }
-        }
-      }
     `,
   );
-	const { locale } = useLocale();
-  const defaultImg = listImages.edges.find(img => {
-    if(img.node.name === 'default')
+
+  const defaultImg = listImages.nodes.find(img => {
+    if(img.name === 'default')
 		return img;
 		
 	return null;
   });
   
-  const imageToUse = listImages.edges.find(img => {
-    if(img.node.name === imageName.toString())
+  const imageToUse = listImages.nodes.find(img => {
+    if(img.name === imageName.toString())
 		return img;
 		
 	return null;
@@ -59,20 +56,21 @@ const PostItem = ({
 	
   return (
     <button onClick={onClick}>
-      <section>
+      <section >
         {imageToUse && (
-          <GatsbyImage
-            image={imageToUse.node.childImageSharp.gatsbyImageData}
+          <img
+            src={imageToUse.publicURL}
             alt={title}
+			width="380px"
           />
         )}
         {!imageToUse && defaultImg && (
-          <GatsbyImage
-            image={defaultImg.node.childImageSharp.gatsbyImageData}
+         <img
+            src={imageToUse.publicURL}
             alt={title}
+			width="380px"
           />
         )}
-
         <div className="productItem">
           <span className="productInfo" />
           <h1 className="productTitle">{title}</h1>

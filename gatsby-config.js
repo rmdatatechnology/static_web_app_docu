@@ -8,11 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-catch-links`,
     `gatsby-plugin-sass`,
-    `gatsby-remark-emoji`, // Emoji list: https://emojipedia.org/joypixels/
     `gatsby-transformer-json`,
 	`gatsby-transformer-yaml`,
     // It needs to be the first one to work with gatsby-remark-images
@@ -63,7 +59,7 @@ module.exports = {
       options: {
         path: `${__dirname}/documentation/pages`,
         name: `pages`,
-		ignore: [`README.md`], // ignore readme
+		ignore: [`README.md, **/img/**`], // ignore readme
       },
     },
 	 {
@@ -73,23 +69,27 @@ module.exports = {
         name: `toc`,
       },
     },
+	 {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/documentation/static`,
+        name: `static`,
+      },
+    },
 	// mdx support
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-		plugins: ['gatsby-remark-images'],
+		plugins: [`gatsby-remark-copy-linked-files`],
         gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 500,
-			  backgroundColor: 'none',
-			  disableBgImage: true,
-			  linkImagesToOriginal: false,
-			  wrapperStyle: 'display: inline-block; z-index: 1',
-            },
+         {
+          resolve: "gatsby-remark-copy-linked-files",
+          options: {
+            destinationDir: "static/mdximg",
+			ignoreFileExtensions: [],
           },
+        },
         ],
 		
       },
@@ -103,24 +103,6 @@ module.exports = {
           include: /assets/,
 		  include: /icons/,
         },
-      },
-    },
-	'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-	 {
-      resolve: `gatsby-transformer-sharp`,
-      options: {
-        // Removes warnings trying to use non-gatsby image in markdown
-        checkSupportedExtensions: false,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `rmDATA Produkt-Dokumentation`,
-        start_url: `/`,
-        display: `minimal-ui`,
-        icon: `src/images/logo_square.png`, // This path is relative to the root of the site.
       },
     },
 	// You can have multiple instances of this plugin to create indexes with

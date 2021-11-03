@@ -11,11 +11,8 @@ export { default as GeoDesktop } from "./Products/GeoDesktop"
 
 export { default as Placeholder } from "./Placeholder"
 
-export { default as Collapsable } from "./Collapsable"
-
 export { default as U } from "./Underline"
 export { default as Border } from "./Border"
 export { default as Bold } from "./Bold"
 export { default as Menu } from "./Menu"
 export { default as Italic } from "./Italic"
-export { default as Image } from "./Image"

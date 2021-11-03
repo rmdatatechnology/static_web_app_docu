@@ -543,6 +543,10 @@
   line-height: 140%;
 
 }
+.mdxImage {
+	display: inline-block;
+	position: static;
+}
 .gatsby-resp-image-image {
 	position: static !important;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import TitlePage from '../components/TitlePage';
 import SEO from '../components/seo';
-import Hr from "../components/Hr";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -11,7 +10,6 @@ import {
   Warning,
   Success,
   Info,
-  Collapsable,
   GeoDesigner,
   GeoMapper,
   GeoDesktop,
@@ -21,7 +19,6 @@ import {
   Bold,
   Menu,
   Italic,
-  Image,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -58,14 +55,17 @@ const Default = ({ data }) => {
           </table>
         )
       },
-      hr: () => <Hr widthInPercent="100" verticalMargin="0.8rem" />,
+	   img: (props) => {
+        return (
+         <img className="mdxImage" {...props} />
+        )
+      },
       // Use the below components without having to import in *.mdx
       Example,
       Danger,
       Warning,
       Success,
       Info,
-      Collapsable,
 	  GeoDesigner,
 	  GeoMapper,
 	  GeoDesktop,
@@ -75,7 +75,6 @@ const Default = ({ data }) => {
       Bold,
       Menu,
       Italic,
-      Image,
     }
 	
 

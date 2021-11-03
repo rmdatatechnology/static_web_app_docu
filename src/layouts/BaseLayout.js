@@ -1,5 +1,4 @@
 import React from 'react';
-import GlobalStyles from '../styles/global';
 import Header from '../components/Header';
 import { useLocale } from '../hooks/locale';
 import "../styles/styles.scss";
@@ -12,7 +11,6 @@ const BaseLayout = ({ children, pageContext: { locale } }) => {
   
   return (
     <>
-      <GlobalStyles />
       <div className="maincontainer">
         <div>
 		<Header />
