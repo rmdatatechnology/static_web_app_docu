@@ -92,7 +92,7 @@ const Page = ({ data }) => {
 				description={post.frontmatter.description}
 				image={post.frontmatter.image}
 			/>
-			<div id="pageContent">
+			<div className="page-content" id="pageContent">
 				<TitlePage text={post.frontmatter.title} />
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>

@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { navigate, useStaticQuery, graphql, Link } from "gatsby";
+import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
+import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
 import { useSidebar } from '../../hooks/sidebar';
@@ -14,33 +14,15 @@ const {
 
 
 
-const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item, prefix, product}) => {
+const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item, prefix, product, clicked, setClicked}) => {
   const { locale } = useLocale();
   const { Icon, url, items } = item;	
-
   let pathname = getNewUrlWithoutPrefix(false, prefix);
-  const active = pathname === ('/' + url) || pathname === url;
-  const isAlreadyOpen = opened[url] === true;
-  let expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url || checkForValue(item, pathname, opened);
-	  
-  const focusDiv = useRef();
-
-  useEffect(() => {
-		if (focusDiv) {
-		// Our ref has a value, pointing to an HTML element
-		// The perfect time to observe it.
-		if(focusDiv.current && active) focusDiv.current.focus(); 
-			
-		}
-		 return () => {
-			if (focusDiv) {
-			// We need to clean up after this ref
-			// The perfect time to unobserve it.
-			
-		}	
-    };
-	 
-	}, [focusDiv]);
+  let isClicked = clicked && url === clicked;
+  let active = isClicked || (!clicked && (pathname === ('/' + url) || pathname === url || pathname === (url + '/') || pathname === ('/' + url + '/')));
+  
+  let isAlreadyOpen = opened[url] === true;
+  let expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url  || pathname === (url + '/') || pathname === ('/' + url + '/') || checkForValue(item, pathname, opened, isClicked);
   
   const collapse = () => {
 	setOpened(url);
@@ -62,8 +44,10 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
    
   function onClick(e) {
 	e.preventDefault();
-    if (hasChildren) {
-      collapse();
+	setClicked(url);
+	
+	if (hasChildren) {
+	  collapse(url);
     }
 	else
 	{
@@ -84,7 +68,6 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
 	  {label && (
          <button 
         className={calculatedClassName}
-		ref={focusDiv}
         onClick={onClick}
       >
 		<div
@@ -112,6 +95,8 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
               depthStep={depthStep}
 			  prefix={prefix}
 		      product={product}
+			  clicked={clicked}
+			  setClicked={setClicked}
             />
           ))}
         </ul>
@@ -122,9 +107,9 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
   );
 };
 
-function checkForValue(item, url, opened) {
+function checkForValue(item, url, opened, isClicked) {
     
-	if(!item)
+	if(!item || isClicked)
 		return false;
 	
 	let expanded = false;
@@ -148,7 +133,37 @@ function checkForValue(item, url, opened) {
 function Sidebar({ depthStep, depth}) {
   const { product } = useProduct();
   const items = getSidebarItems(product);
-  const { opened, toggle } = useSidebar();
+  const { opened, toggle, clicked, setClicked, scrollPosition, setScrollPosition } = useSidebar();
+  const focusSidebar = useRef();
+ 
+useLayoutEffect(() => {
+    if (focusSidebar) {
+		// Our ref has a value, pointing to an HTML element
+		// The perfect time to observe it.
+		if(focusSidebar.current) 
+		{
+			if(!clicked)
+			{
+				const { scrollHeight, scrollTop, clientHeight } = focusSidebar.current;
+				const pos = scrollHeight - scrollTop - clientHeight;
+				setScrollPosition(pos);
+				focusSidebar.current.scrollTo(0, pos);
+			}
+			else
+			{
+				focusSidebar.current.scrollTo(0, scrollPosition);
+			}
+		}			
+	}
+	
+	 return () => {
+		if (focusSidebar) {
+			// We need to clean up after this ref
+			// The perfect time to unobserve it.
+			
+		}
+	};		
+}, []);
  
  const prefix = useStaticQuery(graphql`
     query {
@@ -157,8 +172,14 @@ function Sidebar({ depthStep, depth}) {
         }
       }
   `)
+  const handleScroll = (event) => {
+    const { scrollTop } = event.target;
+    setScrollPosition(scrollTop);
+  }
+ 
+ 
   return (
-    <div className="sidebar-content">
+    <div className="sidebar-content" ref={focusSidebar} onScroll={handleScroll}>
       <ul>
 	 {items.map((sidebarItem, index) => (
 			  <SidebarItem
@@ -169,6 +190,8 @@ function Sidebar({ depthStep, depth}) {
 				item={sidebarItem}
 				prefix={prefix.site.pathPrefix}
 				product={product}
+				clicked={clicked}
+				setClicked={setClicked}
               />
         ))}
       </ul>

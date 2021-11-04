@@ -54,6 +54,7 @@
 
     font-size: 1.5rem;
     line-height: 160%;
+	overflow: hidden;
    
   }
   img {
@@ -63,22 +64,22 @@
   }
 
 .maincontainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  display: grid;
+   grid-template-rows: 100px auto auto; 
+   width: 100%;
 }
 
 .pagecontainer {
   display: grid;
   grid-template-columns: 300px auto auto; 
-  grid-column-gap: 50px;
-  width: 100%
+  grid-column-gap: 10px;
+  width: 100%;
 }
 .sidebar {
        
 		}
 .content {
-        
+
 		}
 .end {
         
@@ -87,7 +88,6 @@
 .main-content {
   margin: auto;
   padding: 0;
-
   & > *:first-child {
     margin-top: 0 !important;
   }
@@ -536,16 +536,14 @@
 .list small {
     color: #dedddd
 }
-.active{
-	color: #325ea8
-}
+
 
 .sidebarButton {
 	font-size: 16px;
 	text-decoration: none;
 	position: relative;
 	padding: 5px;
-	margin-bottom: var(--space-sm);
+	margin-bottom: 5;
 	text-align: left;
 	border: 0px;
 	background-color: transparent;
@@ -553,33 +551,25 @@
 	display: flex;
     justify-content: space-between;
     align-items: center;
-	 white-space: nowrap;
+	white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 	outline: none;
-}
-.sidebarButton:hover{
-	background-color: #f6f6f6;
+	
+	&:hover,
+	&.active {
+   background-color: lightgray;
+	color: black;
 	text-decoration: none;
 	border: 0px;
 	outline: none;
+	}
 }
-.sidebarButton:active{
-	background-color: #f6f6f6;
-	text-decoration: none;
-	border: 0px;
-	outline: none;
-}
-.sidebarButton:focus{
-	background-color: #f6f6f6;
-	text-decoration: none;
-	border: 0px;
-	outline: none;
-}
+
 
 .productItem{
   display: flex;
-  flex-direction: column;
+  flex-direction: lightgray;
   position: relative;
   border: 0px;
 }
@@ -796,7 +786,9 @@
 
 .header-wrapper {
 	background-color: lightgray;
-	
+	 position: fixed;
+	 width: 100%;
+	 z-index:1;
 }
 .header-container {
   display: flex;
@@ -893,10 +885,18 @@
 	
 }
 
+.page-content {
+  position: fixed;
+  overflow-y: scroll;
+  height: 90vh;
+  width: 80%;
+}
+	
+
 .sidebar-content {
   position: fixed;
   width: 270px;
-  height: 75vh;
+  height: 90vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
   

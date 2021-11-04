@@ -6,6 +6,8 @@ const SidebarContext = createContext('');
 const SidebarProvider = ({ children }) => {
   
   const [opened, setOpened] = useState({});
+  const [clicked, setClicked] = useState();
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggle = url => {
     setOpened({
@@ -13,9 +15,9 @@ const SidebarProvider = ({ children }) => {
       [url]: !opened[url],
     });
   };
-  
+
   return (
-    <SidebarContext.Provider value={{ opened, toggle }}>
+    <SidebarContext.Provider value={{ opened, toggle, clicked, setClicked, scrollPosition, setScrollPosition }}>
       {children}
     </SidebarContext.Provider>
   );
