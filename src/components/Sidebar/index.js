@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
+import React, { useRef, useEffect, useLayoutEffect } from 'react';
 import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
@@ -14,7 +14,7 @@ const {
 
 
 
-const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item, prefix, product, clicked, setClicked}) => {
+const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item, prefix, product, clicked, setClicked, setScrollPos, focusSidebar}) => {
   const { locale } = useLocale();
   const { Icon, url, items } = item;	
   let pathname = getNewUrlWithoutPrefix(false, prefix);
@@ -23,6 +23,37 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
   
   let isAlreadyOpen = opened[url] === true;
   let expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url  || pathname === (url + '/') || pathname === ('/' + url + '/') || checkForValue(item, pathname, opened, isClicked);
+  const focusDiv = useRef();
+
+  useEffect(() => {
+	
+	if (focusDiv) {
+		// Our ref has a value, pointing to an HTML element
+		// The perfect time to observe it.
+		if(focusDiv.current && active && !clicked)
+		{			
+			focusDiv.current.focus(); 
+			setClicked(url);
+			if(focusSidebar && focusSidebar.current)
+			{
+				setScrollPos(focusSidebar.current.scrollTop);
+			}
+			else
+			{
+				setScrollPos(focusDiv.current.scrollTop);
+			}
+		}
+	}
+		 return () => {
+			if (focusDiv) {
+			// We need to clean up after this ref
+			// The perfect time to unobserve it.
+			
+		}	
+    };
+	 
+	}, [focusDiv, setScrollPos, focusSidebar, url, setClicked, active, clicked]);
+   
   
   const collapse = () => {
 	setOpened(url);
@@ -68,6 +99,7 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
 	  {label && (
          <button 
         className={calculatedClassName}
+		ref={focusDiv}
         onClick={onClick}
       >
 		<div
@@ -97,6 +129,8 @@ const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, op
 		      product={product}
 			  clicked={clicked}
 			  setClicked={setClicked}
+			  setScrollPos={setScrollPos}
+			  focusSidebar={focusSidebar}
             />
           ))}
         </ul>
@@ -142,17 +176,8 @@ useLayoutEffect(() => {
 		// The perfect time to observe it.
 		if(focusSidebar.current) 
 		{
-			if(!clicked)
-			{
-				const { scrollHeight, scrollTop, clientHeight } = focusSidebar.current;
-				const pos = scrollHeight - scrollTop - clientHeight;
-				setScrollPosition(pos);
-				focusSidebar.current.scrollTo(0, pos);
-			}
-			else
-			{
-				focusSidebar.current.scrollTo(0, scrollPosition);
-			}
+			focusSidebar.current.scrollTo(0, scrollPosition);
+
 		}			
 	}
 	
@@ -163,7 +188,7 @@ useLayoutEffect(() => {
 			
 		}
 	};		
-}, []);
+}, [focusSidebar, scrollPosition]);
  
  const prefix = useStaticQuery(graphql`
     query {
@@ -176,7 +201,8 @@ useLayoutEffect(() => {
     const { scrollTop } = event.target;
     setScrollPosition(scrollTop);
   }
- 
+  
+  
  
   return (
     <div className="sidebar-content" ref={focusSidebar} onScroll={handleScroll}>
@@ -192,6 +218,8 @@ useLayoutEffect(() => {
 				product={product}
 				clicked={clicked}
 				setClicked={setClicked}
+				setScrollPos={setScrollPosition}
+				focusSidebar={focusSidebar}
               />
         ))}
       </ul>
