@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Logo = () => {
+const Logo = ({imageName, sizeOverride, classOverride}) => {
 	
 	const { listImages } = useStaticQuery(
     graphql`
@@ -18,28 +18,37 @@ const Logo = () => {
     `,
   );
   
+  const imageSize = sizeOverride === null || sizeOverride === undefined ? "75px" : sizeOverride;
+  const classInfo = classOverride == null || classOverride === undefined ? "contact-logo" : classOverride;
+  
 
-  const defaultImg = listImages.nodes.find(img => {
-    if(img.name === 'logo')
-		return img;
-		
+  const defaultImg = listImages.nodes.find(img => {    
+    if(imageName === null || imageName === undefined) {
+	  if(img.name === 'logo')
+		 return img;
+    }
+	else
+		if(img.name == imageName)
+			return img;
 	return null;
   });
 	
   return (
-  <div>
+  <div className="inlines">
 	{defaultImg && (
           <img
             src={defaultImg.publicURL}
             alt={defaultImg.name}
-			height="75px"
+			className={classInfo}
+			width={imageSize}
           />
         )}
         {!defaultImg && (
          <img
             src=""
             alt="Logo"
-			height="75px"
+			className={classInfo}
+			width={imageSize}
           />
         )}
   </div>
@@ -47,3 +56,7 @@ const Logo = () => {
 };
 
 export default Logo;
+
+
+
+

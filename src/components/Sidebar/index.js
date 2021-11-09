@@ -14,7 +14,7 @@ const {
 
 
 
-const SidebarItem = ({ className = '', depthStep = 10, depth = 0,  setOpened, opened , item, prefix, product, clicked, setClicked, setScrollPos, focusSidebar}) => {
+const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, opened , item, prefix, product, clicked, setClicked, setScrollPos, focusSidebar}) => {
   const { locale } = useLocale();
   const { Icon, url, items } = item;	
   let pathname = getNewUrlWithoutPrefix(false, prefix);

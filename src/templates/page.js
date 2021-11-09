@@ -86,7 +86,7 @@ const Page = ({ data }) => {
 		<div className="sidebar" id="sidemenu">
 			<Sidebar />
 		</div>
-		<div className="content">
+		<div className="contentpage">
 			<SEO
 				title={post.frontmatter.title}
 				description={post.frontmatter.description}

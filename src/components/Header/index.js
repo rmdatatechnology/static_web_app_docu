@@ -16,13 +16,26 @@ const Header = () => {
 
   return (
     <div className="header-wrapper" id="headermenu">
-      <div className="header-container">
+      <div className="contact-info">
+                <div className="contact-inner">
+                    <div className="contact-inner-left">
+                        <a href="mailto:office@rmdatagroup.com" className="contact-info-link" title="E-Mail senden"><i className="fa-envelope fa-lg far"></i>&nbsp;<span className="mail">office@rmdatagroup.com</span></a>
+                    </div>
+                    <div className="contact-inner-right">
+                        <Logo imageName="flag-at" sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+43335743333">+43 3357 43 333</a>
+                        <Logo imageName="flag-de" sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+4924054066917">+49 2405 40 66 917</a>
+                        <Logo imageName="flag-ch" sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+41415112131">+41 41 51121 31</a>
+                    </div>
+                </div>
+                
+
+            </div> 
+	  <div className="header-container">
         <LocalizedLink className="logo-link" to="/" title={home} aria-label={home}>
           <Logo />
 		  
         </LocalizedLink>
-		<LocalizedLink className="title-link" to="/"> rmDATA Documentation</LocalizedLink>
-		
+				
         <div className={openedMenu ? 'button-menu is-active' : 'button-menu'}>
           <ButtonMenu handleClick={toggleMenu} isActive={openedMenu} />
         </div>
