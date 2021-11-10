@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+	`gatsby-plugin-remove-serviceworker`,	
     `gatsby-transformer-json`,
 	`gatsby-transformer-yaml`,
     // It needs to be the first one to work with gatsby-remark-images
