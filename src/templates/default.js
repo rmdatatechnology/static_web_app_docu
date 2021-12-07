@@ -19,6 +19,7 @@ import {
   Bold,
   Menu,
   Italic,
+  MarkdownLink,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -58,6 +59,12 @@ const Default = ({ data }) => {
 	   img: (props) => {
         return (
          <img className="mdxImage" {...props} />
+        )
+      },
+	   a: (props) => {
+        
+		return (
+		<MarkdownLink {...props} />
         )
       },
       // Use the below components without having to import in *.mdx

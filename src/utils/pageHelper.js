@@ -4,6 +4,8 @@ import geodesktop from '../../documentation/toc/geodesktop.json';
 import scripting from '../../documentation/toc/scripting.json';
 import configuration from '../../documentation/toc/configuration.json';
 import inventorymanager from '../../documentation/toc/inventorymanager.json';
+import geodiscoverer from '../../documentation/toc/geodiscoverer.json';
+import rmgeo from '../../documentation/toc/rmgeo.json';
 
 // Sets variables for light and dark theme
 export const getSidebarItems = (product) => {
@@ -31,6 +33,14 @@ export const getSidebarItems = (product) => {
 	  else if(product.toString().toLowerCase() === "inventorymanager")
 	 {
 		 return inventorymanager;
+	 }
+	 else if(product.toString().toLowerCase() === "geodiscoverer")
+	 {
+		 return geodiscoverer;
+	 }
+	 else if(product.toString().toLowerCase() === "rmgeo")
+	 {
+		 return rmgeo;
 	 }
 	 else
 	 {
