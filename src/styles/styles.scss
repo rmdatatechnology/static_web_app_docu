@@ -1005,6 +1005,7 @@ table, th, td {
   font-weight: 600;
   margin-left: 20px;
   margin-right: 20px;
+  text-decoration: none;
   font-size: 0.9em; }
 
 .contact-info {
@@ -1039,6 +1040,14 @@ table, th, td {
 
 .flag {
   margin-top: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;  
+  display: inline;
+  position: absolute;
+  }
+  
+.flag-mail {
+  margin-top: 5px;
   background-size: contain;
   background-repeat: no-repeat;  
   display: inline;
