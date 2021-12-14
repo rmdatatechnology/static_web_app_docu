@@ -116,6 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
               page
             }
 			slug
+			id
           }
         }
       }
@@ -135,6 +136,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // Getting Slug and Title
     const slug = file.slug.split(`.`)[0];
     const title = file.frontmatter.title;
+	const id = file.id;
 
     // Use the fields created in exports.onCreateNode
     const locale = file.fields.locale;
@@ -155,6 +157,7 @@ exports.createPages = async ({ graphql, actions }) => {
         // in different languages, e.g. because an english phrase is also common in german
         locale,
         title,
+		id,
       },
     });
   });

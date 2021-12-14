@@ -115,10 +115,10 @@ const Page = ({ data }) => {
 };
 
 export const query = graphql`
-  query Page($locale: String!, $title: String!) {
+  query Page($locale: String!, $id: String!) {
     mdx(
-      frontmatter: { title: { eq: $title } }
       fields: { locale: { eq: $locale } }
+	  id: {eq: $id}
     ) {
       frontmatter {
         title

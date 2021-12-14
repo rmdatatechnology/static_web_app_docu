@@ -113,10 +113,10 @@ const Default = ({ data }) => {
 };
 
 export const query = graphql`
-  query Default($locale: String!, $title: String!) {
+  query Default($locale: String!, $id: String!) {
     mdx(
-      frontmatter: { title: { eq: $title } }
       fields: { locale: { eq: $locale } }
+	  id: {eq: $id}
     ) {
       frontmatter {
         title
