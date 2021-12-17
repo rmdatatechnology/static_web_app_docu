@@ -139,8 +139,11 @@ exports.createPages = async ({ graphql, actions }) => {
 	const id = file.id;
 
     // Use the fields created in exports.onCreateNode
-    const locale = file.fields.locale;
+    let locale = file.fields.locale;
     const isDefault = file.fields.isDefault;
+	
+	if(!locale)
+		locale = "de";
 
     // Check if it's page (to differentiate post and page)
     const isPage = file.frontmatter.page;
