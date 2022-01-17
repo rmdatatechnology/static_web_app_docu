@@ -81,7 +81,7 @@ const filterEntries = (entries, locale, items) => {
 				<div>
 					<DataSearch
 						componentId="searchbox"
-						dataField={['title', 'rawBody', 'slug', 'locale']}
+						dataField={['title', 'rawbody', 'slug', 'locale']}
 						autosuggest={false}
 						showClear={true}
 						placeholder="Search"
