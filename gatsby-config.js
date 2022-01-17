@@ -1,3 +1,36 @@
+const myQuery = `{
+  allMdx {
+              nodes {
+                id
+                frontmatter {
+                  title
+                }
+				fields {
+				  locale
+				}
+				slug
+                rawBody
+              }
+            }
+}`;
+ 
+const queries = [
+  {
+    query: myQuery,
+    transformer: ({ data }) => data.allMdx.nodes.map((node) => ({
+            id: node.id,
+            title: node.frontmatter.title,
+            rawbody: node.rawBody,
+			locale: node.fields.locale,
+			slug: node.slug,
+          })), // optional
+    indexName: 'pagestest', 
+	indexConfig: {
+     
+    },
+  },
+];
+
 module.exports = {
    pathPrefix: `/documentation`,
    siteMetadata: {
@@ -106,6 +139,7 @@ module.exports = {
         },
       },
     },
+	
 	// You can have multiple instances of this plugin to create indexes with
     // different names or engines. For example, multi-lingual sites could create
     // an index for each language.
@@ -178,6 +212,17 @@ module.exports = {
           })),
       },
     },
-	
+	{
+      resolve: `gatsby-plugin-elasticsearch`,
+      options: {
+        node: 'https://produktdokumentation.es.centralus.azure.elastic-cloud.com:9243',
+		auth: {
+			username: 'elastic',
+			password: 'adFUF0DlTV8wJxWJOdlWOWqc'
+		},
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
   ],
 };

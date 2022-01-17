@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { navigate } from "gatsby";
 import useProducts from '../useProducts';
-import LocalizedLink from '../LocalizedLink';
 import { useProduct } from '../../hooks/products';
 import "../../styles/styles.scss";
 
@@ -68,8 +68,12 @@ const ProductDropDown = () => {
 			{isOpen && (
 				<ul className="dropdown-list">
 					{productItems.map(option => (
-						<li className="dropdown-listitem" onClick={onOptionClicked(option.name)}>
-							<LocalizedLink className="dropdown-link" to={getNagigateTo(option.link, option.name)}>{option.name}</LocalizedLink>
+						<li className="dropdown-listitem" onClick={ event => {
+							
+							setIsOpen(false);
+							navigate(getNagigateTo(option.link, option.name))
+						}}>
+						{option.name}
 						</li>
               ))}
 			</ul>

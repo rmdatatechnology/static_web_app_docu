@@ -1,24 +1,47 @@
-import React, {useState} from 'react'
+import React from 'react';
+import { navigate } from "gatsby";
+import { ReactiveBase, DataSearch, ReactiveList, ResultList } from '@appbaseio/reactivesearch';
 import TitlePage from '../components/TitlePage';
-import { useFlexSearch } from 'react-use-flexsearch';
-import { useStaticQuery } from 'gatsby'
 import { useLocale } from '../hooks/locale';
 import { useProduct } from '../hooks/products';
-import { Link } from "gatsby";
-import { graphql } from 'gatsby'
-import "../styles/styles.scss";
+import useProducts from '../components/useProducts';
+
 const {
   getSidebarItems,
 } = require(`../utils/pageHelper`);
 
-const unflattenResults = (results) =>
-	results.map(entry => {
-        const { locale, title, slug } = entry;
-        return { slug, frontmatter: { title }, fields: { locale } };
-    });
 
+const SearchContent  = () => {
+	
+  const { locale } = useLocale();
+  const { product } = useProduct();
+  const productItems = useProducts();
+  
+  let searchText =  null;
+  
+  const { ResultListWrapper } = ReactiveList;
+  
+  let items = getSidebarItems(product);
 
-function checkForValue(items, value) {
+  function getNagigateTo(link){
+		
+		let urlMain = typeof window !== 'undefined' ? window.location.pathname : '';
+		let isLocale = urlMain.includes(`/${locale}/`);
+		let slug =  `${locale}/${link}`;
+		if(isLocale === false || locale === "de")
+			slug = `/${link}`;
+		
+		let opt = productItems.find(
+		k => k.name.toString().toLowerCase() === product.toString().toLowerCase()
+		);
+		
+		let newProd = opt ? ("?product=" + opt.product) : "";
+		
+		let newLink = slug + newProd ;
+		return newLink;
+	};
+	
+  function checkForValue(items, value) {
     
 	if(!items)
 		return false;
@@ -32,55 +55,18 @@ function checkForValue(items, value) {
 		
 	});
 }
-const filterEntries = (entries, query, locale, items) => {
-    
-	if (!query) {
-        return entries;
-    }
-	
+
+const filterEntries = (entries, locale, items) => {
 	return entries.filter((entry) => 
 	{
 		let check = checkForValue(items, entry.slug.split(`.`)[0])
-		if(check && entry.fields.locale === locale)
+		if(check && entry.locale === locale)
 			return true;
 		
 		return false;
 	});
 };
 
-const SearchContent  = () => {
-  const queryData = useStaticQuery(graphql`
-    query {
-      localSearchPages {
-        index
-        store
-      }
-    }
-  `)
-
-  const { locale } = useLocale();
-  const { product } = useProduct();
-	 
-  let urlMain = typeof window !== 'undefined' ? window.location.pathname : '';
-  let isLocale = urlMain.includes(`/${locale}/`);
-  
-  function getSlug(slug) {
-		if(isLocale === false && locale === "de")
-			return `/${slug}`;
-		else
-			return `/${locale}/${slug}`;
-  }
-  
-  let items = getSidebarItems(product);
-  
-  const index = queryData.localSearchPages.index
-  const store = queryData.localSearchPages.store
-
-  const [query, setQuery] = useState('')
-  const results = useFlexSearch(query, index, store);
-  const entries = unflattenResults(results);
-  const filteredEntries = filterEntries(entries, query, locale, items);
-  
   return (
   <>
       <div className="pagecontainer">
@@ -88,31 +74,80 @@ const SearchContent  = () => {
 		<div className="content">
 			<section className="main-content">
 			<TitlePage text="Suche" />
-			<div>	
-				<input
-				className="mySearch"
-				placeholder="&#x1F50D; Search for.."
-				name="query"
-				value={query}
-				onChange={(event) => setQuery(event.target.value)}
+			<ReactiveBase
+				app="pagestest"
+				credentials="elastic:adFUF0DlTV8wJxWJOdlWOWqc"
+				url="https://produktdokumentation.es.centralus.azure.elastic-cloud.com:9243">
+				<div>
+					<DataSearch
+						componentId="searchbox"
+						dataField={['title', 'rawBody', 'slug', 'locale']}
+						autosuggest={false}
+						showClear={true}
+						placeholder="Search"
+						queryFormat="and"
+						noInitialQuery={true}
+						onValueChange={(value) => { 
+							if(value === ''){
+							searchText = null;
+							}
+						else{
+							searchText = value.value;
+						}
+						}}
+					/>
+				</div>
+				<ReactiveList
+					componentId="SearchResult"
+					pagination={false}
+					size={50}
+					showResultStats ={false}
+					react={{
+					"and": ["searchbox"]
+					}}
+					defaultQuery={()=> {
+						if(searchText !== null){
+							return {
+							}
+						} 
+						else {
+							return {
+							  query: {
+								match_none: {}
+							  }
+							}
+						  }
+						}}
+					render={({ data }) => (
+								<ReactiveList.ResultListWrapper>
+							{filterEntries(data, locale, items).map(item => (
+							<div onClick={ event => {
+								navigate(getNagigateTo(item.slug.split(`.`)[0]))
+							}}>
+								<ResultList key={item._id}>
+									<ResultList.Content>
+										<ResultList.Title>
+											<div
+												dangerouslySetInnerHTML={{
+													__html: item.title,
+												}}
+											/>
+										</ResultList.Title>
+										<ResultList.Description>
+											<div>
+												<span>
+													Slug: {getNagigateTo(item.slug.split(`.`)[0])}
+												</span>
+											</div>
+										</ResultList.Description>
+									</ResultList.Content>
+								</ResultList>
+								</div>
+							))}
+						</ReactiveList.ResultListWrapper>
+					)}
 				/>
-			<h1>Results</h1>
-			{filteredEntries.length > 0 ? (
-				<ul className="myUL">
-				{filteredEntries.map((result) => (
-					<Link to={getSlug(result.slug.split(`.`)[0])}> 
-					<div className="list border-bottom">
-					<span>{result.frontmatter.title}</span>
-					<br />
-					<small>{result.slug.split(`.`)[0]}</small>
-					</div>
-					</Link>
-				))}
-				</ul>
-			) : (
-				<p>No results!</p>
-			)}
-			</div>
+			</ReactiveBase>
 			</section>
 		</div>
 		<div className="end"></div>
