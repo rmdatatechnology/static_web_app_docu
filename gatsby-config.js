@@ -24,7 +24,7 @@ const queries = [
 			locale: node.fields.locale,
 			slug: node.slug,
           })), // optional
-    indexName: 'pagestest', 
+    indexName: 'rmdata_docu_dev_test', 
 	indexConfig: {
      
     },
@@ -142,11 +142,8 @@ module.exports = {
 	{
       resolve: `gatsby-plugin-elasticsearch`,
       options: {
-        node: 'https://produktdokumentation.es.centralus.azure.elastic-cloud.com:9243',
-		auth: {
-			username: 'elastic',
-			password: 'adFUF0DlTV8wJxWJOdlWOWqc'
-		},
+        node: 'https://rmdataporal-elastic-dev-test.es.westeurope.azure.elastic-cloud.com:9243',
+		apiKey: 'Uy1jMmNYNEJBU1BLM0xzdTc0Y3c6STdnYUotUU9ROW1zc1ZDcm5SN2RTUQ==', // optional
         queries,
         chunkSize: 10000, // default: 1000
       },

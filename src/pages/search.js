@@ -75,9 +75,9 @@ const filterEntries = (entries, locale, items) => {
 			<section className="main-content">
 			<TitlePage text="Suche" />
 			<ReactiveBase
-				app="pagestest"
-				credentials="elastic:adFUF0DlTV8wJxWJOdlWOWqc"
-				url="https://produktdokumentation.es.centralus.azure.elastic-cloud.com:9243">
+				app="rmdata_docu_dev_test"
+				credentials="rmdata_docu_dev_test_readonly:TXKBvUiJwvL2yyE"
+				url="https://rmdataporal-elastic-dev-test.es.westeurope.azure.elastic-cloud.com:9243">
 				<div>
 					<DataSearch
 						componentId="searchbox"
