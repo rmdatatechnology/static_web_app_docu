@@ -44,6 +44,10 @@ const ProductDropDown = () => {
   }
 	function getNagigateTo(link, prod){
 		
+		let pathname = typeof window !== 'undefined' ? window.location.pathname : null;
+		if(pathname.includes('/search'))
+			link = pathname;
+		
 		let opt = productItems.find(
 		k => k.name.toString().toLowerCase() === prod.toString().toLowerCase()
 		);
@@ -57,12 +61,16 @@ const ProductDropDown = () => {
 	 <>
 	 <div className="dropdown">
 				<button className="dropdown-button" onClick={toggling}>
+					<div className="dropdownGrid">
 					<div>
 					<span>{getProductName()}</span>
+					</div>
+					<div>
 					{isOpen ?
 					<span className="arrow-open" /> :
 					<span className="arrow-closed" />
 					}
+					</div>
 					</div>
 					</button>
 			{isOpen && (

@@ -6,8 +6,12 @@ const TextBlock = ({ theme, children , symbol }) => {
  
   return (
     <div className={theme}>
-	<span>{symbol}  </span>
-      {children}
+	<table className="customBlockquoteTable">
+	<tr>
+	<td className={'customBlockquoteTableColumn' + ' ' + theme}><span className="customBlockquote">{symbol}</span></td>
+	<td className={'customBlockquoteTableColumn' + ' ' + theme}>{children}</td>
+	</tr>
+	</table>
     </div>
   )
 }

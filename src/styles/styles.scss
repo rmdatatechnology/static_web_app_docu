@@ -669,6 +669,14 @@ position: fixed;
   padding: 4px;
 }
 
+.dropdownGrid
+{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 5px;
+  text-align: center;
+}
+
 .arrow-open {
   color: black;
   top: 14px;
@@ -934,14 +942,47 @@ position: fixed;
 .custom-menu {
   font-weight: bold;
 }
+
+.customBlockquote
+{
+	font-size: 2.5rem;
+	text-decoration: none;
+}
+.customBlockquoteTable
+{
+	border-collapse:collapse!important;
+}
+
+.customBlockquoteTableColumn
+{
+	border-style : hidden!important;
+	text-align: center;
+	
+	.success {
+		background: #ddffdd;
+		}
+	.info {
+		background: #e7f3fe;
+	}
+	.danger {
+		background: #ffdddd;
+		}
+	.warning {
+		background: #ffffcc;
+		}
+	.example {
+		background: #f0f0f8;
+		}
+}
+
 .success {
   background: #ddffdd;
   border-left: 6px solid #04AA6D;
   position: relative;
   border-left-width: 3px;
   border-left-style: solid;
-  padding: 2rem 1.5rem;
-  margin: 2rem 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
   border-radius: 5px;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -953,8 +994,8 @@ position: fixed;
   position: relative;
   border-left-width: 3px;
   border-left-style: solid;
-  padding: 2rem 1.5rem;
-  margin: 2rem 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
   border-radius: 5px;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -965,8 +1006,8 @@ position: fixed;
   position: relative;
   border-left-width: 3px;
   border-left-style: solid;
-  padding: 2rem 1.5rem;
-  margin: 2rem 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
   border-radius: 5px;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -977,8 +1018,8 @@ position: fixed;
   position: relative;
   border-left-width: 3px;
   border-left-style: solid;
-  padding: 2rem 1.5rem;
-  margin: 2rem 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
   border-radius: 5px;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -989,8 +1030,8 @@ position: fixed;
   position: relative;
   border-left-width: 3px;
   border-left-style: solid;
-  padding: 2rem 1.5rem;
-  margin: 2rem 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
   border-radius: 5px;
   word-break: break-word;
   overflow-wrap: break-word;
