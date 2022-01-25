@@ -84,7 +84,7 @@ a{ color: #900;
 
 .maincontainer {
   display: grid;
-   grid-template-rows: 100px auto auto; 
+   grid-template-rows: 100px 700px 100px; 
    width: 100%;
 }
 
@@ -101,18 +101,18 @@ a{ color: #900;
 .content {
 position: fixed;
   overflow-y: auto;
-  height: 90vh;
+  height: 85vh;
   width: calc(100% - 200px);
 		}
 .contentpage {  
   overflow-y: auto;
-  height: 90vh;
+  height: 85vh;
   
 }
 	
 	
 .end {
-        
+       
 		}
 
 .main-content {
@@ -532,33 +532,45 @@ position: fixed;
 	}
 }
 
-
-.productItem{
-  display: flex;
-  flex-direction: lightgray;
-  position: relative;
-  border: 0px;
+.productGrid
+{
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  padding: 0px;
+  margin: 0px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  align-content: center;
 }
-.productInfo{
- display: inline-block;
-  align-items: center;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+.productGridItem
+{
+  height: 420px;
+  background-color: #F2F3F4;
+}
 
+.productImg{
+  margin-left: 0px;
+  padding: 0px;
+  margin-right: 0px;
+  border: none;
+  width: 100%;
+}
+
+.productButton{
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+  text-align: center;
+  text-valign: center;
 }
 
 .productTitle{
-	font-size: 2rem;
-  font-weight: 700;
-  line-height: 140%;
-
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  text-align: center;
+  text-valign: center;
 }
 .mdxImage {
 	display: inline-block;
@@ -671,7 +683,8 @@ position: fixed;
 .dropdown-listitem {
 	padding: 8px 16px;
     border-bottom: 1px solid #e5e5e5;
-	 
+	cursor:pointer;
+	
 	&:last-child {
      border-bottom: none;
 	}
@@ -724,6 +737,7 @@ position: fixed;
 	text-align: center;
 	border: 0px;
 	background-color: transparent;
+	cursor:pointer;
   
   &:hover,
   &.active {
@@ -744,6 +758,8 @@ position: fixed;
 .footer-container {
   width: 100%;
   margin: 0 auto;
+  display: flex;  
+  flex-direction: row;
   padding: 5;
   p {
     margin: 1rem 0;
@@ -861,7 +877,7 @@ position: fixed;
 .sidebar-content {
   position: fixed;
   width: 370px;
-  height: 90vh;
+  height: 85vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
   

@@ -32,6 +32,8 @@ const query = graphql`
           productItems {
 			link
             name
+			fullname
+			description
 			product
 			img
 			slug

@@ -10,6 +10,7 @@ const PostItem = ({
   title,
   description,
   imageName,
+  count,
 }) => {
 const { locale } = useLocale();
   const { listImages } = useStaticQuery(
@@ -53,12 +54,15 @@ const { locale } = useLocale();
 			return navigate(`/${locale}${slug}`);
    
   }
-	
+  
+ 
   return (
-    <button onClick={onClick}>
-      <section >
-        {imageToUse && (
+	<div onClick={onClick} className="productButton">
+		<br />
+        <h1 className="productTitle">{title}</h1>
+		{imageToUse && (
           <img
+		    className="productImg"
             src={imageToUse.publicURL}
             alt={title}
 			
@@ -68,16 +72,13 @@ const { locale } = useLocale();
          <img
             src={imageToUse.publicURL}
             alt={title}
-			
+			className="productImg"
           />
         )}
-        <div className="productItem">
-          <span className="productInfo" />
-          <h1 className="productTitle">{title}</h1>
-          <p>{description}</p>
-        </div>
-      </section>
-    </button>
+		<br />
+        <div>{description}</div>
+		<br />
+    </div>
   );
 };
 

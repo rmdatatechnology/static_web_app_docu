@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { useLocale } from '../hooks/locale';
 import "../styles/styles.scss";
 
@@ -18,7 +19,6 @@ const BaseLayout = ({ children, pageContext: { locale } }) => {
         <div role="main">
           <div>{children}</div>
         </div>
-        
       </div>
     </>
   )

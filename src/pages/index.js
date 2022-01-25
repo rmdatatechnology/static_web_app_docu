@@ -91,6 +91,14 @@ const Index = ({ data }) => {
       Menu,
       Italic,
     }
+ let count = 0;
+ function linebreak(){
+	count = count + 1;
+	if(count%3 === 0)
+		return "<div><br />fdsfdsf<br /></div>)";
+	else 
+		return null;
+  }
 
   return (
     <>
@@ -108,22 +116,35 @@ const Index = ({ data }) => {
 			<br />
 			<br />
 			<section className="custom-section">
-				{productItems.map(
-				({
+			<div className="productGrid">
+			{productItems.map(
+				function({
 					name,
+					fullname,
 					title,
+					description,
 					slug,
 					img,
-          }) => (
-              <PostItem
-                slug={slug}
-                title={name}
-                key={name}
-				imageName={img}
-              />
-            ),
-        )}
-      </section>
+				})
+				{
+					let useLB = linebreak();
+					
+					return (
+						<div className="productGridItem">
+						<PostItem
+							slug={slug}
+							title={fullname}
+							description={description}
+							key={name}
+							imageName={img}
+							count={count}
+						/>
+						</div>
+					)
+				}
+				)}
+				</div>
+			</section>
 			</div>
 		<div className="end"></div>
 	</div>
