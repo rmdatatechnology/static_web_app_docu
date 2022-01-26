@@ -1,3 +1,4 @@
+import { useStaticQuery } from 'gatsby';
 import geodesigner from '../../documentation/toc/geodesigner.json';
 import geomapper from '../../documentation/toc/geomapper.json';
 import geodesktop from '../../documentation/toc/geodesktop.json';
@@ -7,6 +8,8 @@ import inventorymanager from '../../documentation/toc/inventorymanager.json';
 import geodiscoverer from '../../documentation/toc/geodiscoverer.json';
 import rmgeo from '../../documentation/toc/rmgeo.json';
 import tdworx from '../../documentation/toc/tdworx.json';
+
+
 
 // Sets variables for light and dark theme
 export const getSidebarItems = (product) => {
@@ -77,3 +80,24 @@ export const getNewUrlWithoutPrefix = (withLocale, prefix) => {
 	  
 		return newUrl.join("/");
 	} 
+	
+export const getProcuctImage = (listImages, imageName) => {
+	 const defaultImg = listImages.nodes.find(img => {
+    if(img.name === 'default')
+		return img;
+		
+	return null;
+  });
+  
+  const imageToUse = listImages.nodes.find(img => {
+    if(img.name === imageName.toString())
+		return img;
+		
+	return null;
+  });
+  
+  if(imageToUse)
+	  return imageToUse;
+  else
+	  return defaultImg;
+}

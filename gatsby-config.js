@@ -56,7 +56,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/config/translations`,
+        path: `${__dirname}/documentation/settings/translations`,
         name: `translations`,
       },
     },

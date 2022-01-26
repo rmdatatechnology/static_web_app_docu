@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { navigate } from "gatsby";
+import { navigate } from 'gatsby';
 import useProducts from '../useProducts';
 import { useProduct } from '../../hooks/products';
 import "../../styles/styles.scss";
 
+
+
+  
 const ProductDropDown = () => {
  
   const productItems = useProducts();
@@ -39,14 +42,14 @@ const ProductDropDown = () => {
 		k => k.product.toString().toLowerCase() === product.toString().toLowerCase()
 		);
 		
-	return opt ? opt.name : "Products";
+	return opt ? opt.fullname : "Products";
 	  
   }
 	function getNagigateTo(link, prod){
 		
 		let pathname = typeof window !== 'undefined' ? window.location.pathname : null;
-		if(pathname.includes('/search'))
-			link = pathname;
+		if(pathname.includes('/search')) // we are already on the search side and we only want to change the product
+			link = "";
 		
 		let opt = productItems.find(
 		k => k.name.toString().toLowerCase() === prod.toString().toLowerCase()
@@ -81,7 +84,7 @@ const ProductDropDown = () => {
 							setIsOpen(false);
 							navigate(getNagigateTo(option.link, option.name))
 						}}>
-						{option.name}
+						{option.fullname}
 						</li>
               ))}
 			</ul>

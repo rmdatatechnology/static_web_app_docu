@@ -37,23 +37,14 @@ const query = graphql`
           translations: childTranslationsJson {
             home
 
-            hello
-            subline
-            latestPosts
-            category
-            allPosts
-            toRead
-
             next
             prev
             of
 
             button
 
-            aboutProject
-            seeMorePWA
             maintainedBy
-            contributeMessage
+            search
           }
         }
       }

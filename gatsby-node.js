@@ -34,6 +34,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 		util: require.resolve('util'),
 		vm: require.resolve('vm-browserify'),
 		zlib: require.resolve('browserify-zlib'),
+		fs: false,
 		},
     },
 	plugins: [

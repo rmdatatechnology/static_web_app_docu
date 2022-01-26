@@ -4,6 +4,13 @@ import { useStaticQuery, graphql, navigate } from 'gatsby';
 import { useLocale } from '../../hooks/locale';
 import "../../styles/styles.scss";
 
+
+const {
+  getProcuctImage,
+} = require(`../../utils/pageHelper`);
+
+
+
 const PostItem = ({
   slug,
   background,
@@ -13,7 +20,7 @@ const PostItem = ({
   count,
 }) => {
 const { locale } = useLocale();
-  const { listImages } = useStaticQuery(
+const { listImages } = useStaticQuery(
     graphql`
       query {
         listImages: allFile (filter: {ext: {eq: ".png"}, relativeDirectory: {eq: ""}}) {
@@ -27,21 +34,9 @@ const { locale } = useLocale();
           }
     `,
   );
-
-  const defaultImg = listImages.nodes.find(img => {
-    if(img.name === 'default')
-		return img;
-		
-	return null;
-  });
   
-  const imageToUse = listImages.nodes.find(img => {
-    if(img.name === imageName.toString())
-		return img;
-		
-	return null;
-  });
-
+  const imageToUse = getProcuctImage(listImages,imageName);
+  
   function onClick(e) {
 	e.preventDefault();
    
@@ -66,13 +61,6 @@ const { locale } = useLocale();
             src={imageToUse.publicURL}
             alt={title}
 			
-          />
-        )}
-        {!imageToUse && defaultImg && (
-         <img
-            src={imageToUse.publicURL}
-            alt={title}
-			className="productImg"
           />
         )}
 		<br />
