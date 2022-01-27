@@ -68,6 +68,34 @@ const Page = ({ data }) => {
 		<MarkdownLink {...props} />
         )
       },
+	  h1: ({ children }) => {
+        return (
+          <h1 className="customH1" >
+            {children}
+          </h1>
+        )
+      },
+	  h2: ({ children }) => {
+		return (
+		<h2 className="customH2" >
+            {children}
+          </h2>
+        )
+      },
+	  h3: ({ children }) => {
+        return (
+		<h3 className="customH3" >
+            {children}
+          </h3>
+        )
+      },
+	  h4: ({ children }) => {
+       return (
+		<h4 className="customH4" >
+            {children}
+          </h4>
+        )
+      },
       // Use the below components without having to import in *.mdx
       Example,
       Danger,
