@@ -74,6 +74,8 @@ const SearchResultItem = ({res}) => {
         return false;
 
     }
+	
+	let url = typeof window !== 'undefined' ? window.location.origin : '';
 
     if (useItem(res, locale, items, res.slug)) {
         return (
@@ -94,7 +96,7 @@ const SearchResultItem = ({res}) => {
                         <div>
                             <div><h2>{res.title}</h2></div>
                             <div><h4>{opt.fullname}</h4></div>
-                            <div><h6>{res.slug.split(`.`)[0]}</h6></div>
+                            <div><h6>{url + getNagigateTo(res.slug.split(`.`)[0])}</h6></div>
                   </div>
             </div>
 			<hr className="customSeperator" />
