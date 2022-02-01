@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { LocaleProvider } from './locale';
 import { ProductProvider } from './products';
 import { MenuProvider } from './menu';
+import { SearchProvider } from './search';
 import { SidebarProvider } from './sidebar';
 
 // Wrapping the application with all Contexts
@@ -11,7 +12,11 @@ const AppProvider = ({ children }) => (
   <LocaleProvider>
 	<ProductProvider>
 		<SidebarProvider>
-			<MenuProvider>{children}</MenuProvider>
+			<MenuProvider>
+				<SearchProvider>
+				{children}
+				</SearchProvider>
+			</MenuProvider>
 		</SidebarProvider>
 	</ProductProvider>
   </LocaleProvider>
