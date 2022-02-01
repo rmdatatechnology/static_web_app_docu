@@ -24,7 +24,6 @@ import {
 
 import "../styles/styles.scss";
 
-
 const Default = ({ data }) => {
 	
 	if (!data) {
@@ -94,7 +93,6 @@ const Default = ({ data }) => {
 			<SEO
 				title={post.frontmatter.title}
 				description={post.frontmatter.description}
-				image={post.frontmatter.image}
 			/>
 			<div id="pageContent">
 				<TitlePage text={post.frontmatter.title} />

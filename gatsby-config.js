@@ -38,6 +38,7 @@ module.exports = {
     description: `rmData Produktdokumentation`,
 	author: `Doris Koenigshofer`,
     siteUrl: `https://portal.rmdatacloud-test.com/documentation/`,
+	image: "/logo.png", // Path to the image placed in the 'static' folder, in the project's root directory.
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

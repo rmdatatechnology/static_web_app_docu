@@ -14,7 +14,7 @@ const {
 
 
 
-const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, opened , item, prefix, product, clicked, setClicked, setScrollPos, focusSidebar}) => {
+const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opened , item, prefix, product, clicked, setClicked, setScrollPos, focusSidebar}) => {
   const { locale } = useLocale();
   const { Icon, url, items } = item;	
   let pathname = getNewUrlWithoutPrefix(false, prefix);
@@ -22,7 +22,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, op
   let active = isClicked || (!clicked && (pathname === ('/' + url) || pathname === url || pathname === (url + '/') || pathname === ('/' + url + '/')));
   
   let isAlreadyOpen = opened[url] === true;
-  let expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url  || pathname === (url + '/') || pathname === ('/' + url + '/') || checkForValue(item, pathname, opened, isClicked);
+  let expanded = isAlreadyOpen || pathname === ('/' + url) || pathname === url  || pathname === (url + '/') || pathname === ('/' + url + '/') || checkForValue(item, pathname, opened, clicked);
   const focusDiv = useRef();
 
   useEffect(() => {
@@ -33,7 +33,6 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, op
 		if(focusDiv.current && active && !clicked)
 		{			
 			focusDiv.current.focus(); 
-			setClicked(url);
 			if(focusSidebar && focusSidebar.current)
 			{
 				setScrollPos(focusSidebar.current.scrollTop);
@@ -54,11 +53,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, op
 	 
 	}, [focusDiv, setScrollPos, focusSidebar, url, setClicked, active, clicked]);
    
-  
-  const collapse = () => {
-	setOpened(url);
-  };
-
+ 
   const hasChildren = items && items.length !== 0;
   
   const calculatedClassName = active ? 'sidebarButton active' : 'sidebarButton';
@@ -78,7 +73,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, op
 	setClicked(url);
 	
 	if (hasChildren) {
-	  collapse(url);
+	 toggle(url);
     }
 	else
 	{
@@ -106,7 +101,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, op
           style={{ paddingLeft: depth * depthStep }}
         >
           {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
-	  <div>{label}</div>
+	    <div>{label}</div>
         </div>
 		{hasChildren ? (
 		<>
@@ -120,7 +115,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  setOpened, op
         <ul>
           {items.map((item, index) => (
             <SidebarItem
-              setOpened={setOpened}
+              toggle={toggle}
               opened={opened}
 			  item={item}
 			  depth={depth + 1}
@@ -211,7 +206,7 @@ useLayoutEffect(() => {
 			  <SidebarItem
 				depthStep={depthStep}
                 depth={depth}
-                setOpened={toggle}
+                toggle={toggle}
 				opened={opened}
 				item={sidebarItem}
 				prefix={prefix.site.pathPrefix}

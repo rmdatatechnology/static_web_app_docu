@@ -1,4 +1,3 @@
-import { useStaticQuery } from 'gatsby';
 import geodesigner from '../../documentation/toc/geodesigner.json';
 import geomapper from '../../documentation/toc/geomapper.json';
 import geodesktop from '../../documentation/toc/geodesktop.json';

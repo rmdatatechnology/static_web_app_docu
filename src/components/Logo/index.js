@@ -28,7 +28,7 @@ const Logo = ({imageName, sizeOverride, classOverride}) => {
 		 return img;
     }
 	else
-		if(img.name == imageName)
+		if(img.name === imageName)
 			return img;
 	return null;
   });

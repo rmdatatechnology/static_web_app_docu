@@ -1,116 +1,11 @@
 import React from 'react';
-import { useStaticQuery, graphql, navigate } from 'gatsby';
-import { ReactiveBase, DataSearch, ReactiveList, ResultList } from '@appbaseio/reactivesearch';
+import { ReactiveBase, DataSearch, ReactiveList } from '@appbaseio/reactivesearch';
 import TitlePage from '../components/TitlePage';
-import { useLocale } from '../hooks/locale';
 import { useProduct } from '../hooks/products';
 import useProducts from '../components/useProducts';
 import useTranslations from '../components/useTranslations';
-
-const { ResultListWrapper } = ReactiveList;
-
-const {
-    getProcuctImage,
-    getSidebarItems,
-} = require(`../utils/pageHelper`);
-
-const SearchResultItem = ({res}) => {
-    const { locale } = useLocale();
-    const { product } = useProduct();
-    const productItems = useProducts();
-
-    const { listImages } = useStaticQuery(
-        graphql`
-      query {
-        listImages: allFile (filter: {ext: {eq: ".png"}, relativeDirectory: {eq: ""}}) {
-          
-			 nodes {
-				name
-				publicURL
-				absolutePath
-				}
-            }
-          }
-    `,
-    );
-    let items = getSidebarItems(product);
-    let opt = productItems.find(
-        k => k.name.toString().toLowerCase() === product.toString().toLowerCase()
-    );
-    const imageToUse = getProcuctImage(listImages, opt.img);
-
-    function getNagigateTo(link) {
-
-        let urlMain = typeof window !== 'undefined' ? window.location.pathname : '';
-        let isLocale = urlMain.includes(`/${locale}/`);
-        let slug = `${locale}/${link}`;
-        if (isLocale === false || locale === "de")
-            slug = `/${link}`;
-
-        let newProd = opt ? ("?product=" + opt.product) : "";
-
-        let newLink = slug + newProd;
-        return newLink;
-    };
-
-    function checkForValue(items, value) {
-
-        if (!items)
-            return false;
-
-        return items.some(function (element) {
-            if (element.items)
-                return checkForValue(element.items, value);
-            else
-                return value === element.url;
-
-        });
-    }
-
-    function useItem(entry, locale, items, slug) {
-		if(!res || !slug)
-			return false;
-		
-        let check = checkForValue(items, slug.split(`.`)[0])
-        if (check && entry.locale === locale)
-            return true;
-
-        return false;
-
-    }
-
-    if (useItem(res, locale, items, res.slug)) {
-        return (
-            <>
-			<div className="searchResContainer" onClick={event => {
-                navigate(getNagigateTo(res.slug.split(`.`)[0]))
-            }}>
-               
-                        <div>
-                            {imageToUse && (
-                                <img
-                                    src={imageToUse.publicURL}
-                                    alt={res.title}
-                                    className="searchResImg"
-                                />
-                            )}
-                        </div>
-                        <div>
-                            <div><h2>{res.title}</h2></div>
-                            <div><h4>{opt.fullname}</h4></div>
-                            <div><h6>{res.slug.split(`.`)[0]}</h6></div>
-                  </div>
-            </div>
-			<hr className="customSeperator" />
-			</>
-        );
-
-    }
-    else
-        return (<></>);
-
-}
-
+import SEO from '../components/seo';
+import SearchResultItem from '../components/search';
 
 const SearchContent = () => {
 
@@ -129,6 +24,10 @@ const SearchContent = () => {
     return (
   <>
             <div className="pagecontainer">
+			<SEO
+				title={search}
+				description={opt.fullname + ": " + search}
+			/>
                 <div className="sidebar" id="sidemenu" />
                 <div className="content">
                     <section className="main-content">
@@ -140,10 +39,11 @@ const SearchContent = () => {
                                 <DataSearch
                                     componentId="searchbox"
                                     dataField={['title', 'rawbody', 'slug', 'locale']}
+									fuzziness="2"
                                     autosuggest={false}
                                     showClear={true}
                                     placeholder="Search"
-                                    queryFormat="and"
+                                    queryFormat="or"
                                     noInitialQuery={true}
                                     onValueChange={(value) => {
                                         if (value === '') {
@@ -161,7 +61,7 @@ const SearchContent = () => {
                                 size={50}
                                 showResultStats={false}
                                 react={{
-                                    "and": ["searchbox"]
+                                    "or": ["searchbox"]
                                 }}
                                 defaultQuery={() => {
                                     if (searchText !== null) {
@@ -191,4 +91,4 @@ const SearchContent = () => {
             )
 }
 
-            export default SearchContent
+export default SearchContent

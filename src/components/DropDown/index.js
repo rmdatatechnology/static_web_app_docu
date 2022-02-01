@@ -32,10 +32,6 @@ const ProductDropDown = () => {
 	  setIsOpen(!isOpen);
   } 
   
-  const onOptionClicked = value => () => {
-    setIsOpen(false);
-  };
-  
   const getProductName = () => 
   {
 	let opt = productItems.find(

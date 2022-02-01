@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PostItem from '../components/PostItem';
 import TitlePage from '../components/TitlePage';
 import useProducts from '../components/useProducts';
+import SEO from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -72,7 +73,7 @@ const Index = ({ data }) => {
       },
       img: (props) => {
         return (
-         <img className="mdxImage" {...props} />
+         <img className="mdxImage" alt="" {...props} />
         )
       },
       // Use the below components without having to import in *.mdx
@@ -91,21 +92,17 @@ const Index = ({ data }) => {
       Menu,
       Italic,
     }
- let count = 0;
- function linebreak(){
-	count = count + 1;
-	if(count%3 === 0)
-		return "<div><br />fdsfdsf<br /></div>)";
-	else 
-		return null;
-  }
-
+ 
   return (
     <>
 	<div className="pagecontainer">
 		<div className="sidebar" id="sidemenu" />
 		<div className="content">
 			<div id="pageContent">
+			<SEO
+				title={data.mdx.frontmatter.title}
+				description={data.mdx.frontmatter.title}
+			/>
 				<TitlePage text={data.mdx.frontmatter.title} />
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
@@ -127,8 +124,6 @@ const Index = ({ data }) => {
 					img,
 				})
 				{
-					let useLB = linebreak();
-					
 					return (
 						<div className="productGridItem">
 						<PostItem
@@ -137,7 +132,6 @@ const Index = ({ data }) => {
 							description={description}
 							key={name}
 							imageName={img}
-							count={count}
 						/>
 						</div>
 					)

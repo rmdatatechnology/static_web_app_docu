@@ -17,7 +17,6 @@ const PostItem = ({
   title,
   description,
   imageName,
-  count,
 }) => {
 const { locale } = useLocale();
 const { listImages } = useStaticQuery(
@@ -53,8 +52,10 @@ const { listImages } = useStaticQuery(
  
   return (
 	<div onClick={onClick} className="productButton">
-		<br />
-        <h1 className="productTitle">{title}</h1>
+        <div>
+		<h1 className="productTitle">{title}</h1>
+		</div>
+		<div>
 		{imageToUse && (
           <img
 		    className="productImg"
@@ -63,9 +64,8 @@ const { listImages } = useStaticQuery(
 			
           />
         )}
-		<br />
+		</div>
         <div>{description}</div>
-		<br />
     </div>
   );
 };
