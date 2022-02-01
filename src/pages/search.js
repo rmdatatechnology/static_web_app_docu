@@ -5,7 +5,7 @@ import { useProduct } from '../hooks/products';
 import useProducts from '../components/useProducts';
 import useTranslations from '../components/useTranslations';
 import SEO from '../components/seo';
-import SearchResultItem from '../components/search';
+import SearchResultItem from '../components/Search';
 import { useSearchQuery } from '../hooks/search';
 
 const SearchContent = () => {
