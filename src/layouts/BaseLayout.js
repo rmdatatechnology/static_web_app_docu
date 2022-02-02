@@ -19,6 +19,9 @@ const BaseLayout = ({ children, pageContext: { locale } }) => {
         <div role="main">
           <div>{children}</div>
         </div>
+		<div>
+		<Footer />
+		</div>
       </div>
     </>
   )

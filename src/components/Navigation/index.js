@@ -15,7 +15,6 @@ const Navigation = ({ isActive, handleToggleMenu }) => {
           <LocalizedLink className="navigation-link"
             to={menu.link}
             aria-label={menu.name}
-            activeClassName="active"
             key={`${menu.link}${index}`}
             >
             {menu.name}

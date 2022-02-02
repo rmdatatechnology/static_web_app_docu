@@ -4,6 +4,7 @@ import PostItem from '../components/PostItem';
 import TitlePage from '../components/TitlePage';
 import useProducts from '../components/useProducts';
 import SEO from '../components/seo';
+import Footer from '../components/Footer';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -140,7 +141,8 @@ const Index = ({ data }) => {
 				</div>
 			</section>
 			</div>
-		<div className="end"></div>
+		<div className="end">
+		</div>
 	</div>
 	</>
   );

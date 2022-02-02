@@ -11,12 +11,12 @@ import { useMenu } from '../../hooks/menu';
 import "../../styles/styles.scss";
 
 const Header = () => {
-  const { home } = useTranslations();
-  const { openedMenu, toggleMenu } = useMenu();
+    const { home } = useTranslations();
+    const { openedMenu, toggleMenu } = useMenu();
 
-  return (
-    <div className="header-wrapper" id="headermenu">
-      <div className="contact-info">
+    return (
+        <div className="header-wrapper" id="headermenu">
+            <div className="contact-info">
                 <div className="contact-inner">
                     <div className="contact-inner-left">
                         <Logo imageName="mailicon" sizeOverride="20px" classOverride="flag-mail" /><a href="mailto:office@rmdatagroup.com" className="contact-info-link" title="E-Mail senden"><i className="fa-envelope fa-lg far"></i>&nbsp;<span className="mail">office@rmdatagroup.com</span></a>
@@ -27,29 +27,27 @@ const Header = () => {
                         <Logo imageName="flag-ch" sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+41415112131">+41 41 51121 31</a>
                     </div>
                 </div>
-                
+            </div>
+            <div className="header-container">
+                <LocalizedLink className="logo-link" to="/" title={home} aria-label={home}>
+                    <Logo />
 
-            </div> 
-	  <div className="header-container">
-        <LocalizedLink className="logo-link" to="/" title={home} aria-label={home}>
-          <Logo />
-		  
-        </LocalizedLink>
-				
-        <div className={openedMenu ? 'button-menu is-active' : 'button-menu'}>
-          <ButtonMenu handleClick={toggleMenu} isActive={openedMenu} />
-        </div>
+                </LocalizedLink>
 
-        <div className={openedMenu ? 'nav-menu is-active' : 'nav-menu'}>
-          <Navigation />
+                <div className='button-menu'>
+                    <ButtonMenu handleClick={toggleMenu} isActive={openedMenu} />
+                </div>
+
+                <div className='nav-menu'>
+                    <Navigation />
+                </div>
+
+                <div className="nav-languages">
+                    <Languages />
+                </div>
+            </div>
         </div>
-		
-		<div className="nav-languages">
-          <Languages />
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default Header;
