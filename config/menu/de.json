@@ -1,7 +1,6 @@
 {
   "menuItems": [
     { "name": "Home", "link": "/" },
-	{ "name": "Suche", "link": "/search" },
-	{ "name": "404", "link": "/404" }
+	{ "name": "Suche", "link": "/search" }
   ]
 }
