@@ -45,6 +45,8 @@ const query = graphql`
 
             maintainedBy
             search
+			errorTitle
+			errorText
           }
         }
       }

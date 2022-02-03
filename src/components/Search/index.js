@@ -4,6 +4,7 @@ import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
 import useProducts from '../useProducts';
 import useTranslations from '../useTranslations';
+import { useSidebar } from '../../hooks/sidebar';
 
 const {
     getProcuctImage,
@@ -14,6 +15,7 @@ const SearchResultItem = ({res}) => {
     const { locale } = useLocale();
     const { product } = useProduct();
     const productItems = useProducts();
+	const { clicked, setClicked } = useSidebar();
   
     const { listImages } = useStaticQuery(
         graphql`
@@ -75,14 +77,18 @@ const SearchResultItem = ({res}) => {
 
     }
 	
+	function onClick() {
+		setClicked(null);
+		
+		return navigate(getNagigateTo(res.slug.split(`.`)[0]));
+	}
+	
 	let url = typeof window !== 'undefined' ? window.location.origin : '';
 
     if (useItem(res, locale, items, res.slug)) {
         return (
             <>
-			<div className="searchResContainer" onClick={event => {
-                navigate(getNagigateTo(res.slug.split(`.`)[0]))
-            }}>
+			<div className="searchResContainer" onClick={event => onClick()}>
                
                         <div>
                             {imageToUse && (

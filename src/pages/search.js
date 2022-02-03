@@ -13,7 +13,8 @@ const SearchContent = () => {
 	const {
         search,
     } = useTranslations();
-
+	
+	
 	const { product } = useProduct();
 	const { searchQuery, setSearchQuery } = useSearchQuery();
     const productItems = useProducts();
