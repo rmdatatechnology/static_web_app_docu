@@ -18,11 +18,10 @@ const SEO = ({ title, description, image }) => {
   const {
     defaultTitle,
     defaultDescription,
-    siteUrl,
     defaultImage,
   } = site.siteMetadata
   
-  const originUrl = typeof window !== 'undefined' ? window.location.origin : siteUrl;
+  const originUrl = typeof window !== 'undefined' ? window.location.origin : "";
   
   const seo = {
     title: title || defaultTitle,
@@ -55,7 +54,6 @@ const query = graphql`
       siteMetadata {
         defaultTitle: title
         defaultDescription: description
-        siteUrl: siteUrl
         defaultImage: image
       }
     }

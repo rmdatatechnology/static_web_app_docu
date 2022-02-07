@@ -1,3 +1,5 @@
+const config = require('./config/variables/variables.json')
+  
 const myQuery = `{
   allMdx {
               nodes {
@@ -24,21 +26,31 @@ const queries = [
 			locale: node.fields.locale,
 			slug: node.slug,
           })), // optional
-    indexName: 'rmdata_docu_dev_test', 
+    indexName: config.elasticindex, 
 	indexConfig: {
      
     },
   },
 ];
 
+function getPrefix()
+{
+  if(config.version && config.version !== ""&& config.version !== "main")
+	  return "/documentation/" + version;
+  
+  return "/documentation";
+}
+
+
 module.exports = {
-   pathPrefix: `/documentation`,
+   pathPrefix: getPrefix(),
    siteMetadata: {
     title: `Produktinformation`,
     description: `rmData Produktdokumentation`,
 	author: `Doris Koenigshofer`,
-    siteUrl: `https://portal.rmdatacloud-test.com/documentation/`,
 	image: "/logo.png", // Path to the image placed in the 'static' folder, in the project's root directory.
+	version: config.version,
+	product: config.productused, 
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -52,6 +64,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images`,
         name: `images`,
+      },
+    },
+	{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/config/variables`,
+        name: `variables`,
       },
     },
     {
@@ -143,8 +162,8 @@ module.exports = {
 	{
       resolve: `gatsby-plugin-elasticsearch`,
       options: {
-        node: 'https://rmdataporal-elastic-dev-test.es.westeurope.azure.elastic-cloud.com:9243',
-		apiKey: 'Uy1jMmNYNEJBU1BLM0xzdTc0Y3c6STdnYUotUU9ROW1zc1ZDcm5SN2RTUQ==', // optional
+        node: config.elasticurl,
+		apiKey: config.elasticapikey, // optional
         queries,
         chunkSize: 10000, // default: 1000
       },

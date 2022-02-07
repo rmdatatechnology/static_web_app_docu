@@ -7,6 +7,7 @@ import useTranslations from '../components/useTranslations';
 import SEO from '../components/seo';
 import SearchResultItem from '../components/Search';
 import { useSearchQuery } from '../hooks/search';
+import useVariables from '../components/useVariables';
 
 const SearchContent = () => {
 
@@ -14,6 +15,11 @@ const SearchContent = () => {
         search,
     } = useTranslations();
 	
+	const {
+		elasticurl,
+		elasticcredentials,
+		elasticindex,
+    } = useVariables();
 	
 	const { product } = useProduct();
 	const { searchQuery, setSearchQuery } = useSearchQuery();
@@ -31,12 +37,12 @@ const SearchContent = () => {
 			/>
                 <div className="sidebar" id="sidemenu" />
                 <div className="content">
-                    <section className="main-content">
+				<section className="main-content">
                         <TitlePage text={opt.fullname + ": " + search} />
 						<ReactiveBase
-                            app="rmdata_docu_dev_test"
-                            credentials="rmdata_docu_dev_test_readonly:TXKBvUiJwvL2yyE"
-                            url="https://portal.rmdatacloud-test.com/elasticsearchendpoint/"><div>
+                            app={elasticindex}
+                            credentials={elasticcredentials}
+                            url={elasticurl}><div>
                                 <DataSearch
                                     componentId="searchbox"
 									innerClass={{

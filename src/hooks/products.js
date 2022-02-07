@@ -1,10 +1,22 @@
 import React, { createContext, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import useVariables from '../components/useVariables';
 
 const ProductContext = createContext('');
 
+
+
 const ProductProvider = ({ children }) => {
-  const [product, setProduct] = useState('geomapper');
+	
+  const {
+		productused,
+  } = useVariables();
+  
+  let prod = 'geomapper';
+  if(productused && productused !== "")
+	  prod = productused;
+  
+  const [ product, setProduct] = useState(prod);
 
   function changeProduct(product) {
     setProduct(product);
