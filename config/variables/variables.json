@@ -1,8 +1,8 @@
 {
 	"productused": "geomapper",
-	"version": "main",
+	"version": "",
 	"elasticurl": "",
-	"elasticcredentials": "rmdata_docu_dev_test_readonly:TXKBvUiJwvL2yyE",
-	"elasticindex": "rmdata_docu_dev_test",
-	"elasticapikey": "Uy1jMmNYNEJBU1BLM0xzdTc0Y3c6STdnYUotUU9ROW1zc1ZDcm5SN2RTUQ=="
+	"elasticcredentials": "",
+	"elasticindex": "",
+	"elasticapikey": ""
 }
