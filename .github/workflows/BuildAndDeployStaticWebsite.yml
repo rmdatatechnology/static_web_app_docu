@@ -4,11 +4,9 @@ name: Build And Deploy Static Site
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  # Triggers the workflow on a 1 am from monday to friday
+ schedule:
+    - cron: '5 1 * * 1-5'
 
 #
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
