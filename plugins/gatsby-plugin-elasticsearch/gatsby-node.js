@@ -13,10 +13,13 @@ const identity = (obj) => obj;
 
 exports.onPostBuild = async function (
   { graphql },
-  { node, apiKey, auth, queries, chunkSize = 1000 }
+  { node, apiKey, auth, queries, useindex, chunkSize = 1000 }
 ) {
   activity.start();
 
+  if(!useindex || useindex === false || useindex === "false")
+	  return;
+  
   const config = { node: node };
   if (auth) {
     config['auth'] = auth;

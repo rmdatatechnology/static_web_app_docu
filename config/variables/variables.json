@@ -1,10 +1,9 @@
 {
-  "productused": "geomapper",
-  "version": "main",
-  "elasticurl": "https://rmdataporal-elastic-dev-test.es.westeurope.azure.elastic-cloud.com:9243",
-  "elasticcredentials": "rmdata_docu_dev_test_readonly:TXKBvUiJwvL2yyE",
-  "elasticindex": "rmdata_docu_dev_test",
-  "elasticapikey": "Uy1jMmNYNEJBU1BLM0xzdTc0Y3c6STdnYUotUU9ROW1zc1ZDcm5SN2RTUQ==",
-  "product": "geodesigner",
-  "useindex": "false"
+	"productused": "geomapper",
+	"version": "main",
+	"elasticurl": "https://rmdataporal-elastic-dev-test.es.westeurope.azure.elastic-cloud.com:9243",
+	"elasticcredentials": "rmdata_docu_dev_test_readonly:TXKBvUiJwvL2yyE",
+	"elasticindex": "rmdata_docu_dev_test",
+	"elasticapikey": "Uy1jMmNYNEJBU1BLM0xzdTc0Y3c6STdnYUotUU9ROW1zc1ZDcm5SN2RTUQ==",
+	"useindex": "false"
 }

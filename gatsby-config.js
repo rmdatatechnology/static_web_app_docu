@@ -164,6 +164,7 @@ module.exports = {
       options: {
         node: config.elasticurl,
 		apiKey: config.elasticapikey, // optional
+		useindex: config.useindex,
         queries,
         chunkSize: 10000, // default: 1000
       },

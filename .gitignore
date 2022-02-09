@@ -72,3 +72,16 @@ yarn-error.log
 /convertpdf/mergehtml/*.html
 /convertpdf/mergehtml/*.pdf
 /convertpdf/mergehtml/*.txt
+/static/default.png
+/static/flag-at.png
+/static/flag-ch.png
+/static/flag-de.png
+/static/geodesigner.png
+/static/geodesktop.png
+/static/geodiscoverer.png
+/static/geomapper.png
+/static/geoviewe.png
+/static/inventory.png
+/static/logo.png
+/static/mailicon.png
+/static/rmgeo.png

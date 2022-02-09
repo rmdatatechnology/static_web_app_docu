@@ -22,6 +22,7 @@ const query = graphql`
 			  elasticindex
 			  elasticcredentials
 			  elasticapikey
+			  useindex
 			}	
         }
     }
