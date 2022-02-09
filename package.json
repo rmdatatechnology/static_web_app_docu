@@ -14,7 +14,8 @@
 										"serve": "gatsby serve --prefix-paths",
 										"serve-local": "gatsby serve",
 										"prettier": "prettier --write **/*.{md,css,scss,yaml,yml,ts}",
-										"copyImages": "node scripts/copyImages.js"
+										"copyImages": "node scripts/copyImages.js",
+										"createpdf":  "node scripts/createpdf.js"
 					},
 					"dependencies": {
 										"@appbaseio/reactivesearch": "^3.28.0",
@@ -24,6 +25,7 @@
 										"@mdx-js/react": "^1.6.1",
 										"@mdx-js/runtime": "^1.6.22",
 										"babel-loader": "^8.2.3",
+										"exec-bin": "^1.0.0",
 										"fs-extra": "^10.0.0",
 										"gatsby": "^3.14.2",
 										"gatsby-link": "^4.2.0",
