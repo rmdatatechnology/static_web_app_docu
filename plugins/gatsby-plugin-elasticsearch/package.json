@@ -1,6 +1,6 @@
 {
-  "name": "@logilab/gatsby-plugin-elasticsearch",
-  "version": "0.1.5",
+  "name": "gatsby-plugin-elasticsearch",
+  "version": "0.1.6",
   "keywords": [
     "gatsby",
     "search",
