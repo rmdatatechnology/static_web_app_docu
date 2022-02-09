@@ -2,8 +2,8 @@ D:\a\static_web_app_docu\static_web_app_docu\convertpdf\mergehtml\
 D:\a\static_web_app_docu\static_web_app_docu\config\variables\variables.json
 D:\a\static_web_app_docu\static_web_app_docu\public
 D:\a\static_web_app_docu\static_web_app_docu\public\grafik\grafik\index.html
-geomapper.html
-D:\a\static_web_app_docu\static_web_app_docu\convertpdf\mergehtml\geomapper.html
-D:\a\static_web_app_docu\static_web_app_docu\documentation\toc\geomapper.json
-D:\a\static_web_app_docu\static_web_app_docu\convertpdf\mergehtml\geomapper.pdf
+geodesigner.html
+D:\a\static_web_app_docu\static_web_app_docu\convertpdf\mergehtml\geodesigner.html
+D:\a\static_web_app_docu\static_web_app_docu\documentation\toc\geodesigner.json
+D:\a\static_web_app_docu\static_web_app_docu\convertpdf\mergehtml\geodesigner.pdf
 D:\a\static_web_app_docu\static_web_app_docu\convertpdf\mergehtml\tocStyle.xsl
