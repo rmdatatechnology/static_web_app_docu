@@ -10,7 +10,7 @@ if (!fs.existsSync(destDir)){
 }
 
  fse.readdirSync(sourceDir).forEach(file => {
-    if (file.endsWith('.pdf')) {
+    if (file.endsWith('.pdf') || file.endsWith('.txt')) {
       console.log(`copying file ${file}`);
       fse.copy(`${sourceDir}/${file}`, `${destDir}/${file}`)
         .then(() => console.log('success!'))
