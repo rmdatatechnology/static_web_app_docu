@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 jobs:
   # This workflow contains a single job called "build"
-  build_and_deploy:
+  build_and_create_pdf:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -27,6 +27,11 @@ jobs:
     - uses: jossef/action-set-json-field@v1
       with:
         file: './config/variables/variables.json'
+        field: useindex
+        value: 'false'
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
         field: productused
         value: 'geomapper'
      # create geomapper pdf   
@@ -34,7 +39,7 @@ jobs:
       with:
         node-version: '17.1.0'
     - run: npm install
-    - run: npm run build
+    - run: npm run build-local
     - run: npm run createpdf
      # create geodesigner pdf   
     - uses: jossef/action-set-json-field@v1
@@ -42,24 +47,7 @@ jobs:
         file: './config/variables/variables.json'
         field: productused
         value: 'geodesigner'
-    - run: npm run build
-    - run: npm run createpdf
-     
-     # create geodesktop pdf   
-    - uses: jossef/action-set-json-field@v1
-      with:
-        file: './config/variables/variables.json'
-        field: productused
-        value: 'geodesktop'
-    - run: npm run build
-    - run: npm run createpdf
-     # create geodiscoverer pdf   
-    - uses: jossef/action-set-json-field@v1
-      with:
-        file: './config/variables/variables.json'
-        field: productused
-        value: 'geodiscoverer'
-    - run: npm run build
+    - run: npm run build-local
     - run: npm run createpdf
     
     # copy all pdf files
