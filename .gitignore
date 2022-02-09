@@ -69,4 +69,6 @@ yarn-error.log
 .yarn-integrity
 /package-lock.json
 /static/img
-static/
+/convertpdf/mergehtml/*.html
+/convertpdf/mergehtml/*.pdf
+/convertpdf/mergehtml/*.txt

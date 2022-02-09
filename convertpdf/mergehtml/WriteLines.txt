@@ -1,9 +1,0 @@
-C:\Source\tools\Produktinformationen_GitHub\convertpdf\mergehtml\
-C:\Source\tools\Produktinformationen_GitHub\config\variables\variables.json
-C:\Source\tools\Produktinformationen_GitHub\public
-C:\Source\tools\Produktinformationen_GitHub\public\grafik\grafik\index.html
-geomapper.html
-C:\Source\tools\Produktinformationen_GitHub\convertpdf\mergehtml\geomapper.html
-C:\Source\tools\Produktinformationen_GitHub\documentation\toc\geomapper.json
-C:\Source\tools\Produktinformationen_GitHub\convertpdf\mergehtml\geomapper.pdf
-C:\Source\tools\Produktinformationen_GitHub\convertpdf\mergehtml\tocStyle.xsl

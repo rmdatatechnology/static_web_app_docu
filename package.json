@@ -15,7 +15,8 @@
 										"serve-local": "gatsby serve",
 										"prettier": "prettier --write **/*.{md,css,scss,yaml,yml,ts}",
 										"copyImages": "node scripts/copyImages.js",
-										"createpdf":  "node scripts/createpdf.js"
+										"createpdf":  "node scripts/createpdf.js",
+										"copypdf": "node scripts/copypdf.js"
 					},
 					"dependencies": {
 										"@appbaseio/reactivesearch": "^3.28.0",
