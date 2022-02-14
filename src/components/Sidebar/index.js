@@ -70,6 +70,10 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
    
   function onClick(e) {
 	e.preventDefault();
+	
+	if(!clicked || clicked==="")
+		setScrollPos(focusSidebar.current.scrollTop);
+	
 	setClicked(url);
 	
 	if (hasChildren) {
