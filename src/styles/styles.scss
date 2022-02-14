@@ -88,7 +88,7 @@ a{ color: #900;
 
 .maincontainer {
   display: grid;
-   grid-template-rows: 100px 780px 50px; 
+   grid-template-rows: 10vh 83vh 7vh; 
   width: 100%;
 }
 
@@ -750,6 +750,9 @@ position: fixed;
 .footer-wrapper {
 	padding: 0px;
 	margin-top: 5px;
+	position: fixed;
+	z-index:1;
+	width: 100%;
 }
 
 .footer-wrapper ol, .footer-wrapper ul {
