@@ -102,7 +102,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
           style={{ paddingLeft: depth * depthStep }}
         >
           {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
-	    <div>{label} {opened[url] ? opened[url].toString() : "nc"}</div>
+	    <div>{label}</div>
         </div>
 		{hasChildren ? (
 		<>
