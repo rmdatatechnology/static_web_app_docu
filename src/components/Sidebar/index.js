@@ -69,10 +69,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
   }
    
   function onClick(e) {
-	e.preventDefault();
-	
-	if(!clicked || clicked==="")
-		setScrollPos(focusSidebar.current.scrollTop);
+	//e.preventDefault();
 	
 	setClicked(url);
 	
@@ -105,7 +102,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
           style={{ paddingLeft: depth * depthStep }}
         >
           {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
-	    <div>{label}</div>
+	    <div>{label} {opened[url] ? opened[url].toString() : "nc"}</div>
         </div>
 		{hasChildren ? (
 		<>
@@ -149,10 +146,12 @@ function checkForValue(item, url, opened, isClicked) {
 	const hasChildren = item.items && item.items.length !== 0;
 	if(hasChildren)
 	{
-		return item.items.some(function(element) 
+		var ex = item.items.some(function(element) 
 		{ 
 			return checkForValue(element, url, opened)
 		});
+		opened[item.url] = ex;
+		return ex;
 	}
 	else
 	{
