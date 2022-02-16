@@ -4,6 +4,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 const Image = ({name, path, children, ...rest  }) => {
 
 const nameWithoutExt = name.split('.');
+const nameToUse = nameWithoutExt[0];
+if(nameWithoutExt.lenght > 2)
+	nameToUse = nameToUse + "." + nameWithoutExt[1];
 
  const { listImages } = useStaticQuery(
     graphql`
@@ -21,7 +24,7 @@ const nameWithoutExt = name.split('.');
   );
  
  const imageToUse = listImages.nodes.find(img => {
-    if(nameWithoutExt[0] === img.name && path.includes(img.relativeDirectory))
+    if( nameToUse === img.name && path.includes(img.relativeDirectory))
 		return img;
 		
 	return null;
