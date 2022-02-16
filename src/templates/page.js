@@ -21,6 +21,7 @@ import {
   Menu,
   Italic,
   MarkdownLink,
+  Image,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -110,6 +111,8 @@ const Page = ({ data }) => {
       Bold,
       Menu,
       Italic,
+	  Image,
+	  MarkdownLink,
     }
 	
 
