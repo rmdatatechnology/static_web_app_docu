@@ -43,6 +43,11 @@ jobs:
     - uses: jossef/action-set-json-field@v1
       with:
         file: './config/variables/variables.json'
+        field: elasticsearchurl
+        value: ${{ secrets.ELASTIC_SEARCH_URL_DEVELOPMENT }}
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
         field: elasticindex
         value: ${{ secrets.ELASTIC_INDEX_DEVELOPMENT }}
     - uses: jossef/action-set-json-field@v1
