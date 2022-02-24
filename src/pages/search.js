@@ -16,7 +16,7 @@ const SearchContent = () => {
     } = useTranslations();
 	
 	const {
-		elasticurl,
+		elasticsearchurl,
 		elasticcredentials,
 		elasticindex,
     } = useVariables();
@@ -42,7 +42,7 @@ const SearchContent = () => {
 						<ReactiveBase
                             app={elasticindex}
                             credentials={elasticcredentials}
-                            url={elasticurl}><div>
+                            url={elasticsearchurl}><div>
                                 <DataSearch
                                     componentId="searchbox"
 									innerClass={{

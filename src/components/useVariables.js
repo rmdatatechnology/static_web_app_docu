@@ -19,6 +19,7 @@ const query = graphql`
 			  productused
 			  version
 			  elasticurl
+			  elasticsearchurl
 			  elasticindex
 			  elasticcredentials
 			  elasticapikey
