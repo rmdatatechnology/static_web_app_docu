@@ -55,6 +55,11 @@ jobs:
         file: './config/variables/variables.json'
         field: version
         value: 'main'
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: useindex
+        value: 'true'
         
     - uses: actions/setup-node@v2
       with:
