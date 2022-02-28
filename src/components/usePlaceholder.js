@@ -41,10 +41,10 @@ const query = graphql`
             dtmModelComputePrecondition1
             fullproduct
             geodgm
-            geoproject_fullproduct
-            geoproject_geoproject_fullproduct_
-            geoproject_geoproject_product
-            geoproject_product
+            geoprojectfullproduct
+            geoprojectgeoprojectfullproduct_
+            geoprojectgeoprojectproduct
+            geoprojectproduct
             product
             productcrssettingspath
             productsuffix

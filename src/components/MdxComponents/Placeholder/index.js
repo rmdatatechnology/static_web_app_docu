@@ -27,7 +27,7 @@ if (!placeholder)
 
   if(newData !== null)
   {
-    return (<span>{newData} </span>);
+    return (<span>{newData}</span>);
   }
   else
   {
