@@ -33,10 +33,6 @@ const Header = () => {
 
                 </LocalizedLink>
 
-                <div className='button-menu'>
-                    <ButtonMenu handleClick={toggleMenu} isActive={openedMenu} />
-                </div>
-
                 <div className='nav-menu'>
                     <Navigation />
                 </div>
