@@ -46,9 +46,11 @@ a{ color: #900;
 	}  
 	
 	.customH1, .customH2, .customH3, .customH4 {
-	margin-top: 30px!important;
+	margin-top: 20px!important;
 	}  
-	
+	.customH2{
+	font-weight: bold!important;
+}
 /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
@@ -138,23 +140,17 @@ position: fixed;
     margin-bottom: 0 !important;
   }
 
+
   iframe {
     width: 100%;
   }
 
   a {
-    color: #900;
-    text-decoration: none;
     transition: 0.3s;
-
-    &:hover {
-      color: darkblue;
-    }
-
-    &.absent {
-      color: #cc0000;
-    }
-
+	text-decoration: none;
+    color: #990000;
+    font-weight: 600;
+	
     &.anchor {
       display: block;
       padding-left: 30px;
@@ -166,8 +162,6 @@ position: fixed;
       bottom: 0;
     }
   }
-
- 
   p,
   blockquote,
   ul,
