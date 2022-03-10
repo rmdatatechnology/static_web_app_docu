@@ -34,7 +34,7 @@ const Header = () => {
                 </LocalizedLink>
 
                 <div className='nav-menu'>
-                    <Navigation />
+                    <Navigation handleToggleMenu={toggleMenu} opened={openedMenu}/>
                 </div>
 
                 <div className="nav-languages">
