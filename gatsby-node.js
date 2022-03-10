@@ -89,6 +89,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
     type MdxFrontmatter {
 	  image: String
 	  description: String
+	  display: String
 	  
     }
 

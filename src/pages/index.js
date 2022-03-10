@@ -36,7 +36,8 @@ const Index = ({ data }) => {
 			<div className="sidebar" id="sidemenu" />
 			<div className="content">
 				<div id="pageContent">
-					<TitlePage text={data.mdx.frontmatter.title} />
+					<h1>{data.mdx.frontmatter.title}</h1>
+					<h2>{data.mdx.frontmatter.description}</h2>
 				</div>
 				<br />
 				<br />
@@ -104,7 +105,17 @@ const Index = ({ data }) => {
 				title={data.mdx.frontmatter.title}
 				description={data.mdx.frontmatter.title}
 			/>
-				<TitlePage text={data.mdx.frontmatter.title} />
+				<div className="top-section top-section-red normal-width">
+				<picture>
+				<img alt="Produkte" src="csm_produkte_header_98c200bfaa.jpg" width="100%" />
+				</picture>
+				<div className="top-section-header">
+				<h1>{data.mdx.frontmatter.title}</h1>
+				<div className="hl_border"></div>
+				<h2>{data.mdx.frontmatter.description}</h2>
+				</div>
+				</div>
+				<br/>
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer>{data.mdx.body}</MDXRenderer>
@@ -114,7 +125,7 @@ const Index = ({ data }) => {
 			<br />
 			<br />
 			<section className="custom-section">
-			<div className="productGrid">
+			<div className="product-grid">
 			{productItems.map(
 				function({
 					name,
@@ -126,7 +137,7 @@ const Index = ({ data }) => {
 				})
 				{
 					return (
-						<div className="productGridItem">
+						
 						<PostItem
 							slug={slug}
 							title={fullname}
@@ -134,7 +145,6 @@ const Index = ({ data }) => {
 							key={name}
 							imageName={img}
 						/>
-						</div>
 					)
 				}
 				)}
@@ -154,10 +164,11 @@ export const query = graphql`
   query Index($locale: String!) {
     mdx(
         fields: { locale: { eq: $locale } }
-        frontmatter: {description: {eq: "index"}}
+        frontmatter: {display: {eq: "index"}}
     ) {
 	frontmatter {
       title
+	  description
     }
     body
     fields {

@@ -3,14 +3,14 @@ import { navigate } from 'gatsby';
 import useProducts from '../useProducts';
 import { useProduct } from '../../hooks/products';
 import "../../styles/styles.scss";
-
+import { useMenu } from '../../hooks/menu';
 
 
   
 const ProductDropDown = () => {
  
   const productItems = useProducts();
-  const [isOpen, setIsOpen] = useState(false);
+  const { openedMenu, toggleMenu } = useMenu();
   
   const { product, changeProduct } = useProduct();
   let url = typeof window !== 'undefined' ? window.location.search : '';
@@ -27,10 +27,6 @@ const ProductDropDown = () => {
 	 
    }
   
-  const toggling = () => 
-  {
-	  setIsOpen(!isOpen);
-  } 
   
   const getProductName = () => 
   {
@@ -45,7 +41,12 @@ const ProductDropDown = () => {
 		
 		let pathname = typeof window !== 'undefined' ? window.location.pathname : null;
 		if(pathname.includes('/search')) // we are already on the search side and we only want to change the product
+		{
+			toggleMenu('search');
 			link = "";
+		}
+		else
+			toggleMenu('products');
 		
 		let opt = productItems.find(
 		k => k.name.toString().toLowerCase() === prod.toString().toLowerCase()
@@ -59,32 +60,19 @@ const ProductDropDown = () => {
   return (
 	 <>
 	 <div className="dropdown">
-				<button className="dropdown-button" onClick={toggling}>
-					<div className="dropdownGrid">
-					<div>
-					<span>{getProductName()}</span>
-					</div>
-					<div>
-					{isOpen ?
-					<span className="arrow-open" /> :
-					<span className="arrow-closed" />
-					}
-					</div>
-					</div>
-					</button>
-			{isOpen && (
+				<button  className={openedMenu === 'products' ? 'dropdown-button is-active' : 'dropdown-button'}>Produkte</button>
+				<div className="dropdown-content">
+				<span className="dropdown-arrow" />
 				<ul className="dropdown-list">
 					{productItems.map(option => (
 						<li className="dropdown-listitem" onClick={ event => {
-							
-							setIsOpen(false);
 							navigate(getNagigateTo(option.link, option.name))
 						}}>
 						{option.fullname}
 						</li>
               ))}
 			</ul>
-			)}
+			</div>
       </div>
 	  </>
   );

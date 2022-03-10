@@ -7,7 +7,6 @@ import useTranslations from '../useTranslations';
 import { useSidebar } from '../../hooks/sidebar';
 
 const {
-    getProcuctImage,
     getSidebarItems,
 } = require(`../../utils/pageHelper`);
 
@@ -16,27 +15,12 @@ const SearchResultItem = ({res}) => {
     const { product } = useProduct();
     const productItems = useProducts();
 	const { clicked, setClicked } = useSidebar();
-  
-    const { listImages } = useStaticQuery(
-        graphql`
-      query {
-        listImages: allFile (filter: {ext: {eq: ".png"}, relativeDirectory: {eq: ""}}) {
-          
-			 nodes {
-				name
-				publicURL
-				absolutePath
-				}
-            }
-          }
-    `,
-    );
+ 
     let items = getSidebarItems(product);
     let opt = productItems.find(
         k => k.name.toString().toLowerCase() === product.toString().toLowerCase()
     );
-    const imageToUse = getProcuctImage(listImages, opt.img);
-
+   
     function getNagigateTo(link) {
 
         let urlMain = typeof window !== 'undefined' ? window.location.pathname : '';
@@ -89,21 +73,14 @@ const SearchResultItem = ({res}) => {
         return (
             <>
 			<div className="searchResContainer" onClick={event => onClick()}>
-               
-                        <div>
-                            {imageToUse && (
-                                <img
-                                    src={imageToUse.publicURL}
-                                    alt={res.title}
-                                    className="searchResImg"
-                                />
-                            )}
-                        </div>
-                        <div>
-                            <div><h2>{res.title}</h2></div>
-                            <div><h4>{opt.fullname}</h4></div>
-                            <div><h6>{url + getNagigateTo(res.slug.split(`.`)[0])}</h6></div>
-                  </div>
+            <h3 className="searchheader">
+				<span>
+					<img src="pages.gif"alt={res.title} className="custom-image"/>
+                </span>
+				<span>   {res.title}</span></h3>
+				<br/>
+                <span className="searchresulttext">{url + getNagigateTo(res.slug.split(`.`)[0])}</span>
+				
             </div>
 			<hr className="customSeperator" />
 			</>

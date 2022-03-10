@@ -39,37 +39,28 @@ const prefix = useStaticQuery(graphql`
 	else	
 		navigate(`/${lang}/` + getNewUrlWithoutPrefix(false, prefix.site.pathPrefix));
   }
+  
+  function getLang() {
+    
+    if (locale === "de") return "DE";
+	else if (locale === "it") return "IT";
+	else if (locale === "fr") return "FR";
+
+    return "DE";
+  }
+
 
   return (
-    <ul className="language-wrapper">
-      <li className="language-item">
-        <Link
-          to="/" 
-          onClick={(e) => handleClickLanguage(e, "de")}
-          className={locale === 'de' ? 'language-link is-active' : 'language-link'}
-        >
-          DE
-        </Link>
-      </li>
-      <li className="language-item">
-        <Link 
-          to="/" 
-          onClick={(e) => handleClickLanguage(e, "it")}
-          className={locale === 'it' ? 'language-link is-active' : 'language-link'}
-        >
-          IT
-        </Link>
-      </li>
-	   <li className="language-item">
-        <Link 
-          to="/" 
-          onClick={(e) => handleClickLanguage(e, "fr")}
-          className={locale === 'fr' ? 'language-link is-active' : 'language-link'}
-        >
-          FR
-        </Link>
-      </li>
+  <div className="language_dropdown">
+  <button  className='language-button is-active'>{getLang()}</button>
+  <div className="language_dropdown_content">
+    <ul className="language_dropdown_list">
+      <li className="language-link"	onClick={(e) => handleClickLanguage(e, "de")}>DE</li>
+      <li className="language-link"	onClick={(e) => handleClickLanguage(e, "it")}>IT</li>
+	  <li className="language-link"	onClick={(e) => handleClickLanguage(e, "fr")}>FR</li>
     </ul>
+	</div>
+	</div>
   );
 };
 

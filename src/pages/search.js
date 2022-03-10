@@ -27,35 +27,38 @@ const SearchContent = () => {
 	let opt = productItems.find(
         k => k.name.toString().toLowerCase() === product.toString().toLowerCase()
     );
+	
+	const element = (<><span className="search_before">{search}</span></>);
 
     return (
   <>
             <div className="pagecontainer">
 			<SEO
 				title={search}
-				description={opt.fullname + ": " + search}
+				description={search}
 			/>
                 <div className="sidebar" id="sidemenu" />
                 <div className="content">
 				<section className="main-content">
-                        <TitlePage text={opt.fullname + ": " + search} />
-						<ReactiveBase
+				<br/>
+				<br/>
+                       <ReactiveBase
                             app={elasticindex}
                             credentials={elasticcredentials}
                             url={elasticsearchurl}><div>
                                 <DataSearch
                                     componentId="searchbox"
 									innerClass={{
-										title: 'search-title',
-										input: 'search-input'
+										title: 'title-wrapper',
+										input: 'search-input',
 									}}
 									className="search-field"
                                     dataField={['title', 'rawbody', 'slug', 'locale']}
 									fuzziness="2"
                                     autosuggest={false}
                                     showClear={true}
-                                    placeholder="Search"
                                     queryFormat="or"
+									addonBefore={element}
                                     noInitialQuery={true}
                                     value={searchQuery}
 									onChange={(value, triggerQuery, event) => {

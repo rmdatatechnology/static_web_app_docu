@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 const MenuContext = createContext({});
 
 const MenuProvider = ({ children }) => {
-  const [openedMenu, setOpenedMenu] = useState(false);
+  const [openedMenu, setOpenedMenu] = useState('home');
 
-  function toggleMenu() {
-    setOpenedMenu(!openedMenu);
+  function toggleMenu(activeLink) {
+    setOpenedMenu(activeLink);
   }
 
   return (
