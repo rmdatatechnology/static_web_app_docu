@@ -1,7 +1,6 @@
 import React from 'react';
 import useTranslations from '../useTranslations';
 import Navigation from '../Navigation';
-import Languages from '../Languages';
 import Logo from '../Logo';
 import LocalizedLink from '../LocalizedLink';
 import { useStaticQuery, graphql } from "gatsby";
@@ -75,10 +74,6 @@ const Header = () => {
 
                 <div className='nav-menu'>
                     <Navigation opened={openedMenu}/>
-                </div>
-
-                <div className="nav-languages">
-                    <Languages />
                 </div>
             </div>
         </div>

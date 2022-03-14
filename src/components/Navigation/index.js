@@ -2,7 +2,7 @@ import React from 'react';
 import useMenu from '../useMenu';
 import ProductDropDown from '../DropDown';
 import LocalizedLink from '../LocalizedLink';
-
+import Languages from '../Languages';
 
 import "../../styles/styles.scss";
 
@@ -13,8 +13,7 @@ const Navigation = ({ opened }) => {
     <>
       <div className="navigation" >
 	    {menuItems.map((menu, index) => (
-		<span>
-          <LocalizedLink 
+		  <LocalizedLink 
 		    className={opened === menu.id.toString().toLowerCase() ? 'navigation-link is-active' : 'navigation-link'} 
             to={menu.link}
             aria-label={menu.name}
@@ -22,12 +21,9 @@ const Navigation = ({ opened }) => {
             >
             {menu.name}
           </LocalizedLink>
-		  </span>
-		 
         ))}
-		<span>
-		<ProductDropDown />
-		</span>
+		<ProductDropDown className="navigation-link"/>
+		<Languages className="navigation-link"/>
       </div>
     </>
   );
