@@ -34,7 +34,7 @@ const Header = () => {
 	  if(newUrl[0] === "")
 		  newUrl.shift();
 	   
-	  if(prefix && prefix.toString().toLowerCase().includes(newUrl[0].toLowerCase()))
+	  if(usedprefix && usedprefix.toString().toLowerCase().includes(newUrl[0].toLowerCase()))
 		   newUrl.shift();
 
 	  let hasLang = newUrl[0];
