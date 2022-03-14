@@ -776,10 +776,7 @@ a{ color: #900;
   padding: 5;
   height:52px;
   position: relative;
-  border-bottom: lightgray;  
-  width: calc(100% - 20vh);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  width: calc(100% - 30vh);
 }
 
 .footer-container {
@@ -807,7 +804,7 @@ a{ color: #900;
 }
 .nav-menu {
   width: 100%;  
-  margin-right: calc(10% + 15px);
+  margin-right: 12vh;
   text-align: right;    
   display: block;
    &.is-active {
@@ -815,9 +812,15 @@ a{ color: #900;
   }
 }
 
+.nav-languages {
+	margin-right: 10vh;
+}
+
 .language_dropdown {
     display: block;
 	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	margin: 0
 }
 
 .language_dropdown_content{
