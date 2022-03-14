@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import TitlePage from '../components/TitlePage';
 import Sidebar from "../components/Sidebar";
 import SEO from '../components/seo';
+import Footer from '../components/Footer';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -123,21 +124,24 @@ const Page = ({ data }) => {
 		<div className="sidebar" id="sidemenu">
 			<Sidebar />
 		</div>
-		<div className="contentpage">
+		<div className="content">
 			<SEO
 				title={post.frontmatter.title}
 				description={post.frontmatter.description}
 			/>
-			<div className="page-content" id="pageContent">
+			<div className="content" id="pageContent">
 				<h1> {post.frontmatter.title} </h1>
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						<MDXRenderer height="100%">{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
 				</section>
+				
 			</div>
 		</div>
-		<div className="end"></div>
+		<div className="end">	
+
+		</div>
 	 </div>
     </>
   );

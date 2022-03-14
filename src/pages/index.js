@@ -97,18 +97,15 @@ const Index = ({ data }) => {
  
   return (
     <>
-	<div className="pagecontainer">
-		<div className="sidebar" id="sidemenu" />
+	<div className="page">
 		<div className="content">
 			<div id="pageContent">
 			<SEO
 				title={data.mdx.frontmatter.title}
 				description={data.mdx.frontmatter.title}
 			/>
-				<div className="top-section top-section-red normal-width">
-				<picture>
-				<img alt="Produkte" src="csm_produkte_header_98c200bfaa.jpg" width="100%" />
-				</picture>
+				<div className="top-section">
+				<div className="center"><img alt="Produkte" src="csm_produkte_header_98c200bfaa.jpg" /></div>
 				<div className="top-section-header">
 				<h1>{data.mdx.frontmatter.title}</h1>
 				<div className="hl_border"></div>
@@ -117,9 +114,11 @@ const Index = ({ data }) => {
 				</div>
 				<br/>
 				<section className="main-content">	 
+				<div className="center">
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer>{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
+					</div>
 				</section>
 			</div>
 			<br />

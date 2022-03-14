@@ -12,8 +12,7 @@ const NotFound = () => {
 
   
   return (<>
-   <div className="pagecontainer">
-		<div className="sidebar" id="sidemenu" />
+   <div className="page">
 		<div className="content">
 			<SEO title="404" />
 			<br />

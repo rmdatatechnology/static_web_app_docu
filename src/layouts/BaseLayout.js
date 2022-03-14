@@ -13,13 +13,13 @@ const BaseLayout = ({ children, pageContext: { locale } }) => {
   return (
     <>
       <div className="maincontainer">
-        <div>
-		<Header />
+        <div className="header">
+		<Header/>
 		</div>
-        <div role="main">
+        <div className="overall_content" role="main">
           <div>{children}</div>
         </div>
-		<div>
+		 <div className="footer">
 		<Footer />
 		</div>
       </div>

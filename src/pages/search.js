@@ -32,12 +32,11 @@ const SearchContent = () => {
 
     return (
   <>
-            <div className="pagecontainer">
+            <div className="page">
 			<SEO
 				title={search}
 				description={search}
 			/>
-                <div className="sidebar" id="sidemenu" />
                 <div className="content">
 				<section className="main-content">
 				<br/>
