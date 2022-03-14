@@ -4,6 +4,7 @@ import Navigation from '../Navigation';
 import Languages from '../Languages';
 import Logo from '../Logo';
 import LocalizedLink from '../LocalizedLink';
+import { useStaticQuery, graphql } from "gatsby";
 
 import { useMenu } from '../../hooks/menu';
 
@@ -12,6 +13,45 @@ import "../../styles/styles.scss";
 const Header = () => {
     const { home } = useTranslations();
     const { openedMenu, toggleMenu } = useMenu();
+	
+	const prefix = useStaticQuery(graphql`
+    query {
+      site {
+        pathPrefix
+        }
+      }
+  `)
+  
+
+  const getActiveNav = (usedprefix) => {
+	
+	  let pathname = typeof window !== 'undefined' ? window.location.pathname : null;
+	  
+	  if(!pathname)
+		  return "";
+	  
+	  let newUrl = pathname.split("/");
+
+	  if(newUrl[0] === "")
+		  newUrl.shift();
+	   
+	  if(prefix && prefix.toString().toLowerCase().includes(newUrl[0].toLowerCase()))
+		   newUrl.shift();
+
+	  let hasLang = newUrl[0];
+	  if(hasLang === "en" || hasLang === "fr" || hasLang === "it"|| hasLang === "de")
+		newUrl.shift();
+	  
+		return newUrl[0];
+	} 
+  
+	let activeNav = getActiveNav(prefix);
+	if(!activeNav || activeNav === "")
+		toggleMenu("home");
+	else if(activeNav === "search")
+	  toggleMenu("search");
+	else
+		toggleMenu("products");
 
     return (
         <div className="header-wrapper" id="headermenu">
@@ -34,7 +74,7 @@ const Header = () => {
                 </LocalizedLink>
 
                 <div className='nav-menu'>
-                    <Navigation handleToggleMenu={toggleMenu} opened={openedMenu}/>
+                    <Navigation opened={openedMenu}/>
                 </div>
 
                 <div className="nav-languages">

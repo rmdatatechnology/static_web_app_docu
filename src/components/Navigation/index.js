@@ -6,7 +6,7 @@ import LocalizedLink from '../LocalizedLink';
 
 import "../../styles/styles.scss";
 
-const Navigation = ({ opened, handleToggleMenu }) => {
+const Navigation = ({ opened }) => {
   const menuItems = useMenu();
   
   return (
@@ -16,7 +16,6 @@ const Navigation = ({ opened, handleToggleMenu }) => {
 		<span>
           <LocalizedLink 
 		    className={opened === menu.id.toString().toLowerCase() ? 'navigation-link is-active' : 'navigation-link'} 
-			onClick={(e) => handleToggleMenu(menu.id.toString().toLowerCase())}
             to={menu.link}
             aria-label={menu.name}
             key={`${menu.link}${index}`}

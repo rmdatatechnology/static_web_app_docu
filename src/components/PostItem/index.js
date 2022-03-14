@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql, navigate } from 'gatsby';
 import { useLocale } from '../../hooks/locale';
 import "../../styles/styles.scss";
-import { useMenu } from '../../hooks/menu';
-
 
 const {
   getProcuctImage,
@@ -20,7 +18,6 @@ const PostItem = ({
   imageName,
 }) => {
 const { locale } = useLocale();
-const { toggleMenu } = useMenu();
 const { listImages } = useStaticQuery(
     graphql`
       query {
@@ -40,8 +37,6 @@ const { listImages } = useStaticQuery(
   
   function onClick(e) {
 	e.preventDefault();
-	
-	toggleMenu('products');
    
 		const urlM = window.location.pathname;
 		const isLocale = urlM.includes(`/${locale}/`);

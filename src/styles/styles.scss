@@ -85,7 +85,7 @@ a{ color: #900;
     background: var(--body-bg);
     font-weight: 400;
     font-family: Encode Sans Semi Condensed,sans-serif;
-
+	overflow-x: hidden;
     font-size: 1.5rem;
     line-height: 160%;
 	height:100%;
@@ -109,6 +109,7 @@ a{ color: #900;
   margin-left:15vh;
   height:100%;
   position:relative;
+  margin-top:2vh;
 
 }
 
