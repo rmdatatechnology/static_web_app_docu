@@ -34,7 +34,7 @@ const Header = () => {
 	  if(newUrl[0] === "")
 		  newUrl.shift();
 	   
-	  if(usedprefix && usedprefix !== "")
+	  if(usedprefix && usedprefix.toString().toLowerCase().includes(newUrl[0].toLowerCase()))
 		   newUrl.shift();
 
 	  let hasLang = newUrl[0];
@@ -44,10 +44,10 @@ const Header = () => {
 		return newUrl[0];
 	} 
   
-	let activeNav = getActiveNav(prefix);
+	const activeNav = getActiveNav(prefix);
 	if(!activeNav || activeNav === "")
 		toggleMenu("home");
-	else if(activeNav === "search")
+	else if(activeNav.toString().includes("search"))
 	  toggleMenu("search");
 	else
 		toggleMenu("products");

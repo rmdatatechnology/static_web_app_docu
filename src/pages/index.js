@@ -104,25 +104,16 @@ const Index = ({ data }) => {
 				title={data.mdx.frontmatter.title}
 				description={data.mdx.frontmatter.title}
 			/>
-				<div className="top-section">
-				<div className="center"><img alt="Produkte" src="csm_produkte_header_98c200bfaa.jpg" /></div>
-				<div className="top-section-header">
 				<h1>{data.mdx.frontmatter.title}</h1>
-				<div className="hl_border"></div>
-				<h2>{data.mdx.frontmatter.description}</h2>
-				</div>
-				</div>
 				<br/>
 				<section className="main-content">	 
-				<div className="center">
+				<div>
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer>{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
 					</div>
 				</section>
 			</div>
-			<br />
-			<br />
 			<section className="custom-section">
 			<div className="product-grid">
 			{productItems.map(
