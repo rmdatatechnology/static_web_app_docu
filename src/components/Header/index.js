@@ -44,15 +44,15 @@ const Header = () => {
 		return newUrl[0];
 	} 
   
-	const activeNav = getActiveNav(prefix);
+	const activeNav = getActiveNav(prefix.site.pathPrefix);
 	if(!activeNav || activeNav === "")
 		toggleMenu("home");
 	else if(activeNav.toString().includes("search"))
 	  toggleMenu("search");
 	else
 		toggleMenu("products");
-
-    return (
+	
+	 return (
         <div className="header-wrapper" id="headermenu">
             <div className="contact-info">
                 <div className="contact-inner">
