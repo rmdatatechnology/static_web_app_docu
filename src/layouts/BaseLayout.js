@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useLocale } from '../hooks/locale';
@@ -8,21 +8,7 @@ const BaseLayout = ({ children, pageContext: { locale } }) => {
   // Using the useLocale() hook to define the correct locale 
   // that will be available in all components of the tree thought its context
   const { changeLocale } = useLocale();
-  const footer = useRef();
   changeLocale(locale);
-  let newheight = "20vh";
-
-   useEffect(() => {
-    if(footer)
-	{
-		newheight ="73vh";
-		if(footer.current)
-			newheight ="53vh";
-		else
-			newheight ="23vh";
-	}
-	
-  });
   
   return (
     <>
@@ -31,10 +17,10 @@ const BaseLayout = ({ children, pageContext: { locale } }) => {
 		<Header/>
 		</div>
         <div className="overall_content" role="main">
-          <div>{React.cloneElement(children, {newheight: newheight})}</div>
+          <div>{children}</div>
         </div>
 		 <div className="footer">
-		<Footer ref={footer}/>
+		<Footer />
 		</div>
       </div>
     </>

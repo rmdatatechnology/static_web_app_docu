@@ -162,11 +162,12 @@ function checkForValue(item, url, opened, isClicked) {
 	return expanded;
 }
 
-function Sidebar({newheight}) {
+function Sidebar({ depthStep, depth}) {
   const { product } = useProduct();
   const items = getSidebarItems(product);
   const { opened, toggle, clicked, setClicked, scrollPosition, setScrollPosition } = useSidebar();
   const focusSidebar = useRef();
+ 
 useLayoutEffect(() => {
     if (focusSidebar) {
 		// Our ref has a value, pointing to an HTML element
@@ -194,24 +195,20 @@ useLayoutEffect(() => {
         }
       }
   `)
-  let divStyle = {
-	height: newheight,
-	};
-
-  
   const handleScroll = (event) => {
     const { scrollTop } = event.target;
     setScrollPosition(scrollTop);
   }
   
  
+ 
   return (
-    <div className="sidebar-content" ref={focusSidebar} onScroll={handleScroll} style={divStyle}>
+    <div className="sidebar-content" ref={focusSidebar} onScroll={handleScroll}>
       <ul>
 	 {items.map((sidebarItem, index) => (
 			  <SidebarItem
-				depthStep="20"
-                depth="0"
+				depthStep={depthStep}
+                depth={depth}
                 toggle={toggle}
 				opened={opened}
 				item={sidebarItem}

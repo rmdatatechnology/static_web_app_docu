@@ -27,7 +27,7 @@ import {
 
 import "../styles/styles.scss";
 
-const Page = ({ data, newheight }) => {
+const Page = ({ data }) => {
 	
 	if (!data) {
     return null;
@@ -122,7 +122,7 @@ const Page = ({ data, newheight }) => {
 	<>
 	<div className="pagecontainer">
 		<div className="sidebar" id="sidemenu">
-	<Sidebar newheight={newheight}/>
+			<Sidebar />
 		</div>
 		<div className="content">
 			<SEO
@@ -133,7 +133,7 @@ const Page = ({ data, newheight }) => {
 				<h1> {post.frontmatter.title} </h1>
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						<MDXRenderer height="100%">{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
 				</section>
 				
