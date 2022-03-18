@@ -88,7 +88,6 @@ const Default = ({ data }) => {
    
 	<>
 	<div className="pagecontainer">
-		<div className="sidebar" id="sidemenu" />
 		<div className="content">
 			<SEO
 				title={post.frontmatter.title}
