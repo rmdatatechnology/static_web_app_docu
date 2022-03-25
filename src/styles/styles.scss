@@ -1164,6 +1164,7 @@ table, th, td {
 	line-height: 1.3;
 	font-size: 2rem;
     font-weight: bold;
+	word-wrap: break-word!important;
 }
 
 .searchresulttext{
@@ -1184,8 +1185,6 @@ table, th, td {
 .searchResContainer
 {
 	cursor:pointer;
-	display: grid;
-	grid-template-columns: 100px auto;
 	padding: 10px;
 	margin: 0px;
 	grid-column-gap: 10px;

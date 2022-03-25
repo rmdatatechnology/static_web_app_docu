@@ -25,7 +25,7 @@ const SearchResultItem = ({res}) => {
 
         let urlMain = typeof window !== 'undefined' ? window.location.pathname : '';
         let isLocale = urlMain.includes(`/${locale}/`);
-        let slug = `${locale}/${link}`;
+        let slug = `/${locale}/${link}`;
         if (isLocale === false || locale === "de")
             slug = `/${link}`;
 
@@ -75,10 +75,9 @@ const SearchResultItem = ({res}) => {
 			<div className="searchResContainer" onClick={event => onClick()}>
             <h3 className="searchheader">
 				<span>
-					<img src="pages.gif"alt={res.title} className="custom-image"/>
+					<img src="/pages.gif" alt={res.title} className="custom-image"/>
                 </span>
 				<span>   {res.title}</span></h3>
-				<br/>
                 <span className="searchresulttext">{url + getNagigateTo(res.slug.split(`.`)[0])}</span>
 				
             </div>
