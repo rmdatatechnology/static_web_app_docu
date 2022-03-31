@@ -9,6 +9,7 @@
 - Git (https://git-scm.com/) 
 - TortioseGit (https://tortoisegit.org/) oder anderen Git Client (e.g. SourceTree)
 - Node.js (=> https://github.com/microsoft/nodejs-guidelines/blob/master/windows-environment.md)
+	- Auf der Seite 4 => Tools for Native Modules das Häckchen setzen damit alle notwendigen Tools mit installiert werden.
 
 ## Repository clonen und ausführen
 
