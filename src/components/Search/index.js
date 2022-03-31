@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, navigate } from 'gatsby';
+import { useStaticQuery, graphql, navigate, withPrefix  } from 'gatsby';
 import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
 import useProducts from '../useProducts';
@@ -15,6 +15,9 @@ const SearchResultItem = ({res}) => {
     const { product } = useProduct();
     const productItems = useProducts();
 	const { clicked, setClicked } = useSidebar();
+	
+	let img = withPrefix("/pages.gif");
+	
  
     let items = getSidebarItems(product);
     let opt = productItems.find(
@@ -75,7 +78,7 @@ const SearchResultItem = ({res}) => {
 			<div className="searchResContainer" onClick={event => onClick()}>
             <h3 className="searchheader">
 				<span>
-					<img src="/pages.gif" alt={res.title} className="custom-image"/>
+					<img src={img} alt={res.title} className="custom-image"/>
                 </span>
 				<span>   {res.title}</span></h3>
                 <span className="searchresulttext">{url + getNagigateTo(res.slug.split(`.`)[0])}</span>
