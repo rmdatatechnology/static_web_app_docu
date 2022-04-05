@@ -24,6 +24,9 @@ jobs:
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
+    - run: |
+       git pull --recurse-submodules
+       git submodule update --recursive --remote
      # Set the build variables for the job
     - uses: jossef/action-set-json-field@v1
       with:
