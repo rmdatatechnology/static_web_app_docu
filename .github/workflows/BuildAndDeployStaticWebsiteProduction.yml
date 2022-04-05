@@ -17,17 +17,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     - name: Checkout repository
-        uses: actions/checkout@v2
+     - uses: actions/checkout@v2
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           submodules: true
-      - name: Pull submodule
-        run: |
+    - run: |
           git pull --recurse-submodules
           git submodule update --init --recursive --remote
-      - name: Push changes
-        run: |
+    - run: |
           git config --global user.name 'DorisKoenigshofer'
           git config --global user.email 'doris.koenigshofer@gmail.com'
           git add .
