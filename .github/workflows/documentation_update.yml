@@ -2,8 +2,6 @@ name: Trigger from Dokumentation,
 on:
   repository_dispatch:
     types: [doku_sync]
-    branches:    
-      - 2022_1
 jobs:
   doku_sync:
     runs-on: ubuntu-latest
@@ -14,6 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
+          ref: '2022_1'
           token: ${{ secrets.ACCESS_TOKEN }}
           submodules: true
       - name: Pull submodule
