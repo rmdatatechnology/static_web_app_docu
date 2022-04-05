@@ -1,7 +1,7 @@
 name: Trigger from Dokumentation,
 on:
   repository_dispatch:
-    types: [doku_sync]
+    types: [doku_sync_2022_1]
 jobs:
   doku_sync:
     runs-on: ubuntu-latest
