@@ -20,8 +20,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
+        ref: '2022_1'
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
     - run: |
