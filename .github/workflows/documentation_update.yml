@@ -3,7 +3,7 @@ on:
   repository_dispatch:
     types: [doku_sync_2022_1]
 jobs:
-  doku_sync:
+  doku_sync_2022_1:
     runs-on: ubuntu-latest
     steps:
       - name: Event Information
