@@ -1,9 +1,9 @@
-name: Trigger from Dokumentation,
+name: Trigger from Dokumentation
 on:
   repository_dispatch:
-    types: [doku_sync_2022_1]
+    types: [doku_sync]
 jobs:
-  doku_sync_2022_1:
+  doku_sync:
     runs-on: ubuntu-latest
     steps:
       - name: Event Information
@@ -12,7 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          ref: '2022_1'
           token: ${{ secrets.ACCESS_TOKEN }}
           submodules: true
       - name: Pull submodule

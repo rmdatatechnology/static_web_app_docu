@@ -17,10 +17,22 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.ACCESS_TOKEN }}
-        submodules: true
+     - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: true
+      - name: Pull submodule
+        run: |
+          git pull --recurse-submodules
+          git submodule update --init --recursive --remote
+      - name: Push changes
+        run: |
+          git config --global user.name 'DorisKoenigshofer'
+          git config --global user.email 'doris.koenigshofer@gmail.com'
+          git add .
+          git commit -m "Update from Dokumentation"
+          git push
      # Set the build variables for the job
     - uses: jossef/action-set-json-field@v1
       with:
