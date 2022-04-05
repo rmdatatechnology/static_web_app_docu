@@ -22,6 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        ref: '2022_1'
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
      # Set the build variables for the job
