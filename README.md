@@ -14,10 +14,25 @@
 ## Repository clonen und ausführen
 
 - Repository clonen
-- Submodule Updaten (TortioseGit -> Submodule Update)
+- Submodule Updaten
+	- TortioseGit -> Submodule Update
+		- Initialize submodules
+		- Recursive
+- Submodule auschecken
+	- In den Dokumentation ordner wechseln
+	- TortioseGit -> Switch/Checkout
+		- Branch -> remotes/origin/main
+		- Optionen:
+			- Track
+			- alles andere deselektieren
 - Eingabeaufforderung über "Ausführen" öffnen (cmd) 
 - In den Ordner in dem das Rositosy liegt wechseln
 - "npm install" ausführen
 - "npm run develop" ausführen und offen lassen
 - Im Browser http://localhost:8000/ öffnen
 - Mit "npm run clean" kann man den Build wieder löschen.
+
+
+**Hinweis**
+
+Immer wenn die Fehlermeldung Detached Head beim einchecken des Submodules erscheint, bitte überprüfen ob das richtige repo ausgechecht ist. Sonst den Ponkt Submodule auschecken wiederholen.
