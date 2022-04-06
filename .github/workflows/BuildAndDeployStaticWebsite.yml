@@ -20,12 +20,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - run: echo running on branch ${GITHUB_REF##*/}
-    - uses: actions/checkout@v3
+    - name: runs on branch
+      run: echo ${GITHUB_REF##*/}
+    - name: checkout
+      uses: actions/checkout@v3
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
-    - run: |
+    - name: checkout submodule
+      run: |
         git submodule foreach 'git checkout -b  ${GITHUB_REF##*/}'
      # Set the build variables for the job
     - uses: jossef/action-set-json-field@v1
