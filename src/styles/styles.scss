@@ -130,6 +130,7 @@ a{ color: #900;
 		}
 .content {
   width: calc(100% - 10vw);
+  heigth:100%;
   margin-bottom:5vh;
 		}
 
@@ -154,7 +155,8 @@ a{ color: #900;
 }
 	
 .overall_content{
-  margin-top: 10vh;
+  margin-top: 7em;
+  height: 100%;
   flex-grow: 1;
 }
 	
