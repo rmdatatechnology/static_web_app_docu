@@ -60,7 +60,7 @@ const ProductDropDown = () => {
   return (
 	 <>
 	 <div className="dropdown">
-				<button  className={openedMenu === 'products' ? 'dropdown-button is-active' : 'dropdown-button'}>Produkte</button>
+				<button  className={openedMenu === 'products' ? 'dropdown-button is-active' : 'dropdown-button'}>Produkte - {getProductName()}</button>
 				<div className="dropdown-content">
 				<span className="dropdown-arrow" />
 				<ul className="dropdown-list">
