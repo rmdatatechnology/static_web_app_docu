@@ -73,6 +73,13 @@ const Index = ({ data }) => {
           </table>
         )
       },
+	    h2: ({ children }) => {
+		return (
+		<h2 className="h2main1" >
+            {children}
+          </h2>
+        )
+      },
       img: (props) => {
         return (
          <img className="mdxImage" alt="" {...props} />
@@ -94,6 +101,8 @@ const Index = ({ data }) => {
       Menu,
       Italic,
     }
+	
+	let count = 0;
  
   return (
     <>
@@ -105,7 +114,6 @@ const Index = ({ data }) => {
 				description={data.mdx.frontmatter.title}
 			/>
 				<h1>{data.mdx.frontmatter.title}</h1>
-				<br/>
 				<section className="main-content">	 
 				<div>
 					<MDXProvider components={mdxComponents}>
@@ -126,6 +134,12 @@ const Index = ({ data }) => {
 					img,
 				})
 				{
+					
+					if(count === 3)
+						count = 0;
+						
+					count++;
+					
 					return (
 						
 						<PostItem
@@ -134,6 +148,7 @@ const Index = ({ data }) => {
 							description={description}
 							key={name}
 							imageName={img}
+							count={count}
 						/>
 					)
 				}

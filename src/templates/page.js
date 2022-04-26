@@ -130,7 +130,7 @@ const Page = ({ data }) => {
 				description={post.frontmatter.description}
 			/>
 			<div id="pageContent">
-				<h1> {post.frontmatter.title} </h1>
+				<h1  className="customH1" > {post.frontmatter.title} </h1>
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer height="100%">{data.mdx.body}</MDXRenderer>

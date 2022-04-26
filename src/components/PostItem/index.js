@@ -16,6 +16,7 @@ const PostItem = ({
   title,
   description,
   imageName,
+  count,
 }) => {
 const { locale } = useLocale();
 const { listImages } = useStaticQuery(
@@ -51,7 +52,7 @@ const { listImages } = useStaticQuery(
  
   return (
 	<div onClick={onClick} className="hl-img-wrapper product-grid-item">
-		<h2>{title}</h2>
+		<h2 className="h2main">{title}</h2>
 		{imageToUse && (
           <img
             src={imageToUse.publicURL}
