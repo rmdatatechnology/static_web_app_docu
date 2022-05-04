@@ -16,7 +16,8 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background-color: #fff;
+	overflow-x: hidden;
 }
 
 
@@ -1135,7 +1136,7 @@ table, th, td {
   margin-right: 10vw;
   display: inline-block; 
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1.13em;
   }
 
 .contact-logo {
@@ -1151,7 +1152,10 @@ table, th, td {
   display: inline;
   position: absolute;
   }
-  
+ .mail
+ {
+	font-size: 1.13em;
+ }
 .flag-mail {
   margin-top: 5px;
   background-size: contain;
