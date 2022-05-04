@@ -75,7 +75,7 @@ const SearchContent = () => {
                                     "or": ["searchbox"]
                                 }}
                                 defaultQuery={() => {
-                                    if (searchQuery !== null) {
+                                    if (searchQuery !== null && searchQuery.trim() !== "" && searchQuery.trim() !== 0) {
                                         return {
                                         }
                                     }
