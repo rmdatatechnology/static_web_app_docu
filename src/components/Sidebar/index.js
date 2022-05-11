@@ -165,11 +165,11 @@ function checkForValue(item, url, opened, isClicked) {
 function Sidebar({ depthStep, depth}) {
   const { product } = useProduct();
   const items = getSidebarItems(product);
-  const { opened, toggle, clicked, setClicked, scrollPosition, setScrollPosition } = useSidebar();
+  const { opened, toggle, clicked, height, setClicked, scrollPosition, setScrollPosition } = useSidebar();
   const focusSidebar = useRef();
  
 useLayoutEffect(() => {
-    if (focusSidebar) {
+	if (focusSidebar) {
 		// Our ref has a value, pointing to an HTML element
 		// The perfect time to observe it.
 		if(focusSidebar.current) 
@@ -179,6 +179,7 @@ useLayoutEffect(() => {
 		}			
 	}
 	
+	
 	 return () => {
 		if (focusSidebar) {
 			// We need to clean up after this ref
@@ -187,6 +188,10 @@ useLayoutEffect(() => {
 		}
 	};		
 }, [focusSidebar, scrollPosition]);
+
+const hasWindow = typeof window !== 'undefined';
+const heightMain = hasWindow ? window.innerHeight : null;
+let h = (heightMain*0.8)-height;
 
  const prefix = useStaticQuery(graphql`
     query {
@@ -203,8 +208,8 @@ useLayoutEffect(() => {
  
  
   return (
-    <div className="sidebar-content" ref={focusSidebar} onScroll={handleScroll}>
-      <ul>
+<div className="sidebar-content" ref={focusSidebar} onScroll={handleScroll} style={{height: h}}> 
+	  <ul>
 	 {items.map((sidebarItem, index) => (
 			  <SidebarItem
 				depthStep={depthStep}

@@ -522,6 +522,10 @@ ol, ul {
     left: 33%;
 }
 
+.customTable, .customTr, .customTd {
+    border: none;
+}
+
 .h2main {
 		font-family: 'Bitter',serif;
 		font-size: 1.6em;
@@ -730,7 +734,6 @@ ol, ul {
     padding: 0px;
     margin-top: 0px;
     width: 100%;
-    
 }
 
 .footer-wrapper ol, .footer-wrapper ul {
@@ -931,7 +934,6 @@ ol, ul {
   position: fixed;
   margin-top: 1vh;
   width: 15vw;
-  height: 76vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
   

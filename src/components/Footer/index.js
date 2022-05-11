@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import useTranslations from '../useTranslations';
 import "../../styles/styles.scss";
+import { useSidebar } from '../../hooks/sidebar';
 
 const Footer = () => {
   const {
     maintainedBy,
   } = useTranslations();
-
+  
+  const footerRef = useRef();
+  const { height, setHeight } = useSidebar();
+  
+  useEffect(() => {
+    if(!height)
+		setHeight(footerRef.current.clientHeight);
+      
+	function handleResize() {
+      setHeight(footerRef.current.clientHeight);
+	}
+	
+	window.addEventListener('resize', handleResize);
+  });
+ 
+  
   return (
-    <div className="footer-wrapper" id="footer">		
+    <div className="footer-wrapper" id="footer" ref={footerRef}>
 		  <div className="footer-container" />
 			<div className="footer-inner">
 			<div class="footer-inner-left">

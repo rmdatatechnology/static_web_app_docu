@@ -8,6 +8,7 @@ const SidebarProvider = ({ children }) => {
   const [opened, setOpened] = useState({});
   const [clicked, setClicked] = useState();
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [height, setHeight] = useState();
 
   const toggle = url => {
     setOpened({
@@ -17,7 +18,7 @@ const SidebarProvider = ({ children }) => {
   };
 
   return (
-    <SidebarContext.Provider value={{ opened, toggle, clicked, setClicked, scrollPosition, setScrollPosition }}>
+    <SidebarContext.Provider value={{ opened, toggle, clicked, height, setClicked, scrollPosition, setScrollPosition, setHeight }}>
       {children}
     </SidebarContext.Provider>
   );
