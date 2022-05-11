@@ -106,7 +106,7 @@ ol, ul {
 .page {
   width: calc(100% - 10vw);
   height:100%;
-  margin-left:10vw;
+  margin-left:5vw;
   height:100%;
   position:relative;
   margin-top:2vh;
@@ -120,7 +120,7 @@ ol, ul {
   grid-column-gap: 10px;
   width: calc(100% - 10vw);
   height:100%;
-  margin-left:10vw;
+  margin-left:5vw;
   height:100%;
   position:relative;
   flex-grow: 1;
@@ -129,7 +129,6 @@ ol, ul {
         
 		}
 .content {
-  width: calc(100% - 10vw);
   heigth:100%;
   margin-bottom:5vh;
 		}
@@ -659,7 +658,7 @@ ol, ul {
 .dropdown-list{
 	margin-top: 1vh;
 	column-count: 2;
-    margin-left: -22em;
+    margin-left: -17em;
 	list-style-type: none;
 	border-radius: 5px;
     background-color: #990000;
@@ -684,7 +683,7 @@ ol, ul {
      height: 0;
      position: absolute;
      top: 1.7em;
-     right: 18em;
+     right: 12em;
 
 }
 
@@ -754,14 +753,13 @@ ol, ul {
     float: left;
     text-align: left;
     width: auto;
-    margin-left: 5vw;
 }
 
 .footer-inner-right {
     line-height: 1.5;
     text-align: right;
     margin-bottom: 0;
-    margin-right: 15vw;
+    margin-right: 10vw;
     padding: 0px;
 }
 .footer-email {
@@ -829,7 +827,6 @@ ol, ul {
 }
 .nav-menu {
   width: 100%;  
-  margin-right: 5vw;
   text-align: right;    
   display: block;
    &.is-active {
@@ -1129,13 +1126,13 @@ table, th, td {
 
 .contact-inner-left {
   display: inline-block;
-  margin-left: 18vw;
+  margin-left: 15vw;
   }
 
 .contact-inner-right {
   text-align: right;
   float: right;
-  margin-right: 10vw;
+  margin-right: 5vw;
   display: inline-block; 
   font-weight: 600;
   font-size: 1.13em;
@@ -1143,7 +1140,6 @@ table, th, td {
 
 .contact-logo {
   position: absolute;
-  margin-left: 5vw;
   width: 80px;
   margin-top: -65px; }
 
