@@ -9,6 +9,11 @@
       "name": "Search",
       "link": "/search",
       "id": "search"
+    },
+	{
+      "name": "PDF",
+      "link": "/pdf",
+      "id": "pdf"
     }
   ]
 }

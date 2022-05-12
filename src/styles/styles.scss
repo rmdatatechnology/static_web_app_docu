@@ -113,7 +113,6 @@ ol, ul {
 
 }
 
-
 .pagecontainer {
   display: grid;
   grid-template-columns: 15vw auto;   
@@ -1221,3 +1220,10 @@ table, th, td {
 	align-content: center;
 	font-size: 1rem;
 }
+
+
+.downloadLink{
+	text-decoration: none!important;
+	color: #212529;
+}
+

@@ -115,8 +115,14 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/documentation/static`,
-                name: `static`,
+                name: `staticDoku`,
             },
+		}, {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/static`,
+                name: `static`,
+            },	
         },
         // mdx support
         {
