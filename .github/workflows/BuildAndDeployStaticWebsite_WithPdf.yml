@@ -30,9 +30,9 @@ jobs:
     - name: checkout submodule
       run: |
         git submodule foreach 'git checkout main || git checkout -b main'
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
-        node-version: '17.1.0'
+        node-version: '18.0.0'
     - run: npm install
     - uses: jossef/action-set-json-field@v1
       with:
