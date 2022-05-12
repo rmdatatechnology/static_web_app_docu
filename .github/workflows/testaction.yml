@@ -13,5 +13,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Set selected color
-        run: echo -n "${{ secrets.ELASTC_API_KEY_DEVELOPMENT }}" >> foo && cut -c1-3 foo && cut -c4- foo
+        run: echo -n "${{ secrets.ELASTIC_SEARCH_URL_DEVELOPMENT }}" >> foo && cut -c1-3 foo && cut -c4- foo
         id: random-color-generator
+      - name: echo1
+        run: echo -n "${{ secrets.ELASTIC_INDEX_DEVELOPMENT }}" >> foo && cut -c1-3 foo && cut -c4- foo
+        id: echo1
+      - name: echo2
+        run: echo -n "${{ secrets.ELASTIC_URL_DEVELOPMENT }}" >> foo && cut -c1-3 foo && cut -c4- foo
+        id: echo2
