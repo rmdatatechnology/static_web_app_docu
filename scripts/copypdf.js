@@ -2,7 +2,7 @@ var fs = require('fs');
 var fse = require('fs-extra');
 
 var sourceDir = './convertpdf/mergehtml';
-var destDir = './static';
+var destDir = './documentation/static';
 
 // if folder doesn't exists create it
 if (!fs.existsSync(destDir)){

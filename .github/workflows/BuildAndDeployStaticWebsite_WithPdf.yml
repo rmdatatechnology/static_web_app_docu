@@ -93,7 +93,8 @@ jobs:
     - run: npm run build
     - run: npm run createpdf
     - run: npm run copypdf
-
+    # needs this run build to include the pdf files dynamically
+    - run: npm run build
     - uses: tibor19/static-website-deploy@v1
       with:
         enabled-static-website: 'true'

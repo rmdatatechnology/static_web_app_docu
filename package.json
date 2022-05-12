@@ -6,16 +6,16 @@
 					"version": "0.1.0",
 					"license": "MIT",
 					"scripts": {
-										"build": "npm run copyImages && npm run clean && gatsby build --prefix-paths",
-										"build-local": "npm run copyImages && npm run clean && gatsby build",
-										"develop": "npm run copyImages && gatsby develop",
+										"build": "npm run clean && gatsby build --prefix-paths",
+										"build-local": "npm run clean && gatsby build",
+										"develop": "gatsby develop",
 										"start": "npm run develop",
 										"clean": "gatsby clean",
 										"serve": "gatsby serve --prefix-paths",
 										"serve-local": "gatsby serve",
 										"prettier": "prettier --write **/*.{md,css,scss,yaml,yml,ts}",
 										"copyImages": "node scripts/copyImages.js",
-										"createpdf":  "node scripts/createpdf.js",
+										"createpdf": "node scripts/createpdf.js",
 										"copypdf": "node scripts/copypdf.js"
 					},
 					"dependencies": {

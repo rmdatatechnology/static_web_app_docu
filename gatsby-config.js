@@ -103,7 +103,7 @@ module.exports = {
             options: {
                 path: `${__dirname}/documentation/pages`,
                 name: `pages`,
-                ignore: [`README.md`], // ignore readme
+                ignore: [`README.md`, `**/*.png`, `**/*.jpg`, `**/*.jpeg`, `**/*.bmp`, `**/.tiff`, `**/.png`, `**/.jpg`, `**/.jpeg`, `**/.bmp`, `**/.tiff`], // ignore readme and images from the pages
             },
         }, {
             resolve: `gatsby-source-filesystem`,
@@ -111,19 +111,13 @@ module.exports = {
                 path: `${__dirname}/documentation/toc`,
                 name: `toc`,
             },
-        }, {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/documentation/static`,
-                name: `staticDoku`,
-            },
 		}, {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/static`,
-                name: `static`,
+                path: `${__dirname}/documentation/static`,
+                name: `dokumentation_images`,
             },	
-        },
+        }, 	
         // mdx support
         {
             resolve: `gatsby-plugin-mdx`,
@@ -133,7 +127,7 @@ module.exports = {
                 gatsbyRemarkPlugins: [{
                         resolve: "gatsby-remark-copy-linked-files",
                         options: {
-                            destinationDir: "static",
+                            destinationDir: "mdxImg",
                             ignoreFileExtensions: [],
                         },
                     },
