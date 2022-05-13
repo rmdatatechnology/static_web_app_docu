@@ -45,6 +45,18 @@ jobs:
       with:
         file: './config/variables/variables.json'
         field: productused
+        value: 'rmgeo'
+    - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geodiscoverer'
+    - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
         value: 'geodesktop'
     - run: npm run build
     - run: npm run createpdf
@@ -95,9 +107,10 @@ jobs:
     - run: npm run copypdf
     # needs this run build to include the pdf files dynamically
     - run: npm run build
-    - uses: tibor19/static-website-deploy@v1
+    - uses: bacongobbler/azure-blob-storage-upload@main
       with:
-        enabled-static-website: 'true'
-        folder: 'public'
-        connection-string: ${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}
+        source_dir: 'public'
+        container_name: '$web'
+        connection_string: ${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}
+        sync: 'true'
 
