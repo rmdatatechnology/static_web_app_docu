@@ -103,7 +103,7 @@ module.exports = {
             options: {
                 path: `${__dirname}/documentation/pages`,
                 name: `pages`,
-                ignore: [`README.md`, `**/*.png`, `**/*.jpg`, `**/*.jpeg`, `**/*.bmp`, `**/.tiff`, `**/.png`, `**/.jpg`, `**/.jpeg`, `**/.bmp`, `**/.tiff`], // ignore readme and images from the pages
+                ignore: [`README.md`], // ignore readme
             },
         }, {
             resolve: `gatsby-source-filesystem`,
@@ -127,7 +127,7 @@ module.exports = {
                 gatsbyRemarkPlugins: [{
                         resolve: "gatsby-remark-copy-linked-files",
                         options: {
-                            destinationDir: "mdxImg",
+                            destinationDir: "static",
                             ignoreFileExtensions: [],
                         },
                     },
