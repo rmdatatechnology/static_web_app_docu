@@ -107,10 +107,9 @@ jobs:
     - run: npm run copypdf
     # needs this run build to include the pdf files dynamically
     - run: npm run build
-    - uses: bacongobbler/azure-blob-storage-upload@main
+    - uses: tibor19/static-website-deploy@v1
       with:
-        source_dir: 'public'
-        container_name: '$web'
-        connection_string: ${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}
-        sync: 'true'
+        enabled-static-website: 'true'
+        folder: 'public'
+        connection-string: ${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}
 
