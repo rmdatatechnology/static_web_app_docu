@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PostItem from '../components/PostItem';
 import TitlePage from '../components/TitlePage';
 import useProducts from '../components/useProducts';
+import { useLocale } from '../hooks/locale';
 import SEO from '../components/seo';
 import Footer from '../components/Footer';
 import { MDXProvider } from "@mdx-js/react";
@@ -29,6 +30,7 @@ import "../styles/styles.scss";
 const Index = ({ data }) => {
 	
   const productItems = useProducts();
+  const { locale } = useLocale();
   
   if (!data || !data.mdx) {
     return (
@@ -132,8 +134,17 @@ const Index = ({ data }) => {
 					description,
 					slug,
 					img,
+					de,
+					fr,
+					en,
 				})
 				{
+					let des = description;
+					if(locale === "it")
+						des = it;
+					if(locale === "fr")
+						des = fr;
+					
 					
 					if(count === 3)
 						count = 0;
@@ -145,7 +156,7 @@ const Index = ({ data }) => {
 						<PostItem
 							slug={slug}
 							title={fullname}
-							description={description}
+							description={des}
 							key={name}
 							imageName={img}
 							count={count}

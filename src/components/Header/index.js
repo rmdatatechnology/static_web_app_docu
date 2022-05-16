@@ -49,6 +49,8 @@ const Header = () => {
 		toggleMenu("home");
 	else if(activeNav.toString().includes("search"))
 	  toggleMenu("search");
+   else if(activeNav.toString().includes("pdf"))
+	  toggleMenu("pdf");
 	else
 		toggleMenu("products");
 	

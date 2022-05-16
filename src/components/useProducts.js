@@ -37,6 +37,9 @@ const query = graphql`
 			product
 			img
 			slug
+			it
+			fr
+			en
           }
         }
       }

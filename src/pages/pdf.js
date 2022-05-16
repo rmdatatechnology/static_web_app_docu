@@ -145,8 +145,17 @@ const Pdf = ({ data }) => {
 					description,
 					slug,
 					img,
+					en,
+					it,
+					fr,
 				})
 				{
+					let des = description;
+					if(locale === "it")
+						des = it;
+					if(locale === "fr")
+						des = fr;
+					
 					let node = availablePdf.find(e => e.name.toLowerCase().includes(name.toLowerCase()));
 					if(node)
 					{
@@ -156,7 +165,7 @@ const Pdf = ({ data }) => {
 							<PdfItem
 								slug={slug}
 								title={fullname}
-								description={description}
+								description={des}
 								key={name}
 								imageName={img}
 								count={count}
