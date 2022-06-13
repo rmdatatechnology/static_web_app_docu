@@ -7,6 +7,11 @@ import inventorymanager from '../../documentation/toc/inventorymanager.json';
 import geodiscoverer from '../../documentation/toc/geodiscoverer.json';
 import rmgeo from '../../documentation/toc/rmgeo.json';
 import tdworx from '../../documentation/toc/tdworx.json';
+import smartarea from '../../documentation/toc/smartarea.json';
+import smartinfra from '../../documentation/toc/smartinfra.json';
+import smartnetworx from '../../documentation/toc/smartnetworx.json';
+import geoweb from '../../documentation/toc/geoweb.json';
+
 
 
 
@@ -36,6 +41,22 @@ export const getSidebarItems = (product) => {
 	  else if(product.toString().toLowerCase() === "inventorymanager")
 	 {
 		 return inventorymanager;
+	 }
+	  else if(product.toString().toLowerCase() === "geoweb")
+	 {
+		 return geoweb;
+	 }
+	  else if(product.toString().toLowerCase() === "smartarea")
+	 {
+		 return smartarea;
+	 }
+	  else if(product.toString().toLowerCase() === "smartnetworx")
+	 {
+		 return smartnetworx;
+	 }
+	  else if(product.toString().toLowerCase() === "smartinfra")
+	 {
+		 return smartinfra;
 	 }
 	 else if(product.toString().toLowerCase() === "geodiscoverer")
 	 {
