@@ -17,16 +17,31 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: runs on branch
-      run: echo ${GITHUB_REF##*/}
     - name: checkout
       uses: actions/checkout@v3
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
-    - name: checkout submodule
+    - name: get current branch name
+      id: branch-name
+      uses: tj-actions/branch-names@v5.2
+    - name: current branch name
       run: |
-        git submodule foreach ''git checkout main || git checkout -b main''
+          echo "Running on branch: ${{ steps.branch-name.outputs.current_branch }}"
+    - name: config of submodules
+      run: | 
+         git submodule foreach ''git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"''
+    - name: fetch submodules
+      run: | 
+         git submodule foreach ''git fetch origin''
+    - name: checkout submodule
+      if: steps.branch-name.outputs.current_branch != 'master'
+      run: |
+        git submodule foreach 'git checkout ${{ steps.branch-name.outputs.current_branch }} || git checkout -b ${{ steps.branch-name.outputs.current_branch }}'
+    - name: checkout submodule main
+     if: steps.branch-name.outputs.current_branch == 'master'
+      run: |
+        git submodule foreach 'git checkout main || git checkout -b main'
      # Set the build variables for the job
     - uses: jossef/action-set-json-field@v1
       with:
