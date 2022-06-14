@@ -35,11 +35,11 @@ jobs:
       run: | 
          git submodule foreach ''git fetch origin''
     - name: checkout submodule
-      if: steps.branch-name.outputs.is_default == 'false'
+      if: steps.branch-name.outputs.current_branch != 'master'
       run: |
         git submodule foreach 'git checkout ${{ steps.branch-name.outputs.current_branch }} || git checkout -b ${{ steps.branch-name.outputs.current_branch }}'
     - name: checkout submodule main
-      if: steps.branch-name.outputs.is_default == 'true'
+      if: steps.branch-name.outputs.current_branch == 'master'
       run: |
         git submodule foreach 'git checkout main || git checkout -b main'
      # Set the build variables for the job
