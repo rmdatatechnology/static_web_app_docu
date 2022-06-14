@@ -39,7 +39,7 @@ jobs:
       run: |
         git submodule foreach 'git checkout ${{ steps.branch-name.outputs.current_branch }} || git checkout -b ${{ steps.branch-name.outputs.current_branch }}'
     - name: checkout submodule main
-     if: steps.branch-name.outputs.current_branch == 'master'
+      if: steps.branch-name.outputs.current_branch == 'master'
       run: |
         git submodule foreach 'git checkout main || git checkout -b main'
      # Set the build variables for the job
