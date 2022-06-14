@@ -24,6 +24,12 @@ jobs:
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
+    - name: config of submodules
+      run: | 
+         git submodule foreach ''git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"''
+    - name: config of submodules
+      run: | 
+         git submodule foreach ''git fetch origin''
     - name: checkout submodule
       run: |
         git submodule foreach ''git checkout 2022_1 || git checkout -b 2022_1''
