@@ -11,7 +11,7 @@ import smartarea from '../../documentation/toc/smartarea.json';
 import smartinfra from '../../documentation/toc/smartinfra.json';
 import smartnetworx from '../../documentation/toc/smartnetworx.json';
 import geoweb from '../../documentation/toc/geoweb.json';
-
+import rmkatoffice from '../../documentation/toc/rmkatoffice.json';
 
 
 
@@ -69,6 +69,10 @@ export const getSidebarItems = (product) => {
 	 else if(product.toString().toLowerCase() === "tdworx")
 	 {
 		 return tdworx;
+	 }
+	 else if(product.toString().toLowerCase() === "rmkatoffice")
+	 {
+		 return rmkatoffice;
 	 }
 	 else
 	 {

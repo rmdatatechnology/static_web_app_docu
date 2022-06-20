@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { navigate } from 'gatsby';
 import useProducts from '../useProducts';
 import { useProduct } from '../../hooks/products';
@@ -65,7 +65,7 @@ const ProductDropDown = () => {
 				<span className="dropdown-arrow" />
 				<ul className="dropdown-list">
 					{productItems.map(option => (
-						<li className="dropdown-listitem" onClick={ event => {
+						<li className="dropdown-listitem" role='presentation' onClick={ event => {
 							navigate(getNagigateTo(option.link, option.name))
 						}}>
 						{option.fullname}

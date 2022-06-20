@@ -1,9 +1,8 @@
 import React from 'react';
-import { useStaticQuery, graphql, navigate, withPrefix  } from 'gatsby';
+import { navigate, withPrefix  } from 'gatsby';
 import { useLocale } from '../../hooks/locale';
 import { useProduct } from '../../hooks/products';
 import useProducts from '../useProducts';
-import useTranslations from '../useTranslations';
 import { useSidebar } from '../../hooks/sidebar';
 
 const {
@@ -14,7 +13,7 @@ const SearchResultItem = ({res}) => {
     const { locale } = useLocale();
     const { product } = useProduct();
     const productItems = useProducts();
-	const { clicked, setClicked } = useSidebar();
+	const { setClicked } = useSidebar();
 	
 	let img = withPrefix("/pages.gif");
 	
@@ -75,7 +74,7 @@ const SearchResultItem = ({res}) => {
     if (useItem(res, locale, items, res.slug)) {
         return (
             <>
-			<div className="searchResContainer" onClick={event => onClick()}>
+			<div className="searchResContainer" role='presentation' onClick={event => onClick()}>
             <h3 className="searchheader">
 				<span>
 					<img src={img} alt={res.title} className="custom-image"/>

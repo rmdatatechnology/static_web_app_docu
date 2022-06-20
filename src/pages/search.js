@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactiveBase, DataSearch, ReactiveList } from '@appbaseio/reactivesearch';
-import TitlePage from '../components/TitlePage';
-import { useProduct } from '../hooks/products';
-import useProducts from '../components/useProducts';
 import useTranslations from '../components/useTranslations';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import SearchResultItem from '../components/Search';
 import { useSearchQuery } from '../hooks/search';
 import useVariables from '../components/useVariables';
@@ -21,19 +18,14 @@ const SearchContent = () => {
 		elasticindex,
     } = useVariables();
 	
-	const { product } = useProduct();
 	const { searchQuery, setSearchQuery } = useSearchQuery();
-    const productItems = useProducts();
-	let opt = productItems.find(
-        k => k.name.toString().toLowerCase() === product.toString().toLowerCase()
-    );
 	
 	const element = (<><span className="search_before">{search}</span></>);
 
     return (
   <>
             <div className="page">
-			<SEO
+			<Seo
 				title={search}
 				description={search}
 			/>

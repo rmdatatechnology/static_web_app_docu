@@ -1,13 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import useTranslations from '../useTranslations';
 import "../../styles/styles.scss";
 import { useSidebar } from '../../hooks/sidebar';
 
 const Footer = () => {
-  const {
-    maintainedBy,
-  } = useTranslations();
-  
+	
   const footerRef = useRef();
   const { height, setHeight } = useSidebar();
   
@@ -29,7 +25,7 @@ const Footer = () => {
 			<div className="footer-inner">
 			<div class="footer-inner-left">
 				<div class="footer-nav">E-Mail <a href="mailto:office@rmdatagroup.com"><strong>office@rmdatagroup.com</strong></a></div>
-				<div class="footer-nav"><a href="https://www.rmdatagroup.com/impressum/" title="Impressum">Impressum</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/datenschutz/" title="Datenschutz">Datenschutz</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/rechtliches/" title="Rechtliches">Rechtliches</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/systemvoraussetzungen/" title="Systemvoraussetzungen">Systemvoraussetzungen</a><span class="dividor"> &#124; </span><a href="https://portal.rmdatagroup.com/" title="rmDATA Kundenportal" target="_blank">rmDATA Kundenportal</a></div>
+				<div class="footer-nav"><a href="https://www.rmdatagroup.com/impressum/" title="Impressum">Impressum</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/datenschutz/" title="Datenschutz">Datenschutz</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/rechtliches/" title="Rechtliches">Rechtliches</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/systemvoraussetzungen/" title="Systemvoraussetzungen">Systemvoraussetzungen</a><span class="dividor"> &#124; </span><a href="https://portal.rmdatagroup.com/" title="rmDATA Kundenportal">rmDATA Kundenportal</a></div>
 				<div class="footer-infos" id="footer_infos_left">
 					<div>
 						<p>© Copyright 2022 rmDATA Gruppe</p>

@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, description, image }) => {
+const Seo = ({ title, description, image }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
   
@@ -61,10 +61,10 @@ const SEO = ({ title, description, image }) => {
 }
 
 
-export default SEO
+export default Seo
 
 const query = graphql`
-  query SEO {
+  query Seo {
     site {
       siteMetadata {
         defaultTitle: title
@@ -76,12 +76,12 @@ const query = graphql`
 `
 
 
-SEO.propTypes = {
+Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
 }
-SEO.defaultProps = {
+Seo.defaultProps = {
   title: null,
   description: null,
   image: null,

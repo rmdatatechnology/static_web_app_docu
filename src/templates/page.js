@@ -1,9 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import TitlePage from '../components/TitlePage';
 import Sidebar from "../components/Sidebar";
-import SEO from '../components/seo';
-import Footer from '../components/Footer';
+import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -65,7 +63,7 @@ const Page = ({ data }) => {
       },
 	  img: (props) => {
         return (
-         <img className="mdxImage" {...props} />
+         <img className="mdxImage" alt={props.alt} {...props} />
         )
       },
 	  a: (props) => {
@@ -135,7 +133,7 @@ const Page = ({ data }) => {
 			<Sidebar />
 		</div>
 		<div className="content">
-			<SEO
+			<Seo
 				title={post.frontmatter.title}
 				description={post.frontmatter.description}
 			/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import useTranslations from '../components/useTranslations';
 
 import "../styles/styles.scss";
@@ -14,7 +14,7 @@ const NotFound = () => {
   return (<>
    <div className="page">
 		<div className="content">
-			<SEO title="404" />
+			<Seo title="404" />
 			<br />
 			<br />
 			<h1>404: Not Found</h1>

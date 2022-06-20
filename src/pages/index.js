@@ -1,11 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PostItem from '../components/PostItem';
-import TitlePage from '../components/TitlePage';
 import useProducts from '../components/useProducts';
 import { useLocale } from '../hooks/locale';
-import SEO from '../components/seo';
-import Footer from '../components/Footer';
+import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -111,7 +109,7 @@ const Index = ({ data }) => {
 	<div className="page">
 		<div className="content">
 			<div id="pageContent">
-			<SEO
+			<Seo
 				title={data.mdx.frontmatter.title}
 				description={data.mdx.frontmatter.title}
 			/>
