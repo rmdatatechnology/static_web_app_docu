@@ -8,6 +8,11 @@ export { default as Info } from "./TextBlock/Info"
 export { default as GeoDesigner } from "./Products/GeoDesigner"
 export { default as GeoMapper } from "./Products/GeoMapper"
 export { default as GeoDesktop } from "./Products/GeoDesktop"
+export { default as InventoryManager } from "./Products/InventoryManager"
+export { default as GeoWeb } from "./Products/GeoWeb"
+export { default as SmartArea } from "./Products/SmartArea"
+export { default as SmartInfra } from "./Products/SmartInfra"
+export { default as SmartNetworx } from "./Products/SmartNetworx"
 
 export { default as Placeholder } from "./Placeholder"
 
