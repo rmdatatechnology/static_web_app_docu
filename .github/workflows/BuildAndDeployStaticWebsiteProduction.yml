@@ -10,13 +10,13 @@ on:
 #
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains a single job called "build_and_deploy"
   build_and_deploy:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
+    runs-on: windows-2019
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    # check out steps
     - name: checkout
       uses: actions/checkout@v3
       with:
@@ -35,14 +35,40 @@ jobs:
       run: | 
          git submodule foreach ''git fetch origin''
     - name: checkout submodule
-      if: steps.branch-name.outputs.current_branch != 'master'
-      run: |
-        git submodule foreach 'git checkout ${{ steps.branch-name.outputs.current_branch }} || git checkout -b ${{ steps.branch-name.outputs.current_branch }}'
-    - name: checkout submodule main
-      if: steps.branch-name.outputs.current_branch == 'master'
-      run: |
-        git submodule foreach 'git checkout main || git checkout -b main'
-     # Set the build variables for the job
+     run: |
+        git submodule foreach 'git checkout production || git checkout -b production'
+    
+     # setup node
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '17.1.0'
+    - run: npm install
+    
+    # create pdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geodesigner'
+    - run: npm run build
+    - run: npm run createpdf
+     - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geodesktop'
+    - run: npm run build
+    - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geomapper'   
+    - run: npm run build
+    - run: npm run createpdf
+    - run: npm run copypdf
+    # needs this run build to include the pdf files dynamically
+    # Set the build variables for the production job at leas
     - uses: jossef/action-set-json-field@v1
       with:
         file: './config/variables/variables.json'
@@ -77,14 +103,9 @@ jobs:
       with:
         file: './config/variables/variables.json'
         field: useindex
-        value: 'true'
-        
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '17.1.0'
-    - run: npm install
+        value: 'true'        
     - run: npm run build
-
+    # deploy the webpage
     - uses: tibor19/static-website-deploy@v1
       with:
         enabled-static-website: 'true'

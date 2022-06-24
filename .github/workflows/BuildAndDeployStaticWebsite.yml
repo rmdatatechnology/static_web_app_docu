@@ -4,9 +4,9 @@ name: Build And Deploy Static Site
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on a 1 am from monday to friday
+  # Triggers the workflow on a 1 am on monday
  schedule:
-    - cron: '5 1 * * 1-5'
+    - cron: '5 1 * * 1'
  # Allows you to run this workflow manually from the Actions tab
  workflow_dispatch:
 
@@ -16,8 +16,8 @@ jobs:
   # This workflow contains a single job called "build"
   build_and_deploy:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
+    runs-on: windows-2019
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: checkout
@@ -37,14 +37,45 @@ jobs:
     - name: fetch submodules
       run: | 
          git submodule foreach ''git fetch origin''
-    - name: checkout submodule
-      if: steps.branch-name.outputs.current_branch != 'master'
-      run: |
-        git submodule foreach 'git checkout ${{ steps.branch-name.outputs.current_branch }} || git checkout -b ${{ steps.branch-name.outputs.current_branch }}'
     - name: checkout submodule main
-      if: steps.branch-name.outputs.current_branch == 'master'
       run: |
-        git submodule foreach 'git checkout ${GITHUB_REF##*/} || git checkout -b ${GITHUB_REF##*/}'
+        git submodule foreach 'git checkout main || git checkout -b main'
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18.0.0'
+    - run: npm install
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geodesigner'
+    - run: npm run build
+    - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'rmgeo'
+    - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geodiscoverer'
+    - run: npm run build #when the placeholder are removed we do not need to build the page
+    - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geodesktop'
+    - run: npm run build
+    - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'geomapper'      
      # Set the build variables for the job
     - uses: jossef/action-set-json-field@v1
       with:
@@ -82,12 +113,11 @@ jobs:
         field: useindex
         value: 'true'
         
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '17.1.0'
-    - run: npm install
     - run: npm run build
-
+    - run: npm run createpdf
+    - run: npm run copypdf
+    # needs this run build to include the pdf files dynamically
+    - run: npm run build
     - uses: tibor19/static-website-deploy@v1
       with:
         enabled-static-website: 'true'
