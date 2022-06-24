@@ -35,7 +35,7 @@ jobs:
       run: | 
          git submodule foreach ''git fetch origin''
     - name: checkout submodule
-     run: |
+      run: |
         git submodule foreach 'git checkout production || git checkout -b production'
     
      # setup node
@@ -52,7 +52,7 @@ jobs:
         value: 'geodesigner'
     - run: npm run build
     - run: npm run createpdf
-     - uses: jossef/action-set-json-field@v1
+    - uses: jossef/action-set-json-field@v1
       with:
         file: './config/variables/variables.json'
         field: productused
