@@ -135,6 +135,7 @@ const Index = ({ data }) => {
 					slug,
 					img,
 					de,
+					it,
 					fr,
 					en,
 				})
