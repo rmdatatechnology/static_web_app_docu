@@ -51,15 +51,24 @@ const { listImages } = useStaticQuery(
   
  
   return (
-	<div onClick={onClick} className="hl-img-wrapper product-grid-item">
-		<h2 className="h2main">{title}</h2>
+	<div onClick={onClick}>
+	<table className="productTable">
+	<tr>
+	<td width="80vw" className="productTableCell">
 		{imageToUse && (
           <img
             src={imageToUse.publicURL}
             alt={title}
           />
         )}
-        <p>{description}</p>
+		</td>
+		<td className="productTableCell">
+		<h3 className="productHeader" >{title}</h3>
+        <span className="productText">{description}</span>
+		</td>
+		</tr>
+		</table>
+		
     </div>
   );
 };

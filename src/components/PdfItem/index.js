@@ -44,15 +44,25 @@ const { listImages } = useStaticQuery(
   return (
             <>
 			<li>
-			<div  className="searchResContainer" onClick={event => onClick()}>
-			<table className="customTable"><tr  className="customTr"><td className="customTd" width="250px">
-			<img src={imageToUse.publicURL} alt={title} width="200px"/></td>
-            <td  className="customTd"><h3 className="searchheader"><span>{title}</span></h3>
-            <span>{description}</span></td>
+			<div onClick={onClick}>
+				<table className="productTable">
+				<tr>
+				<td width="80vw" className="productTableCell">
+				{imageToUse && (
+				<img
+					src={imageToUse.publicURL}
+					alt={title}
+				/>
+				)}
+			</td>
+		    <td className="productTableCell">
+			<h3 className="productHeader" >{title}</h3>
+			<span className="productText">{description}</span>
+			</td>
 			</tr>
 			</table>
-            </div>
-			<hr className="customSeperator" />
+		
+			</div>
 			</li>
 			</>
 		);

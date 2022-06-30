@@ -566,16 +566,44 @@ ol, ul {
 .product-grid{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 30px;
 	width:100%;
+	margin-top:2vh
 }
 
 .product-grid-item{
-	cursor:pointer;
+	
 	align-self: stretch;
 	background-color: #F2F3F4;
 	width: 100%;
 	margin-top:1vw;
+}
+
+.productHeader {
+    font-family: Bitter,serif;
+    font-weight: 700;
+    font-size: 1.0em;
+    color: #000000;
+	margin: 0 0 0 0;
+}
+
+.productText {
+    font-size: 0.9em;
+	margin: 0 0 0 0;
+}
+
+.productTable {
+	cursor:pointer;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	box-shadow: -1px 2px 8px 0px #ccc;
+}
+
+.productTableCell {
+	height: 100%;
+	vertical-align: top;
+    border: none!important;
+	padding: 8px 1% 8px 2%;
 }
 	
 .list {

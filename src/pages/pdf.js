@@ -126,7 +126,7 @@ const Pdf = ({ data }) => {
 				description={data.mdx.frontmatter.title}
 			/>
 				<h1>{data.mdx.frontmatter.title}</h1>
-				<h3>{data.mdx.frontmatter.description}</h3>
+				<h3 className="productHeader">{data.mdx.frontmatter.description}</h3>
 				<section className="main-content">	 
 				<div>
 					<MDXProvider components={mdxComponents}>
@@ -135,8 +135,7 @@ const Pdf = ({ data }) => {
 					</div>
 				</section>
 			</div>
-			<section className="custom-section">
-			<div>
+			<div className="product-grid">
 			{productItems.map(
 				function({
 					name,
@@ -177,7 +176,6 @@ const Pdf = ({ data }) => {
 				}
 				)}
 				</div>
-			</section>
 			</div>
 		<div className="end">
 		</div>
