@@ -4,12 +4,14 @@ import "../../../styles/styles.scss";
 
 const TextBlock = ({ theme, children , symbol }) => {
  
+  let classname = 'customBlockquoteTableColumn ' + theme;
+ 
   return (
     <div className={theme}>
 	<table className="customBlockquoteTable">
 	<tr>
-	<td className={'customBlockquoteTableColumn' + ' ' + theme}><span className="customBlockquote">{symbol}</span></td>
-	<td className={'customBlockquoteTableColumn' + ' ' + theme}>{children}</td>
+	<td className={classname}><span className="customBlockquote">{symbol}</span></td>
+	<td className={classname}>{children}</td>
 	</tr>
 	</table>
     </div>

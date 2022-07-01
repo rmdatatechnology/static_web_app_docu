@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate, useStaticQuery, graphql, Link } from "gatsby";
+import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocale } from '../../hooks/locale';
 import "../../styles/styles.scss";
 
@@ -39,6 +39,7 @@ const prefix = useStaticQuery(graphql`
 	else	
 		navigate(`/${lang}/` + getNewUrlWithoutPrefix(false, prefix.site.pathPrefix));
   }
+ 
   
   function getLang() {
     
@@ -52,12 +53,12 @@ const prefix = useStaticQuery(graphql`
 
   return (
   <div className="language_dropdown">
-  <button  className='language-button is-active'>{getLang()}</button>
+  <div  className='language-button is-active'>{getLang()}</div>
   <div className="language_dropdown_content">
     <ul className="language_dropdown_list">
-      <li className="language-link"	onClick={(e) => handleClickLanguage(e, "de")}>DE</li>
-      <li className="language-link"	onClick={(e) => handleClickLanguage(e, "it")}>IT</li>
-	  <li className="language-link"	onClick={(e) => handleClickLanguage(e, "fr")}>FR</li>
+      <li className="language-link" role='presentation' onClick={(e) => handleClickLanguage(e, "de")}>DE</li>
+      <li className="language-link" role="presentation"  onClick={(e) => handleClickLanguage(e, "it")}>IT</li>
+	  <li className="language-link" role="presentation"  onClick={(e) => handleClickLanguage(e, "fr")}>FR</li>
     </ul>
 	</div>
 	</div>

@@ -1,11 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PdfItem from '../components/PdfItem';
-import TitlePage from '../components/TitlePage';
 import useProducts from '../components/useProducts';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { useLocale } from '../hooks/locale';
-import Footer from '../components/Footer';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
@@ -121,7 +119,7 @@ const Pdf = ({ data }) => {
 	<div className="page">
 		<div className="content">
 			<div id="pageContent">
-			<SEO
+			<Seo
 				title={data.mdx.frontmatter.title}
 				description={data.mdx.frontmatter.title}
 			/>
@@ -171,6 +169,10 @@ const Pdf = ({ data }) => {
 							/>
 						)
 					}
+					
+					return (
+					<></>
+					)
 				}
 				)}
 				</div>
