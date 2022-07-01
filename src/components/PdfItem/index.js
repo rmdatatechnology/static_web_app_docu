@@ -16,6 +16,7 @@ const PdfItem = ({
   description,
   imageName,
   count,
+  url
 }) => {
 
 const { listImages } = useStaticQuery(
@@ -43,8 +44,8 @@ const { listImages } = useStaticQuery(
  
   return (
             <>
-			<li>
 			<div onClick={onClick}>
+			<a className="downloadLink" href={url}>
 				<table className="productTable">
 				<tr>
 				<td width="80vw" className="productTableCell">
@@ -61,9 +62,8 @@ const { listImages } = useStaticQuery(
 			</td>
 			</tr>
 			</table>
-		
+		</a>
 			</div>
-			</li>
 			</>
 		);
 };
@@ -73,6 +73,7 @@ PdfItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageName: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default PdfItem;

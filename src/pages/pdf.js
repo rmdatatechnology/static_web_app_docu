@@ -159,8 +159,7 @@ const Pdf = ({ data }) => {
 					if(node)
 					{
 						return (
-							<ul>
-							<a className="downloadLink" href={node.publicURL}>
+							
 							<PdfItem
 								slug={slug}
 								title={fullname}
@@ -168,9 +167,8 @@ const Pdf = ({ data }) => {
 								key={name}
 								imageName={img}
 								count={count}
+								url={node.publicURL}
 							/>
-							</a>
-							</ul>
 						)
 					}
 				}
