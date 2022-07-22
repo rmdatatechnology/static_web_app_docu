@@ -48,6 +48,7 @@ const query = graphql`
             product
             productcrssettingspath
             productsuffix
+			productpath
             rmMAP
           }
         }
