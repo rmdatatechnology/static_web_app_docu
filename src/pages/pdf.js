@@ -21,6 +21,7 @@ import {
   Bold,
   Menu,
   Italic,
+  Kommentar,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -110,6 +111,7 @@ const Pdf = ({ data }) => {
       Bold,
       Menu,
       Italic,
+	  Kommentar,
     }
 	
 	let count = 0;

@@ -1,3 +1,8 @@
+const fs = require('fs');
+const gracefulFs = require('graceful-fs');
+gracefulFs.gracefulify(fs);
+
+
 const config = require('./config/variables/variables.json')
 
     const myQuery = `{

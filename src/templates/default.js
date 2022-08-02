@@ -25,6 +25,7 @@ import {
   Menu,
   Italic,
   MarkdownLink,
+  Kommentar,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -91,6 +92,7 @@ const Default = ({ data }) => {
       Bold,
       Menu,
       Italic,
+	  Kommentar,
     }
 	
 
