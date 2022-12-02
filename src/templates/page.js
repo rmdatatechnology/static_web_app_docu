@@ -27,6 +27,7 @@ import {
   MarkdownLink,
   Image,
   Kommentar,
+  Video,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -131,6 +132,7 @@ const Page = ({ data }) => {
 	  Image,
 	  MarkdownLink,
 	  Kommentar,
+	  Video,
     }
 	
 	
