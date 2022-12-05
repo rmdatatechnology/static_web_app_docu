@@ -1,12 +1,27 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Video = ({path, linkText, children, ...rest  }) => {
+const Video = ({path, linkText, placeholder, children, ...rest  }) => {
 
- const { listImages } = useStaticQuery(
+
+let nameWithoutExt = 'youtube_preview';
+
+if(placeholder)
+	nameWithoutExt = placeholder;
+
+
+ const { listImages, defaultImages } = useStaticQuery(
     graphql`
       query {
-        listImages: allFile (filter: {ext: {eq: ".png"}, relativeDirectory: {eq: ""}}) {
+        listImages: allFile (filter: {ext: {eq: ".png"}}) {
+          
+			 nodes {
+				name
+				publicURL
+				absolutePath
+				}
+            }
+			defaultImages: allFile (filter: {ext: {eq: ".png"}, name: {eq: "youtube_preview"} }) {
           
 			 nodes {
 				name
@@ -17,28 +32,37 @@ const Video = ({path, linkText, children, ...rest  }) => {
           }
     `,
   );
-  const defaultImg = listImages.nodes.find(img => {    
+  
+  
+  const usedImg = listImages.nodes.find(img => {    
     
-	  if(img.name === 'youtube_preview')
+	  if(img.name === nameWithoutExt)
+		 return img;
+	return null;
+  });
+  
+  const defaultImg = defaultImages.nodes.find(img => {    
+    
+	  if(img.name === "youtube_preview")
 		 return img;
 	return null;
   });
   
  return (
   <div>
-	{defaultImg && (
+	{usedImg && (
 	<a href={path}>
           <img
-            src={defaultImg.publicURL}
+            src={usedImg.publicURL}
             alt={linkText}
 			width="700px"
           />
 		  </a>
         )}
-        {!defaultImg && (
+        {!usedImg && (
          <a href={path}>
 		 <img
-            src=""
+            src={defaultImg.publicURL}
             alt={linkText}
 			width="700px"
           />

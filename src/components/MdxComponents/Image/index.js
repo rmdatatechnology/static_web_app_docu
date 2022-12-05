@@ -5,7 +5,7 @@ const Image = ({name, path, children, ...rest  }) => {
 
 let nameWithoutExt = name.split('.');
 nameWithoutExt.pop();
-const nameToUse = nameWithoutExt.join('.');;
+const nameToUse = nameWithoutExt.join('.');
 
  const { listImages } = useStaticQuery(
     graphql`
