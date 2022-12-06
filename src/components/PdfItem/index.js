@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql, navigate } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import "../../styles/styles.scss";
 
 const {
@@ -36,15 +36,9 @@ const { listImages } = useStaticQuery(
   
   const imageToUse = getProcuctImage(listImages,imageName);
   
-  function onClick(e) {
-	
-   
-  }
-  
- 
   return (
             <>
-			<div onClick={onClick}>
+			<div >
 			<a className="downloadLink" href={url}>
 				<table className="productTable">
 				<tr>

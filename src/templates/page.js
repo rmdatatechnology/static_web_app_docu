@@ -102,13 +102,6 @@ const Page = ({ data }) => {
           </h4>
         )
 	  },
-	  iframe: (props) => {
-		return (
-		<div className="embedVideo" >
-           <iframe {...props} />
-          </div>
-        )
-      },
       // Use the below components without having to import in *.mdx
       Example,
       Danger,

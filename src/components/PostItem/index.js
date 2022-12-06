@@ -51,7 +51,7 @@ const { listImages } = useStaticQuery(
   
  
   return (
-	<div onClick={onClick}>
+	<div onClick={onClick} onKeyDown={onClick}>
 	<table className="productTable">
 	<tr>
 	<td width="80vw" className="productTableCell">
