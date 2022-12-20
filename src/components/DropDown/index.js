@@ -21,6 +21,9 @@ const ProductDropDown = () => {
 	  let prod = pro.toString().toLowerCase();
 	  if(prod.toString().toLowerCase() === "geomapperse")
 		  prod = "geomapper";
+	  
+	   if(prod.toString().toLowerCase() === "geodesignerdgm")
+		  prod = "geodesigner";
 	
 	  if(prod.toString().toLowerCase() !== product.toString().toLowerCase()) 
 		changeProduct(prod.toString().toLowerCase());
