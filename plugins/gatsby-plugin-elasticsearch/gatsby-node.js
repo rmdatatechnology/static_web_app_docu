@@ -10,6 +10,7 @@ let activity = report.activityTimer(`Indexing to ElasticSearch`);
  * @param {any} obj what to keep the same
  */
 const identity = (obj) => obj;
+var type = '_doc';
 
 exports.onPostBuild = async function (
   { graphql },
@@ -55,47 +56,46 @@ exports.onPostBuild = async function (
     const newIndex = await getUniqueIndexName(client, alias);
 
     await createIndex(client, newIndex);
+	console.log("createIndex");
     if (indexConfig) {
       await setSettings(client, newIndex, indexConfig);
     }
-
+	console.log("setSettings");
     setStatus(activity, `query ${i}: executing query`);
     const result = await graphql(query);
     if (result.errors) {
       report.panic(`failed to index to ElasticSearch`, result.errors);
     }
     const objects = await transformer(result);
-    const chunks = chunk(objects, chunkSize);
+	
+	console.log("Create Update Elements");
+	
+	async function * generator () {
+  
+	for (const doc of objects) {
+		yield doc
+	}
+	}
 
-    setStatus(activity, `query ${i}: splitting in ${chunks.length} jobs`);
-    const errors = [];
-    for (const chunk of chunks) {
-      const body = chunk.flatMap((doc) => [
-        { index: { _index: newIndex } },
-        doc,
-      ]);
-      const bulkResult = await client.bulk({
-        index: newIndex,
-        type: '_doc',
-        refresh: true,
-        body: body,
-      });
-      if (bulkResult.body.errors) {
-        const chunkErrors = bulkResult.body.items
-          .filter((item) => item.index.error)
-          .map((item) => JSON.stringify(item.index.error));
-        errors.push(...chunkErrors);
-      }
-    }
-    const insertedCount = objects.length - errors.length;
+    const r = await client.helpers.bulk({
+	  datasource: generator(),
+	  onDocument (doc) {
+		return {
+		  index: { _index: newIndex }
+		}
+	  }
+	})
+
+	console.log(r)
+	const insertedCount = objects.length;
     setStatus(
       undefined,
       `inserted ${insertedCount} of ${objects.length} documents in '${alias}'`
     );
 
-    for (const error of errors) {
+    /*for (const error of errors) {
       report.error(error);
-    }
+    }*/
 
     return moveAlias(client, newIndex, alias);
   });
@@ -235,18 +235,24 @@ async function setSettings(client, index, indexConfig) {
     });
     await client.indices.putSettings({
       index: index,
-      body: { settings: settings },
+	  type: type,
+       body: {
+		  settings: settings
+    },
     });
     await client.indices.open({
       index: index,
     });
   }
-
-  mappings &&
-    (await client.indices.putMapping({
-      index: index,
-      body: { ...mappings },
-    }));
+	if (mappings) {
+	  const response = await client.indices.putMapping({
+		  index: index,
+		  type: type,
+		  body: { ...mappings }
+		});
+		
+		console.log(response);
+	}
 }
 
 /**

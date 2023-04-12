@@ -27,13 +27,13 @@ const queries = [{
             data
         }) => data.allMdx.nodes.map((node) => ({
                 id: node.id,
-                title: node.frontmatter.title,
+                heading: node.frontmatter.title,
                 rawbody: node.rawBody,
                 locale: node.fields.locale,
                 slug: node.slug,
             })), // optional
         indexName: config.elasticindex,
-        indexConfig: {},
+        indexConfig: {	}
     },
 ];
 
