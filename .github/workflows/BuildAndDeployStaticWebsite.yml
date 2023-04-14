@@ -113,7 +113,7 @@ jobs:
       with:
         file: './config/variables/variables.json'
         field: useindex
-        value: 'false'
+        value: 'true'
         
     - run: npm run build
    # - run: npm run createpdf
