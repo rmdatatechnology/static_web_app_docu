@@ -57,15 +57,21 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
   const hasChildren = items && items.length !== 0;
   
   const calculatedClassName = active ? 'sidebarButton active' : 'sidebarButton';
+  const notAvailable = "notAvailable";
  
+  let isAvailable = true;
   let label = item.de;
-  if(locale === "it")
+  if(locale === "it" && typeof item.it === "string" && item.it.trim() !== "")
   {
 	  label = item.it;
   }
-  else if(locale === "fr")
+  else if(locale === "fr"  && typeof item.fr === "string" && item.fr.trim() !== "")
   {
 	  label = item.fr;
+  }
+  else
+  {
+	  isAvailable = false;
   }
    
   function onClick(e) {
@@ -84,7 +90,12 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
 		if(isLocale === false && locale === "de")
 			return navigate(`/${url}?product=${product}`);
 		else
-			return navigate(`/${locale}/${url}?product=${product}`);
+		{
+			if(isAvailable === false)
+				return navigate(`/${locale}/${notAvailable}?product=${product}`);
+			else
+				return navigate(`/${locale}/${url}?product=${product}`);
+		}
 	}
    
   }
