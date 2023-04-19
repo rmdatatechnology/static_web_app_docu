@@ -14,7 +14,7 @@ var type = '_doc';
 
 exports.onPostBuild = async function (
   { graphql },
-  { node, apiKey, auth, queries, useindex, chunkSize = 1000 }
+  { node, apiKey, auth, queries, useindex }
 ) {
   activity.start();
 
@@ -36,7 +36,7 @@ exports.onPostBuild = async function (
   setStatus(activity, `${queries.length} queries to index`);
 
   const jobs = queries.map(async function doQuery(
-    { indexName: alias, query, transformer = identity, indexConfig },
+    { indexName: alias, query, transformer = identity },
     i
   ) {
     if (!query) {
@@ -52,15 +52,15 @@ exports.onPostBuild = async function (
       alias = await alias(graphql);
     }
 
-    //await deleteOrphanIndices(client, alias);
+    await deleteOrphanIndices(client, alias);
     const newIndex = await getUniqueIndexName(client, alias);
 
     await createIndex(client, newIndex);
-	console.log("createIndex");
-    if (indexConfig) {
-      await setSettings(client, newIndex, indexConfig);
-    }
-	console.log("setSettings");
+	
+	setStatus(activity, `create index`);
+    
+    await setSettings(client, newIndex);
+	
     setStatus(activity, `query ${i}: executing query`);
     const result = await graphql(query);
     if (result.errors) {
@@ -68,7 +68,7 @@ exports.onPostBuild = async function (
     }
     const objects = await transformer(result);
 	
-	console.log("Create Update Elements");
+	setStatus(activity, `create update elements`);
 	
 	async function * generator () {
   
@@ -86,16 +86,12 @@ exports.onPostBuild = async function (
 	  }
 	})
 
-	console.log(r)
+	setStatus(activity, r);
 	const insertedCount = objects.length;
     setStatus(
       undefined,
       `inserted ${insertedCount} of ${objects.length} documents in '${alias}'`
     );
-
-    /*for (const error of errors) {
-      report.error(error);
-    }*/
 
     return moveAlias(client, newIndex, alias);
   });
@@ -123,7 +119,7 @@ async function moveAlias(client, targetIndex, alias) {
     await Promise.all(
       Object.entries(response.body).map(async ([aliasedIndex]) => {
         setStatus(activity, `deleting index '${aliasedIndex}'`);
-        return client.indices.delete({ index: aliasedIndex });
+		return client.indices.delete({ index: aliasedIndex });
       })
     );
   } catch (error) {
@@ -193,16 +189,18 @@ async function deleteOrphanIndices(client, index) {
       indices.map(async (index) => {
         if (!aliasedIndices.includes(index)) {
           await client.indices.delete({ index: index });
+		  setStatus(activity, `deleting index '${index}'`);
         }
       });
     } catch (err) {
       // No aliased index found
-      console.warn(err);
+	  setStatus(activity, err);
     }
   } catch (err) {
     // No existing indices found
-    console.warn(err);
+	setStatus(activity, err);
   }
+  setStatus(activity, `no otphan index found`);
 }
 
 /**
@@ -224,35 +222,35 @@ async function createIndex(client, index) {
  *
  * @param client
  * @param index
- * @param indexConfig
  */
-async function setSettings(client, index, indexConfig) {
-  const { mappings, settings } = indexConfig;
-
-  if (settings) {
+async function setSettings(client, index) {
+	
     await client.indices.close({
       index: index,
     });
+	setStatus(activity, `set settings`);
     await client.indices.putSettings({
       index: index,
-	  type: type,
        body: {
-		  settings: settings
-    },
-    });
+		  settings:  {
+				index: {
+					number_of_replicas:0
+				}
+			}
+		}
+	});
     await client.indices.open({
       index: index,
     });
-  }
-	if (mappings) {
-	  const response = await client.indices.putMapping({
-		  index: index,
-		  type: type,
-		  body: { ...mappings }
+	/*if (mappings) {
+		setStatus(activity, `set mapping '${mapping}'`);
+		const response = await client.indices.putMapping({
+			index: index,
+			body: { ...mappings }
 		});
 		
-		console.log(response);
-	}
+		setStatus(activity, response);
+	}*/
 }
 
 /**
@@ -264,7 +262,6 @@ async function setSettings(client, index, indexConfig) {
 function setStatus(activity, status) {
   if (activity && activity.setStatus) {
     activity.setStatus(status);
-  } else {
-    console.log('ElasticSearch:', status);
-  }
+  } 
+  console.log('ElasticSearch:', status);
 }

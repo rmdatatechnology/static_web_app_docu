@@ -33,7 +33,6 @@ const queries = [{
                 slug: node.slug,
             })), // optional
         indexName: config.elasticindex,
-        indexConfig: {	}
     },
 ];
 
@@ -133,7 +132,7 @@ module.exports = {
                         resolve: "gatsby-remark-copy-linked-files",
                         options: {
                             destinationDir: "static",
-                            ignoreFileExtensions: [],
+                            ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
                         },
                     },
                 ],
@@ -156,8 +155,7 @@ module.exports = {
                 node: config.elasticurl,
                 apiKey: config.elasticapikey, // optional
                 useindex: config.useindex,
-                queries,
-                chunkSize: 10000, // default: 1000
+                queries
             },
         }, 
     ],
