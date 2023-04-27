@@ -56,6 +56,7 @@ if(placeholder)
             src={usedImg.publicURL}
             alt={linkText}
 			width="700px"
+			title="open in youtube"
           />
 		  </a>
         )}
@@ -64,6 +65,7 @@ if(placeholder)
 		 <img
             src={defaultImg.publicURL}
             alt={linkText}
+			title="open in youtube"
 			width="700px"
           />
 		  </a>

@@ -55,25 +55,20 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
    
  
   const hasChildren = items && items.length !== 0;
-  
   const calculatedClassName = active ? 'sidebarButton active' : 'sidebarButton';
-  const notAvailable = "notAvailable";
  
-  let isAvailable = true;
   let label = item.de;
-  if(locale === "it" && typeof item.it === "string" && item.it.trim() !== "")
+  if(locale === "it")
   {
 	  label = item.it;
   }
-  else if(locale === "fr"  && typeof item.fr === "string" && item.fr.trim() !== "")
+  else if(locale === "fr")
   {
 	  label = item.fr;
   }
-  else
-  {
-	  isAvailable = false;
-  }
-   
+ 
+  const isAvailable = typeof label === "string" && label.trim() !== ""; 
+  
   function onClick(e) {
 	//e.preventDefault();
 	
@@ -91,10 +86,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
 			return navigate(`/${url}?product=${product}`);
 		else
 		{
-			if(isAvailable === false)
-				return navigate(`/${locale}/${notAvailable}?product=${product}`);
-			else
-				return navigate(`/${locale}/${url}?product=${product}`);
+			return navigate(`/${locale}/${url}?product=${product}`);
 		}
 	}
    
@@ -103,7 +95,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
   return (
     
     <>
-	  {label && (
+	  {isAvailable && label && (
          <button 
         className={calculatedClassName}
 		ref={focusDiv}
@@ -120,6 +112,7 @@ const SidebarItem = ({ className = '', depthStep = 20, depth = 0,  toggle, opene
 		{expanded ? <OpenedSvg /> : <ClosedSvg />}
 		</>
 		) : null}
+		
       </button>
       )}
 

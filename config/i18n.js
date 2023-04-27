@@ -26,8 +26,8 @@ module.exports = {
     dateFormat: `DD/MM/YYYY`,
     siteLanguage: `it`,
     ogLanguage: `it_IT`,
-    defaultTitle: `Gatsby Starter with multi-language and CMS`,
-    defaultDescription: `Gatsby example site using Markdown, i18n and CMS`,
+    defaultTitle: `rmDATA Producinformations`,
+    defaultDescription: `rmDATA Producinformations`,
   },
   fr: {
     path: `fr`,
@@ -35,7 +35,7 @@ module.exports = {
     dateFormat: `DD/MM/YYYY`,
     siteLanguage: `fr`,
     ogLanguage: `fr_FR`,
-    defaultTitle: `Gatsby Starter with multi-language and CMS`,
-    defaultDescription: `Gatsby example site using Markdown, i18n and CMS`,
+    defaultTitle: `rmDATA Producinformations`,
+    defaultDescription: `rmDATA Producinformations`,
   },
 }

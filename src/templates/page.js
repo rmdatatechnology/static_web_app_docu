@@ -28,6 +28,7 @@ import {
   Image,
   Kommentar,
   Video,
+  ReleaseNote,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -65,7 +66,7 @@ const Page = ({ data }) => {
       },
 	  img: (props) => {
         return (
-         <img className="mdxImage" alt={props.alt} {...props} />
+         <Image alt={props.alt} {...props} />
         )
       },
 	  a: (props) => {
@@ -126,6 +127,7 @@ const Page = ({ data }) => {
 	  MarkdownLink,
 	  Kommentar,
 	  Video,
+	  ReleaseNote,
     }
 	
 	
