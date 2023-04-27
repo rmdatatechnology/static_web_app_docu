@@ -56,6 +56,7 @@ const NotFound = () => {
             < div className = "content" >
             < Seo title = "404" /  >
             < br /  >
+			< h2 > {pathname}<  / h2 >
 			< br /  >
 			< h1 > 404: Not Found <  / h1 >
 			< br /  >
