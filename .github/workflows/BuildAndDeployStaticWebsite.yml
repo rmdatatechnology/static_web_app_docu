@@ -23,11 +23,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # setup dotnet
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v3
-      with:
-       dotnet-version: 5.0.x
-       
     - name: checkout
       uses: actions/checkout@v3
       with:
@@ -50,8 +45,13 @@ jobs:
         git submodule foreach 'git checkout main || git checkout -b main'
     - uses: actions/setup-node@v3
       with:
-        node-version: '18.0.0'
+        node-version: '19.7.0'
     - run: npm install
+    
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+       dotnet-version: 5.0.x
    # - uses: jossef/action-set-json-field@v1
    #   with:
    #     file: './config/variables/variables.json'
