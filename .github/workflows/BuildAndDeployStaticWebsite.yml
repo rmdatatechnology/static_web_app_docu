@@ -19,9 +19,15 @@ jobs:
     runs-on: windows-2019
     # set a build timout 
     timeout-minutes: 150
-    
+ 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # setup dotnet
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+       dotnet-version: 5.0.x
+       
     - name: checkout
       uses: actions/checkout@v3
       with:
@@ -53,12 +59,12 @@ jobs:
    #     value: 'geodesigner'
    # - run: npm run build
    # - run: npm run createpdf
-   # - uses: jossef/action-set-json-field@v1
-   #   with:
-   #     file: './config/variables/variables.json'
-   #     field: productused
-   #     value: 'rmgeo'
-   # - run: npm run createpdf
+    - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'rmgeo'
+    - run: npm run createpdf
    # - uses: jossef/action-set-json-field@v1
    #   with:
    #     file: './config/variables/variables.json'
@@ -115,11 +121,11 @@ jobs:
         field: useindex
         value: 'true'
         
-    - run: npm run build
+   # - run: npm run build
    # - run: npm run createpdf
-   # - run: npm run copypdf
+    - run: npm run copypdf
     # needs this run build to include the pdf files dynamically
-    #- run: npm run build
+    - run: npm run build
     - uses: tibor19/static-website-deploy@v1
       with:
         enabled-static-website: 'true'
