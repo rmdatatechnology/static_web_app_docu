@@ -52,6 +52,13 @@ jobs:
     
     
     # create pdf
+     - uses: jossef/action-set-json-field@v1
+      with:
+        file: './config/variables/variables.json'
+        field: productused
+        value: 'rmgeo'
+    - run: npm run build
+    - run: npm run createpdf
     - uses: jossef/action-set-json-field@v1
       with:
         file: './config/variables/variables.json'
