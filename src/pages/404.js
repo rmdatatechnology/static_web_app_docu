@@ -11,8 +11,6 @@ const NotFound = () => {
             < Seo title = "404" /  >
             < br /  >
 			< br /  >
-			< h1 > 404: Not Found <  / h1 >
-			< br /  >
 			< h2 > Diese Komponente ist nicht für den Einsatz in der gewählten Sprache nicht vorgesehen.<  / h2 >
 			< br /  >
 			< h2 > Ce composant n'est pas destiné à être utilisé dans la langue sélectionnée.<  / h2 >
