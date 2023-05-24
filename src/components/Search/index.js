@@ -77,9 +77,9 @@ const SearchResultItem = ({res}) => {
 			<div className="searchResContainer" role='presentation' onClick={event => onClick()}>
             <h3 className="searchheader">
 				<span>
-					<img src={img} alt={res.title} className="custom-image"/>
+					<img src={img} alt={res.heading} className="custom-image"/>
                 </span>
-				<span>   {res.title}</span></h3>
+				<span>   {res.heading}</span></h3>
                 <span className="searchresulttext">{url + getNagigateTo(res.slug.split(`.`)[0])}</span>
 				
             </div>

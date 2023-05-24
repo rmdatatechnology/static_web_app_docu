@@ -44,7 +44,7 @@ const SearchContent = () => {
 										input: 'search-input',
 									}}
 									className="search-field"
-                                    dataField={['title', 'rawbody', 'slug', 'locale']}
+                                    dataField={['heading', 'rawbody', 'slug', 'locale']}
 									fuzziness="2"
                                     autosuggest={false}
                                     showClear={true}
