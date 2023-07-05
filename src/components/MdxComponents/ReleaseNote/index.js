@@ -2,18 +2,31 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from "../Image"
 
-const ReleaseNote = ({children, imgArray, valign, width, ...rest  }) => {
+const ReleaseNote = ({children, imgArray, valign, width, border, ...rest  }) => {
 	
 const imagesWithAlt = imgArray.split(';');;
 const valignTable = valign !== null ? valign : "top";
 const widthTable = width !== null ? width : "60%";
+
+ const mystyle = {
+      'border-collapse': 'collapse',
+      'border': border + ' solid lightgrey'
+	  
+    };
+	
+const mystyleNone = {
+      'border': 'none'
+    };
+
+const styToUse = border !== null && border !== "none"  ?  mystyle : mystyleNone;
+
 
 function getImages()
 {
 	if(imgArray !== null && imgArray.trim() !== "")
 				{
 			   return (
-			   <td>
+			   <td style={styToUse}>
 					  {imagesWithAlt.map(n => (  
 						<div>
 							{getImage(n)}  
@@ -45,10 +58,10 @@ function getImage(name)
 
 return (
 	<div className="myReleaseNotes">
-		<table>
-			<tr>
-				<td valign={valignTable} width={widthTable}>{children}</td>
-					{getImages()}
+		<table style={styToUse}>
+			<tr style={styToUse}>
+				<td valign={valignTable} width={widthTable} style={styToUse}>{children}</td>
+				{getImages()} 
 				
 				</tr>
 		</table>
