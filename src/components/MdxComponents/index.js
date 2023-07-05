@@ -13,6 +13,7 @@ export { default as GeoWeb } from "./Products/GeoWeb"
 export { default as SmartArea } from "./Products/SmartArea"
 export { default as SmartInfra } from "./Products/SmartInfra"
 export { default as SmartNetworx } from "./Products/SmartNetworx"
+export { default as Mobile } from "./Products/Mobile"
 
 export { default as Placeholder } from "./Placeholder"
 

@@ -13,6 +13,7 @@ import smartnetworx from '../../documentation/toc/smartnetworx.json';
 import geoweb from '../../documentation/toc/geoweb.json';
 import rmkatoffice from '../../documentation/toc/rmkatoffice.json';
 import rmproject from '../../documentation/toc/rmproject.json';
+import mobile from '../../documentation/toc/mobile.json';
 
 
 
@@ -78,6 +79,10 @@ export const getSidebarItems = (product) => {
 	 else if(product.toString().toLowerCase() === "rmproject")
 	 {
 		 return rmproject;
+	 }
+	  else if(product.toString().toLowerCase() === "mobile")
+	 {
+		 return mobile;
 	 }
 	 else
 	 {
