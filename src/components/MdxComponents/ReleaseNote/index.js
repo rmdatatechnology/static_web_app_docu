@@ -26,7 +26,7 @@ function getImages()
 	if(imgArray !== null && imgArray.trim() !== "")
 				{
 			   return (
-			   <td style={styToUse}>
+			   <td valign={valignTable} width={widthTable} style={styToUse}>
 					  {imagesWithAlt.map(n => (  
 						<div>
 							{getImage(n)}  
