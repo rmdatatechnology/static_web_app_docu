@@ -45,6 +45,7 @@ function getPrefix() {
 
 module.exports = {
     pathPrefix: getPrefix(),
+	trailingSlash: `always`,
     siteMetadata: {
         title: `Produktinformation`,
         description: `rmData Produktdokumentation`,
@@ -127,7 +128,7 @@ module.exports = {
             resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
-				plugins: [`gatsby-remark-copy-linked-files`],
+				plugins: [],
                 gatsbyRemarkPlugins: [{
                         resolve: "gatsby-remark-copy-linked-files",
                         options: {

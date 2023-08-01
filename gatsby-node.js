@@ -1,4 +1,4 @@
-const path = require(`path`);
+const path = require('node:path'); 
 const locales = require(`./config/i18n`);
 const {
   localizedSlug,
@@ -80,7 +80,10 @@ exports.onCreatePage = ({ page, actions }) => {
   });
 };
 
-exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes, createFieldExtension } = actions;
+  
+  
   createTypes(`
     type Mdx implements Node {
       frontmatter: MdxFrontmatter
@@ -90,7 +93,8 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
 	  image: String
 	  description: String
 	  display: String
-	  
+	  locale: String
+	  isDefault: Boolean
     }
 
   `);
@@ -108,7 +112,10 @@ exports.onCreateNode = ({ node, actions }) => {
     // Use path.basename
     // https://nodejs.org/api/path.html#path_path_basename_path_ext
     // It will return the file name without '.md' string (e.g. "file-name" or "file-name.lang")
-    const name = path.basename(node.fileAbsolutePath, `.mdx`);
+    console.log("create node");
+	console.log(node.fileAbsolutePath);
+	
+	const name = path.basename(node.fileAbsolutePath, `.mdx`);
 
     // Find the key that has "default: true" set (in this case it returns "en")
     const defaultKey = findKey(locales, o => o.default === true);
@@ -151,13 +158,11 @@ exports.createPages = async ({ graphql, actions }) => {
       files: allMdx{
         edges {
           node {
-            fields {
-              locale
-              isDefault
-            }
             frontmatter {
               title
               page
+			  locale
+              isDefault
             }
 			slug
 			id
