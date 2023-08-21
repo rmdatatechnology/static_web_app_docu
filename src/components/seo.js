@@ -50,6 +50,7 @@ const Seo = ({ title, description, image }) => {
 	  <meta name="msapplication-TileColor" content="#ffffff" />
 	  <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
 	  <meta name="theme-color" content="#ffffff" />
+	  <meta name="robots" content="noindex" />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
