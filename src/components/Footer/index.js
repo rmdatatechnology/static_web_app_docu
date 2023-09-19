@@ -33,7 +33,7 @@ const Footer = () => {
 				</div>
 			</div>
 				<div class="footer-inner-right">
-					<div class="footer-nav" id="footer_infos_right"><div><p><strong>rmDATA GmbH</strong>, Technologiezentrum Pinkafeld, Industriestraße 6, 7423 Pinkafeld, Österreich, Tel <a href="tel:+43335743333" title="Rufen Sie uns an"><strong>+43 3357 43 333</strong></a><br /><strong>rmDATA GmbH</strong>, Merzbrück 212, 52146 Würselen, Deutschland, Tel <a href="tel:+4924054066917" title="Rufen Sie uns an"><strong>+49 2405 4066917</strong></a><br /><strong>rmDATA AG</strong>, Tägerhardring 8, 5436 Würenlos, Schweiz, Tel <a href="tel:+41415112131" title="Rufen Sie uns an"><strong>+41 41 51121 31</strong></a></p></div></div>
+					<div class="footer-nav" id="footer_infos_right"><div><p><strong>rmDATA GmbH</strong>, Technologiezentrum Pinkafeld, Industriestraße 6, 7423 Pinkafeld, Österreich, Tel <a href="tel:+43335743333" title="Rufen Sie uns an"><strong>+43 3357 43 333</strong></a><br /><strong>rmDATA GmbH</strong>, Merzbrück 212, 52146 Würselen, Deutschland, Tel <a href="tel:+4924054066917" title="Rufen Sie uns an"><strong>+49 2405 4066917</strong></a><br /><strong>rmDATA AG</strong>, Täfernstrasse 26, 5405 Baden-Dättwil, Schweiz, Tel <a href="tel:+41415112131" title="Rufen Sie uns an"><strong>+41 41 51121 31</strong></a></p></div></div>
 				</div>
 			</div>
     </div>
