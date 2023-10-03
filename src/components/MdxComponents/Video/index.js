@@ -1,13 +1,17 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Video = ({path, linkText, placeholder, children, ...rest  }) => {
+const Video = ({path, linkText, placeholder, target, children, ...rest  }) => {
 
 
 let nameWithoutExt = 'youtube_preview';
+let useTarget = "_self";
 
 if(placeholder)
 	nameWithoutExt = placeholder;
+
+if(target)
+	useTarget = target;
 
 
  const { listImages, defaultImages } = useStaticQuery(
@@ -51,21 +55,21 @@ if(placeholder)
  return (
   <div>
 	{usedImg && (
-	<a href={path}>
+	<a href={path} target={useTarget}>
           <img
             src={usedImg.publicURL}
             alt={linkText}
 			width="700px"
-			title="open in youtube"
+			title={linkText}
           />
 		  </a>
         )}
         {!usedImg && (
-         <a href={path}>
+         <a href={path} target={useTarget}>
 		 <img
             src={defaultImg.publicURL}
             alt={linkText}
-			title="open in youtube"
+			title={linkText}
 			width="700px"
           />
 		  </a>
