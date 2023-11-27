@@ -14,6 +14,7 @@ import geoweb from '../../documentation/toc/geoweb.json';
 import rmkatoffice from '../../documentation/toc/rmkatoffice.json';
 import rmproject from '../../documentation/toc/rmproject.json';
 import mobile from '../../documentation/toc/mobile.json';
+import allgemein from '../../documentation/toc/allgemein.json';
 
 
 
@@ -80,9 +81,13 @@ export const getSidebarItems = (product) => {
 	 {
 		 return rmproject;
 	 }
-	  else if(product.toString().toLowerCase() === "mobile")
+	 else if(product.toString().toLowerCase() === "mobile")
 	 {
 		 return mobile;
+	 }
+	 else if(product.toString().toLowerCase() === "allgemein")
+	 {
+		 return allgemein;
 	 }
 	 else
 	 {
