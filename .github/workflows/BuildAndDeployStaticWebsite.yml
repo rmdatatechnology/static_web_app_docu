@@ -34,15 +34,15 @@ jobs:
     - name: current branch name
       run: |
           echo "Running on branch: ${{ steps.branch-name.outputs.current_branch }}"
-    - name: checkout submodule main
-      run: |
-        git submodule set-branch --default documentation
+    - name: config of submodules
+      run: | 
+         git submodule foreach 'git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"'
+    - name: fetch submodules
+      run: | 
+         git submodule foreach 'git fetch origin'
     - name: checkout submodule main
       run: |
         git submodule foreach 'git checkout main || git checkout -b main'
-    - name: pull submodule main
-      run: |
-        git submodule foreach 'git pull --rebase'
     - uses: actions/setup-node@v3
       with:
         node-version: '19.7.0'
