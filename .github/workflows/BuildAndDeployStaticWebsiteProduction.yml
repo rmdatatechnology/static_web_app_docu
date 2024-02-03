@@ -34,10 +34,10 @@ jobs:
         git submodule update --init documentation
     - name: set submodule branch
       run: |
-        git submodule set-branch -b production documentation
+        git submodule set-branch -b remotes/origin/production documentation
     - name: checkout submodule
       run: |
-        git submodule foreach 'git checkout production || git checkout -b production'
+        git submodule foreach 'git checkout remotes/origin/production || git checkout -b remotes/origin/production'
     - name: pull submodule main
       run: |
         git submodule foreach 'git pull --rebase'
