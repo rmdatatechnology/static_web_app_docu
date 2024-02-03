@@ -32,12 +32,12 @@ jobs:
     - name: update and init submodule
       run: |
         git submodule update --init documentation
-    - name: fetch submodules
-      run: | 
-         git submodule foreach ''git fetch --all''
     - name: set submodule branch
       run: |
         git submodule set-branch -b production documentation
+    - name: fetch submodules
+      run: | 
+         git submodule foreach 'git fetch --all'
     - name: checkout submodule
       run: |
         git submodule foreach 'git checkout production || git checkout -b production'
