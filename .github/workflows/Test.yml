@@ -22,9 +22,9 @@ jobs:
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
-    - name: update and init submodule
-      run: |
-        git submodule update --init documentation
+    - name: config of submodules
+      run: | 
+         git submodule foreach 'git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"'
     - name: state of submodule
       run: |
         git submodule
