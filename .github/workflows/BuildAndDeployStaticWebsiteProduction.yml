@@ -25,10 +25,13 @@ jobs:
         submodules: true
     - name: get current branch name
       id: branch-name
-      uses: tj-actions/branch-names@v5.2
+      uses: tj-actions/branch-names@v8
     - name: current branch name
       run: |
           echo "Running on branch: ${{ steps.branch-name.outputs.current_branch }}"
+    - name: update and init submodule
+      run: |
+        git submodule update --init documentation
     - name: set submodule branch
       run: |
         git submodule set-branch -b production documentation
