@@ -37,6 +37,9 @@ jobs:
     - name: checkout submodule main
       run: |
         git submodule foreach 'git checkout main || git checkout -b main'
+    - name: pull submodule main
+      run: |
+        git submodule foreach 'git pull --rebase || git pull --rebase'
     - uses: actions/setup-node@v3
       with:
         node-version: '19.7.0'
