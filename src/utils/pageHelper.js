@@ -15,6 +15,7 @@ import rmkatoffice from '../../documentation/toc/rmkatoffice.json';
 import rmproject from '../../documentation/toc/rmproject.json';
 import mobile from '../../documentation/toc/mobile.json';
 import allgemein from '../../documentation/toc/allgemein.json';
+import kommassierung from '../../documentation/toc/kommassierung.json';
 
 
 
@@ -88,6 +89,10 @@ export const getSidebarItems = (product) => {
 	 else if(product.toString().toLowerCase() === "allgemein")
 	 {
 		 return allgemein;
+	 }
+	  else if(product.toString().toLowerCase() === "kommassierung")
+	 {
+		 return kommassierung;
 	 }
 	 else
 	 {
