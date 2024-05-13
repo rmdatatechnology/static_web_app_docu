@@ -117,7 +117,7 @@ jobs:
       with:
         file: './config/variables/variables.json'
         field: useindex
-        value: 'true'        
+        value: 'false'        
     - run: npm run build
     # deploy the webpage
     - uses: tibor19/static-website-deploy@v1
