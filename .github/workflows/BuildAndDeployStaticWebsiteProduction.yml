@@ -120,7 +120,7 @@ jobs:
         value: 'false'        
     - run: npm run build
     # deploy the webpage
-    - uses: tibor19/static-website-deploy@v1
+    - uses: tibor19/static-website-deploy@v2
       with:
         enabled-static-website: 'true'
         folder: 'public'
