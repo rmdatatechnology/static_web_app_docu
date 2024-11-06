@@ -51,6 +51,9 @@ const Seo = ({ title, description, image }) => {
 	  <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
 	  <meta name="theme-color" content="#ffffff" />
 	  <meta name="robots" content="noindex" />
+	  <meta http-equiv="Cache-Control" content="max-age: 31536000, no-cache, no-store, must-revalidate" />
+	  <meta http-equiv="Pragma" content="no-cache" />
+	  <meta http-equiv="Expires" content="0" />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (

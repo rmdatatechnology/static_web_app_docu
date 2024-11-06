@@ -16,6 +16,7 @@ import rmproject from '../../documentation/toc/rmproject.json';
 import mobile from '../../documentation/toc/mobile.json';
 import allgemein from '../../documentation/toc/allgemein.json';
 import kommassierung from '../../documentation/toc/kommassierung.json';
+import geomatik from '../../documentation/toc/geomatik.json';
 
 
 
@@ -93,6 +94,10 @@ export const getSidebarItems = (product) => {
 	  else if(product.toString().toLowerCase() === "kommassierung")
 	 {
 		 return kommassierung;
+	 }
+	 else if(product.toString().toLowerCase() === "geomatik")
+	 {
+		 return geomatik;
 	 }
 	 else
 	 {
