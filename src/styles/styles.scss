@@ -918,6 +918,27 @@ ol, ul {
 	}
 }
 
+.link-button {
+	font-size: 18px;
+	padding-top: 4px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	background-color: #e7e7e7;
+	cursor:pointer;
+	
+	&:hover,
+	&.active {
+    background-color: lightgray;
+	color: black;
+	text-decoration: none;
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	}
+}
+
 .language-link {
   font-size: 16px;
 	text-decoration: none;
