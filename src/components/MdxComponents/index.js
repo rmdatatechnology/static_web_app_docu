@@ -16,6 +16,7 @@ export { default as SmartNetworx } from "./Products/SmartNetworx"
 export { default as Mobile } from "./Products/Mobile"
 export { default as Kommassierung } from "./Products/Kommassierung"
 export { default as Geomatik } from "./Products/Geomatik"
+export { default as GeoMapperOnly } from "./Products/GeoMapperOnly"
 
 export { default as Placeholder } from "./Placeholder"
 

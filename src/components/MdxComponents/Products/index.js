@@ -8,6 +8,10 @@ if(product===currentproduct)
 	return (<span currentproduct={currentproduct}>
 			{children}
 			</span>)
+else if (product==="geomapper" && currentproduct === "geomapperonly")
+	return (<span currentproduct="geomapperonly">
+			{children}
+			</span>)
 else if (product==="geomatik" && currentproduct === "geomapper")
 	return (<span currentproduct="geomapper">
 			{children}
