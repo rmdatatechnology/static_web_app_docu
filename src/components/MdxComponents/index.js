@@ -31,3 +31,9 @@ export { default as Image } from "./Image"
 export { default as Kommentar } from "./Kommentar"
 export { default as Video } from "./Video"
 export { default as ReleaseNote } from "./ReleaseNote"
+export { default as Icon } from "./Icon"
+
+// Inventory-Manager
+export { default as IMButton } from "./InventoryManager/IMButton"
+export { default as IMIconButton } from "./InventoryManager/IMIconButton"
+export { default as IMPredefinedElement } from "./InventoryManager/IMPredefinedElement"

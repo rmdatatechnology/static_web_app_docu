@@ -1,0 +1,31 @@
+$imGreen: hsl(101, 61%, 49%);
+$imRed: hsl(6, 78%, 57%);
+$textColor:hsl(210, 10%, 28%);
+$borderColor:hsl(220, 6%, 90%);
+
+
+.button-default{
+  background-color: rgb(255, 255, 255);
+  color: $textColor;
+  border: 1px $borderColor solid;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 3px;
+}
+
+.button-green{
+  color: $imGreen !important;
+  border-color: $imGreen !important;
+}
+
+.button-red{
+  color: $imRed !important;
+  border-color: $imRed !important;
+}
+.icon-button{
+  justify-content: center;
+  color: $textColor;
+  border: 1px $borderColor solid;
+  display: inline;
+  border-radius: 3px;
+}

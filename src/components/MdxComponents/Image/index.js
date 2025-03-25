@@ -9,7 +9,7 @@ const tooltip = !alt || alt.trim === "" ? "" : alt;
 const { listImages } = useStaticQuery(
     graphql`
       query{
-        listImages: allFile (filter: {ext: {eq: ".png"}}) {
+        listImages: allFile (filter: {ext: {in: [".png", ".jpg", ".jpeg", ".gif"]}}) {
           
 			 nodes {
 				name
@@ -32,16 +32,16 @@ if(src)
 let nameWithoutExt = name.split('.');
 nameWithoutExt.pop();
 const nameToUse = nameWithoutExt.join('.');
- 
+
  const imageToUse = listImages.nodes.find(img => {
     if( nameToUse === img.name && img.relativeDirectory.includes(path))
 		return img;
-		
+
 	return null;
   });
-  
+
 	 function handleClick(e) {
-		
+
 		var modal = document.getElementById("myModal_" + imageToUse.name);
 		var modalImg = document.getElementById("img_"  + imageToUse.name);
 		if(modal && modalImg)
@@ -58,7 +58,7 @@ const nameToUse = nameWithoutExt.join('.');
 				modal.style.display = "none";
 			}
 		}
-	}	
+	}
   if(imageToUse)
   {
 	return (

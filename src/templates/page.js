@@ -5,47 +5,51 @@ import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
-  Example,
-  Danger,
-  Warning,
-  Success,
-  Info,
-  GeoDesigner,
-  GeoMapper,
-  GeoDesktop,
-  InventoryManager,
-  SmartArea,
-  SmartNetworx,
-  SmartInfra,
-  GeoWeb,
-  Mobile,
-  Kommassierung,
-  Geomatik,
-  GeoMapperOnly,
-  Placeholder,
-  U,
-  Border,
-  Bold,
-  Menu,
-  Italic,
-  MarkdownLink,
-  DownloadLink,
-  Image,
-  Kommentar,
-  Video,
-  ReleaseNote,
+    Example,
+    Danger,
+    Warning,
+    Success,
+    Info,
+    GeoDesigner,
+    GeoMapper,
+    GeoDesktop,
+    InventoryManager,
+    SmartArea,
+    SmartNetworx,
+    SmartInfra,
+    GeoWeb,
+    Mobile,
+    Kommassierung,
+    Geomatik,
+    GeoMapperOnly,
+    Placeholder,
+    U,
+    Border,
+    Bold,
+    Menu,
+    Italic,
+    MarkdownLink,
+    DownloadLink,
+    Image,
+    Kommentar,
+    Video,
+    ReleaseNote,
+    IMIconButton,
+    IMButton,
+    Icon,
+    IMPredefinedElement,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
 
 const Page = ({ data }) => {
-	
+
 	if (!data) {
     return null;
   }
-  
+
   const post = data.mdx;
-  
+
   // Customize markdown component
     const mdxComponents = {
       "ul.li": ({ children }) => {
@@ -75,7 +79,7 @@ const Page = ({ data }) => {
         )
       },
 	  a: (props) => {
-        
+
 		return (
 		<MarkdownLink {...props} />
         )
@@ -85,13 +89,6 @@ const Page = ({ data }) => {
           <h1 className="customH1" >
             {children}
           </h1>
-        )
-      },
-	  h2: ({ children }) => {
-		return (
-		<h2 className="customH2" >
-            {children}
-          </h2>
         )
       },
 	  h3: ({ children }) => {
@@ -113,7 +110,7 @@ const Page = ({ data }) => {
       Danger,
       Warning,
       Success,
-      Info, 
+      Info,
 	  GeoDesigner,
 	  GeoMapper,
 	  GeoDesktop,
@@ -138,11 +135,15 @@ const Page = ({ data }) => {
 	  Kommentar,
 	  Video,
 	  ReleaseNote,
+      Icon,
+      IMButton,
+      IMIconButton,
+        IMPredefinedElement
     }
-	
-	
+
+
   return (
-   
+
 	<>
 	<div className="pagecontainer">
 		<div className="sidebar" id="sidemenu">
@@ -155,15 +156,15 @@ const Page = ({ data }) => {
 			/>
 			<div id="pageContent">
 				<h1  className="customH1" > {post.frontmatter.title} </h1>
-				<section className="main-content">	 
+				<section className="main-content">
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer height="100%">{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
 				</section>
-				
+
 			</div>
 		</div>
-		<div className="end">	
+		<div className="end">
 
 		</div>
 	 </div>
