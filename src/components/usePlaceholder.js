@@ -50,6 +50,9 @@ const query = graphql`
             productsuffix
 			productpath
             rmMAP
+			command_cad_available_de
+            command_cad_available_fr
+            command_cad_available_it
           }
         }
       }
