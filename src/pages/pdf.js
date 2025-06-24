@@ -5,7 +5,7 @@ import useProducts from '../components/useProducts';
 import Seo from '../components/seo';
 import { useLocale } from '../hooks/locale';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXRenderer } from "gatsby-plugin-mdx-v1";
 import {
   Example,
   Danger,
