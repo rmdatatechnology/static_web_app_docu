@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Sidebar from "../components/Sidebar";
 import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXRenderer } from "gatsby-plugin-mdx-v1";
 import {
     Example,
     Danger,
