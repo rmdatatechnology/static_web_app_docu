@@ -127,16 +127,14 @@ module.exports = {
             resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
-				plugins: [`gatsby-remark-copy-linked-files`,`gatsby-remark-autolink-headers`],
+                plugins: [`gatsby-remark-copy-linked-files`],
                 gatsbyRemarkPlugins: [{
-                        resolve: "gatsby-remark-copy-linked-files",
-                        options: {
-                            destinationDir: "static",
-                            ignoreFileExtensions: [],
-                        },
-                    },{
-                    resolve: "gatsby-remark-autolink-headers",
-                }
+                    resolve: "gatsby-remark-copy-linked-files",
+                    options: {
+                        destinationDir: "static",
+                        ignoreFileExtensions: [],
+                    },
+                },
                 ],
             },
         },
