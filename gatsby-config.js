@@ -54,10 +54,10 @@ module.exports = {
         product: config.productused,
     },
     plugins: [
-        `gatsby-plugin-react-helmet`, 
-        `gatsby-plugin-sass`, 
-        `gatsby-plugin-remove-serviceworker`, 
-        `gatsby-transformer-json`, 
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-remove-serviceworker`,
+        `gatsby-transformer-json`,
 		`gatsby-transformer-yaml`,
         // It needs to be the first one to work with gatsby-remark-images
         {
@@ -66,7 +66,7 @@ module.exports = {
                 path: `${__dirname}/src/images`,
                 name: `images`,
             },
-        }, {
+        },{
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/config/variables`,
@@ -120,23 +120,22 @@ module.exports = {
             options: {
                 path: `${__dirname}/documentation/static`,
                 name: `dokumentation_images`,
-            },	
-        }, 	
+            },
+        },
         // mdx support
         {
             resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
-				plugins: [`gatsby-remark-copy-linked-files`],
+                plugins: [`gatsby-remark-copy-linked-files`],
                 gatsbyRemarkPlugins: [{
-                        resolve: "gatsby-remark-copy-linked-files",
-                        options: {
-                            destinationDir: "static",
-                            ignoreFileExtensions: [],
-                        },
+                    resolve: "gatsby-remark-copy-linked-files",
+                    options: {
+                        destinationDir: "static",
+                        ignoreFileExtensions: [],
                     },
+                },
                 ],
-
             },
         },
 
@@ -157,6 +156,6 @@ module.exports = {
                 useindex: config.useindex,
                 queries
             },
-        }, 
+        }
     ],
 };

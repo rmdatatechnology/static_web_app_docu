@@ -5,44 +5,47 @@ import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
-  Example,
-  Danger,
-  Warning,
-  Success,
-  Info,
-  GeoDesigner,
-  GeoMapper,
-  GeoDesktop,
-  InventoryManager,
-  SmartArea,
-  SmartNetworx,
-  SmartInfra,
-  GeoWeb,
-  Mobile,
-  Kommassierung,
-  Geomatik,
-  GeoMapperOnly,
-  Placeholder,
-  DownloadLink,
-  U,
-  Border,
-  Bold,
-  Menu,
-  Italic,
-  MarkdownLink,
-  Kommentar,
+    Example,
+    Danger,
+    Warning,
+    Success,
+    Info,
+    GeoDesigner,
+    GeoMapper,
+    GeoDesktop,
+    InventoryManager,
+    SmartArea,
+    SmartNetworx,
+    SmartInfra,
+    GeoWeb,
+    Mobile,
+    Kommassierung,
+    Geomatik,
+    GeoMapperOnly,
+    Placeholder,
+    DownloadLink,
+    U,
+    Border,
+    Bold,
+    Menu,
+    Italic,
+    MarkdownLink,
+    Kommentar,
+    IMButton,
+    IMIconButton, IMPredefinedElement,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
+import Icon from '../components/MdxComponents/Icon';
 
 const Default = ({ data }) => {
-	
+
 	if (!data) {
     return null;
   }
-	
+
   const post = data.mdx;
-  
+
   // Customize markdown component
     const mdxComponents = {
       "ul.li": ({ children }) => {
@@ -72,7 +75,7 @@ const Default = ({ data }) => {
         )
       },
 	   a: (props) => {
-        
+
 		return (
 		<MarkdownLink {...props} />
         )
@@ -103,11 +106,15 @@ const Default = ({ data }) => {
       Menu,
       Italic,
 	  Kommentar,
+      Icon,
+      IMButton,
+      IMIconButton,
+      IMPredefinedElement
     }
-	
+
 
   return (
-   
+
 	<>
 	<div className="pagecontainer">
 		<div className="content">
@@ -117,7 +124,7 @@ const Default = ({ data }) => {
 			/>
 			<div id="pageContent">
 				<TitlePage text={post.frontmatter.title} />
-				<section className="main-content">	 
+				<section className="main-content">
 					<MDXProvider components={mdxComponents}>
 						<MDXRenderer>{data.mdx.body}</MDXRenderer>
 					</MDXProvider>
