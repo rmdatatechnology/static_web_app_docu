@@ -108,7 +108,7 @@ exports.onCreateNode = ({ node, actions }) => {
     // Use path.basename
     // https://nodejs.org/api/path.html#path_path_basename_path_ext
     // It will return the file name without '.md' string (e.g. "file-name" or "file-name.lang")
-    const name = path.basename(node.fileAbsolutePath, `.mdx`);
+    const name = path.basename(node.internal.contentFilePath, `.mdx`);
 
     // Find the key that has "default: true" set (in this case it returns "en")
     const defaultKey = findKey(locales, o => o.default === true);
@@ -122,15 +122,16 @@ exports.onCreateNode = ({ node, actions }) => {
     // If it's the default language, pass the locale for that
     const lang = isDefault ? defaultKey : name.split(`.`)[1];
 	
-	//const mainPath = path.resolve(`.`);
-	//const relPath = (path.relative(mainPath, node.fileAbsolutePath));
+	const mainPath = path.resolve(`.`);
+	const relPath = (path.relative(mainPath, node.internal.contentFilePath));
 	
     // Get the entire file name and remove the lang of it
-    //const slugFileName = relPath.split(`.`)[0];
+    const slugFileName = relPath.split(`.`)[0];
 
     // Adding the nodes on GraphQL for each post as "fields"
     createNodeField({ node, name: `locale`, value: lang });
     createNodeField({ node, name: `isDefault`, value: isDefault });
+	createNodeField({ node, name: `slug`, value: slugFileName });
   }
 };
 
@@ -154,12 +155,15 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               locale
               isDefault
+			  slug
             }
             frontmatter {
               title
               page
             }
-			slug
+			internal {
+				contentFilePath
+			}
 			id
           }
         }
@@ -178,7 +182,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Creating each page
   contentMarkdown.forEach(({ node: file }) => {
     // Getting Slug and Title
-    const slug = file.slug.split(`.`)[0];
+    const slug = file.fields.slug.split(`.`)[0];
     const title = file.frontmatter.title;
 	const id = file.id;
 
@@ -197,7 +201,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: localizedSlug({ isDefault, locale, slug }),
-      component: template,
+      component: `${template}?__contentFilePath=${file.internal.contentFilePath}`,
       context: {
         // Pass both the "title" and "locale" to find a unique file
         // Only the title would not have been sufficient as articles could have the same title

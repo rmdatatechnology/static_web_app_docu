@@ -1,3 +1,5 @@
+const remarkGfm = require('remark-gfm');
+const rehypeRaw = require('rehype-raw');
 const fs = require('fs');
 const gracefulFs = require('graceful-fs');
 gracefulFs.gracefulify(fs);
@@ -54,69 +56,77 @@ module.exports = {
         product: config.productused,
     },
     plugins: [
-        `gatsby-plugin-react-helmet`, 
-        `gatsby-plugin-sass`, 
+        `gatsby-plugin-react-helmet`,  
         `gatsby-plugin-remove-serviceworker`, 
         `gatsby-transformer-json`, 
 		`gatsby-transformer-yaml`,
+		{
+			resolve: `gatsby-plugin-sass`,
+			options: {
+			sassOptions: {
+				api: "modern",
+				silenceDeprecations: ['legacy-js-api'],
+				},
+			},
+		},
         // It needs to be the first one to work with gatsby-remark-images
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/src/images`,
                 name: `images`,
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/config/variables`,
                 name: `variables`,
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/documentation/settings/translations`,
                 name: `translations`,
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/config/menu`,
                 name: `menu`,
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/documentation/settings/products`,
                 name: `products`,
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/documentation/settings/placeholder`,
                 name: `placeholder`,
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/config/language-mapping`,
                 name: `language-mapping`,
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/documentation/pages`,
                 name: `pages`,
                 ignore: [`README.md`], // ignore readme
             },
         }, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/documentation/toc`,
                 name: `toc`,
             },
 		}, {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem-with-queue`,
             options: {
                 path: `${__dirname}/documentation/static`,
                 name: `dokumentation_images`,
@@ -127,7 +137,6 @@ module.exports = {
             resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
-				plugins: [`gatsby-remark-copy-linked-files`],
                 gatsbyRemarkPlugins: [{
                         resolve: "gatsby-remark-copy-linked-files",
                         options: {
@@ -136,8 +145,17 @@ module.exports = {
                         },
                     },
                 ],
-
-            },
+				mdxOptions: {
+					remarkPlugins: [
+					// Add GitHub Flavored Markdown (GFM) support
+						remarkGfm,
+						rehypeRaw,
+					],
+					rehypePlugins: [
+						rehypeRaw,
+					],
+				},
+			},
         },
 
         // Using svg as component

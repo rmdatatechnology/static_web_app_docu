@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import TitlePage from '../components/TitlePage';
 import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
   Example,
   Danger,
@@ -35,7 +34,7 @@ import {
 
 import "../styles/styles.scss";
 
-const Default = ({ data }) => {
+const Default = ({ data: { mdx }, children }) => {
 	
 	if (!data) {
     return null;
@@ -119,7 +118,7 @@ const Default = ({ data }) => {
 				<TitlePage text={post.frontmatter.title} />
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						{children}
 					</MDXProvider>
 				</section>
 			</div>

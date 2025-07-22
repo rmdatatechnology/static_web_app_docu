@@ -5,7 +5,6 @@ import useProducts from '../components/useProducts';
 import { useLocale } from '../hooks/locale';
 import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
   Example,
   Danger,
@@ -28,7 +27,7 @@ import {
 
 import "../styles/styles.scss";
 
-const Index = ({ data }) => {
+const Index = ({ data: { mdx }, children }) => {
 	
   const productItems = useProducts();
   const { locale } = useLocale();
@@ -123,7 +122,7 @@ const Index = ({ data }) => {
 				<section className="main-content">	 
 				<div>
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						{children}
 					</MDXProvider>
 					</div>
 				</section>

@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import Sidebar from "../components/Sidebar";
 import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
   Example,
   Danger,
@@ -38,7 +37,7 @@ import {
 
 import "../styles/styles.scss";
 
-const Page = ({ data }) => {
+const Page = ({ data: { mdx }, children }) => {
 	
 	if (!data) {
     return null;
@@ -157,7 +156,7 @@ const Page = ({ data }) => {
 				<h1  className="customH1" > {post.frontmatter.title} </h1>
 				<section className="main-content">	 
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer height="100%">{data.mdx.body}</MDXRenderer>
+						{children}
 					</MDXProvider>
 				</section>
 				
