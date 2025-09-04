@@ -40,7 +40,7 @@ jobs:
         git submodule foreach 'git checkout production || git checkout -b production'
     
      # setup node
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v5
       with:
         node-version: '19.9.0'
     - run: npm install
