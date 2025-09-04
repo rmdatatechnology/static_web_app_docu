@@ -43,7 +43,7 @@ jobs:
     - name: checkout submodule main
       run: |
         git submodule foreach 'git checkout NG_2025-3 || git checkout -b NG_2025-3'
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v5
       with:
         node-version: '19.7.0'
     - run: npm install
