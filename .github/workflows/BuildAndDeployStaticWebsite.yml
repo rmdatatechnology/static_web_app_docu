@@ -45,7 +45,7 @@ jobs:
         git submodule foreach 'git checkout NG_2025-4 || git checkout -b NG_2025-4'
     - uses: actions/setup-node@v5
       with:
-        node-version: '19.7.0'
+        node-version: '24.1.0'
     - run: npm install
     
     - name: Setup dotnet
