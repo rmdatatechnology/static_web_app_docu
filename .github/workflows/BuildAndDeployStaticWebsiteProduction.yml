@@ -42,7 +42,7 @@ jobs:
      # setup node
     - uses: actions/setup-node@v5
       with:
-        node-version: '19.9.0'
+        node-version: '19.7.0'
     - run: npm install
     
     - name: Setup dotnet
