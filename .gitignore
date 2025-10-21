@@ -98,3 +98,4 @@ yarn-error.log
 /static/logo.png
 /static/mailicon.png
 static/
+node_modules_/
