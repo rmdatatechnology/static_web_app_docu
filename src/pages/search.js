@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactiveBase, DataSearch, ReactiveList } from '@appbaseio/reactivesearch';
+import { ReactiveBase, SearchBox, ReactiveList } from '@appbaseio/reactivesearch';
 import useTranslations from '../components/useTranslations';
 import Seo from '../components/seo';
 import SearchResultItem from '../components/Search';
@@ -37,7 +37,7 @@ const SearchContent = () => {
                             app={elasticindex}
                             credentials={elasticcredentials}
                             url={elasticsearchurl}><div>
-                                <DataSearch
+                                <SearchBox
                                     componentId="searchbox"
 									innerClass={{
 										title: 'title-wrapper',
