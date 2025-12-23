@@ -42,7 +42,7 @@ jobs:
          git submodule foreach 'git fetch origin'
     - name: checkout submodule main
       run: |
-        git submodule foreach 'git checkout NG_2025-4 || git checkout -b NG_2025-4'
+        git submodule foreach 'git checkout NG_2026_1 || git checkout -b NG_2026_1'
     - uses: actions/setup-node@v5
       with:
         node-version: '19.7.0'
