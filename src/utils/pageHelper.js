@@ -17,7 +17,7 @@ import mobile from '../../documentation/toc/mobile.json';
 import allgemein from '../../documentation/toc/allgemein.json';
 import kommassierung from '../../documentation/toc/kommassierung.json';
 import geomatik from '../../documentation/toc/geomatik.json';
-import info from '../../documentation/toc/info.json';
+import infoweb from '../../documentation/toc/info.json';
 
 
 
@@ -102,7 +102,7 @@ export const getSidebarItems = (product) => {
 	 }
 	  else if(product.toString().toLowerCase() === "info")
 	 {
-		 return info;
+		 return infoweb;
 	 }
 	 else
 	 {
