@@ -21,6 +21,7 @@ import {
     Mobile,
     Kommassierung,
     Geomatik,
+    Info,
     GeoMapperOnly,
     Placeholder,
     DownloadLink,
