@@ -1,8 +1,8 @@
 import React from "react"
 import Product from "../index"
 
-const Info = ({ children }) => {
+const InfoWeb = ({ children }) => {
   return <Product currentproduct="info" children={children} />
 }
 
-export default Info
+export default InfoWeb
