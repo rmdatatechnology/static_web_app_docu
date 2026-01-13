@@ -1,6 +1,6 @@
 # Local builden und editieren
 
-- Github Account und einen Personal Access Token mit repo Rechten und keinem Expiration-Date erstellen(beim erstellen lokal kopieren, wird nur einmal angezeigt;  https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- Github Account und einen Personal Access Token mit Repo Rechten und keinem Expiration-Date erstellen(beim erstellen lokal kopieren, wird nur einmal angezeigt;  https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - Freigabe für das https://github.com/rmdatatechnology/static_web_app_docu und https://github.com/rmdatatechnology/documentation Repository.
 	- Hierfür den Usernamen an uns schicken und wir erteilen die benötigten Rechte.
 
@@ -9,7 +9,7 @@
 - Git (https://git-scm.com/) 
 - TortioseGit (https://tortoisegit.org/) oder anderen Git Client (e.g. SourceTree)
 - Node.js (=> https://github.com/microsoft/nodejs-guidelines/blob/master/windows-environment.md)
-	- Auf der Seite 4 => Tools for Native Modules das Häckchen setzen damit alle notwendigen Tools mit installiert werden.
+	- Auf der Seite 4 => Tools for Native Modules das Häkchen setzen damit alle notwendigen Tools mit installiert werden.
 
 ## Repository clonen und ausführen
 
@@ -26,7 +26,7 @@
 			- Track
 			- alles andere deselektieren
 - Eingabeaufforderung über "Ausführen" öffnen (cmd) 
-- In den Ordner in dem das Rositosy liegt wechseln
+- In den Ordner in dem das Repository liegt wechseln
 - "npm install" ausführen
 - "npm run develop" ausführen und offen lassen
 - Im Browser http://localhost:8000/ öffnen
@@ -35,4 +35,4 @@
 
 **Hinweis**
 
-Immer wenn die Fehlermeldung Detached Head beim einchecken des Submodules erscheint, bitte überprüfen ob das richtige repo ausgechecht ist. Sonst den Ponkt Submodule auschecken wiederholen.
+Immer wenn die Fehlermeldung Detached Head beim einchecken des Submodules erscheint, bitte überprüfen ob das richtige repo ausgechecht ist. Sonst den Punkt Submodule auschecken wiederholen.
