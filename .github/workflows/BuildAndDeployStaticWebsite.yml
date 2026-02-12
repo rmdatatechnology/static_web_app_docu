@@ -40,7 +40,7 @@ jobs:
     - name: fetch submodules
       run: | 
          git submodule foreach 'git fetch origin'
-    - name: checkout submodule upgrade-to-gatsby-5
+    - name: checkout submodule main
       run: |
         git submodule foreach 'git checkout NG_2026_1 || git checkout -b NG_2026_1'
     - uses: actions/setup-node@v5
