@@ -19,10 +19,11 @@ jobs:
     
     # check out steps
     - name: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v6
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
+        ref: upgrade-to-gatsby-5
     - name: get current branch name
       id: branch-name
       uses: tj-actions/branch-names@v8
@@ -42,7 +43,7 @@ jobs:
      # setup node
     - uses: actions/setup-node@v5
       with:
-        node-version: '19.7.0'
+        node-version: '24.13.1'
         package-manager-cache: false
     - run: npm install --legacy-peer-deps
     
