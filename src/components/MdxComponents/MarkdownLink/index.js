@@ -5,6 +5,12 @@ import "../../../styles/styles.scss";
 const MarkdownLink = ({href,children, ...rest  }) => {
   
   const { product } = useProduct();
+  if(href.startsWith(".."))
+	  href = "../" + href;
+  else if(href.startsWith("/"))
+	  href = ".." + href;
+   else if(href.startsWith("."))
+	  href = "." + href;
   
   const newLink = href + "?product=" + product;
   

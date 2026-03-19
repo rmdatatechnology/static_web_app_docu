@@ -29,6 +29,7 @@ const queries = [{
                 id: node.id,
                 heading: node.frontmatter.title,
                 rawbody: node.rawBody,
+				body: node.body,
                 locale: node.fields.locale,
                 slug: node.slug,
             })), // optional

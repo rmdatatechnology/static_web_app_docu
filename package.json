@@ -25,7 +25,6 @@
 										"@gatsbyjs/reach-router": "^2.0.1",
 										"@mdx-js/mdx": "^1.6.22",
 										"@mdx-js/react": "^1.6.22",
-										"@mdx-js/runtime": "^1.6.22",
 										"babel-loader": "^8.2.3",
 										"baseline-browser-mapping": "^2.9.19",
 										"exec-bin": "^1.0.0",
