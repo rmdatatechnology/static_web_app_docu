@@ -54,8 +54,8 @@ const SearchContent = () => {
                                     value={searchQuery}
 									enterButton={true}
 									onChange={(value, triggerQuery, event) => {
-										setSearchQuery(value),
-										() => triggerQuery(),
+										setSearchQuery(value);
+										triggerQuery();
 									}}
                                 />
                             </div>
