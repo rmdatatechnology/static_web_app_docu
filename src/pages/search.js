@@ -44,7 +44,7 @@ const SearchContent = () => {
 										input: 'search-input',
 									}}
 									className="search-field"
-                                    dataField={['heading', 'rawbody', 'slug', 'locale']}
+                                    dataField={['heading', 'rawbody', 'body', 'slug', 'locale']}
 									fuzziness="2"
                                     autosuggest={false}
                                     showClear={true}
@@ -52,9 +52,10 @@ const SearchContent = () => {
 									addonBefore={element}
                                     noInitialQuery={true}
                                     value={searchQuery}
+									enterButton={true}
 									onChange={(value, triggerQuery, event) => {
-										setSearchQuery(value);
-										triggerQuery();
+										setSearchQuery(value),
+										() => triggerQuery(),
 									}}
                                 />
                             </div>
