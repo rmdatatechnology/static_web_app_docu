@@ -13,6 +13,8 @@ const MarkdownLink = ({href,children, ...rest  }) => {
 		href = ".." + href;
 	else if(href.startsWith("."))
 		href = "." + href;
+	else 
+		href = "../" + href;
   }
   const newLink = href + "?product=" + product;
   
