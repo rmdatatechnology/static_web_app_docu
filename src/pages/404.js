@@ -26,4 +26,8 @@ const NotFound = () => {
              <  /  > );
 }
 
+export const Head = () => (
+  <Seo />
+)
+
 export default NotFound;

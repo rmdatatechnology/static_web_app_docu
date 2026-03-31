@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -31,8 +30,9 @@ const Seo = ({ title, description, image }) => {
   }
   
   return (
-    <Helmet title={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
-      <meta name="description" content={seo.description} />
+    <>
+      <title>{seo.title}</title>
+	  <meta name="description" content={seo.description} />
 	   <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
 	  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
 	  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
@@ -60,7 +60,7 @@ const Seo = ({ title, description, image }) => {
         <meta property="og:description" content={seo.description} />
       )}
 	 
-    </Helmet>
+    </>
   )
 }
 

@@ -119,10 +119,6 @@ const Default = ({ data }) => {
 	<>
 	<div className="pagecontainer">
 		<div className="content">
-			<Seo
-				title={post.frontmatter.title}
-				description={post.frontmatter.description}
-			/>
 			<div id="pageContent">
 				<TitlePage text={post.frontmatter.title} />
 				<section className="main-content">
@@ -138,6 +134,10 @@ const Default = ({ data }) => {
     </>
   );
 };
+
+export const Head  = ({data}) => (
+  <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} image={data.mdx.frontmatter.image}/>
+)
 
 export const query = graphql`
   query Default($locale: String!, $id: String!) {
