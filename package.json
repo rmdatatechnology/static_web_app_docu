@@ -19,13 +19,15 @@
 										"copypdf": "node scripts/copypdf.js"
 					},
 					"dependencies": {
-										"@appbaseio/reactivesearch": "^4.3.0",
+										"@appbaseio/reactivesearch": "^3.43.5",
+										"@babel/core": "^7.29.0",
+										"@babel/preset-env": "^7.29.2",
 										"@elastic/elasticsearch": "^7.17.0",
 										"@emotion/styled": "^11.10.5",
 										"@gatsbyjs/reach-router": "^2.0.1",
 										"@mdx-js/mdx": "^1.6.22",
 										"@mdx-js/react": "^1.6.22",
-										"babel-loader": "^8.2.3",
+										"babel-loader": "^8.4.1",
 										"baseline-browser-mapping": "^2.9.19",
 										"exec-bin": "^1.0.0",
 										"fs-extra": "^10.0.0",
@@ -70,7 +72,8 @@
 										"sanitize-html": "^2.5.1",
 										"sass": "^1.52.3",
 										"svgo": "^2.8.0",
-										"uuid": "^8.3.2"
+										"uuid": "^8.3.2",
+										"webpack": "^4.47.0"
 					},
 					"devDependencies": {
 										"buffer": "^6.0.3",

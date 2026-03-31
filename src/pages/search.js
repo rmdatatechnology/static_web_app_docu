@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactiveBase, SearchBox, ReactiveList } from '@appbaseio/reactivesearch';
+import { ReactiveBase, DataSearch, ReactiveList } from '@appbaseio/reactivesearch';
 import useTranslations from '../components/useTranslations';
 import Seo from '../components/seo';
 import SearchResultItem from '../components/Search';
@@ -37,14 +37,14 @@ const SearchContent = () => {
                             app={elasticindex}
                             credentials={elasticcredentials}
                             url={elasticsearchurl}><div>
-                                <SearchBox
+                                <DataSearch
                                     componentId="searchbox"
 									innerClass={{
 										title: 'title-wrapper',
 										input: 'search-input',
 									}}
 									className="search-field"
-                                    dataField={['heading', 'rawbody', 'body', 'slug', 'locale']}
+                                    dataField={['heading', 'rawbody', 'slug', 'locale']}
 									fuzziness="2"
                                     autosuggest={false}
                                     showClear={true}
@@ -52,7 +52,6 @@ const SearchContent = () => {
 									addonBefore={element}
                                     noInitialQuery={true}
                                     value={searchQuery}
-									enterButton={true}
 									onChange={(value, triggerQuery, event) => {
 										setSearchQuery(value);
 										triggerQuery();
