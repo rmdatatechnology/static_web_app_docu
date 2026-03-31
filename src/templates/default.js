@@ -99,6 +99,7 @@ const Default = ({ data }) => {
 	  Kommassierung,
 	  Geomatik,
 	  GeoMapperOnly,
+	  InfoWeb,
 	  Placeholder,
 	  DownloadLink,
       U,

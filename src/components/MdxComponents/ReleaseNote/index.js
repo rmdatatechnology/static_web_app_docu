@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby';
 import Image from "../Image"
 
 const ReleaseNote = ({children, imgArray, valign, width, border, background, ...rest  }) => {
