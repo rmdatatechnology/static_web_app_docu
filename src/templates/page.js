@@ -123,6 +123,7 @@ const Page = ({ data }) => {
 	  Kommassierung,
 	  Geomatik,
 	  GeoMapperOnly,
+	  InfoWeb,
 	  Placeholder,
       U,
       Border,
@@ -138,7 +139,7 @@ const Page = ({ data }) => {
       Icon,
       IMButton,
       IMIconButton,
-        IMPredefinedElement
+      IMPredefinedElement
     }
 
 
