@@ -55,7 +55,6 @@ module.exports = {
         product: config.productused,
     },
     plugins: [
-        `gatsby-plugin-react-helmet`,  
         `gatsby-plugin-remove-serviceworker`, 
         `gatsby-transformer-json`, 
 		`gatsby-transformer-yaml`,

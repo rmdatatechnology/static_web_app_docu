@@ -115,10 +115,6 @@ const Index = ({ data }) => {
 	<div className="page">
 		<div className="content">
 			<div id="pageContent">
-			<Seo
-				title={data.mdx.frontmatter.title}
-				description={data.mdx.frontmatter.title}
-			/>
 				<h1>{data.mdx.frontmatter.title}</h1>
 				<section className="main-content">	 
 				<div>
@@ -178,6 +174,10 @@ const Index = ({ data }) => {
 	</>
   );
 };
+
+export const Head  = ({data}) => (
+  <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} />
+)
 
 export default Index;
 

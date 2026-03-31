@@ -125,10 +125,6 @@ const Pdf = ({ data }) => {
 	<div className="page">
 		<div className="content">
 			<div id="pageContent">
-			<Seo
-				title={data.mdx.frontmatter.title}
-				description={data.mdx.frontmatter.title}
-			/>
 				<h1>{data.mdx.frontmatter.title}</h1>
 				<h3 className="productHeader">{data.mdx.frontmatter.description}</h3>
 				<section className="main-content">	 
@@ -189,6 +185,10 @@ const Pdf = ({ data }) => {
 	</>
   );
 };
+
+export const Head  = ({data}) => (
+  <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} />
+)
 
 export default Pdf;
 

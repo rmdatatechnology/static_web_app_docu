@@ -48,7 +48,6 @@ const Page = ({ data }) => {
 	if (!data) {
     return null;
   }
-
   const post = data.mdx;
 
   // Customize markdown component
@@ -151,10 +150,6 @@ const Page = ({ data }) => {
 			<Sidebar />
 		</div>
 		<div className="content">
-			<Seo
-				title={post.frontmatter.title}
-				description={post.frontmatter.description}
-			/>
 			<div id="pageContent">
 				<h1  className="customH1" > {post.frontmatter.title} </h1>
 				<section className="main-content">
@@ -172,6 +167,10 @@ const Page = ({ data }) => {
     </>
   );
 };
+
+export const Head  = ({data}) => (
+  <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} image={data.mdx.frontmatter.image}/>
+)
 
 export const query = graphql`
   query Page($locale: String!, $id: String!) {
