@@ -6,6 +6,7 @@ const MarkdownLink = ({href,children, ...rest  }) => {
   
   const { product } = useProduct();
   let hrefname = href;
+  let newLink ="";
   if (hrefname) {
 	  
 	if(href.startsWith(".."))
@@ -16,16 +17,16 @@ const MarkdownLink = ({href,children, ...rest  }) => {
 		hrefname = "." + hrefname;
 	else 
 		hrefname = "../" + hrefname;
-  }
-   let newLink = hrefname + "?product=" + product;
+	
+	newLink = hrefname + "?product=" + product;
    
   if(href.startsWith("http:") || href.startsWith("https:"))
 	newLink =href;
- 
-  
-  return (
+  }
+   return (
    <a href={newLink} {...rest}>{children}</a>
   )
+   
 }
 
 export default MarkdownLink
