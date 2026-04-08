@@ -5,18 +5,23 @@ import "../../../styles/styles.scss";
 const MarkdownLink = ({href,children, ...rest  }) => {
   
   const { product } = useProduct();
-  if (href) {
+  let hrefname = href;
+  if (hrefname) {
 	  
 	if(href.startsWith(".."))
-		href = "../" + href;
+		hrefname = "../" + hrefname;
 	else if(href.startsWith("/"))
-		href = ".." + href;
+		hrefname = ".." + hrefname;
 	else if(href.startsWith("."))
-		href = "." + href;
+		hrefname = "." + hrefname;
 	else 
-		href = "../" + href;
+		hrefname = "../" + hrefname;
   }
-  const newLink = href + "?product=" + product;
+   let newLink = hrefname + "?product=" + product;
+   
+  if(href.startsWith("http:") || href.startsWith("https:"))
+	newLink =href;
+ 
   
   return (
    <a href={newLink} {...rest}>{children}</a>
