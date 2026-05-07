@@ -40,6 +40,7 @@ const query = graphql`
             dtmAssignDataAutocadHint
             dtmModelComputePrecondition1
             fullproduct
+			fullproductserver
             geodgm
             geoprojectfullproduct
             geoprojectgeoprojectfullproduct_
