@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Image = ({name, path, children, src, alt, ...rest  }) => {
+const Image = ({name, path, children, src, alt, kind, ...rest  }) => {
 
 const [toggle, setToggle] = useState(true);
 const tooltip = !alt || alt.trim === "" ? "" : alt;
@@ -24,6 +24,7 @@ const { listImages } = useStaticQuery(
 
 let imageToUse;
 let nameToUse;
+let searchImage = false;
 if(src)
 {
 	let nameWithout = src.split('/');
@@ -31,13 +32,28 @@ if(src)
 	let nameWithoutExt = name.split('.');
 	nameWithoutExt.pop();
 	nameToUse = nameWithoutExt.join('.');
-	imageToUse = null;
+	
+	if(kind === "releaseNote") //if it is a release note
+	{
+		searchImage = true;
+		path = "img";
+	}
+	else
+	{
+		searchImage = false;
+		imageToUse = null;
+	}
 }
 else{
 	let nameWithoutExt = name.split('.');
 	nameWithoutExt.pop();
 	nameToUse = nameWithoutExt.join('.');
-	imageToUse = listImages.nodes.find(img => {
+	searchImage = true;
+}
+
+if(searchImage === true)
+{
+imageToUse = listImages.nodes.find(img => {
     if( nameToUse === img.name && img.relativeDirectory.includes(path))
 		return img;
 

@@ -57,7 +57,7 @@ function getImage(name)
 	
 	return (
 	<div>
-	<Image src={imagesName[0]} alt={imagesName[imagesName.length - 1]}/>
+	<Image src={imagesName[0]} alt={imagesName[imagesName.length - 1]} kind="releaseNote"/>
 	<p align="center">{imagesName[imagesName.length - 1]}</p>
 	</div>)
 }
