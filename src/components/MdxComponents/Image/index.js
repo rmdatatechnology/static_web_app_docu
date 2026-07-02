@@ -1,30 +1,17 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Image = ({name, path, children, src, alt, kind, ...rest  }) => {
+const Image = ({data, name, path, children, src, alt, ...rest  }) => {
 
 const [toggle, setToggle] = useState(true);
 const tooltip = !alt || alt.trim === "" ? "" : alt;
 
-const { listImages } = useStaticQuery(
-    graphql`
-      query{
-        listImages: allFile (filter: {ext: {in: [".png", ".jpg", ".jpeg", ".gif"]}}) {
-          
-			 nodes {
-				name
-				publicURL
-				relativeDirectory
-				}
-            }
-          }
-    `,
-  );
-
+if(!data)
+	return (<></>)
 
 let imageToUse;
 let nameToUse;
-let searchImage = false;
+
 if(src)
 {
 	let nameWithout = src.split('/');
@@ -32,37 +19,22 @@ if(src)
 	let nameWithoutExt = name.split('.');
 	nameWithoutExt.pop();
 	nameToUse = nameWithoutExt.join('.');
-	
-	if(kind === "releaseNote") //if it is a release note
-	{
-		searchImage = true;
-		path = "img";
-	}
-	else
-	{
-		searchImage = false;
-		imageToUse = null;
-	}
 }
 else{
 	let nameWithoutExt = name.split('.');
 	nameWithoutExt.pop();
 	nameToUse = nameWithoutExt.join('.');
-	searchImage = true;
 }
 
-if(searchImage === true)
-{
-imageToUse = listImages.nodes.find(img => {
-    if( nameToUse === img.name && img.relativeDirectory.includes(path))
+
+imageToUse = data.nodes.find(img => {
+    if( nameToUse === img.name)
 		return img;
 
 	return null;
   });
   if(imageToUse)
 	src = imageToUse.publicURL;
-}
-
 
 	 function handleClick(e) {
 
@@ -98,4 +70,6 @@ imageToUse = listImages.nodes.find(img => {
 	return (<></>)
 }
 
+
 export default Image
+

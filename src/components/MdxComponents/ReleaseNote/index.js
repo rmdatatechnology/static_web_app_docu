@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "../Image"
 
-const ReleaseNote = ({children, imgArray, valign, width, border, background, ...rest  }) => {
+const ReleaseNote = ({data, children, imgArray, valign, width, border, background, path, ...rest  }) => {
 	
 const imagesWithAlt = imgArray.split(';');;
 const valignTable = valign !== null ? valign : "top";
@@ -57,7 +57,7 @@ function getImage(name)
 	
 	return (
 	<div>
-	<Image src={imagesName[0]} alt={imagesName[imagesName.length - 1]} kind="releaseNote"/>
+	<Image data={data} src={imagesName[0]} alt={imagesName[imagesName.length - 1]} path={path} kind="releaseNote"/>
 	<p align="center">{imagesName[imagesName.length - 1]}</p>
 	</div>)
 }
