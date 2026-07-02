@@ -181,6 +181,15 @@ exports.createPages = async ({ graphql, actions }) => {
     const slug = file.slug.split(`.`)[0];
     const title = file.frontmatter.title;
 	const id = file.id;
+	
+	let relativeImageRegex = "/img/";
+	let pathToSplit = file.slug.split('/');
+	if(pathToSplit.length > 1)
+	{
+		pathToSplit.pop();
+		relativeImageRegex = pathToSplit.join('/');
+		relativeImageRegex= "/"+relativeImageRegex+"/";
+	}
 
     // Use the fields created in exports.onCreateNode
     let locale = file.fields.locale;
@@ -205,6 +214,7 @@ exports.createPages = async ({ graphql, actions }) => {
         locale,
         title,
 		id,
+		relativeImageRegex,
       },
     });
   });

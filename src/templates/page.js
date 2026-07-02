@@ -49,7 +49,7 @@ const Page = ({ data }) => {
     return null;
   }
   const post = data.mdx;
-
+  
   // Customize markdown component
     const mdxComponents = {
       "ul.li": ({ children }) => {
@@ -75,7 +75,7 @@ const Page = ({ data }) => {
       },
 	  img: (props) => {
         return (
-         <Image alt={props.alt} {...props} />
+         <Image data={data.allFile} alt={props.alt} {...props} />
         )
       },
 	  a: (props) => {
@@ -130,12 +130,20 @@ const Page = ({ data }) => {
       Bold,
       Menu,
       Italic,
-	  Image,
+	  Image: (props)=> {
+        return (
+         <Image data={data.allFile} {...props} />
+        )
+      },
 	  MarkdownLink,
 	  DownloadLink,
 	  Kommentar,
 	  Video,
-	  ReleaseNote,
+	  ReleaseNote : (props)=> {
+        return (
+         <ReleaseNote data={data.allFile} {...props} />
+        )
+      },
       Icon,
       IMButton,
       IMIconButton,
@@ -174,7 +182,7 @@ export const Head  = ({data}) => (
 )
 
 export const query = graphql`
-  query Page($locale: String!, $id: String!) {
+  query Page($locale: String!, $id: String!, $relativeImageRegex : String!) {
     mdx(
       fields: { locale: { eq: $locale } }
 	  id: {eq: $id}
@@ -185,6 +193,17 @@ export const query = graphql`
 		description
       }
       body
+	  slug
+    }
+	allFile(
+    filter: {extension: {in: ["png", "jpg", "jpeg", "gif"]}, 
+    relativeDirectory: {regex: $relativeImageRegex}}
+  ) {
+       nodes {
+			name
+			publicURL
+			relativeDirectory
+		}
     }
   }
 `;

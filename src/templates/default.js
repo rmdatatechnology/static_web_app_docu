@@ -24,16 +24,20 @@ import {
     InfoWeb,
     GeoMapperOnly,
     Placeholder,
-    DownloadLink,
     U,
     Border,
     Bold,
     Menu,
     Italic,
     MarkdownLink,
+    DownloadLink,
+    Image,
     Kommentar,
+    Video,
+    ReleaseNote,
+    IMIconButton,
     IMButton,
-    IMIconButton, IMPredefinedElement,
+    IMPredefinedElement,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -46,8 +50,7 @@ const Default = ({ data }) => {
   }
 
   const post = data.mdx;
-
-  // Customize markdown component
+// Customize markdown component
     const mdxComponents = {
       "ul.li": ({ children }) => {
         return (
@@ -63,24 +66,45 @@ const Default = ({ data }) => {
           </li>
         )
       },
-	 "table": ({ children }) => {
+	   "table": ({ children }) => {
         return (
           <table className="mdxTable" >
             {children}
           </table>
         )
       },
-	   img: (props) => {
+	  img: (props) => {
         return (
-         <img className="mdxImage"  alt={props.alt} {...props} />
+         <Image data={data.allFile} alt={props.alt} {...props} />
         )
       },
-	   a: (props) => {
+	  a: (props) => {
 
 		return (
 		<MarkdownLink {...props} />
         )
       },
+	  h1: ({ children }) => {
+        return (
+          <h1 className="customH1" >
+            {children}
+          </h1>
+        )
+      },
+	  h3: ({ children }) => {
+        return (
+		<h3 className="customH3" >
+            {children}
+          </h3>
+        )
+      },
+	  h4: ({ children }) => {
+       return (
+		<h4 className="customH4" >
+            {children}
+          </h4>
+        )
+	  },
       // Use the below components without having to import in *.mdx
       Example,
       Danger,
@@ -93,22 +117,33 @@ const Default = ({ data }) => {
 	  InventoryManager,
 	  SmartArea,
 	  SmartNetworx,
-	  SmartInfra,
-	  GeoWeb,
+      SmartInfra,
+      GeoWeb,
 	  Mobile,
 	  Kommassierung,
 	  Geomatik,
 	  GeoMapperOnly,
 	  InfoWeb,
 	  Placeholder,
-	  DownloadLink,
       U,
       Border,
       Bold,
       Menu,
       Italic,
+	  Image: (props)=> {
+        return (
+         <Image data={data.allFile} {...props} />
+        )
+      },
+	  MarkdownLink,
+	  DownloadLink,
 	  Kommentar,
-      Icon,
+	  Video,
+	  ReleaseNote : (props)=> {
+        return (
+         <ReleaseNote data={data.allFile} {...props} />
+        )
+      },
       IMButton,
       IMIconButton,
       IMPredefinedElement
@@ -141,7 +176,7 @@ export const Head  = ({data}) => (
 )
 
 export const query = graphql`
-  query Default($locale: String!, $id: String!) {
+  query Default($locale: String!, $id: String!, $relativeImageRegex : String!) {
     mdx(
       fields: { locale: { eq: $locale } }
 	  id: {eq: $id}
@@ -152,6 +187,16 @@ export const query = graphql`
 		description
       }
       body
+    }
+  allFile(
+    filter: {extension: {in: ["png", "jpg", "jpeg", "gif"]}, 
+    relativeDirectory: {regex: $relativeImageRegex}}
+  ) {
+       nodes {
+			name
+			publicURL
+			relativeDirectory
+		}
     }
   }
 `;
