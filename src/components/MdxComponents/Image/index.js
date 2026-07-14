@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 
 const Image = ({data, name, path, children, src, alt, ...rest  }) => {
 

@@ -4,6 +4,9 @@ import Navigation from '../Navigation';
 import Logo from '../Logo';
 import LocalizedLink from '../LocalizedLink';
 import { useStaticQuery, graphql } from "gatsby";
+import at from "./flag-at.png" // Tell webpack this JS file uses this image
+import de from "./flag-de.png" // Tell webpack this JS file uses this image
+import ch from "./flag-ch.png" // Tell webpack this JS file uses this image
 
 import { useMenu } from '../../hooks/menu';
 
@@ -59,18 +62,18 @@ const Header = () => {
             <div className="contact-info">
                 <div className="contact-inner">
                     <div className="contact-inner-left">
-                        <Logo imageName="mailicon" sizeOverride="20px" classOverride="flag-mail" /><a href="mailto:office@rmdatagroup.com" className="contact-info-link" title="E-Mail senden"><i className="fa-envelope fa-lg far"></i>&nbsp;<span className="mail">office@rmdatagroup.com</span></a>
+                        <a href="mailto:office@rmdatagroup.com" className="contact-info-link" title="E-Mail senden"><i className="fa-envelope fa-lg far"></i>&nbsp;<span className="mail">office@rmdatagroup.com</span></a>
                     </div>
                     <div className="contact-inner-right">
-                        <Logo imageName="flag-at" sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+43335743333">+43 3357 43 333</a>
-                        <Logo imageName="flag-de" sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+4924054066917">+49 2405 4066 917</a>
-                        <Logo imageName="flag-ch" sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+41415112131">+41 41 51121 31</a>
+                        <Logo imageName={at} sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+43335743333">+43 3357 43 333</a>
+						<Logo imageName={de} sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+4924054066917">+49 2405 4066 917</a>
+                        <Logo imageName={ch} sizeOverride="18px" classOverride="flag" /><a className="contact-info-link" href="tel:+41415112131">+41 41 51121 31</a>
                     </div>
                 </div>
             </div>
             <div className="header-container">
                 <LocalizedLink className="logo-link" to="/" title={home} aria-label={home}>
-                    <Logo />
+                    <Logo sizeOverride="20px"/>
 
                 </LocalizedLink>
 
