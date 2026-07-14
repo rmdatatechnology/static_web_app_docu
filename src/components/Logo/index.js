@@ -1,49 +1,27 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import logo from "./logo.png" // Tell webpack this JS file uses this image
 
 const Logo = ({imageName, sizeOverride, classOverride}) => {
-	
-	const { listImages } = useStaticQuery(
-    graphql`
-      query {
-        listImages: allFile (filter: {ext: {eq: ".png"}, relativeDirectory: {eq: ""}}) {
-          
-			 nodes {
-				name
-				publicURL
-				absolutePath
-				}
-            }
-          }
-    `,
-  );
   
   const imageSize = sizeOverride === null || sizeOverride === undefined ? "75px" : sizeOverride;
   const classInfo = classOverride == null || classOverride === undefined ? "contact-logo" : classOverride;
   
 
-  const defaultImg = listImages.nodes.find(img => {    
-    if(imageName === null || imageName === undefined) {
-	  if(img.name === 'logo')
-		 return img;
-    }
-	else
-		if(img.name === imageName)
-			return img;
-	return null;
-  });
+  let imageNameToUse = logo;
+  if(imageName)
+	  imageNameToUse = imageName;
 	
   return (
   <div className="inlines">
-	{defaultImg && (
+	{imageNameToUse && (
           <img
-            src={defaultImg.publicURL}
-            alt={defaultImg.name}
+            src={imageNameToUse}
+            alt={imageNameToUse}
 			className={classInfo}
 			width={imageSize}
           />
         )}
-        {!defaultImg && (
+        {!imageNameToUse && (
          <img
             src=""
             alt="Logo"
