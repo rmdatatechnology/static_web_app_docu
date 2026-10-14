@@ -25,12 +25,14 @@
 		- Optionen:
 			- Track
 			- alles andere deselektieren
-- Eingabeaufforderung über "Ausführen" öffnen (cmd) 
-- In den Ordner in dem das Repository liegt wechseln
-- "npm install" ausführen
-- "npm run develop" ausführen und offen lassen
-- Im Browser http://localhost:8000/ öffnen
-- Mit "npm run clean" kann man den Build wieder löschen.
+- Einmalig `setup.bat` doppelklicken (installiert alles Nötige, ca. 2 Minuten)
+- Im Ordner `products` die Datei des eigenen Produkts doppelklicken, z.B. `products\geomatik.bat`
+	- Nach ca. 1–2 Minuten öffnet sich der Browser (http://localhost:8000/)
+	- Fenster offen lassen: jede gespeicherte Änderung ist nach wenigen Sekunden im Browser sichtbar
+	- `start.bat` ohne Produkt startet die gesamte Dokumentation (langsamer)
+- `preview.bat` (optional mit Produkt, z.B. `preview.bat geomatik`) baut die Seite wie am Server und öffnet sie unter http://localhost:9000/
+
+Die .bat-Dateien prüfen bei jedem Start selbst, ob nach einem Pull Pakete neu installiert oder der Gatsby-Cache gelöscht werden muss. `npm install` oder `npm run clean` muss man nicht mehr selbst ausführen.
 
 
 **Hinweis**

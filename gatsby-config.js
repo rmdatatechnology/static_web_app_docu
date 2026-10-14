@@ -4,6 +4,7 @@ gracefulFs.gracefulify(fs);
 
 
 const config = require('./config/variables/variables.json')
+const { ignorePage } = require('./src/utils/product-filter')
 
     const myQuery = `{
   allMdx {
@@ -14,9 +15,9 @@ const config = require('./config/variables/variables.json')
                 }
 				fields {
 				  locale
+				  slug
 				}
-				slug
-                rawBody
+                body
               }
             }
 }`;
@@ -28,10 +29,9 @@ const queries = [{
         }) => data.allMdx.nodes.map((node) => ({
                 id: node.id,
                 heading: node.frontmatter.title,
-                rawbody: node.rawBody,
-				body: node.body,
+                rawbody: node.body,
                 locale: node.fields.locale,
-                slug: node.slug,
+                slug: node.fields.slug,
             })), // optional
         indexName: config.elasticindex,
     },
@@ -115,7 +115,8 @@ module.exports = {
             options: {
                 path: `${__dirname}/documentation/pages`,
                 name: `pages`,
-                ignore: [`README.md`], // ignore readme
+                // ignore readme; with DOCS_PRODUCT set only that product's pages
+                ignore: [`README.md`, ignorePage],
             },
         }, {
             resolve: `gatsby-source-filesystem-with-queue`,
@@ -130,21 +131,12 @@ module.exports = {
                 name: `dokumentation_images`,
             },	
         }, 	
-        // mdx support
+        // mdx support: provides the Mdx nodes. The content is compiled in
+        // gatsby-node.js (Mdx.compiledBody), see src/utils/compile-mdx.js.
         {
-            resolve: `gatsby-plugin-mdx-v1`,
+            resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
-				plugins: [`gatsby-remark-copy-linked-files`],
-                gatsbyRemarkPlugins: [{
-                        resolve: "gatsby-remark-copy-linked-files",
-                        options: {
-                            destinationDir: "static",
-                            ignoreFileExtensions: [],
-                        },
-                    },
-                ],
-
             },
         },
 

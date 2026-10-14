@@ -99,3 +99,4 @@ yarn-error.log
 /static/mailicon.png
 static/
 node_modules_/
+.docs-build-stamp
