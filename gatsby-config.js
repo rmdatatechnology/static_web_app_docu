@@ -138,17 +138,6 @@ module.exports = {
             options: {
                 extensions: [`.mdx`, `.md`],
             },
-        },
-
-        // Using svg as component
-        {
-            resolve: "gatsby-plugin-react-svg",
-            options: {
-                rule: {
-                    include: /assets/,
-                    include: /icons/,
-                },
-            },
         }, {
             resolve: `gatsby-plugin-elasticsearch`,
             options: {
