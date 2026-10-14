@@ -1,0 +1,3 @@
+@echo off
+rem Live preview of the rmDATA GeoDiscoverer documentation (see start.bat).
+call "%~dp0..\start.bat" geodiscoverer

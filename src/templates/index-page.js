@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PdfItem from '../components/PdfItem';
+import PostItem from '../components/PostItem';
 import useProducts from '../components/useProducts';
-import Seo from '../components/seo';
 import { useLocale } from '../hooks/locale';
+import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx-v1";
+import MdxBody from "../components/MdxBody";
 import {
   Example,
   Danger,
@@ -24,16 +24,17 @@ import {
   Menu,
   Italic,
   Kommentar,
+  withV1Mapping,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
 
-const Pdf = ({ data }) => {
+const Index = ({ data }) => {
 	
   const productItems = useProducts();
   const { locale } = useLocale();
   
-  if (!data || !data.mdx || !data.allFile) {
+  if (!data || !data.mdx) {
     return (
 		<div className="pagecontainer">
 			<div className="sidebar" id="sidemenu" />
@@ -50,21 +51,11 @@ const Pdf = ({ data }) => {
 	);
   }
   
-  let availablePdf = [];
-  data.allFile.edges.forEach(function(e){
-	  
-	let languagePrefix = "de_";
-	if(locale === "it")
-		languagePrefix = "it_";
-	if(locale === "fr")
-		languagePrefix = "fr_";
-	if(e.node.name.toLowerCase().includes(languagePrefix))
-		availablePdf.push(e.node);
-});
+  
 
   
   // Customize markdown component
-    const mdxComponents = {
+    const mdxComponents = withV1Mapping({
       "ul.li": ({ children }) => {
         return (
           <li>
@@ -106,9 +97,9 @@ const Pdf = ({ data }) => {
       Info,
 	  GeoDesigner,
 	  GeoMapper,
-	  GeoDesktop,
 	  Geomatik,
 	  GeoMapperOnly,
+	  GeoDesktop,
 	  Placeholder,
       U,
       Border,
@@ -116,7 +107,7 @@ const Pdf = ({ data }) => {
       Menu,
       Italic,
 	  Kommentar,
-    }
+    })
 	
 	let count = 0;
  
@@ -126,15 +117,15 @@ const Pdf = ({ data }) => {
 		<div className="content">
 			<div id="pageContent">
 				<h1>{data.mdx.frontmatter.title}</h1>
-				<h3 className="productHeader">{data.mdx.frontmatter.description}</h3>
 				<section className="main-content">	 
 				<div>
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						<MdxBody code={data.mdx.compiledBody} />
 					</MDXProvider>
 					</div>
 				</section>
 			</div>
+			<section className="custom-section">
 			<div className="product-grid">
 			{productItems.map(
 				function({
@@ -144,9 +135,10 @@ const Pdf = ({ data }) => {
 					description,
 					slug,
 					img,
-					en,
+					de,
 					it,
 					fr,
+					en,
 				})
 				{
 					let des = description;
@@ -155,29 +147,27 @@ const Pdf = ({ data }) => {
 					if(locale === "fr")
 						des = fr;
 					
-					let node = availablePdf.find(e => e.name.toLowerCase().includes(name.toLowerCase()));
-					if(node)
-					{
-						return (
-							
-							<PdfItem
-								slug={slug}
-								title={fullname}
-								description={des}
-								key={name}
-								imageName={img}
-								count={count}
-								url={node.publicURL}
-							/>
-						)
-					}
+					
+					if(count === 3)
+						count = 0;
+						
+					count++;
 					
 					return (
-					<></>
+						
+						<PostItem
+							slug={slug}
+							title={fullname}
+							description={des}
+							key={name}
+							imageName={img}
+							count={count}
+						/>
 					)
 				}
 				)}
 				</div>
+			</section>
 			</div>
 		<div className="end">
 		</div>
@@ -190,30 +180,19 @@ export const Head  = ({data}) => (
   <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} />
 )
 
-export default Pdf;
+export default Index;
 
 export const query = graphql`
-  query Pdf($locale: String!) {
-    mdx(
-        fields: { locale: { eq: $locale } }
-        frontmatter: {display: {eq: "pdf"}}
-    ) {
+  query Index($id: String!) {
+    mdx(id: { eq: $id }) {
+      compiledBody
 	frontmatter {
       title
 	  description
     }
-    body
     fields {
       locale
     }
 	}
-	allFile(filter: {ext: {}, extension: {eq: "pdf"}}) {
-    edges {
-      node {
-        name
-		publicURL
-      }
-    }
-  }
   }
 `;

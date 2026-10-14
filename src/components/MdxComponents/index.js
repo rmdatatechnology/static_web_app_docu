@@ -38,3 +38,6 @@ export { default as Icon } from "./Icon"
 export { default as IMButton } from "./InventoryManager/IMButton"
 export { default as IMIconButton } from "./InventoryManager/IMIconButton"
 export { default as IMPredefinedElement } from "./InventoryManager/IMPredefinedElement"
+
+
+export { default as withV1Mapping } from "./withV1Mapping"

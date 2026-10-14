@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import TitlePage from '../components/TitlePage';
 import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx-v1";
+import MdxBody from "../components/MdxBody";
 import {
     Example,
     Danger,
@@ -38,6 +38,7 @@ import {
     IMIconButton,
     IMButton,
     IMPredefinedElement,
+    withV1Mapping,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -51,7 +52,7 @@ const Default = ({ data }) => {
 
   const post = data.mdx;
 // Customize markdown component
-    const mdxComponents = {
+    const mdxComponents = withV1Mapping({
       "ul.li": ({ children }) => {
         return (
           <li>
@@ -147,7 +148,7 @@ const Default = ({ data }) => {
       IMButton,
       IMIconButton,
       IMPredefinedElement
-    }
+    })
 
 
   return (
@@ -159,7 +160,7 @@ const Default = ({ data }) => {
 				<TitlePage text={post.frontmatter.title} />
 				<section className="main-content">
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						<MdxBody code={data.mdx.compiledBody} />
 					</MDXProvider>
 				</section>
 			</div>
@@ -181,12 +182,12 @@ export const query = graphql`
       fields: { locale: { eq: $locale } }
 	  id: {eq: $id}
     ) {
+      compiledBody
       frontmatter {
         title
 		image
 		description
       }
-      body
     }
   allFile(
     filter: {extension: {in: ["png", "jpg", "jpeg", "gif"]}, 

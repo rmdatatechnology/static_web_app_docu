@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PostItem from '../components/PostItem';
+import PdfItem from '../components/PdfItem';
 import useProducts from '../components/useProducts';
-import { useLocale } from '../hooks/locale';
 import Seo from '../components/seo';
+import { useLocale } from '../hooks/locale';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx-v1";
+import MdxBody from "../components/MdxBody";
 import {
   Example,
   Danger,
@@ -24,16 +24,17 @@ import {
   Menu,
   Italic,
   Kommentar,
+  withV1Mapping,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
 
-const Index = ({ data }) => {
+const Pdf = ({ data }) => {
 	
   const productItems = useProducts();
   const { locale } = useLocale();
   
-  if (!data || !data.mdx) {
+  if (!data || !data.mdx || !data.allFile) {
     return (
 		<div className="pagecontainer">
 			<div className="sidebar" id="sidemenu" />
@@ -50,11 +51,21 @@ const Index = ({ data }) => {
 	);
   }
   
-  
+  let availablePdf = [];
+  data.allFile.edges.forEach(function(e){
+	  
+	let languagePrefix = "de_";
+	if(locale === "it")
+		languagePrefix = "it_";
+	if(locale === "fr")
+		languagePrefix = "fr_";
+	if(e.node.name.toLowerCase().includes(languagePrefix))
+		availablePdf.push(e.node);
+});
 
   
   // Customize markdown component
-    const mdxComponents = {
+    const mdxComponents = withV1Mapping({
       "ul.li": ({ children }) => {
         return (
           <li>
@@ -96,9 +107,9 @@ const Index = ({ data }) => {
       Info,
 	  GeoDesigner,
 	  GeoMapper,
+	  GeoDesktop,
 	  Geomatik,
 	  GeoMapperOnly,
-	  GeoDesktop,
 	  Placeholder,
       U,
       Border,
@@ -106,7 +117,7 @@ const Index = ({ data }) => {
       Menu,
       Italic,
 	  Kommentar,
-    }
+    })
 	
 	let count = 0;
  
@@ -116,15 +127,15 @@ const Index = ({ data }) => {
 		<div className="content">
 			<div id="pageContent">
 				<h1>{data.mdx.frontmatter.title}</h1>
+				<h3 className="productHeader">{data.mdx.frontmatter.description}</h3>
 				<section className="main-content">	 
 				<div>
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						<MdxBody code={data.mdx.compiledBody} />
 					</MDXProvider>
 					</div>
 				</section>
 			</div>
-			<section className="custom-section">
 			<div className="product-grid">
 			{productItems.map(
 				function({
@@ -134,10 +145,9 @@ const Index = ({ data }) => {
 					description,
 					slug,
 					img,
-					de,
+					en,
 					it,
 					fr,
-					en,
 				})
 				{
 					let des = description;
@@ -146,27 +156,29 @@ const Index = ({ data }) => {
 					if(locale === "fr")
 						des = fr;
 					
-					
-					if(count === 3)
-						count = 0;
-						
-					count++;
+					let node = availablePdf.find(e => e.name.toLowerCase().includes(name.toLowerCase()));
+					if(node)
+					{
+						return (
+							
+							<PdfItem
+								slug={slug}
+								title={fullname}
+								description={des}
+								key={name}
+								imageName={img}
+								count={count}
+								url={node.publicURL}
+							/>
+						)
+					}
 					
 					return (
-						
-						<PostItem
-							slug={slug}
-							title={fullname}
-							description={des}
-							key={name}
-							imageName={img}
-							count={count}
-						/>
+					<></>
 					)
 				}
 				)}
 				</div>
-			</section>
 			</div>
 		<div className="end">
 		</div>
@@ -179,22 +191,27 @@ export const Head  = ({data}) => (
   <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} />
 )
 
-export default Index;
+export default Pdf;
 
 export const query = graphql`
-  query Index($locale: String!) {
-    mdx(
-        fields: { locale: { eq: $locale } }
-        frontmatter: {display: {eq: "index"}}
-    ) {
+  query Pdf($id: String!) {
+    mdx(id: { eq: $id }) {
+      compiledBody
 	frontmatter {
       title
 	  description
     }
-    body
     fields {
       locale
     }
 	}
+	allFile(filter: {ext: {}, extension: {eq: "pdf"}}) {
+    edges {
+      node {
+        name
+		publicURL
+      }
+    }
+  }
   }
 `;

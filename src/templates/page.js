@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Sidebar from "../components/Sidebar";
+import SidebarDrawer from "../components/SidebarDrawer";
 import Seo from '../components/seo';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx-v1";
+import MdxBody from "../components/MdxBody";
 import {
     Example,
     Danger,
@@ -39,11 +39,12 @@ import {
     IMButton,
     Icon,
     IMPredefinedElement,
+    withV1Mapping,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
 
-const Page = ({ data }) => {
+const Page = ({ data, pageContext }) => {
 
 	if (!data) {
     return null;
@@ -51,7 +52,7 @@ const Page = ({ data }) => {
   const post = data.mdx;
   
   // Customize markdown component
-    const mdxComponents = {
+    const mdxComponents = withV1Mapping({
       "ul.li": ({ children }) => {
         return (
           <li>
@@ -148,22 +149,20 @@ const Page = ({ data }) => {
       IMButton,
       IMIconButton,
       IMPredefinedElement
-    }
+    })
 
 
   return (
 
 	<>
 	<div className="pagecontainer">
-		<div className="sidebar" id="sidemenu">
-			<Sidebar />
-		</div>
+		<SidebarDrawer pageId={pageContext && pageContext.id} />
 		<div className="content">
 			<div id="pageContent">
 				<h1  className="customH1" > {post.frontmatter.title} </h1>
 				<section className="main-content">
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer height="100%">{data.mdx.body}</MDXRenderer>
+						<MdxBody code={data.mdx.compiledBody} />
 					</MDXProvider>
 				</section>
 
@@ -187,13 +186,12 @@ export const query = graphql`
       fields: { locale: { eq: $locale } }
 	  id: {eq: $id}
     ) {
+      compiledBody
       frontmatter {
         title
 		image
 		description
       }
-      body
-	  slug
     }
 	allFile(
     filter: {extension: {in: ["png", "jpg", "jpeg", "gif"]}, 
