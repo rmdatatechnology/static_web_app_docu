@@ -28,7 +28,7 @@ jobs:
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
-        ref: upgrade-to-gatsby-5
+        ref: master
     - name: get current branch name
       id: branch-name
       uses: tj-actions/branch-names@v8
@@ -43,12 +43,12 @@ jobs:
          git submodule foreach 'git fetch origin'
     - name: checkout submodule main
       run: |
-        git submodule foreach 'git checkout NG_2026_3 || git checkout -b NG_2026_3'
+        git submodule foreach 'git checkout NG_2026_4 || git checkout -b NG_2026_4'
     - uses: actions/setup-node@v5
       with:
         node-version: '24.13.1'
         package-manager-cache: false
-    - run: npm install --legacy-peer-deps
+    - run: npm install
     
     - name: Setup dotnet
       uses: actions/setup-dotnet@v5
