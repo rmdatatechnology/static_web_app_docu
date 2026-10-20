@@ -1374,3 +1374,248 @@ table, th, td {
     /*border: none!important;*/
   }
 }
+
+/* Table of contents button and drawer: only used on small screens */
+.sidebar-toggle,
+.sidebar-backdrop {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Small screens (phones, narrow windows)
+   --------------------------------------------------------------------------- */
+@media only screen and (max-width: 800px) {
+
+  /* Header: scrolls away instead of covering a third of the screen */
+  .header {
+    position: relative;
+  }
+
+  .overall_content {
+    margin-top: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-inner-left {
+    margin-left: 84px;
+  }
+
+  .contact-inner-right {
+    display: none;
+  }
+
+  .contact-info-link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-logo {
+    width: 64px;
+    margin-top: -52px;
+    margin-left: 8px;
+  }
+
+  .header-container {
+    width: 100%;
+    height: auto;
+    min-height: 52px;
+    padding: 4px 8px;
+    align-items: flex-start;
+  }
+
+  /* The logo hangs into the grey bar above; keep its column free */
+  .logo-link {
+    flex: 0 0 76px;
+    width: 76px;
+    margin-right: 0;
+  }
+
+  .nav-menu {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .navigation-link,
+  .dropdown-button,
+  .language-button {
+    font-size: 15px;
+    padding: 4px 8px;
+  }
+
+  /* Product menu: full width below the header instead of off-screen */
+  .dropdown-arrow {
+    display: none;
+  }
+
+  .dropdown-list {
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    margin-left: 0;
+    column-count: 1;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 12px 16px;
+    z-index: 7000;
+  }
+
+  .dropdown-listitem {
+    margin-bottom: 1vh;
+    white-space: normal;
+  }
+
+  /* One column: content uses the full width */
+  .pagecontainer {
+    display: block;
+    width: auto;
+    margin: 0 12px;
+  }
+
+  .content {
+    min-width: 0;
+  }
+
+  .customH1 {
+    font-size: 1.4em;
+    overflow-wrap: break-word;
+  }
+
+  /* Table of contents: drawer from the left, opened with the button */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 85vw;
+    max-width: 360px;
+    z-index: 7001;
+    background-color: #fff;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    visibility: hidden;
+
+    &.is-open {
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+
+  .sidebar-content {
+    position: static;
+    width: 100%;
+    height: 100% !important;
+    margin-top: 0;
+    border: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sidebarButton {
+    font-size: 16px;
+    padding: 10px 8px;
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 7000;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    left: 12px;
+    bottom: 16px;
+    z-index: 7002;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 24px;
+    background-color: #990000;
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+  }
+
+  /* Wide content scrolls sideways instead of widening the page */
+  .main-content {
+    table:not(.customBlockquoteTable):not(.productTable) {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    pre {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    p, li, td {
+      overflow-wrap: break-word;
+    }
+  }
+
+  .embedVideo {
+    width: 100% !important;
+  }
+
+  /* Info / warning boxes: smaller symbol column */
+  .customBlockquote {
+    font-size: 1.6rem;
+  }
+
+  .customBlockquoteTableColumn {
+    padding: 0 4px;
+  }
+
+  .success, .info, .danger, .warning, .example {
+    padding: 0.75rem 0.5rem;
+  }
+
+  /* Start page: one product per row */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: stacked, inside the screen */
+  .footer-inner {
+    width: auto;
+    margin: 1vh 12px 0;
+  }
+
+  .footer-inner-left {
+    float: none;
+  }
+
+  .footer-inner-right {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  /* Room at the end so the button does not cover the last lines */
+  .maincontainer {
+    padding-bottom: 72px;
+  }
+}

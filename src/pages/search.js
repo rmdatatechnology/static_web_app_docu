@@ -25,10 +25,6 @@ const SearchContent = () => {
     return (
   <>
             <div className="page">
-			<Seo
-				title={search}
-				description={search}
-			/>
                 <div className="content">
 				<section className="main-content">
 				<br/>
@@ -93,5 +89,9 @@ const SearchContent = () => {
 	</>
             )
 }
+
+export const Head = () => (
+  <Seo />
+)
 
 export default SearchContent

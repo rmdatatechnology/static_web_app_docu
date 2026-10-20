@@ -1,0 +1,22 @@
+{
+  "name": "mdx-v3-migration",
+  "private": true,
+  "description": "One-off MDX v1 -> v2/v3 migration and validation for the documentation submodule",
+  "type": "module",
+  "dependencies": {
+    "@mdx-js/mdx": "^3.1.1",
+    "gray-matter": "^4.0.3",
+    "mdast-util-from-markdown": "^2.1.0",
+    "mdast-util-frontmatter": "^2.0.1",
+    "mdast-util-gfm": "^3.1.0",
+    "mdx-react-v1": "npm:@mdx-js/react@^1.6.22",
+    "mdx-v1": "npm:@mdx-js/mdx@^1.6.22",
+    "micromark-extension-frontmatter": "^2.0.0",
+    "micromark-extension-gfm": "^3.0.0",
+    "remark-gfm": "^4.0.1",
+    "unist-util-visit": "^5.1.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}

@@ -28,7 +28,7 @@ const Footer = () => {
 				<div class="footer-nav"><a href="https://www.rmdatagroup.com/impressum/" title="Impressum">Impressum</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/datenschutz/" title="Datenschutz">Datenschutz</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/rechtliches/" title="Rechtliches">Rechtliches</a><span class="dividor"> &#124; </span><a href="https://www.rmdatagroup.com/systemvoraussetzungen/" title="Systemvoraussetzungen">Systemvoraussetzungen</a><span class="dividor"> &#124; </span><a href="https://portal.rmdatagroup.com/" title="rmDATA Kundenportal">rmDATA Kundenportal</a></div>
 				<div class="footer-infos" id="footer_infos_left">
 					<div>
-						<p>© Copyright 2022 rmDATA Gruppe</p>
+						<p>© Copyright 2026 rmDATA Gruppe</p>
 					</div>
 				</div>
 			</div>

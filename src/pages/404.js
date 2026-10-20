@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import Seo from '../components/seo';
 
 import "../styles/styles.scss";
@@ -25,5 +24,9 @@ const NotFound = () => {
              <  / div >
              <  /  > );
 }
+
+export const Head = () => (
+  <Seo />
+)
 
 export default NotFound;

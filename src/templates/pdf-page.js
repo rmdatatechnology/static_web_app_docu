@@ -5,7 +5,7 @@ import useProducts from '../components/useProducts';
 import Seo from '../components/seo';
 import { useLocale } from '../hooks/locale';
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import MdxBody from "../components/MdxBody";
 import {
   Example,
   Danger,
@@ -24,6 +24,7 @@ import {
   Menu,
   Italic,
   Kommentar,
+  withV1Mapping,
 } from "../components/MdxComponents";
 
 import "../styles/styles.scss";
@@ -64,7 +65,7 @@ const Pdf = ({ data }) => {
 
   
   // Customize markdown component
-    const mdxComponents = {
+    const mdxComponents = withV1Mapping({
       "ul.li": ({ children }) => {
         return (
           <li>
@@ -116,7 +117,7 @@ const Pdf = ({ data }) => {
       Menu,
       Italic,
 	  Kommentar,
-    }
+    })
 	
 	let count = 0;
  
@@ -125,16 +126,12 @@ const Pdf = ({ data }) => {
 	<div className="page">
 		<div className="content">
 			<div id="pageContent">
-			<Seo
-				title={data.mdx.frontmatter.title}
-				description={data.mdx.frontmatter.title}
-			/>
 				<h1>{data.mdx.frontmatter.title}</h1>
 				<h3 className="productHeader">{data.mdx.frontmatter.description}</h3>
 				<section className="main-content">	 
 				<div>
 					<MDXProvider components={mdxComponents}>
-						<MDXRenderer>{data.mdx.body}</MDXRenderer>
+						<MdxBody code={data.mdx.compiledBody} />
 					</MDXProvider>
 					</div>
 				</section>
@@ -190,19 +187,20 @@ const Pdf = ({ data }) => {
   );
 };
 
+export const Head  = ({data}) => (
+  <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} />
+)
+
 export default Pdf;
 
 export const query = graphql`
-  query Pdf($locale: String!) {
-    mdx(
-        fields: { locale: { eq: $locale } }
-        frontmatter: {display: {eq: "pdf"}}
-    ) {
+  query Pdf($id: String!) {
+    mdx(id: { eq: $id }) {
+      compiledBody
 	frontmatter {
       title
 	  description
     }
-    body
     fields {
       locale
     }

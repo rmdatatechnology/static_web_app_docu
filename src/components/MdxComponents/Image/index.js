@@ -1,56 +1,51 @@
 import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 
-const Image = ({name, path, children, src, alt, ...rest  }) => {
+const Image = ({data, name, path, children, src, alt, ...rest  }) => {
 
 const [toggle, setToggle] = useState(true);
 const tooltip = !alt || alt.trim === "" ? "" : alt;
 
-const { listImages } = useStaticQuery(
-    graphql`
-      query{
-        listImages: allFile (filter: {ext: {in: [".png", ".jpg", ".jpeg", ".gif"]}}) {
-          
-			 nodes {
-				name
-				publicURL
-				relativeDirectory
-				}
-            }
-          }
-    `,
-  );
+if(!data)
+	return (<></>)
+
+let imageToUse;
+let nameToUse;
 
 if(src)
 {
 	let nameWithout = src.split('/');
 	name = nameWithout[nameWithout.length - 1];
-	path = "img";
+	let nameWithoutExt = name.split('.');
+	nameWithoutExt.pop();
+	nameToUse = nameWithoutExt.join('.');
+}
+else{
+	let nameWithoutExt = name.split('.');
+	nameWithoutExt.pop();
+	nameToUse = nameWithoutExt.join('.');
 }
 
 
-let nameWithoutExt = name.split('.');
-nameWithoutExt.pop();
-const nameToUse = nameWithoutExt.join('.');
-
- const imageToUse = listImages.nodes.find(img => {
-    if( nameToUse === img.name && img.relativeDirectory.includes(path))
+imageToUse = data.nodes.find(img => {
+    if( nameToUse === img.name)
 		return img;
 
 	return null;
   });
+  if(imageToUse)
+	src = imageToUse.publicURL;
 
 	 function handleClick(e) {
 
-		var modal = document.getElementById("myModal_" + imageToUse.name);
-		var modalImg = document.getElementById("img_"  + imageToUse.name);
+		var modal = document.getElementById("myModal_" + nameToUse);
+		var modalImg = document.getElementById("img_"  + nameToUse);
 		if(modal && modalImg)
 		{
 			 if(toggle)
 			 {
 				setToggle(false);
 				modal.style.display = "block";
-				modalImg.src = imageToUse.publicURL;
+				modalImg.src = src;
 			 }
 			else
 			{
@@ -59,14 +54,14 @@ const nameToUse = nameWithoutExt.join('.');
 			}
 		}
 	}
-  if(imageToUse)
+  if(nameToUse)
   {
 	return (
 		<>
-		<div id={"myModal_" + imageToUse.name} className="modal" onClick={handleClick}>
-			<img class="modal-content" id={"img_" + imageToUse.name} alt={tooltip} title={tooltip} />
+		<div id={"myModal_" + nameToUse} className="modal" onClick={handleClick}>
+			<img class="modal-content" id={"img_" + nameToUse} alt={tooltip} title={tooltip} />
 		</div>
-		<img id={imageToUse.name} onClick={handleClick} className="mdxImage" src={imageToUse.publicURL} alt={tooltip} title={tooltip} />
+		<img id={nameToUse} onClick={handleClick} className="mdxImage" src={src} alt={tooltip} title={tooltip} />
 		</>
 		);
   }
@@ -74,4 +69,6 @@ const nameToUse = nameWithoutExt.join('.');
 	return (<></>)
 }
 
+
 export default Image
+
