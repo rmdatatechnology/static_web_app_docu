@@ -16,7 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   build_and_deploy:
     # The type of runner that the job will run on
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
     # set a build timout 
     timeout-minutes: 150
  
@@ -46,14 +46,14 @@ jobs:
         git submodule foreach 'git checkout NG_2026_4 || git checkout -b NG_2026_4'
     - uses: actions/setup-node@v5
       with:
-        node-version: '24.13.1'
+        node-version: '26.12.1'
         package-manager-cache: false
     - run: npm install
     
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v5
-      with:
-       dotnet-version: 8.0.x
+  #  - name: Setup dotnet
+  #    uses: actions/setup-dotnet@v5
+  #    with:
+  #     dotnet-version: 8.0.x
    # - uses: jossef/action-set-json-field@v2.1
    #   with:
    #     file: './config/variables/variables.json'
@@ -61,13 +61,13 @@ jobs:
    #     value: 'geodesigner'
    # - run: npm run build
    # - run: npm run createpdf
-    - uses: jossef/action-set-json-field@v2.1
-      with:
-        file: './config/variables/variables.json'
-        field: productused
-        value: 'rmgeo'
-    - run: npm run build
-    - run: npm run createpdf
+    #- uses: jossef/action-set-json-field@v2.1
+    #  with:
+    #    file: './config/variables/variables.json'
+   #     field: productused
+    #    value: 'rmgeo'
+   # - run: npm run build
+   # - run: npm run createpdf
    # - uses: jossef/action-set-json-field@v2.1
    #   with:
    #     file: './config/variables/variables.json'
@@ -126,12 +126,20 @@ jobs:
         
    # - run: npm run build
    # - run: npm run createpdf
-    - run: npm run copypdf
+   # - run: npm run copypdf
     # needs this run build to include the pdf files dynamically
     - run: npm run build
-    - uses: tibor19/static-website-deploy@v4
+    
+    - name: Wipe Container and Upload Assets
+      uses: azure/CLI@v2
       with:
-        enabled-static-website: 'true'
-        folder: 'public'
-        connection-string: ${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}
+        azcliversion: latest
+        inlineScript: | 
+          echo "Step Uploading fresh static assets..."
+          az storage blob upload-batch \
+            --connection-string "${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}" \
+            --destination '$web' \
+            --source './public' \
+            --overwrite true
+  
 
