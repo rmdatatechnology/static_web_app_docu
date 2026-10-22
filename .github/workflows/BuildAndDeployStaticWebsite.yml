@@ -137,17 +137,10 @@ jobs:
         inlineScript: | 
            export AZCOPY_CONCURRENCY_VALUE=256
            
-           echo "wiping old container..."
-           az storage remove \
-              --connection-string "${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}" \
-              --container-name '$web' \
-              --recursive
-              
-            echo "AzCopy batch upload the new files..."
-            az storage azcopy blob upload \
+           echo "AzCopy batch upload the new files..."
+           az storage azcopy blob upload \
               --connection-string "${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}" \
               --container '$web' \
               --source './public' \
               --recursive
-  
-
+       
