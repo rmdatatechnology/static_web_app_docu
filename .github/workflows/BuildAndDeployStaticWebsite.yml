@@ -130,7 +130,7 @@ jobs:
     # needs this run build to include the pdf files dynamically
     - run: npm run build
     
-    - name: Wipe Container and Upload Assets
+    - name: Upload new Files
       uses: azure/CLI@v2
       with:
         azcliversion: latest
@@ -141,5 +141,6 @@ jobs:
             --destination '$web' \
             --source './public' \
             --overwrite true
+            --max-connections 16
   
 
