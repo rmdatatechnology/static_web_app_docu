@@ -138,11 +138,9 @@ jobs:
            export AZCOPY_CONCURRENCY_VALUE=256
           
             echo "Launching AzCopy batch upload..."
-            az storage azcopy blob upload \
+            az storage azcopy blob sync \
               --connection-string "${{ secrets.AZURE_DOCUMENTATION_TEST_STORAGE_CONNECTION_STRING }}" \
               --container '$web' \
               --source './public' \
-              --recursive
-              --overwrite true 
   
 
