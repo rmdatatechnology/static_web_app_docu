@@ -23,7 +23,7 @@ jobs:
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         submodules: true
-        ref: upgrade-to-gatsby-5
+        ref: master
     - name: get current branch name
       id: branch-name
       uses: tj-actions/branch-names@v8
@@ -122,9 +122,22 @@ jobs:
         value: 'true'        
     - run: npm run build
     # deploy the webpage
-    - uses: tibor19/static-website-deploy@v4
+    - name: Upload new Files
+      uses: azure/CLI@v2
       with:
-        enabled-static-website: 'true'
-        folder: 'public'
-        connection-string: ${{ secrets.AZURE_DOCUMENTATION_STORAGE_CONNECTION_STRING }}
+        azcliversion: latest
+        inlineScript: | 
+           export AZCOPY_CONCURRENCY_VALUE=256
+           
+           echo "AzCopy batch upload the new files..."
+            az storage azcopy blob upload  \
+              --connection-string "${{ secrets.AZURE_DOCUMENTATION_STORAGE_CONNECTION_STRING }}" \
+              --container '$web' \
+              --source './public/*' \
+              --recursive 
+   # - uses: tibor19/static-website-deploy@v4
+   #   with:
+   #     enabled-static-website: 'true'
+  #     folder: 'public'
+    #    connection-string: ${{ secrets.AZURE_DOCUMENTATION_STORAGE_CONNECTION_STRING }}
 
