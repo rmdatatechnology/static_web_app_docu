@@ -138,6 +138,6 @@ jobs:
     - uses: tibor19/static-website-deploy@v4
       with:
         enabled-static-website: 'true'
-       folder: 'public'
+        folder: 'public'
         connection-string: ${{ secrets.AZURE_DOCUMENTATION_STORAGE_CONNECTION_STRING }}
 
